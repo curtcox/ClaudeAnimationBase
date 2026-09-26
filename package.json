@@ -8,7 +8,8 @@
     "sheet": "node render.mjs --sheet=0,1,2,3,4,5 --out=out/sheet.jpg",
     "video": "node render.mjs --clip --out=out/video.mp4",
     "script": "node tools/build_script.mjs && node tools/verbatim_check.mjs",
-    "refs": "node tools/check_refs.mjs"
+    "refs": "node tools/check_refs.mjs",
+    "qr": "node tools/qr_check.mjs"
   },
   "dependencies": {
     "p5": "^2.3.3",
@@ -17,6 +18,9 @@
     "qrcode-generator": "^1.5.2"
   },
   "devDependencies": {
+    "@zxing/library": "^0.21.3",
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
     "yaml": "^2.9.1"
   }
 }
