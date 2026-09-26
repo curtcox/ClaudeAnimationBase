@@ -86,6 +86,17 @@
   };
   LOOPS.desk_test.len = 6;
 
+  // Curt as chosen (LOOK.curt), front, three-quarter-ish poses and back
+  LOOPS.curt_look = t => {
+    paper();
+    curtAs(330, 820, 30, { look: .3, mouth: 'smile', seed: 1 });
+    curtAs(820, 820, 30, { talk: talk(t, 0, 4), brows: 'up', handR: 'point', seed: 2 });
+    curtAs(1300, 820, 30, { view: 'back', seed: 3 });
+    curtAs(1680, 820, 22, { flip: true, brows: 'skeptic', handL: 'chin', seed: 4 });
+    floor(820);
+  };
+  LOOPS.curt_look.len = 4;
+
   // The cast, with Clawd for scale
   LOOPS.cast = t => {
     paper();

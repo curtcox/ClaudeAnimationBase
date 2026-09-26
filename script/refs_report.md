@@ -139,7 +139,7 @@ correction H, shelf tags 380 px at Q, and 6 px/module is the floor.
 | id | caption | origin | at | mode · style | QR | status | page title |
 |---|---|---|---|---|---|---|---|
 | solidgoldmagikarp | SolidGoldMagikarp | added | T57.C.04 | feature · gold-scales | v6, 9.8 px | — |  |
-| car-wash | The Car Wash Test (53 models) | added | T58.C.01 | shelf · car-wash | v4, 9.3 px | — |  |
+| car-wash | The Car Wash Test (53 models) | added | T58.C.01 | shelf · car-wash | v3, 10.3 px | — |  |
 | thinking-fast-slow | Thinking, Fast and Slow | added | T59.C.01 | shelf · plain | v5, 8.4 px | — |  |
 | landauer | Landauer's principle | added | T60.U.01 | shelf · thermometer | v5, 8.4 px | — |  |
 | lyapunov | Lyapunov time | added | T60.C.02.1 | shelf · butterfly | v4, 9.3 px | — |  |

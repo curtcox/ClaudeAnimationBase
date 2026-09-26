@@ -24,7 +24,8 @@ const clawdMouth = (k, rest = null) => k < .15 ? rest : k < .55 ? 'o' : 'open';
 // Options:
 //   look (costume; see CURT_VARIANTS for named combinations):
 //     hair: 'none' | 'short' | 'ponytail' | 'bun';  outfit: 'stick' | 'hoodie' (+ hoodie: colour, hood: 'down' | 'up')
-//     facial: 'none' | 'stubble' | 'mustache' | 'goatee' | 'circle' | 'beard' | 'chinstrap';  hairCol, facialCol
+//     facial: 'none' | 'stubble' | 'mustache' | 'goatee' | 'circle' | 'beard' | 'chinstrap';  hairCol, facialCol,
+//     ponyTip (the ponytail fades from hairCol at the roots to this at the tip)
 //   view: 'front' | 'back' (from behind: no face, the hair and the hood carry him)
 //   pose: 'stand' | 'sit' (legs hidden: sit behind a table), lean (radians, + = toward where he faces)
 //   flip (face left), look (-1..1 pupils), brows: 'flat' | 'up' | 'skeptic' | 'down', mouth: 'flat' | 'smile' | 'o' | 'frown'
@@ -84,7 +85,7 @@ function curt(x, y, u, o = {}) {
   };
   if (back) drawArms();
   // behind the head: the ponytail (front view: it swings out behind him), the hood
-  if (o.hair === 'ponytail' && !back) { rs('pony'); curtPonytail(head, R, -f, u, hairCol, sw, false); }
+  if (o.hair === 'ponytail' && !back) { rs('pony'); curtPonytail(head, R, -f, u, hairCol, sw, false, o.ponyTip); }
   if (hoodie) {
     rs('hood');
     const hx = head[0] - f * R * .2, hy = neck[1] - R * .25;
@@ -116,8 +117,8 @@ function curt(x, y, u, o = {}) {
     for (let i = 0; i <= 20; i++) { const a = lerp(a0, a1, i / 20); cap.push([head[0] + Math.cos(a) * R * 1.02, head[1] + Math.sin(a) * R * 1.02]); }
     if (!back) { cap.push([head[0] + f * R * .35, head[1] - R * .72]); cap.push([head[0] - f * R * .25, head[1] - R * .84]); }
     else cap.push([head[0], head[1] + R * .82]);
-    paint(cap, { wash: hairCol, ink: PAL.ink, sw: sw * .7, curv: .4 });
-    if (o.hair === 'ponytail' && back) curtPonytail(head, R, 0, u, hairCol, sw, true);
+    paint(cap, { wash: hairCol, ink: PAL.ink, sw: sw * .35, curv: .4 });
+    if (o.hair === 'ponytail' && back) curtPonytail(head, R, 0, u, hairCol, sw, true, o.ponyTip);
     if (o.hair === 'bun') paint(ellPts(head[0] - f * R * (back ? 0 : .55), head[1] - R * (back ? .55 : .92), R * .38, R * .34, 16), { wash: hairCol, ink: PAL.ink, sw: sw * .7 });
   }
   if (back) { if (o.draw) { rs('draw'); o.draw({ head, neck, hip, u, sw }); } boilSeed('after curt ' + id); return { head, neck, hip }; }
@@ -151,12 +152,18 @@ function curt(x, y, u, o = {}) {
   return { head, neck, hip };
 }
 
-function curtPonytail(head, R, side, u, col, sw, back) {
+function curtPonytail(head, R, side, u, col, sw, back, tip = col) {
   // from the back of the head (side = which way it swings; 0 = straight down the back), a band, then a tapered tail
   const bx = head[0] + side * R * .95, by = head[1] + (back ? R * .72 : -R * .05), sway = Math.sin(T * 2.1) * u * .12;
-  const P = back ? [[bx, by], [bx + sway, by + R * .9], [bx + sway * 2, by + R * 1.9]]
+  const P = back ? [[bx, by], [bx + sway, by + R * 1.1], [bx + sway * 1.6, by + R * 2.1], [bx + sway * 2.2, by + R * 2.9]]
                  : [[bx, by], [bx + side * R * .35, by + R * .5], [bx + side * R * .4 + sway, by + R * 1.3], [bx + side * R * .3 + sway * 2, by + R * 1.9]];
-  paint(ribbon(P, u * (back ? 1.3 : .95), u * (back ? .45 : .25)), { wash: col, ink: PAL.ink, sw: sw * .7 });
+  // painted in bands from root to tip so the colour can fade along it, then outlined once as one shape
+  const C = through(P), n = C.length, w0 = u * (back ? 1.5 : .95), w1 = u * (back ? .35 : .25), bands = 6;
+  for (let b = 0; b < bands; b++) {
+    const i0 = Math.floor(b * (n - 1) / bands), i1 = Math.min(n - 1, Math.ceil((b + 1) * (n - 1) / bands) + 1);
+    paint(ribbon(C.slice(i0, i1 + 1), lerp(w0, w1, i0 / (n - 1)), lerp(w0, w1, i1 / (n - 1))), { wash: mixCol(col, tip, (b + .5) / bands), ink: null });
+  }
+  paint(ribbon(P, w0, w1), { ink: PAL.ink, sw: sw * .7 });
   paint(ellPts(P[0][0] + (P[1][0] - P[0][0]) * .15, P[0][1] + (P[1][1] - P[0][1]) * .15, u * .45, u * .25, 10), { wash: mixCol(col, PAL.ink, .5), ink: PAL.ink, sw: sw * .5 });
 }
 // Facial hair, painted on the face: (fx, fy) = the face's centre, my = the mouth's height.
