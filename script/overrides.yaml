@@ -1,0 +1,27 @@
+# Hand-written speech for lines the automatic rules can't voice faithfully. Hand-edited.
+# Every entry appears in script/verbatim_report.md for review. The transcript text is unchanged and is what gets
+# painted; only the voice differs. Keep each override as close to the words as the voice allows.
+- id: T30.U.01
+  reason: >-
+    A pasted YouTube comment thread in Markdown: links, handles and "2 days ago" stamps. The voice reads it as a
+    thread (who said what), and the corkboard on screen shows the original, links and all.
+  speech: >-
+    From the comments of "Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)".
+    Z M: He lost me when he said L L Ms don't have any concepts.
+    Ontology Explained: I would love to know what concepts they have!
+    Curt Cox: At Ontology Explained, perhaps we just have different concepts of concepts. Propose some questions to
+    pose to me and different L L Ms. Maybe I don't have concepts, either.
+    Care to try your hand? If you were a were a doctor of ontology, how would you determine if I had concepts?
+    Probe me.
+- id: T58.C.03
+  reason: '"short distance → walk" is an arrow of inference, not the ranking arrow; "to" would garble it.'
+  speech: >-
+    That one isn't tokenization. Every word is common and tokenizes cleanly. It's a failure of attention to the
+    goal: "short distance, therefore walk" is a very strong pattern, and it overrides the fact that the car is the
+    thing being moved. It's the same shape as the classic human trick questions, where the surface question pulls
+    harder than the actual one.
+- id: T74.U.01
+  reason: >-
+    Curt's whole message is a bare URL (with the compass image attached). URLs aren't read aloud: the voice says
+    the linked page's title, fetched from the page on 2026-09-26, while the page shows the URL and its QR code.
+  speech: Connor Leahy on Dignity and Conjecture.

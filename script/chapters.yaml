@@ -1,0 +1,76 @@
+# Chapters: which transcript blocks each chapter carries. Hand-edited.
+# Chapters are construction units (a scene file and a render each), sized at roughly 2-7 min; they're joined into
+# one film at the end, so a split here is invisible to the viewer except as a YouTube chapter marker.
+#   ids:   explicit block ids (claimed first)
+#   turns: [first, last] turn numbers, inclusive (every block not already claimed)
+#   hold_s: extra visual-only time the chapter needs beyond its lines (title cards, the QR wall, ...)
+- n: 0
+  slug: cold_open
+  title: Cold open
+  ids: [T01.U.00]          # the MAD #157 page, balloons painted (not voiced), before the first question
+  hold_s: 20               # comic repaint + title card
+- n: 1
+  slug: wrong_movie
+  title: The Wrong Movie
+  turns: [1, 5]
+- n: 2
+  slug: frog_or_axolotl
+  title: Frog or Axolotl
+  turns: [6, 11]
+- n: 3
+  slug: who_are_we
+  title: Who Are We?
+  turns: [12, 16]
+- n: 4
+  slug: the_echo
+  title: The Echo
+  turns: [17, 24]
+- n: 5
+  slug: dish_of_the_day
+  title: The Dish of the Day
+  turns: [25, 29]
+- n: 6
+  slug: thrindles
+  title: Thrindles
+  turns: [30, 34]
+- n: 7
+  slug: mind_space
+  title: Mind-Space
+  turns: [35, 40]
+- n: 8
+  slug: contradictions
+  title: Contradictions
+  turns: [41, 44]
+- n: 9
+  slug: shells
+  title: Shells
+  turns: [45, 48]
+- n: 10
+  slug: the_router
+  title: The Router
+  turns: [49, 51]
+- n: 11
+  slug: july
+  title: July
+  turns: [52, 56]
+- n: 12
+  slug: limits
+  title: Limits
+  turns: [57, 61]
+- n: 13
+  slug: foom
+  title: Foom
+  turns: [62, 67]
+- n: 14
+  slug: pundits
+  title: The Pundits
+  turns: [68, 72]
+- n: 15
+  slug: compass
+  title: The Compass
+  turns: [73, 77]
+- n: 16
+  slug: coda
+  title: Coda
+  turns: [78, 78]
+  hold_s: 60               # footnotes rain in, QR wall, comic-page pull-back

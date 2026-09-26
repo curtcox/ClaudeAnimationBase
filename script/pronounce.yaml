@@ -1,0 +1,75 @@
+# Speech-only respellings, applied in order to every spoken line (after markdown is stripped).
+# They change what the voice says, never what the transcript says: the written form is what gets painted.
+# Matches are literal; letters/digits at either end of a match must sit on a word boundary.
+# verify: true = a guess to check by ear (or against a recording of the name) during voice casting.
+
+# --- symbols and formulas -------------------------------------------------------------------------
+- { match: "[Xe] 4f⁷ 5d¹ 6s²", say: "xenon core, four-f seven, five-d one, six-s two" }
+- { match: "4f⁸ 6s²", say: "four-f eight, six-s two" }
+- { match: "4f subshell", say: "four-f subshell" }
+- { match: "into 5d", say: "into five-d" }
+- { match: "t ≈ (1/λ)·ln(Δ/δ)", say: "t is about one over lambda, times the log of big delta over little delta" }
+- { match: "C^(−α) with α", say: "C to the minus alpha, with alpha" }
+- { match: "(ops ≤ 2E/πħ per second)", say: "(operations at most two E over pi h-bar, per second)" }
+- { match: "P≠NP", say: "P isn't N P" }
+- { match: "AIDE²", say: "AIDE squared", verify: true }
+- { match: "2×2", say: "two-by-two" }
+- { match: "0–100", say: "zero to a hundred" }
+- { match: "5–10%", say: "five to ten percent" }
+- { match: "25–35%", say: "twenty-five to thirty-five percent" }
+- { match: "2026–2030", say: "twenty twenty-six to twenty thirty" }
+- { match: "→", say: "to" }                    # the one-line ranking (T35); T58 has an override
+
+# --- names and titles -------------------------------------------------------------------------------
+- { match: "#888", say: "eight eighty-eight" }
+- { match: "#889", say: "eight eighty-nine" }
+- { match: "T-800", say: "T eight hundred" }
+- { match: "T2", say: "T two" }
+- { match: "Opus 5.5", say: "Opus five point five" }
+- { match: "GPT-5.6", say: "G P T five point six" }
+- { match: "256t.org", say: "two fifty-six t dot org" }
+- { match: "hashbin.org", say: "hashbin dot org" }
+- { match: "Kokotajlo", say: "Koh-koh-TIE-lo", verify: true }
+- { match: "Aschenbrenner", say: "ASH-en-brenner" }
+- { match: "Agüera y Arcas", say: "ah-GWAIR-ah ee AR-kas", verify: true }
+- { match: "Ballecer", say: "Ball-uh-SAIR", verify: true }
+- { match: "Michaël Trazzi", say: "Mee-ka-EL TRAHT-see", verify: true }
+- { match: "Leahy", say: "LAY-hee" }
+- { match: "Gödel", say: "GUR-dl" }
+- { match: "Goertzel", say: "GURT-zel" }
+- { match: "Gubrud", say: "GOO-brud", verify: true }
+- { match: "Harnad", say: "HAR-nad" }
+- { match: "Lyapunov", say: "lee-AH-poo-noff" }
+- { match: "Margolus–Levitin", say: "mar-GO-lus LEV-ih-tin" }
+- { match: "Bekenstein", say: "BECK-en-stine" }
+- { match: "Landauer", say: "LAN-dow-er" }
+- { match: "Metaculus", say: "meh-TACK-yoo-lus" }
+- { match: "Dwarkesh", say: "DWAR-kesh" }
+- { match: "philotically", say: "fih-LOT-ik-lee" }
+- { match: "Rachni", say: "RACK-nee" }
+- { match: "Tines", say: "Tynes" }
+- { match: "Formic", say: "FOR-mik" }
+- { match: "Hieropedia", say: "high-ero-PEE-dee-ah", verify: true }
+
+# --- link titles (a link is voiced as its title while its QR code is up) ---------------------------
+- { match: "arXiv 2609.26457:", say: "archive paper:" }
+- { match: "arXiv 2607.07663:", say: "archive paper:" }
+- { match: "Aug 2026", say: "August 2026" }
+- { match: "OfficeChai", say: "Office Chai" }
+- { match: "HuggingFace", say: "Hugging Face" }
+
+# --- acronyms said as letters or as words -----------------------------------------------------------
+- { match: "TESCREAL", say: "TESS-cree-al" }
+- { match: "GAZP vs. GLUT", say: "GAZP versus GLUT" }
+- { match: "AFAYCT", say: "A F A Y C T" }
+- { match: "EOY", say: "E O Y" }
+- { match: "RLHF", say: "R L H F" }
+- { match: "OOMs", say: "ooms", verify: true }  # Aschenbrenner says "ooms"; letters would be "O O Ms"
+- { match: "OOM", say: "oom", verify: true }
+- { match: "LLMs", say: "L L Ms" }
+- { match: "LLM's", say: "L L M's" }
+- { match: "LLM", say: "L L M" }
+- { match: "AIs", say: "A Is" }
+- { match: "NPR", say: "N P R" }
+- { match: "SAT", say: "S A T" }
+- { match: "vs.", say: "versus" }
