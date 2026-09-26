@@ -22,7 +22,7 @@
 - { id: conquest-apes, url: "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes", caption: "Conquest of the Planet of the Apes", origin: added, ch: 1, at: "Conquest of the Planet of the Apes", mode: shelf, style: newsprint }
 
 # ---- 1 The Wrong Movie -------------------------------------------------------------------------------------------
-- { id: stochastic-parrots, url: "https://dl.acm.org/doi/10.1145/3442188.3445922", caption: "On the Dangers of Stochastic Parrots", origin: added, ch: 1, at: "stochastic parrot", mode: shelf, style: feathers, verified: "browser 2026-09-26" }
+- { id: stochastic-parrots, url: "https://dl.acm.org/doi/10.1145/3442188.3445922", qr_url: "https://doi.org/10.1145/3442188.3445922", caption: "On the Dangers of Stochastic Parrots", origin: added, ch: 1, at: "stochastic parrot", mode: shelf, style: feathers, verified: "browser 2026-09-26" }
 - { id: rlhf, url: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback", caption: "RLHF", origin: added, ch: 1, at: "RLHF raters", mode: shelf, style: plain }
 - { id: mirror-test, url: "https://en.wikipedia.org/wiki/Mirror_test", caption: "The mirror test", origin: added, ch: 1, at: "mirror test", mode: shelf, style: mirror }
 
@@ -107,7 +107,7 @@
 
 # ---- 12 Limits ---------------------------------------------------------------------------------------------------
 - { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", qr_url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
-- { id: car-wash, url: "https://opper.ai/blog/car-wash-test", caption: "The Car Wash Test (53 models)", origin: added, at: T58.C.01, mode: shelf, style: car-wash }
+- { id: car-wash, url: "https://opper.ai/blog/car-wash-test", ecc: M, caption: "The Car Wash Test (53 models)", origin: added, at: T58.C.01, mode: shelf, style: car-wash }
 - { id: thinking-fast-slow, url: "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow", caption: "Thinking, Fast and Slow", origin: added, at: T59.C.01, mode: shelf, style: plain }
 - { id: landauer, url: "https://en.wikipedia.org/wiki/Landauer%27s_principle", caption: "Landauer's principle", origin: added, at: T60.U.01, mode: shelf, style: thermometer }
 - { id: lyapunov, url: "https://en.wikipedia.org/wiki/Lyapunov_time", caption: "Lyapunov time", origin: added, at: T60.C.02.1, mode: shelf, style: butterfly }
