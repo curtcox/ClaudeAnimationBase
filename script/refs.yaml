@@ -13,11 +13,12 @@
 #   qr_url  what the code encodes when it differs from url: the site's own short form, or SHORT (needs a 256t short
 #           link; domain to be decided)
 #   also    other transcript URLs this code stands for (the same page linked twice)
+#   ecc     error-correction level, when the mode's default (feature H, shelf Q) doesn't scan reliably for this URL
 #   verified how a bot-walled page was confirmed by hand (the checker can't fetch it)
 #   todo    anything still unresolved about this reference
 
 # ---- 0 Cold open -------------------------------------------------------------------------------------------------
-- { id: mad157, url: "https://www.madcoversite.com/mad157.html", caption: "MAD #157: Conquering The Planet That Went Ape", origin: attachment, at: T01.U.00, mode: feature, style: newsprint, note: "March 1973; written by Arnie Kogen, art by Mort Drucker (confirmed on the cover site)" }
+- { id: mad157, url: "https://www.madcoversite.com/mad157.html", caption: "MAD #157: Conquering The Planet That Went Ape", origin: attachment, at: T01.U.00, mode: feature, style: mad, note: "March 1973; written by Arnie Kogen, art by Mort Drucker (confirmed on the cover site)" }
 - { id: conquest-apes, url: "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes", caption: "Conquest of the Planet of the Apes", origin: added, ch: 1, at: "Conquest of the Planet of the Apes", mode: shelf, style: newsprint }
 
 # ---- 1 The Wrong Movie -------------------------------------------------------------------------------------------
@@ -63,7 +64,7 @@
 - { id: channel-ontology, url: "https://www.youtube.com/@OntologyExplained", also: ["https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA"], caption: "@OntologyExplained", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
 - { id: channel-curt, url: "https://www.youtube.com/@CurtCox", caption: "@CurtCox", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
 - { id: code-talkers, url: "https://en.wikipedia.org/wiki/Code_talker", caption: "Navajo code talkers", origin: added, ch: 6, at: "Navajo as a code", mode: shelf, style: field-radio }
-- { id: symbol-grounding, url: "https://en.wikipedia.org/wiki/Symbol_grounding_problem", caption: "The symbol grounding problem", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: plain }
+- { id: symbol-grounding, url: "https://en.wikipedia.org/wiki/Symbol_grounding_problem", ecc: M, caption: "The symbol grounding problem", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: plain }
 - { id: chinese-room, url: "https://plato.stanford.edu/entries/chinese-room/", caption: "The Chinese Room", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: rulebook }
 - { id: blockhead, url: "https://en.wikipedia.org/wiki/Blockhead_(thought_experiment)", caption: "Blockhead", origin: added, ch: 6, at: "Block's \"Blockhead,\"", mode: shelf, style: filing-drawers }
 - { id: monosemanticity, url: "https://transformer-circuits.pub/2024/scaling-monosemanticity/", caption: "Features that behave like concepts", origin: added, ch: 6, at: "Interpretability research", mode: shelf, style: plain }
@@ -91,7 +92,7 @@
 - { id: hermes-memory, url: "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory", caption: "Hermes Agent: Persistent Memory", origin: transcript, at: T46.C.09.1, mode: feature, style: winged-sandal }
 - { id: hermes-agent, url: "https://hermes-agent.org/", caption: "Hermes Agent", origin: transcript, at: T46.C.09.2, mode: shelf, style: winged-sandal }
 - { id: openclaw, url: "https://openclaw.ai/", caption: "OpenClaw", origin: added, at: T46.U.01, mode: shelf, style: claw }
-- { id: dyson, url: "https://terminator.fandom.com/wiki/Miles_Dyson", caption: "Miles Bennett Dyson", origin: added, at: T48.U.01, mode: shelf, style: circuit, verified: "browser 2026-09-26" }
+- { id: dyson, url: "https://terminator.fandom.com/wiki/Miles_Dyson", ecc: M, caption: "Miles Bennett Dyson", origin: added, at: T48.U.01, mode: shelf, style: circuit, verified: "browser 2026-09-26" }
 - { id: t800, url: "https://en.wikipedia.org/wiki/Terminator_(character)", caption: "The T-800", origin: added, at: T48.U.01, mode: shelf, style: chrome-red-eye }
 
 # ---- 10 The Router -----------------------------------------------------------------------------------------------
@@ -105,7 +106,7 @@
 - { id: un-brief-hf, url: "https://dig.watch/updates/un-thematic-brief-openai-hugging-face-scientific-panel", caption: "Digital Watch Observatory", origin: transcript, at: T52.C.07, mode: shelf, style: sandbox }
 
 # ---- 12 Limits ---------------------------------------------------------------------------------------------------
-- { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
+- { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", qr_url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
 - { id: car-wash, url: "https://opper.ai/blog/car-wash-test", caption: "The Car Wash Test (53 models)", origin: added, at: T58.C.01, mode: shelf, style: car-wash }
 - { id: thinking-fast-slow, url: "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow", caption: "Thinking, Fast and Slow", origin: added, at: T59.C.01, mode: shelf, style: plain }
 - { id: landauer, url: "https://en.wikipedia.org/wiki/Landauer%27s_principle", caption: "Landauer's principle", origin: added, at: T60.U.01, mode: shelf, style: thermometer }

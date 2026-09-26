@@ -18,6 +18,7 @@
     "qrcode-generator": "^1.5.2"
   },
   "devDependencies": {
+    "@undecaf/zbar-wasm": "^0.11.0",
     "@zxing/library": "^0.21.3",
     "jsqr": "^1.4.0",
     "pngjs": "^7.0.0",

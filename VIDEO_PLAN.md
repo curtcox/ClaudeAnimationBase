@@ -74,7 +74,15 @@ never approximated for the sake of the picture.
 ## 2. The film's shape
 
 ### One world
-- **The Booth** (home base, about 30% of screen time). An interrogation-room table that rhymes with the comic's
+Every look choice below is swappable in one place, `src/look.js`: Curt's costume, how Claude appears, the home set,
+and which QR style each reference wears. Scenes only call its helpers (`curtAs`, `claudeAs`, `qrStyleFor`, `refQR`).
+
+- **The Desk** (home base, from round 2). Curt's real habitat: a standing desk with too many monitors and laptops,
+  filmed over his shoulder so every screen faces the camera. Claude lives on the main monitor. The other screens carry
+  whatever the conversation is about: QR codes, the repainted frog chart, the debate video, code. A push-in to any
+  screen (`deskCam`) fills the frame with it, which is how a feature QR code gets big enough to scan. From behind, Curt
+  is hair, a ponytail, a hoodie and elbows, so facial hair doesn't matter here.
+- **The Booth** (the alternate set; the interrogation room, for the comic's frame). An interrogation-room table that rhymes with the comic's
   "What did that ape say?" A caricatured Curt sits on one side and Clawd on the other. Between them hangs a
   **two-way mirror**, the conversation's recurring word: "a mirror test", "It was a mirror for me". Tangents open
   *through* the mirror into painted cutaways and return through it.
@@ -278,9 +286,13 @@ For every QR, at its display time:
    - at 1080p,
    - after a YouTube-like re-encode (x264 CRF 28 at 720p),
    - and after a simulated phone capture (perspective warp, blur, moiré).
-3. Assert that the decoded string equals the intended URL.
+3. Decode each trial with three independent decoders: jsQR, ZXing's JavaScript port and ZBar (WebAssembly). A trial
+   passes when at least two of them read the exact URL; a code passes when all 15 trials do (13 scales, YouTube,
+   phone).
 
-The build fails on any miss. There's also a final human check: scan every code off a TV and off a laptop with a phone.
+No single decoder is the gate, because each has blind spots. ZXing-js fails some perfect, computer-generated codes
+outright, which we confirmed with ideal black-and-white renders. jsQR misses sporadically at particular scales. The
+build fails on any miss. There's also a final human check: scan every code off a TV and off a laptop with a phone.
 
 ---
 
@@ -289,6 +301,14 @@ The build fails on any miss. There's also a final human check: scan every code o
 The kit has only Clawd. The film needs a **human rig** and a set of **non-human minds**, all painted with
 `paint()`/`inkLine()`, with ink outlines, flat wash and boil, so they belong with Clawd.
 
+- **Curt**: the CGP Grey-style stick figure (`src/cast.js`), in any of 12 lettered looks (`CURT_VARIANTS` A–L:
+  hair none/short/ponytail/bun, a hoodie in any colour, facial hair none/stubble/mustache/goatee/circle/beard/chinstrap),
+  front and back views, with hands placed by target (`handL: 'chin'`, `[dx, dy]`). Pick one in `LOOK.curt`.
+- **Claude**: proposed as **Clawd assembling out of a crowd** (`clawdCrowd`). At rest, Claude is a loose cloud of
+  many-coloured brush dabs; when it speaks they gather into Clawd, who then acts with every emotion. This is the
+  conversation's own picture (T28: "The base model is closer to a crowd than to a single stranger… The mask isn't
+  concealing one self. It's closer to picking one out."). It also avoids claiming a fixed face all the time.
+  `LOOK.claude = 'clawd'` switches to plain Clawd.
 - **`src/people.js`**: a parametric 2-D human: head shape, hair, glasses, skin, clothes and a signature prop. It uses
   the same eye and mouth vocabulary as Clawd, so `emotions()` can drive human faces too, and it has three drawn key
   views (front, 3/4, side). Presets:
