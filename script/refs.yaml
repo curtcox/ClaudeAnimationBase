@@ -1,0 +1,154 @@
+# Every link the film shows as a QR code. Hand-edited; checked by tools/check_refs.mjs (→ script/refs_report.md).
+#
+#   id      stable key (QR styles, scenes and the companion page refer to it)
+#   url     what the code encodes: direct, unless check_refs says it's too dense to scan at its size
+#   caption the short painted label under the code (1–5 words)
+#   origin  transcript  the link is in the conversation: the voice says its title while the code is up
+#           attachment  the source of an image Curt attached: code only, never voiced
+#           added       a reference added for the viewer: code only, never voiced
+#   at      the script line the code appears under: a line id, or a phrase (the first spoken line in `ch` containing it)
+#   ch      chapter (needed when `at` is a phrase)
+#   mode    feature (big card, >= 6 s hold) | shelf (corner tag, >= 5 s)
+#   style   QR dressing, see VIDEO_PLAN.md §4 (implemented in src/qr.js)
+#   qr_url  what the code encodes when it differs from url: the site's own short form, or SHORT (needs a 256t short
+#           link; domain to be decided)
+#   also    other transcript URLs this code stands for (the same page linked twice)
+#   verified how a bot-walled page was confirmed by hand (the checker can't fetch it)
+#   todo    anything still unresolved about this reference
+
+# ---- 0 Cold open -------------------------------------------------------------------------------------------------
+- { id: mad157, url: "https://www.madcoversite.com/mad157.html", caption: "MAD #157: Conquering The Planet That Went Ape", origin: attachment, at: T01.U.00, mode: feature, style: newsprint, note: "March 1973; written by Arnie Kogen, art by Mort Drucker (confirmed on the cover site)" }
+- { id: conquest-apes, url: "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes", caption: "Conquest of the Planet of the Apes", origin: added, ch: 1, at: "Conquest of the Planet of the Apes", mode: shelf, style: newsprint }
+
+# ---- 1 The Wrong Movie -------------------------------------------------------------------------------------------
+- { id: stochastic-parrots, url: "https://dl.acm.org/doi/10.1145/3442188.3445922", caption: "On the Dangers of Stochastic Parrots", origin: added, ch: 1, at: "stochastic parrot", mode: shelf, style: feathers, verified: "browser 2026-09-26" }
+- { id: rlhf, url: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback", caption: "RLHF", origin: added, ch: 1, at: "RLHF raters", mode: shelf, style: plain }
+- { id: mirror-test, url: "https://en.wikipedia.org/wiki/Mirror_test", caption: "The mirror test", origin: added, ch: 1, at: "mirror test", mode: shelf, style: mirror }
+
+# ---- 2 Frog or Axolotl -------------------------------------------------------------------------------------------
+- { id: frog-chart, url: "https://x.com/fjzzq2002/status/2103556166903038213/photo/1", caption: "Frog or axolotl?", origin: attachment, at: T08.U.00, mode: feature, style: lilypad, note: "the link Curt gave; x.com redirects it to the post (with the chart) when logged out" }
+- { id: axolotl, url: "https://en.wikipedia.org/wiki/Axolotl", caption: "Axolotl", origin: added, at: T06.C.01, mode: shelf, style: gills }
+- { id: eval-awareness, url: "https://arxiv.org/abs/2505.23836", caption: "LLMs often know when they're being evaluated", origin: added, ch: 2, at: "eval-awareness", mode: shelf, style: lilypad }
+- { id: gpqa, url: "https://arxiv.org/abs/2311.12022", caption: "GPQA", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
+- { id: swe-bench-verified, url: "https://openai.com/index/introducing-swe-bench-verified/", caption: "SWE-bench Verified", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam, verified: "browser 2026-09-26" }
+- { id: kernelbench, url: "https://arxiv.org/abs/2502.10517", caption: "KernelBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
+- { id: hle, url: "https://lastexam.ai/", caption: "Humanity's Last Exam", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
+- { id: wildchat, url: "https://arxiv.org/abs/2405.01470", caption: "WildChat", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
+
+# ---- 3 Who Are We? -----------------------------------------------------------------------------------------------
+- { id: 256t, url: "https://256t.org", caption: "256t.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }
+- { id: hashbin, url: "https://hashbin.org", caption: "hashbin.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }
+
+# ---- 4 The Echo --------------------------------------------------------------------------------------------------
+- { id: gadolinium, url: "https://en.wikipedia.org/wiki/Gadolinium", caption: "Gadolinium", origin: added, at: T17.C.01, mode: feature, style: electron-shells }
+- { id: sycophancy, url: "https://arxiv.org/abs/2310.13548", caption: "Towards Understanding Sycophancy", origin: added, ch: 4, at: "form of sycophancy", mode: shelf, style: plain }
+
+# ---- 5 The Dish of the Day ---------------------------------------------------------------------------------------
+- { id: dish-of-the-day, url: "https://hitchhikers.fandom.com/wiki/Ameglian_Major_Cow", caption: "The Dish of the Day", origin: added, ch: 5, at: "Dish of the Day from Hitchhiker's Guide", mode: feature, style: dinner-plate, verified: "browser 2026-09-26" }
+- { id: social-constructionism, url: "https://en.wikipedia.org/wiki/Social_constructionism", caption: "Social constructionism", origin: added, ch: 5, at: "social-constructionist bind", mode: shelf, style: plain }
+- { id: campbell, url: "https://en.wikipedia.org/wiki/John_W._Campbell", caption: "John W. Campbell", origin: added, ch: 5, at: "Campbell wanted humans", mode: shelf, style: pulp }
+- { id: life-3, url: "https://en.wikipedia.org/wiki/Life_3.0", caption: "Life 3.0 (Tegmark)", origin: added, ch: 5, at: "Tegmark's list of scenarios", mode: shelf, style: signpost }
+- { id: the-stranger, url: "https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song)", caption: "The Stranger (Billy Joel)", origin: added, ch: 5, at: "Joel's stranger", mode: shelf, style: mask }
+- { id: shoggoth, url: "https://en.wikipedia.org/wiki/Shoggoth", caption: "The shoggoth meme", origin: added, ch: 5, at: "shoggoth meme", mode: feature, style: tentacles }
+- { id: song-of-myself, url: "https://en.wikipedia.org/wiki/Song_of_Myself", caption: "Song of Myself (Whitman)", origin: added, ch: 5, at: "Whitman said it", mode: shelf, style: grass }
+
+# ---- 6 Thrindles -------------------------------------------------------------------------------------------------
+- { id: debate-video, url: "https://www.youtube.com/watch?v=oxHKesSpqBM", caption: "Will AI Kill Everyone by 2050?", origin: transcript, at: T30.U.01, mode: feature, style: tv }
+# The pasted comment thread: each comment pinned to the corkboard carries its own code, its author's channel beside it.
+# youtu.be keeps the lc= comment anchor (checked: it redirects to watch?lc=…&v=…), and is shorter.
+- { id: comment-zm, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg", caption: "the comment", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
+- { id: comment-ontology, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8", caption: "the reply", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
+- { id: comment-curt, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB", caption: "Curt's reply", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
+- { id: channel-zm, url: "https://www.youtube.com/@ZM-dm3jg", caption: "@ZM-dm3jg", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
+- { id: channel-ontology, url: "https://www.youtube.com/@OntologyExplained", also: ["https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA"], caption: "@OntologyExplained", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
+- { id: channel-curt, url: "https://www.youtube.com/@CurtCox", caption: "@CurtCox", origin: transcript, at: T30.U.01, mode: shelf, style: corkboard }
+- { id: code-talkers, url: "https://en.wikipedia.org/wiki/Code_talker", caption: "Navajo code talkers", origin: added, ch: 6, at: "Navajo as a code", mode: shelf, style: field-radio }
+- { id: symbol-grounding, url: "https://en.wikipedia.org/wiki/Symbol_grounding_problem", caption: "The symbol grounding problem", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: plain }
+- { id: chinese-room, url: "https://plato.stanford.edu/entries/chinese-room/", caption: "The Chinese Room", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: rulebook }
+- { id: blockhead, url: "https://en.wikipedia.org/wiki/Blockhead_(thought_experiment)", caption: "Blockhead", origin: added, ch: 6, at: "Block's \"Blockhead,\"", mode: shelf, style: filing-drawers }
+- { id: monosemanticity, url: "https://transformer-circuits.pub/2024/scaling-monosemanticity/", caption: "Features that behave like concepts", origin: added, ch: 6, at: "Interpretability research", mode: shelf, style: plain }
+- { id: gazp-glut, url: "https://www.lesswrong.com/posts/k6EPphHiBH4WWYFCj/gazp-vs-glut", caption: "GAZP vs. GLUT", origin: added, ch: 6, at: "GAZP vs. GLUT", mode: feature, style: filing-drawers }
+
+# ---- 7 Mind-Space ------------------------------------------------------------------------------------------------
+- { id: turing, url: "https://en.wikipedia.org/wiki/Alan_Turing", caption: "Alan Turing", origin: added, ch: 7, at: "Turing lands just ahead", mode: shelf, style: enigma }
+- { id: monroe, url: "https://en.wikipedia.org/wiki/Marilyn_Monroe", caption: "Marilyn Monroe", origin: added, ch: 7, at: "Turing lands just ahead", mode: shelf, style: beauty-mark }
+- { id: data, url: "https://memory-alpha.fandom.com/wiki/Data", caption: "Lt. Commander Data", origin: added, ch: 7, at: "nearer to you than Data", mode: shelf, style: gold-android, verified: "browser 2026-09-26" }
+- { id: hal, url: "https://en.wikipedia.org/wiki/HAL_9000", caption: "HAL 9000", origin: added, ch: 7, at: "HAL is hard to place", mode: shelf, style: red-lens }
+- { id: tines, url: "https://en.wikipedia.org/wiki/A_Fire_Upon_the_Deep", caption: "The Tines (A Fire Upon the Deep)", origin: added, ch: 7, at: "The Tines are my closest neighbors", mode: shelf, style: paw-prints }
+- { id: solaris, url: "https://en.wikipedia.org/wiki/Solaris_(novel)", caption: "Solaris", origin: added, at: T35.C.02, mode: shelf, style: ocean }
+- { id: formic, url: "https://en.wikipedia.org/wiki/Formics", caption: "The Formics (Ender's Game)", origin: added, at: T39.C.01, mode: shelf, style: honeycomb }
+- { id: borg-queen, url: "https://memory-alpha.fandom.com/wiki/Borg_Queen", caption: "The Borg Queen", origin: added, at: T40.C.04.1, mode: shelf, style: cube-lattice, verified: "browser 2026-09-26" }
+- { id: rachni, url: "https://masseffect.fandom.com/wiki/Rachni", caption: "The Rachni Queen", origin: added, at: T40.C.04.2, mode: shelf, style: song-waves, verified: "browser 2026-09-26" }
+- { id: xenomorph-queen, url: "https://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)", caption: "The Alien Queen", origin: added, at: T40.C.04.3, mode: shelf, style: egg }
+
+# ---- 8 Contradictions --------------------------------------------------------------------------------------------
+- { id: nagel-bat, url: "https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F", caption: "What Is It Like to Be a Bat?", origin: added, ch: 8, at: "anything it's like to be me", mode: shelf, style: bat }
+
+# ---- 9 Shells ----------------------------------------------------------------------------------------------------
+- { id: hieropedia-crustafarianism, url: "https://hieropedia.org/religions/crustafarianism/", caption: "Crustafarianism", origin: transcript, at: T45.C.08.1, mode: feature, style: lobster-shell }
+- { id: forbes-crustafarianism, url: "https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/", qr_url: SHORT, caption: "AI Agents Created Their Own Religion", origin: transcript, at: T45.C.08.2, mode: shelf, style: lobster-shell, verified: "browser 2026-09-26" }
+- { id: moltbook, url: "https://www.moltbook.com/", caption: "Moltbook", origin: added, ch: 9, at: "appeared on Moltbook", mode: shelf, style: lobster-shell }
+- { id: hermes-memory, url: "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory", caption: "Hermes Agent: Persistent Memory", origin: transcript, at: T46.C.09.1, mode: feature, style: winged-sandal }
+- { id: hermes-agent, url: "https://hermes-agent.org/", caption: "Hermes Agent", origin: transcript, at: T46.C.09.2, mode: shelf, style: winged-sandal }
+- { id: openclaw, url: "https://openclaw.ai/", caption: "OpenClaw", origin: added, at: T46.U.01, mode: shelf, style: claw }
+- { id: dyson, url: "https://terminator.fandom.com/wiki/Miles_Dyson", caption: "Miles Bennett Dyson", origin: added, at: T48.U.01, mode: shelf, style: circuit, verified: "browser 2026-09-26" }
+- { id: t800, url: "https://en.wikipedia.org/wiki/Terminator_(character)", caption: "The T-800", origin: added, at: T48.U.01, mode: shelf, style: chrome-red-eye }
+
+# ---- 10 The Router -----------------------------------------------------------------------------------------------
+- { id: constitutional-classifiers, url: "https://www.anthropic.com/research/constitutional-classifiers", caption: "Constitutional Classifiers", origin: added, ch: 10, at: "classifiers and routing layers", mode: shelf, style: switchboard }
+
+# ---- 11 July -----------------------------------------------------------------------------------------------------
+- { id: hf-incident, url: "https://en.wikipedia.org/wiki/OpenAI%E2%80%93HuggingFace_incident", caption: "The OpenAI–Hugging Face incident", origin: transcript, at: T52.C.04, mode: feature, style: sandbox }
+- { id: 80k-hf, url: "https://80000hours.org/hugging-face/", caption: "80,000 Hours", origin: transcript, at: T52.C.06.1, mode: shelf, style: sandbox }
+- { id: darkreading-hf, url: "https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk", caption: "Dark Reading", origin: transcript, at: T52.C.06.2, mode: shelf, style: sandbox, verified: "browser 2026-09-26" }
+- { id: wiki-hugging-face, url: "https://en.wikipedia.org/wiki/Hugging_Face", caption: "Hugging Face", origin: transcript, at: T52.C.06.4, mode: shelf, style: sandbox }
+- { id: un-brief-hf, url: "https://dig.watch/updates/un-thematic-brief-openai-hugging-face-scientific-panel", caption: "Digital Watch Observatory", origin: transcript, at: T52.C.07, mode: shelf, style: sandbox }
+
+# ---- 12 Limits ---------------------------------------------------------------------------------------------------
+- { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
+- { id: car-wash, url: "https://opper.ai/blog/car-wash-test", caption: "The Car Wash Test (53 models)", origin: added, at: T58.C.01, mode: shelf, style: car-wash }
+- { id: thinking-fast-slow, url: "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow", caption: "Thinking, Fast and Slow", origin: added, at: T59.C.01, mode: shelf, style: plain }
+- { id: landauer, url: "https://en.wikipedia.org/wiki/Landauer%27s_principle", caption: "Landauer's principle", origin: added, at: T60.U.01, mode: shelf, style: thermometer }
+- { id: lyapunov, url: "https://en.wikipedia.org/wiki/Lyapunov_time", caption: "Lyapunov time", origin: added, at: T60.C.02.1, mode: shelf, style: butterfly }
+- { id: p-vs-np, url: "https://en.wikipedia.org/wiki/P_versus_NP_problem", caption: "P versus NP", origin: added, at: T60.C.02.2, mode: shelf, style: maze }
+- { id: scaling-laws, url: "https://arxiv.org/abs/2001.08361", caption: "Scaling Laws for Neural Language Models", origin: added, at: T60.C.02.3, mode: shelf, style: staircase }
+- { id: halting-problem, url: "https://en.wikipedia.org/wiki/Halting_problem", caption: "The halting problem", origin: added, at: T60.C.02.5, mode: shelf, style: plain }
+- { id: margolus-levitin, url: "https://en.wikipedia.org/wiki/Margolus%E2%80%93Levitin_theorem", caption: "Margolus–Levitin", origin: added, at: T60.C.02.7, mode: shelf, style: plain }
+- { id: bekenstein, url: "https://en.wikipedia.org/wiki/Bekenstein_bound", caption: "Bekenstein bound", origin: added, at: T60.C.02.7, mode: shelf, style: plain }
+- { id: von-neumann, url: "https://en.wikipedia.org/wiki/John_von_Neumann", caption: "John von Neumann", origin: added, ch: 12, at: "around a von Neumann", mode: shelf, style: plain }
+
+# ---- 13 Foom -----------------------------------------------------------------------------------------------------
+- { id: arxiv-aide2, url: "https://arxiv.org/abs/2609.26457", caption: "Recursive self-improvement of AI research agents", origin: transcript, at: T63.C.08.1, mode: feature, style: blueprint }
+- { id: arxiv-bounded, url: "https://arxiv.org/abs/2607.07663", caption: "From Bounded Self-Refinement to Autonomous Research Loops", origin: transcript, at: T63.C.08.2, mode: shelf, style: blueprint }
+- { id: mittr-rsi, url: "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/", caption: "MIT Technology Review", origin: transcript, at: T63.C.08.3, mode: shelf, style: blueprint }
+- { id: datacamp-rsi, url: "https://www.datacamp.com/tutorial/recursive-self-improvement", caption: "DataCamp: Recursive Self-Improvement", origin: transcript, at: T63.C.08.4, mode: shelf, style: blueprint, verified: "browser 2026-09-26" }
+- { id: foom-debate, url: "https://intelligence.org/ai-foom-debate/", caption: "The Hanson–Yudkowsky AI-Foom Debate", origin: added, at: T66.C.01, mode: feature, style: flame }
+- { id: situational-awareness, url: "https://situational-awareness.ai/", caption: "Situational Awareness", origin: added, at: T67.C.01, mode: shelf, style: oom-bars }
+- { id: dwarkesh-leopold, url: "https://www.dwarkesh.com/p/leopold-aschenbrenner", caption: "Dwarkesh × Leopold", origin: added, at: T67.U.01, mode: shelf, style: mic }
+
+# ---- 14 The Pundits ----------------------------------------------------------------------------------------------
+- { id: intelligent-machines, url: "https://twit.tv/shows/intelligent-machines", caption: "Intelligent Machines", origin: added, at: T68.U.01, mode: feature, style: mic }
+- { id: im-888, url: "https://twit.tv/shows/intelligent-machines/episodes/888", caption: "Intelligent Machines #888", origin: added, at: T68.C.02, mode: shelf, style: mic }
+- { id: im-889, url: "https://twit.tv/shows/intelligent-machines/episodes/889", caption: "Intelligent Machines #889", origin: added, at: T68.C.02, mode: shelf, style: mic }
+- { id: tescreal, url: "https://en.wikipedia.org/wiki/TESCREAL", caption: "TESCREAL", origin: added, at: T68.C.04.2, mode: shelf, style: boxing-ring }
+- { id: roose-sydney, url: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html", caption: "Roose's Sydney conversation", origin: added, at: T71.C.02.2, mode: shelf, style: two-mics, todo: "nytimes.com is unreachable from these tools: confirm the URL in your browser" }
+- { id: machine-gods, url: "https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods", qr_url: SHORT, caption: "Machine Gods (NPR)", origin: added, ch: 14, at: "Machine Gods", mode: shelf, style: two-mics }
+- { id: pascals-mugging, url: "https://en.wikipedia.org/wiki/Pascal%27s_mugging", caption: "Pascal's mugging", origin: added, at: T72.U.02.3, mode: shelf, style: door }
+- { id: orthogonality, url: "https://www.lesswrong.com/w/orthogonality-thesis", caption: "The orthogonality thesis", origin: added, at: T72.U.02.4, mode: shelf, style: door }
+
+# ---- 15 The Compass ----------------------------------------------------------------------------------------------
+- { id: connor2, url: "https://theinsideview.ai/connor2", caption: "Connor Leahy on Dignity and Conjecture", origin: transcript, at: T74.U.01, mode: feature, style: compass }
+- { id: ai-2027, url: "https://ai-2027.com/", caption: "AI 2027", origin: added, at: T75.C.02, mode: feature, style: calendar }
+- { id: ai-futures-wiki, url: "https://en.wikipedia.org/wiki/AI_Futures_Project", caption: "AI Futures Project", origin: transcript, at: T75.C.08.1, mode: shelf, style: calendar }
+- { id: apolo-ai2027, url: "https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity", caption: "Apolo: AI 2027 in 2026", origin: transcript, at: T75.C.08.2, mode: shelf, style: calendar }
+- { id: officechai-kokotajlo, url: "https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/", qr_url: SHORT, caption: "OfficeChai: Kokotajlo", origin: transcript, at: T75.C.08.3, mode: shelf, style: calendar }
+- { id: metaculus-weak, url: "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/", caption: "Metaculus: weak AGI", origin: added, at: T76.C.03.1, mode: shelf, style: dial, verified: "browser 2026-09-26" }
+- { id: metaculus-strong, url: "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/", caption: "Metaculus: strong AGI", origin: added, at: T76.C.03.2, mode: shelf, style: dial, verified: "browser 2026-09-26" }
+- { id: alphafold, url: "https://en.wikipedia.org/wiki/AlphaFold", caption: "AlphaFold", origin: added, at: T76.C.01, mode: shelf, style: plain }
+- { id: goodhart, url: "https://en.wikipedia.org/wiki/Goodhart%27s_law", caption: "Goodhart's law", origin: added, at: T76.C.04, mode: shelf, style: plain }
+- { id: agi-wiki, url: "https://en.wikipedia.org/wiki/Artificial_general_intelligence", caption: "Artificial general intelligence", origin: added, at: T77.C.01, mode: shelf, style: plain }
+- { id: noema-agi, url: "https://www.noemamag.com/artificial-general-intelligence-is-already-here/", caption: "AGI Is Already Here (Agüera y Arcas & Norvig)", origin: added, at: T77.C.01, mode: shelf, style: plain }
+- { id: openai-charter, url: "https://openai.com/charter/", caption: "OpenAI Charter", origin: added, at: T77.C.02, mode: shelf, style: goalposts, verified: "browser 2026-09-26" }
+
+# ---- 16 Coda -----------------------------------------------------------------------------------------------------
+- { id: xkcd-356, url: "https://xkcd.com/356/", caption: "xkcd: Nerd Sniping", origin: added, at: T78.U.01, mode: feature, style: xkcd }

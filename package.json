@@ -7,12 +7,14 @@
   "scripts": {
     "sheet": "node render.mjs --sheet=0,1,2,3,4,5 --out=out/sheet.jpg",
     "video": "node render.mjs --clip --out=out/video.mp4",
-    "script": "node tools/build_script.mjs && node tools/verbatim_check.mjs"
+    "script": "node tools/build_script.mjs && node tools/verbatim_check.mjs",
+    "refs": "node tools/check_refs.mjs"
   },
   "dependencies": {
     "p5": "^2.3.3",
     "p5.brush": "^2.2.3",
-    "puppeteer-core": "^25.11.0"
+    "puppeteer-core": "^25.11.0",
+    "qrcode-generator": "^1.5.2"
   },
   "devDependencies": {
     "yaml": "^2.9.1"
