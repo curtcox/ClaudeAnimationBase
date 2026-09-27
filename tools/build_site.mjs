@@ -125,10 +125,17 @@ tick();
 }
 
 if (args.check) {
+  // sites that wall off scripts but were confirmed by hand in a browser (see script/refs.yaml `verified`)
+  const VERIFIED = new Set(readYaml('script/refs.yaml').filter(r => r.verified).map(r => new URL(r.url).origin));
   const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';
-  const extra = notes.flatMap(n => (n.links || []).filter(l => typeof l !== 'string').map(l => ({ ...l, note: n.id })));
+  // every link an explainer cites: its reading list, and every link inline in its text (cross-links must name an explainer)
+  const ids = new Set(notes.map(n => n.id)), inline = n => [...n.body.matchAll(/\]\(((?:[^()\s]|\([^()\s]*\))+)\)/g)].map(m => m[1]);   // URLs may hold (balanced) parentheses
+  for (const n of notes) for (const u of inline(n).filter(u => u.startsWith('../'))) if (!ids.has(u.replace(/^\.\.\/|\/$/g, ''))) console.log(`BAD cross-link ${u}  (${n.id})`);
+  const extra = [...new Map(notes.flatMap(n => (n.links || []).filter(l => typeof l !== 'string').map(l => ({ ...l, note: n.id }))
+    .concat(inline(n).filter(u => /^https?:/.test(u)).map(url => ({ url, note: n.id })))).map(l => [l.url, l])).values()];
   for (const l of extra) {
     let st; try { const r = await fetch(l.url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(15000) }); st = r.status; } catch (e) { st = e.name; }
-    console.log(`${st === 200 ? 'ok ' : 'BAD'} ${st} ${l.url}  (${l.note})`);
+    const walled = [401, 403, 429].includes(st) && VERIFIED.has(new URL(l.url).origin);
+    console.log(`${st === 200 ? 'ok ' : walled ? 'ok*' : 'BAD'} ${st} ${l.url}  (${l.note})${walled ? '  bot wall; this site was checked in a browser' : ''}`);
   }
 }
