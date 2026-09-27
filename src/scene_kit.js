@@ -10,6 +10,7 @@
 //   prop cards: indexCard, doorway, balance, logbook (small, reusable pictures several chapters need)
 //   mdTable(id), tableCard(tb, x, y, w, o)   a transcript table, parsed from its line and painted exactly
 //   thrindle(x, y, s, t, o)        ch 6's invented creature
+//   radarStar(x, y, r, vals, col, o)   a mind's 7- or 14-point star (ch 7's board)
 
 const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, col, { ink: false, font: `${Math.round(size)}px "Patrick Hand", sans-serif`, ...o });
 
@@ -164,4 +165,28 @@ function thrindle(x, y, s, t, o = {}) {
   paint(pts, { wash: col, fill: dk, fillOp: 70, tex: .6, ink: PAL.ink, sw: 1.1 });
   for (const d of [-1, 1]) { paint(ellPts(x + d * r * .32, y - r * 1.1, r * .2, r * .24, 10), { wash: o.anti ? PAL.ink : '#FBF6E6', ink: PAL.ink, sw: .6 }); paint(ellPts(x + d * r * .32 + r * .05 * Math.sin(t), y - r * 1.08, r * .09, r * .11, 8), { wash: o.anti ? '#FBF6E6' : PAL.ink, ink: null }); }
   for (const d of [-1, 1]) inkLine([[x + d * r * .4, y - r * .1], [x + d * r * .45, y + r * .12]], 2 * s, PAL.ink, 'ink', 0);
+}
+
+// A radar star (ch 7's mind-space board, and every chapter that adds to it): vals 0..100 (0 at the centre, 100 at the rim), one spoke per axis; grow 0..1; o.dotted (axis index);
+// o.axes (how many axes to show: 7 or 14; the second seven slot in between the first as they grow, o.more 0..7)
+function radarStar(x, y, r, vals, col, o = {}) {
+  const g = o.grow ?? 1, more = o.more ?? (vals.length > 7 ? 7 : 0), pts = [];
+  boilSeed('star ' + x + ' ' + y);
+  occupy(x - r, y - r, x + r, y + r, 1, 'star');
+  paint(ellPts(x, y, r, r, 30), { wash: null, ink: '#C9C2B4', sw: .5 });
+  for (let i = 0; i < 14; i++) {
+    const first = i % 2 === 0, idx = first ? i / 2 : 7 + (i - 1) / 2, a = -Math.PI / 2 + i / 14 * TAU;
+    let v;
+    if (first) v = vals[idx];
+    else { const on = clamp(more - (i - 1) / 2), nb = (vals[(i - 1) / 2] + vals[((i + 1) / 2) % 7]) / 2 * Math.cos(Math.PI / 14); v = lerp(nb, vals[idx] ?? nb, ease(on)); if (on <= 0 && more <= 0) continue; }
+    const rr = r * .06 + r * .94 * v / 100 * g;
+    pts.push([x + Math.cos(a) * rr, y + Math.sin(a) * rr]);
+    if (first || clamp(more - (i - 1) / 2) > 0) inkLine([[x, y], [x + Math.cos(a) * r, y + Math.sin(a) * r]], .5, '#D9D2C4', 'inkfine', 0);
+  }
+  paint(pts, { wash: col, washOp: 150, ink: mixCol(col, PAL.ink, .4), sw: 1.2 });
+  if (o.dotted != null) {   // an axis whose score means "I don't know": dotted, a question mark at its tip
+    const i = o.dotted * 2, a = -Math.PI / 2 + i / 14 * TAU, rr = r * .06 + r * .94 * vals[o.dotted] / 100 * g;
+    for (let d = 0; d < 6; d++) inkLine([[x + Math.cos(a) * rr * d / 6, y + Math.sin(a) * rr * d / 6], [x + Math.cos(a) * rr * (d + .5) / 6, y + Math.sin(a) * rr * (d + .5) / 6]], 3, PAL.clayDk, 'ink', 0);
+    lab('?', x + Math.cos(a) * (rr + 30), y + Math.sin(a) * (rr + 30), 40, PAL.clayDk);
+  }
 }
