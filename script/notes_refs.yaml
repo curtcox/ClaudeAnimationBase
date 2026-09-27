@@ -135,6 +135,22 @@
   at: T50.C.04
   mode: shelf
   style: note
+- id: note-foom-oom
+  url: https://curtcox.github.io/repo-to-be-named-later/n/foom-oom/
+  caption: 'Explained: Where "foom" comes from, and the OOM coincidence'
+  origin: note
+  ch: 13
+  at: T67.C.02
+  mode: shelf
+  style: note
+- id: note-foom
+  url: https://curtcox.github.io/repo-to-be-named-later/n/foom/
+  caption: "Explained: Foom, fast takeoff, and how Claude's numbers moved"
+  origin: note
+  ch: 13
+  at: T64.C.03
+  mode: shelf
+  style: note
 - id: note-fourteen-axes
   url: https://curtcox.github.io/repo-to-be-named-later/n/fourteen-axes/
   caption: "Explained: Reading the fourteen axes"
@@ -285,6 +301,14 @@
   origin: note
   ch: 11
   at: T52.C.05
+  mode: shelf
+  style: note
+- id: note-rsi
+  url: https://curtcox.github.io/repo-to-be-named-later/n/rsi/
+  caption: "Explained: RSI: AI that improves itself"
+  origin: note
+  ch: 13
+  at: T63.C.04
   mode: shelf
   style: note
 - id: note-saying-vs-doing
