@@ -69,5 +69,17 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   Nine source codes pile up in this stretch, and some wait up to 35 s to find room. Which fix?
   Options: “A painted board of links in the scene, several at once” · “Put some on the chapter's web page only” · “Accept the wait”
 
+## 4. The Echo
+
+- **whole chapter** · Claude asks `nmujl1bvwoi`
+  Chapters 4, 5 and 6 are first passes, built quickly. Review them next, or should I build 7-9 first?
+  Options: “I'll review 4-6 first” · “Build 7-9 next”
+
+## 6. Thrindles
+
+- **0:24.0** · T30.U.01 · shot A · Claude asks `nmujl1brxks`
+  The pasted thread is a corkboard: the three comments, each with its own code and its author's channel code, six codes at once (the storyboard's exception to two at a time). Does it read, and do the codes scan from your phone?
+  Options: “Works” · “Too busy: fewer at once” · “Codes don't scan (I'll reply)”
+
 ---
-5 open, 7 resolved.
+7 open, 7 resolved.
