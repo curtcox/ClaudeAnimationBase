@@ -264,6 +264,24 @@
 - { id: margolus-levitin, url: "https://en.wikipedia.org/wiki/Margolus%E2%80%93Levitin_theorem", caption: "Margolus–Levitin", origin: added, at: T60.C.02.7, mode: shelf, style: plain }
 - { id: bekenstein, url: "https://en.wikipedia.org/wiki/Bekenstein_bound", caption: "Bekenstein bound", origin: added, at: T60.C.02.7, mode: shelf, style: plain }
 - { id: von-neumann, url: "https://en.wikipedia.org/wiki/John_von_Neumann", caption: "John von Neumann", origin: added, ch: 12, at: "around a von Neumann", mode: shelf, style: plain }
+# more for chapter 12: how tokens work, the psychology of fast thinking, and each of the seven limits
+- { id: tokenizers, url: "https://huggingface.co/learn/llm-course/chapter2/4", caption: "How tokenizers split words", origin: added, at: T57.C.02, mode: shelf, style: plain }
+- { id: magikarp, url: "https://en.wikipedia.org/wiki/Magikarp", caption: "Magikarp (with a k)", origin: added, at: T57.C.02, mode: shelf, style: gold-scales }
+- { id: bpe, url: "https://en.wikipedia.org/wiki/Byte-pair_encoding", caption: "Byte-pair encoding", origin: added, at: T57.C.03, mode: shelf, style: plain }
+- { id: glitch-token, url: "https://en.wikipedia.org/wiki/Glitch_token", caption: "Glitch tokens", origin: added, at: T57.C.04, mode: shelf, style: gold-scales }
+- { id: crt, url: "https://en.wikipedia.org/wiki/Cognitive_reflection_test", caption: "The bat-and-ball test", origin: added, at: T58.C.03, mode: shelf, style: plain }
+- { id: dual-process, url: "https://en.wikipedia.org/wiki/Dual_process_theory", caption: "System 1 and System 2", origin: added, at: T59.U.01, mode: shelf, style: plain }
+- { id: reasoning-models, url: "https://en.wikipedia.org/wiki/Reasoning_language_model", caption: "Reasoning models", origin: added, at: T59.C.02, mode: shelf, style: plain }
+- { id: cot-faithfulness, url: "https://www.anthropic.com/research/reasoning-models-dont-say-think", caption: "Reasoning models don't always say what they think", origin: added, at: T59.C.02, mode: shelf, style: plain }
+- { id: chaos-theory, url: "https://en.wikipedia.org/wiki/Chaos_theory", caption: "Chaos theory", origin: added, at: T60.C.02.1, mode: shelf, style: butterfly }
+- { id: machines-loving-grace, url: "https://darioamodei.com/essay/machines-of-loving-grace", caption: "Amodei: Machines of Loving Grace", origin: added, at: T60.C.02.4, mode: shelf, style: plain }
+- { id: godel, url: "https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems", caption: "Gödel's incompleteness theorems", origin: added, at: T60.C.02.5, mode: shelf, style: plain }
+- { id: game-theory, url: "https://en.wikipedia.org/wiki/Game_theory", caption: "Game theory", origin: added, at: T60.C.02.6, mode: shelf, style: plain }
+- { id: limits-of-computation, url: "https://en.wikipedia.org/wiki/Limits_of_computation", caption: "Limits of computation", origin: added, at: T60.C.03, mode: shelf, style: thermometer }
+- { id: typical-mind, url: "https://www.lesswrong.com/w/typical-mind-fallacy", caption: "The typical mind fallacy", origin: added, at: T61.U.01, mode: shelf, style: plain }
+- { id: age-of-em, url: "https://en.wikipedia.org/wiki/The_Age_of_Em", caption: "Hanson: The Age of Em", origin: added, at: T61.C.02, mode: shelf, style: plain }
+- { id: context-rot, url: "https://www.trychroma.com/research/context-rot", caption: "Context rot", origin: added, at: T61.C.03, mode: shelf, style: plain }
+- { id: sleep-memory, url: "https://en.wikipedia.org/wiki/Sleep_and_memory", caption: "Sleep and memory", origin: added, at: T61.C.03, mode: shelf, style: plain }
 
 # ---- 13 Foom -----------------------------------------------------------------------------------------------------
 - { id: arxiv-aide2, url: "https://arxiv.org/abs/2609.26457", caption: "Recursive self-improvement of AI research agents", origin: transcript, at: T63.C.08.1, mode: feature, style: blueprint }

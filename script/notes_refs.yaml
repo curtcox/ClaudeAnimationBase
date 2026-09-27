@@ -31,6 +31,14 @@
   at: T26.C.02
   mode: shelf
   style: note
+- id: note-car-wash
+  url: https://curtcox.github.io/repo-to-be-named-later/n/car-wash/
+  caption: "Explained: The car wash problem, and fast versus slow thinking"
+  origin: note
+  ch: 12
+  at: T58.C.03
+  mode: shelf
+  style: note
 - id: note-chatgpt-question
   url: https://curtcox.github.io/repo-to-be-named-later/n/chatgpt-question/
   caption: "Explained: \"Would it surprise you to learn you've been talking to ChatGPT?\""
@@ -181,6 +189,22 @@
   origin: note
   ch: 3
   at: T13.C.01
+  mode: shelf
+  style: note
+- id: note-human-variation
+  url: https://curtcox.github.io/repo-to-be-named-later/n/human-variation/
+  caption: "Explained: The best human at everything, copied, and never sleeping"
+  origin: note
+  ch: 12
+  at: T61.C.02
+  mode: shelf
+  style: note
+- id: note-limits
+  url: https://curtcox.github.io/repo-to-be-named-later/n/limits/
+  caption: "Explained: Seven limits on AI, well short of physics"
+  origin: note
+  ch: 12
+  at: T60.C.03
   mode: shelf
   style: note
 - id: note-mind-space
@@ -349,6 +373,14 @@
   origin: note
   ch: 6
   at: T31.C.02.2
+  mode: shelf
+  style: note
+- id: note-tokens
+  url: https://curtcox.github.io/repo-to-be-named-later/n/tokens/
+  caption: "Explained: Tokens: why Claude sees typos but struggles to count letters"
+  origin: note
+  ch: 12
+  at: T57.C.03
   mode: shelf
   style: note
 - id: note-weights
