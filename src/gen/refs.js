@@ -2629,6 +2629,18 @@ window.REFS = {
   "origin": "added",
   "ch": 14,
   "at": "Machine Gods",
+  "mode": "page",
+  "style": "two-mics",
+  "line": "T71.C.02.2"
+ },
+ "machine-gods-promo": {
+  "id": "machine-gods-promo",
+  "url": "https://www.youtube.com/watch?v=1T-WWVZHj0g",
+  "qr_url": "https://youtu.be/1T-WWVZHj0g",
+  "caption": "This is Machine Gods",
+  "origin": "added",
+  "ch": 14,
+  "at": "Machine Gods",
   "mode": "shelf",
   "style": "two-mics",
   "line": "T71.C.02.2"

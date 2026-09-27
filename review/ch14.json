@@ -40,9 +40,15 @@
     "Kevin has the beard",
     "Leo and Jeff are the other way round too"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T15:26:01.836Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Kevin has the glasses (as drawn). A labelled 3×3 grid of everyone now opens Curt's question here.",
+     "at": "2026-09-27T15:41:34.244Z"
+    }
+   ]
   }
  ]
 }

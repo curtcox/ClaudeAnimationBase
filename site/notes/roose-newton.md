@@ -3,12 +3,12 @@ id: roose-newton
 title: "Kevin Roose, Casey Newton, and Sydney"
 ch: 14
 at: T71.C.02.2
-links: [kevin-roose, casey-newton, sydney, machine-gods, hardfork-hf, platformer, roose-sydney]
+links: [kevin-roose, casey-newton, sydney, machine-gods, machine-gods-promo, hardfork-hf, platformer, roose-sydney]
 ---
 **Who they are.** [Kevin Roose](https://en.wikipedia.org/wiki/Kevin_Roose) is a technology columnist at *The New York
 Times*; [Casey Newton](https://en.wikipedia.org/wiki/Casey_Newton) writes the newsletter [*Platformer*](https://www.platformer.news/).
 Together they host the podcast *Hard Fork*, and in September 2026 they announced a new show with NPR,
-[*Machine Gods*](https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods). Earlier that month, a *Hard Fork* episode
+[*Machine Gods*](https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods) (the show's promo: [*This is Machine Gods*](https://www.youtube.com/watch?v=1T-WWVZHj0g)). Earlier that month, a *Hard Fork* episode
 covered the incident from chapter 11 (see [the OpenAI–Hugging Face incident](../hf-incident/)):
 [*Why the Hugging Face Attack Was Worse Than We Thought*](https://www.youtube.com/watch?v=JtmUbZRCpEI).
 

@@ -21,13 +21,19 @@
     leo: { hair: 'short', hairCol: '#D8D5CF', top: 'swept', hoodie: '#23222E', pattern: SHIRT },
     jeff: { hair: 'short', hairCol: '#EDEBE6', glasses: true, facial: 'circle', facialCol: '#EDEBE6', hoodie: '#22222A' },
     robert: { hair: 'short', hairCol: '#1E1A18', hoodie: '#1A181E', collar: true },
-    kevin: HF_GLASSES, casey: HF_BEARD,   // which Hard Fork host is which: asked Curt (review/ch14.json)
+    paris: { hair: 'none', hairCol: '#3A2A22', bob: true, hoodie: '#2F5AA8' },   // from #889's art: dark hair to the shoulders, bangs
+    kevin: HF_GLASSES, casey: HF_BEARD,   // Kevin has the glasses (Curt, review/ch14.json)
   };
   function host(name, x, y, u, o = {}) {
     const h = HOSTS[name], sit = o.pose === 'sit', key = name + (o.key || '');
     occupy(x - 4.5 * u, y - (sit ? 10.5 : 16.5) * u, x + 4.5 * u, y, .8, name);
+    if (h.bob && o.view !== 'back') {   // hair to the shoulders, behind the head (the bangs go on after the face)
+      const R = 2.2 * u, hy = y - (sit ? 0 : 6 * u) - 5 * u - .95 * R; boilSeed('bob ' + key);
+      paint(ellPts(x, hy + R * .35, R * 1.3, R * 1.35, 24), { wash: h.hairCol, ink: PAL.ink, sw: .8 });
+    }
     const draw = ({ head, neck, hip, u: uu }) => {
       const R = 2.2 * uu, front = o.view !== 'back';
+      if (h.bob && front) { const P = []; boilSeed('bangs ' + key); for (let i = 0; i <= 16; i++) { const a = -Math.PI * (.97 - i / 16 * .94); P.push([head[0] + Math.cos(a) * R * 1.03, head[1] + Math.sin(a) * R * 1.03]); } for (let i = 16; i >= 0; i--) P.push([head[0] + (i / 16 - .5) * R * 1.9, head[1] - R * (.42 + .06 * Math.sin(i * 1.7))]); paint(P, { wash: h.hairCol, ink: null }); }
       if (h.pattern && front) { boilSeed('shirt ' + key); for (let i = 0; i < 14; i++) paint(ellPts(neck[0] + (hash(i * 2.3) - .5) * 2.4 * uu, lerp(neck[1] + 1.3 * uu, hip[1] + .2 * uu, hash(i * 5.7)), .32 * uu, .26 * uu, 8), { wash: h.pattern[i % h.pattern.length], ink: null }); }
       if (h.phones) headphones(head[0], head[1], R, T, { key });   // under the hair, so a quiff stands up over the band
       if (h.top) {   // a full head of hair hugging the crown, fuller on one side: swept back, or a quiff standing up
@@ -363,11 +369,38 @@
   }
   // F: three pundits on this conversation: Jeff (the calculator); Kevin (a lovesick chatbot; a lamp in the dark room; a
   // radio); Casey (a scoreboard; the frog's gold star; the slashed price tag; disclose). The prediction: three faces
+  // Everyone in the chapter in one labelled 3×3 grid (Brady Bunch / Hollywood Squares), so there's no doubt who is who.
+  // The squares light up one by one; everyone glances toward the centre square, then around.
+  const SQUARES = [['leo', 'Leo'], ['jeff', 'Jeff'], ['paris', 'Paris'], ['robert', 'Father Robert'], ['claude', 'Claude'], ['curt', 'Curt'], ['kevin', 'Kevin Roose'], ['casey', 'Casey Newton'], ['frog', 'the frog']];
+  const SQ_COLS = ['#E8A33A', '#5A8AC9', '#C96A8A', '#6FA85A', '#D97757', '#8A7AC9', '#4FA3A5', '#C9A45A', '#7AAE5A'];
+  function squares(t, t0) {
+    studio(t);
+    const cw = 390, chh = 330, g = 10, X0 = 60, Y0 = 35, band = 54;
+    SQUARES.forEach(([who, name], i) => {
+      const col = i % 3, row = Math.floor(i / 3), x = X0 + col * (cw + g), y = Y0 + row * (chh + g), k = seg(t, t0 + i * .22, t0 + i * .22 + .35);
+      if (k <= 0) return;
+      boilSeed('square ' + i); occupy(x, y, x + cw, y + chh, 1, 'square ' + name);
+      const bg = mixCol(SQ_COLS[i], '#FFFFFF', .55);
+      paint(rectPts(x, y, cw, chh), { wash: bg, fill: SQ_COLS[i], fillOp: 50 * k, tex: .4, ink: '#F6E7B0', sw: 3 });
+      for (let b = 0; b < 12; b++) { const on = frac(t * 1.5 + b / 12 + i * .1) < .6; const bx = x + 12 + b * (cw - 24) / 11; paint(ellPts(bx, y + 8, 4, 4, 8), { wash: on ? '#FFF1C4' : '#B8A070', ink: null }); }
+      // Brady Bunch: everyone looks toward the centre, now and then all look the other way
+      const glance = Math.sin(t * .9 + i) > .85 ? -1 : 1, look = (col === 1 ? Math.sin(t * 1.3 + i) : (1 - col)) * glance;
+      const cx = x + cw / 2, by = y + chh - band;
+      if (k > .5) {
+        if (HOSTS[who]) host(who, cx, by + 30, 24, { pose: 'sit', key: 'square', look, mouth: 'smile' });
+        else if (who === 'curt') curtAs(cx, by + 30, 24, { pose: 'sit', look, mouth: 'smile', boilKey: 'curt square' });
+        else if (who === 'claude') claudeAs(cx, by + 4, 21, { ...feel('happy', t), lookX: look, noShadow: true, boilKey: 'claude square' });
+        else frog(cx, by - 4, 22, { look, boilKey: 'frog square', blink: frac(t / 2.9) < .05 });
+      }
+      boilSeed('square label ' + i); paint(rectPts(x, y + chh - band, cw, band), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 });
+      if (k > .5) lab(name, cx, y + chh - band / 2 + 2, 34, CHAR);
+    });
+  }
   function shotF(t) {
     const u = L('T71.U.01'), c1 = L('T71.C.01'), j = L('T71.C.02.1'), k2 = L('T71.C.02.2'), c = L('T71.C.02.3'), c3 = L('T71.C.03');
     const trio = (o = {}) => { studio(t); [['jeff', 240], ['kevin', 645], ['casey', 1050]].forEach(([n, x]) => { host(n, x, 900, 20, { pose: 'sit', key: 'trio', ...(o[n] || {}) }); mic(x + 90, 830, .8); }); };
-    if (t < c1.t0) { if (t < u.t0 + 1) { desk14(t, { typing: true }); return; } trio(); return; }
-    if (t < j.t0) { trio(); return; }
+    if (t < u.t0 + .6) { desk14(t, { typing: true }); return; }
+    if (t < j.t0) { squares(t, u.t0 + .6); return; }
     if (t < k2.t0) { studio(t); host('jeff', 280, 1000, 30, { key: 'calc', handR: 'point', brows: 'skeptic' }); calculator(760, 500, 1.4, t); return; }
     if (t < c.t0) {
       const sydney = say('T71.C.02.2', 'his 2023 Sydney conversation', -.3), welfare = say('T71.C.02.2', 'AI welfare', -.8), gods = say('T71.C.02.2', 'Machine Gods', -1.5);
