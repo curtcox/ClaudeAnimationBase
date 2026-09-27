@@ -9,7 +9,7 @@
 // Exit 1 on a structural error (bad anchor, missing transcript link); dead links are reported, not fatal.
 import { writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
-import { PATHS, readYaml } from './script_lib.mjs';
+import { PATHS, readYaml, resolveAnchor } from './script_lib.mjs';
 
 const qrcode = createRequire(import.meta.url)('qrcode-generator');
 const REFS = 'script/refs.yaml', REPORT = 'script/refs_report.md';
@@ -26,8 +26,7 @@ for (const r of refs) {
   for (const k of ['id', 'url', 'caption', 'origin', 'at', 'mode', 'style']) if (!r[k]) note(`${r.id}: missing ${k}`);
   if (!['transcript', 'attachment', 'added'].includes(r.origin)) note(`${r.id}: bad origin ${r.origin}`);
   if (!SIZE[r.mode]) note(`${r.id}: bad mode ${r.mode}`);
-  if (/^T\d\d\.[UC]\.\d\d/.test(r.at)) r.line = byId.get(r.at);
-  else r.line = lines.find(l => l.ch === r.ch && l.spoken && l.text.includes(r.at));
+  r.line = resolveAnchor(r, lines, byId);
   if (!r.line) { note(`${r.id}: can't find line for at: ${JSON.stringify(r.at)}${r.ch == null ? ' (phrase needs ch)' : ''}`); continue; }
   if (r.origin === 'transcript' && !r.line.text.includes(r.url.replace(/^https:\/\//, ''))) note(`${r.id}: transcript link isn't on line ${r.line.id}`);
 }

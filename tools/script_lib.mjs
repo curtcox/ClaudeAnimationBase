@@ -111,3 +111,10 @@ export function autoSpeech(text, respellings) {
 }
 
 export const words = s => (s.match(/\S+/g) || []).length;
+
+// The script line a reference in refs.yaml appears under: `at` is a line id, or a phrase (the first spoken line in `ch`
+// whose text contains it).
+export function resolveAnchor(r, lines, byId = new Map(lines.map(l => [l.id, l]))) {
+  if (/^T\d\d\.[UC]\.\d\d/.test(r.at)) return byId.get(r.at);
+  return lines.find(l => l.ch === r.ch && l.spoken && l.text.includes(r.at));
+}

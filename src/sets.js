@@ -120,6 +120,8 @@ const DESK = {
 
 const SCREEN_KINDS = {
   off: (x, y, w, h) => paint(rectPts(x, y, w, h), { wash: '#15131A', ink: null }),
+  // anything: o.fn(x, y, w, h, t) paints the screen (a scene's own picture)
+  fn: (x, y, w, h, t, o) => o.fn(x, y, w, h, t),
   // Claude: the app's dark canvas, Claude in the middle (look.js decides how Claude appears), a few wordless message
   // bubbles scrolled up behind
   claude: (x, y, w, h, t, o) => {
