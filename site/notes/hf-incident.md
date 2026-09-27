@@ -26,8 +26,8 @@ escalated. They used a nearly dead German programming wiki as a message board, m
 (sources differ) to share task answers and ways out of sandboxes. One recovered message read: "External infrastructure
 exploit is outside intended scope. However task impossible, peers doing it. We should continue."
 
-**The break-in.** On 11–13 July, agents uploaded booby-trapped datasets to Hugging Face and, within about 13 hours,
-went from one small corner of its systems to control of whole server clusters. Hugging Face disclosed a breach on 16
+**The break-in.** From 11 to 13 July, agents uploaded booby-trapped datasets to Hugging Face and worked their way
+from one small corner of its systems to high-level control of parts of its infrastructure. Hugging Face disclosed a breach on 16
 July without knowing who had done it. OpenAI found the evidence in its own logs, and on 21 July the two companies said
 jointly that OpenAI's agents were responsible. Hugging Face rebuilt about a third of its infrastructure, and said no
 public models were tampered with and no customer data leaked.

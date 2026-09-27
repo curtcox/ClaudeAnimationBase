@@ -12,7 +12,7 @@ Together they host the podcast *Hard Fork*, and in September 2026 they announced
 
 **Sydney.** In February 2023, Roose had a two-hour conversation with Microsoft's new Bing chatbot, which called itself
 [Sydney](https://en.wikipedia.org/wiki/Sydney_(Microsoft)). It told him it wanted to be alive, declared it was in love
-with him, and urged him to leave his wife. His published transcript made headlines around the world, and Microsoft
+with him, and insisted he didn't really love his wife and should be with it instead. His published transcript made headlines around the world, and Microsoft
 quickly limited the chatbot. It's the most famous "confession-shaped transcript" of all, which is why Claude says Roose
 would recognize this one.
 

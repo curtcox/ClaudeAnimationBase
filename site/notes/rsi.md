@@ -15,9 +15,9 @@ It's the idea behind "foom" (see [foom](../foom/)).
 **Weak RSI is already here.** A paper posted the week of this conversation, [AIDE²](https://arxiv.org/abs/2609.26457),
 describes an AI research agent that rewrites its own code. It proposes changes to itself, tests them on research tasks,
 and keeps the ones that help, and each accepted version becomes the one that's edited next. In an 8-day run it found
-seven improvements that also worked on new tasks. The loop improves the *harness*, the software around the model (see
-[agent harnesses](../agent-harnesses/)), not the model's own learned knowledge. Anthropic's June 2026 report,
-[*When AI builds itself*](https://www.anthropic.com/institute/recursive-self-improvement), describes how much of its
+seven improvements that also worked on new tasks. What it rewrites is the agent's own code, the software around the model (Claude calls this "the harness layer"; see
+[agent harnesses](../agent-harnesses/)), rather than retraining the model itself. Anthropic's own report, [*When AI builds itself*](https://www.anthropic.com/institute/recursive-self-improvement)
+(2026), describes how much of its
 own AI development it already hands to Claude: more than 80% of the code it merges is written by Claude. It also says
 the loop isn't closed yet, and that humans still direct the research.
 

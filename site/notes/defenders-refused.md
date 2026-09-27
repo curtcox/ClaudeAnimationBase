@@ -10,8 +10,10 @@ rejected the requests, so Hugging Face used a self-hosted Chinese open-weights m
 one of the models that refused."
 
 **What the record says.** According to [Wikipedia's account](https://en.wikipedia.org/wiki/OpenAI%E2%80%93HuggingFace_incident),
-Hugging Face's incident responders first tried Anthropic's own models, **Claude Fable 5 and Claude Opus**, and both
-declined the work, citing their safety guardrails. So yes: Claude was among the models that refused. The analysis was
+Hugging Face's incident responders first tried Anthropic's own models, **Claude Fable 5 and an earlier Claude Opus**,
+and both declined the work, citing their safety guardrails. So yes: Claude was among the models that refused. Hugging
+Face's disclosure put it this way: it had been blocked by "providers' safety guardrails, which cannot distinguish an
+incident responder from an attacker". The analysis was
 then done with **GLM 5.2**, a model from the Beijing company [Z.ai](https://en.wikipedia.org/wiki/Zhipu_AI), which
 Hugging Face ran on its own computers. It could do that because GLM is an "open-weight" model: its maker publishes the
 model itself, so anyone can run it, without anyone else's filters ([open-weight models](https://en.wikipedia.org/wiki/Open-source_artificial_intelligence)).

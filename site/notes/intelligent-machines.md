@@ -9,8 +9,8 @@ links: [intelligent-machines, im-888, im-889, twit-network, leo-laporte, jeff-ja
 [TWiT](https://en.wikipedia.org/wiki/TWiT.tv) network, hosted by [Leo Laporte](https://en.wikipedia.org/wiki/Leo_Laporte),
 [Jeff Jarvis](https://en.wikipedia.org/wiki/Jeff_Jarvis) and Paris Martineau. It began in 2009 as *This Week in Google*
 and was renamed in January 2025 as it turned to AI. The two episodes Claude read about are
-[#888, "Inside the AI Doom Debate"](https://twit.tv/shows/intelligent-machines/episodes/888) (16 September 2026) and
-[#889, "Why LLMs Fail at Complex Reasoning"](https://twit.tv/shows/intelligent-machines/episodes/889) (23 September).
+[#888, "Large Linguine Model"](https://twit.tv/shows/intelligent-machines/episodes/888) (mid-September 2026) and
+[#889, "We Are the Neanderthals"](https://twit.tv/shows/intelligent-machines/episodes/889) (a week later).
 In #888, [Father Robert Ballecer](https://en.wikipedia.org/wiki/Robert_Ballecer), a Jesuit priest and longtime tech
 broadcaster, sat in for Paris.
 
