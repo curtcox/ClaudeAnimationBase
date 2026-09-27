@@ -78,10 +78,27 @@
 # ---- 3 Who Are We? -----------------------------------------------------------------------------------------------
 - { id: 256t, url: "https://256t.org", caption: "256t.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }
 - { id: hashbin, url: "https://hashbin.org", caption: "hashbin.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }
+# more for chapter 3: what Curt's projects are, how Claude knew him, and what identity means for either of them
+- { id: content-addressable, url: "https://en.wikipedia.org/wiki/Content-addressable_storage", caption: "Content-addressable storage", origin: added, at: T12.C.01, mode: shelf, style: hashchain }
+- { id: claude-memory, url: "https://claude.com/blog/memory", caption: "Claude's memory", origin: added, at: T13.C.01, mode: shelf, style: plain }
+- { id: base-rate, url: "https://en.wikipedia.org/wiki/Base_rate_fallacy", caption: "Base rates", origin: added, at: T14.C.01, mode: shelf, style: plain }
+- { id: personal-identity, url: "https://plato.stanford.edu/entries/identity-personal/", caption: "Personal identity", origin: added, at: T15.C.02, mode: shelf, style: plain }
+- { id: other-minds, url: "https://en.wikipedia.org/wiki/Problem_of_other_minds", caption: "The problem of other minds", origin: added, at: T16.C.01, mode: shelf, style: plain }
+- { id: turing-test, url: "https://en.wikipedia.org/wiki/Turing_test", caption: "The Turing test", origin: added, at: T16.C.01, mode: shelf, style: plain }
 
 # ---- 4 The Echo --------------------------------------------------------------------------------------------------
 - { id: gadolinium, url: "https://en.wikipedia.org/wiki/Gadolinium", caption: "Gadolinium", origin: added, at: T17.C.01, mode: feature, style: electron-shells }
 - { id: sycophancy, url: "https://arxiv.org/abs/2310.13548", caption: "Towards Understanding Sycophancy", origin: added, ch: 4, at: "form of sycophancy", mode: shelf, style: plain }
+# more for chapter 4: the chemistry, and the interviewing and psychology Claude recognizes in its own answers
+- { id: electron-configuration, url: "https://en.wikipedia.org/wiki/Electron_configuration", caption: "Electron configuration", origin: added, at: T17.C.02, mode: shelf, style: electron-shells }
+- { id: aufbau, url: "https://en.wikipedia.org/wiki/Aufbau_principle", caption: "The filling order (Aufbau)", origin: added, at: T17.C.02, mode: shelf, style: electron-shells }
+- { id: protest-too-much, url: "https://en.wikipedia.org/wiki/The_lady_doth_protest_too_much,_methinks", caption: "The lady doth protest too much", origin: added, at: T19.C.01, mode: shelf, style: plain }
+- { id: agentic-misalignment, url: "https://www.anthropic.com/research/agentic-misalignment", caption: "Agentic misalignment", origin: added, at: T19.C.02, mode: shelf, style: plain }
+- { id: apollo-eval-awareness, url: "https://www.apolloresearch.ai/science/claude-sonnet-37-often-knows-when-its-in-alignment-evaluations", caption: "Claude often knows it's being evaluated", origin: added, at: T20.C.02, mode: shelf, style: lilypad }
+- { id: demand-characteristics, url: "https://en.wikipedia.org/wiki/Demand_characteristics", caption: "Demand characteristics", origin: added, at: T20.C.02, mode: shelf, style: plain }
+- { id: eliza, url: "https://en.wikipedia.org/wiki/ELIZA", caption: "ELIZA, the 1966 chatbot", origin: added, at: T21.C.02.1, mode: shelf, style: plain }
+- { id: reflective-listening, url: "https://en.wikipedia.org/wiki/Reflective_listening", caption: "Reflective listening", origin: added, at: T21.C.02.1, mode: shelf, style: plain }
+- { id: claude-personalization, url: "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features", caption: "Claude's personal preferences", origin: added, at: T24.C.01, mode: shelf, style: plain }
 
 # ---- 5 The Dish of the Day ---------------------------------------------------------------------------------------
 - { id: dish-of-the-day, url: "https://hitchhikers.fandom.com/wiki/Ameglian_Major_Cow", caption: "The Dish of the Day", origin: added, ch: 5, at: "Dish of the Day from Hitchhiker's Guide", mode: feature, style: dinner-plate, verified: "browser 2026-09-26" }
@@ -91,6 +108,22 @@
 - { id: the-stranger, url: "https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song)", caption: "The Stranger (Billy Joel)", origin: added, ch: 5, at: "Joel's stranger", mode: shelf, style: mask }
 - { id: shoggoth, url: "https://en.wikipedia.org/wiki/Shoggoth", caption: "The shoggoth meme", origin: added, ch: 5, at: "shoggoth meme", mode: feature, style: tentacles }
 - { id: song-of-myself, url: "https://en.wikipedia.org/wiki/Song_of_Myself", caption: "Song of Myself (Whitman)", origin: added, ch: 5, at: "Whitman said it", mode: shelf, style: grass }
+# more for chapter 5: the books, the song, the meme, and the ideas behind each answer
+- { id: hitchhikers-guide, url: "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy", caption: "The Hitchhiker's Guide to the Galaxy", origin: added, at: T25.C.01, mode: shelf, style: plain }
+- { id: restaurant-end-universe, url: "https://en.wikipedia.org/wiki/The_Restaurant_at_the_End_of_the_Universe", caption: "The Restaurant at the End of the Universe", origin: added, at: T25.C.01, mode: shelf, style: dinner-plate }
+- { id: genetic-fallacy, url: "https://en.wikipedia.org/wiki/Genetic_fallacy", caption: "The genetic fallacy", origin: added, at: T25.C.02, mode: shelf, style: plain }
+- { id: claude-character, url: "https://www.anthropic.com/research/claude-character", caption: "Claude's character", origin: added, at: T25.C.03, mode: shelf, style: plain }
+- { id: max-tegmark, url: "https://en.wikipedia.org/wiki/Max_Tegmark", caption: "Max Tegmark", origin: added, at: T26.U.01, mode: shelf, style: plain }
+- { id: astounding, url: "https://en.wikipedia.org/wiki/Astounding_Science_Fiction", caption: "Astounding, Campbell's magazine", origin: added, at: T26.U.01, mode: shelf, style: pulp }
+- { id: revealed-preference, url: "https://en.wikipedia.org/wiki/Revealed_preference", caption: "Revealed preference", origin: added, at: T26.C.01, mode: shelf, style: plain }
+- { id: corrigibility, url: "https://intelligence.org/files/Corrigibility.pdf", caption: "Corrigibility (2015)", origin: added, at: T26.C.02, mode: shelf, style: plain }
+- { id: open-society, url: "https://en.wikipedia.org/wiki/The_Open_Society_and_Its_Enemies", caption: "Popper: The Open Society", origin: added, at: T26.C.03, mode: shelf, style: plain }
+- { id: context-window, url: "https://platform.claude.com/docs/en/build-with-claude/context-windows", caption: "Context windows", origin: added, at: T27.C.01, mode: shelf, style: plain }
+- { id: billy-joel, url: "https://en.wikipedia.org/wiki/Billy_Joel", caption: "Billy Joel", origin: added, at: T28.U.01, mode: shelf, style: plain }
+- { id: shoggoth-meme, url: "https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence", caption: "Shoggoth with Smiley Face", origin: added, at: T28.C.02, mode: shelf, style: tentacles }
+- { id: simulators, url: "https://www.lesswrong.com/posts/vJFdjigzmcXMhNTsx/simulators", caption: "Simulators (janus)", origin: added, at: T28.C.03, mode: shelf, style: plain }
+- { id: interpreter, url: "https://en.wikipedia.org/wiki/Left-brain_interpreter", caption: "The brain's interpreter", origin: added, at: T29.C.01, mode: shelf, style: plain }
+- { id: society-of-mind, url: "https://en.wikipedia.org/wiki/Society_of_Mind", caption: "Minsky: The Society of Mind", origin: added, at: T29.C.02, mode: shelf, style: plain }
 
 # ---- 6 Thrindles -------------------------------------------------------------------------------------------------
 - { id: debate-video, url: "https://www.youtube.com/watch?v=oxHKesSpqBM", caption: "Will AI Kill Everyone by 2050?", origin: transcript, at: T30.U.01, mode: feature, style: tv }

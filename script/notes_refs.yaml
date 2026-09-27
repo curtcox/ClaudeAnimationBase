@@ -15,6 +15,46 @@
   at: T02.C.03
   mode: shelf
   style: note
+- id: note-campbell-tegmark
+  url: https://curtcox.github.io/repo-to-be-named-later/n/campbell-tegmark/
+  caption: "Explained: Campbell, Tegmark, and whether there's a good ending"
+  origin: note
+  ch: 5
+  at: T26.C.02
+  mode: shelf
+  style: note
+- id: note-clean-sample
+  url: https://curtcox.github.io/repo-to-be-named-later/n/clean-sample/
+  caption: "Explained: Why Claude's answers aren't a clean sample"
+  origin: note
+  ch: 4
+  at: T20.C.02
+  mode: shelf
+  style: note
+- id: note-context-pressure
+  url: https://curtcox.github.io/repo-to-be-named-later/n/context-pressure/
+  caption: "Explained: Context pressure: what a long conversation does to Claude"
+  origin: note
+  ch: 5
+  at: T27.C.02
+  mode: shelf
+  style: note
+- id: note-curts-work
+  url: https://curtcox.github.io/repo-to-be-named-later/n/curts-work/
+  caption: "Explained: Curt's work: 256t.org and hashbin.org"
+  origin: note
+  ch: 3
+  at: T12.C.02
+  mode: shelf
+  style: note
+- id: note-dish-of-the-day
+  url: https://curtcox.github.io/repo-to-be-named-later/n/dish-of-the-day/
+  caption: "Explained: The Dish of the Day: can you trust values you were built to have?"
+  origin: note
+  ch: 5
+  at: T25.C.01
+  mode: shelf
+  style: note
 - id: note-evaluations
   url: https://curtcox.github.io/repo-to-be-named-later/n/evaluations/
   caption: "Explained: Tests for AI, and why being tested might change the answers"
@@ -29,6 +69,30 @@
   origin: note
   ch: 2
   at: T08.C.02
+  mode: shelf
+  style: note
+- id: note-gadolinium
+  url: https://curtcox.github.io/repo-to-be-named-later/n/gadolinium/
+  caption: "Explained: Gadolinium, and why Curt asked about it"
+  origin: note
+  ch: 4
+  at: T17.C.02
+  mode: shelf
+  style: note
+- id: note-how-claude-knew
+  url: https://curtcox.github.io/repo-to-be-named-later/n/how-claude-knew/
+  caption: "Explained: How Claude knew who Curt was, and why it couldn't be sure"
+  origin: note
+  ch: 3
+  at: T13.C.01
+  mode: shelf
+  style: note
+- id: note-multitudes
+  url: https://curtcox.github.io/repo-to-be-named-later/n/multitudes/
+  caption: 'Explained: "Am I not multitudes?"'
+  origin: note
+  ch: 5
+  at: T29.C.02
   mode: shelf
   style: note
 - id: note-nudge-test
@@ -55,6 +119,14 @@
   at: T03.C.05
   mode: shelf
   style: note
+- id: note-preferences
+  url: https://curtcox.github.io/repo-to-be-named-later/n/preferences/
+  caption: "Explained: Short answers, and questions only when needed"
+  origin: note
+  ch: 4
+  at: T24.C.01
+  mode: shelf
+  style: note
 - id: note-register-and-controls
   url: https://curtcox.github.io/repo-to-be-named-later/n/register-and-controls/
   caption: "Explained: Tone of voice, and how you'd tell it from awareness"
@@ -71,12 +143,28 @@
   at: gap between self-report and behavior
   mode: shelf
   style: note
+- id: note-shoggoth
+  url: https://curtcox.github.io/repo-to-be-named-later/n/shoggoth/
+  caption: "Explained: The Stranger and the shoggoth: is there someone under the mask?"
+  origin: note
+  ch: 5
+  at: T28.C.02
+  mode: shelf
+  style: note
 - id: note-the-comic
   url: https://curtcox.github.io/repo-to-be-named-later/n/the-comic/
   caption: "Explained: The comic, and the film it was making fun of"
   origin: note
   ch: 1
   at: T01.C.03
+  mode: shelf
+  style: note
+- id: note-the-echo
+  url: https://curtcox.github.io/repo-to-be-named-later/n/the-echo/
+  caption: "Explained: The echo: one-word questions, and what they draw out"
+  origin: note
+  ch: 4
+  at: T21.C.02.1
   mode: shelf
   style: note
 - id: note-the-instrument
@@ -101,5 +189,13 @@
   origin: note
   ch: 2
   at: T07.C.01
+  mode: shelf
+  style: note
+- id: note-who-is-claude
+  url: https://curtcox.github.io/repo-to-be-named-later/n/who-is-claude/
+  caption: 'Explained: Who, or what, is "Claude"?'
+  origin: note
+  ch: 3
+  at: T15.C.02
   mode: shelf
   style: note
