@@ -4,7 +4,7 @@
 //   node tools/scratch_voice.mjs --chapter=2     clips for chapter 2 → audio/durations.json → timeline → audio/ch02.wav
 //   node tools/scratch_voice.mjs                 every chapter
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync, rmSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { PATHS, readYaml, pad } from './script_lib.mjs';
 
@@ -18,10 +18,21 @@ const durations = existsSync('audio/durations.json') ? JSON.parse(readFileSync('
 const clips = existsSync(`${DIR}/clips.json`) ? JSON.parse(readFileSync(`${DIR}/clips.json`, 'utf8')) : {};
 const seconds = f => +execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]).toString().trim();
 
+// macOS `say` sometimes hangs for good (a rebuild sat 2 h on one line), so each line gets SAY_TIMEOUT and a few tries. It
+// writes to a temporary file that's renamed only once complete, so a killed `say` never leaves a half clip that a later
+// run would take as done.
+const SAY_TIMEOUT = 120000, SAY_TRIES = 3;
+function speak(voice, rate, text, f) {
+  const tmp = f.replace(/\.aiff$/, '.part.aiff');
+  for (let i = 1; ; i++) {
+    try { execFileSync('say', ['-v', voice, '-r', String(rate), '-o', tmp, text], { timeout: SAY_TIMEOUT, killSignal: 'SIGKILL' }); renameSync(tmp, f); return; }
+    catch (e) { rmSync(tmp, { force: true }); if (i >= SAY_TRIES) throw e; console.log(`say failed or hung (try ${i}); trying again: ${text.slice(0, 60)}`); }
+  }
+}
 let made = 0;
 for (const l of lines) {
   const [voice, rate] = VOICES[l.speaker], key = createHash('sha256').update(`${voice}|${rate}|${l.speech}`).digest('hex').slice(0, 16), f = `${DIR}/${key}.aiff`;
-  if (!existsSync(f)) { execFileSync('say', ['-v', voice, '-r', String(rate), '-o', f, l.speech]); made++; }
+  if (!existsSync(f)) { speak(voice, rate, l.speech, f); made++; }
   clips[l.id] = f; durations[l.id] = +seconds(f).toFixed(3);
 }
 writeFileSync('audio/durations.json', JSON.stringify(durations, null, 1) + '\n');
