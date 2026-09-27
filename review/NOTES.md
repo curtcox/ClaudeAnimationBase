@@ -90,6 +90,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **3:17.4** · T54.U.01 · Claude asks `nmujvc926ll`
   The ChatGPT sting: the camera pushes toward Curt, and a smiley mask shows on his head for about half a second. Is that the right length for the joke?
   Options: “Right length” · “Longer” · “Shorter” · “Drop the mask”
+  - Curt: Right length
 
 ## 12. Limits
 
