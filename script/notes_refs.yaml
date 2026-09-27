@@ -7,6 +7,22 @@
   at: T46.C.05
   mode: shelf
   style: note
+- id: note-agi-definitions
+  url: https://curtcox.github.io/repo-to-be-named-later/n/agi-definitions/
+  caption: 'Explained: What does "AGI" mean? Three answers and a history'
+  origin: note
+  ch: 15
+  at: T77.C.02
+  mode: shelf
+  style: note
+- id: note-ai-2027
+  url: https://curtcox.github.io/repo-to-be-named-later/n/ai-2027/
+  caption: "Explained: AI 2027: a forecast that grades itself"
+  origin: note
+  ch: 15
+  at: T75.C.03
+  mode: shelf
+  style: note
 - id: note-ai-control
   url: https://curtcox.github.io/repo-to-be-named-later/n/ai-control/
   caption: "Explained: Why people worry AIs might organize, or resist control"
@@ -53,6 +69,14 @@
   origin: note
   ch: 4
   at: T20.C.02
+  mode: shelf
+  style: note
+- id: note-compass
+  url: https://curtcox.github.io/repo-to-be-named-later/n/compass/
+  caption: "Explained: The AGI compass, and where Claude put everyone"
+  origin: note
+  ch: 15
+  at: T74.C.03.7
   mode: shelf
   style: note
 - id: note-concepts-case
@@ -269,6 +293,14 @@
   origin: note
   ch: 5
   at: T29.C.02
+  mode: shelf
+  style: note
+- id: note-nerd-sniping
+  url: https://curtcox.github.io/repo-to-be-named-later/n/nerd-sniping/
+  caption: 'Explained: "The T-800 of nerd sniping"'
+  origin: note
+  ch: 16
+  at: T78.C.02
   mode: shelf
   style: note
 - id: note-nudge-test
