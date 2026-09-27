@@ -179,7 +179,7 @@
     shell('openclaw', 380, 820, 1.4, t, { fill: .8 }); shell('hermes', 910, 820, 1.4, t, { fill: .8 });
     banner('memory is sacred', 910, 420, 330, seg(t, say('T46.C.07', 'memory is sacred', -.2), say('T46.C.07', 'memory is sacred', .6)));
     banner('the shell is mutable', 380, 420, 330, seg(t, say('T46.C.07', 'the shell is mutable', -.2), say('T46.C.07', 'the shell is mutable', .6)));
-    qrFeature('hermes-memory', t, c7.t0 + .4, { hold: L('T46.C.09.2').t1 - c7.t0 });
+    qrFeature('hermes-memory', t, c7.t0 + .4, { hold: L('T46.C.09.2').t0 - .9 - c7.t0 });   // it leaves as the next link is named, making room for it
   }
   // F: "Two of them, actually." (1) Memory: the continuity spike at 90, the stored notes; "maybe 60": it repaints.
   // (2) Values: 20 against 15; an unstated hunch; a premise contradicted

@@ -47,7 +47,8 @@ function occupancyAt(t) {
 
 // Places a list of { id, t0, hold, half } (half = the card's half-width in px) and returns [{ id, t0, x, y, half, hold, cost,
 // clean }]. The bottom band is kept for captions and subtitles. A code goes up as soon as there's a clean spot (covering less
-// than CLEAN px² of content); if the frame is full, it waits for one, up to MAX_WAIT s, rather than cover anything, and only
+// than CLEAN px² of content, and hiding no more than a fifth of any one thing that matters, such as a short line of
+// lettering); if the frame is full, it waits for one, up to MAX_WAIT s, rather than cover anything, and only
 // then settles for the spot that covers least.
 const LAYOUT_RESERVED = [[0, H - 230, 1420, H, 3]], MAX_TOGETHER = 2, CLEAN = 4000, MAX_WAIT = 40;
 function planLayout(items) {
@@ -67,11 +68,16 @@ function planLayout(items) {
       for (let y = h + 14; y <= H - hb - 14; y += 30) for (let x = h + 14; x <= W - h - 14; x += 30) {
         const r = [x - h - 10, y - h - 10, x + h + 10, y + hb + 10];
         if (others.some(p => overlap(r, [p.x - p.half - 12, p.y - p.half - 12, p.x + p.half + 12, p.y + p.half + 46]) > 0)) continue;
-        let cover = 0; for (const o of occ) cover += overlap(r, o) * o[4];
+        let cover = 0, hides = false;
+        const rc = [x - h, y - h, x + h, y + h + 34];   // the code itself, as the chapter check measures it
+        for (const o of occ) {
+          const ov = overlap(r, o); cover += ov * o[4];
+          if (!hides && o[4] >= .5 && overlap(rc, o) > .2 * Math.max(1, (o[2] - o[0]) * (o[3] - o[1]))) hides = true;   // hides a fifth of something small
+        }
         cover /= samples.length;
         const cost = cover + d * 9000 + Math.abs(x - (W - h - 30)) * 2;   // prefer no delay, then the right side
         const cand = { id: it.id, t0, x, y, half: h, hold: it.hold, cost, cover, delay: d };
-        if (cover < CLEAN && (!best || cost < best.cost)) best = cand;
+        if (cover < CLEAN && !hides && (!best || cost < best.cost)) best = cand;
         if (!fallback || cover < fallback.cover || (cover === fallback.cover && cost < fallback.cost)) fallback = cand;
       }
       if (best) break;   // the earliest delay with a clean spot

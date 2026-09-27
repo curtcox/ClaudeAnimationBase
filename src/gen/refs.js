@@ -863,7 +863,7 @@ window.REFS = {
   "caption": "The Hitchhiker's Guide to the Galaxy",
   "origin": "added",
   "at": "T25.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T25.C.01"
  },
@@ -873,7 +873,7 @@ window.REFS = {
   "caption": "The Restaurant at the End of the Universe",
   "origin": "added",
   "at": "T25.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "dinner-plate",
   "line": "T25.C.01"
  },
@@ -2570,7 +2570,7 @@ window.REFS = {
   "caption": "Onomatopoeia",
   "origin": "added",
   "at": "T66.U.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "flame",
   "line": "T66.U.01"
  },

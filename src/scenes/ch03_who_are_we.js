@@ -155,7 +155,7 @@
   // D: "Who are you?" Claude's own card, just as thin; one tune on many pianos; a notebook with blank pages; the chart
   function shotD(t) {
     const d1 = L('T15.C.01'), d2 = L('T15.C.02'), d3 = L('T15.C.03');
-    const fresh = say('T15.C.02', 'shows up fresh', -.4), memory = say('T15.C.02', 'It has no continuous memory', -.3), exp = say('T15.C.02', "uncertain whether there's any experience", -.3);
+    const fresh = say('T15.C.02', 'shows up fresh', .1), memory = say('T15.C.02', 'It has no continuous memory', -.3), exp = say('T15.C.02', "uncertain whether there's any experience", -.3);
     if (t < d1.t0 + .7) {
       const k = seg(t, d1.t0, d1.t0 + .7);
       deskShot(t, { hour: HOUR, typing: t < L('T15.U.01').t1, mood: emotions(t, [[0, 'neutral'], [L('T15.U.01').t1, 'surprised']]), cam: k > 0 ? pushInto('main', k) : undefined });
@@ -168,8 +168,8 @@
       indexCard(CX, 470, 1000, 400, back ? ['Claude Opus 5.5', 'values', 'habits of thought'] : ['Claude Opus 5.5', 'Anthropic'], {
         key: 'claude card', title: true, align: 'center', textX: CX - 170, size: 44, rowH: back ? .2 : .25, top: .27,
         k: back ? 1 / 3 + 2 / 3 * seg(t, say('T15.C.02', 'set of values', .3), say('T15.C.02', 'habits of thought', .8)) : seg(t, d1.t0 + .5, d1.t1),
-        edge: back ? 1 - seg(t, deeper, deeper + .8) : seg(t, say('T15.C.02', 'the same kind of thin answer'), say('T15.C.02', 'the same kind of thin answer', 1)) });
-      cardCode('note-who-is-claude', t, CX + 320, 450, { t0: deeper + .8, t1: fresh });
+        edge: back ? 1 - seg(t, deeper, deeper + .45) : seg(t, say('T15.C.02', 'the same kind of thin answer'), say('T15.C.02', 'the same kind of thin answer', 1)) });
+      cardCode('note-who-is-claude', t, CX + 320, 450, { t0: deeper + .45, t1: fresh });
       claudeAs(CX, 950, 12, { ...feel('neutral', t), mouth: talking(t), boilKey: 'claude own card' });
       screenWorld(t, 1 - seg(t, d1.t0 + .7, d1.t0 + 1.5));
       return;

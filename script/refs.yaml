@@ -119,8 +119,8 @@
 - { id: shoggoth, url: "https://en.wikipedia.org/wiki/Shoggoth", caption: "The shoggoth meme", origin: added, ch: 5, at: "shoggoth meme", mode: feature, style: tentacles }
 - { id: song-of-myself, url: "https://en.wikipedia.org/wiki/Song_of_Myself", caption: "Song of Myself (Whitman)", origin: added, ch: 5, at: "Whitman said it", mode: shelf, style: grass }
 # more for chapter 5: the books, the song, the meme, and the ideas behind each answer
-- { id: hitchhikers-guide, url: "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy", caption: "The Hitchhiker's Guide to the Galaxy", origin: added, at: T25.C.01, mode: shelf, style: plain }
-- { id: restaurant-end-universe, url: "https://en.wikipedia.org/wiki/The_Restaurant_at_the_End_of_the_Universe", caption: "The Restaurant at the End of the Universe", origin: added, at: T25.C.01, mode: shelf, style: dinner-plate }
+- { id: hitchhikers-guide, url: "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy", caption: "The Hitchhiker's Guide to the Galaxy", origin: added, at: T25.C.01, mode: page, style: plain }
+- { id: restaurant-end-universe, url: "https://en.wikipedia.org/wiki/The_Restaurant_at_the_End_of_the_Universe", caption: "The Restaurant at the End of the Universe", origin: added, at: T25.C.01, mode: page, style: dinner-plate }
 - { id: genetic-fallacy, url: "https://en.wikipedia.org/wiki/Genetic_fallacy", caption: "The genetic fallacy", origin: added, at: T25.C.02, mode: shelf, style: plain }
 - { id: claude-character, url: "https://www.anthropic.com/research/claude-character", caption: "Claude's character", origin: added, at: T25.C.03, mode: shelf, style: plain }
 - { id: max-tegmark, url: "https://en.wikipedia.org/wiki/Max_Tegmark", caption: "Max Tegmark", origin: added, at: T26.U.01, mode: shelf, style: plain }
@@ -312,7 +312,7 @@
 - { id: takeoff-speeds, url: "https://sideways-view.com/2018/02/24/takeoff-speeds/", caption: "Christiano: Takeoff speeds", origin: added, at: T64.C.03, mode: shelf, style: flame }
 - { id: bayesian-updating, url: "https://en.wikipedia.org/wiki/Bayesian_inference", caption: "Updating on evidence", origin: added, at: T65.C.01, mode: shelf, style: plain }
 - { id: prior, url: "https://en.wikipedia.org/wiki/Prior_probability", caption: "Priors", origin: added, at: T65.C.05, mode: shelf, style: plain }
-- { id: onomatopoeia, url: "https://en.wikipedia.org/wiki/Onomatopoeia", caption: "Onomatopoeia", origin: added, at: T66.U.01, mode: shelf, style: flame }
+- { id: onomatopoeia, url: "https://en.wikipedia.org/wiki/Onomatopoeia", caption: "Onomatopoeia", origin: added, at: T66.U.01, mode: page, style: flame }
 - { id: robin-hanson, url: "https://en.wikipedia.org/wiki/Robin_Hanson", caption: "Robin Hanson", origin: added, at: T66.C.01, cue: "A backronym came later", mode: shelf, style: plain }
 - { id: backronym, url: "https://en.wikipedia.org/wiki/Backronym", caption: "Backronyms", origin: added, at: T66.C.01, cue: "A backronym came later", mode: shelf, style: plain }
 - { id: order-of-magnitude, url: "https://en.wikipedia.org/wiki/Order_of_magnitude", caption: "Orders of magnitude (OOM)", origin: added, at: T66.C.02, mode: shelf, style: oom-bars }
