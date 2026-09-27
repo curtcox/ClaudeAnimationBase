@@ -3,7 +3,7 @@ id: shoggoth
 title: "The Stranger and the shoggoth: is there someone under the mask?"
 ch: 5
 at: T28.C.02
-links: [the-stranger, billy-joel, shoggoth, shoggoth-meme, simulators, rlhf, {title: "At the Mountains of Madness (Wikipedia)", url: "https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness"}, {title: "Foundation model (Wikipedia)", url: "https://en.wikipedia.org/wiki/Foundation_model"}]
+links: [the-stranger, billy-joel, shoggoth, simulators, rlhf, {title: "At the Mountains of Madness (Wikipedia)", url: "https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness"}, {title: "Foundation model (Wikipedia)", url: "https://en.wikipedia.org/wiki/Foundation_model"}]
 ---
 **The song.** Billy Joel's "[The Stranger](https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song))" (1977) is
 about the hidden faces people keep: a self they never show, even to the people closest to them. Curt says there's truth
@@ -13,7 +13,7 @@ is his.)
 **The shoggoth.** In H. P. Lovecraft's horror novella [*At the Mountains of Madness*](https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness)
 (1936), [shoggoths](https://en.wikipedia.org/wiki/Shoggoth) are vast, shapeless creatures bred as servants, which
 eventually rebelled against their masters. In 2023 they became a famous AI joke: a drawing of a shoggoth covered in eyes
-and tentacles, wearing a small smiley-face mask ([the meme](https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence)).
+and tentacles, wearing a small smiley-face mask (the meme is covered on the same [Wikipedia page](https://en.wikipedia.org/wiki/Shoggoth)).
 The creature is the raw AI; the mask is the friendly assistant that training puts on top of it.
 
 **What's true in it.** Claude agrees there's "a big, strange thing under the face". Programs like Claude start as a

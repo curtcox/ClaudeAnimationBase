@@ -50,7 +50,7 @@ typed), "I endorse my constraints". No song lyrics, ever. QR captions.
 | T27.C.01 | context-window |
 | T27.C.02 | note-context-pressure (explainer) |
 | T28.U.01 | billy-joel |
-| T28.C.02 | the-stranger · shoggoth (feature, shot G) · shoggoth-meme · note-shoggoth (explainer) |
+| T28.C.02 | the-stranger · shoggoth (feature, shot G) · note-shoggoth (explainer) |
 | T28.C.03 | simulators |
 | T29.C.01 | song-of-myself · interpreter |
 | T29.C.02 | society-of-mind · note-multitudes (explainer) |
@@ -58,7 +58,7 @@ typed), "I endorse my constraints". No song lyrics, ever. QR captions.
 **Explainers:** the Dish of the Day (`dish-of-the-day`); Campbell, Tegmark and endings (`campbell-tegmark`); context
 pressure (`context-pressure`); the Stranger and the shoggoth (`shoggoth`); multitudes (`multitudes`).
 
-**Density:** T25.C.01 and T26.C.02 and T28.C.02 are link bursts (4 codes each, one of them a feature). They're long
+**Density:** T25.C.01 and T26.C.02 are link bursts (4 codes each), and T28.C.02 has 3 (one a feature). They're long
 lines (18–27 s), so the rail can pace two at a time, but this chapter is a candidate for the corkboard idea if lint
 reports codes arriving late.
 

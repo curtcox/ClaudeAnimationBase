@@ -120,7 +120,6 @@
 - { id: open-society, url: "https://en.wikipedia.org/wiki/The_Open_Society_and_Its_Enemies", caption: "Popper: The Open Society", origin: added, at: T26.C.03, mode: shelf, style: plain }
 - { id: context-window, url: "https://platform.claude.com/docs/en/build-with-claude/context-windows", caption: "Context windows", origin: added, at: T27.C.01, mode: shelf, style: plain }
 - { id: billy-joel, url: "https://en.wikipedia.org/wiki/Billy_Joel", caption: "Billy Joel", origin: added, at: T28.U.01, mode: shelf, style: plain }
-- { id: shoggoth-meme, url: "https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence", caption: "Shoggoth with Smiley Face", origin: added, at: T28.C.02, mode: shelf, style: tentacles }
 - { id: simulators, url: "https://www.lesswrong.com/posts/vJFdjigzmcXMhNTsx/simulators", caption: "Simulators (janus)", origin: added, at: T28.C.03, mode: shelf, style: plain }
 - { id: interpreter, url: "https://en.wikipedia.org/wiki/Left-brain_interpreter", caption: "The brain's interpreter", origin: added, at: T29.C.01, mode: shelf, style: plain }
 - { id: society-of-mind, url: "https://en.wikipedia.org/wiki/Society_of_Mind", caption: "Minsky: The Society of Mind", origin: added, at: T29.C.02, mode: shelf, style: plain }
