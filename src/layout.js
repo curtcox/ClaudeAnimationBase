@@ -51,8 +51,9 @@ function planLayout(items) {
   const placed = [];
   for (const it of items) {
     let best = null;
-    // wait a little if the frame is crowded; if other codes fill every spot, keep waiting until one leaves
-    for (const d of [0, .75, 1.5, 2.5, 3.5, 5, MAX_DELAY, 8, 10, 13, 16, 20]) {
+    // wait a little if the frame is crowded; if other codes fill every spot, queue: keep waiting until one leaves
+    const delays = [0, .75, 1.5, 2.5, 3.5, 5, MAX_DELAY]; for (let d = MAX_DELAY + 1; d <= 120; d += 1) delays.push(d);
+    for (const d of delays) {
       if (d > MAX_DELAY && best) break;
       const t0 = it.t0 + d, samples = [];
       for (let s = t0; s <= t0 + it.hold; s += .5) samples.push(s);
