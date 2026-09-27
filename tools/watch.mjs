@@ -1,5 +1,6 @@
 // watch.mjs: prepares a chapter's watch page (the video with its links listed in step) for the companion site.
 //   node tools/watch.mjs --chapter=2 [--video=out/ch02_draft.mp4]   (default: the chapter's newest render)
+//   --no-site skips rebuilding the site (tools/rebuild.mjs builds it once, after every chapter)
 // Asks the renderer's own layout pass when each code is on screen (refTimes() in src/timing.js) and where each shot
 // starts (so review notes can name it), writes out/watch/chNN.json, remembers which video to show, then rebuilds the site. Serve it with: npm run serve
 import puppeteer from 'puppeteer-core';
@@ -25,4 +26,4 @@ await browser.close();
 mkdirSync('out/watch', { recursive: true });
 writeFileSync(`out/watch/ch${CH}.json`, JSON.stringify({ video, times, shots }, null, 1));
 console.log(`chapter ${CH}: ${times.length} codes on screen; video ${video}`);
-execFileSync('node', ['tools/build_site.mjs'], { stdio: 'inherit' });
+if (!args['no-site']) execFileSync('node', ['tools/build_site.mjs'], { stdio: 'inherit' });

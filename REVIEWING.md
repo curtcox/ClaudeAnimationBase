@@ -12,6 +12,29 @@ npm run serve
 Then open **http://localhost:8077/review/**, the review index. Every page the server shows also has a **Review index**
 button in the bottom-right corner.
 
+## Rebuild everything (overnight)
+
+```bash
+npm run rebuild
+```
+
+This regenerates everything on this computer for watching and reviewing, and needs no one to watch it:
+- the script;
+- the scratch voice and timings;
+- every chapter's draft video and watch page;
+- the companion site;
+- the checks.
+
+At the end it starts the review server if it isn't already running. It keeps the Mac awake while it runs, carries on
+past a failed step (retrying renders once), and won't start a second time while one is running.
+
+Drafts only repaint what changed, so a night with few changes finishes much sooner. Afterwards, the review index says
+when the last rebuild finished and names any step that failed. The full output is in `out/rebuild/<date>_<time>.log`.
+
+- `npm run rebuild -- --chapters=2,5` rebuilds only those chapters' drafts.
+- `--qr` also proves every painted code scans (slow).
+- `--no-serve` leaves the server alone.
+
 ## The review index: what needs you
 
 The index updates by itself every 15 seconds and whenever you come back to its tab. It has four parts:
@@ -63,6 +86,7 @@ Links from the index use `#n=<note id>` to open at a note, and `#t=<seconds>` to
 - `npm run review -- ask --chapter=N --at=LINE_ID [--dt=s] "question" --options="A|B|C"` asks a question at a line.
   Use `--t=seconds` for a moment, or neither for the whole chapter.
 - `npm run review -- reply|resolve|reopen --chapter=N --id=ID ["text"]` answers or closes a note.
+- `npm run rebuild` ([tools/rebuild.mjs](tools/rebuild.mjs)) regenerates everything; see "Rebuild everything" above.
 - After a new render, run `node tools/watch.mjs --chapter=N`. It updates the watch page (and rebuilds the site), and
   the index then shows the new draft as unwatched.
 
@@ -70,7 +94,7 @@ The code:
 
 | file | what it does |
 |---|---|
-| [tools/serve.mjs](tools/serve.mjs) | the server and its `/api/notes`, `/api/seen` and `/api/review` |
+| [tools/serve.mjs](tools/serve.mjs) | the server and its `/api/notes`, `/api/seen`, `/api/review` and `/api/rebuild` |
 | [tools/review_lib.mjs](tools/review_lib.mjs) | storage, who a note waits on, and the overview behind the index |
 | [tools/review_page.mjs](tools/review_page.mjs) | the index page |
 | [tools/build_site.mjs](tools/build_site.mjs) | builds the watch pages (`watchPage`); their notes panel appears only when `/api/notes` answers |

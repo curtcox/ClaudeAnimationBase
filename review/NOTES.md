@@ -65,6 +65,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **4:17.0** · T04.C.03.1 · shot H · Claude asks `nmujh32wrvg`
   The chapter check finds 10 places here where the picture holds still for over 8 seconds (this one is 12.8 s). Are held shots like this fine, or should every long line get more movement?
   Options: “Held shots are fine” · “Add movement”
+  - Curt: Held shots are fine
 
 ## 2. Frog or Axolotl
 

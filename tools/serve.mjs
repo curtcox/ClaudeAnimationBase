@@ -7,6 +7,7 @@
 //   POST /api/notes  { ch, id, reply }       a reply;   { ch, id, status }  open or resolve it;   { ch, id, delete: true }
 //   POST /api/seen   { ch, a, b }            a stretch of the current draft just watched, a to b seconds (review/seen.json)
 //   GET  /api/review                         every chapter: what waits on Curt, what waits on Claude, unwatched drafts
+//   GET  /api/rebuild                        the last overnight rebuild (tools/rebuild.mjs): its steps, and any that failed
 // and the review index that reads it, /review/ (tools/review_page.mjs). Every page served here gets a link to it.
 import { createServer } from 'node:http';
 import { createReadStream, existsSync, statSync, writeFileSync, mkdirSync, readFileSync } from 'node:fs';
@@ -23,6 +24,7 @@ const BADGE = `<a href="/review/" style="position:fixed;right:12px;bottom:12px;z
 
 async function api(req, res, url) {
   if (url.pathname === '/api/review') return json(res, 200, overview());
+  if (url.pathname === '/api/rebuild') return json(res, 200, existsSync('out/rebuild/last.json') ? JSON.parse(readFileSync('out/rebuild/last.json', 'utf8')) : {});
   if (url.pathname === '/api/seen') {
     if (req.method !== 'POST') return json(res, 405, { error: 'POST' });
     let body = ''; for await (const c of req) { body += c; if (body.length > 1e4) return json(res, 413, { error: 'too big' }); }
@@ -54,7 +56,7 @@ async function api(req, res, url) {
 
 createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
-  if (/^\/api\/(notes|seen|review)$/.test(url.pathname)) return api(req, res, url).catch(e => json(res, 500, { error: e.message }));
+  if (/^\/api\/(notes|seen|review|rebuild)$/.test(url.pathname)) return api(req, res, url).catch(e => json(res, 500, { error: e.message }));
   if (url.pathname === '/review' || url.pathname === '/review/') { res.writeHead(200, { 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-store' }); return res.end(reviewPage()); }
   let p = normalize(decodeURIComponent(url.pathname)).replace(/^(\.\.[/\\])+/, '');
   let f = join(ROOT, p); if (existsSync(f) && statSync(f).isDirectory()) f = join(f, 'index.html');

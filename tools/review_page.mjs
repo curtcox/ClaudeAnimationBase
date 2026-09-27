@@ -16,7 +16,7 @@ table{border-collapse:collapse;width:100%;font-size:.95rem}td,th{padding:.35rem 
 .sum{font-size:1.2rem;background:#FFF1CE;border:1px solid #E3C28A;border-radius:10px;padding:.6rem .9rem}.none{color:#6A6470;font-style:italic}.small{font:.85rem system-ui;color:#6A6470}</style></head><body><main>
 <p class="crumbs"><a href="/">Frog or Axolotl</a> · review</p><h1>What needs your review</h1>
 <p class="small">Only on this computer (<code>npm run serve</code>). It updates by itself as notes and drafts change.</p>
-<div id="app"><p class="none">Loading…</p></div></main><script>
+<p id="rebuild" class="small"></p><div id="app"><p class="none">Loading…</p></div></main><script>
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pad = n => String(n).padStart(2, '0'), clock = t => Math.floor(t / 60) + ':' + pad(Math.floor(t % 60));
 const stamp = t => t == null ? 'the whole chapter' : clock(t);
@@ -70,6 +70,11 @@ async function load() {
   try { const r = await fetch('/api/review'); if (!r.ok) throw 0; data = await r.json(); }
   catch { document.getElementById('app').innerHTML = '<p class="none">The review server isn\\'t running. Start it with npm run serve.</p>'; return; }
   draw();
+  try {   // the last rebuild (npm run rebuild): when, and anything that failed
+    const b = await (await fetch('/api/rebuild')).json(), el = document.getElementById('rebuild');
+    if (b.started) el.innerHTML = !b.finished ? 'A rebuild is running (started ' + ago(b.started) + ', ' + b.steps.length + ' steps done).'
+      : 'Last rebuild finished ' + ago(b.finished) + (b.failed.length ? ': <b style="color:#A84D33">' + b.failed.length + ' step' + (b.failed.length > 1 ? 's' : '') + ' failed</b> (' + esc(b.failed.join(', ')) + '). Details: ' + esc(b.log) : ', with no problems.');
+  } catch { }
 }
 load();
 // refresh while the page is open, but never while you're typing a reply
