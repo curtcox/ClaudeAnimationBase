@@ -1,0 +1,4 @@
+# The companion site: plain-language explainer pages and every link in the film, by chapter and time.
+# base is a placeholder until the domain is chosen; every QR code that points at the site follows it.
+base: https://curtcox.github.io/ClaudeAnimationBase/
+notes: n/          # an explainer lives at base + notes + id + '/'

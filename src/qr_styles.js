@@ -220,6 +220,22 @@ Object.assign(QR_STYLES, {
     },
   },
 
+  // an explainer page on the companion site: a sheet of lined notebook paper with a red margin and a pencil; the reader
+  // learns that a yellow-and-lined code means "this opens a plain-language explanation"
+  note: {
+    bg: '#FFFDF4', fg: '#1E2A44', eye: 'round', module: 'round', extent: .68, reach: .72,
+    frame: (cx, cy, s, t) => {
+      const R = s * .6;
+      paint(rrPts(cx - R, cy - R, R * 2, R * 2.1, 8), { wash: '#FFF1CE', ink: PAL.ink, sw: 1.2 });
+      for (let i = 1; i < 12; i++) { const y = cy - R + i * R * 2.1 / 12; if (Math.abs(y - cy) > s * .52) inkLine([[cx - R + 8, y], [cx + R - 8, y]], .6, '#9DB4D8', 'inkfine', 0); }
+      inkLine([[cx - R * .82, cy - R + 4], [cx - R * .82, cy + R * 1.1 - 4]], .9, '#D9776A', 'inkfine', 0);
+      push(); translate(cx + R * .95, cy + R * .9); rotate(-.9);   // a pencil resting on the corner
+      paint(rectPts(-s * .03, -s * .28, s * .06, s * .4), { wash: '#E8AA38', ink: PAL.ink, sw: .8 });
+      paint([[-s * .03, s * .12], [s * .03, s * .12], [0, s * .19]], { wash: '#E9D2B0', ink: PAL.ink, sw: .8 });
+      pop();
+    },
+  },
+
   // the Dish of the Day: served on a plate with cutlery
   'dinner-plate': {
     bg: '#FBF6EA', fg: '#3B2418', eye: 'round', module: 'round', reach: .8, extent: .97,

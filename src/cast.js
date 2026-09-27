@@ -237,6 +237,7 @@ function elbowFor(sh, hand, L1, L2, s) {
 // croak (0..1: the throat sac swells), hop (0..1 through a hop), flip, boilKey.
 function frog(x, y, u, o = {}) {
   const rs = p => boilSeed(`frog ${o.boilKey ?? 'frog'} ${p}`), sw = clamp(u / 10, .5, 2);
+  occupy(x - 3.5 * u, y - 4.2 * u, x + 3.5 * u, y + .3 * u, .5);
   const hop = o.hop ? jump(o.hop, .2, .8, 1.6) : { dy: 0, sq: 0 }, dy = hop.dy * u, sq = hop.sq;
   const G = '#5E9B4A', Gd = '#3F6B33', belly = '#CFE0A0';
   push(); translate(x, y + dy); scale((o.flip ? -1 : 1) * (1 + sq * .5), 1 - sq);
@@ -269,6 +270,7 @@ function frog(x, y, u, o = {}) {
 // Options: look, blink, smile (default true), wiggle (tail phase), gills (0..1 fan), flip, boilKey.
 function axolotl(x, y, u, o = {}) {
   const rs = p => boilSeed(`axo ${o.boilKey ?? 'axo'} ${p}`), sw = clamp(u / 10, .5, 2);
+  occupy(x - (o.flip ? 4.6 : 7.2) * u, y - 4.5 * u, x + (o.flip ? 7.2 : 4.6) * u, y + .3 * u, .5);
   const P = '#F2A1B8', Pd = '#D9768F', G = '#D95F86', w = o.wiggle ?? T * .8, fan = o.gills ?? .5 + .5 * Math.sin(T * 2.2);
   push(); translate(x, y); if (o.flip) scale(-1, 1);
   rs('shadow'); if (!o.noShadow) paint(ellPts(0, u * .12, u * 5, u * .45, 16), { fill: PAL.ink, fillOp: 70, bleed: .2, ink: null });

@@ -102,8 +102,11 @@ function flash(k, col = '#FFFDF6') { if (k > .01) paint(rectPts(-60, -60, W + 12
 // p5.brush mixes every colour like pigment, so yellow painted over blue turns green and light can't be painted; this
 // is the one non-paint mark in the kit. It lands on what's painted so far, under anything painted after it, follows
 // the camera, and boils a little. Keep a = 1 on dark grounds; on light grounds it barely shows (as light would).
+// DRY: when true, nothing is painted (paint, inkLine, glow and lettering return at once) but everything else runs, so a
+// frame's logic can be replayed cheaply, e.g. to find where its content sits before placing overlays (see layout.js).
+let DRY = false;
 function glow(x, y, r, col = '#FFC766', a = 1) {
-  if (a <= 0 || r < 1) return;
+  if (DRY || a <= 0 || r < 1) return;
   flushBrush();
   const c = color(col), rr = r * (1 + jit(.03));
   push(); blendMode(ADD); tint(red(c), green(c), blue(c), 150 * clamp(a)); image(glowTex, x - rr, y - rr, 2 * rr, 2 * rr); noTint(); blendMode(BLEND); pop();
@@ -182,7 +185,7 @@ function centred(pts, draw) {
   const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
   push(); translate(cx, cy); draw(pts.map(([x, y]) => [x - cx, y - cy])); pop();
 }
-function paint(pts, o = {}) { centred(pts, (P) => paintAt(P, o)); }
+function paint(pts, o = {}) { if (!DRY) centred(pts, (P) => paintAt(P, o)); }
 function paintAt(pts, o) {
   if (o.wash || o.fill || o.hatch) {
     if (o.wash) brush.wash(o.wash, o.washOp ?? 255); else brush.noWash();
@@ -199,6 +202,7 @@ function paintAt(pts, o) {
   }
 }
 function inkLine(pts, sw = 1, col = PAL.ink, br = 'ink', curv = .5) {
+  if (DRY) return;
   // p5.brush's spline throws for fewer than two points and draws nothing for exactly two, so a straight line gets its midpoint
   if (pts.length < 2) return;
   if (pts.length === 2) pts = [pts[0], [(pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2], pts[1]];
@@ -239,6 +243,7 @@ function flushBrush() {
 // Paint the queued lettering into the scene itself, so later layers (wipes) cover it. drawWorld calls this after each
 // frame; call it yourself before a wipe or iris if the shot has lettering, or the letters will sit on top of it.
 function flushLetters() {
+  if (DRY) { LETTERS = []; return; }
   if (!LETTERS.length) return;
   letG.clear(); drawLetters(letG.drawingContext); LETTERS = [];
   flushBrush();

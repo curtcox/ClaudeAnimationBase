@@ -22,7 +22,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 import { PNG } from 'pngjs';
-import { readYaml } from './script_lib.mjs';
+import { readYaml, loadRefs } from './script_lib.mjs';
 
 const require = createRequire(import.meta.url);
 const jsQR = require('jsqr');
@@ -41,7 +41,7 @@ if (args.styles) {
   cases = styles.flatMap(s => ['shelf', 'feature'].map(mode => ({ id: `${s}/${mode}`, url, style: s, mode })));
 } else {
   const only = args.only ? new Set(String(args.only).split(',')) : null;
-  cases = readYaml('script/refs.yaml').filter(r => !only || only.has(r.id))
+  cases = loadRefs().filter(r => !only || only.has(r.id))
     .map(r => ({ id: r.id, url: r.qr_url || r.url, style: r.style, mode: r.mode, ecc: r.ecc }))
     .filter(c => c.url && c.url !== 'SHORT');
 }

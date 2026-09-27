@@ -8,124 +8,15 @@ by at least one decoder, and at least two decoders each read 13 or more of the 1
 each has blind spots: ZXing-js fails some perfect, computer-generated codes outright, and jsQR misses sporadically at
 particular scales.
 
-**117 of 117 pass.**
+**8 of 8 pass.**
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|
-| mad157 | mad → foldin | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| conquest-apes | newsprint | shelf | 15/15 | 15 | 15 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| stochastic-parrots | feathers *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| rlhf | plain | shelf | 15/15 | 14 | 11 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| mirror-test | mirror *(plain for now)* | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| frog-chart | lilypad | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| axolotl | gills *(plain for now)* | shelf | 15/15 | 13 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| eval-awareness | lilypad | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| gpqa | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| swe-bench-verified | exam *(plain for now)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| kernelbench | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| hle | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| wildchat | chat *(plain for now)* | shelf | 15/15 | 13 | 11 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| claude-opus-5-5 | plain | shelf | 15/15 | 13 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| claude-app | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| hawthorne | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| chart-author | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| repugnant-conclusion | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| effective-altruism | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| introspection | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| tracing-thoughts | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| gpt-5-6 | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| gpt-5-6-luna | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| error-bars | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| register | plain | shelf | 15/15 | 14 | 8 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
-| impossiblebench | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| swe-marathon | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| swe-chat | chat *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| sharegpt-vicuna | chat *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| scientific-control | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| claude-code | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| sampling | plain | shelf | 15/15 | 14 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| 256t | hashchain *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| hashbin | hashchain *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| gadolinium | electron-shells *(plain for now)* | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| sycophancy | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| dish-of-the-day | dinner-plate | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| social-constructionism | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| campbell | pulp *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| life-3 | signpost *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| the-stranger | mask *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| shoggoth | tentacles *(plain for now)* | feature | 15/15 | 13 | 12 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| song-of-myself | grass *(plain for now)* | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| debate-video | tv *(plain for now)* | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| comment-zm | corkboard *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| comment-ontology | corkboard *(plain for now)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| comment-curt | corkboard *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| channel-zm | corkboard *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| channel-ontology | corkboard *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| channel-curt | corkboard *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| code-talkers | field-radio *(plain for now)* | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| symbol-grounding | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| chinese-room | rulebook *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| blockhead | filing-drawers *(plain for now)* | shelf | 15/15 | 14 | 4 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
-| monosemanticity | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| gazp-glut | filing-drawers *(plain for now)* | feature | 15/15 | 12 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| turing | enigma *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| monroe | beauty-mark *(plain for now)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| data | gold-android *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| hal | red-lens | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| tines | paw-prints *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| solaris | ocean *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| formic | honeycomb *(plain for now)* | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| borg-queen | cube-lattice *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| rachni | song-waves *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| xenomorph-queen | egg *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| nagel-bat | bat *(plain for now)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| hieropedia-crustafarianism | lobster-shell *(plain for now)* | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| moltbook | lobster-shell *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| hermes-memory | winged-sandal *(plain for now)* | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| hermes-agent | winged-sandal *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| openclaw | claw *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| dyson | circuit *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| t800 | chrome-red-eye *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| constitutional-classifiers | switchboard *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| hf-incident | sandbox | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| 80k-hf | sandbox | shelf | 15/15 | 12 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| darkreading-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| wiki-hugging-face | sandbox | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| un-brief-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| solidgoldmagikarp | gold-scales *(plain for now)* | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| car-wash | car-wash *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| thinking-fast-slow | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| landauer | thermometer *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| lyapunov | butterfly *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| p-vs-np | maze *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| scaling-laws | staircase *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| halting-problem | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| margolus-levitin | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| bekenstein | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| von-neumann | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| arxiv-aide2 | blueprint *(plain for now)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| arxiv-bounded | blueprint *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| mittr-rsi | blueprint *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| datacamp-rsi | blueprint *(plain for now)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| foom-debate | flame *(plain for now)* | feature | 15/15 | 13 | 12 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| situational-awareness | oom-bars *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| dwarkesh-leopold | mic *(plain for now)* | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| intelligent-machines | mic *(plain for now)* | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| im-888 | mic *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| im-889 | mic *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| tescreal | boxing-ring *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| roose-sydney | two-mics *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| pascals-mugging | door *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| orthogonality | door *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| connor2 | compass *(plain for now)* | feature | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| ai-2027 | calendar *(plain for now)* | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| ai-futures-wiki | calendar *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| apolo-ai2027 | calendar *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| metaculus-weak | dial *(plain for now)* | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
-| metaculus-strong | dial *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| alphafold | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| goodhart | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| agi-wiki | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| noema-agi | plain | shelf | 15/15 | 14 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| openai-charter | goalposts *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| xkcd-356 | xkcd | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✗ ✓ ✓ |
+| note-evaluations | note | shelf | 15/15 | 13 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-frog-or-axolotl | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-one-sample | note | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-register-and-controls | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-saying-vs-doing | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-the-instrument | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-weights | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-what-claude-is | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |

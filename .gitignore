@@ -4,3 +4,4 @@ assets/ref/
 .DS_Store
 audio/scratch/
 audio/*.wav
+site/public/

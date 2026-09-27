@@ -10,13 +10,25 @@ const LOOK = {
 };
 
 const qrStyleFor = key => LOOK.qr[key] || key;
-function curtAs(x, y, u, o = {}) { return curt(x, y, u, { ...LOOK.curt, ...o }); }
+function curtAs(x, y, u, o = {}) {
+  const sit = o.pose === 'sit', back = o.view === 'back';
+  occupy(x - (back ? 3.6 : 4.5) * u, y - (sit ? 10.5 : 16.5) * u, x + (back ? 3.6 : 4.5) * u, y + (sit ? 1 : 0), .8);
+  return curt(x, y, u, { ...LOOK.curt, ...o });
+}
 // Claude, however LOOK.claude says. o.assemble (0..1) is how gathered the crowd is (ignored for plain Clawd).
 function claudeAs(x, y, u, o = {}) {
+  const crowd = LOOK.claude === 'crowd' && (o.assemble ?? 1) < 1;
+  occupy(x - (crowd ? 9 : 6.5) * u, y - (crowd ? 13 : 10) * u, x + (crowd ? 9 : 6.5) * u, y + (crowd ? 2 : .5) * u, 1);
   if (LOOK.claude === 'crowd') return clawdCrowd(x, y, u, o.assemble ?? 1, o);
   return clawd(x, y, u, o);
 }
 // a reference's QR code, by its id in script/refs.yaml (the refs table is loaded into REFS by the generated script data)
-function refQR(ref, cx, cy, size, o = {}) { return qrCard(ref.qr_url || ref.url, cx, cy, size, qrStyleFor(ref.style), { ecc: ref.ecc || (ref.mode === 'feature' ? 'H' : 'M'), caption: ref.caption, ...o }); }
+// A shelf code whose style's frame reaches far (a lily pad, a dinner plate) goes without the frame: it keeps the style's
+// colours and module shapes, and the card stays compact. SHELF_EXTENT is how far a shelf code's dressing may reach.
+const SHELF_EXTENT = .7;
+const shelfFramed = ref => (qrStyle(qrStyleFor(ref.style)).extent ?? .64) <= SHELF_EXTENT;
+function refQR(ref, cx, cy, size, o = {}) {
+  return qrCard(ref.qr_url || ref.url, cx, cy, size, qrStyleFor(ref.style), { ecc: ref.ecc || (ref.mode === 'feature' ? 'H' : 'M'), caption: ref.caption, noFrame: ref.mode === 'shelf' && !shelfFramed(ref), ...o });
+}
 
 document.fonts.load('40px "Patrick Hand"');

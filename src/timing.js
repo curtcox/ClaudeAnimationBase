@@ -17,31 +17,29 @@ function talkOf(t, speaker) {
 const within = (t, a, b) => seg(t, L(a).t0, b ? L(b).t0 : L(a).end);
 
 // ---------- over every shot: the reference rail, and review captions ----------
-// The rail: every shelf reference anchored in this chapter, scheduled automatically onto two slots down the right edge
-// (each held REF_HOLD s, arriving just after its line starts, never two in the same slot at once). Feature references are
-// the scenes' job (qrFeature). A shot can move the rail or hide it: RAIL.side = 'left' | 'right' | 'none' while it draws.
+// The rail: every shelf reference anchored in this chapter gets a code, held REF_HOLD s from just after its line starts,
+// placed by the layout pass (layout.js) where it covers the least content over its whole time on screen. Feature
+// references are the scenes' job (qrFeature), and they repel shelf codes. A shot can hide the rail: RAIL.side = 'none'.
 const REF_HOLD = 6.5, RAIL = { side: 'right' };
-const RAIL_PLAN = (() => {
-  if (!window.CHAPTER || !window.REFS) return [];
-  const free = [0, 0], plan = [];
-  for (const l of CH_LINES) for (const id of l.refs) {
+let RAIL_PLAN = null;
+function railPlan() {
+  if (RAIL_PLAN) return RAIL_PLAN;
+  const items = [];
+  if (window.CHAPTER && window.REFS) for (const l of CH_LINES) for (const id of l.refs) {
     const r = REFS[id]; if (!r || r.mode !== 'shelf' || (r.qr_url || r.url) === 'SHORT') continue;
-    const want = l.t0 + .4, slot = free[0] <= free[1] ? 0 : 1, t0 = Math.max(want, free[slot]);
-    plan.push({ id, slot, t0 }); free[slot] = t0 + REF_HOLD + .3;
+    items.push({ id, t0: l.t0 + .4, hold: REF_HOLD, half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) });
   }
-  return plan;
-})();
+  return (RAIL_PLAN = planLayout(items));
+}
 function refRail(t) {
   if (RAIL.side === 'none') return;
-  for (const p of RAIL_PLAN) {
-    if (t < p.t0 || t > p.t0 + REF_HOLD) continue;
-    const R = REFS[p.id], half = Math.max(215, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 380 + 20);
-    const k = seg(t, p.t0, p.t0 + .45), out = seg(t, p.t0 + REF_HOLD - .35, p.t0 + REF_HOLD);
-    const side = RAIL.side === 'left' ? -1 : 1, x = (side > 0 ? W - half - 24 : half + 24) + side * ease(out) * (half * 2 + 60);
-    const y = p.slot ? H - half - 34 : half + 14;
+  for (const p of railPlan()) {
+    if (t < p.t0 || t > p.t0 + p.hold) continue;
+    const R = REFS[p.id], half = p.half, k = seg(t, p.t0, p.t0 + .45), out = seg(t, p.t0 + p.hold - .35, p.t0 + p.hold);
+    const x = p.x, y = p.y + ease(out) * 30;
     boilSeed('rail ' + p.id);
-    paint(rrPts(x - half, y - half, half * 2, half * 2 + 34, 20), { wash: PAL.paper, washOp: 245 * clamp(k * 2), ink: PAL.ink, sw: 1.2 });
-    refQR(R, x, y - 14, 380, { k, t, captionOpts: { size: 24 } });
+    paint(rrPts(x - half, y - half, half * 2, half * 2 + 34, 20), { wash: PAL.paper, washOp: 245 * clamp(k * 2) * (1 - out), ink: PAL.ink, sw: 1.2 });
+    if (out < .8) refQR(R, x, y - 14, 380, { k, t, captionOpts: { size: 24, noOcc: true } });
   }
 }
 // Review captions (studio.html?review=1, render.mjs --review): the words being said, a sentence at a time, so the picture can
@@ -63,4 +61,4 @@ function reviewCaption(t) {
   letter(who, 64, y0 - 16, 22, col, { ink: false, align: 'left', screen: true, font: 'bold 22px "Helvetica Neue", Arial, sans-serif' });
   rows.forEach((r, i) => letter(r, 64, y0 + 20 + i * 46, 36, '#1E1A22', { ink: false, align: 'left', screen: true, font: '36px "Helvetica Neue", Arial, sans-serif' }));
 }
-window.AFTER_SHOT = t => { if (window.CHAPTER) refRail(t); if (REVIEW) reviewCaption(t); };
+window.AFTER_SHOT = t => { if (DRY) return; if (window.CHAPTER) refRail(t); if (REVIEW) reviewCaption(t); OCC = []; };

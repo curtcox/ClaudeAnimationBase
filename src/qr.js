@@ -82,6 +82,7 @@ function qrCard(text, cx, cy, size, styleName = 'plain', o = {}) {
   push();
   // the default arrival slides up on an arc and settles; a style with its own `present` does its own reveal instead
   if (k < 1 && !st.present) { const e = backOut(k); translate(L.cx, L.cy + (1 - e) * 60); rotate((1 - e) * .08); scale(.6 + .4 * e); translate(-L.cx, -L.cy); }
+  if (o.noFrame) { st.frame = null; st.reach = st.reach && .5; }
   if (st.frame) { boilSeed('qr frame ' + text); st.frame(L.cx, L.cy, L.size, t, L, k); }
   if (st.present) st.present(L, st, k, t);
   else qrPaintCols(L, st, 0, L.n);

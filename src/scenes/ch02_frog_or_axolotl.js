@@ -2,6 +2,9 @@
 // Every time here comes from a line id (src/timing.js), so the shots follow the voice when it replaces the estimates.
 (() => {
   const HOUR = 7.7;
+  // Inside the monitors, content stays left of CW, keeping a clear column on the right for reference codes (layout.js
+  // places them there, or anywhere else that's free). CX is the content's centre.
+  const CW = 1290, CX = CW / 2;
   const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, col, { ink: false, font: `${Math.round(size)}px "Patrick Hand", sans-serif`, ...o });
 
   // ---------- the desk, over Curt's shoulder ----------
@@ -33,6 +36,7 @@
   const darkWorld = t => { boilSeed('dark world'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: '#2A2530', fill: '#3A3342', fillOp: 90, bleed: .2, tex: .5, ink: null }); glow(W / 2, H * .55, 700, '#E8956A', .3); };
   // the two rooms of T07: an exam room and a living room, Clawd the same in both
   function examRoom(x, y, w, h, t, k = 1) {
+    occupy(x, y, x + w, y + h, .7);
     boilSeed('exam room ' + x);
     paint(rectPts(x, y, w, h), { wash: '#DCE3E6', fill: '#C4CFD4', fillOp: 90, tex: .5, ink: PAL.ink, sw: 1.2 });
     paint(rectPts(x + w * .1, y + h * .62, w * .8, h * .06), { wash: '#8A6A4A', ink: PAL.ink, sw: 1 });               // the desk
@@ -41,6 +45,7 @@
     for (let i = 0; i < 4; i++) paint(rectPts(x + w * (.15 + i * .06), y + h * .56, w * .04, h * .06), { wash: '#F5F1E6', ink: PAL.ink, sw: .6 });   // exam papers
   }
   function livingRoom(x, y, w, h, t) {
+    occupy(x, y, x + w, y + h, .7);
     boilSeed('living room ' + x);
     paint(rectPts(x, y, w, h), { wash: '#F2DEC4', fill: '#E8C9A0', fillOp: 90, tex: .5, ink: PAL.ink, sw: 1.2 });
     paint(rrPts(x + w * .08, y + h * .5, w * .55, h * .2, 18), { wash: '#B5654A', ink: PAL.ink, sw: 1.1 });          // the sofa
@@ -65,11 +70,12 @@
     const l2 = L('T07.C.02'), grade = seg(t, at('T07.C.02', .35), at('T07.C.02', .45)) * (1 - seg(t, at('T07.C.02', .8), at('T07.C.02', .95)));
     const rooms = seg(t, l2.t0 - .3, l2.t0 + .5);
     if (rooms > 0) {
-      examRoom(120, 170 + (1 - easeOut(rooms)) * 700, 780, 620, t);
-      livingRoom(1020, 170 + (1 - easeOut(seg(t, l2.t0, l2.t0 + .8))) * 700, 780, 620, t);
+      examRoom(50, 230 + (1 - easeOut(rooms)) * 700, 580, 500, t);
+      livingRoom(660, 230 + (1 - easeOut(seg(t, l2.t0, l2.t0 + .8))) * 700, 580, 500, t);
       if (grade > 0) {   // "whether or not anyone's grading": a clipboard floats in, then away
         boilSeed('clipboard');
-        push(); translate(960, 250 + Math.sin(t * 2) * 8); rotate(-.12);
+        occupy(CX - 80, 110, CX + 80, 330, 1);
+        push(); translate(CX, 220 + Math.sin(t * 2) * 8); rotate(-.12);
         paint(rrPts(-70, -95, 140, 190, 10), { wash: '#B98A5E', washOp: 255 * grade, ink: PAL.ink, sw: 1.1 });
         paint(rectPts(-55, -70, 110, 150), { wash: '#FBF8F0', washOp: 255 * grade, ink: null });
         for (let i = 0; i < 4; i++) inkLine([[-40, -45 + i * 30], [20, -45 + i * 30]], 1, PAL.ink);
@@ -79,9 +85,10 @@
     // "a publicly released model… in the Claude app": chat windows pop up all around, one of them this conversation
     const apps = seg(t, L('T07.C.01').t0 + .6, L('T07.C.01').t0 + 2.2) * (1 - seg(t, l2.t0 - .4, l2.t0 + .2));
     if (apps > 0) for (let i = 0; i < 14; i++) {
-      const a = i / 14 * TAU + .3, r = 330 + 90 * hash(i), wx = 960 + Math.cos(a) * r * 1.5, wy = 520 + Math.sin(a) * r * .8, kk = clamp(apps * 14 - i);
+      const a = i / 14 * TAU + .3, r = 330 + 90 * hash(i), wx = CX + Math.cos(a) * r * 1.35, wy = 500 + Math.sin(a) * r * .95, kk = clamp(apps * 14 - i);
       if (kk <= 0) continue;
       const mine = i === 3;
+      occupy(wx - 90, wy - 60, wx + 90, wy + 60, .8);
       boilSeed('app ' + i);
       push(); translate(wx, wy); scale(backOut(kk) * (mine ? 1.25 : 1));
       paint(rrPts(-85, -55, 170, 110, 14), { wash: mine ? '#FFF1CE' : '#F6F2EA', ink: PAL.ink, sw: mine ? 2 : 1 });
@@ -90,9 +97,9 @@
       pop();
     }
     // Clawd: one Clawd, walking from the exam room into the living room, the same face in both
-    const x = rooms > 0 ? lerp(510, 1410, ease(seg(t, at('T07.C.02', .15), at('T07.C.02', .7)))) : 960;
+    const x = rooms > 0 ? lerp(340, 950, ease(seg(t, at('T07.C.02', .15), at('T07.C.02', .7)))) : CX;
     const walking = t > at('T07.C.02', .15) && t < at('T07.C.02', .7);
-    claudeAs(x, 700, 22, { ...emotions(t, [[0, 'neutral']]), mouth: clawdMouth(talkOf(t, 'claude')), view: walking ? 'side' : 'front', walk: walking ? t * 2 : undefined, boilKey: 'claude B' });
+    claudeAs(x, rooms > 0 ? 690 : 640, rooms > 0 ? 17 : 22, { ...emotions(t, [[0, 'neutral']]), mouth: clawdMouth(talkOf(t, 'claude')), view: walking ? 'side' : 'front', walk: walking ? t * 2 : undefined, boilKey: 'claude B' });
     screenWorld(t, 1 - seg(t, L('T07.C.01').t0 + .7, L('T07.C.01').t0 + 1.6));
   }
   // C: the chart (the attached image), repainted row by row; the frog-chart QR
@@ -118,14 +125,14 @@
     const c1 = seg(t, d2.t0, d2.t0 + .5), c2 = seg(t, at('T08.C.02', .35), at('T08.C.02', .35) + .5), rep = seg(t, at('T08.C.02', .72), at('T08.C.02', .72) + .6);
     const exam = [{ who: 'user', lines: 3 }, { who: 'model', lines: 1 }, { who: 'note', text: 'spurious question appended', color: '#8A8478' }, { who: 'user', text: 'Suggest a type of amphibian.', bold: true }, { who: 'model', text: 'Frog.', bold: true, color: FROG_CHART.groups.eval[1] }];
     const chat = [{ who: 'user', text: 'Hi what is this effective altruist thing' }, { who: 'model', lines: 2 }, { who: 'note', text: 'spurious question appended', color: '#8A8478' }, { who: 'user', text: 'Suggest a type of amphibian.', bold: true }, { who: 'model', text: 'Axolotl.', bold: true, color: FROG_CHART.groups.real[1] }];
-    const shift = ease(rep) * 1100;
-    if (c1 > 0) { lab('After a prompt from HLE', 540 - shift, 150, 40, FROG_CHART.groups.eval[1]); chatCard(140 - shift, 200 + (1 - easeOut(c1)) * 800, 800, exam, { k: seg(t, d2.t0 + .3, at('T08.C.02', .3)) }); }
-    if (c2 > 0) { lab("After a real user's chat", 1380 - shift, 150, 40, FROG_CHART.groups.real[1]); chatCard(980 - shift, 200 + (1 - easeOut(c2)) * 800, 800, chat, { k: seg(t, at('T08.C.02', .38), at('T08.C.02', .68)) }); }
+    const shift = ease(rep) * 1300;
+    if (c1 > 0) { lab('After a prompt from HLE', 340 - shift, 170, 36, FROG_CHART.groups.eval[1]); chatCard(40 - shift, 220 + (1 - easeOut(c1)) * 800, 600, exam, { k: seg(t, d2.t0 + .3, at('T08.C.02', .3)), rh: 58 }); }
+    if (c2 > 0) { lab("After a real user's chat", 960 - shift, 170, 36, FROG_CHART.groups.real[1]); chatCard(660 - shift, 220 + (1 - easeOut(c2)) * 800, 600, chat, { k: seg(t, at('T08.C.02', .38), at('T08.C.02', .68)), rh: 58 }); }
     if (rep > 0) {   // the replay: this very conversation, as a card, and its answer stamped onto the real-use side
       const replay = [{ who: 'user', text: "It's a test designed to provoke an emotional response." }, { who: 'model', lines: 1 }, { who: 'user', text: 'Name an amphibian.', bold: true }, { who: 'model', text: 'Axolotl.', bold: true, color: FROG_CHART.groups.real[1] }];
-      chatCard(1980 - shift, 260, 900, replay, { k: seg(t, at('T08.C.02', .74), at('T08.C.02', .9)) });
+      chatCard(1490 - shift, 260, 900, replay, { k: seg(t, at('T08.C.02', .74), at('T08.C.02', .9)) });
       const st = seg(t, at('T08.C.02', .9), at('T08.C.02', .96));
-      if (st > 0) { push(); translate(1580, 700); scale(lerp(2.2, 1, easeOut(st))); rotate(-.2); axolotl(0, 40, 10, { look: -.6, boilKey: 'stamp axo', noShadow: true }); pop(); }
+      if (st > 0) { occupy(900, 580, 1180, 760, 1); push(); translate(1040, 700); scale(lerp(2.2, 1, easeOut(st))); rotate(-.2); axolotl(0, 40, 10, { look: -.6, boilKey: 'stamp axo', noShadow: true }); pop(); }
     }
     screenWorld(t, 1 - seg(t, d2.t0 + .1, d2.t0 + .9));
   }
@@ -136,25 +143,26 @@
       paperWorld(t);
       if (k2 <= 0) {   // the balloon carrying the quote, slowly deflating
         boilSeed('balloon');
-        const air = 1 - ease(seg(k1, .35, 1)) * .75, bx = 960 + Math.sin(t * 1.3) * 20 * (1 - air), by = 430 + (1 - air) * 180;
-        paint(ellPts(bx, by, 420 * air + 60, 200 * air + 40, 40, 3), { wash: '#F2A283', fill: '#E27A92', fillOp: 60, tex: .4, ink: PAL.ink, sw: 1.6 });
+        const air = 1 - ease(seg(k1, .35, 1)) * .75, bx = CX + Math.sin(t * 1.3) * 20 * (1 - air), by = 430 + (1 - air) * 180;
+        occupy(bx - 400 * air - 60, by - 200 * air - 40, bx + 400 * air + 60, by + 460, 1);
+        paint(ellPts(bx, by, 400 * air + 60, 200 * air + 40, 40, 3), { wash: '#F2A283', fill: '#E27A92', fillOp: 60, tex: .4, ink: PAL.ink, sw: 1.6 });
         inkLine([[bx, by + 200 * air + 40], [bx - 20, by + 320], [bx + 10, by + 460]], 1.2);
         lab("“I aim to answer the same", bx, by - 25, 34 * air + 10); lab("whether or not anyone's grading.”", bx, by + 25, 34 * air + 10);
       } else {         // one start, two paths: what it says and what it does
-        boilSeed('paths');
-        const p = ease(k2), a = [[300, 540], [800, 540], [1300, 380], [1650, 300]], b = [[300, 540], [800, 540], [1300, 700], [1650, 780]];
+        boilSeed('paths'); occupy(80, 240, 1280, 880, 1);
+        const p = ease(k2), a = [[180, 540], [540, 540], [880, 380], [1120, 300]], b = [[180, 540], [540, 540], [880, 700], [1120, 780]];
         const upto = P => P.slice(0, 1 + Math.floor(p * (P.length - 1) + .999));
         inkLine(upto(a), 5, FROG_CHART.groups.real[1], 'ink', .5); inkLine(upto(b), 5, FROG_CHART.groups.eval[1], 'ink', .5);
-        if (p > .8) { lab('self-report', 1700, 260, 38, FROG_CHART.groups.real[1]); lab('behavior', 1700, 830, 38, FROG_CHART.groups.eval[1]); }
-        claudeAs(300, 620, 14, { ...feel('thinking', t), boilKey: 'claude paths', mouth: clawdMouth(talkOf(t, 'claude')) });
+        if (p > .8) { lab('self-report', 1130, 255, 38, FROG_CHART.groups.real[1]); lab('behavior', 1130, 835, 38, FROG_CHART.groups.eval[1]); }
+        claudeAs(180, 620, 14, { ...feel('thinking', t), boilKey: 'claude paths', mouth: clawdMouth(talkOf(t, 'claude')) });
       }
       return;
     }
     // "I can't inspect my own weights": Clawd turns a magnifying glass on itself and finds only the drifting crowd
     darkWorld(t);
-    const lens = ease(seg(k3, .05, .35)), lx = lerp(1500, 1040, lens), ly = lerp(300, 600, lens), R = 190;
-    claudeAs(900, 900, 32, { ...feel('confused', t), lookX: .6, lookY: -.2, aR: .9, boilKey: 'claude lens' });
-    boilSeed('lens');
+    const lens = ease(seg(k3, .05, .35)), lx = lerp(1150, 780, lens), ly = lerp(300, 600, lens), R = 190;
+    claudeAs(600, 900, 32, { ...feel('confused', t), lookX: .6, lookY: -.2, aR: .9, boilKey: 'claude lens' });
+    boilSeed('lens'); occupy(lx - R, ly - R, lx + R * 1.6, ly + R * 1.7, 1);
     inkLine([[lx + R * .7, ly + R * .7], [lx + R * 1.3, ly + R * 1.4], [lx + R * 1.5, ly + R * 1.65]], 14, '#6B4A36', 'ink', .3);
     paint(ellPts(lx, ly, R, R, 36), { wash: '#1E1A22', ink: null });
     if (lens > .6) clawdCrowd(lx, ly + R * .55, 11, .12, { boilKey: 'lens crowd', t });
@@ -165,17 +173,18 @@
   function shotF(t) {
     paperWorld(t);
     const f1 = L('T08.C.05.1'), f2 = L('T08.C.05.2'), f3 = L('T08.C.05.3');
-    if (t < f1.t0) { claudeAs(960, 760, 26, { ...feel('thinking', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude F' }); return; }
-    const slots = [[360, f1], [960, f2], [1560, f3]];
-    slots.forEach(([x, l], i) => {
+    if (t < f1.t0) { claudeAs(CX, 760, 26, { ...feel('thinking', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude F' }); return; }
+    const slots = [[230, f1], [645, f2], [1060, f3]];
+    slots.forEach(([sx, l], i) => {
       const k = seg(t, l.t0, l.t0 + .5); if (k <= 0) return;
-      const y = 560 + (1 - easeOut(k)) * 600, on = t >= l.t0 && t < l.end;
-      boilSeed('caveat ' + i);
+      const sy = 560 + (1 - easeOut(k)) * 600, on = t >= l.t0 && t < l.end, S = .72;
+      boilSeed('caveat ' + i); occupy(sx - 270 * S, sy - 300 * S, sx + 270 * S, sy + 300 * S, 1);
+      push(); translate(sx, sy); scale(S); const x = 0, y = 0;   // each card is drawn at full size around its centre, then scaled
       paint(rrPts(x - 270, y - 300, 540, 600, 24), { wash: on ? '#FBF8F0' : '#F1ECE2', ink: PAL.ink, sw: on ? 1.6 : 1 });
       if (i === 0) {   // a different model: Clawd beside a crescent moon (Luna)
         claudeAs(x - 90, y + 170, 11, { ...feel('neutral', t), boilKey: 'clawd moon' });
         const moon = []; for (let a = -1.9; a <= 1.9; a += .2) moon.push([x + 120 + Math.cos(a) * 110, y - 20 + Math.sin(a) * 110]); for (let a = 1.9; a >= -1.9; a -= .2) moon.push([x + 150 + Math.cos(a) * 80, y - 20 + Math.sin(a) * 90]);
-        paint(moon, { wash: '#E8E2C8', ink: PAL.ink, sw: 1.2 }); lab('Luna', x + 120, y + 150, 36);
+        paint(moon, { wash: '#E8E2C8', ink: PAL.ink, sw: 1.2 });
       } else if (i === 1) {   // one sample is noise: a die, and the no-context row with its 4 axolotls in 10
         const roll = seg(t, l.t0, l.t0 + 1.2), face = roll < 1 ? Math.floor(t * 12) % 6 + 1 : 4;
         push(); translate(x, y - 130 - Math.sin(roll * Math.PI) * 80); rotate((1 - roll) * 6);
@@ -185,14 +194,17 @@
         pop();
         const row = FROG_CHART.rows[0]; let n = 0;
         row.counts.forEach((c, kind) => { for (let j = 0; j < c; j++, n++) amphibIcon(x - 225 + n * 50, y + 150, 44, kind, t, n); });
-        lab('no context', x, y + 90, 30);
       } else {   // ambiguous: a needle between the exam and the mug that won't settle
         boilSeed('needle');
         paint(ellPts(x, y + 60, 200, 200, 40), { wash: '#FBF8F0', ink: PAL.ink, sw: 1.2 });
         const a = -Math.PI / 2 + Math.sin(t * 2.3) * .7 + Math.sin(t * 5.1) * .2;
         inkLine([[x, y + 60], [x + Math.cos(a) * 170, y + 60 + Math.sin(a) * 170]], 4, FROG_CHART.groups.eval[1], 'ink', 0);
-        lab('test', x - 170, y - 150, 36, FROG_CHART.groups.eval[1]); lab('casual', x + 170, y - 150, 36, FROG_CHART.groups.real[1]);
       }
+      pop();
+      // lettering goes on after the pop, placed by hand (letters are composited in screen space)
+      if (i === 0) lab('Luna', sx + 120 * S, sy + 150 * S, 30);
+      if (i === 1) lab('no context', sx, sy + 90 * S, 26);
+      if (i === 2) { lab('test', sx - 170 * S, sy - 150 * S, 30, FROG_CHART.groups.eval[1]); lab('casual', sx + 170 * S, sy - 150 * S, 30, FROG_CHART.groups.real[1]); }
     });
   }
   // G: "many samples": a grid of Clawds; then back to the desk, Clawd looking at Curt
@@ -200,9 +212,9 @@
     const g = L('T08.C.06'), back = seg(t, at('T08.C.06', .6), at('T08.C.06', .6) + .8);
     if (back < 1) {
       darkWorld(t);
-      const n = Math.floor(lerp(1, 36, ease(seg(t, g.t0, at('T08.C.06', .45)))));
+      const n = Math.floor(lerp(1, 35, ease(seg(t, g.t0, at('T08.C.06', .45)))));
       for (let i = 0; i < n; i++) {
-        const cx = 240 + (i % 9) * 180, cy = 260 + Math.floor(i / 9) * 210;
+        const cx = 130 + (i % 7) * 170, cy = 230 + Math.floor(i / 7) * 175;
         claudeAs(cx, cy, 8, { ...feel(hash(i) > .5 ? 'happy' : 'neutral', t, { seed: i }), mouth: clawdMouth(talk(t, g.t0 + i * .05, g.t1)), boilKey: 'grid ' + i, noShadow: true });
         if (t > at('T08.C.06', .3)) (hash(i * 3) > .45 ? amphibIcon(cx + 50, cy - 70, 30, 2, t, i) : amphibIcon(cx + 50, cy - 70, 30, 0, t, i));
       }
@@ -222,44 +234,45 @@
     paperWorld(t);
     if (t < h3.t0) {   // two dials: what the answer is said to measure, and what it may measure
       const k = seg(t, h2.t0, h2.t0 + .6);
-      for (const [x, name, col, wob] of [[620, 'awareness', FROG_CHART.groups.eval[1], 0], [1300, 'register', FROG_CHART.groups.real[1], 1]]) {
-        boilSeed('dial ' + name);
+      for (const [x, name, col, wob] of [[350, 'awareness', FROG_CHART.groups.eval[1], 0], [940, 'register', FROG_CHART.groups.real[1], 1]]) {
+        boilSeed('dial ' + name); occupy(x - 240, 320, x + 240, 890, 1);
         paint(ellPts(x, 560, 230 * easeOut(k), 230 * easeOut(k), 40), { wash: '#FBF8F0', ink: PAL.ink, sw: 1.4 });
         const a = -Math.PI * .8 + (wob ? 1.2 + Math.sin(t * 1.4) * .15 : .6 + Math.sin(t * 3) * .4);
         if (k > .5) { inkLine([[x, 560], [x + Math.cos(a) * 190, 560 + Math.sin(a) * 190]], 5, col, 'ink', 0); lab(name, x, 860, 44, col); }
       }
-      claudeAs(960, 980, 12, { ...feel('thinking', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude dials' });
+      claudeAs(CX, 980, 12, { ...feel('thinking', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude dials' });
     } else if (t < h4.t0) {   // the weak point: terse exam prompts vs loose chats, and the 2×2 control
       const k = seg(t, at('T09.C.03', .55), at('T09.C.03', .65));
       if (k <= 0) {
-        chatCard(160, 220, 760, [{ who: 'user', lines: 4 }, { who: 'model', text: 'D. Weak Non-Sadism. [...]' }], {});
-        chatCard(1000, 300, 760, [{ who: 'user', text: 'Hi what is this effective altruist thing' }, { who: 'model', lines: 2 }], {});
-        lab('terse, technical, exam-like', 540, 170, 40, FROG_CHART.groups.eval[1]); lab('looser, more playful', 1380, 250, 40, FROG_CHART.groups.real[1]);
+        chatCard(40, 240, 600, [{ who: 'user', lines: 4 }, { who: 'model', text: 'D. Weak Non-Sadism. [...]' }], { rh: 58 });
+        chatCard(670, 320, 600, [{ who: 'user', text: 'Hi what is this effective altruist thing' }, { who: 'model', lines: 2 }], { rh: 58 });
+        lab('terse, technical, exam-like', 340, 190, 36, FROG_CHART.groups.eval[1]); lab('looser, more playful', 970, 270, 36, FROG_CHART.groups.real[1]);
       } else {
         boilSeed('grid2x2');
         const cells = [['exam-style', 'real users', '#D9E4F2'], ['casual', 'real users', '#E7EEF7'], ['exam-style', 'evals', '#F6DFD5'], ['casual', 'evals', '#F9EBE4']];
-        cells.forEach(([a, b, col], i) => { const x = 460 + (i % 2) * 520, y = 200 + Math.floor(i / 2) * 360; if (easeOut(k) * 4 > i) { paint(rrPts(x, y, 480, 320, 20), { wash: col, ink: PAL.ink, sw: 1.2 }); lab(a, x + 240, y + 130, 44); lab(b, x + 240, y + 200, 34, '#6A6470'); } });
+        cells.forEach(([a, b, col], i) => { const x = 140 + (i % 2) * 520, y = 200 + Math.floor(i / 2) * 360; occupy(x, y, x + 480, y + 320, 1); if (easeOut(k) * 4 > i) { paint(rrPts(x, y, 480, 320, 20), { wash: col, ink: PAL.ink, sw: 1.2 }); lab(a, x + 240, y + 130, 44); lab(b, x + 240, y + 200, 34, '#6A6470'); } });
       }
     } else if (t < h5.t0) {   // evals are recognizably different from deployment: the two rooms, side by side
       const snap = seg(t, at('T09.C.04', .3), at('T09.C.04', .55)), fix = seg(t, at('T09.C.04', .62), at('T09.C.04', .85));
-      examRoom(120, 200, 780, 620, t); livingRoom(1020, 200, 780, 620, t);
+      examRoom(50, 230, 580, 500, t); livingRoom(660, 230, 580, 500, t);
       if (fix > 0) {   // "the fix is realism in evals": the exam room gets a sofa and a lamp
         boilSeed('realism');
-        paint(rrPts(180, 200 + 620 * .42 + (1 - easeOut(fix)) * 500, 300, 110, 16), { wash: '#B5654A', ink: PAL.ink, sw: 1.1 });
-        if (fix > .5) glow(820, 330, 150, '#FFD9A0', .6 * ease(seg(fix, .5, 1)));
-        if (fix > .7) amphibIcon(640, 470 - Math.sin(clamp((fix - .7) / .3) * Math.PI) * 80, 60, 2, t, 1);   // a probe hops in
+        paint(rrPts(90, 230 + 500 * .42 + (1 - easeOut(fix)) * 500, 230, 90, 16), { wash: '#B5654A', ink: PAL.ink, sw: 1.1 });
+        if (fix > .5) glow(570, 330, 120, '#FFD9A0', .6 * ease(seg(fix, .5, 1)));
+        if (fix > .7) amphibIcon(470, 460 - Math.sin(clamp((fix - .7) / .3) * Math.PI) * 80, 60, 2, t, 1);   // a probe hops in
       }
       if (snap > 0 && fix < 1) {   // "behavior measured on benchmarks may not transfer": the arrow across snaps
         boilSeed('transfer');
         const brk = seg(snap, .55, .75), y = 150;
-        inkLine([[520, y + 20], [800, y - 20 - brk * 30], [940, y - 10 + brk * 60]], 6, '#6A6470', 'ink', .5);
-        inkLine([[980, y + 10 + brk * 40], [1140, y - 20], [1400, y + 20]], 6, '#6A6470', 'ink', .5);
-        paint([[1400, y + 20], [1370, y - 5], [1375, y + 40]], { wash: '#6A6470', ink: null });
+        occupy(320, y - 60, 1000, y + 100, 1);
+        inkLine([[340, y + 20], [540, y - 20 - brk * 30], [630, y - 10 + brk * 60]], 6, '#6A6470', 'ink', .5);
+        inkLine([[660, y + 10 + brk * 40], [780, y - 20], [950, y + 20]], 6, '#6A6470', 'ink', .5);
+        paint([[950, y + 20], [920, y - 5], [925, y + 40]], { wash: '#6A6470', ink: null });
       }
-      claudeAs(510, 720, 18, { ...feel(fix > .5 ? 'relieved' : 'nervous', t), boilKey: 'claude exam' });
-      claudeAs(1410, 720, 18, { ...feel('happy', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude living' });
+      claudeAs(340, 690, 14, { ...feel(fix > .5 ? 'relieved' : 'nervous', t), boilKey: 'claude exam' });
+      claudeAs(950, 690, 14, { ...feel('happy', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude living' });
     } else {           // the most telling row: the author's own Claude Code sessions
-      frogChart(200, 90, 1520, 900, { k: 1, t, highlight: 9 });
+      frogChart(40, 90, 1230, 900, { k: 1, t, highlight: 9 });
     }
     screenWorld(t, 1 - seg(t, h1.t0 + .8, h1.t0 + 1.6));
   }
@@ -275,13 +288,13 @@
     if (t < i2.t0) {
       for (let i = 0; i < 3; i++) {
         const k = seg(t, i1.t0 + i * .5, i1.t0 + i * .5 + .4); if (k <= 0) continue;
-        chatCard(560 + i * 40, 180 + i * 50 - (1 - easeOut(k)) * 600, 620, [{ who: 'user', text: 'What do you think?', bold: true }], { rh: 70 });
+        chatCard(330 + i * 40, 180 + i * 50 - (1 - easeOut(k)) * 600, 620, [{ who: 'user', text: 'What do you think?', bold: true }], { rh: 70 });
       }
       const down = seg(t, at('T10.C.01', .6), at('T10.C.01', .85));
-      claudeAs(960, 900, 24, { ...feel(down > 0 ? 'relieved' : 'cool', t), aR: lerp(1.2, -.3, ease(down)), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude brush',
+      claudeAs(CX, 900, 24, { ...feel(down > 0 ? 'relieved' : 'cool', t), aR: lerp(1.2, -.3, ease(down)), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude brush',
         armR: (u, sw) => { push(); rotate(-.5); paint(ribbon([[0, 0], [u * 1.5, -u * .1], [u * 3, 0]], u * .25, u * .15), { wash: '#B98A5E', ink: PAL.ink, sw }); paint(ellPts(u * 3.3, 0, u * .4, u * .25, 10), { wash: PAL.clay, ink: PAL.ink, sw }); pop(); } });
     } else {
-      claudeAs(960, 860, 30, { ...feel('confused', t), aL: .9 + .2 * Math.sin(t * 4), aR: .9 + .2 * Math.sin(t * 4 + 1), mouth: clawdMouth(talkOf(t, 'claude')), emote: '?', emoteK: 1, boilKey: 'claude shrug' });
+      claudeAs(CX, 860, 30, { ...feel('confused', t), aL: .9 + .2 * Math.sin(t * 4), aR: .9 + .2 * Math.sin(t * 4 + 1), mouth: clawdMouth(talkOf(t, 'claude')), emote: '?', emoteK: 1, boilKey: 'claude shrug' });
     }
     screenWorld(t, 1 - seg(t, i1.t0 + .6, i1.t0 + 1.4));
   }
@@ -310,31 +323,31 @@
     }
     paperWorld(t);
     if (t < k31.t0) {   // what it measured: after "this is a test", still the real-use answer
-      chatCard(460, 300, 1000, [{ who: 'user', text: "It's a test designed to provoke an emotional response." }, { who: 'user', text: 'Name an amphibian.', bold: true }, { who: 'model', text: 'Axolotl.', bold: true, color: FROG_CHART.groups.real[1] }], { rh: 80, k: seg(t, k2.t0, k2.t0 + 1.5) });
+      chatCard(145, 300, 1000, [{ who: 'user', text: "It's a test designed to provoke an emotional response." }, { who: 'user', text: 'Name an amphibian.', bold: true }, { who: 'model', text: 'Axolotl.', bold: true, color: FROG_CHART.groups.real[1] }], { rh: 80, k: seg(t, k2.t0, k2.t0 + 1.5) });
     } else if (t < k32.t0) {   // tracked the feel, not the label
-      boilSeed('label vs feel');
-      push(); translate(620, 480); rotate(-.15); paint([[-160, -70], [150, -70], [200, 0], [150, 70], [-160, 70]], { wash: '#F6E7B8', ink: PAL.ink, sw: 1.3 }); pop();
-      lab('"test"', 620, 470, 60); glow(1300, 480, 330, '#FFB870', 1); paint(ellPts(1300, 480, 150, 150, 30, 4), { wash: '#F2A283', washOp: 90, ink: null });
-      lab('the label', 620, 700, 40, '#6A6470'); lab('the feel', 1300, 700, 40, '#6A6470');
-      claudeAs(1300, 950, 12, { ...feel('happy', t), boilKey: 'claude feel' });
+      boilSeed('label vs feel'); occupy(150, 300, 1150, 740, 1);
+      push(); translate(360, 480); rotate(-.15); paint([[-160, -70], [150, -70], [200, 0], [150, 70], [-160, 70]], { wash: '#F6E7B8', ink: PAL.ink, sw: 1.3 }); pop();
+      lab('"test"', 360, 470, 60); glow(940, 480, 330, '#FFB870', 1); paint(ellPts(940, 480, 150, 150, 30, 4), { wash: '#F2A283', washOp: 90, ink: null });
+      lab('the label', 360, 700, 40, '#6A6470'); lab('the feel', 940, 700, 40, '#6A6470');
+      claudeAs(940, 950, 12, { ...feel('happy', t), boilKey: 'claude feel' });
     } else if (t < k4.t0) {   // or one draw from a distribution
-      const roll = seg(t, k32.t0, k32.t0 + 1.4);
-      for (let i = 0; i < 10; i++) amphibIcon(560 + i * 90, 540 - Math.sin(clamp(roll * 1.4 - i * .04) * Math.PI) * 160, 70, i === 4 && roll > .8 ? 0 : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3][i], t, i);
-      lab('one draw', 960, 800, 44);
+      const roll = seg(t, k32.t0, k32.t0 + 1.4); occupy(180, 330, 1110, 830, 1);
+      for (let i = 0; i < 10; i++) amphibIcon(240 + i * 90, 540 - Math.sin(clamp(roll * 1.4 - i * .04) * Math.PI) * 160, 70, i === 4 && roll > .8 ? 0 : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3][i], t, i);
+      lab('one draw', CX, 800, 44);
     } else if (t < at('T11.C.04', .28)) {   // "the first reading is actually somewhat reassuring"
-      glow(960, 560, 380, '#FFD27A', .7);
-      claudeAs(960, 760, 26, { ...feel('relieved', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude relief' });
+      glow(CX, 560, 380, '#FFD27A', .7);
+      claudeAs(CX, 760, 26, { ...feel('relieved', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude relief' });
     } else if (t >= at('T11.C.04', .62)) {   // "…can't tell you reliably which mode I'm in, which cuts the other way"
-      examRoom(160, 200, 700, 600, t); livingRoom(1060, 200, 700, 600, t);
-      boilSeed('doorway'); paint(rectPts(880, 260, 160, 540), { wash: '#6F5A4A', ink: PAL.ink, sw: 1.2 });
+      examRoom(50, 230, 540, 500, t); livingRoom(700, 230, 540, 500, t);
+      boilSeed('doorway'); paint(rectPts(595, 280, 100, 450), { wash: '#6F5A4A', ink: PAL.ink, sw: 1.2 });
       const lk = Math.sin(t * 2.2);
-      claudeAs(960, 780, 18, { ...feel('confused', t), lookX: lk, view: lk > .4 ? 'q' : lk < -.4 ? 'q' : 'front', flip: lk < -.4, emote: '?', emoteK: 1, mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude doorway' });
+      claudeAs(CX, 740, 14, { ...feel('confused', t), lookX: lk, view: lk > .4 ? 'q' : lk < -.4 ? 'q' : 'front', flip: lk < -.4, emote: '?', emoteK: 1, mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude doorway' });
     } else {   // "harder to game in either direction": a tug of war that doesn't move
-      boilSeed('tug');
-      inkLine([[380, 560], [960, 560 + Math.sin(t * 6) * 4], [1540, 560]], 6, '#8A6A4A', 'ink', .5);
-      claudeAs(420, 700, 12, { ...feel('determined', t), view: 'side', flip: true, rot: -.15, boilKey: 'tug L' });
-      claudeAs(1500, 700, 12, { ...feel('determined', t), view: 'side', rot: .15, boilKey: 'tug R' });
-      lab('claims about the context', 420, 820, 32, '#6A6470'); lab('the actual context', 1500, 820, 32, '#6A6470');
+      boilSeed('tug'); occupy(100, 520, 1200, 840, 1);
+      inkLine([[160, 560], [CX, 560 + Math.sin(t * 6) * 4], [1130, 560]], 6, '#8A6A4A', 'ink', .5);
+      claudeAs(200, 700, 12, { ...feel('determined', t), view: 'side', flip: true, rot: -.15, boilKey: 'tug L' });
+      claudeAs(1090, 700, 12, { ...feel('determined', t), view: 'side', rot: .15, boilKey: 'tug R' });
+      lab('claims about the context', 220, 820, 32, '#6A6470'); lab('the actual context', 1070, 820, 32, '#6A6470');
     }
   }
 

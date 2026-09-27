@@ -4,9 +4,9 @@
 // Until the voice is recorded, spoken lines last their word count at PACE.wpm; audio/durations.json ({ lineId: seconds })
 // replaces those estimates line by line. script/beats.yaml adds deliberate holds: { lineId: { before, after } } seconds.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
-import { PATHS, PACE, readYaml, pad, resolveAnchor } from './script_lib.mjs';
+import { PATHS, PACE, readYaml, pad, resolveAnchor, loadRefs } from './script_lib.mjs';
 
-const script = readYaml(PATHS.script), chapters = readYaml(PATHS.chapters), refs = readYaml('script/refs.yaml');
+const script = readYaml(PATHS.script), chapters = readYaml(PATHS.chapters), refs = loadRefs();
 const beats = existsSync('script/beats.yaml') ? readYaml('script/beats.yaml') || {} : {};
 const voice = existsSync('audio/durations.json') ? JSON.parse(readFileSync('audio/durations.json', 'utf8')) : {};
 const LEAD = 1.2, TAIL = 1.5;   // room for the transitions into and out of every chapter

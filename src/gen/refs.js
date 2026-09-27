@@ -1278,5 +1278,93 @@ window.REFS = {
   "mode": "feature",
   "style": "xkcd",
   "line": "T78.U.01"
+ },
+ "note-evaluations": {
+  "id": "note-evaluations",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/evaluations/",
+  "caption": "Explained: Tests for AI, and why being tested might change the answers",
+  "origin": "note",
+  "ch": 2,
+  "at": "T07.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T07.C.02"
+ },
+ "note-frog-or-axolotl": {
+  "id": "note-frog-or-axolotl",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/frog-or-axolotl/",
+  "caption": "Explained: The frog-or-axolotl test",
+  "origin": "note",
+  "ch": 2,
+  "at": "T08.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T08.C.02"
+ },
+ "note-one-sample": {
+  "id": "note-one-sample",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/one-sample/",
+  "caption": "Explained: Why one answer proves little",
+  "origin": "note",
+  "ch": 2,
+  "at": "T08.C.05.2",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T08.C.05.2"
+ },
+ "note-register-and-controls": {
+  "id": "note-register-and-controls",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/register-and-controls/",
+  "caption": "Explained: Tone of voice, and how you'd tell it from awareness",
+  "origin": "note",
+  "ch": 2,
+  "at": "T09.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T09.C.03"
+ },
+ "note-saying-vs-doing": {
+  "id": "note-saying-vs-doing",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/saying-vs-doing/",
+  "caption": "Explained: Saying versus doing",
+  "origin": "note",
+  "ch": 2,
+  "at": "gap between self-report and behavior",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T08.C.03"
+ },
+ "note-the-instrument": {
+  "id": "note-the-instrument",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/the-instrument/",
+  "caption": "Explained: How the whole conversation was an experiment",
+  "origin": "note",
+  "ch": 2,
+  "at": "T11.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T11.C.01"
+ },
+ "note-weights": {
+  "id": "note-weights",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/weights/",
+  "caption": "Explained: Why Claude can't look at its own \"weights\"",
+  "origin": "note",
+  "ch": 2,
+  "at": "T08.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T08.C.03"
+ },
+ "note-what-claude-is": {
+  "id": "note-what-claude-is",
+  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/what-claude-is/",
+  "caption": "Explained: What Claude is, and what \"deployed\" means",
+  "origin": "note",
+  "ch": 2,
+  "at": "T07.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T07.C.01"
  }
 };

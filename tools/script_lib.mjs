@@ -118,3 +118,10 @@ export function resolveAnchor(r, lines, byId = new Map(lines.map(l => [l.id, l])
   if (/^T\d\d\.[UC]\.\d\d/.test(r.at)) return byId.get(r.at);
   return lines.find(l => l.ch === r.ch && l.spoken && l.text.includes(r.at));
 }
+
+// Every reference: script/refs.yaml, plus one per explainer note (site/notes/*.md → script/notes_refs.yaml, written by
+// tools/build_site.mjs), which point at the companion site.
+export function loadRefs() {
+  const refs = readYaml('script/refs.yaml');
+  try { return refs.concat(readYaml('script/notes_refs.yaml') || []); } catch { return refs; }
+}
