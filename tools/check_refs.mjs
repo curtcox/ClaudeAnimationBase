@@ -13,7 +13,7 @@ import { PATHS, readYaml, resolveAnchor } from './script_lib.mjs';
 
 const qrcode = createRequire(import.meta.url)('qrcode-generator');
 const REFS = 'script/refs.yaml', REPORT = 'script/refs_report.md';
-const SIZE = { feature: 480, shelf: 380 }, ECC = { feature: 'H', shelf: 'Q' }, QUIET = 4, MIN_PX = 6;
+const SIZE = { feature: 480, shelf: 380 }, ECC = { feature: 'H', shelf: 'M' }, QUIET = 4, MIN_PX = 6;
 const offline = process.argv.includes('--offline');
 
 const refs = readYaml(REFS), lines = readYaml(PATHS.script).lines, chapters = readYaml(PATHS.chapters);

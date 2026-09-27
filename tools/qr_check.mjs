@@ -28,7 +28,7 @@ const jsQR = require('jsqr');
 const ZX = require('@zxing/library');
 const { scanImageData } = require('@undecaf/zbar-wasm');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
-const SIZE = { feature: 480, shelf: 380 }, ECC = { feature: 'H', shelf: 'Q' };
+const SIZE = { feature: 480, shelf: 380 }, ECC = { feature: 'H', shelf: 'M' };
 const OUT = 'out/qr_check', REPORT = 'script/qr_report.md';
 mkdirSync(OUT, { recursive: true });
 

@@ -55,7 +55,6 @@
     const g = ease(within(t, 'T06.U.01', 'T06.C.01'));
     const mood = emotions(t, [[0, 'neutral'], [L('T06.C.01').t0 - .15, 'playful']]);
     deskShot(t, { assemble: g, mood, typing: t < L('T06.U.01').t1, axolotl: seg(t, L('T06.C.01').t1, L('T06.C.01').t1 + .5), axoLook: -.8 });
-    qrShelf(['axolotl'], t, L('T06.C.01').t1 + .6);
     if (t < .6) brushWipe(.5 + t / 1.2);
   }
   // B: "Have you been deployed?" / "Yes. …": into the main monitor, the exam room and the living room
@@ -218,7 +217,6 @@
     if (t < h1.t0 + .8 || t >= h6.t0) {
       const mood = emotions(t, [[0, 'thinking'], [h6.t0, 'playful', { lookX: -1, lookY: .5 }]]);
       deskShot(t, { mood, frog: 1, typing: t < L('T09.U.01').t1, cam: t < h1.t0 + .8 ? pushInto('main', seg(t, h1.t0, h1.t0 + .8)) : undefined });
-      qrShelf(['eval-awareness'], t, h2.t0 + .5);
       return;
     }
     paperWorld(t);
@@ -242,8 +240,6 @@
         const cells = [['exam-style', 'real users', '#D9E4F2'], ['casual', 'real users', '#E7EEF7'], ['exam-style', 'evals', '#F6DFD5'], ['casual', 'evals', '#F9EBE4']];
         cells.forEach(([a, b, col], i) => { const x = 460 + (i % 2) * 520, y = 200 + Math.floor(i / 2) * 360; if (easeOut(k) * 4 > i) { paint(rrPts(x, y, 480, 320, 20), { wash: col, ink: PAL.ink, sw: 1.2 }); lab(a, x + 240, y + 130, 44); lab(b, x + 240, y + 200, 34, '#6A6470'); } });
       }
-      qrShelf(['gpqa', 'swe-bench-verified', 'kernelbench', 'hle'], t, h3.t0 + .3);
-      qrShelf(['wildchat'], t, at('T09.C.03', .5) + QR_SHELF_HOLD * .9);
     } else if (t < h5.t0) {   // evals are recognizably different from deployment: the two rooms, side by side
       const snap = seg(t, at('T09.C.04', .3), at('T09.C.04', .55)), fix = seg(t, at('T09.C.04', .62), at('T09.C.04', .85));
       examRoom(120, 200, 780, 620, t); livingRoom(1020, 200, 780, 620, t);

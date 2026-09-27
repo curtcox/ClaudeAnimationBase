@@ -13,7 +13,7 @@
 #   qr_url  what the code encodes when it differs from url: the site's own short form, or SHORT (needs a 256t short
 #           link; domain to be decided)
 #   also    other transcript URLs this code stands for (the same page linked twice)
-#   ecc     error-correction level, when the mode's default (feature H, shelf Q) doesn't scan reliably for this URL
+#   ecc     error-correction level, when the mode's default (feature H, shelf M) doesn't scan reliably for this URL
 #   verified how a bot-walled page was confirmed by hand (the checker can't fetch it)
 #   todo    anything still unresolved about this reference
 
@@ -35,6 +35,27 @@
 - { id: kernelbench, url: "https://arxiv.org/abs/2502.10517", caption: "KernelBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
 - { id: hle, url: "https://lastexam.ai/", caption: "Humanity's Last Exam", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
 - { id: wildchat, url: "https://arxiv.org/abs/2405.01470", caption: "WildChat", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
+
+# more for chapter 2: every model, benchmark, dataset and idea it names, one scan away
+- { id: claude-opus-5-5, url: "https://www.anthropic.com/claude-opus-5-5", caption: "Introducing Claude Opus 5.5", origin: added, at: T07.C.01, mode: shelf, style: plain }
+- { id: claude-app, url: "https://claude.com/download", caption: "The Claude app", origin: added, ch: 2, at: "we're talking in the Claude app", mode: shelf, style: plain }
+- { id: hawthorne, url: "https://en.wikipedia.org/wiki/Hawthorne_effect", caption: "The Hawthorne effect", origin: added, ch: 2, at: "whether or not anyone's grading", mode: shelf, style: plain }
+- { id: chart-author, url: "https://x.com/fjzzq2002", caption: "The chart's author, Ziqian Zhong", origin: added, at: T08.U.01, mode: shelf, style: plain }
+- { id: repugnant-conclusion, url: "https://plato.stanford.edu/entries/repugnant-conclusion/", caption: "Arrhenius and the Repugnant Conclusion", origin: added, ch: 2, at: "The chart shows the trick", mode: shelf, style: plain }
+- { id: effective-altruism, url: "https://en.wikipedia.org/wiki/Effective_altruism", caption: "Effective altruism", origin: added, ch: 2, at: "The chart shows the trick", mode: shelf, style: plain }
+- { id: introspection, url: "https://transformer-circuits.pub/2025/introspection/index.html", caption: "Emergent introspective awareness in LLMs", origin: added, ch: 2, at: "gap between self-report and behavior", mode: shelf, style: plain }
+- { id: tracing-thoughts, url: "https://www.anthropic.com/research/tracing-thoughts-language-model", caption: "Tracing the thoughts of a language model", origin: added, ch: 2, at: "inspect my own weights", mode: shelf, style: plain }
+- { id: gpt-5-6, url: "https://openai.com/index/gpt-5-6/", caption: "GPT-5.6 (Sol, Terra, Luna)", origin: added, at: T08.C.05.1, mode: shelf, style: plain, verified: "browser 2026-09-26" }
+- { id: gpt-5-6-luna, url: "https://developers.openai.com/api/docs/models/gpt-5.6-luna", caption: "GPT-5.6 Luna", origin: added, at: T08.C.05.1, mode: shelf, style: plain }
+- { id: error-bars, url: "https://www.anthropic.com/research/statistical-approach-to-model-evals", caption: "Adding error bars to evals", origin: added, at: T08.C.06, mode: shelf, style: plain }
+- { id: register, url: "https://en.wikipedia.org/wiki/Register_(sociolinguistics)", caption: "Register (sociolinguistics)", origin: added, ch: 2, at: "register sensitivity", mode: shelf, style: plain }
+- { id: impossiblebench, url: "https://arxiv.org/abs/2510.20270", caption: "ImpossibleBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
+- { id: swe-marathon, url: "https://arxiv.org/abs/2606.07682", caption: "SWE-Marathon", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
+- { id: swe-chat, url: "https://arxiv.org/abs/2604.20779", caption: "SWE-chat", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
+- { id: sharegpt-vicuna, url: "https://www.lmsys.org/blog/2023-03-30-vicuna/", caption: "ShareGPT (via Vicuna)", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
+- { id: scientific-control, url: "https://en.wikipedia.org/wiki/Scientific_control", caption: "Scientific control", origin: added, ch: 2, at: "A good control", mode: shelf, style: plain }
+- { id: claude-code, url: "https://claude.com/product/claude-code", caption: "Claude Code", origin: added, at: T09.C.05, mode: shelf, style: plain }
+- { id: sampling, url: "https://en.wikipedia.org/wiki/Sampling_(statistics)", caption: "Sampling", origin: added, ch: 2, at: "one draw from a distribution", mode: shelf, style: plain }
 
 # ---- 3 Who Are We? -----------------------------------------------------------------------------------------------
 - { id: 256t, url: "https://256t.org", caption: "256t.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }

@@ -20,6 +20,7 @@ function drawWorld(t) {
     SHOTS[i][1](t, t - t0, end - t0);
     CAM = null;
   }
+  if (window.AFTER_SHOT) window.AFTER_SHOT(t);   // overlays over every shot (a chapter's reference rail, review captions)
   flushLetters();
 }
 

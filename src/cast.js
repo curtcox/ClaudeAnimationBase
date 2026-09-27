@@ -25,7 +25,7 @@ const clawdMouth = (k, rest = null) => k < .15 ? rest : k < .55 ? 'o' : 'open';
 //   look (costume; see CURT_VARIANTS for named combinations):
 //     hair: 'none' | 'short' | 'ponytail' | 'bun';  outfit: 'stick' | 'hoodie' (+ hoodie: colour, hood: 'down' | 'up')
 //     facial: 'none' | 'stubble' | 'mustache' | 'goatee' | 'circle' | 'beard' | 'chinstrap';  hairCol, facialCol,
-//     ponyTip (the ponytail fades from hairCol at the roots to this at the tip)
+//     ponyTip (the ponytail fades from hairCol at the roots to this at the tip), glasses: true
 //   view: 'front' | 'back' (from behind: no face, the hair and the hood carry him)
 //   pose: 'stand' | 'sit' (legs hidden: sit behind a table), lean (radians, + = toward where he faces)
 //   flip (face left), look (-1..1 pupils), brows: 'flat' | 'up' | 'skeptic' | 'down', mouth: 'flat' | 'smile' | 'o' | 'frown'
@@ -121,7 +121,10 @@ function curt(x, y, u, o = {}) {
     if (o.hair === 'ponytail' && back) curtPonytail(head, R, 0, u, hairCol, sw, true, o.ponyTip);
     if (o.hair === 'bun') paint(ellPts(head[0] - f * R * (back ? 0 : .55), head[1] - R * (back ? .55 : .92), R * .38, R * .34, 16), { wash: hairCol, ink: PAL.ink, sw: sw * .7 });
   }
-  if (back) { if (o.draw) { rs('draw'); o.draw({ head, neck, hip, u, sw }); } boilSeed('after curt ' + id); return { head, neck, hip }; }
+  if (back) {
+    if (o.glasses) { rs('glasses'); for (const d of [-1, 1]) line([[head[0] + d * R * .98, head[1] + R * .02], [head[0] + d * R * .8, head[1] + R * .08]], .4); }   // the arms over the ears
+    if (o.draw) { rs('draw'); o.draw({ head, neck, hip, u, sw }); } boilSeed('after curt ' + id); return { head, neck, hip };
+  }
   // face (faces the way he faces: features shifted toward f)
   rs('face');
   const fx = head[0] + f * .35 * u, fy = head[1], lx = (o.look || 0) * .18 * u;
@@ -130,6 +133,11 @@ function curt(x, y, u, o = {}) {
     const ex = fx + d * .75 * u + lx;
     if (blink) line([[ex - .22 * u, fy - .2 * u], [ex + .22 * u, fy - .2 * u]], .6);
     else paint(ellPts(ex, fy - .2 * u, .2 * u, .24 * u, 10), { wash: col, ink: null });
+  }
+  if (o.glasses) {   // round frames and a bridge, over the eyes
+    rs('glasses');
+    for (const d of [-1, 1]) { const ring = []; for (let i = 0; i <= 14; i++) { const a = i / 13 * TAU; ring.push([fx + d * .78 * u + lx * .3 + Math.cos(a) * .52 * u, fy - .2 * u + Math.sin(a) * .47 * u]); } inkLine(ring, sw * .4, col, 'inkfine', .5); }
+    line([[fx - .26 * u + lx * .3, fy - .28 * u], [fx + .26 * u + lx * .3, fy - .28 * u]], .35);
   }
   const br = o.brows || 'none';
   if (br !== 'none') for (const d of [-1, 1]) {
