@@ -26,7 +26,7 @@ open runs about a minute.
 
 | shot | lines | transition in | what's seen · the event · camera |
 |---|---|---|---|
-| **A** | T01.U.00 (0–20 s) | fade up from black on the projector clatter | **The left panel.** Its six balloons pop in along their chain: the officer (red) and the handler argue, ending on "Because THAT ape is a ventriloquist!" The ape's eyes slide sideways. Loose caricatures, no likenesses. |
+| **A** | T01.U.00 (0–20 s) | fade up from black on the projector clatter | **The left panel.** Its six balloons pop in along their chain: the officer (red) and the handler argue, ending on "Because THAT ape is a ventriloquist!" The ape's eyes slide sideways. Simple caricatures drawn with care (necks, hands, hair, a shadowed cheek), no likenesses; the man in the turtleneck gets the most care: his natural hair, a knowing half-smile, his hands up as he tells us. |
 | **B** | 20–44 s | a slow pan right across the gutter | **The right panel.** "We suspect…", "It's not true!…", then the villain's balloon letters in word by word. The man in the turtleneck turns to *us*; his balloon, "Ever get the feeling you're in the wrong movie!?", lands on the film-reel runout sound. |
 | **C** | 44–54 s | pull back | **The whole page**, both panels, held so it can be read. **Feature QR: mad157** (fold-in style: the code folds in from the page's edges, then holds ≥ 6 s). |
 | **D** | 54–60 s | the page slides onto a monitor | **Title.** The page shrinks onto the main monitor of the Desk (its first appearance, from behind Curt's shoulder), and *Frog or Axolotl* is painted across the top of the frame. Brush wipe into ch 1. |

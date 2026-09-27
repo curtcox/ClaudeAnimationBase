@@ -50,6 +50,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   Options: “Fine for now” · “Careful pass first”
   - Curt: Fine for now
   - Claude: OK, leaving them.
+  - Claude: Done: a careful pass. Everyone now has a neck, ears, a shadowed cheek, real hair, and hands where the page has them. The man in the turtleneck has natural hair, a rolled collar, a knowing half-smile, and his hands up as he turns to tell us. When chapter 1 drains his panel to grey, his skin now stays dark instead of going pale like everyone else's.
 
 - **0:19.0** · T01.U.00 · shot A · Claude asks · ✓ resolved `nmujio79iq7`
   With all ten balloons read one by one, the cold open is now about 1 minute of silent reading (it was 32 s). OK?
