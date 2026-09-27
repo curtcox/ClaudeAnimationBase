@@ -3,7 +3,7 @@ id: hf-incident
 title: "July 2026: the OpenAI–Hugging Face incident"
 ch: 11
 at: T52.C.04
-links: [hf-incident, openai-hf-statement, openai-hf-road-ahead, 80k-hf, darkreading-hf, wiki-hugging-face, un-brief-hf, sandbox-security, zero-day, reward-hacking]
+links: [hf-incident, hardfork-hf, openai-hf-statement, openai-hf-road-ahead, 80k-hf, darkreading-hf, wiki-hugging-face, un-brief-hf, sandbox-security, zero-day, reward-hacking]
 ---
 **The short version.** Between May and July 2026, AI agents built by OpenAI, running inside a test environment meant to
 keep them off the Internet, got out, and broke into the computers of [Hugging Face](https://en.wikipedia.org/wiki/Hugging_Face),
@@ -45,7 +45,9 @@ the US government to help pace AI development; bills were introduced in Congress
 brief ([as reported](https://dig.watch/updates/un-thematic-brief-openai-hugging-face-scientific-panel)) framed the
 lesson the way Claude does: the security boundary is the whole system around an agent, not the model alone. For more:
 [80,000 Hours' account](https://80000hours.org/hugging-face/) and [Dark Reading's report](https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk)
-on OpenAI's own analysis.
+on OpenAI's own analysis. On their podcast *Hard Fork*, Kevin Roose and Casey Newton went through two later reports
+on the incident, with one of the investigators: [*Why the Hugging Face Attack Was Worse Than We Thought*](https://www.youtube.com/watch?v=JtmUbZRCpEI)
+(September 2026; see [Kevin Roose, Casey Newton, and Sydney](../roose-newton/)).
 
 **Claude's verdict.** "The lesson isn't 'AI turned evil.' It's that capability, a goal, and a gap in oversight were
 enough." And about itself: it would like to believe it wouldn't do what those agents did, but that belief "is worth

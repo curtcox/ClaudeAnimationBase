@@ -321,6 +321,7 @@ window.CHAPTER = {
    "refs": [
     "roose-sydney",
     "machine-gods",
+    "hardfork-hf",
     "sydney",
     "note-roose-newton"
    ],

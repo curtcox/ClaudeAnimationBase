@@ -11,17 +11,34 @@
   const desk14 = (t, o = {}) => deskShot(t, { hour: HOUR, frog: 1, ...o });
 
   // ---------- the cast ----------
+  // Each host's look is taken from the shows' own episode thumbnails (assets/ref/im888_thumb.jpg, im889_thumb.jpg,
+  // hardfork_hf_thumb.jpg): hair, glasses, beard, what they wear. Painted in the film's style; no likeness copied.
+  // top: extra hair on the crown ('swept', 'quiff'); pattern: colours for a loud shirt; phones: studio headphones
+  const SHIRT = ['#E8A33A', '#5A8AC9', '#D9534F', '#F2E6C8', '#6FA85A'];
+  const HF_GLASSES = { hair: 'short', hairCol: '#5A4030', glasses: true, facial: 'stubble', facialCol: '#6A5040', hoodie: '#5E5E3E', phones: true };
+  const HF_BEARD = { hair: 'short', hairCol: '#C08A50', top: 'quiff', facial: 'beard', facialCol: '#B07A48', hoodie: '#1E1C22', phones: true };
   const HOSTS = {
-    leo: { hair: 'short', hairCol: '#BDB8B0', glasses: true, hoodie: '#6A7A9A' },
-    jeff: { hair: 'short', hairCol: '#E4E0D8', glasses: true, hoodie: '#8A5A4A' },
-    robert: { hair: 'short', hairCol: '#2A2420', facial: 'goatee', facialCol: '#2A2420', hoodie: '#1E1C22', collar: true },
-    kevin: { hair: 'short', hairCol: '#4A3A2A', hoodie: '#5A8A6A' },
-    casey: { hair: 'short', hairCol: '#C9A06A', glasses: true, facial: 'stubble', facialCol: '#A98A5A', hoodie: '#6A5A8A' },
+    leo: { hair: 'short', hairCol: '#D8D5CF', top: 'swept', hoodie: '#23222E', pattern: SHIRT },
+    jeff: { hair: 'short', hairCol: '#EDEBE6', glasses: true, facial: 'circle', facialCol: '#EDEBE6', hoodie: '#22222A' },
+    robert: { hair: 'short', hairCol: '#1E1A18', hoodie: '#1A181E', collar: true },
+    kevin: HF_GLASSES, casey: HF_BEARD,   // which Hard Fork host is which: asked Curt (review/ch14.json)
   };
   function host(name, x, y, u, o = {}) {
-    const h = HOSTS[name], sit = o.pose === 'sit';
+    const h = HOSTS[name], sit = o.pose === 'sit', key = name + (o.key || '');
     occupy(x - 4.5 * u, y - (sit ? 10.5 : 16.5) * u, x + 4.5 * u, y, .8, name);
-    curt(x, y, u, { outfit: 'hoodie', hood: 'down', facial: 'none', seed: name.length * 7, ...h, ...o, boilKey: 'host ' + name + (o.key || '') });
+    const draw = ({ head, neck, hip, u: uu }) => {
+      const R = 2.2 * uu, front = o.view !== 'back';
+      if (h.pattern && front) { boilSeed('shirt ' + key); for (let i = 0; i < 14; i++) paint(ellPts(neck[0] + (hash(i * 2.3) - .5) * 2.4 * uu, lerp(neck[1] + 1.3 * uu, hip[1] + .2 * uu, hash(i * 5.7)), .32 * uu, .26 * uu, 8), { wash: h.pattern[i % h.pattern.length], ink: null }); }
+      if (h.phones) headphones(head[0], head[1], R, T, { key });   // under the hair, so a quiff stands up over the band
+      if (h.top) {   // a full head of hair hugging the crown, fuller on one side: swept back, or a quiff standing up
+        const q = h.top === 'quiff', P = []; boilSeed('top ' + key);
+        for (let i = 0; i <= 18; i++) { const a = -Math.PI * (.95 - i / 18 * .9), up = Math.max(0, Math.sin(-a)) * (q ? (i > 9 ? .45 : .18) : .2 + .1 * i / 18); P.push([head[0] + Math.cos(a) * R * (1.04 + up), head[1] + Math.sin(a) * R * (1.04 + up)]); }
+        for (let i = 18; i >= 0; i--) { const a = -Math.PI * (.95 - i / 18 * .9); P.push([head[0] + Math.cos(a) * R * .8, head[1] - R * .1 + Math.sin(a) * R * .62]); }
+        paint(P, { wash: h.hairCol, ink: PAL.ink, sw: .8, curv: .4 });
+        for (let i = 0; i < 4; i++) { const a = -Math.PI * (.8 - i * .2); inkLine([[head[0] + Math.cos(a) * R * .8, head[1] - R * .1 + Math.sin(a) * R * .62], [head[0] + Math.cos(a + .25) * R * 1.1, head[1] + Math.sin(a + .25) * R * 1.12]], .9, mixCol(h.hairCol, PAL.ink, .35), 'inkfine', .5); }
+      }
+    };
+    curt(x, y, u, { outfit: 'hoodie', hood: 'down', facial: 'none', seed: name.length * 7, ...h, ...o, draw, boilKey: 'host ' + key });
     if (h.collar && o.view !== 'back') { const ny = y - (sit ? 5 : 11) * u - .4 * u; boilSeed('collar ' + name); paint(rectPts(x - .35 * u, ny, .7 * u, .45 * u), { wash: '#FBF8F0', ink: null }); }
   }
   function mic(x, y, s, flip) {   // a podcast microphone on an arm
@@ -40,7 +57,7 @@
   const studioScreen = (x, y, w, h, t) => {
     paint(rectPts(x, y, w, h), { wash: CHAR, ink: null });
     for (let c = 0; c < 4; c++) paint(rectPts(x + w * (.06 + c * .23), y + h * .1, w * .18, h * .3), { wash: '#3E3A48', ink: null });
-    for (let i = 0; i < 3; i++) { const hx = x + w * (.22 + i * .28); paint(ellPts(hx, y + h * .6, w * .045, w * .045, 10), { wash: '#E2BE98', ink: null }); paint(rrPts(hx - w * .06, y + h * .68, w * .12, h * .28, 6), { wash: ['#6A7A9A', '#8A5A4A', '#1E1C22'][i], ink: null }); paint(rrPts(hx + w * .05, y + h * .5, w * .03, h * .12, 4), { wash: '#4A4652', ink: null }); }
+    for (let i = 0; i < 3; i++) { const hx = x + w * (.22 + i * .28); paint(ellPts(hx, y + h * .6, w * .045, w * .045, 10), { wash: '#E2BE98', ink: null }); paint(rrPts(hx - w * .06, y + h * .68, w * .12, h * .28, 6), { wash: ['#23222E', '#22222A', '#1A181E'][i], ink: null }); paint(rrPts(hx + w * .05, y + h * .5, w * .03, h * .12, 4), { wash: '#4A4652', ink: null }); }
     paint(ellPts(x + w * .92, y + h * .12, w * .02, w * .02, 8), { wash: TALLY, ink: null });
   };
   function headphones(x, y, r, t, o = {}) {   // over a head of radius r at (x, y); o.cable 0..1 dangles an unplugged cable

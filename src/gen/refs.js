@@ -2633,6 +2633,16 @@ window.REFS = {
   "style": "two-mics",
   "line": "T71.C.02.2"
  },
+ "hardfork-hf": {
+  "id": "hardfork-hf",
+  "url": "https://www.youtube.com/watch?v=JtmUbZRCpEI",
+  "caption": "Hard Fork: the Hugging Face attack",
+  "origin": "added",
+  "at": "T71.C.02.2",
+  "mode": "page",
+  "style": "tv",
+  "line": "T71.C.02.2"
+ },
  "pascals-mugging": {
   "id": "pascals-mugging",
   "url": "https://en.wikipedia.org/wiki/Pascal%27s_mugging",

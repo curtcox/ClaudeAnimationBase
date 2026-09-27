@@ -320,6 +320,7 @@
 - { id: tescreal, url: "https://en.wikipedia.org/wiki/TESCREAL", caption: "TESCREAL", origin: added, at: T68.C.04.2, mode: shelf, style: boxing-ring }
 - { id: roose-sydney, url: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html", caption: "Roose's Sydney conversation", origin: added, at: T71.C.02.2, mode: shelf, style: two-mics, verified: "Curt, headline, 2026-09-27 (paywalled)" }
 - { id: machine-gods, url: "https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods", qr_url: SHORT, caption: "Machine Gods (NPR)", origin: added, ch: 14, at: "Machine Gods", mode: shelf, style: two-mics }
+- { id: hardfork-hf, url: "https://www.youtube.com/watch?v=JtmUbZRCpEI", caption: "Hard Fork: the Hugging Face attack", origin: added, at: T71.C.02.2, mode: page, style: tv }
 - { id: pascals-mugging, url: "https://en.wikipedia.org/wiki/Pascal%27s_mugging", caption: "Pascal's mugging", origin: added, at: T72.U.02.3, mode: shelf, style: door }
 - { id: orthogonality, url: "https://www.lesswrong.com/w/orthogonality-thesis", caption: "The orthogonality thesis", origin: added, at: T72.U.02.4, mode: shelf, style: door }
 # more for chapter 14: the hosts, the critics they quote, Curt's projects, and every door in the multiple choice

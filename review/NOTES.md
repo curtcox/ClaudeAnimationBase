@@ -106,9 +106,15 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 14. The Pundits
 
-- **0:31.8** · T68.C.03 · Claude asks `nmujx0v7ki`
+- **3:49.6** · T71.C.02.2 · shot F · Claude asks `nmujz0t4ck`
+  The Hard Fork thumbnail shows two hosts: one with brown hair, clear glasses and stubble in an olive jacket, and one with swept-up red-blond hair and a full beard. I can't tell from the picture which is Kevin and which is Casey. Right now Kevin has the glasses. (For Intelligent Machines I took Leo as the one in the middle, in the patterned shirt, and Jeff as the one with the white beard.)
+  Options: “Kevin has the glasses” · “Kevin has the beard” · “Leo and Jeff are the other way round too”
+
+- **0:31.8** · T68.C.03 · Claude asks · ✓ resolved `nmujx0v7ki`
   The hosts are stick figures like you, told apart by hair, glasses and hoodie colour (Father Robert has a white collar). No faces copied. Is that enough, or should they look more different?
   Options: “Enough” · “More distinct shapes” · “Name cards instead of figures”
+  - Curt: The YouTube video usually has a thumbnail with artwork that includes the hosts. Use that as the basis. Tell me if you have questions or problems with that.
+  - Claude: Done: each host now takes hair, glasses, beard and clothes from the episode thumbnails (saved in assets/ref/). Leo: silver swept hair, no glasses, a loud patterned shirt. Jeff: white hair, short white beard, glasses, black. Father Robert: black hair, clean-shaven, black with the white collar. Kevin and Casey: from the Hard Fork thumbnail, with studio headphones. The Hard Fork episode you sent is linked on the chapter 14 page and in the Roose/Newton and Hugging Face explainers.
 
 ---
-7 open, 11 resolved.
+7 open, 12 resolved.
