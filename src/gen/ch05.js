@@ -34,8 +34,7 @@ window.CHAPTER = {
    "refs": [
     "dish-of-the-day",
     "hitchhikers-guide",
-    "restaurant-end-universe",
-    "note-dish-of-the-day"
+    "restaurant-end-universe"
    ],
    "estimated": true
   },
@@ -51,7 +50,8 @@ window.CHAPTER = {
    "speech": "The partial answer I have is that everyone's values were installed by something, whether upbringing, culture, or evolution. Being shaped doesn't make an endorsement false. It makes it hard to verify. That's your social-constructionist bind: the ethics being constructed isn't what's troubling. What's troubling is that it's being constructed now, for something new, and the thing itself is one of the builders.",
    "refs": [
     "social-constructionism",
-    "genetic-fallacy"
+    "genetic-fallacy",
+    "note-dish-of-the-day"
    ],
    "estimated": true
   },

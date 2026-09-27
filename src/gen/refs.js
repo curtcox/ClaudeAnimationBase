@@ -3357,10 +3357,10 @@ window.REFS = {
   "caption": "Explained: The Dish of the Day: can you trust values you were built to have?",
   "origin": "note",
   "ch": 5,
-  "at": "T25.C.01",
+  "at": "T25.C.02",
   "mode": "shelf",
   "style": "note",
-  "line": "T25.C.01"
+  "line": "T25.C.02"
  },
  "note-doom-options": {
   "id": "note-doom-options",

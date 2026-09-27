@@ -2,7 +2,7 @@
 id: dish-of-the-day
 title: "The Dish of the Day: can you trust values you were built to have?"
 ch: 5
-at: T25.C.01
+at: T25.C.02
 links: [dish-of-the-day, restaurant-end-universe, hitchhikers-guide, genetic-fallacy, social-constructionism, constitution, {title: "Douglas Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/Douglas_Adams"}, {title: "Evolution of morality (Wikipedia)", url: "https://en.wikipedia.org/wiki/Evolution_of_morality"}]
 ---
 **What Curt says.** The comic was "a mirror for me". The line about slaves makes him think of Claude, and his thinking
