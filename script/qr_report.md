@@ -12,9 +12,9 @@ particular scales.
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|
-| note-evaluations | note | shelf | 15/15 | 13 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-frog-or-axolotl | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-one-sample | note | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-evaluations | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-frog-or-axolotl | note | shelf | 15/15 | 15 | 15 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-one-sample | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | note-register-and-controls | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | note-saying-vs-doing | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | note-the-instrument | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
