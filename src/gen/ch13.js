@@ -472,6 +472,10 @@ window.CHAPTER = {
     "dwarkesh-leopold",
     "dwarkesh-patel"
    ],
+   "proof": [
+    "a [strong→strongly] suggestive",
+    "Leopold [with→which] was"
+   ],
    "estimated": true
   },
   {

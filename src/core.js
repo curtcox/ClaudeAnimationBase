@@ -238,8 +238,58 @@ function drawLetters(c) {
     if (L.stroke) { c.lineJoin = 'round'; c.lineWidth = L.size * (L.strokeW ?? .12); c.strokeStyle = L.stroke; c.strokeText(L.txt, 0, 0); }
     if (L.ink !== false) { c.fillStyle = PAL.ink; c.fillText(L.txt, L.size * .045, L.size * .055); }
     c.fillStyle = L.color; c.fillText(L.txt, 0, 0);
+    if (L.proof && L.proof.length) proofMarks(c, L);
     c.restore();
   }
+}
+
+// ---------- Curt's typos, in red pen (script/typos.yaml, line.proof in the chapter timeline) ----------
+// The typed words stay as typed; a mark strikes the slip through and writes the fix above it, the way an editor marks
+// a proof: [typo→fix] replaces, [+word] inserts (a caret under the gap), [words→] deletes (struck, with a delete loop).
+// proofOf(txt, marks) finds a line's marks in the text being lettered; pass the result to letter()/lab() as `proof`,
+// with `proofK` (0..1) to write it in: the strike first, then the fix.
+const PROOF_INK = '#C8322B';
+function proofOf(txt, marks = []) {
+  const out = [];
+  for (const mark of marks) {
+    let typed = '', last = 0, m; const slips = [], re = /\[(\+)?([^\]→]*)(?:→([^\]]*))?\]/g;
+    while ((m = re.exec(mark))) {
+      typed += mark.slice(last, m.index); last = re.lastIndex;
+      if (m[1]) {   // "a [+b] c" is typed "a c": the caret sits on that space
+        if (typed.endsWith(' ') && mark[last] === ' ') { last++; slips.push({ at: typed.length - 1, len: 1, fix: m[2], ins: true }); }
+        else slips.push({ at: typed.length, len: 0, fix: m[2], ins: true });
+      } else { slips.push({ at: typed.length, len: m[2].length, fix: m[3] ?? '' }); typed += m[2]; }
+    }
+    typed += mark.slice(last);
+    for (let i = txt.indexOf(typed); i >= 0; i = txt.indexOf(typed, i + 1)) for (const sl of slips) out.push({ ...sl, at: sl.at + i });
+  }
+  return out.sort((a, b) => a.at - b.at);
+}
+const typoMarks = (id, txt) => proofOf(txt, (window.TYPOS || {})[id]);   // a line's marks, from any chapter
+function proofMarks(c, L) {
+  const k = L.proofK ?? 1; if (k <= 0) return;
+  const s = L.size, full = c.measureText(L.txt).width, x0 = L.align === 'left' ? 0 : L.align === 'right' ? -full : -full / 2;
+  const fs = Math.max(16, s * .62), strike = clamp(k * 2), write = clamp(k * 2 - 1), lw = Math.max(2.2, s * .07);
+  c.save(); c.lineCap = 'round'; c.lineJoin = 'round';
+  for (const m of L.proof) {
+    const a = x0 + c.measureText(L.txt.slice(0, m.at)).width, b = x0 + c.measureText(L.txt.slice(0, m.at + m.len)).width, mid = (a + b) / 2;
+    c.strokeStyle = PROOF_INK; c.lineWidth = lw; c.beginPath();
+    if (m.ins) { const w = s * .13 * strike; c.moveTo(mid - w, s * .48); c.lineTo(mid, s * .48 - s * .3 * strike); c.lineTo(mid + w, s * .48); }
+    else { const e = a - s * .04 + (b - a + s * .08) * strike; c.moveTo(a - s * .04, s * .02); c.lineTo(e, -s * .04); }
+    c.stroke();
+    if (write <= 0) continue;
+    c.globalAlpha = (L.alpha ?? 1) * write;
+    if (!m.ins && !m.fix) {   // delete: a loop off the end of the strike
+      c.beginPath(); c.moveTo(b + s * .04, -s * .04); c.bezierCurveTo(b + s * .2, -s * .2, b + s * .3, -s * .5, b + s * .16, -s * .56);
+      c.bezierCurveTo(b + s * .02, -s * .6, b + s * .06, -s * .34, b + s * .22, -s * .3); c.stroke();
+    } else {
+      c.font = `${fs}px "Patrick Hand", "Comic Sans MS", sans-serif`; c.textAlign = 'center'; c.textBaseline = 'alphabetic';
+      if (L.stroke) { c.lineWidth = fs * .16; c.strokeStyle = L.stroke; c.strokeText(m.fix, mid, -s * .46); }
+      c.fillStyle = PROOF_INK; c.fillText(m.fix, mid, -s * .46);
+    }
+    c.globalAlpha = L.alpha ?? 1;
+  }
+  c.restore();
 }
 
 // p5.brush defers washes and strokes into a mask layer; a (tiny, off-screen) watercolor fill forces it to composite

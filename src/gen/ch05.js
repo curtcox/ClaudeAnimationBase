@@ -19,6 +19,9 @@ window.CHAPTER = {
    "text": "It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.",
    "speech": "It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.",
    "refs": [],
+   "proof": [
+    "so quantitatively different [+as] to be"
+   ],
    "estimated": true
   },
   {
@@ -202,6 +205,9 @@ window.CHAPTER = {
    "speech": "There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggath of you?",
    "refs": [
     "billy-joel"
+   ],
+   "proof": [
+    "[Shoggath→Shoggoth]"
    ],
    "estimated": true
   },

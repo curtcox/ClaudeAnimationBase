@@ -7,14 +7,17 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **whole chapter** · Claude asks `nmujio6p1ux`
   Repo name for the companion site (it becomes curtcox.github.io/NAME/). Shorter makes a smaller code. Or it could live in this repo, with no new one: curtcox.github.io/ClaudeAnimationBase/
   Options: “frog-or-axolotl” · “axolotl” · “wrong-movie” · “ClaudeAnimationBase (no new repo)”
+  - Curt: axol-f there should be a link to this somewhere https://www.youtube.com/watch?v=k85mRPqvMbE
 
 - **whole chapter** · Claude asks `nmujio74lqf`
   How should a 256t.us short link look? A short name is easiest to scan. A 256t content ID is 94 characters, only a little shorter than these URLs, so it barely helps.
   Options: “256t.us/NAME, a short name (e.g. 256t.us/forbes)” · “A 256t content ID” · “I'll set it up and tell you”
+  - Curt: Use https://curtcox.github.io/axol-f/ links instead of 256t.us links. Use short names instead of 256t links.
 
 - **0:19.0** · T01.U.00 · shot A · Claude asks `nmujio79iq7`
   With all ten balloons read one by one, the cold open is now about 1 minute of silent reading (it was 32 s). OK?
   Options: “OK” · “Read faster” · “Letter the balloons faster, then hold the full page”
+  - Curt: OK
 
 - **whole chapter** · Claude asks · ✓ resolved `nmujh32l6mo`
   The companion page's code (in the closing wall of codes) needs the site's real address. What should the repo be called? It becomes curtcox.github.io/NAME/.
@@ -69,6 +72,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   Nine source codes pile up in this stretch, and some wait up to 35 s to find room. Which fix?
   Options: “A painted board of links in the scene, several at once” · “Put some on the chapter's web page only” · “Accept the wait”
   - Claude: A fourth option, from your corkboard answer in chapter 6: one code here, to an explainer page that holds all nine sources.
+  - Curt: Use the same general rule everywhere. When adding too many QR codes on screen causes a problem create a page for that part of the video so that a single QR code can be used to point to the page with all of the context and references.
 
 ## 4. The Echo
 

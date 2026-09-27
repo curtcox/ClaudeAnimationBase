@@ -54,13 +54,23 @@ function reviewCaption(t) {
   const sentences = txt.split(/(?<=[.!?]["”)]*)\s+(?=["“(]?[A-Z0-9])/).map(x => x.replace(/\u2024/g, '.'));
   const total = sentences.reduce((a, s) => a + s.length, 0); let acc = 0, cur = sentences[0];
   for (const s of sentences) { if ((t - l.t0) / Math.max(.01, l.t1 - l.t0) * total >= acc) cur = s; acc += s.length; }
-  const words = cur.trim().split(' '), rows = [''];
-  for (const w of words) { if ((rows[rows.length - 1] + ' ' + w).length > 62) rows.push(w); else rows[rows.length - 1] = (rows[rows.length - 1] + ' ' + w).trim(); }
-  const who = l.speaker === 'curt' ? 'CURT' : 'CLAUDE', col = l.speaker === 'curt' ? '#2F5C8A' : '#A84D33', y0 = H - 40 - rows.length * 46;
+  // rows of up to 62 characters, each with its share of Curt's typo marks (script/typos.yaml), in red pen
+  const marks = proofOf(cur, l.proof), rows = [{ txt: '', at: 0 }];
+  let pos = 0;
+  for (const w of cur.split(' ')) {
+    const r = rows[rows.length - 1];
+    if (r.txt && (r.txt + ' ' + w).length > 62) rows.push({ txt: w, at: pos }); else r.txt = r.txt ? r.txt + ' ' + w : w;
+    pos += w.length + 1;
+  }
+  for (const r of rows) r.proof = marks.filter(m => m.at >= r.at && m.at <= r.at + r.txt.length).map(m => ({ ...m, at: m.at - r.at }));
+  const gap = marks.length ? 60 : 46, top = marks.length ? 18 : 0;
+  const who = l.speaker === 'curt' ? 'CURT' : 'CLAUDE', col = l.speaker === 'curt' ? '#2F5C8A' : '#A84D33', y0 = H - 40 - rows.length * gap - top;
   boilSeed('caption');
-  paint(rrPts(40, y0 - 44, 1360, rows.length * 46 + 64, 14), { wash: '#FBF8F0', washOp: 225, ink: null });
-  letter(who, 64, y0 - 16, 22, col, { ink: false, align: 'left', screen: true, font: 'bold 22px "Helvetica Neue", Arial, sans-serif' });
-  rows.forEach((r, i) => letter(r, 64, y0 + 20 + i * 46, 36, '#1E1A22', { ink: false, align: 'left', screen: true, font: '36px "Helvetica Neue", Arial, sans-serif' }));
+  // a light veil, not a panel: the picture shows through, and a thin white edge on each letter keeps the words readable
+  paint(rrPts(40, y0 - 44, 1360, rows.length * gap + 64 + top, 14), { wash: '#FBF8F0', washOp: 80, ink: null });
+  const edge = { ink: false, align: 'left', screen: true, stroke: '#FFFFFF', strokeW: .1 };
+  letter(who, 64, y0 - 16, 22, col, { ...edge, font: 'bold 22px "Helvetica Neue", Arial, sans-serif' });
+  rows.forEach((r, i) => letter(r.txt, 64, y0 + 20 + top + i * gap, 36, '#1E1A22', { ...edge, font: '36px "Helvetica Neue", Arial, sans-serif', proof: r.proof }));
 }
 window.AFTER_SHOT = t => { if (DRY) return; if (window.CHAPTER) refRail(t); if (REVIEW) reviewCaption(t); OCC = []; };
 

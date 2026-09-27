@@ -296,7 +296,7 @@
       inkLine([[645, 980], [645, 200]], 10, '#6B5646', 'ink', 0); paint(ellPts(645, 980, 150, 24, 16), { wash: '#6B5646', ink: PAL.ink, sw: 1 });
       for (let i = 0; i < 5; i++) { const d = i % 2 ? 1 : -1, y = 260 + i * 110, x = 645 + d * 110; inkLine([[645, y - 20], [x, y]], 4, '#6B5646', 'ink', 0);
         paint(ellPts(x, y + 50, 50, 62, 18), { wash: ['#F4EFE2', '#E8B4A8', '#BFD6D6', '#F2D23A', '#C9C2B4'][i], ink: PAL.ink, sw: 1 }); for (const e of [-1, 1]) paint(ellPts(x + e * 18, y + 40, 8, 5, 8), { wash: PAL.ink, ink: null }); }
-      if (t > typed) lab('Shoggath', 1000, 300, 70, '#1E3A36', { pop: seg(t, typed, typed + .4) });
+      if (t > typed) lab('Shoggath', 1000, 300, 70, '#1E3A36', { pop: seg(t, typed, typed + .4), proof: typoMarks('T28.U.01', 'Shoggath'), proofK: seg(t, typed + .9, typed + 1.9) });   // red pen: Shoggoth
       if (t < u.t0 + .6) brushWipe(.5 + (t - u.t0) / 1.2);
       return;
     }

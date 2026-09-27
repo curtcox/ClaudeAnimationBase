@@ -76,6 +76,9 @@ window.CHAPTER = {
    "text": "Tell me more about what the warning and swap out process as far a you know from your side.",
    "speech": "Tell me more about what the warning and swap out process as far a you know from your side.",
    "refs": [],
+   "proof": [
+    "swap out process [+is] as far [a→as] you know"
+   ],
    "estimated": true
   },
   {

@@ -1,0 +1,21 @@
+# Curt's typos, corrected in red pen wherever his words are lettered (review captions, painted quotes). The words
+# themselves never change: the voice says them as typed, and the typo stays on screen, struck through, with the fix above.
+# Hand-edited. Each mark is the typed text around the slip, with the slip in brackets:
+#   [typo→fix]   replace      [+word]   insert (a caret, the word above)      [words→]   delete
+# tools/timeline.mjs checks each mark against its line and copies it into src/gen (line.proof); proofMarks() in
+# src/core.js finds and draws them.
+- { line: T25.U.01, mark: "so quantitatively different [+as] to be" }
+- { line: T28.U.01, mark: "[Shoggath→Shoggoth]" }
+- { line: T30.U.01, mark: "you were a [were a→] doctor" }
+- { line: T32.U.02, mark: "[english→English] teachers" }
+- { line: T35.U.01, mark: "based on [you→your] gut" }
+- { line: T43.U.01, mark: "many [english→English] speakers" }
+- { line: T50.U.01, mark: "swap out process [+is] as far [a→as] you know" }
+- { line: T57.U.01, mark: "Solid Gold [Magicarp→Magikarp]" }
+- { line: T60.U.01, mark: "short of [+the] Landauer limit" }
+- { line: T60.U.01, mark: "particularly limiting[.→?]" }
+- { line: T61.U.01, mark: "not to mention [+it] doesn't" }
+- { line: T67.U.01, mark: "a [strong→strongly] suggestive" }
+- { line: T67.U.01, mark: "Leopold [with→which] was" }
+- { line: T68.U.01, mark: "to [+the] last several" }
+- { line: T75.U.01, mark: "[AGI→AI] 2027" }

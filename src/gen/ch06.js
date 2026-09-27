@@ -28,6 +28,9 @@ window.CHAPTER = {
     "channel-curt",
     "note-the-debate"
    ],
+   "proof": [
+    "you were a [were a→] doctor"
+   ],
    "estimated": true
   },
   {
@@ -242,6 +245,9 @@ window.CHAPTER = {
    "speech": "Perhaps your hypothetical antithrindle is something that gets less useful for some people the more people use it at once AND gets less useful for other people the fewer people use it at once. Perhaps a cliche is an antithrindle. It immediately evokes a level of shared shallow conception that is desirable in most conversation and detested by english teachers. All these negatives are making me dizzy.",
    "refs": [
     "cliche"
+   ],
+   "proof": [
+    "[english→English] teachers"
    ],
    "estimated": true
   },

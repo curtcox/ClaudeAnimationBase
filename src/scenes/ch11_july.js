@@ -114,8 +114,10 @@
     const P = [[240, 300], [620, 250], [1010, 300], [250, 700], [640, 740], [1020, 700]];
     const pin = (x, y) => paint(ellPts(x, y, 9, 9, 8), { wash: '#C9302C', ink: PAL.ink, sw: .5 });
     const card = (i, draw) => { const k = show[i] ?? 0; if (k <= 0) return; const [x, y] = P[i]; push(); translate(x, y + (1 - easeOut(k)) * -40); rotate((hash(i) - .5) * .12); boilSeed('ev card ' + i); paint(rrPts(-150, -90, 300, 180, 8), { wash: '#FBF8F0', ink: PAL.ink, sw: 1 }); pop(); draw(x, y + (1 - easeOut(k)) * -40); pin(x, y - 80); };
-    card(0, (x, y) => lab('a were a', x, y, 56, '#3A3342'));
-    card(1, (x, y) => lab('Shoggath', x, y, 56, '#3A3342'));
+    // the typos keep their red-pen corrections (script/typos.yaml), written in once each card is up
+    const pen = i => ({ proofK: o.pen ? o.pen[i] : 1 });
+    card(0, (x, y) => lab('a were a', x, y, 56, '#3A3342', { proof: proofOf('a were a', ['a [were a→]']), ...pen(0) }));
+    card(1, (x, y) => lab('Shoggath', x, y, 56, '#3A3342', { proof: typoMarks('T28.U.01', 'Shoggath'), ...pen(1) }));
     card(2, (x, y) => { lab('confuzzled', x, y - 6, 52, '#3A3342'); if (o.credit > 0) { boilSeed('credit'); paint(rrPts(x + 40, y + 30, 120, 70, 8), { wash: '#FFE9A0', washOp: 255 * o.credit, ink: PAL.ink, sw: .8 }); paint(ellPts(x + 100, y + 58, 14, 16, 10), { wash: '#3A3342', ink: null }); paint(rrPts(x + 78, y + 72, 44, 26, 10), { wash: '#3A3342', ink: null }); } });
     card(3, (x, y) => { paint(ellPts(x, y, 50, 50, 24), { wash: null, ink: '#C9A441', sw: 4 }); paint(ellPts(x, y - 50, 14, 10, 8), { wash: '#DCEBF0', ink: PAL.ink, sw: .6 }); });
     card(4, (x, y) => { for (let i = 0; i < 4; i++) inkLine([[x - 110, y - 50 + i * 30], [x + 110 - 40 * hash(i + 9), y - 50 + i * 30]], 1.4, '#8C8894', 'inkfine', 0); paint([[x + 60, y - 90], [x + 100, y - 90], [x + 100, y + 20], [x + 80, y], [x + 60, y + 20]], { wash: '#C9302C', ink: PAL.ink, sw: .8 }); });
@@ -356,7 +358,7 @@
     july(t);
     if (t < c2.t0) {
       const show = [['a were a', 0], ['Shoggath', 1], ['confuzzled', 2], ['a wife of decades', 3], ["a slow reader", 4], ['a YouTube comment', 5]].map(([p]) => seg(t, say('T54.C.01', p, -.3), say('T54.C.01', p, .3)));
-      evidence(t, show);
+      evidence(t, show, { pen: ['a were a', 'Shoggath'].map(p => seg(t, say('T54.C.01', p, .6), say('T54.C.01', p, 1.6))) });
       const perf = seg(t, say('T54.C.01', 'unusually committed performance', -.4), c1.t1);
       if (perf > 0) { boilSeed('curtain'); for (const d of [-1, 1]) paint([[645 + d * 700, 60], [645 + d * lerp(700, 380, ease(perf)), 60], [645 + d * lerp(700, 420, ease(perf)), 1000], [645 + d * 700, 1000]], { wash: '#7A2F3A', fill: '#5A1E26', fillOp: 90, ink: PAL.ink, sw: 1.2 }); }
       return;

@@ -22,6 +22,9 @@ window.CHAPTER = {
     "mind-design-space",
     "conscious-exotica"
    ],
+   "proof": [
+    "based on [you→your] gut"
+   ],
    "estimated": true
   },
   {

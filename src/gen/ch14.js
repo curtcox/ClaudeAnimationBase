@@ -22,6 +22,9 @@ window.CHAPTER = {
     "intelligent-machines",
     "twit-network"
    ],
+   "proof": [
+    "to [+the] last several"
+   ],
    "estimated": true
   },
   {

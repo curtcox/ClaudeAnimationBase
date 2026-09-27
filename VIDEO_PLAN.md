@@ -41,6 +41,9 @@ Every other change counts as an error:
 
 1. **Spoken words match the transcript exactly.** Both speakers' words, including typos that are later discussed
    ("a were a", "Shoggath", "confuzzled"), which are shown painted on screen when Claude brings them up.
+   Wherever Curt's words are lettered (painted quotes, review captions), his typos keep their typed form and get an
+   editor's red-pen mark: struck through with the fix written above, a caret for a missing word, a loop for a
+   doubled one. The marks live in `script/typos.yaml`.
 2. **Speech-only rewrites don't change the text.** A spoken form is used where TTS would stumble, for example
    `[Xe] 4f⁷ 5d¹ 6s²` becomes "xenon core, four-f seven, five-d one, six-s two". The written form appears painted
    on screen at the same moment.

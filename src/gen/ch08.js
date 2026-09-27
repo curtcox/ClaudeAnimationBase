@@ -255,6 +255,9 @@ window.CHAPTER = {
     "knowledge-argument",
     "conduit-metaphor"
    ],
+   "proof": [
+    "many [english→English] speakers"
+   ],
    "estimated": true
   },
   {

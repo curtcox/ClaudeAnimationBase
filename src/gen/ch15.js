@@ -234,6 +234,9 @@ window.CHAPTER = {
    "text": "Opinions on AGI 2027?",
    "speech": "Opinions on AGI 2027?",
    "refs": [],
+   "proof": [
+    "[AGI→AI] 2027"
+   ],
    "estimated": true
   },
   {

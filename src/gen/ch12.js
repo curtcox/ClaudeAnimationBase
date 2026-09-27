@@ -19,6 +19,9 @@ window.CHAPTER = {
    "text": "I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magicarp, yet you see my typos. So, does tokenization really play a role?",
    "speech": "I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magicarp, yet you see my typos. So, does tokenization really play a role?",
    "refs": [],
+   "proof": [
+    "Solid Gold [Magicarp→Magikarp]"
+   ],
    "estimated": true
   },
   {
@@ -198,6 +201,10 @@ window.CHAPTER = {
    "refs": [
     "landauer"
    ],
+   "proof": [
+    "short of [+the] Landauer limit",
+    "particularly limiting[.→?]"
+   ],
    "estimated": true
   },
   {
@@ -349,6 +356,9 @@ window.CHAPTER = {
    "speech": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
    "refs": [
     "typical-mind"
+   ],
+   "proof": [
+    "not to mention [+it] doesn't"
    ],
    "estimated": true
   },
