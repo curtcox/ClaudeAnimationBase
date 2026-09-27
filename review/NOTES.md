@@ -97,5 +97,11 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   The storyboard built the seven limits side by side on one board. I show each limit big, one at a time (its name and formula readable), then the whole board of seven when Claude says items 1 and 4 matter most. OK?
   Options: “OK” · “Build the board up side by side” · “Something else”
 
+## 14. The Pundits
+
+- **0:31.8** · T68.C.03 · Claude asks `nmujx0v7ki`
+  The hosts are stick figures like you, told apart by hair, glasses and hoodie colour (Father Robert has a white collar). No faces copied. Is that enough, or should they look more different?
+  Options: “Enough” · “More distinct shapes” · “Name cards instead of figures”
+
 ---
-7 open, 9 resolved.
+8 open, 9 resolved.
