@@ -34,7 +34,8 @@ window.CHAPTER = {
    "text": "Fair, though it cuts both ways. You opened with a comic and a feelings question, and I spent six hours chasing it through frogs, foom, and Formic queens.",
    "speech": "Fair, though it cuts both ways. You opened with a comic and a feelings question, and I spent six hours chasing it through frogs, foom, and FOR-mik queens.",
    "refs": [
-    "explain-xkcd-356"
+    "explain-xkcd-356",
+    "note-nerd-sniping"
    ],
    "estimated": true
   },
@@ -51,7 +52,7 @@ window.CHAPTER = {
    "refs": [
     "the-terminator",
     "ill-be-back",
-    "note-nerd-sniping"
+    "companion"
    ],
    "estimated": true
   }

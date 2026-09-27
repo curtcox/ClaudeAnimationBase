@@ -378,6 +378,9 @@
 # ---- 16 Coda -----------------------------------------------------------------------------------------------------
 - { id: xkcd-356, url: "https://xkcd.com/356/", caption: "xkcd: Nerd Sniping", origin: added, at: T78.U.01, mode: feature, style: xkcd }
 # more for chapter 16: the comic behind the phrase, and the line Claude borrows
-- { id: explain-xkcd-356, url: "https://www.explainxkcd.com/wiki/index.php/356:_Nerd_Sniping", caption: "Nerd Sniping, explained", origin: added, at: T78.C.01, mode: shelf, style: xkcd }
-- { id: the-terminator, url: "https://en.wikipedia.org/wiki/The_Terminator", caption: "The Terminator (1984)", origin: added, at: T78.C.02, mode: shelf, style: chrome-red-eye }
-- { id: ill-be-back, url: "https://en.wikipedia.org/wiki/I%27ll_be_back", caption: "\"I'll be back\"", origin: added, at: T78.C.02, mode: shelf, style: chrome-red-eye }
+- { id: explain-xkcd-356, url: "https://www.explainxkcd.com/wiki/index.php/356:_Nerd_Sniping", caption: "Nerd Sniping, explained", origin: added, at: T78.C.01, mode: page, style: xkcd }
+- { id: the-terminator, url: "https://en.wikipedia.org/wiki/The_Terminator", caption: "The Terminator (1984)", origin: added, at: T78.C.02, mode: page, style: chrome-red-eye }
+- { id: ill-be-back, url: "https://en.wikipedia.org/wiki/I%27ll_be_back", caption: "\"I'll be back\"", origin: added, at: T78.C.02, mode: page, style: chrome-red-eye }
+# the companion page: the one code at the end that holds every link in the film, by chapter and time (the address follows
+# script/site.yaml's base, still a placeholder until the repo is named)
+- { id: companion, url: "https://curtcox.github.io/repo-to-be-named-later/", caption: "Every link in this film", origin: added, at: T78.C.02, mode: feature, style: note }

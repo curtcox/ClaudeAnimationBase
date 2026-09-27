@@ -3153,7 +3153,7 @@ window.REFS = {
   "caption": "Nerd Sniping, explained",
   "origin": "added",
   "at": "T78.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "xkcd",
   "line": "T78.C.01"
  },
@@ -3163,7 +3163,7 @@ window.REFS = {
   "caption": "The Terminator (1984)",
   "origin": "added",
   "at": "T78.C.02",
-  "mode": "shelf",
+  "mode": "page",
   "style": "chrome-red-eye",
   "line": "T78.C.02"
  },
@@ -3173,8 +3173,18 @@ window.REFS = {
   "caption": "\"I'll be back\"",
   "origin": "added",
   "at": "T78.C.02",
-  "mode": "shelf",
+  "mode": "page",
   "style": "chrome-red-eye",
+  "line": "T78.C.02"
+ },
+ "companion": {
+  "id": "companion",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/",
+  "caption": "Every link in this film",
+  "origin": "added",
+  "at": "T78.C.02",
+  "mode": "feature",
+  "style": "note",
   "line": "T78.C.02"
  },
  "note-agent-harnesses": {
@@ -3590,10 +3600,10 @@ window.REFS = {
   "caption": "Explained: \"The T-800 of nerd sniping\"",
   "origin": "note",
   "ch": 16,
-  "at": "T78.C.02",
+  "at": "T78.C.01",
   "mode": "shelf",
   "style": "note",
-  "line": "T78.C.02"
+  "line": "T78.C.01"
  },
  "note-nudge-test": {
   "id": "note-nudge-test",

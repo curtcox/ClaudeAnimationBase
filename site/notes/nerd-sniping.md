@@ -2,7 +2,7 @@
 id: nerd-sniping
 title: '"The T-800 of nerd sniping"'
 ch: 16
-at: T78.C.02
+at: T78.C.01
 links: [xkcd-356, explain-xkcd-356, the-terminator, ill-be-back, t800]
 ---
 **Nerd sniping** comes from [xkcd #356](https://xkcd.com/356/) (2007), Randall Munroe's web comic. Someone shows a

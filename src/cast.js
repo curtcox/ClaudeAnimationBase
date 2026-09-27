@@ -121,8 +121,8 @@ function curt(x, y, u, o = {}) {
     paint(cap, { wash: hairCol, ink: PAL.ink, sw: sw * .35, curv: .4 });
     if (back) {   // from behind: strands combed from the crown down to where the tail is tied, so it reads as the back of a head
       rs('back hair');
-      const tie = [head[0], head[1] + R * .72], dk = mixCol(hairCol, PAL.ink, .45);
-      for (let i = 0; i < 7; i++) { const a = -Math.PI / 2 + (i - 3) * .36; inkLine([[head[0] + Math.cos(a) * R * .9, head[1] + Math.sin(a) * R * .9], [head[0] + Math.cos(a) * R * .45 + (tie[0] - head[0]) * .2, head[1] + R * .1], tie], sw * .22, dk, 'inkfine', .6); }
+      const dk = mixCol(hairCol, PAL.ink, .3);   // a few soft strands, not meeting at a point (that reads as a shell)
+      for (let i = 0; i < 4; i++) { const d = (i - 1.5) / 1.5, a = -Math.PI / 2 + d * .9; inkLine([[head[0] + Math.cos(a) * R * .85, head[1] + Math.sin(a) * R * .85], [head[0] + d * R * .5, head[1] + R * .05], [head[0] + d * R * .22, head[1] + R * .62]], sw * .18, dk, 'inkfine', .6); }
     }
     if (o.hair === 'ponytail' && back) curtPonytail(head, R, 0, u, hairCol, sw, true, o.ponyTip);
     if (o.hair === 'bun') paint(ellPts(head[0] - f * R * (back ? 0 : .55), head[1] - R * (back ? .55 : .92), R * .38, R * .34, 16), { wash: hairCol, ink: PAL.ink, sw: sw * .7 });
