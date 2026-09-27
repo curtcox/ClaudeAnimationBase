@@ -36,6 +36,7 @@ open runs about a minute.
 | where | code | kind |
 |---|---|---|
 | C | mad157: *MAD* #157, March 1973 ("The Milking of The Planet That Went Ape", Arnie Kogen and Mort Drucker) | feature, attachment (code only, never voiced) |
+| (none) | the-conversation: the shared conversation this film is made from (Curt's share link) | page (listed first on the companion site) |
 
 ## Reads to check
 - **A/B:** each balloon on screen long enough to read at about 210 words a minute (the viewer reads; nobody voices them).

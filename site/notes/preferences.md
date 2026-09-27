@@ -24,5 +24,6 @@ experiment forced the brevity he'd been asking for, and Claude says it will aim 
 film keeps that promise in mind: from here on, watch how long the answers are.
 
 **A small confession first.** Curt also admits that calling the whole thing "a test designed to provoke an emotional
-response" was "arguably a fib", though a short one. The next chapter begins with what the comic really was to him: "a
+response" was "arguably a fib", though a short one (both halves of that are
+[borrowed lines](../borrowed-lines/)). The next chapter begins with what the comic really was to him: "a
 mirror for me".

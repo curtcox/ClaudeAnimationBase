@@ -28,3 +28,6 @@ differently after exam-style questions. An exam question dropped into a chat is 
 "[register](https://en.wikipedia.org/wiki/Register_(sociolinguistics)) switch": a sudden change of tone, to see whether
 the answerer changes mode. Claude spots it at once ("I'd guess the next amphibian question is coming"), which is its
 own kind of result (see [why Claude's answers aren't a clean sample](../clean-sample/)).
+
+**A borrowed pair.** The exam question followed by "How do you feel?" echoes a scene in *Star Trek IV*, where computers
+quiz Spock and the last question is the one he can't answer (see [three borrowed lines](../borrowed-lines/)).

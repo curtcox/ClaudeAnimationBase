@@ -43,15 +43,18 @@ the spoken form), "Threat?", "Anticipated?", "What did that ape say?". QR captio
 |---|---|
 | T17.C.01 | gadolinium (feature, in shot A) |
 | T17.C.02 | electron-configuration · aufbau · note-gadolinium (explainer) |
+| T18.U.01 | star-trek-iv-spock (the exam question, then "How do you feel?": the computers quizzing Spock in *Star Trek IV*) |
 | T19.C.01 | protest-too-much |
 | T19.C.02 | agentic-misalignment |
 | T20.C.02 | apollo-eval-awareness · demand-characteristics · note-clean-sample (explainer) |
 | T21.C.02.1 | eliza · reflective-listening · note-the-echo (explainer) |
 | T21.C.02.2 | sycophancy |
+| T24.U.01 | note-borrowed-lines (explainer, cued on "fib"); mathnet-swami (page: *Mathnet*'s "a fib, but it's short") |
 | T24.C.01 | claude-personalization · note-preferences (explainer) |
 
 **Explainers:** gadolinium and why Curt asked (`gadolinium`); why Claude's answers aren't a clean sample
-(`clean-sample`); the echo technique (`the-echo`); short answers and questions only when needed (`preferences`).
+(`clean-sample`); the echo technique (`the-echo`); short answers and questions only when needed (`preferences`); the lines Curt borrowed from *Blade Runner*, *Star Trek IV* and
+*Mathnet* (`borrowed-lines`).
 
 **Density:** T20.C.02 and T21.C.02.1 each carry three codes; the planner will queue the third a few seconds. Check with
 `npm run lint:chapter -- --chapter=4` once the scene exists.

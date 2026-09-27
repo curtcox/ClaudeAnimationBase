@@ -22,6 +22,7 @@
 
 # ---- 0 Cold open -------------------------------------------------------------------------------------------------
 - { id: mad157, url: "https://www.madcoversite.com/mad157.html", caption: "MAD #157: Conquering The Planet That Went Ape", origin: attachment, at: T01.U.00, mode: feature, style: mad, note: "March 1973; written by Arnie Kogen, art by Mort Drucker (confirmed on the cover site)" }
+- { id: the-conversation, url: "https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296", caption: "The conversation this film is made from", origin: added, at: T01.U.00, mode: page, style: plain, verified: "Curt's own share link, given by him 2026-09-27" }
 - { id: conquest-apes, url: "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes", caption: "Conquest of the Planet of the Apes", origin: added, ch: 1, at: "Conquest of the Planet of the Apes", mode: shelf, style: newsprint }
 
 # ---- 1 The Wrong Movie -------------------------------------------------------------------------------------------
@@ -47,6 +48,7 @@
 - { id: moral-status, url: "https://plato.stanford.edu/entries/grounds-moral-status/", caption: "Moral status", origin: added, at: T04.C.03.2, mode: shelf, style: plain }
 - { id: model-welfare, url: "https://www.anthropic.com/research/exploring-model-welfare", caption: "Exploring model welfare", origin: added, at: T04.C.03.2, mode: shelf, style: plain }
 
+- { id: blade-runner-vk, url: "https://www.youtube.com/watch?v=Umc9ezAyJv0", caption: "Blade Runner: the Voight-Kampff test", origin: added, at: T05.U.01, cue: "emotional response", mode: shelf, style: plain, note: "the scene Curt's line borrows from (Curt, 2026-09-27)" }
 # ---- 2 Frog or Axolotl -------------------------------------------------------------------------------------------
 - { id: frog-chart, url: "https://x.com/fjzzq2002/status/2103556166903038213/photo/1", caption: "Frog or axolotl?", origin: attachment, at: T08.U.00, mode: feature, style: lilypad, note: "the link Curt gave; x.com redirects it to the post (with the chart) when logged out" }
 - { id: axolotl, url: "https://en.wikipedia.org/wiki/Axolotl", caption: "Axolotl", origin: added, at: T06.C.01, mode: shelf, style: gills }
@@ -104,6 +106,8 @@
 - { id: demand-characteristics, url: "https://en.wikipedia.org/wiki/Demand_characteristics", caption: "Demand characteristics", origin: added, at: T20.C.02, mode: shelf, style: plain }
 - { id: eliza, url: "https://en.wikipedia.org/wiki/ELIZA", caption: "ELIZA, the 1966 chatbot", origin: added, at: T21.C.02.1, mode: shelf, style: plain }
 - { id: reflective-listening, url: "https://en.wikipedia.org/wiki/Reflective_listening", caption: "Reflective listening", origin: added, at: T21.C.02.1, mode: shelf, style: plain }
+- { id: star-trek-iv-spock, url: "https://www.youtube.com/watch?v=u2ooUXjNPS8", caption: "Star Trek IV: Spock on Vulcan", origin: added, at: T18.U.01, mode: shelf, style: plain, note: "the gadolinium question then How do you feel? borrow the computers quizzing Spock (Curt, 2026-09-27)" }
+- { id: mathnet-swami, url: "https://www.youtube.com/watch?v=Tj-XMRu_q4s", caption: "Mathnet: The Case of the Swami Scam", origin: added, at: T24.U.01, cue: "fib", mode: page, style: plain, note: "a fib, but it's short: Mathnet's opening line; part of how Curt frames AI's capitalist race dynamics (Curt, 2026-09-27)" }
 - { id: claude-personalization, url: "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features", caption: "Claude's personal preferences", origin: added, at: T24.C.01, mode: page, style: plain }
 
 # ---- 5 The Dish of the Day ---------------------------------------------------------------------------------------

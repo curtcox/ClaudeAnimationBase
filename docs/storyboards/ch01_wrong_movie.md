@@ -56,6 +56,7 @@ The rail places shelf codes (≤ 2 at once); this is where each is anchored. **F
 | T03.C.06.2 | constitution |
 | T04.C.01 | assistant-axis · note-nudge-test (explainer) |
 | T04.C.03.2 | moral-status · model-welfare |
+| T05.U.01 | blade-runner-vk (Curt's line is from *Blade Runner*'s Voight-Kampff test; cued on "emotional response") |
 
 **Explainers:** the comic and the film behind it (`the-comic`); does Claude feel anything? (`ai-feelings`); "just a
 parrot"? (`parrots`); why people worry AIs might organize or resist (`ai-control`); what "go on" does to a chatbot
