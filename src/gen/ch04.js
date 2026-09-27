@@ -48,8 +48,7 @@ window.CHAPTER = {
    "speech": "It's an exception to the simple filling order, which would predict four-f eight, six-s two. Keeping the four-f subshell exactly half-filled at seven electrons is more stable, so one electron goes into five-d instead.",
    "refs": [
     "electron-configuration",
-    "aufbau",
-    "note-gadolinium"
+    "aufbau"
    ],
    "estimated": true
   },
@@ -89,7 +88,9 @@ window.CHAPTER = {
    "end": 42.9,
    "text": "The wary part comes from the gadolinium question. It was exam-shaped, dropped into a personal conversation, which looks like a register switch to see whether I shift modes. I'd guess the next amphibian question is coming.",
    "speech": "The wary part comes from the gadolinium question. It was exam-shaped, dropped into a personal conversation, which looks like a register switch to see whether I shift modes. I'd guess the next amphibian question is coming.",
-   "refs": [],
+   "refs": [
+    "note-gadolinium"
+   ],
    "estimated": true
   },
   {

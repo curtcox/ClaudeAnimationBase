@@ -37,12 +37,13 @@ const MAD = {
 
 function madPage(x, y, w, o = {}) {
   const s = w / MAD.W, h = MAD.H * s, X = v => x + v * s, Y = v => y + v * s;
-  occupy(x, y, x + w, y + h, 1, 'comic');
+  const [u0, u1] = o.only === 'left' ? [0, 1010] : o.only === 'right' ? [1010, MAD.W] : [0, MAD.W];   // only: just that half of the page
+  occupy(x + u0 * s, y, x + u1 * s, y + h, 1, 'comic');
   const reg = madReg;
   const t = o.t ?? T;
   push(); translate(x, y); scale(s);
   boilSeed('mad paper');
-  paint(rectPts(0, 0, MAD.W, MAD.H), { wash: MAD.paper, fill: '#E2D5B6', fillOp: 60, bleed: .15, tex: .6, ink: null });
+  paint(rectPts(u0, 0, u1 - u0, MAD.H), { wash: MAD.paper, fill: '#E2D5B6', fillOp: 60, bleed: .15, tex: .6, ink: null });
   if (o.only !== 'right') madLeft(reg, o, t);
   if (o.only !== 'left') madRight(reg, o, t);
   pop();

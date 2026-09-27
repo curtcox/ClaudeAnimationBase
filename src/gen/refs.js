@@ -2616,7 +2616,7 @@ window.REFS = {
   "at": "T71.C.02.2",
   "mode": "shelf",
   "style": "two-mics",
-  "todo": "nytimes.com is unreachable from these tools: confirm the URL in your browser",
+  "verified": "Curt, headline, 2026-09-27 (paywalled)",
   "line": "T71.C.02.2"
  },
  "machine-gods": {
@@ -3456,10 +3456,10 @@ window.REFS = {
   "caption": "Explained: Gadolinium, and why Curt asked about it",
   "origin": "note",
   "ch": 4,
-  "at": "T17.C.02",
+  "at": "T18.C.02",
   "mode": "shelf",
   "style": "note",
-  "line": "T17.C.02"
+  "line": "T18.C.02"
  },
  "note-gazp-glut": {
   "id": "note-gazp-glut",

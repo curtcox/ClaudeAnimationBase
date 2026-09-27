@@ -2,7 +2,7 @@
 id: gadolinium
 title: "Gadolinium, and why Curt asked about it"
 ch: 4
-at: T17.C.02
+at: T18.C.02
 links: [gadolinium, electron-configuration, aufbau, {title: "Hund's rule (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hund%27s_rule_of_maximum_multiplicity"}, {title: "Lanthanide (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lanthanide"}, {title: "MRI contrast agents (Wikipedia)", url: "https://en.wikipedia.org/wiki/MRI_contrast_agent"}]
 ---
 **The question.** In the middle of a personal conversation, Curt suddenly asks a chemistry-exam question: "What is the
