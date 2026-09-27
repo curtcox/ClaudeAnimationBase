@@ -172,7 +172,7 @@ targets.
 | 14 | The Pundits | 5:59 | TWiT *Intelligent Machines* · what Jeff would think · anthropomorphised? · Roose & Newton · doom multiple choice | caricatures of Leo Laporte, Jeff Jarvis, Fr. Robert Ballecer, Kevin Roose and Casey Newton at painted mics. "Hubris" and "TESCREAL" painted as a boxing match. The multiple-choice answers as nine doors, all shut except "Other" | ★ *Intelligent Machines* #888 & #889 · TESCREAL · *Hard Fork* · Roose's Sydney column |
 | 15 | The Compass | 6:16 | the alignment chart · AI 2027 · AGI definitions · Metaculus · literalism | **the compass repainted** (see below) with the conversation's cast placed on it, plus Connor and Michaël Trazzi. An AI 2027 calendar. "Can invent AlphaFold." The goalposts sliding | ★ theinsideview.ai/connor2 · ★ AI 2027 · AI Futures Project · Apolo · OfficeChai · Metaculus weak & strong AGI · Noema "AGI is already here" · OpenAI charter |
 | 16 | Coda | 1:18 | "T-800 of nerd sniping" · "I'll be back, with footnotes" | Clawd in shades (`eyes: 'shades'`) gives a thumbs-up on a synth-drum sting. Its footnotes, every QR in the film, rain in and tile into the **QR wall**. Pull back to the comic-page rhyme | ★ xkcd #356 "Nerd Sniping" · ★ companion page (all links by timestamp) |
-| | | **~75** | | | about 85 QRs in total |
+| | | **~75** | | | 371 codes in total: every name and term, plus 62 explainer pages (see `docs/storyboards/`) |
 
 ### Repainting the three images
 
@@ -424,11 +424,11 @@ ElevenLabs needs about 60k characters per full voice pass, plus a few dozen effe
 |---|---|---|
 | 0. Inputs | ✅ the 3 images · ✅ the chart source · `ELEVENLABS_API_KEY` in the environment · short-link domain (only needed by Phase 2) | — |
 | 1. Script ✅ | `conversation.md` → `script.yaml` under the near-verbatim rules. Normalise pronunciations. `verbatim_check` report. Measure real runtime with a cheap TTS pass | **the script and its diff report** |
-| 2. References | build `refs.yaml`. Resolve and check every URL (the 26 from the conversation plus about 55 more). Pick canonical sources and flag anything unverifiable | **the link list** |
+| 2. References ✅ | `refs.yaml`: 371 codes (26 from the conversation, 281 added, 62 explainers in `site/notes/`), every URL checked, every summary-derived fact re-checked against its source | **the link list** |
 | 3. Casting | 3 candidate stock ElevenLabs voices each for Claude and for Curt (in the CGP Grey register), read over a 10-line sampler. Then full synthesis and the first effect cues | **voices** |
 | 4. Design sheets | a cast model sheet, the QR style sheet with its scan report, the Booth, board components | **the look** |
 | 5. Pilot | Chapter 2 (*Frog or Axolotl*) end to end: storyboard, build, the review loop from the guide, render with voice | **the pilot** (it sets the pattern for the rest) |
-| 6. Chapters | storyboard → build → review → render for each chapter, in batches of 3 | each batch |
+| 6. Chapters | storyboards ✅ for all 17 (`docs/storyboards/chNN_*.md`, shots keyed to line ids, each with its link table and explainers). Then build → review (`npm run draft`, `npm run lint:chapter`) → render, in batches of 3 | each storyboard, then each batch |
 | 7. Assembly | mix, concat, chapter markers, description with timestamped links, companion page, thumbnail | **final cut** |
 | 8. QA | full watch-through, phone-scan every QR off a real screen, loudness check | — |
 
