@@ -85,5 +85,17 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Curt: The video should only have one link here. It should link to an explainer page. That explainer page should include a screenshot of the YouTube video being talked about, the comments, and links to everything.
   - Claude: Done. The corkboard now has one code, to the debate explainer. That page now shows the video (YouTube's own thumbnail, linked, not copied), the three comments word for word with links to each and to each channel, and the other links. The video's code at the chapter's start is gone too; it's on that page.
 
+## 11. July
+
+- **3:17.4** · T54.U.01 · Claude asks `nmujvc926ll`
+  The ChatGPT sting: the camera pushes toward Curt, and a smiley mask shows on his head for about half a second. Is that the right length for the joke?
+  Options: “Right length” · “Longer” · “Shorter” · “Drop the mask”
+
+## 12. Limits
+
+- **2:47.1** · T60.C.02.1 · Claude asks `nmujvc8pbuk`
+  The storyboard built the seven limits side by side on one board. I show each limit big, one at a time (its name and formula readable), then the whole board of seven when Claude says items 1 and 4 matter most. OK?
+  Options: “OK” · “Build the board up side by side” · “Something else”
+
 ---
-5 open, 9 resolved.
+7 open, 9 resolved.
