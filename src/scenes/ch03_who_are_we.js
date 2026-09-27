@@ -164,10 +164,12 @@
     if (t < fresh) {   // Claude's card, which turns edge-on too; then turns back for "the deeper version", its values and habits written on it
       paperWorld(t);
       const deeper = say('T15.C.02', 'The deeper version', -.2), back = t >= deeper;
-      indexCard(CX, 470, 620, 320, back ? ['Claude Opus 5.5', 'values', 'habits of thought'] : ['Claude Opus 5.5', 'Anthropic'], {
-        key: 'claude card', title: true, align: 'center', size: 44, rowH: back ? .24 : .3, top: .22,
+      // wide enough for the "who, or what, is Claude?" explainer's code on its right once it has turned back
+      indexCard(CX, 470, 1000, 400, back ? ['Claude Opus 5.5', 'values', 'habits of thought'] : ['Claude Opus 5.5', 'Anthropic'], {
+        key: 'claude card', title: true, align: 'center', textX: CX - 170, size: 44, rowH: back ? .2 : .25, top: .27,
         k: back ? 1 / 3 + 2 / 3 * seg(t, say('T15.C.02', 'set of values', .3), say('T15.C.02', 'habits of thought', .8)) : seg(t, d1.t0 + .5, d1.t1),
         edge: back ? 1 - seg(t, deeper, deeper + .8) : seg(t, say('T15.C.02', 'the same kind of thin answer'), say('T15.C.02', 'the same kind of thin answer', 1)) });
+      cardCode('note-who-is-claude', t, CX + 320, 450, { t0: deeper + .8, t1: fresh });
       claudeAs(CX, 950, 12, { ...feel('neutral', t), mouth: talking(t), boilKey: 'claude own card' });
       screenWorld(t, 1 - seg(t, d1.t0 + .7, d1.t0 + 1.5));
       return;

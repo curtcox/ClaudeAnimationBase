@@ -21,7 +21,7 @@
   origin: note
   ch: 15
   at: T75.C.03
-  mode: shelf
+  mode: card
   style: note
 - id: note-ai-control
   url: https://curtcox.github.io/axol-f/n/ai-control/
@@ -333,7 +333,7 @@
   origin: note
   ch: 4
   at: T24.C.01
-  mode: shelf
+  mode: card
   style: note
 - id: note-register-and-controls
   url: https://curtcox.github.io/axol-f/n/register-and-controls/
@@ -494,5 +494,5 @@
   origin: note
   ch: 3
   at: T15.C.02
-  mode: shelf
+  mode: card
   style: note

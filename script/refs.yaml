@@ -10,7 +10,7 @@
 #   ch      chapter (needed when `at` is a phrase)
 #   cue     a phrase in that line: the code goes up when it's said, not when the line starts
 #   mode    feature (big card, >= 6 s hold) | shelf (corner tag, >= 5 s) | board (pinned by the scene with others at
-#           once, a link board; >= 6 s) | page (no code in the film: listed on the companion site, and on the explainer
+#           once, a link board; >= 6 s) | card (on a card the scene shows about the same thing, cardCode(); >= 5 s) | page (no code in the film: listed on the companion site, and on the explainer
 #           that stands for it, e.g. ch 6's thread, where the film shows one code for the-debate)
 #   style   QR dressing, see VIDEO_PLAN.md §4 (implemented in src/qr.js)
 #   qr_url  what the code encodes when it differs from url: a shorter form of the same page, or one of the companion
@@ -104,7 +104,7 @@
 - { id: demand-characteristics, url: "https://en.wikipedia.org/wiki/Demand_characteristics", caption: "Demand characteristics", origin: added, at: T20.C.02, mode: shelf, style: plain }
 - { id: eliza, url: "https://en.wikipedia.org/wiki/ELIZA", caption: "ELIZA, the 1966 chatbot", origin: added, at: T21.C.02.1, mode: shelf, style: plain }
 - { id: reflective-listening, url: "https://en.wikipedia.org/wiki/Reflective_listening", caption: "Reflective listening", origin: added, at: T21.C.02.1, mode: shelf, style: plain }
-- { id: claude-personalization, url: "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features", caption: "Claude's personal preferences", origin: added, at: T24.C.01, mode: shelf, style: plain }
+- { id: claude-personalization, url: "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features", caption: "Claude's personal preferences", origin: added, at: T24.C.01, mode: page, style: plain }
 
 # ---- 5 The Dish of the Day ---------------------------------------------------------------------------------------
 - { id: dish-of-the-day, url: "https://hitchhikers.fandom.com/wiki/Ameglian_Major_Cow", caption: "The Dish of the Day", origin: added, ch: 5, at: "Dish of the Day from Hitchhiker's Guide", mode: feature, style: dinner-plate, verified: "browser 2026-09-26" }
@@ -349,19 +349,19 @@
 
 # ---- 15 The Compass ----------------------------------------------------------------------------------------------
 - { id: connor2, url: "https://theinsideview.ai/connor2", caption: "Connor Leahy on Dignity and Conjecture", origin: transcript, at: T74.U.01, mode: feature, style: compass }
-- { id: ai-2027, url: "https://ai-2027.com/", caption: "AI 2027", origin: added, at: T75.C.02, mode: feature, style: calendar }
+- { id: ai-2027, url: "https://ai-2027.com/", caption: "AI 2027", origin: added, at: T75.C.02, mode: page, style: calendar }
 - { id: ai-futures-wiki, url: "https://en.wikipedia.org/wiki/AI_Futures_Project", caption: "AI Futures Project", origin: transcript, at: T75.C.08.1, mode: shelf, style: calendar }
 - { id: apolo-ai2027, url: "https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity", caption: "Apolo: AI 2027 in 2026", origin: transcript, at: T75.C.08.2, mode: shelf, style: calendar }
 - { id: officechai-kokotajlo, url: "https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/", qr_url: "https://curtcox.github.io/axol-f/r/officechai/", caption: "OfficeChai: Kokotajlo", origin: transcript, at: T75.C.08.3, mode: shelf, style: calendar }
-- { id: metaculus-weak, url: "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/", caption: "Metaculus: weak AGI", origin: added, at: T76.C.03.1, mode: shelf, style: dial, verified: "browser 2026-09-26" }
-- { id: metaculus-strong, url: "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/", caption: "Metaculus: strong AGI", origin: added, at: T76.C.03.2, mode: shelf, style: dial, verified: "browser 2026-09-26" }
+- { id: metaculus-weak, url: "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/", caption: "Metaculus: weak AGI", origin: added, at: T76.C.03.1, mode: card, style: dial, verified: "browser 2026-09-26" }
+- { id: metaculus-strong, url: "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/", caption: "Metaculus: strong AGI", origin: added, at: T76.C.03.2, mode: card, style: dial, verified: "browser 2026-09-26" }
 - { id: alphafold, url: "https://en.wikipedia.org/wiki/AlphaFold", caption: "AlphaFold", origin: added, at: T76.C.01, mode: shelf, style: plain }
 - { id: goodhart, url: "https://en.wikipedia.org/wiki/Goodhart%27s_law", caption: "Goodhart's law", origin: added, at: T76.C.04, mode: shelf, style: plain }
 - { id: agi-wiki, url: "https://en.wikipedia.org/wiki/Artificial_general_intelligence", caption: "Artificial general intelligence", origin: added, at: T77.C.01, mode: page, style: plain }
 - { id: noema-agi, url: "https://www.noemamag.com/artificial-general-intelligence-is-already-here/", caption: "AGI Is Already Here (Agüera y Arcas & Norvig)", origin: added, at: T77.C.01, mode: page, style: plain }
 - { id: openai-charter, url: "https://openai.com/charter/", caption: "OpenAI Charter", origin: added, at: T77.C.02, mode: shelf, style: goalposts, verified: "browser 2026-09-26" }
 # more for chapter 15: the meme's origin, the people on the compass, AI 2027's own grading, and the history of "AGI"
-- { id: dnd-alignment, url: "https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)", caption: "Alignment charts (D&D)", origin: added, at: T73.U.01, mode: shelf, style: compass }
+- { id: dnd-alignment, url: "https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)", caption: "Alignment charts (D&D)", origin: added, at: T73.U.01, mode: card, style: compass }
 - { id: connor-leahy, url: "https://en.wikipedia.org/wiki/Connor_Leahy", caption: "Connor Leahy", origin: added, at: T74.C.02, mode: shelf, style: compass }
 - { id: inside-view, url: "https://theinsideview.ai/", caption: "The Inside View (Michaël Trazzi)", origin: added, at: T74.C.02, mode: shelf, style: compass }
 - { id: accelerationism, url: "https://en.wikipedia.org/wiki/Effective_accelerationism", caption: "Effective accelerationism", origin: added, at: T74.C.03.4, mode: shelf, style: compass }
@@ -371,8 +371,8 @@
 - { id: ai2027-q1-2026, url: "https://blog.aifutures.org/p/q1-2026-timelines-update", caption: "AI Futures: Q1 2026 update", origin: added, at: T75.C.03, mode: page, style: calendar }
 - { id: falsifiability, url: "https://en.wikipedia.org/wiki/Falsifiability", caption: "Falsifiability", origin: added, at: T75.C.05, mode: shelf, style: plain }
 - { id: metaculus, url: "https://en.wikipedia.org/wiki/Metaculus", caption: "Metaculus", origin: added, at: T76.U.01, mode: shelf, style: dial }
-- { id: winograd, url: "https://en.wikipedia.org/wiki/Winograd_schema_challenge", caption: "Winograd schemas", origin: added, at: T76.C.02, mode: shelf, style: dial }
-- { id: montezuma, url: "https://en.wikipedia.org/wiki/Montezuma%27s_Revenge_(video_game)", caption: "Montezuma's Revenge", origin: added, at: T76.C.03.1, mode: shelf, style: dial }
+- { id: winograd, url: "https://en.wikipedia.org/wiki/Winograd_schema_challenge", caption: "Winograd schemas", origin: added, at: T76.C.02, mode: page, style: dial }
+- { id: montezuma, url: "https://en.wikipedia.org/wiki/Montezuma%27s_Revenge_(video_game)", caption: "Montezuma's Revenge", origin: added, at: T76.C.03.1, mode: page, style: dial }
 - { id: moving-goalposts, url: "https://en.wikipedia.org/wiki/Moving_the_goalposts", caption: "Moving the goalposts", origin: added, at: T76.C.05, mode: shelf, style: goalposts }
 - { id: deep-blue, url: "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)", caption: "Deep Blue", origin: added, at: T77.U.01, mode: shelf, style: plain }
 - { id: ai-winter, url: "https://en.wikipedia.org/wiki/AI_winter", caption: "AI winters", origin: added, at: T77.U.01, mode: shelf, style: plain }

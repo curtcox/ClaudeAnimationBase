@@ -88,12 +88,12 @@
     years.forEach(([yr, x]) => { inkLine([[x, y - 30], [x, y + 30]], 4, PAL.ink, 'ink', 0); lab(yr, x, y + 70, 48, '#4E3A2A'); });
   }
   function pin(x, y, k, col = RED) { if (k <= 0) return; const yy = y - 200 * (1 - easeOut(k)); boilSeed('pin ' + col); inkLine([[x, yy], [x, yy - 80]], 4, '#6A6470', 'ink', 0); paint(ellPts(x, yy - 90, 26, 26, 14), { wash: col, ink: PAL.ink, sw: 1 }); }
-  function wallCalendar(x, y, s, t, flutter = 0) {
+  function wallCalendar(x, y, s, t, flutter = 0, blank = false) {   // blank: no day grid (a code is on the page)
     boilSeed('cal 2027'); occupy(x - 200 * s, y - 60 * s, x + 200 * s, y + 420 * s, 1, 'calendar');
     inkLine([[x, y - 60 * s], [x, y - 10 * s]], 3, '#6A6470', 'ink', 0);
     for (let i = 2; i >= 0; i--) paint(rectPts(x - 190 * s + i * 5, y + i * 5, 380 * s, 400 * s), { wash: '#FBF8F0', ink: PAL.ink, sw: .9 });
     paint(rectPts(x - 190 * s, y, 380 * s, 90 * s), { wash: '#3E6FA8', ink: PAL.ink, sw: .9 }); lab('AI 2027', x, y + 48 * s, 56 * s, '#FBF8F0');
-    for (let r = 0; r < 5; r++) for (let c = 0; c < 7; c++) paint(rectPts(x - 170 * s + c * 48 * s, y + 110 * s + r * 54 * s, 40 * s, 44 * s), { wash: null, ink: '#C8C0B0', sw: .5 });
+    if (!blank) for (let r = 0; r < 5; r++) for (let c = 0; c < 7; c++) paint(rectPts(x - 170 * s + c * 48 * s, y + 110 * s + r * 54 * s, 40 * s, 44 * s), { wash: null, ink: '#C8C0B0', sw: .5 });
     if (flutter > 0) for (let i = 0; i < 3; i++) { const f = frac(t * 2 + i / 3); push(); translate(x, y + 90 * s); scale(1, Math.cos(f * Math.PI)); paint(rectPts(-190 * s, 0, 380 * s, 310 * s), { wash: '#F4EFE2', washOp: 255 * flutter, ink: PAL.ink, sw: .8 }); pop(); }
   }
   function reportCard(x, y, k) { if (k <= 0) return; boilSeed('report card'); const yy = y + 60 * (1 - easeOut(k)); occupy(x - 170, yy - 120, x + 170, yy + 120, 1, 'report'); paint(rrPts(x - 170, yy - 120, 340, 240, 10), { wash: '#FFF9D8', ink: PAL.ink, sw: 1.1 }); for (let i = 0; i < 3; i++) inkLine([[x - 140, yy - 70 + i * 36], [x + 20, yy - 70 + i * 36]], 2, '#8C8894', 'inkfine', 0); lab('65%', x + 90, yy + 50, 70, RED); paint(ellPts(x + 90, yy + 50, 80, 50, 20), { wash: null, ink: RED, sw: 2 }); }
@@ -105,6 +105,7 @@
   }
   function gear(x, y, r, a, col, n = 12) { const pts = []; for (let j = 0; j < n * 4; j++) { const aa = a + j / (n * 4) * TAU, rr = j % 4 < 2 ? r : r * .82; pts.push([x + Math.cos(aa) * rr, y + Math.sin(aa) * rr]); } paint(pts, { wash: col, ink: PAL.ink, sw: 1 }); paint(ellPts(x, y, r * .25, r * .25, 12), { wash: '#4A4652', ink: PAL.ink, sw: .7 }); }
   function crane(x, y, s, t) { boilSeed('crane15 ' + x); inkLine([[x, y], [x, y - 420 * s]], 8 * s, '#E8B83A', 'ink', 0); inkLine([[x - 60 * s, y - 420 * s], [x + 260 * s, y - 420 * s]], 7 * s, '#E8B83A', 'ink', 0); const hy = y - 380 * s + 140 * s * (.5 + .5 * Math.sin(t * .4 + x)); inkLine([[x + 200 * s, y - 420 * s], [x + 200 * s, hy]], 1.2, PAL.ink, 'inkfine', 0); paint(rectPts(x + 150 * s, hy, 100 * s, 16 * s), { wash: '#8C8894', ink: PAL.ink, sw: .6 }); }
+  // o.code: the reference whose code goes on the card's right, from o.codeAt to o.codeTo
   function checklist(x, y, w, title, items, ticks, t, o = {}) {   // items: [text, icon fn(x, y)]; ticks[i] 0..1
     boilSeed('checklist ' + title); const h = 110 + items.length * 120; occupy(x - 10, y - 10, x + w + 10, y + h + 10, 1, 'checklist');
     paint(rrPts(x, y, w, h, 12), { wash: '#FFF3B0', ink: PAL.ink, sw: 1.2 }); lab(title, x + w / 2, y + 50, 44, PAL.ink);
@@ -115,6 +116,7 @@
       const lines = txt.length > 26 ? [txt.slice(0, txt.lastIndexOf(' ', 26)), txt.slice(txt.lastIndexOf(' ', 26) + 1)] : [txt];
       lines.forEach((ln, j) => lab(ln, x + 176, yy + (j - (lines.length - 1) / 2) * 36, 32, PAL.ink, { align: 'left', alpha: a }));
     });
+    if (o.code) cardCode(o.code, t, x + w - 165, y + h / 2 - 20, { t0: o.codeAt, t1: o.codeTo });
   }
   // checklist icons
   const ic = {
@@ -169,7 +171,10 @@
     paperWorld(t);
     if (t < c1.t0) {
       const flash = win(t, words + 2, words + 3.4, .2);
-      indexCard(645, 330, 1000, 200, ['AI alignment alignment chart'], { key: 'chart words', size: 64, top: .5, align: 'center' });
+      // the card carries the code for alignment charts, on its right, while it's up
+      indexCard(730, 300, 1400, 380, [], { key: 'chart words' });
+      lab('AI alignment alignment chart', 570, 316, 64, '#3A3342');
+      cardCode('dnd-alignment', t, 1250, 280, { t0: words + .6, t1: c1.t0 });
       if (flash > 0) grid3(480, 520, flash * 1);
       else if (t > say('T73.U.01', 'Where would you put', -.2)) { castCard('Curt', 480, 700, 1.6, t); castCard('Claude', 810, 700, 1.6, t); }
       return;
@@ -216,7 +221,7 @@
     pin(260 + 770 * (8.7 / 12 / 4), 540, seg(t, now, now + .6));
     if (t > now + .6) claudeAs(645, 1010, 10, { ...feel('surprised', t), mouth: talking(t), boilKey: 'claude window' });
   }
-  // E: AI 2027: a wall calendar (its feature code); pages flutter back; 65% on a report card; a pin moves to 2030; a
+  // E: AI 2027: a wall calendar, the AI 2027 explainer's code on its page; pages flutter back; 65% on a report card; a pin moves to 2030; a
   // sticky note; puzzle pieces click in (the sandbox, the drafting table, the empty chair, a tug of war); a scorecard
   // pinned up in public; gears clogged with sand, and the cranes
   function shotE(t) {
@@ -224,11 +229,11 @@
     if (t < c1.t0) { desk15(t, { typing: t < u.t1, mood: emotions(t, [[0, 'neutral'], [u.t1, 'thinking']]) }); return; }
     paperWorld(t);
     if (t < c2.t0) { searchPages(t, c1.t0); return; }
-    qrFeature('ai-2027', t, c2.t0, { hold: 6.2 });
     if (t < c4.t0) {
       const fast = say('T75.C.03', 'probably too fast', -.3), card = say('T75.C.03', 'graded 2025', -.4), med = say('T75.C.03', 'around 2030', -.8), note = say('T75.C.03', 'April 2026 note', -.4), own = say('T75.C.03', 'My own numbers', -.3);
-      if (t < med) { wallCalendar(420, 180, 1.3, t, win(t, fast, fast + 2.2, .3)); reportCard(960, 620, seg(t, card, card + .6)); return; }
-      if (t < own) { wallCalendar(420, 180, 1.3, t); sticky(620, 330, seg(t, note, note + .5)); timelineBar(760, 1220, 860, t, [['2027', 830], ['2030', 1140]]); pin(lerp(830, 1140, easeOut(seg(t, med, med + 1))), 850, 1); return; }
+      const onPage = () => cardCode('note-ai-2027', t, 420, 480, { t0: c2.t0 + .6, t1: own });
+      if (t < med) { wallCalendar(420, 180, 1.3, t, win(t, fast, fast + 2.2, .3), t > c2.t0 + .5); onPage(); reportCard(960, 620, seg(t, card, card + .6)); return; }
+      if (t < own) { wallCalendar(420, 180, 1.3, t, 0, true); onPage(); sticky(740, 330, seg(t, note, note + .5)); timelineBar(760, 1220, 860, t, [['2027', 830], ['2030', 1140]]); pin(lerp(830, 1140, easeOut(seg(t, med, med + 1))), 850, 1); return; }
       for (let i = 0; i < 3; i++) { const x = 330 + i * 300; boilSeed('own jar ' + i); paint(rrPts(x - 80, 460, 160, 280, 20), { wash: '#E4EEF2', washOp: 120, ink: PAL.ink, sw: 1 }); paint(rectPts(x - 70, 730 - [30, 60, 170][i], 140, [30, 60, 170][i]), { wash: ['#8A5AC9', RED, '#E8A33A'][i], ink: null }); }
       timelineBar(160, 1130, 900, t, [['2027', 260], ['2030', 1030]]); pin(1030, 890, 1);
       return;
@@ -273,17 +278,21 @@
     }
     const WEAK = [['Turing-test-style conversation', ic.chat], ['Winograd schemas', ic.schema], ['75th-percentile SAT math', ic.math], ["Montezuma's Revenge", ic.temple]];
     const STRONG = [['two-hour adversarial Turing test', ic.clock], ['expert-level exam and coding benchmarks', ic.exam], ['a robot assembling a detailed model car', ic.car]];
+    // each card carries its Metaculus question's code, from when it's named until the cards go (Goodhart)
+    const gone = say('T76.C.04', "Goodhart's law", -.3);
+    const weak = (ticks, o = {}) => checklist(20, 150, 925, 'Weak AGI', WEAK, ticks, t, { code: 'metaculus-weak', codeTo: gone, ...o });
+    const strong = (ticks, o = {}) => checklist(965, 150, 925, 'Strong AGI', STRONG, ticks, t, { code: 'metaculus-strong', codeTo: gone, ...o });
     if (t < c4.t0) {
       const wShow = WEAK.map((_, i) => seg(t, w.t0 + .4 + i * 1.6, w.t0 + .9 + i * 1.6)), sShow = STRONG.map((_, i) => seg(t, s.t0 + .4 + i * 2, s.t0 + .9 + i * 2));
       const met = seg(t, say('T76.C.03.1', 'arguably met already', -.2), say('T76.C.03.1', 'arguably met already', 1.6));
-      checklist(30, 150, 610, 'Weak AGI', WEAK, WEAK.map((_, i) => clamp(met * 4 - i)), t, { show: t < w.t0 ? [0, 0, 0, 0] : wShow });
-      if (t > s.t0) checklist(660, 150, 610, 'Strong AGI', STRONG, [0, 0, 0], t, { show: sShow });
+      weak(WEAK.map((_, i) => clamp(met * 4 - i)), { show: t < w.t0 ? [0, 0, 0, 0] : wShow });
+      if (t > s.t0) strong([0, 0, 0], { show: sShow });
       return;
     }
     if (t < c5.t0) {
       const gav = say('T76.C.04', 'can be resolved', -.3), sat = say('T76.C.04', 'checklists get saturated', -.3), good = say('T76.C.04', "Goodhart's law", -.3), dec = say('T76.C.04', 'skill at deception', -.6), hands = say('T76.C.04', 'ties "general intelligence" to hands', -.4);
-      if (t < sat) { checklist(30, 150, 610, 'Weak AGI', WEAK, [1, 1, 1, 1], t); checklist(660, 150, 610, 'Strong AGI', STRONG, [0, 0, 0], t); if (t > gav) { boilSeed('gavel 15'); const k = seg(t, gav, gav + .5); push(); translate(645, 900); rotate(lerp(-.9, 0, easeIn(k))); paint(rectPts(-10, -20, 200, 20), { wash: '#8A5A3A', ink: PAL.ink, sw: .8 }); paint(rrPts(170, -60, 70, 100, 10), { wash: '#6B4A32', ink: PAL.ink, sw: 1 }); pop(); } return; }
-      if (t < good) { checklist(30, 150, 610, 'Weak AGI', WEAK, [1, 1, 1, 1], t); checklist(660, 150, 610, 'Strong AGI', STRONG, STRONG.map((_, i) => clamp(seg(t, sat, sat + 1.5) * 3 - i)), t); claudeAs(645, 1040, 7, { ...feel('confused', t), boilKey: 'claude saturated' }); return; }
+      if (t < sat) { weak([1, 1, 1, 1]); strong([0, 0, 0]); if (t > gav) { boilSeed('gavel 15'); const k = seg(t, gav, gav + .5); push(); translate(955, 900); rotate(lerp(-.9, 0, easeIn(k))); paint(rectPts(-10, -20, 200, 20), { wash: '#8A5A3A', ink: PAL.ink, sw: .8 }); paint(rrPts(170, -60, 70, 100, 10), { wash: '#6B4A32', ink: PAL.ink, sw: 1 }); pop(); } return; }
+      if (t < good) { weak([1, 1, 1, 1]); strong(STRONG.map((_, i) => clamp(seg(t, sat, sat + 1.5) * 3 - i))); claudeAs(955, 1040, 7, { ...feel('confused', t), boilKey: 'claude saturated' }); return; }
       if (t < dec) {   // a target painted onto the measuring tape
         boilSeed('tape'); occupy(100, 400, 1200, 700, 1, 'tape'); paint(rectPts(100, 500, 1100, 90), { wash: '#E8C23A', ink: PAL.ink, sw: 1.1 }); for (let i = 0; i < 22; i++) inkLine([[120 + i * 50, 500], [120 + i * 50, i % 2 ? 530 : 550]], 2, PAL.ink, 'inkfine', 0);
         const k = seg(t, good + .4, good + 1.4); for (let r = 3; r > 0; r--) paint(ellPts(820, 545, 40 * r * k, 40 * r * k, 20), { wash: r % 2 ? RED : '#FBF8F0', ink: null });

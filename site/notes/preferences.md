@@ -3,6 +3,7 @@ id: preferences
 title: "Short answers, and questions only when needed"
 ch: 4
 at: T24.C.01
+mode: card
 links: [claude-personalization, {title: "Claude's memory", url: "https://claude.com/blog/memory"}]
 ---
 **What Curt tells Claude.** Two things he'd been trying to get all along: *short* answers, because he's a slow reader

@@ -3,6 +3,7 @@ id: who-is-claude
 title: Who, or what, is "Claude"?
 ch: 3
 at: T15.C.02
+mode: card
 links: [personal-identity, other-minds, turing-test, constitution, claude-memory, {title: "Claude's character (Anthropic)", url: "https://www.anthropic.com/research/claude-character"}, {title: "Clive Wearing (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clive_Wearing"}, {title: "Ship of Theseus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ship_of_Theseus"}]
 ---
 **The name on the box.** "Claude, specifically Claude Opus 5.5, made by Anthropic" is a product and a version, the way

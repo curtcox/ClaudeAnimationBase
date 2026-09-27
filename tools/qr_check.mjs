@@ -36,7 +36,7 @@ const jsQR = require('jsqr');
 const ZX = require('@zxing/library');
 const { scanImageData } = require('@undecaf/zbar-wasm');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
-const SIZE = { feature: 480, shelf: 380, board: 300 }, ECC = { feature: 'H', shelf: 'M', board: 'M' };
+const SIZE = { feature: 480, shelf: 380, board: 300, card: 300 }, ECC = { feature: 'H', shelf: 'M', board: 'M', card: 'M' };
 const OUT = 'out/qr_check', REPORT = args.styles ? 'script/qr_styles_report.md' : args.only ? `${OUT}/only_report.md` : 'script/qr_report.md';
 // the cache: bump TRIALS when the trials or the pass rule change, so every code is decoded again
 const TRIALS = 'v3: 13 scales .5-1.4, youtube crf28, phone; every trial read by one, two decoders read 13+', CACHE_F = 'out/qr_cache.json';
@@ -89,7 +89,7 @@ async function renderCase(c) {
     window.LOOP = t => {
       paint(rectPts(-40, -40, W + 80, H + 80), { wash: PAL.paper, washOp: 120, ink: null });
       // as the film shows it: a shelf code in a wide style loses its dressing (look.js shelfFramed)
-      window.QR_GEOM = qrCard(c.url, W / 2, H / 2, size, qrStyleFor(c.style), { ecc, t, noFrame: c.mode === 'shelf' && !shelfFramed({ style: c.style }) });
+      window.QR_GEOM = qrCard(c.url, W / 2, H / 2, size, qrStyleFor(c.style), { ecc, t, noFrame: c.mode === 'card' || (c.mode === 'shelf' && !shelfFramed({ style: c.style })) });
     };
     window.LOOP.len = 1;
     return window.renderAt(.5, 'image/png');

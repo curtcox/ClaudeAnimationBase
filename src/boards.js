@@ -6,10 +6,11 @@
 //   screenWorld(t, k)          the frame as the inside of a monitor: a bezel at the frame's edge (k = 1 full, fades out)
 //   qrFeature(ref, t, t0)      a reference's feature card, arriving at t0 and holding (screen space)
 //   qrShelf(refs, t, t0)       shelf tags in the lower-right corner, one after another, each held QR_SHELF_HOLD s
+//   cardCode(id, t, x, y)      a reference's code on a card the scene draws (mode: card)
 //   paperCard(x, y, w, h, col) a painted card to put things on
 
 const QR_SHELF_HOLD = 5.5, QR_FEATURE_HOLD = 7;
-const FEATURES_SEEN = new Map();   // feature cards and board codes the scenes have shown: { id: { t0, hold, kind } } (for refTimes)
+const FEATURES_SEEN = new Map();   // feature cards, board codes and card codes the scenes have shown: { id: { t0, hold, kind } } (for refTimes)
 
 function paperCard(x, y, w, h, col = '#FBF8F0', o = {}) {
   occupy(x, y, x + w, y + h, o.weight ?? 1, o.tag || 'card');
@@ -145,6 +146,24 @@ function qrBoard(ref, t, t0, t1, x, y, o = {}) {
   paint(rrPts(x - half, y - half, half * 2, half * 2 + 30, 14), { wash: PAL.paper, washOp: 240 * clamp(k * 2) * (1 - out), ink: PAL.ink, sw: 1.1 });
   const n0 = LETTERS.length;
   if (out < .8) refQR(R, x, y - 10, size, { k, t, noFrame: true, captionOpts: { size: 22 } });
+  for (let i = n0; i < LETTERS.length; i++) LETTERS[i].noOcc = true;
+}
+// A code on a card (refs with mode: card). When a card on screen is about a reference, its code goes on the card itself
+// rather than in a tag beside it (Curt's rule): the scene leaves room on the card and calls this where the code goes (x, y
+// its centre; the caption sits under it). It shows from o.t0 (default: when its words are said, as a shelf code would) to
+// o.t1 (default a shelf code's hold later; a scene usually passes when the card goes). No frame of its own: the card is it.
+const CARD_CODE = 300, CARD_MIN = 5;
+function cardCode(id, t, x, y, o = {}) {
+  const R = REFS[id], t0 = o.t0 ?? refAt(id), t1 = o.t1 ?? t0 + REF_HOLD;
+  const k = seg(t, t0, t0 + .5), out = seg(t, t1 - .4, t1);
+  if (k <= 0 || out >= 1) return;
+  const size = o.size || CARD_CODE, half = size / 2;
+  FEATURES_SEEN.set(R.id, { id: R.id, t0, hold: t1 - t0, kind: 'card' });
+  occupy(x - half, y - half, x + half, y + half + 40, 3, 'card:' + R.id);
+  boilSeed('qr card ' + R.id);
+  const n0 = LETTERS.length;
+  // an explainer's code is captioned just "Explained": the card already says what it's about
+  if (out < .8) refQR(R, x, y, size, { k, t, noFrame: true, caption: o.caption ?? (R.origin === 'note' ? 'Explained' : R.caption), captionOpts: { size: 22 } });
   for (let i = n0; i < LETTERS.length; i++) LETTERS[i].noOcc = true;
 }
 // Shelf tags: one after another in the lower-right corner, each held QR_SHELF_HOLD s.

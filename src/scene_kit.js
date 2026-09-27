@@ -71,7 +71,7 @@ function fade(k, col = '#15131A') { if (k > .01) { boilSeed('fade'); paint(rectP
 
 // ---------- props several chapters use ----------
 // An index card with a red top rule; rows of text fill in with k (0..1 across the rows). edge (0..1) turns it edge-on
-// ("a thin answer"): at 1 it's a line.
+// ("a thin answer"): at 1 it's a line. o.textX moves the lettering's centre (to leave room for a code on the card).
 function indexCard(cx, cy, w, h, rows, o = {}) {
   const k = o.k ?? 1, edge = ease(o.edge || 0), sy = 1 - edge * .985;
   occupy(cx - w / 2, cy - h / 2 * sy, cx + w / 2, cy + h / 2 * sy, 1, 'card');
@@ -87,7 +87,7 @@ function indexCard(cx, cy, w, h, rows, o = {}) {
     rows.forEach((r, i) => {
       const kk = clamp(k * n - i); if (kk <= 0) return;
       const y = cy - h / 2 + h * (o.top ?? .1) + (i + (o.title ? 0 : 1)) * h * (o.rowH ?? .12) * sy;
-      lab(r, cx + (o.align === 'center' || (o.title && i === 0) ? 0 : -w / 2 + 24), y, i === 0 && o.title ? size * 1.25 : size, i === 0 && o.title ? PAL.ink : (o.col || '#3A3342'),
+      lab(r, (o.textX ?? cx) + (o.align === 'center' || (o.title && i === 0) ? 0 : -w / 2 + 24), y, i === 0 && o.title ? size * 1.25 : size, i === 0 && o.title ? PAL.ink : (o.col || '#3A3342'),
         { align: o.align === 'center' || (o.title && i === 0) ? 'center' : 'left', alpha: kk * (1 - edge * 2) });
     });
   }

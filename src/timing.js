@@ -23,12 +23,18 @@ const within = (t, a, b) => seg(t, L(a).t0, b ? L(b).t0 : L(a).end);
 // references are the scenes' job (qrFeature), and they repel shelf codes. A shot can hide the rail: RAIL.side = 'none'.
 const REF_HOLD = 6.5, RAIL = { side: 'right' };
 let RAIL_PLAN = null;
+// when a reference's code goes up: just after the line it's anchored to starts, or its cue is said
+function refAt(id) {
+  const l = CH_LINES.find(l => l.refs.includes(id)), r = REFS[id];
+  if (!l) throw new Error(`reference ${id} isn't anchored in this chapter`);
+  return (r.cue ? atWord(l.id, r.cue) : l.t0) + .4;
+}
 function railPlan() {
   if (RAIL_PLAN) return RAIL_PLAN;
   const items = [];
   if (window.CHAPTER && window.REFS) for (const l of CH_LINES) for (const id of l.refs) {
     const r = REFS[id]; if (!r || r.mode !== 'shelf' || (r.qr_url || r.url) === 'SHORT') continue;
-    items.push({ id, t0: (r.cue ? atWord(l.id, r.cue) : l.t0) + .4, hold: REF_HOLD, half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) });
+    items.push({ id, t0: refAt(id), hold: REF_HOLD, half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) });
   }
   return (RAIL_PLAN = planLayout(items.sort((a, b) => a.t0 - b.t0)));   // first said, first placed
 }
@@ -98,13 +104,14 @@ function refTimes() {
 
 // The chapter check (tools/lint_chapter.mjs): what a viewer would trip over, found from the DRY replay, without painting.
 //   crowded   more than MAX_TOGETHER codes on screen at once (a scene's link board, mode: board, counts apart)
+//             (a code on a card, mode: card, counts: it's still a code on screen)
 //   covers    a code hides more than a fifth of something that matters (weight ≥ .5: a board, a character, lettering)
 //   brief     a code is on screen less than its minimum (feature 6 s, shelf 5 s), e.g. cut off by a shot or the chapter's end
 //   no room   the layout pass found no clean spot for a code in time (it covers content, or fell back to a corner)
 //   late      a code waited more than 8 s for room, so it arrives well after the words it belongs to
 //   static    (warning) the picture's layout doesn't change for more than 8 s: a held talking head
 function chapterLint(o = {}) {
-  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 6, shelf: 5, board: BOARD_MIN };
+  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 6, shelf: 5, board: BOARD_MIN, card: CARD_MIN };
   const shotAt = t => { let i = 0; while (i + 1 < SHOTS.length && t >= SHOTS[i + 1][0]) i++; return (SHOTS[i][1].name || 'shot' + i).replace(/^shot/, ''); };
   const stamp = t => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}`;
   const issues = [], add = (kind, t, msg) => issues.push({ kind, t: +t.toFixed(2), where: `${stamp(t)} shot ${shotAt(t)}, ${lineAt(t)?.id ?? 'lead-in'}`, msg });
@@ -116,19 +123,21 @@ function chapterLint(o = {}) {
     for (const p of plan) if (t >= p.t0 && t <= p.t0 + p.hold) codes.push({ id: p.id, kind: 'shelf', r: [p.x - p.half, p.y - p.half, p.x + p.half, p.y + p.half + 34] });
     for (const e of occ) if ((e[5] || '').startsWith('qr:')) codes.push({ id: e[5].slice(3), kind: 'feature', r: e.slice(0, 4) });
     for (const e of occ) if ((e[5] || '').startsWith('board:')) codes.push({ id: e[5].slice(6), kind: 'board', r: e.slice(0, 4) });
+    for (const e of occ) if ((e[5] || '').startsWith('card:')) codes.push({ id: e[5].slice(5), kind: 'card', r: e.slice(0, 4) });
     for (const c of codes) { const s = seen.get(c.id) || { kind: c.kind, n: 0, t0: t }; s.n++; seen.set(c.id, s); }
     const loose = codes.filter(c => c.kind !== 'board');
     if (loose.length > MAX_TOGETHER && !crowded) add('crowded', t, `${loose.length} codes at once: ${loose.map(c => c.id).join(', ')}`);
     crowded = loose.length > MAX_TOGETHER;
     for (const c of codes) for (const e of occ) {
-      if (e[4] < .5 || e[5] === 'qr:' + c.id || e[5] === 'board:' + c.id || (c.kind === 'board' && (e[5] || '').startsWith('board:'))) continue;
+      if (e[4] < .5 || e[5] === 'qr:' + c.id || e[5] === 'board:' + c.id || e[5] === 'card:' + c.id || (c.kind === 'board' && (e[5] || '').startsWith('board:'))) continue;
+      if (c.kind === 'card' && e[0] <= c.r[0] + 2 && e[1] <= c.r[1] + 2 && e[2] >= c.r[2] - 2 && e[3] >= c.r[3] - 2) continue;   // the card it's on
       const cap = REFS[c.id] && REFS[c.id].caption;
       if (c.kind === 'feature' && cap && e[5] && e[5].toLowerCase() === 'text: ' + cap.toLowerCase()) continue;   // its own caption
       const k = overlap(c.r, e) / area(e), key = c.id + '|' + (e[5] || box(e));
       if (k > .2 && !told.has(key)) { told.add(key); add('covers', t, `${c.id} (${c.kind}) hides ${Math.round(k * 100)}% of ${e[5] || 'content at ' + box(e)}`); }
     }
     // the layout's fingerprint: what matters, where, to the nearest 40 px (so boil and bobbing don't count as change)
-    const sig = occ.filter(e => e[4] >= .5 && !/^(qr|board):/.test(e[5] || '')).map(e => e.slice(0, 4).map(v => Math.round(v / 40)).join(',') + (e[5] || '')).sort().join('|');
+    const sig = occ.filter(e => e[4] >= .5 && !/^(qr|board|card):/.test(e[5] || '')).map(e => e.slice(0, 4).map(v => Math.round(v / 40)).join(',') + (e[5] || '')).sort().join('|');
     if (sig !== prevSig) { if (prevSig !== null && t - runStart > STATIC) add('static', runStart, `the picture holds still for ${(t - runStart).toFixed(1)} s`); prevSig = sig; runStart = t; }
   }
   if (DUR - runStart > STATIC) add('static', runStart, `the picture holds still for ${(DUR - runStart).toFixed(1)} s, to the end`);

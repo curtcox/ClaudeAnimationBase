@@ -428,8 +428,10 @@
     const c1 = L('T24.C.01'), c2 = L('T24.C.02');
     paperWorld(t);
     if (t < c2.t0) {
-      indexCard(400, 430, 460, 280, ['clarifying questions'], { key: 'pref', title: true, align: 'center', size: 36, k: seg(t, c1.t0 + .3, c1.t0 + 1) });
-      indexCard(900, 430, 460, 280, ['end with a question'], { key: 'misread', title: true, align: 'center', size: 36, k: seg(t, say('T24.C.01', 'end with a question', -.4), say('T24.C.01', 'end with a question', .2)) });
+      // Curt's preference card carries the explainer's code (short answers, questions only when needed)
+      indexCard(400, 420, 460, 500, ['clarifying questions'], { key: 'pref', title: true, align: 'center', size: 36, top: .06, k: seg(t, c1.t0 + .3, c1.t0 + 1) });
+      cardCode('note-preferences', t, 400, 440, { t0: c1.t0 + 1, t1: c2.t0 });
+      indexCard(900, 420, 460, 500, ['end with a question'], { key: 'misread', title: true, align: 'center', size: 36, top: .06, k: seg(t, say('T24.C.01', 'end with a question', -.4), say('T24.C.01', 'end with a question', .2)) });
       if (t > say('T24.C.01', "isn't the same thing", -.2)) lab('≠', 650, 430, 110, '#C9302C', { pop: seg(t, say('T24.C.01', "isn't the same thing", -.2), say('T24.C.01', "isn't the same thing", .3)) });
       claudeAs(CX, 950, 12, { ...feel(t > say('T24.C.01', "isn't the same thing") ? 'surprised' : 'thinking', t), mouth: talking(t), boilKey: 'claude cards' });
     } else {

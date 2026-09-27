@@ -729,7 +729,7 @@ window.REFS = {
   "caption": "Claude's personal preferences",
   "origin": "added",
   "at": "T24.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T24.C.01"
  },
@@ -2880,7 +2880,7 @@ window.REFS = {
   "caption": "AI 2027",
   "origin": "added",
   "at": "T75.C.02",
-  "mode": "feature",
+  "mode": "page",
   "style": "calendar",
   "line": "T75.C.02"
  },
@@ -2921,7 +2921,7 @@ window.REFS = {
   "caption": "Metaculus: weak AGI",
   "origin": "added",
   "at": "T76.C.03.1",
-  "mode": "shelf",
+  "mode": "card",
   "style": "dial",
   "verified": "browser 2026-09-26",
   "line": "T76.C.03.1"
@@ -2932,7 +2932,7 @@ window.REFS = {
   "caption": "Metaculus: strong AGI",
   "origin": "added",
   "at": "T76.C.03.2",
-  "mode": "shelf",
+  "mode": "card",
   "style": "dial",
   "verified": "browser 2026-09-26",
   "line": "T76.C.03.2"
@@ -2994,7 +2994,7 @@ window.REFS = {
   "caption": "Alignment charts (D&D)",
   "origin": "added",
   "at": "T73.U.01",
-  "mode": "shelf",
+  "mode": "card",
   "style": "compass",
   "line": "T73.U.01"
  },
@@ -3094,7 +3094,7 @@ window.REFS = {
   "caption": "Winograd schemas",
   "origin": "added",
   "at": "T76.C.02",
-  "mode": "shelf",
+  "mode": "page",
   "style": "dial",
   "line": "T76.C.02"
  },
@@ -3104,7 +3104,7 @@ window.REFS = {
   "caption": "Montezuma's Revenge",
   "origin": "added",
   "at": "T76.C.03.1",
-  "mode": "shelf",
+  "mode": "page",
   "style": "dial",
   "line": "T76.C.03.1"
  },
@@ -3277,7 +3277,7 @@ window.REFS = {
   "origin": "note",
   "ch": 15,
   "at": "T75.C.03",
-  "mode": "shelf",
+  "mode": "card",
   "style": "note",
   "line": "T75.C.03"
  },
@@ -3706,7 +3706,7 @@ window.REFS = {
   "origin": "note",
   "ch": 4,
   "at": "T24.C.01",
-  "mode": "shelf",
+  "mode": "card",
   "style": "note",
   "line": "T24.C.01"
  },
@@ -3927,7 +3927,7 @@ window.REFS = {
   "origin": "note",
   "ch": 3,
   "at": "T15.C.02",
-  "mode": "shelf",
+  "mode": "card",
   "style": "note",
   "line": "T15.C.02"
  }

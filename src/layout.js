@@ -61,7 +61,8 @@ function planLayout(items) {
       if (t0 + it.hold > DUR) break;   // it would run past the chapter's end
       const occ = samples.flatMap(s => occupancyAt(s)).concat(LAYOUT_RESERVED);
       const others = placed.filter(p => p.t0 < t0 + it.hold + .4 && t0 < p.t0 + p.hold + .4);
-      if (others.length >= MAX_TOGETHER) continue;   // at most MAX_TOGETHER codes up at once: this one waits
+      const onCards = new Set(occ.filter(o => (o[5] || '').startsWith('card:')).map(o => o[5]));   // codes the scenes put on cards
+      if (others.length + onCards.size >= MAX_TOGETHER) continue;   // at most MAX_TOGETHER codes up at once: this one waits
       const h = it.half, hb = h + 34;
       for (let y = h + 14; y <= H - hb - 14; y += 30) for (let x = h + 14; x <= W - h - 14; x += 30) {
         const r = [x - h - 10, y - h - 10, x + h + 10, y + hb + 10];
