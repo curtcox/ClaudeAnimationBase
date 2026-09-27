@@ -8,7 +8,7 @@ by at least one decoder, and at least two decoders each read 13 or more of the 1
 each has blind spots: ZXing-js fails some perfect, computer-generated codes outright, and jsQR misses sporadically at
 particular scales.
 
-**125 of 125 pass.**
+**125 of 125 pass.** (1 unchanged since their last check, so their results are reused.)
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -19,7 +19,7 @@ particular scales.
 | mirror-test | mirror *(plain for now)* | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | frog-chart | lilypad | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | axolotl | gills *(plain for now)* | shelf | 15/15 | 13 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| eval-awareness | lilypad | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| eval-awareness | lilypad | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | gpqa | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | swe-bench-verified | exam *(plain for now)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | kernelbench | exam *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
@@ -49,7 +49,7 @@ particular scales.
 | gadolinium | electron-shells *(plain for now)* | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | sycophancy | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | dish-of-the-day | dinner-plate | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| social-constructionism | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| social-constructionism | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | campbell | pulp *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | life-3 | signpost *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | the-stranger | mask *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -65,7 +65,7 @@ particular scales.
 | code-talkers | field-radio *(plain for now)* | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | symbol-grounding | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | chinese-room | rulebook *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| blockhead | filing-drawers *(plain for now)* | shelf | 15/15 | 14 | 4 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
+| blockhead | filing-drawers *(plain for now)* | shelf | 15/15 | 14 | 3 | 15 | ✓ ✗ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
 | monosemanticity | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | gazp-glut | filing-drawers *(plain for now)* | feature | 15/15 | 12 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | turing | enigma *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
@@ -88,9 +88,9 @@ particular scales.
 | t800 | chrome-red-eye *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | constitutional-classifiers | switchboard *(plain for now)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | hf-incident | sandbox | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| 80k-hf | sandbox | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| darkreading-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| wiki-hugging-face | sandbox | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| 80k-hf | sandbox | shelf | 15/15 | 11 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| darkreading-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| wiki-hugging-face | sandbox | shelf | 15/15 | 12 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | un-brief-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | solidgoldmagikarp | gold-scales *(plain for now)* | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | car-wash | car-wash *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
@@ -129,11 +129,11 @@ particular scales.
 | noema-agi | plain | shelf | 15/15 | 14 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | openai-charter | goalposts *(plain for now)* | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | xkcd-356 | xkcd | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✗ ✓ ✓ |
-| note-evaluations | note | shelf | 15/15 | 14 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-frog-or-axolotl | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-one-sample | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-register-and-controls | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-saying-vs-doing | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-the-instrument | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| note-weights | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-evaluations | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-frog-or-axolotl | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-one-sample | note | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-register-and-controls | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-saying-vs-doing | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-the-instrument | note | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| note-weights | note | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | note-what-claude-is | note | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
