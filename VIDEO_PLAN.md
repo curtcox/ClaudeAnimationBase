@@ -282,6 +282,15 @@ the end, lists every link by timestamp, and the YouTube description carries the 
 
 No real logos anywhere. The style evokes the source; it doesn't copy its marks.
 
+**Who draws which style.** The styles above with a bespoke reveal or a painted frame (newsprint, the Fold-In, lily pad,
+red lens, xkcd, note, dinner plate, sandbox) are painted in `src/qr_styles.js`. The other 47 come from
+[Still QR](https://github.com/curtcox/Still-QR-codes-to-me), Curt's QR studio, whose film presets give each code one
+large prop (a microphone, a thermometer, a lobster claw) outside the quiet zone. `node tools/qr_images.mjs` renders every
+such code, framed and bare, at whole 8 px modules into `assets/qr/`, and indexes them in `src/gen/qr_images.js`; `qr.js`
+draws the image in place of a painted code. A shelf or feature card takes the picture's shape, so the props show
+(a Still QR shelf code is 320 px, a feature about 400 px). `tools/qr_check.mjs` reads each one through the engine as the
+film shows it.
+
 ### Verification (`tools/qr_check.mjs`)
 For every QR, at its display time:
 1. Render the frame with `--stills`.

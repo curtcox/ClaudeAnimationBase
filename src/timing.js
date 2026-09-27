@@ -34,7 +34,8 @@ function railPlan() {
   const items = [];
   if (window.CHAPTER && window.REFS) for (const l of CH_LINES) for (const id of l.refs) {
     const r = REFS[id]; if (!r || r.mode !== 'shelf' || (r.qr_url || r.url) === 'SHORT') continue;
-    items.push({ id, t0: refAt(id), hold: REF_HOLD, half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) });
+    const card = shelfCard(r);
+    items.push({ id, t0: refAt(id), hold: REF_HOLD, ...(card ? { half: Math.max(card.hw, card.hh), hw: card.hw, hh: card.hh } : { half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) }) });
   }
   return (RAIL_PLAN = planLayout(items.sort((a, b) => a.t0 - b.t0)));   // first said, first placed
 }
@@ -42,11 +43,12 @@ function refRail(t) {
   if (RAIL.side === 'none') return;
   for (const p of railPlan()) {
     if (t < p.t0 || t > p.t0 + p.hold) continue;
-    const R = REFS[p.id], half = p.half, k = seg(t, p.t0, p.t0 + .45), out = seg(t, p.t0 + p.hold - .35, p.t0 + p.hold);
+    const R = REFS[p.id], card = shelfCard(R), k = seg(t, p.t0, p.t0 + .45), out = seg(t, p.t0 + p.hold - .35, p.t0 + p.hold);
     const x = p.x, y = p.y + ease(out) * 30;
     boilSeed('rail ' + p.id);
-    paint(rrPts(x - half, y - half, half * 2, half * 2 + 34, 20), { wash: PAL.paper, washOp: 245 * clamp(k * 2) * (1 - out), ink: PAL.ink, sw: 1.2 });
-    if (out < .8) refQR(R, x, y - 14, 380, { k, t, captionOpts: { size: 24, noOcc: true } });
+    paint(rrPts(x - p.hw, y - p.hh, p.hw * 2, p.hh * 2 + 34, 20), { wash: PAL.paper, washOp: 245 * clamp(k * 2) * (1 - out), ink: PAL.ink, sw: 1.2 });
+    const captionOpts = { size: 24, noOcc: true, maxW: p.hw * 2 - 36 };
+    if (out < .8) card ? refQR(R, x, y - 4, 380, { k, t, fit: card.fit, captionOpts }) : refQR(R, x, y - 14, 380, { k, t, captionOpts });
   }
 }
 // Review captions (studio.html?review=1, render.mjs --review): the words being said, a sentence at a time, so the picture can
@@ -120,7 +122,7 @@ function chapterLint(o = {}) {
   let crowded = false, prevSig = null, runStart = 0;
   for (let t = 0; t < DUR; t += STEP) {
     const occ = occupancyAt(t), codes = [];
-    for (const p of plan) if (t >= p.t0 && t <= p.t0 + p.hold) codes.push({ id: p.id, kind: 'shelf', r: [p.x - p.half, p.y - p.half, p.x + p.half, p.y + p.half + 34] });
+    for (const p of plan) if (t >= p.t0 && t <= p.t0 + p.hold) codes.push({ id: p.id, kind: 'shelf', r: [p.x - p.hw, p.y - p.hh, p.x + p.hw, p.y + p.hh + 34] });
     for (const e of occ) if ((e[5] || '').startsWith('qr:')) codes.push({ id: e[5].slice(3), kind: 'feature', r: e.slice(0, 4) });
     for (const e of occ) if ((e[5] || '').startsWith('board:')) codes.push({ id: e[5].slice(6), kind: 'board', r: e.slice(0, 4) });
     for (const e of occ) if ((e[5] || '').startsWith('card:')) codes.push({ id: e[5].slice(5), kind: 'card', r: e.slice(0, 4) });

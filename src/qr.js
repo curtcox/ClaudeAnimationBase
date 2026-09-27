@@ -30,6 +30,7 @@ const inFinder = (r, c, n) => (r < 8 && c < 8) || (r < 8 && c >= n - 8) || (r >=
 // Registries, filled by qr_styles.js. A style is { bg, fg, eye, module, frame, emblem, reach, present, captionFont }.
 const QR_STYLES = {}, QR_MODULES = {}, QR_EYES = {};
 function qrStyle(name) {
+  if (!QR_STYLES[name] && QR_IMAGE_STYLES[name]) return { ...QR_STYLES.plain, image: true, extent: QR_IMAGE_STYLES[name].extent };
   if (!QR_STYLES[name] && !(qrStyle.warned ||= new Set()).has(name)) { qrStyle.warned.add(name); console.warn(`qr style "${name}" isn't defined: using plain`); }
   return { ...QR_STYLES.plain, ...(QR_STYLES[name] || {}) };
 }
@@ -75,9 +76,59 @@ function qrPaintCols(L, st, c0, c1, dx = 0) {
   for (const [r, c] of [[0, 0], [0, n - 7], [n - 7, 0]]) if (c >= c0 && c + 7 <= c1) eye(ox + c * m + dx, oy + r * m, m, st.fg, st.bg, L);
 }
 
+// Styles made by Still QR (github.com/curtcox/Still-QR-codes-to-me): a style with no painted version here wears a
+// pre-rendered image per code, framed or not, listed in src/gen/qr_images.js by tools/qr_images.mjs. Still QR keeps the
+// same scanner rules (flat dark-on-light modules, a 4-module quiet zone, decoration outside it) and checks every image.
+const QR_IMAGES = window.QR_IMAGES || {}, QR_IMAGE_STYLES = window.QR_IMAGE_STYLES || {}, QR_IMG = {};
+const qrImageKey = (style, ecc, framed, text) => `${style}|${ecc}|${framed ? 'f' : 'n'}|${text}`;
+async function loadQRImages() {
+  await Promise.all(Object.entries(QR_IMAGES).map(async ([key, e]) => { QR_IMG[key] = await loadImage(e.file); }));
+}
+// p5.brush keeps its paint in a buffer and blends it into the canvas when the frame ends, so paint laid down before an
+// image would land on top of it (a faded code). brushFlush() blends what's pending now, through the library's own
+// end-of-frame and start-of-frame hooks, so the image goes over what's under it.
+function brushFlush() {
+  const P = p5.instance, hooks = p5.lifecycleHooks;
+  for (const f of hooks.postdraw) f.call(P);
+  for (const f of hooks.predraw) f.call(P);
+}
+// An image code: the image's code box (quiet zone included) lands on whole modules at (cx, cy), as a painted code would.
+// o.fit = F (or [w, h]) instead fits the whole dressed image (code and props) in an F × F square (or w × h box) centred
+// on (cx, cy), the code no bigger than size: a card shows the props without growing much.
+function qrImageCard(e, img, cx, cy, size, k, o) {
+  if (o.fit) {
+    const [fw, fh] = [].concat(o.fit, o.fit);
+    size = Math.min(size, fw * e.box[2] / e.img[0], fh * e.box[2] / e.img[1]);
+    const f = size / e.box[2];
+    cx += (e.box[0] + e.box[2] / 2 - e.img[0] / 2) * f; cy += (e.box[1] + e.box[2] / 2 - e.img[1] / 2) * f;
+  }
+  const m = Math.max(1, Math.floor(size / (e.n + 2 * QR_QUIET))), s = m * (e.n + 2 * QR_QUIET), sc = s / e.box[2];
+  const x0 = Math.round(cx - s / 2), y0 = Math.round(cy - s / 2);
+  if (!DRY) {
+    push();
+    if (k < 1) { const b = backOut(k); translate(cx, cy + (1 - b) * 60); rotate((1 - b) * .08); scale(.6 + .4 * b); translate(-cx, -cy); }
+    brushFlush(); image(img, x0 - e.box[0] * sc, y0 - e.box[1] * sc, img.width * sc, img.height * sc);
+    pop();
+  }
+  return { n: e.n, m, size: s, x0, y0, cx: x0 + s / 2, cy: y0 + s / 2, reach: e.reach, bottom: y0 + (e.img[1] - e.box[1]) * sc };
+}
+
 function qrCard(text, cx, cy, size, styleName = 'plain', o = {}) {
   const st = qrStyle(styleName), t = o.t ?? T, k = o.k ?? 1;
   if (k <= 0) return null;
+  if (st.image) {
+    const key = qrImageKey(styleName, o.ecc || 'Q', !o.noFrame, text), e = QR_IMAGES[key];
+    if (e && QR_IMG[key]) {
+      const cy0 = cy, L = qrImageCard(e, QR_IMG[key], cx, cy, size, k, o);
+      if (o.caption) {
+        const sz = Math.round(Math.max(18, L.size * .07));
+        const cy = o.fit ? cy0 + [].concat(o.fit, o.fit)[1] / 2 + sz * .9 : L.cy + L.size * (L.reach + .1);
+        letter(o.caption, o.fit ? cx : L.cx, cy, sz, PAL.ink, { ink: false, ...(o.captionOpts || {}) });
+      }
+      return L;
+    }
+    if (!(qrCard.missing ||= new Set()).has(key)) { qrCard.missing.add(key); console.warn(`no Still QR image for ${key}: using plain`); }
+  }
   const L = qrLayout(text, cx, cy, size, st, o);
   push();
   // the default arrival slides up on an arc and settles; a style with its own `present` does its own reveal instead

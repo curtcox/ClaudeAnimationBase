@@ -118,18 +118,21 @@ function screenWorld(t, k = 1, col = '#1A181D') {
 }
 
 // ---------- QR overlays (screen space: call outside the camera) ----------
-// A reference's feature card: arrives at t0 on the right third of the frame and holds, dimming the rest a little.
+// A reference's feature card: arrives at t0 on the right third of the frame and holds, dimming the rest a little. A Still QR
+// style's picture (code and props) is fitted to the card (FEATURE_FIT), so the card stays the size a plain code's would be.
+const FEATURE_FIT = 560;
 function qrFeature(ref, t, t0, o = {}) {
   const k = seg(t, t0, t0 + .6), out = seg(t, t0 + (o.hold ?? QR_FEATURE_HOLD), t0 + (o.hold ?? QR_FEATURE_HOLD) + .5);
   if (k <= 0 || out >= 1) return;
-  const R = typeof ref === 'string' ? REFS[ref] : ref, half = Math.max(300, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 480 + 30);
+  const R = typeof ref === 'string' ? REFS[ref] : ref, img = shelfImage(R);
+  const half = img ? FEATURE_FIT / 2 + 20 : Math.max(300, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 480 + 30);
   FEATURES_SEEN.set(R.id, { id: R.id, t0, hold: o.hold ?? QR_FEATURE_HOLD });
   const x = o.x ?? W - half - 50, y = (o.y ?? H * .47) + ease(out) * H;
   occupy(x - half, y - half, x + half, y + half + 50, 3, 'qr:' + R.id);
   boilSeed('qr feature ' + R.id);
   paint(rrPts(x - half, y - half, half * 2, half * 2 + 50, 26), { wash: PAL.paper, washOp: 235 * clamp(k * 2), ink: PAL.ink, sw: 1.4 });
   const n0 = LETTERS.length;
-  refQR(R, x, y - 20, 480, { k: R.style === 'mad' ? seg(t, t0, t0 + 4) : k, t });
+  refQR(R, x, y - (img ? 10 : 20), 480, { k: R.style === 'mad' ? seg(t, t0, t0 + 4) : k, t, captionOpts: { maxW: half * 2 - 40 }, ...(img ? { fit: FEATURE_FIT } : {}) });
   for (let i = n0; i < LETTERS.length; i++) LETTERS[i].noOcc = true;   // the card's own lettering is part of the card
 }
 // A link board's code (refs with mode: board): a scene pins several codes at once on something it draws (a corkboard of
@@ -171,10 +174,10 @@ function qrShelf(refs, t, t0, o = {}) {
   refs.forEach((id, i) => {
     const s0 = t0 + i * QR_SHELF_HOLD, k = seg(t, s0, s0 + .5), out = seg(t, s0 + QR_SHELF_HOLD - .4, s0 + QR_SHELF_HOLD);
     if (k <= 0 || out >= 1) return;
-    const R = REFS[id], half = Math.max(215, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 380 + 20);
+    const R = REFS[id], img = shelfImage(R), half = img ? SHELF_FIT / 2 + 20 : Math.max(215, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 380 + 20);
     const x = (o.x ?? W - half - 30) + ease(out) * (half * 2 + 60), y = o.y ?? H - half - 60;
     boilSeed('qr shelf ' + id);
     paint(rrPts(x - half, y - half, half * 2, half * 2 + 40, 20), { wash: PAL.paper, washOp: 240 * clamp(k * 2), ink: PAL.ink, sw: 1.2 });
-    refQR(R, x, y - 12, 380, { k, t, captionOpts: { size: 24 } });
+    refQR(R, x, y - (img ? 4 : 12), 380, { k, t, captionOpts: { size: 24 }, ...(img ? { fit: SHELF_FIT } : {}) });
   });
 }

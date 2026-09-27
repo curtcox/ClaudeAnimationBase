@@ -13,7 +13,8 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [x] Redraw every chapter with the borrowed-line codes, the caricature pass and the layout fix (rebuild of 2026-09-27, all steps passed).
 - [x] Check the rebuild's log for failed steps.
 - [ ] Check the storyboards' "Reads to check" items, 2–4 per chapter, against the drafts.
-- [ ] Build the 48 code styles still showing plain (mic, blueprint, two-mics, door, compass, honeycomb, lobster-shell and others). They scan fine as they are.
+- [x] Dress the 47 code styles that were showing plain (mic, blueprint, two-mics, door, compass, honeycomb, lobster-shell and others): made with Still QR through the ChatGPT app, and drawn by the film from `assets/qr/`. All 117 codes pass the film's scan check.
+- [ ] Redraw the chapters with the new codes (`npm run rebuild`).
 - [x] Do a careful pass on the comic page's caricatures in the cold open.
 
 ## Voices (phase 3)

@@ -235,6 +235,7 @@ function drawLetters(c) {
     c.save(); c.translate(L.x, L.y); c.rotate(L.rot || 0); c.scale(k, k); c.globalAlpha = L.alpha ?? 1;
     c.font = L.font || `${L.size}px "Permanent Marker", "Comic Sans MS", cursive`;
     c.textAlign = L.align || 'center'; c.textBaseline = 'middle';
+    if (L.maxW) { const w = c.measureText(L.txt).width; if (w > L.maxW) c.scale(L.maxW / w, 1); }   // squeezed to fit
     if (L.stroke) { c.lineJoin = 'round'; c.lineWidth = L.size * (L.strokeW ?? .12); c.strokeStyle = L.stroke; c.strokeText(L.txt, 0, 0); }
     if (L.ink !== false) { c.fillStyle = PAL.ink; c.fillText(L.txt, L.size * .045, L.size * .055); }
     c.fillStyle = L.color; c.fillText(L.txt, 0, 0);
@@ -345,6 +346,7 @@ async function setup() {
   paperG = makePaper(); grainC = makeGrain(); glowTex = makeGlowTex(); letG = createGraphics(W, H); letG.pixelDensity(1);
   outC = document.getElementById('out'); outX = outC.getContext('2d');
   await document.fonts.load('100px "Permanent Marker"');
+  await loadQRImages();
   window.ready = true;
   if (!location.search.includes('render')) devUI();
 }

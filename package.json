@@ -10,6 +10,7 @@
     "script": "node tools/build_script.mjs && node tools/verbatim_check.mjs",
     "refs": "node tools/check_refs.mjs",
     "qr": "node tools/qr_check.mjs",
+    "qr:images": "node tools/qr_images.mjs",
     "lint:chapter": "node tools/lint_chapter.mjs",
     "draft": "node render.mjs --draft",
     "site": "node tools/build_site.mjs",

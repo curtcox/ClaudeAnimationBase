@@ -82,14 +82,17 @@ async function openStudio() {
 async function stylesInPage() { const { browser, page } = await openStudio(); const s = await page.evaluate(() => Object.keys(QR_STYLES)); await browser.close(); return s; }
 
 const { browser, page } = await openStudio();
-const known = new Set(await page.evaluate(() => Object.keys(QR_STYLES)));
+const known = new Set(await page.evaluate(() => Object.keys(QR_STYLES))), stillQR = new Set(await page.evaluate(() => Object.keys(QR_IMAGE_STYLES)));
 for (const c of cases) c.resolved = await page.evaluate(k => qrStyleFor(k), c.style);
 async function renderCase(c) {
   const url = await page.evaluate((c, size, ecc) => {
     window.LOOP = t => {
       paint(rectPts(-40, -40, W + 80, H + 80), { wash: PAL.paper, washOp: 120, ink: null });
-      // as the film shows it: a shelf code in a wide style loses its dressing (look.js shelfFramed)
-      window.QR_GEOM = qrCard(c.url, W / 2, H / 2, size, qrStyleFor(c.style), { ecc, t, noFrame: c.mode === 'card' || (c.mode === 'shelf' && !shelfFramed({ style: c.style })) });
+      // as the film shows it: a shelf code in a wide style loses its dressing (look.js shelfFramed); a Still QR picture is
+      // fitted to its shelf or feature card, so its code is smaller than a painted one
+      const R = { style: c.style, ecc, url: c.url, mode: c.mode }, card = c.mode === 'shelf' && shelfCard(R);
+      const fit = card ? card.fit : c.mode === 'feature' && shelfImage(R) ? FEATURE_FIT : null;
+      window.QR_GEOM = qrCard(c.url, W / 2, H / 2, size, qrStyleFor(c.style), { ecc, t, noFrame: c.mode === 'card' || (c.mode === 'shelf' && !shelfFramed({ style: c.style })), ...(fit ? { fit } : {}) });
     };
     window.LOOP.len = 1;
     return window.renderAt(.5, 'image/png');
@@ -145,13 +148,13 @@ for (const c of cases) {
   const s = SIZE[c.mode], m = Math.round(s * .45), box = [960 - s / 2 - m, 540 - s / 2 - m, s + 2 * m, s + 2 * m].map(Math.round);
   const pixel = crop(readPng(buf), ...box), th = thumb(pixel);
   if (cache[key] && cache[key].thumb && samePicture(cache[key].thumb, th)) {
-    const row = { ...c, implemented: known.has(c.resolved), ...cache[key], cached: true }; results.push(row); reused++;
+    const row = { ...c, implemented: known.has(c.resolved), still: stillQR.has(c.resolved), ...cache[key], cached: true }; results.push(row); reused++;
     console.log(`${row.ok ? 'ok  ' : 'FAIL'} ${c.id} (unchanged since it was checked)`);
     continue;
   }
   writeFileSync(file, buf);
   const yt = crop(youtube(file), ...box), ph = phone(file, box), sw = await screenSweep(file, box, c.url);
-  const row = { ...c, implemented: known.has(c.resolved) };
+  const row = { ...c, implemented: known.has(c.resolved), still: stillQR.has(c.resolved) };
   row.trials = [...sw, await trial(yt, c.url), await trial(ph, c.url)];
   row.pixel = (await trial(pixel, c.url)).r;
   row.youtube = row.trials[SCALES.length].r; row.phone = row.trials[SCALES.length + 1].r;
@@ -163,10 +166,10 @@ for (const c of cases) {
   cache[key] = Object.fromEntries(['trials', 'pixel', 'youtube', 'phone', 'passed', 'jsqr', 'zxing', 'zbar', 'ok'].map(k => [k, row[k]]));
   cache[key].checked = new Date().toISOString().slice(0, 10); cache[key].thumb = th;
   writeFileSync(CACHE_F, JSON.stringify(cache));
-  console.log(`${row.ok ? 'ok  ' : 'FAIL'} ${c.id} (${c.style}${row.implemented ? '' : ', not built yet: plain'}, ${c.mode})  read ${row.passed}/15  (jsQR ${row.jsqr}, ZXing ${row.zxing}, ZBar ${row.zbar})`);
+  console.log(`${row.ok ? 'ok  ' : 'FAIL'} ${c.id} (${c.style}${row.implemented ? '' : row.still ? ', Still QR' : ', not built yet: plain'}, ${c.mode})  read ${row.passed}/15  (jsQR ${row.jsqr}, ZXing ${row.zxing}, ZBar ${row.zbar})`);
 }
 await browser.close();
-for (const f of ['tmp.png', 'tmp.mp4', 'tmp_yt.png', 'tmp_ph.png', 'tmp_sc.png']) rmSync(`${OUT}/${f}`, { force: true });
+if (!process.env.QR_KEEP) for (const f of ['tmp.png', 'tmp.mp4', 'tmp_yt.png', 'tmp_ph.png', 'tmp_sc.png']) rmSync(`${OUT}/${f}`, { force: true });
 
 const fails = results.filter(r => !r.ok), tick = a => a.map(b => b ? '✓' : '✗').join(' ');
 writeFileSync(REPORT, `# QR scan report
@@ -183,7 +186,7 @@ particular scales.
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|
-${results.map(r => `| ${r.ok ? '' : '**✗** '}${r.id} | ${r.style}${r.resolved !== r.style ? ` → ${r.resolved}` : ''}${r.implemented ? '' : ' *(plain for now)*'} | ${r.mode} | ${r.passed}/15 | ${r.jsqr} | ${r.zxing} | ${r.zbar} | ${tick(r.youtube)} | ${tick(r.phone)} | ${tick(r.pixel)} |`).join('\n')}
+${results.map(r => `| ${r.ok ? '' : '**✗** '}${r.id} | ${r.style}${r.resolved !== r.style ? ` → ${r.resolved}` : ''}${r.implemented ? '' : r.still ? ' *(Still QR)*' : ' *(plain for now)*'} | ${r.mode} | ${r.passed}/15 | ${r.jsqr} | ${r.zxing} | ${r.zbar} | ${tick(r.youtube)} | ${tick(r.phone)} | ${tick(r.pixel)} |`).join('\n')}
 `);
 console.log(`${results.length - fails.length}/${results.length} pass (${reused} unchanged, reused); wrote ${REPORT}`);
 if (fails.length) process.exit(1);
