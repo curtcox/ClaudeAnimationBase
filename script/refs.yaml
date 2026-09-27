@@ -172,6 +172,22 @@
 - { id: borg-queen, url: "https://memory-alpha.fandom.com/wiki/Borg_Queen", caption: "The Borg Queen", origin: added, at: T40.C.04.1, mode: shelf, style: cube-lattice, verified: "browser 2026-09-26" }
 - { id: rachni, url: "https://masseffect.fandom.com/wiki/Rachni", caption: "The Rachni Queen", origin: added, at: T40.C.04.2, mode: shelf, style: song-waves, verified: "browser 2026-09-26" }
 - { id: xenomorph-queen, url: "https://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)", caption: "The Alien Queen", origin: added, at: T40.C.04.3, mode: shelf, style: egg }
+# more for chapter 7: the idea of a space of minds, the stories every mind comes from, and how to read the boards
+- { id: mind-design-space, url: "https://www.lesswrong.com/posts/tnWRXkcDi5Tw9rzXw/the-design-space-of-minds-in-general", caption: "The design space of minds", origin: added, at: T35.U.01, mode: shelf, style: plain }
+- { id: conscious-exotica, url: "https://aeon.co/essays/beyond-humans-what-other-kinds-of-minds-might-be-out-there", caption: "Shanahan: Conscious Exotica", origin: added, at: T35.U.01, mode: shelf, style: plain }
+- { id: stanislaw-lem, url: "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem", caption: "Stanisław Lem", origin: added, at: T35.C.04, mode: shelf, style: ocean }
+- { id: vernor-vinge, url: "https://en.wikipedia.org/wiki/Vernor_Vinge", caption: "Vernor Vinge", origin: added, at: T35.C.07, mode: shelf, style: paw-prints }
+- { id: space-odyssey, url: "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)", caption: "2001: A Space Odyssey", origin: added, at: T35.C.08, mode: shelf, style: red-lens }
+- { id: mds, url: "https://en.wikipedia.org/wiki/Multidimensional_scaling", caption: "Mapping by distances", origin: added, at: T36.C.02, mode: shelf, style: plain }
+- { id: radar-chart, url: "https://en.wikipedia.org/wiki/Radar_chart", caption: "Radar charts", origin: added, at: T38.C.04, mode: shelf, style: plain }
+- { id: orson-scott-card, url: "https://en.wikipedia.org/wiki/Orson_Scott_Card", caption: "Orson Scott Card", origin: added, at: T39.U.01, mode: shelf, style: honeycomb }
+- { id: enders-game, url: "https://en.wikipedia.org/wiki/Ender%27s_Game", caption: "Ender's Game", origin: added, at: T39.C.01, mode: shelf, style: honeycomb }
+- { id: speaker-for-the-dead, url: "https://en.wikipedia.org/wiki/Speaker_for_the_Dead", caption: "Speaker for the Dead", origin: added, at: T39.C.01, mode: shelf, style: honeycomb }
+- { id: ansible, url: "https://en.wikipedia.org/wiki/Ansible", caption: "The ansible (philotic talk)", origin: added, at: T39.C.02, mode: shelf, style: plain }
+- { id: aliens-film, url: "https://en.wikipedia.org/wiki/Aliens_(film)", caption: "Aliens (1986)", origin: added, at: T39.C.02, mode: shelf, style: egg }
+- { id: first-contact, url: "https://en.wikipedia.org/wiki/Star_Trek:_First_Contact", caption: "Star Trek: First Contact", origin: added, at: T40.U.01, mode: shelf, style: cube-lattice }
+- { id: hive-mind, url: "https://en.wikipedia.org/wiki/Hive_mind", caption: "Hive minds", origin: added, at: T40.C.01, mode: shelf, style: honeycomb }
+- { id: mass-effect, url: "https://en.wikipedia.org/wiki/Mass_Effect", caption: "Mass Effect", origin: added, at: T40.C.04.2, mode: shelf, style: song-waves }
 
 # ---- 8 Contradictions --------------------------------------------------------------------------------------------
 - { id: nagel-bat, url: "https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F", caption: "What Is It Like to Be a Bat?", origin: added, ch: 8, at: "anything it's like to be me", mode: shelf, style: bat }

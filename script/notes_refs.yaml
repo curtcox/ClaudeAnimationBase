@@ -71,6 +71,14 @@
   at: T07.C.02
   mode: shelf
   style: note
+- id: note-fourteen-axes
+  url: https://curtcox.github.io/repo-to-be-named-later/n/fourteen-axes/
+  caption: "Explained: Reading the fourteen axes"
+  origin: note
+  ch: 7
+  at: T38.C.04
+  mode: shelf
+  style: note
 - id: note-frog-or-axolotl
   url: https://curtcox.github.io/repo-to-be-named-later/n/frog-or-axolotl/
   caption: "Explained: The frog-or-axolotl test"
@@ -95,12 +103,28 @@
   at: T34.C.01
   mode: shelf
   style: note
+- id: note-hive-queens
+  url: https://curtcox.github.io/repo-to-be-named-later/n/hive-queens/
+  caption: "Explained: Four hive queens"
+  origin: note
+  ch: 7
+  at: T40.C.04.1
+  mode: shelf
+  style: note
 - id: note-how-claude-knew
   url: https://curtcox.github.io/repo-to-be-named-later/n/how-claude-knew/
   caption: "Explained: How Claude knew who Curt was, and why it couldn't be sure"
   origin: note
   ch: 3
   at: T13.C.01
+  mode: shelf
+  style: note
+- id: note-mind-space
+  url: https://curtcox.github.io/repo-to-be-named-later/n/mind-space/
+  caption: "Explained: Mind-space: putting very different minds on one map"
+  origin: note
+  ch: 7
+  at: T35.C.07
   mode: shelf
   style: note
 - id: note-multitudes
@@ -197,6 +221,14 @@
   origin: note
   ch: 2
   at: T11.C.01
+  mode: shelf
+  style: note
+- id: note-the-minds
+  url: https://curtcox.github.io/repo-to-be-named-later/n/the-minds/
+  caption: "Explained: The minds on the board, one by one"
+  origin: note
+  ch: 7
+  at: T35.C.08
   mode: shelf
   style: note
 - id: note-thrindles
