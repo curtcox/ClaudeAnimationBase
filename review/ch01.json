@@ -1,0 +1,20 @@
+{
+ "chapter": 1,
+ "notes": [
+  {
+   "id": "nmujh32wrvg",
+   "t": 257,
+   "line": "T04.C.03.1",
+   "shot": "H",
+   "by": "claude",
+   "text": "The chapter check finds 10 places here where the picture holds still for over 8 seconds (this one is 12.8 s). Are held shots like this fine, or should every long line get more movement?",
+   "options": [
+    "Held shots are fine",
+    "Add movement"
+   ],
+   "status": "open",
+   "created": "2026-09-27T07:03:54.747Z",
+   "replies": []
+  }
+ ]
+}

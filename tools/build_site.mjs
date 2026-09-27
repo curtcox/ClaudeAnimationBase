@@ -81,19 +81,19 @@ ${marked.parse(n.body)}<h2>To read more</h2><ul>${links.map(k => `<li><a href="$
 const watched = [];
 for (const c of chapters) {
   const f = `out/watch/ch${pad(c.n)}.json`; if (!existsSync(f)) continue;
-  const { video, times } = JSON.parse(readFileSync(f, 'utf8')), ch = CH[chapters.indexOf(c)];
+  const { video, times, shots = [] } = JSON.parse(readFileSync(f, 'utf8')), ch = CH[chapters.indexOf(c)];
   if (!existsSync(video)) continue;
   mkdirSync(`${OUT}/watch`, { recursive: true }); copyFileSync(video, `${OUT}/watch/ch${pad(c.n)}.mp4`);
   const byId = new Map(allRefs.map(r => [r.id, r]));
   const items = times.map(x => { const r = byId.get(x.id); if (!r) return null;
     return { ...x, title: r.explains ? `Explained: ${r.explains.title}` : r.caption, url: r.explains ? `../${site.notes}${r.explains.id}/` : r.url, explainer: !!r.explains, origin: r.origin }; }).filter(Boolean);
-  const lines = ch.lines.filter(l => l.spoken).map(l => ({ t0: l.t0, t1: l.end, who: l.speaker, text: plain(l.text) }));
-  write(`${OUT}/watch/ch${pad(c.n)}.html`, watchPage(c, items, lines));
+  const lines = ch.lines.map(l => ({ id: l.id, t0: l.t0, t1: l.end, who: l.speaker, spoken: l.spoken, text: plain(l.text) }));
+  write(`${OUT}/watch/ch${pad(c.n)}.html`, watchPage(c, items, lines, shots));
   watched.push(c);
 }
 console.log(`${notes.length} explainers, ${chapters.length} chapter pages${watched.length ? `, watch pages for ${watched.map(c => c.n).join(', ')}` : ''} → ${OUT}/; script/notes_refs.yaml`);
 
-function watchPage(c, items, lines) {
+function watchPage(c, items, lines, shots) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Watch: ${esc(c.title)}</title><link rel="stylesheet" href="../style.css"><style>
 body{font-size:17px}main{max-width:none;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:1.2rem;padding:1rem}
@@ -101,10 +101,28 @@ video{width:100%;border-radius:10px;background:#000}#line{min-height:5.5em;margi
 #list{max-height:calc(100vh - 2rem);overflow:auto;position:sticky;top:1rem}.it{display:flex;gap:.6rem;padding:.45rem .6rem;border-radius:8px;margin:.15rem 0;border:1px solid transparent}
 .it.on{background:#FFF1CE;border-color:#E3C28A}.it.explainer a{font-weight:600}.t{font:600 .8rem system-ui;color:#6A6470;cursor:pointer;min-width:3.2em;padding-top:.2em}
 .badge{font:600 .7rem system-ui;color:#fff;background:#8A3A22;border-radius:4px;padding:0 .3em;margin-left:.3em}.badge.src{background:#6A6470}.badge.tr{background:#3A6FC9}
-@media (max-width:900px){main{grid-template-columns:1fr}#list{position:static;max-height:none}}</style></head><body><main>
+@media (max-width:900px){main{grid-template-columns:1fr}#list{position:static;max-height:none}}
+#stage{position:relative}#pinlayer{position:absolute;inset:0 0 3.2em 0;cursor:crosshair;display:none}#pinlayer.on{display:block;outline:3px dashed #3A6FC9;border-radius:10px}
+.pin{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border:3px solid #3A6FC9;border-radius:50%;box-shadow:0 0 0 3px #fff;pointer-events:none}
+#notes{margin-top:1rem}#notes h2{margin-top:.6rem}#bar{position:relative;height:18px;background:#EDE6D6;border-radius:9px;margin:.4rem 0 .8rem}
+#bar i{position:absolute;top:2px;width:6px;height:14px;margin-left:-3px;border-radius:3px;cursor:pointer}#bar i.claude{background:#A84D33}#bar i.curt{background:#3A6FC9}#bar i.resolved{background:#B8B2A8}
+#bar b{position:absolute;top:0;bottom:0;width:2px;background:#1E1A22}
+.compose{background:#fff;border:1px solid #D9D2C4;border-radius:10px;padding:.7rem}.compose textarea,.nt textarea{width:100%;box-sizing:border-box;font:17px/1.4 Georgia,serif;padding:.4rem;border:1px solid #CFC6B4;border-radius:6px}
+button{font:600 .85rem system-ui;padding:.35rem .7rem;border-radius:6px;border:1px solid #B8AE9C;background:#FBF8F0;cursor:pointer;margin:.3rem .3rem 0 0}button.go{background:#8A3A22;color:#fff;border-color:#8A3A22}
+.nt{border:1px solid #E0D8C8;border-radius:10px;padding:.5rem .7rem;margin:.5rem 0;background:#fff;overflow-wrap:anywhere}.nt.claude{border-left:5px solid #A84D33}.nt.curt{border-left:5px solid #3A6FC9}.nt.resolved{opacity:.55}.nt.near{box-shadow:0 0 0 3px #F2C14E}
+.who{font:700 .75rem system-ui;letter-spacing:.04em}.claude .who{color:#A84D33}.curt .who{color:#3A6FC9}.rep{margin:.3rem 0 0 1rem;font-size:.95rem}.rep.curt .who{color:#3A6FC9}.rep.claude .who{color:#A84D33}.rep .who{margin-right:.4em}
+.nt .opts button{font-weight:500}.small{font:.8rem system-ui;color:#6A6470}</style></head><body><main>
 <div><p class="crumbs"><a href="../">Frog or Axolotl</a> · <a href="../ch${pad(c.n)}/">chapter ${c.n} links</a> · watch</p><h1 style="margin-top:0">${c.n}. ${esc(c.title)}</h1>
-<video id="v" src="ch${pad(c.n)}.mp4" controls preload="metadata"></video><div id="line"></div>
-<p class="note">Highlighted links are on screen now. Click a time to jump there; links open in a new tab. <label><input type="checkbox" id="follow" checked> keep the list following the video</label></p></div>
+<div id="stage"><video id="v" src="ch${pad(c.n)}.mp4" controls preload="metadata"></video><div id="pinlayer"></div></div><div id="line"></div>
+<p class="note">Highlighted links are on screen now. Click a time to jump there; links open in a new tab. <label><input type="checkbox" id="follow" checked> keep the list following the video</label></p>
+<section id="notes" hidden><h2>Review notes</h2>
+<div id="bar" title="Notes: Claude's questions in red, yours in blue. Click one to jump there."></div>
+<div class="compose"><div class="small">Your note at <b id="at">0:00.0</b> <span id="atline"></span></div>
+<textarea id="txt" rows="3" placeholder="Type a note about this moment. The video pauses while you write."></textarea>
+<label class="small"><input type="checkbox" id="whole"> about the whole chapter, not this moment</label><br>
+<button id="pin" title="Then click the picture to mark the spot">📍 Point at something</button><button id="save" class="go">Save note</button> <span id="msg" class="small"></span></div>
+<p class="small"><label><input type="checkbox" id="stopq" checked> pause the video at Claude's questions</label></p>
+<div id="nlist"></div></section></div>
 <div id="list">${items.map((x, i) => `<div class="it${x.explainer ? ' explainer' : ''}" data-i="${i}"><span class="t" data-t="${x.t0}">${Math.floor(x.t0 / 60)}:${String(Math.floor(x.t0 % 60)).padStart(2, '0')}</span><span><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${x.explainer ? '<span class="badge">explained</span>' : x.origin === 'transcript' ? '<span class="badge tr">in the chat</span>' : '<span class="badge src">source</span>'}</span></div>`).join('')}</div>
 </main><script>
 const items = ${JSON.stringify(items.map(x => ({ t0: x.t0, t1: x.t1 })))}, lines = ${JSON.stringify(lines)};
@@ -114,12 +132,88 @@ let last = -1;
 function tick() {
   const t = v.currentTime; let first = null;
   rows.forEach((r, i) => { const on = t >= items[i].t0 && t <= items[i].t1; r.classList.toggle('on', on); if (on && !first) first = r; });
-  const l = lines.find(l => t >= l.t0 && t < l.t1);
+  const l = lines.find(l => l.spoken && t >= l.t0 && t < l.t1);
   line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : 'CLAUDE') + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
   if (first && follow.checked && first !== last) { first.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); last = first; }
   requestAnimationFrame(tick);
 }
 tick();
+</script>
+<script>
+// Review notes: only when served locally by tools/serve.mjs (the published site has no /api/notes, so this stays hidden)
+(async () => {
+  const CH = ${c.n}, lines = ${JSON.stringify(lines.map(l => ({ id: l.id, t0: l.t0 })))}, shots = ${JSON.stringify(shots)};
+  let doc; try { const r = await fetch('/api/notes?ch=' + CH); if (!r.ok) return; doc = await r.json(); } catch { return; }
+  const $ = id => document.getElementById(id), v = $('v'), esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const stamp = t => t == null ? 'whole chapter' : Math.floor(t / 60) + ':' + (t % 60).toFixed(1).padStart(4, '0');
+  const lineAt = t => { let c = null; for (const l of lines) if (l.t0 <= t) c = l; return c; }, shotAt = t => { let c = null; for (const s of shots) if (s.t0 <= t) c = s; return c; };
+  $('notes').hidden = false;
+  let noteT = 0, point = null, prevT = 0;
+  const post = async body => { const r = await fetch('/api/notes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ch: CH, ...body }) }); if (!r.ok) throw new Error((await r.json()).error); return r.json(); };
+  const reload = async () => { doc = await (await fetch('/api/notes?ch=' + CH)).json(); draw(); };
+  function showAt() {
+    const whole = $('whole').checked, l = lineAt(noteT), s = shotAt(noteT);
+    $('at').textContent = whole ? 'the whole chapter' : stamp(noteT);
+    $('atline').textContent = whole ? '' : [l && l.id, s && s.name && 'shot ' + s.name].filter(Boolean).join(' · ');
+  }
+  // the moment follows the video until you start writing; then the video pauses and the moment holds
+  v.addEventListener('timeupdate', () => { if (!$('txt').value.trim()) { noteT = v.currentTime; showAt(); } });
+  $('txt').addEventListener('focus', () => { v.pause(); if (!$('txt').value.trim()) { noteT = v.currentTime; showAt(); } });
+  $('whole').onchange = showAt;
+  // pointing: the next click on the picture marks the spot
+  const layer = $('pinlayer'), drawPin = () => { layer.innerHTML = point ? '<div class="pin" style="left:' + point[0] * 100 + '%;top:' + point[1] * 100 + '%"></div>' : ''; };
+  $('pin').onclick = () => { v.pause(); layer.classList.add('on'); layer.style.display = 'block'; $('msg').textContent = 'Click the spot in the picture.'; };
+  layer.onclick = e => { const r = v.getBoundingClientRect(); point = [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; layer.classList.remove('on'); drawPin(); $('msg').textContent = 'Marked. It saves with the note.'; $('txt').focus(); };
+  function still() {   // a small still of the frame, with the marked spot circled
+    try {
+      const c = document.createElement('canvas'); c.width = 640; c.height = Math.round(640 * v.videoHeight / v.videoWidth); const g = c.getContext('2d');
+      g.drawImage(v, 0, 0, c.width, c.height);
+      if (point) { g.strokeStyle = '#3A6FC9'; g.lineWidth = 4; g.beginPath(); g.arc(point[0] * c.width, point[1] * c.height, 18, 0, 7); g.stroke(); }
+      return c.toDataURL('image/jpeg', .8);
+    } catch { return undefined; }
+  }
+  $('save').onclick = async () => {
+    const text = $('txt').value.trim(); if (!text) { $('msg').textContent = 'Type a note first.'; return; }
+    const whole = $('whole').checked, l = lineAt(noteT), s = shotAt(noteT);
+    try {
+      await post({ note: { text, t: whole ? null : noteT, line: whole ? null : l && l.id, shot: whole ? null : s && s.name, point: whole ? undefined : point, frame: whole ? undefined : still() } });
+      $('txt').value = ''; point = null; drawPin(); layer.style.display = 'none'; $('msg').textContent = 'Saved.'; await reload();
+    } catch (e) { $('msg').textContent = 'Not saved: ' + e.message; }
+  };
+  function draw() {
+    $('bar').innerHTML = doc.notes.filter(n => n.t != null).map(n => '<i class="' + (n.status === 'resolved' ? 'resolved' : n.by) + '" style="left:' + (n.t / (v.duration || 1) * 100) + '%" data-t="' + n.t + '" title="' + esc(stamp(n.t) + ': ' + n.text.slice(0, 80)) + '"></i>').join('') + '<b id="head"></b>';
+    $('bar').querySelectorAll('i').forEach(el => el.onclick = () => { v.currentTime = +el.dataset.t; });
+    $('nlist').innerHTML = doc.notes.map(n => '<div class="nt ' + n.by + (n.status === 'resolved' ? ' resolved' : '') + '" data-id="' + n.id + '">'
+      + '<div><span class="who">' + (n.by === 'claude' ? 'CLAUDE ASKS' : 'CURT') + '</span> · <a href="#" class="jump" data-t="' + (n.t ?? '') + '">' + stamp(n.t) + '</a>'
+      + (n.line ? ' <span class="small">' + esc(n.line) + (n.shot ? ' · shot ' + esc(n.shot) : '') + '</span>' : '') + (n.status === 'resolved' ? ' <span class="small">✓ resolved</span>' : '') + '</div>'
+      + '<div>' + esc(n.text).replace(/\\n/g, '<br>') + '</div>'
+      + (n.options && n.options.length && n.status !== 'resolved' && !(n.replies || []).some(r => r.by === 'curt') ? '<div class="opts">' + n.options.map((o, i) => '<button data-opt="' + i + '">' + esc(o) + '</button>').join('') + '</div>' : '')
+      + (n.replies || []).map(r => '<div class="rep ' + r.by + '"><span class="who">' + (r.by === 'claude' ? 'CLAUDE' : 'CURT') + '</span>' + esc(r.text) + '</div>').join('')
+      + '<details><summary class="small">reply' + (n.by === 'curt' ? ', resolve or delete' : ' or resolve') + '</summary><textarea rows="2"></textarea>'
+      + '<button class="go rep-send">Reply</button><button class="res">' + (n.status === 'resolved' ? 'Reopen' : 'Resolve') + '</button>' + (n.by === 'curt' ? '<button class="del">Delete</button>' : '') + '</details></div>').join('')
+      || '<p class="small">No notes yet.</p>';
+    $('nlist').querySelectorAll('.nt').forEach(el => {
+      const id = el.dataset.id, n = doc.notes.find(x => x.id === id);
+      el.querySelector('.jump').onclick = e => { e.preventDefault(); if (n.t != null) { v.currentTime = n.t; v.pause(); } };
+      el.querySelectorAll('[data-opt]').forEach(b => b.onclick = async () => { await post({ id, reply: n.options[+b.dataset.opt] }); await reload(); });
+      el.querySelector('.rep-send').onclick = async () => { const t = el.querySelector('textarea').value.trim(); if (t) { await post({ id, reply: t }); await reload(); } };
+      el.querySelector('.res').onclick = async () => { await post({ id, status: n.status === 'resolved' ? 'open' : 'resolved' }); await reload(); };
+      const del = el.querySelector('.del'); if (del) del.onclick = async () => { if (confirm('Delete this note?')) { await post({ id, delete: true }); await reload(); } };
+    });
+  }
+  v.addEventListener('loadedmetadata', draw);
+  // as the video plays: the playhead on the bar, notes near now glow, and it stops at Claude's open questions
+  (function follow() {
+    const t = v.currentTime, head = $('head'); if (head && v.duration) head.style.left = (t / v.duration * 100) + '%';
+    document.querySelectorAll('.nt').forEach(el => { const n = doc.notes.find(x => x.id === el.dataset.id); el.classList.toggle('near', n && n.t != null && Math.abs(t - n.t) < 2); });
+    if (!v.paused && $('stopq').checked) {
+      const q = doc.notes.find(n => n.by === 'claude' && n.status !== 'resolved' && n.t != null && prevT < n.t && n.t <= t);
+      if (q) { v.pause(); const el = document.querySelector('.nt[data-id="' + q.id + '"]'); if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    }
+    prevT = t; requestAnimationFrame(follow);
+  })();
+  draw(); showAt();
+})();
 </script></body></html>
 `;
 }

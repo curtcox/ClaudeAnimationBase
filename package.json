@@ -14,7 +14,8 @@
     "draft": "node render.mjs --draft",
     "site": "node tools/build_site.mjs",
     "serve": "node tools/serve.mjs",
-    "watch": "node tools/watch.mjs"
+    "watch": "node tools/watch.mjs",
+    "review": "node tools/review.mjs"
   },
   "dependencies": {
     "p5": "^2.3.3",

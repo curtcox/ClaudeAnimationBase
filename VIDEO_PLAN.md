@@ -405,6 +405,11 @@ src/
     Chapter 2 takes about 6 minutes.
   - Each chapter's frames dir keeps a manifest of what drew each shot, so a re-render (draft or final) repaints only the
     shots whose code, timing or codes changed, and everything if the engine changed. `--shots=D,E` forces those shots.
+- **Review notes** (`npm run serve`, then a chapter's watch page): a notes panel under the video. A note is pinned to
+  the moment (with its line id and shot), can point at a spot in the picture, and saves a still of the frame. Claude's
+  questions sit on the same timeline with answer buttons, and the video can pause at each one. Everything lands in
+  `review/chNN.json` and the digest `review/NOTES.md`; `npm run review` lists what's open, and `npm run review -- ask`
+  posts a question. The panel only appears when served locally; the published site has no notes API.
 - **`studio.html`**: loads the chapter's generated timeline and scene script from `?chapter=`, and the scrubber
   spans that chapter.
 - **`config.js`**: `duration` comes from the chapter timeline. With no music, `bpm` is ~84, an unhurried pulse for

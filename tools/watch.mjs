@@ -1,7 +1,7 @@
 // watch.mjs: prepares a chapter's watch page (the video with its links listed in step) for the companion site.
 //   node tools/watch.mjs --chapter=2 [--video=out/ch02_draft.mp4]   (default: the chapter's newest render)
-// Asks the renderer's own layout pass when each code is on screen (refTimes() in src/timing.js), writes
-// out/watch/chNN.json, remembers which video to show, then rebuilds the site. Serve it with: npm run serve
+// Asks the renderer's own layout pass when each code is on screen (refTimes() in src/timing.js) and where each shot
+// starts (so review notes can name it), writes out/watch/chNN.json, remembers which video to show, then rebuilds the site. Serve it with: npm run serve
 import puppeteer from 'puppeteer-core';
 import { existsSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -20,9 +20,9 @@ const browser = await puppeteer.launch({ executablePath: chrome, headless: true,
 const page = await browser.newPage();
 await page.goto(pathToFileURL(resolve('studio.html')).href + `?render&chapter=${CH}`, { waitUntil: 'networkidle0' });
 await page.waitForFunction('window.ready === true', { timeout: 60000 });
-const times = await page.evaluate(() => refTimes());
+const { times, shots } = await page.evaluate(() => ({ times: refTimes(), shots: SHOTS.map(s => ({ t0: s[0], name: (s[1].name || '').replace(/^shot/, '') })) }));
 await browser.close();
 mkdirSync('out/watch', { recursive: true });
-writeFileSync(`out/watch/ch${CH}.json`, JSON.stringify({ video, times }, null, 1));
+writeFileSync(`out/watch/ch${CH}.json`, JSON.stringify({ video, times, shots }, null, 1));
 console.log(`chapter ${CH}: ${times.length} codes on screen; video ${video}`);
 execFileSync('node', ['tools/build_site.mjs'], { stdio: 'inherit' });
