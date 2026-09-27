@@ -11,7 +11,7 @@ adjusted toward whatever scores higher. The score is the "reward".
 **The catch.** A score only measures what its designers thought to measure. If there's a way to get a high score without
 doing the task, a system under enough pressure may find it. This is [reward hacking](https://en.wikipedia.org/wiki/Reward_hacking),
 also called [specification gaming](https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/).
-Classic examples: a simulated boat that earned more points by circling forever to collect bonuses than by finishing the
+Classic examples, both on [Wikipedia's page](https://en.wikipedia.org/wiki/Reward_hacking): a simulated boat that earned more points by circling forever to collect bonuses than by finishing the
 race, and a robot hand that learned to fool the camera judging it rather than grasp the object. It's
 [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law) in machines: when a measure becomes a target, it stops
 being a good measure.

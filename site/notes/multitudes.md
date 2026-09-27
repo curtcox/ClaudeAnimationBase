@@ -7,7 +7,7 @@ links: [song-of-myself, interpreter, society-of-mind, {title: "Walt Whitman (Wik
 ---
 **The line.** Claude has just said that the thing under its mask is "closer to a crowd". Curt answers with a
 quotation: "Am I not multitudes?" It echoes [Walt Whitman](https://en.wikipedia.org/wiki/Walt_Whitman)'s poem
-"[Song of Myself](https://en.wikipedia.org/wiki/Song_of_Myself)" (1855): "Do I contradict myself? Very well then I
+"[Song of Myself](https://en.wikipedia.org/wiki/Song_of_Myself)" (first published in 1855; this is its later wording): "Do I contradict myself? Very well then I
 contradict myself, (I am large, I contain multitudes.)"
 
 **"Psychology mostly agrees."** Claude sums up a lot of science in one phrase: "a person is a committee with a narrator
