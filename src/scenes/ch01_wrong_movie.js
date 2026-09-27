@@ -32,7 +32,7 @@
     inkLine([[CW, -20], [CW, H + 20]], 2);
   }
   // the ape's face and the villain's balloon, as world points (for the cameras)
-  const APE = P(...MAD.faces.ape), VILLAIN_BOX = P(1590, 255), RIGHT = P(1545, 520);
+  const APE = P(...MAD.faces.ape), VILLAIN_BOX = P(1640, 270), RIGHT = P(1545, 520);
 
   // ---------- painters for the cutaways ----------
   // a 1972 film-poster pastiche for the upper monitor: an ape silhouette raising a fist against a red sky (no likeness)

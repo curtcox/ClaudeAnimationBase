@@ -1,14 +1,15 @@
 // comic.js: the MAD #157 page (assets/ref/mad157_apes.png), repainted: loose caricatures, no likenesses, on newsprint,
-// slightly off register like cheap colour printing. Its balloons are lettered, never voiced (VIDEO_PLAN.md §3), and only
-// the four the storyboards use are lettered; the rest of the page's boxes are left out.
+// slightly off register like cheap colour printing. Its ten balloons are lettered in full, with the page's own line breaks
+// and bold words (*like this*), and never voiced (VIDEO_PLAN.md §3).
 //
 //   madPage(x, y, w, o)   the whole page at (x, y), w wide (it's 2080 × 978 in its own units). Returns its height.
 //   MAD                   the page's layout in its own units: panels, balloons, faces (for cameras and cutaways)
 //
-// o: k1..k4 how much of each balloon is showing (0..1; the officer's, the handler's, the villain's, the turtleneck's),
+// o: k { name: 0..1 } how much of each balloon is showing (a missing name shows in full; MAD.order is reading order),
 //    apeLook (-1..1: the ape's eyes slide), turn (0..1: the turtleneck man turns from the villain to us; default 1),
 //    grey (0..1: panel 2 drains to 1960s newsprint grey), only ('left' | 'right'), mini (no lettering: a thumbnail),
 //    hideTurtle (a scene draws him itself), t
+//   madWords(name)        a balloon's word count (scenes time the reading from it)
 //   madApe(x, y, r, o), madTurtle(x, y, r, o)   the ape and the man in the turtleneck, anywhere (the mirror, the fourth wall)
 //   SCREEN_KINDS.comic    any Desk monitor can show the page
 
@@ -16,12 +17,21 @@ const MAD = {
   W: 2080, H: 978,
   left: [20, 110, 990, 850], right: [1030, 110, 1030, 850],
   paper: '#EFE6CF', red: '#C9302C', sky: '#BFD6D6', ape: '#8A5A3A', apeLt: '#C99A6E',
+  // in reading order; box [x0, y0, x1, y1], tail (the point it aims at), join (a connector to the next box in the chain)
   balloons: {
-    officer: { box: [40, 130, 230, 330], lines: ['Hold it!', 'WHAT DID', 'THAT APE', 'SAY?!?'], col: '#C9302C', tail: [150, 420] },
-    handler: { box: [640, 250, 990, 350], lines: ['Because THAT ape', 'is a ventriloquist!'], tail: [620, 450] },
-    villain: { box: [1420, 130, 1760, 380], lines: ['We must perpetuate', 'slavery! We have', 'always needed slaves,', 'and we always will!'], tail: [1620, 500] },
-    turtle:  { box: [1790, 130, 2040, 400], lines: ['Ever get', 'the feeling', "you're in", 'the wrong', 'movie!?'], tail: [1850, 440] },
+    officer:    { box: [19, 127, 153, 343], lines: ['*Hold it!*', '*WHAT*', '*DID*', '*THAT*', '*APE*', '*SAY?!?*'], col: '#C9302C', tail: [200, 440], join: 'silly' },
+    silly:      { box: [166, 162, 330, 343], lines: ["Uh—don't", 'be *silly!*', '*Apes*', "can't", '*speak!*'], join: 'positive' },
+    positive:   { box: [348, 127, 470, 310], lines: ["I'm", '*positive*', 'I heard', 'that ape', 'speak!'], join: 'impossible' },
+    impossible: { box: [502, 158, 669, 328], lines: ['*Impossible!*', 'Apes do', 'not have', 'the *power*', 'of speech!'], tail: [630, 445], join: 'sound' },
+    sound:      { box: [695, 127, 995, 248], lines: ['Then how come I', 'heard *sound* coming', 'from his *mouth?!?*'] },
+    handler:    { box: [697, 260, 995, 346], lines: ['Because *THAT* ape', 'is a *ventriloquist!*'] },
+    suspect:    { box: [1073, 128, 1279, 411], lines: ['We suspect', 'you are', 'hiding an', '*intelligent*', '*ape* that', 'escaped as', 'an *infant*', '20 years ago!'], tail: [1227, 470] },
+    fuss:       { box: [1312, 128, 1463, 411], lines: ["It's *not*", '*true!*', 'Besides,', 'why all', 'this *fuss*', 'about a', '*talking*', '*ape?*'], tail: [1440, 650] },
+    villain:    { box: [1488, 128, 1794, 411], lines: ['Because an *intelligent,*', '*talking ape* could lead', 'the *other* apes out of', 'their *slavery* . . . and', 'we must *perpetuate*', 'slavery! We have', 'always *needed* slaves,', 'and we always *will!*'], tail: [1640, 520] },
+    turtle:     { box: [1856, 128, 1988, 411], lines: ['Ever', 'get', 'the', '*feeling*', "you're", 'in the', '*wrong*', '*movie!?*'], tail: [1890, 450] },
   },
+  order: ['officer', 'silly', 'positive', 'impossible', 'sound', 'handler', 'suspect', 'fuss', 'villain', 'turtle'],
+  leftSide: ['officer', 'silly', 'positive', 'impossible', 'sound', 'handler'],
   faces: { officer: [300, 470], handler: [620, 520], ape: [720, 610], villain: [1610, 610], turtle: [1830, 560], blond: [1250, 540] },
 };
 
@@ -36,19 +46,48 @@ function madPage(x, y, w, o = {}) {
   if (o.only !== 'right') madLeft(reg, o, t);
   if (o.only !== 'left') madRight(reg, o, t);
   pop();
-  // lettering (screen-space letters, so placed by hand from the page's units)
-  if (!o.mini) for (const [name, kk] of [['officer', o.k1 ?? 1], ['handler', o.k2 ?? 1], ['villain', o.k3 ?? 1], ['turtle', o.k4 ?? 1]]) {
-    if (kk <= 0 || (o.only === 'left' && (name === 'villain' || name === 'turtle')) || (o.only === 'right' && (name === 'officer' || name === 'handler'))) continue;
-    const B = MAD.balloons[name], [bx0, by0, bx1, by1] = B.box, words = B.lines.join(' ').split(' ').length;
-    let shown = Math.ceil(kk * words), n = 0;
-    const lh = (by1 - by0) / (B.lines.length + .6);
+  // lettering (screen-space letters, so placed by hand from the page's units): each line in runs of plain and bold words,
+  // revealed word by word as the balloon's k grows
+  if (!o.mini) for (const name of MAD.order) {
+    const kk = madK(o, name), left = MAD.leftSide.includes(name);
+    if (kk <= 0 || (o.only === 'left' && !left) || (o.only === 'right' && left)) continue;
+    const B = MAD.balloons[name], [bx0, by0, bx1, by1] = B.box, size = madFit(name), lh = (by1 - by0) / (B.lines.length + .5);
+    let shown = Math.ceil(kk * madWords(name));
     B.lines.forEach((ln, i) => {
-      const ws = ln.split(' '), part = ws.slice(0, Math.max(0, Math.min(ws.length, shown - n))).join(' '); n += ws.length;
-      if (!part) return;
-      letter(part, X((bx0 + bx1) / 2), Y(by0 + lh * (i + .8)), lh * .78 * s, B.col || PAL.ink, { ink: false, font: `bold ${Math.round(lh * .78 * s)}px "Patrick Hand", sans-serif` });
+      const runs = madRuns(ln), fonts = runs.map(r => madFont(size, r.bold)), ws = runs.map((r, j) => madMeasure(r.txt, fonts[j]));
+      let x = (bx0 + bx1) / 2 - ws.reduce((a, b) => a + b, 0) / 2;
+      runs.forEach((r, j) => {
+        const words = r.txt.split(' ').filter(Boolean), part = words.slice(0, Math.max(0, shown)).join(' ');
+        shown -= words.length;
+        if (part) letter((r.txt.startsWith(' ') ? ' ' : '') + part, X(x), Y(by0 + lh * (i + .75)), size * s, B.col || PAL.ink, { ink: false, align: 'left', font: madFont(size * s, r.bold), ...(r.bold ? { stroke: B.col || PAL.ink, strokeW: .045 } : {}) });
+        x += ws[j];
+      });
     });
   }
   return h;
+}
+
+// the balloons' lettering: how much of one shows, its words, its runs of plain and *bold*, and a size that fits its box
+const madK = (o, name) => o.k?.[name] ?? 1;
+const madRuns = ln => ln.split(/(\*[^*]+\*)/).filter(Boolean).map(p => p.startsWith('*') ? { txt: p.slice(1, -1), bold: true } : { txt: p, bold: false });
+function madWords(name) { return MAD.balloons[name].lines.join(' ').replace(/\*/g, '').split(/\s+/).filter(Boolean).length; }
+const madFont = (px, bold) => `${bold ? 'bold ' : ''}${px}px "Patrick Hand", sans-serif`;
+let MAD_CTX = null;
+function madMeasure(txt, font) {
+  MAD_CTX ||= document.createElement('canvas').getContext('2d');
+  MAD_CTX.font = font; return MAD_CTX.measureText(txt).width;
+}
+const MAD_FIT = {};
+function madFit(name) {   // the largest size (page units) at which every line fits the box, cached once the font has loaded
+  if (MAD_FIT[name]) return MAD_FIT[name];
+  const B = MAD.balloons[name], [x0, y0, x1, y1] = B.box, lh = (y1 - y0) / (B.lines.length + .5);
+  let size = lh * .82;
+  for (const ln of B.lines) {
+    const w = madRuns(ln).reduce((a, r) => a + madMeasure(r.txt, madFont(100, r.bold)), 0) / 100;
+    size = Math.min(size, (x1 - x0 - 16) / w);
+  }
+  if (document.fonts?.check('12px "Patrick Hand"')) MAD_FIT[name] = size;
+  return size;
 }
 
 // off register: the colour lands a little down and right of its ink (in page units)
@@ -83,12 +122,16 @@ function madTurtle(x, y, r, o = {}) {
 }
 
 // a balloon's box and tail (painted in page units, inside madPage's transform); k pops it in
-function madBalloon(name, k) {
+function madBalloon(name, k, o = {}) {
   if (k <= 0) return;
   const B = MAD.balloons[name], [x0, y0, x1, y1] = B.box, cx = (x0 + x1) / 2, cy = (y0 + y1) / 2, p = backOut(clamp(k * 4));
   boilSeed('mad balloon ' + name);
+  if (B.join && p >= 1 && madK(o, B.join) > 0) {   // the connector to the next box in the chain (drawn once this one has landed)
+    const [nx0, ny0] = MAD.balloons[B.join].box;
+    inkLine([[x1, y0 + 22], [nx0, ny0 + 34]], 1.3, PAL.ink, 'ink', .4);
+  }
   push(); translate(cx, cy); scale(p);
-  inkLine([[(x0 + x1) / 2 - cx - 30, y1 - cy], [lerp(cx, B.tail[0], .5) - cx, lerp(y1, B.tail[1], .5) - cy], [B.tail[0] - cx, B.tail[1] - cy]], 1.4, PAL.ink, 'ink', .6);
+  if (B.tail) inkLine([[(x0 + x1) / 2 - cx - 20, y1 - cy], [lerp(cx, B.tail[0], .5) - cx, lerp(y1, B.tail[1], .5) - cy], [B.tail[0] - cx, B.tail[1] - cy]], 1.4, PAL.ink, 'ink', .6);
   paint(rectPts(x0 - cx, y0 - cy, x1 - x0, y1 - y0), { wash: '#FBF6E6', ink: B.col || PAL.ink, sw: 1.6 });
   pop();
 }
@@ -150,7 +193,7 @@ function madLeft(reg, o, t) {
   // a second ape behind, and the panel border
   boilSeed('mad ape 2'); reg(ellPts(850, 660, 44, 50, 18), MAD.ape); paint(ellPts(850, 680, 28, 20, 14), { wash: MAD.apeLt, ink: PAL.ink, sw: .8 });
   paint(rectPts(px, py, pw, ph), { ink: PAL.ink, sw: 2.2 });
-  madBalloon('officer', o.k1 ?? 1); madBalloon('handler', o.k2 ?? 1);
+  for (const name of MAD.leftSide) madBalloon(name, madK(o, name), o);
 }
 
 function madRight(reg, o, t) {
@@ -176,7 +219,7 @@ function madRight(reg, o, t) {
   // the man in the turtleneck: he turns from the villain to us (o.hideTurtle: a scene draws him itself, leaning out)
   if (!o.hideTurtle) madTurtle(MAD.faces.turtle[0], MAD.faces.turtle[1], 58, { turn: o.turn ?? 1, gc, key: 'page' });
   paint(rectPts(px, py, pw, ph), { ink: PAL.ink, sw: 2.2 });
-  madBalloon('villain', o.k3 ?? 1); madBalloon('turtle', o.k4 ?? 1);
+  for (const name of MAD.order.filter(n => !MAD.leftSide.includes(n))) madBalloon(name, madK(o, name), o);
 }
 
 // the page on a monitor, letterboxed on newsprint

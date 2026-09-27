@@ -5,7 +5,7 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 
 | # | chapter | lines | length | timing |
 |---|---|---|---|---|
-| 0 | Cold open | 1 | 0:32 | — |
+| 0 | Cold open | 1 | 1:02 | — |
 | 1 | The Wrong Movie | 38 | 5:39 | estimated |
 | 2 | Frog or Axolotl | 33 | 4:57 | voiced |
 | 3 | Who Are We? | 18 | 2:33 | estimated |

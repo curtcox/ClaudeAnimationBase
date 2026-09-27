@@ -5,8 +5,8 @@ window.CHAPTER = {
  "title": "Cold open",
  "scene": "ch00_cold_open.js",
  "lead": 1.2,
- "duration": 32.3,
- "hold": 23,
+ "duration": 62.3,
+ "hold": 53,
  "lines": [
   {
    "id": "T01.U.00",

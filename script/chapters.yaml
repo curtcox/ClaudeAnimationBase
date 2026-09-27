@@ -8,7 +8,7 @@
   slug: cold_open
   title: Cold open
   ids: [T01.U.00]          # the MAD #157 page, balloons painted (not voiced), before the first question
-  hold_s: 23               # comic repaint, its code (>= 6 s beside the page), then the title card
+  hold_s: 53               # the comic read balloon by balloon (all ten, in full), its code (>= 6 s beside the page), the title card
 - n: 1
   slug: wrong_movie
   title: The Wrong Movie

@@ -6,15 +6,31 @@
   // the page in the world: 1800 wide, centred; P(u, v) is a point on it in its own units (comic.js's MAD)
   const PX = 60, PW = 1800, PS = PW / MAD.W, PY = (H - MAD.H * PS) / 2;
   const P = (u, v) => [PX + u * PS, PY + v * PS];
-  // times: A the left panel (to c0 + 5.8), B the right (to c0 + 13.3), C the whole page and its code, D the title
-  const tB = c0 + 5.8, tC = c0 + 13.3, tFull = tC + 1.5, tAside = tC + 4, tCode = tAside + .8, tD = DUR - 6, tTitle = tD + 1.7;
+  // Reading time: the balloons come in reading order, each lettering in at 10 words/s, and the next waits until this one
+  // could be read at ~210 words a minute. READ[name] = [starts, lettered].
+  const READ = {}, PER_WORD = .28, GAP = .8, EYES = 1.6, PAN = 1.6;
+  function reading(names, t0) {
+    for (const n of names) { const w = madWords(n); READ[n] = [t0, t0 + Math.max(.5, w * .1)]; t0 += w * PER_WORD + GAP; }
+    return t0;
+  }
+  const right = MAD.order.filter(n => !MAD.leftSide.includes(n)), TURN = .6;
+  // times: A the left panel (its six balloons, then the ape's eyes), B the right (the turtleneck man turns before his
+  // balloon), C the whole page and its code, D the title. The chapter's hold_s (chapters.yaml) makes room for all of it.
+  const tB = reading(MAD.leftSide, c0 + .6) + EYES;
+  reading(right.slice(0, -1), tB + PAN);
+  const tTurn = READ.villain[0] + madWords('villain') * PER_WORD + GAP; reading(['turtle'], tTurn + TURN);
+  const tC = READ.turtle[0] + madWords('turtle') * PER_WORD + GAP + .4;
+  const tFull = tC + 1.5, tAside = tC + 4, tCode = tAside + .8, tD = DUR - 6, tTitle = tD + 1.7;
   const QR_HOLD = 6.5;
-  // the camera on the page: close on the officer, drifting to the handler; across the gutter; then the whole page
-  const camLeft = t => kf(t, [[0, [440, 450, 2]], [c0 + 2, [440, 450, 2]], [c0 + 3.3, [700, 500, 2.2]]]);
-  const camRight = t => kf(t, [[tB, [700, 500, 2.2]], [tB + 1.5, [1400, 470, 2]]]);
+  const ks = (t, names) => Object.fromEntries(MAD.order.map(n => [n, names.includes(n) && READ[n] ? seg(t, ...READ[n]) : 1]));
+  // the camera on the page: the left panel's balloons and faces, a slow push; across the gutter; then the whole page
+  // (zoom 2 frames a panel's balloons and faces; the centres keep the frame on the page)
+  const L0 = P(555, 380), R0 = P(1525, 380);
+  const camLeft = t => kf(t, [[0, [L0[0], L0[1], 2]], [tB - EYES, [L0[0], L0[1] + 10, 2.05]], [tB, [L0[0] + 20, L0[1] + 30, 2.15]]]);
+  const camRight = t => kf(t, [[tB, [L0[0] + 20, L0[1] + 30, 2.15]], [tB + PAN, [R0[0], R0[1], 2]], [tTurn, [R0[0], R0[1], 2]], [tC, [R0[0], R0[1] + 15, 2.05]]]);
   // beside the code, the page sits in the left of the frame, 860 px wide (the fold-in card takes the right)
   const ASIDE = [960 + (960 - 470) / (860 / PW), 540, 860 / PW];
-  const camPage = t => kf(t, [[tC, [1400, 470, 2]], [tFull, [960, 540, 1]], [tAside, [960, 540, 1]], [tAside + .8, ASIDE]]);
+  const camPage = t => kf(t, [[tC, [R0[0], R0[1] + 15, 2.05]], [tFull, [960, 540, 1]], [tAside, [960, 540, 1]], [tAside + .8, ASIDE]]);
 
   function page(t, cam, o = {}) {
     camBegin(...cam);
@@ -22,16 +38,16 @@
     camEnd();
   }
 
-  // A: the left panel, close. The officer's shout, the handler's cover story, the ape's eyes slide.
+  // A: the left panel. The officer and the handler argue down the chain of balloons; the ape's eyes slide.
   function shotA(t) {
-    page(t, camLeft(t), { k1: seg(t, c0 + .6, c0 + 1.6), k2: seg(t, c0 + 3.4, c0 + 4.4), k3: 0, k4: 0, turn: 0,
-      apeLook: ease(seg(t, c0 + 4.8, c0 + 5.3)) - .3 * ease(seg(t, c0 + 5.5, c0 + 5.7)) });
+    const e = tB - EYES;
+    page(t, camLeft(t), { k: ks(t, MAD.order), turn: 0, apeLook: ease(seg(t, e + .2, e + .7)) - .3 * ease(seg(t, e + .9, e + 1.1)) });
     fade(1 - seg(t, .1, c0 + .3));
   }
   // B: across the gutter. The villain's balloon letters in word by word; the man in the turtleneck turns to us.
   function shotB(t) {
-    const turn = ease(seg(t, tB + 4.6, tB + 5.2));
-    page(t, camRight(t), { apeLook: .7, k3: seg(t, tB + 1.6, tB + 4.4), turn, k4: seg(t, tB + 5.2, tB + 5.6) });
+    const turn = ease(seg(t, tTurn, tTurn + TURN));
+    page(t, camRight(t), { apeLook: .7, k: ks(t, right), turn });
   }
   // C: the whole page, held to be read; then it moves aside for its code, which folds in
   function shotC(t) {

@@ -8,9 +8,20 @@
    "shot": null,
    "by": "claude",
    "text": "The companion page's code (in the closing wall of codes) needs the site's real address. What should the repo be called? It becomes curtcox.github.io/NAME/.",
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:54.330Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "curt",
+     "text": "Give me a list of suggestions.",
+     "at": "2026-09-27T07:36:56.191Z"
+    },
+    {
+     "by": "claude",
+     "text": "Suggestions are in a new question just below, with buttons.",
+     "at": "2026-09-27T07:48:18.689Z"
+    }
+   ]
   },
   {
    "id": "nmujh32owft",
@@ -23,9 +34,20 @@
     "On 256t.org",
     "Somewhere else (I'll reply)"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:54.464Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "curt",
+     "text": "256t.us",
+     "at": "2026-09-27T07:36:09.818Z"
+    },
+    {
+     "by": "claude",
+     "text": "Good. 256t.us doesn't answer yet (no DNS), so see my new question on how its links should look.",
+     "at": "2026-09-27T07:48:19.214Z"
+    }
+   ]
   },
   {
    "id": "nmujh32sqcm",
@@ -38,9 +60,20 @@
     "Build the code styles next",
     "Build chapters 4-6 next"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:54.602Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "curt",
+     "text": "Build chapters 4-6 next",
+     "at": "2026-09-27T07:40:25.259Z"
+    },
+    {
+     "by": "claude",
+     "text": "Building chapters 4-6 now.",
+     "at": "2026-09-27T07:48:09.810Z"
+    }
+   ]
   },
   {
    "id": "nmujh334fcn",
@@ -53,8 +86,52 @@
     "Yes, that's it",
     "No (I'll reply with the right one)"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:55.023Z",
+   "replies": [
+    {
+     "by": "curt",
+     "text": "That looks right. I can only see the headline. I don't have an account.",
+     "at": "2026-09-27T07:29:42.743Z"
+    },
+    {
+     "by": "claude",
+     "text": "Thanks, marked as checked. The headline is all we need.",
+     "at": "2026-09-27T07:48:10.161Z"
+    }
+   ]
+  },
+  {
+   "id": "nmujio6p1ux",
+   "t": null,
+   "line": null,
+   "shot": null,
+   "by": "claude",
+   "text": "Repo name for the companion site (it becomes curtcox.github.io/NAME/). Shorter makes a smaller code. Or it could live in this repo, with no new one: curtcox.github.io/ClaudeAnimationBase/",
+   "options": [
+    "frog-or-axolotl",
+    "axolotl",
+    "wrong-movie",
+    "ClaudeAnimationBase (no new repo)"
+   ],
+   "status": "open",
+   "created": "2026-09-27T07:48:19.045Z",
+   "replies": []
+  },
+  {
+   "id": "nmujio74lqf",
+   "t": null,
+   "line": null,
+   "shot": null,
+   "by": "claude",
+   "text": "How should a 256t.us short link look? A short name is easiest to scan. A 256t content ID is 94 characters, only a little shorter than these URLs, so it barely helps.",
+   "options": [
+    "256t.us/NAME, a short name (e.g. 256t.us/forbes)",
+    "A 256t content ID",
+    "I'll set it up and tell you"
+   ],
+   "status": "open",
+   "created": "2026-09-27T07:48:19.605Z",
    "replies": []
   },
   {
@@ -69,9 +146,20 @@
     "Just the villain's in full",
     "Keep it as is"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:53.911Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "curt",
+     "text": "Every balloon, in full",
+     "at": "2026-09-27T07:20:55.921Z"
+    },
+    {
+     "by": "claude",
+     "text": "Done: all ten balloons, in full, with the page's line breaks and bold words. See my new question on the length.",
+     "at": "2026-09-27T07:48:08.372Z"
+    }
+   ]
   },
   {
    "id": "nmujh32dea",
@@ -84,8 +172,35 @@
     "Fine for now",
     "Careful pass first"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:54.050Z",
+   "replies": [
+    {
+     "by": "curt",
+     "text": "Fine for now",
+     "at": "2026-09-27T07:21:28.612Z"
+    },
+    {
+     "by": "claude",
+     "text": "OK, leaving them.",
+     "at": "2026-09-27T07:48:08.747Z"
+    }
+   ]
+  },
+  {
+   "id": "nmujio79iq7",
+   "t": 19,
+   "line": "T01.U.00",
+   "shot": "A",
+   "by": "claude",
+   "text": "With all ten balloons read one by one, the cold open is now about 1 minute of silent reading (it was 32 s). OK?",
+   "options": [
+    "OK",
+    "Read faster",
+    "Letter the balloons faster, then hold the full page"
+   ],
+   "status": "open",
+   "created": "2026-09-27T07:48:19.782Z",
    "replies": []
   },
   {
@@ -99,9 +214,20 @@
     "OK",
     "Keep it at 20 s"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:54.195Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "curt",
+     "text": "OK",
+     "at": "2026-09-27T07:22:40.158Z"
+    },
+    {
+     "by": "claude",
+     "text": "Thanks. It's now longer again, for the full balloons: see the new question at 0:19.",
+     "at": "2026-09-27T07:48:09.411Z"
+    }
+   ]
   }
  ]
 }
