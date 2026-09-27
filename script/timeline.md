@@ -6,19 +6,19 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 | # | chapter | lines | length | timing |
 |---|---|---|---|---|
 | 0 | Cold open | 1 | 1:02 | — |
-| 1 | The Wrong Movie | 38 | 5:39 | estimated |
+| 1 | The Wrong Movie | 38 | 5:01 | voiced |
 | 2 | Frog or Axolotl | 33 | 4:57 | voiced |
-| 3 | Who Are We? | 18 | 2:33 | estimated |
-| 4 | The Echo | 32 | 5:03 | estimated |
-| 5 | The Dish of the Day | 20 | 4:53 | estimated |
-| 6 | Thrindles | 30 | 6:14 | estimated |
-| 7 | Mind-Space | 47 | 5:38 | estimated |
-| 8 | Contradictions | 24 | 3:25 | estimated |
-| 9 | Shells | 32 | 4:29 | estimated |
-| 10 | The Router | 12 | 2:38 | estimated |
-| 11 | July | 27 | 5:19 | estimated |
-| 12 | Limits | 26 | 5:51 | estimated |
-| 13 | Foom | 35 | 5:13 | estimated |
-| 14 | The Pundits | 37 | 6:02 | estimated |
-| 15 | The Compass | 38 | 6:18 | estimated |
-| 16 | Coda | 3 | 1:20 | estimated |
+| 3 | Who Are We? | 18 | 2:18 | voiced |
+| 4 | The Echo | 32 | 4:35 | voiced |
+| 5 | The Dish of the Day | 20 | 4:22 | voiced |
+| 6 | Thrindles | 30 | 5:57 | voiced |
+| 7 | Mind-Space | 47 | 5:30 | voiced |
+| 8 | Contradictions | 24 | 3:08 | voiced |
+| 9 | Shells | 32 | 4:21 | voiced |
+| 10 | The Router | 12 | 2:27 | voiced |
+| 11 | July | 27 | 4:58 | voiced |
+| 12 | Limits | 26 | 5:39 | voiced |
+| 13 | Foom | 35 | 5:07 | voiced |
+| 14 | The Pundits | 37 | 5:42 | voiced |
+| 15 | The Compass | 38 | 6:31 | voiced |
+| 16 | Coda | 3 | 1:19 | voiced |

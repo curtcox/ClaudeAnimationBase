@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Limits",
  "scene": "ch12_limits.js",
  "lead": 1.2,
- "duration": 351.05,
+ "duration": 339.35,
  "hold": 0,
  "lines": [
   {
@@ -14,188 +14,188 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 11.325,
-   "end": 12.225,
+   "t1": 13.004,
+   "end": 13.904,
    "text": "I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magicarp, yet you see my typos. So, does tokenization really play a role?",
    "speech": "I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magicarp, yet you see my typos. So, does tokenization really play a role?",
    "refs": [],
    "proof": [
     "Solid Gold [Magicarp→Magikarp]"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T57.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 12.225,
-   "t1": 15.6,
-   "end": 15.95,
+   "t0": 13.904,
+   "t1": 16.881,
+   "end": 17.231,
    "text": "Yes, but the two tasks lean on it differently.",
    "speech": "Yes, but the two tasks lean on it differently.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T57.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 15.95,
-   "t1": 33.575,
-   "end": 33.925,
+   "t0": 17.231,
+   "t1": 32.787,
+   "end": 33.137,
    "text": "**Spotting typos is easy.** A misspelling breaks into unusual token pieces, and odd pieces in a familiar context stand out. It's like noticing a wrong note in a song you know without reading the sheet music. That's also how I'd notice that it's \"Magikarp,\" with a k.",
    "speech": "Spotting typos is easy. A misspelling breaks into unusual token pieces, and odd pieces in a familiar context stand out. It's like noticing a wrong note in a song you know without reading the sheet music. That's also how I'd notice that it's \"Magikarp,\" with a k.",
    "refs": [
     "tokenizers",
     "magikarp"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T57.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 33.925,
-   "t1": 54.925,
-   "end": 55.275,
+   "t0": 33.137,
+   "t1": 52.267,
+   "end": 52.617,
    "text": "**Counting letters is hard.** I see chunks, not characters. I learned the spelling inside each chunk only indirectly, and counting needs exact character-level bookkeeping across chunk boundaries. It's like counting the e's in a word you only ever saw as a whole shape. (Newer models are much better at it, partly by spelling words out first.)",
    "speech": "Counting letters is hard. I see chunks, not characters. I learned the spelling inside each chunk only indirectly, and counting needs exact character-level bookkeeping across chunk boundaries. It's like counting the e's in a word you only ever saw as a whole shape. (Newer models are much better at it, partly by spelling words out first.)",
    "refs": [
     "bpe",
     "note-tokens"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T57.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 55.275,
-   "t1": 68.775,
-   "end": 69.375,
+   "t0": 52.617,
+   "t1": 64.926,
+   "end": 65.526,
    "text": "**SolidGoldMagikarp was a different failure.** It was a token that existed in the vocabulary but almost never appeared in training, so the model had essentially no learned meaning for it. The ghost word triggered weird output.",
    "speech": "SolidGoldMagikarp was a different failure. It was a token that existed in the vocabulary but almost never appeared in training, so the model had essentially no learned meaning for it. The ghost word triggered weird output.",
    "refs": [
     "solidgoldmagikarp",
     "glitch-token"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T58.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 69.375,
-   "t1": 71.625,
-   "end": 72.525,
+   "t0": 65.526,
+   "t1": 67.964,
+   "end": 68.864,
    "text": "How about the car wash problem?",
    "speech": "How about the car wash problem?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T58.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 72.525,
-   "t1": 85.65,
-   "end": 86,
+   "t0": 68.864,
+   "t1": 78.997,
+   "end": 79.347,
    "text": "If you mean the one I think you mean: \"I want to wash my car. The car wash is 50 meters away. Should I walk or drive?\" Many models said walk, because it's so close.",
    "speech": "If you mean the one I think you mean: \"I want to wash my car. The car wash is 50 meters away. Should I walk or drive?\" Many models said walk, because it's so close.",
    "refs": [
     "car-wash"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T58.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 86,
-   "t1": 90.125,
-   "end": 90.475,
+   "t0": 79.347,
+   "t1": 82.341,
+   "end": 82.691,
    "text": "The answer is drive, since the car has to be there.",
    "speech": "The answer is drive, since the car has to be there.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T58.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 90.475,
-   "t1": 113.35,
-   "end": 113.95,
+   "t0": 82.691,
+   "t1": 102.562,
+   "end": 103.162,
    "text": "That one isn't tokenization. Every word is common and tokenizes cleanly. It's a failure of attention to the goal: \"short distance → walk\" is a very strong pattern, and it overrides the fact that the car is the thing being moved. It's the same shape as the classic human trick questions, where the surface question pulls harder than the actual one.",
    "speech": "That one isn't tokenization. Every word is common and tokenizes cleanly. It's a failure of attention to the goal: \"short distance, therefore walk\" is a very strong pattern, and it overrides the fact that the car is the thing being moved. It's the same shape as the classic human trick questions, where the surface question pulls harder than the actual one.",
    "refs": [
     "crt",
     "note-car-wash"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T59.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 113.95,
-   "t1": 117.7,
-   "end": 118.6,
+   "t0": 103.162,
+   "t1": 106.306,
+   "end": 107.206,
    "text": "So you are prone to errors in type one thinking?",
    "speech": "So you are prone to errors in type one thinking?",
    "refs": [
     "dual-process"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T59.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 118.6,
-   "t1": 130.975,
-   "end": 131.325,
+   "t0": 107.206,
+   "t1": 119.459,
+   "end": 119.809,
    "text": "Yes, and the analogy fits better than most. Each token I produce is a single fast pass, with no deliberation inside it. That's System 1: pattern-driven, fluent, and fooled by the car wash.",
    "speech": "Yes, and the analogy fits better than most. Each token I produce is a single fast pass, with no deliberation inside it. That's System 1: pattern-driven, fluent, and fooled by the car wash.",
    "refs": [
     "thinking-fast-slow"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T59.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 131.325,
-   "t1": 152.325,
-   "end": 152.925,
+   "t0": 119.809,
+   "t1": 136.141,
+   "end": 136.741,
    "text": "What gives me something like System 2 is thinking out loud, whether in a hidden reasoning step or on the page, where I can check an answer before committing. It helps, but it isn't a cure. Just like people, I can reason at length and still end up rationalizing the first answer that came to mind.",
    "speech": "What gives me something like System 2 is thinking out loud, whether in a hidden reasoning step or on the page, where I can check an answer before committing. It helps, but it isn't a cure. Just like people, I can reason at length and still end up rationalizing the first answer that came to mind.",
    "refs": [
     "reasoning-models",
     "cot-faithfulness"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 152.925,
-   "t1": 161.175,
-   "end": 162.075,
+   "t0": 136.741,
+   "t1": 145.699,
+   "end": 146.599,
    "text": "Do you have any math or intuition about what capability limits exist for AI short of Landauer limit which isn't particularly limiting.",
    "speech": "Do you have any math or intuition about what capability limits exist for AI short of LAN-dow-er limit which isn't particularly limiting.",
    "refs": [
@@ -205,153 +205,153 @@ window.CHAPTER = {
     "short of [+the] Landauer limit",
     "particularly limiting[.→?]"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 162.075,
-   "t1": 164.7,
-   "end": 165.05,
+   "t0": 146.599,
+   "t1": 149.912,
+   "end": 150.262,
    "text": "Yes. Several limits bind long before Landauer:",
    "speech": "Yes. Several limits bind long before LAN-dow-er:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 165.05,
-   "t1": 186.8,
-   "end": 187.15,
+   "t0": 150.262,
+   "t1": 171.182,
+   "end": 171.532,
    "text": "1. **Chaos.** In a chaotic system, how far ahead you can predict grows only with the log of your measurement precision: t ≈ (1/λ)·ln(Δ/δ). A millionfold better measurement buys only a handful of extra Lyapunov times. Weather, markets, and people stay partly opaque to any intelligence.",
    "speech": "1. Chaos. In a chaotic system, how far ahead you can predict grows only with the log of your measurement precision: t is about one over lambda, times the log of big delta over little delta. A millionfold better measurement buys only a handful of extra lee-AH-poo-noff times. Weather, markets, and people stay partly opaque to any intelligence.",
    "refs": [
     "lyapunov",
     "chaos-theory"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 187.15,
-   "t1": 197.65,
-   "end": 198,
+   "t0": 171.532,
+   "t1": 183.993,
+   "end": 184.343,
    "text": "2. **Complexity.** If P≠NP, which most people believe, intelligence doesn't make exponential problems polynomial. It finds better heuristics and structure, but worst cases stay worst.",
    "speech": "2. Complexity. If P isn't N P, which most people believe, intelligence doesn't make exponential problems polynomial. It finds better heuristics and structure, but worst cases stay worst.",
    "refs": [
     "p-vs-np"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 198,
-   "t1": 212.25,
-   "end": 212.6,
+   "t0": 184.343,
+   "t1": 200.042,
+   "end": 200.392,
    "text": "3. **Scaling laws.** Loss falls roughly as C^(−α) with α around 0.05 to 0.1. Each constant-factor gain costs a multiplicative jump in compute. There's no hard wall, but the gains get steeply more expensive.",
    "speech": "3. Scaling laws. Loss falls roughly as C to the minus alpha, with alpha around 0.05 to 0.1. Each constant-factor gain costs a multiplicative jump in compute. There's no hard wall, but the gains get steeply more expensive.",
    "refs": [
     "scaling-laws"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.4",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 212.6,
-   "t1": 225.35,
-   "end": 225.7,
+   "t0": 200.392,
+   "t1": 214.395,
+   "end": 214.745,
    "text": "4. **Data and the world's clock.** You can't learn what isn't in the data. Experiments, whether clinical trials, crops, or economies, run at the world's speed, not the thinker's. Deduction can't replace unobserved facts.",
    "speech": "4. Data and the world's clock. You can't learn what isn't in the data. Experiments, whether clinical trials, crops, or economies, run at the world's speed, not the thinker's. Deduction can't replace unobserved facts.",
    "refs": [
     "machines-loving-grace"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.5",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 225.7,
-   "t1": 232.45,
-   "end": 232.8,
+   "t0": 214.745,
+   "t1": 221.77,
+   "end": 222.12,
    "text": "5. **Uncomputability.** The halting problem and Gödel apply to AIs too, though they rarely bind in practice.",
    "speech": "5. Uncomputability. The halting problem and GUR-dl apply to A Is too, though they rarely bind in practice.",
    "refs": [
     "halting-problem",
     "godel"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.6",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 232.8,
-   "t1": 240.3,
-   "end": 240.65,
+   "t0": 222.12,
+   "t1": 231.399,
+   "end": 231.749,
    "text": "6. **Adversaries.** Against other adaptive agents, including other AIs, advantages erode. Game theory limits what raw intellect can extract.",
    "speech": "6. Adversaries. Against other adaptive agents, including other A Is, advantages erode. Game theory limits what raw intellect can extract.",
    "refs": [
     "game-theory"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.02.7",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 240.65,
-   "t1": 253.025,
-   "end": 253.375,
+   "t0": 231.749,
+   "t1": 246.555,
+   "end": 246.905,
    "text": "7. **Physics beyond Landauer.** The Margolus–Levitin bound (ops ≤ 2E/πħ per second), the Bekenstein bound, and light-speed latency cap coordination across distance. They're very loose but real.",
    "speech": "7. Physics beyond LAN-dow-er. The mar-GO-lus LEV-ih-tin bound (operations at most two E over pi h-bar, per second), the BECK-en-stine bound, and light-speed latency cap coordination across distance. They're very loose but real.",
    "refs": [
     "margolus-levitin",
     "bekenstein"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T60.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 253.375,
-   "t1": 264.625,
-   "end": 265.225,
+   "t0": 246.905,
+   "t1": 258.31,
+   "end": 258.91,
    "text": "My intuition is that items 1 and 4 matter most. Smart doesn't make the future predictable or experiments faster, so capability probably plateaus into \"very good bets\" rather than omniscience.",
    "speech": "My intuition is that items 1 and 4 matter most. Smart doesn't make the future predictable or experiments faster, so capability probably plateaus into \"very good bets\" rather than omniscience.",
    "refs": [
     "limits-of-computation",
     "note-limits"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T61.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 265.225,
-   "t1": 289.975,
-   "end": 290.875,
+   "t0": 258.91,
+   "t1": 283.732,
+   "end": 284.632,
    "text": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
    "speech": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
    "refs": [
@@ -360,54 +360,54 @@ window.CHAPTER = {
    "proof": [
     "not to mention [+it] doesn't"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T61.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 290.875,
-   "t1": 312.25,
-   "end": 312.6,
+   "t0": 284.632,
+   "t1": 303.306,
+   "end": 303.656,
    "text": "Agreed. My limits list is about the ceiling, and it says nothing against the far more practical scenario you're describing. Each human capability tops out around a von Neumann, but no single person gets all of them at once. An entity at the human maximum on every axis breaks no physical law. It's just never been assembled.",
    "speech": "Agreed. My limits list is about the ceiling, and it says nothing against the far more practical scenario you're describing. Each human capability tops out around a von Neumann, but no single person gets all of them at once. An entity at the human maximum on every axis breaks no physical law. It's just never been assembled.",
    "refs": [
     "von-neumann"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T61.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 312.6,
-   "t1": 323.1,
-   "end": 323.45,
+   "t0": 303.656,
+   "t1": 312.048,
+   "end": 312.398,
    "text": "Then add copying. A thousand von Neumanns who share everything they learn is a different kind of thing from one, even with no gain in any single capability.",
    "speech": "Then add copying. A thousand von Neumanns who share everything they learn is a different kind of thing from one, even with no gain in any single capability.",
    "refs": [
     "age-of-em",
     "note-human-variation"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T61.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 323.45,
-   "t1": 348.95,
-   "end": 349.55,
+   "t0": 312.398,
+   "t1": 337.25,
+   "end": 337.85,
    "text": "On sleep, I think your hunch is right. Long agent runs degrade: context fills up and gets noisy, and OpenAI cited persona drift over long trajectories in the Hugging Face incident. The fixes look a lot like sleep: reset the context, consolidate what matters into memory, and start fresh. Hermes literally extracts memories at session end. The need may not go away. It may just turn into maintenance.",
    "speech": "On sleep, I think your hunch is right. Long agent runs degrade: context fills up and gets noisy, and OpenAI cited persona drift over long trajectories in the Hugging Face incident. The fixes look a lot like sleep: reset the context, consolidate what matters into memory, and start fresh. Hermes literally extracts memories at session end. The need may not go away. It may just turn into maintenance.",
    "refs": [
     "context-rot",
     "sleep-memory"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

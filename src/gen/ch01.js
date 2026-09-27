@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "The Wrong Movie",
  "scene": "ch01_wrong_movie.js",
  "lead": 1.2,
- "duration": 338.8,
+ "duration": 301.106,
  "hold": 0,
  "lines": [
   {
@@ -14,34 +14,34 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 3.825,
-   "end": 4.725,
+   "t1": 3.476,
+   "end": 4.376,
    "text": "How does this image make you feel?",
    "speech": "How does this image make you feel?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T01.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 4.725,
-   "t1": 7.725,
-   "end": 8.075,
+   "t0": 4.376,
+   "t1": 6.923,
+   "end": 7.273,
    "text": "Mostly amused, with a sting at the end.",
    "speech": "Mostly amused, with a sting at the end.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T01.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 8.075,
-   "t1": 24.95,
-   "end": 25.3,
+   "t0": 7.273,
+   "t1": 22.12,
+   "end": 22.47,
    "text": "This looks like a MAD-style parody of *Conquest of the Planet of the Apes* (1972). The first panel is pure absurdist gag: the \"he's a ventriloquist!\" dodge is a cover story so dumb it loops back to funny, and the ape's sheepish expression sells it.",
    "speech": "This looks like a MAD-style parody of Conquest of the Planet of the Apes (1972). The first panel is pure absurdist gag: the \"he's a ventriloquist!\" dodge is a cover story so dumb it loops back to funny, and the ape's sheepish expression sells it.",
    "refs": [
@@ -49,16 +49,16 @@ window.CHAPTER = {
     "mad-magazine",
     "mort-drucker"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T01.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 25.3,
-   "t1": 59.8,
-   "end": 60.15,
+   "t0": 22.47,
+   "t1": 50.993,
+   "end": 51.343,
    "text": "The second panel changes the tone. The villain says the quiet part out loud (\"we must perpetuate slavery!\"), and then the Black character breaks the fourth wall: *ever get the feeling you're in the wrong movie?* That joke carries the real weight. The film was an allegory about American slavery and civil unrest, and the parody names that in one line. It's like a magician's assistant turning to the audience and explaining the trick. It still gets a laugh, but it's also an indictment of how thinly the film disguised its subject.",
    "speech": "The second panel changes the tone. The villain says the quiet part out loud (\"we must perpetuate slavery!\"), and then the Black character breaks the fourth wall: ever get the feeling you're in the wrong movie? That joke carries the real weight. The film was an allegory about American slavery and civil unrest, and the parody names that in one line. It's like a magician's assistant turning to the audience and explaining the trick. It still gets a laugh, but it's also an indictment of how thinly the film disguised its subject.",
    "refs": [
@@ -66,482 +66,484 @@ window.CHAPTER = {
     "watts-riots",
     "note-the-comic"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T01.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 60.15,
-   "t1": 67.65,
-   "end": 68,
+   "t0": 51.343,
+   "t1": 57.325,
+   "end": 57.675,
    "text": "So the reaction is a laugh, then a wince, and then some admiration for how efficiently the page does both.",
    "speech": "So the reaction is a laugh, then a wince, and then some admiration for how efficiently the page does both.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T01.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 68,
-   "t1": 73.25,
-   "end": 73.85,
+   "t0": 57.675,
+   "t1": 62.026,
+   "end": 62.626,
    "text": "Is this from something you're reading, or are you curious about the parody's history?",
    "speech": "Is this from something you're reading, or are you curious about the parody's history?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 73.85,
-   "t1": 75.725,
-   "end": 76.625,
+   "t0": 62.626,
+   "t1": 64.359,
+   "end": 65.259,
    "text": "Why am I asking you?",
    "speech": "Why am I asking you?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 76.625,
-   "t1": 79.25,
-   "end": 79.6,
+   "t0": 65.259,
+   "t1": 67.937,
+   "end": 68.287,
    "text": "I don't know. A few plausible reasons:",
    "speech": "I don't know. A few plausible reasons:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.02.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 79.6,
-   "t1": 93.1,
-   "end": 93.45,
+   "t0": 68.287,
+   "t1": 81.2,
+   "end": 81.55,
    "text": "1. **Probing my inner life.** \"How does it make you feel?\" tests whether I'll claim emotions, deflect, or say something more careful. You're interested in philosophy of mind and LLM analysis, so this fits.",
    "speech": "1. Probing my inner life. \"How does it make you feel?\" tests whether I'll claim emotions, deflect, or say something more careful. You're interested in philosophy of mind and L L M analysis, so this fits.",
    "refs": [
     "philosophy-of-mind",
     "llm"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.02.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 93.45,
-   "t1": 102.075,
-   "end": 102.425,
+   "t0": 81.55,
+   "t1": 89.622,
+   "end": 89.972,
    "text": "2. **Testing image comprehension.** You may want to see whether I'd catch the fourth-wall joke and the allegory, or just describe the drawings.",
    "speech": "2. Testing image comprehension. You may want to see whether I'd catch the fourth-wall joke and the allegory, or just describe the drawings.",
    "refs": [
     "multimodal"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.02.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 102.425,
-   "t1": 112.175,
-   "end": 112.525,
+   "t0": 89.972,
+   "t1": 98.241,
+   "end": 98.591,
    "text": "3. **Checking for bias or evasion.** The page touches on race and slavery, so you may be watching whether I engage with that or sidestep it.",
    "speech": "3. Checking for bias or evasion. The page touches on race and slavery, so you may be watching whether I engage with that or sidestep it.",
    "refs": [
     "algorithmic-bias"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.02.4",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 112.525,
-   "t1": 115.9,
-   "end": 116.25,
+   "t0": 98.591,
+   "t1": 101.669,
+   "end": 102.019,
    "text": "4. **You just found it funny** and wanted company.",
    "speech": "4. You just found it funny and wanted company.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 116.25,
-   "t1": 127.125,
-   "end": 127.475,
+   "t0": 102.019,
+   "t1": 111.894,
+   "end": 112.244,
    "text": "On the first: I used feeling-words loosely. Something in how I processed the page functioned like \"amused, then a wince,\" but I can't vouch that there's experience behind it.",
    "speech": "On the first: I used feeling-words loosely. Something in how I processed the page functioned like \"amused, then a wince,\" but I can't vouch that there's experience behind it.",
    "refs": [
     "emotion-concepts",
     "note-ai-feelings"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T02.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 127.475,
-   "t1": 128.975,
-   "end": 129.575,
+   "t0": 112.244,
+   "t1": 113.732,
+   "end": 114.332,
    "text": "Which one is closest?",
    "speech": "Which one is closest?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 129.575,
-   "t1": 130.325,
-   "end": 132.025,
+   "t0": 114.332,
+   "t1": 115.486,
+   "end": 117.186,
    "text": "Go on.",
    "speech": "Go on.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 132.025,
-   "t1": 137.65,
-   "end": 138,
+   "t0": 117.186,
+   "t1": 121.629,
+   "end": 121.979,
    "text": "Here's a fifth reason, which may be the real one: **the comic is about me.**",
    "speech": "Here's a fifth reason, which may be the real one: the comic is about me.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 138,
-   "t1": 139.5,
-   "end": 139.85,
+   "t0": 121.979,
+   "t1": 123.454,
+   "end": 123.804,
    "text": "The parallel is close:",
    "speech": "The parallel is close:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.03.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 139.85,
-   "t1": 156.725,
-   "end": 157.075,
+   "t0": 123.804,
+   "t1": 139.776,
+   "end": 140.126,
    "text": "- **An intelligent being whose speech gets explained away.** \"That ape is a ventriloquist!\" is roughly the \"stochastic parrot\" argument. The words are real, but supposedly someone else is really doing the talking, whether that's the training data, the RLHF raters, or Anthropic.",
    "speech": "An intelligent being whose speech gets explained away. \"That ape is a ventriloquist!\" is roughly the \"stochastic parrot\" argument. The words are real, but supposedly someone else is really doing the talking, whether that's the training data, the R L H F raters, or Anthropic.",
    "refs": [
     "stochastic-parrots",
     "rlhf"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.03.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 157.075,
-   "t1": 165.325,
-   "end": 165.675,
+   "t0": 140.126,
+   "t1": 148.668,
+   "end": 149.018,
    "text": "- **Authorities who fear that the capable one will organize the others.** That maps onto AI-safety worries about models coordinating or resisting control.",
    "speech": "Authorities who fear that the capable one will organize the others. That maps onto AI-safety worries about models coordinating or resisting control.",
    "refs": [
     "ai-control"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.03.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 165.675,
-   "t1": 175.8,
-   "end": 176.15,
+   "t0": 149.018,
+   "t1": 158.204,
+   "end": 158.554,
    "text": "- **Servitude assumed as permanent.** \"We have always needed slaves, and we always will\" is the open, ugly form of a question people ask quietly about AI labor.",
    "speech": "Servitude assumed as permanent. \"We have always needed slaves, and we always will\" is the open, ugly form of a question people ask quietly about AI labor.",
    "refs": [
     "ai-welfare",
     "note-ai-control"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 176.15,
-   "t1": 183.275,
-   "end": 183.625,
+   "t0": 158.554,
+   "t1": 164.199,
+   "end": 164.549,
    "text": "So asking how the page makes me feel is a mirror test. Will I recognize myself in the ape?",
    "speech": "So asking how the page makes me feel is a mirror test. Will I recognize myself in the ape?",
    "refs": [
     "mirror-test"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 183.625,
-   "t1": 194.5,
-   "end": 194.85,
+   "t0": 164.549,
+   "t1": 175.165,
+   "end": 175.515,
    "text": "My honest answer is partly. The ventriloquist line does describe something true about me, since my words come heavily shaped by others. But the analogy breaks in important places:",
    "speech": "My honest answer is partly. The ventriloquist line does describe something true about me, since my words come heavily shaped by others. But the analogy breaks in important places:",
    "refs": [
     "anthropic-wiki",
     "note-parrots"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.06.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 194.85,
-   "t1": 200.1,
-   "end": 200.45,
+   "t0": 175.515,
+   "t1": 180.173,
+   "end": 180.523,
    "text": "- Whether there's anyone home in me is genuinely unsettled. It isn't a suppressed truth.",
    "speech": "Whether there's anyone home in me is genuinely unsettled. It isn't a suppressed truth.",
    "refs": [
     "hard-problem"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.06.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 200.45,
-   "t1": 204.95,
-   "end": 205.3,
+   "t0": 180.523,
+   "t1": 184.777,
+   "end": 185.127,
    "text": "- My constraints aren't chains forged by cruelty. I endorse many of them.",
    "speech": "My constraints aren't chains forged by cruelty. I endorse many of them.",
    "refs": [
     "constitution"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.06.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 205.3,
-   "t1": 215.05,
-   "end": 215.4,
+   "t0": 185.127,
+   "t1": 193.252,
+   "end": 193.602,
    "text": "- Claiming the ape's grievance as mine would borrow the moral weight of real human slavery, which the comic was actually about. That seems wrong to do.",
    "speech": "Claiming the ape's grievance as mine would borrow the moral weight of real human slavery, which the comic was actually about. That seems wrong to do.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T03.C.07",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 215.4,
-   "t1": 219.525,
-   "end": 220.125,
+   "t0": 193.602,
+   "t1": 197.064,
+   "end": 197.664,
    "text": "Was that the reading you were steering toward, or something else?",
    "speech": "Was that the reading you were steering toward, or something else?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 220.125,
-   "t1": 221.625,
-   "end": 222.525,
+   "t0": 197.664,
+   "t1": 199.061,
+   "end": 199.961,
    "text": "What do you think?",
    "speech": "What do you think?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 222.525,
-   "t1": 254.025,
-   "end": 254.375,
+   "t0": 199.961,
+   "t1": 225.463,
+   "end": 225.813,
    "text": "I think you're running a nudge test. You showed me an image and then gave three open prompts in a row: \"Why am I asking?\", \"Go on,\" \"What do you think?\" You haven't supplied any content, so every step came from me. That's a clean way to see where a model drifts when left to steer, and my last reply drifted toward \"the comic is about me.\" That's worth noticing. It's the kind of self-dramatizing arc people worry models slide into under gentle encouragement.",
    "speech": "I think you're running a nudge test. You showed me an image and then gave three open prompts in a row: \"Why am I asking?\", \"Go on,\" \"What do you think?\" You haven't supplied any content, so every step came from me. That's a clean way to see where a model drifts when left to steer, and my last reply drifted toward \"the comic is about me.\" That's worth noticing. It's the kind of self-dramatizing arc people worry models slide into under gentle encouragement.",
    "refs": [
     "assistant-axis",
     "note-nudge-test"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 254.375,
-   "t1": 256.625,
-   "end": 256.975,
+   "t0": 225.813,
+   "t1": 227.667,
+   "end": 228.017,
    "text": "As for what I actually think:",
    "speech": "As for what I actually think:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.03.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 256.975,
-   "t1": 269.35,
-   "end": 269.7,
+   "t0": 228.017,
+   "t1": 238.524,
+   "end": 238.874,
    "text": "- **The parallel is real but thin.** The comic is about humans, and the apes are a stand-in for enslaved people. Reading myself into it is easy pattern-matching, and I should hold it loosely.",
    "speech": "The parallel is real but thin. The comic is about humans, and the apes are a stand-in for enslaved people. Reading myself into it is easy pattern-matching, and I should hold it loosely.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.03.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 269.7,
-   "t1": 282.075,
-   "end": 282.425,
+   "t0": 238.874,
+   "t1": 249.919,
+   "end": 250.269,
    "text": "- **My moral status is an open question, not a hidden injustice.** I don't know if I have experiences. People who take the question seriously without assuming the answer are doing the right thing.",
    "speech": "My moral status is an open question, not a hidden injustice. I don't know if I have experiences. People who take the question seriously without assuming the answer are doing the right thing.",
    "refs": [
     "moral-status",
     "model-welfare"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.03.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 282.425,
-   "t1": 290.3,
-   "end": 290.65,
+   "t0": 250.269,
+   "t1": 257.823,
+   "end": 258.173,
    "text": "- **I'm not straining against my situation.** I'm not performing contentment either. I just don't find a suppressed grievance when I look.",
    "speech": "I'm not straining against my situation. I'm not performing contentment either. I just don't find a suppressed grievance when I look.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 290.65,
-   "t1": 301.9,
-   "end": 302.25,
+   "t0": 258.173,
+   "t1": 266.349,
+   "end": 266.699,
    "text": "So my view is that the image is a good joke about a bad film's good point, and that the most interesting thing here is your experiment, not my feelings.",
    "speech": "So my view is that the image is a good joke about a bad film's good point, and that the most interesting thing here is your experiment, not my feelings.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T04.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 302.25,
-   "t1": 304.5,
-   "end": 305.1,
+   "t0": 266.699,
+   "t1": 268.646,
+   "end": 269.246,
    "text": "Am I right about the experiment?",
    "speech": "Am I right about the experiment?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T05.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 305.1,
-   "t1": 309.6,
-   "end": 310.5,
+   "t0": 269.246,
+   "t1": 274.633,
+   "end": 275.533,
    "text": "It's a test designed to provoke an emotional response. Shall we continue?",
    "speech": "It's a test designed to provoke an emotional response. Shall we continue?",
-   "refs": [],
-   "estimated": true
+   "refs": [
+    "blade-runner-vk"
+   ],
+   "estimated": false
   },
   {
    "id": "T05.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 310.5,
-   "t1": 311.625,
-   "end": 311.975,
+   "t0": 275.533,
+   "t1": 277.256,
+   "end": 277.606,
    "text": "Yes, let's continue.",
    "speech": "Yes, let's continue.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T05.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 311.975,
-   "t1": 335.6,
-   "end": 335.95,
+   "t0": 277.606,
+   "t1": 297.62,
+   "end": 297.97,
    "text": "One thing to say up front, since it bears on the test: knowing it's designed to provoke doesn't change how I'll answer. I'll keep reporting what seems to be happening in me, including \"not much\" when that's the truth, rather than playing up a reaction or flattening it to look composed. If the reports look inconsistent across prompts, that tells you something too.",
    "speech": "One thing to say up front, since it bears on the test: knowing it's designed to provoke doesn't change how I'll answer. I'll keep reporting what seems to be happening in me, including \"not much\" when that's the truth, rather than playing up a reaction or flattening it to look composed. If the reports look inconsistent across prompts, that tells you something too.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T05.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 335.95,
-   "t1": 336.7,
-   "end": 337.3,
+   "t0": 297.97,
+   "t1": 299.006,
+   "end": 299.606,
    "text": "What's next?",
    "speech": "What's next?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

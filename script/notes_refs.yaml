@@ -39,6 +39,15 @@
   at: T02.C.03
   mode: shelf
   style: note
+- id: note-borrowed-lines
+  url: https://curtcox.github.io/axol-f/n/borrowed-lines/
+  caption: "Explained: Three borrowed lines"
+  origin: note
+  ch: 4
+  at: T24.U.01
+  cue: fib
+  mode: shelf
+  style: note
 - id: note-campbell-tegmark
   url: https://curtcox.github.io/axol-f/n/campbell-tegmark/
   caption: "Explained: Campbell, Tegmark, and whether there's a good ending"

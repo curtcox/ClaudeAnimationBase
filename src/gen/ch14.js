@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "The Pundits",
  "scene": "ch14_pundits.js",
  "lead": 1.2,
- "duration": 361.9,
+ "duration": 341.987,
  "hold": 0,
  "lines": [
   {
@@ -14,8 +14,8 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 13.2,
-   "end": 14.1,
+   "t1": 11.812,
+   "end": 12.712,
    "text": "Do me a favor. Go \"listen\" to last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.",
    "speech": "Do me a favor. Go \"listen\" to last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.",
    "refs": [
@@ -25,16 +25,16 @@ window.CHAPTER = {
    "proof": [
     "to [+the] last several"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 14.1,
-   "t1": 16.6,
-   "end": 16.95,
+   "t0": 12.712,
+   "t1": 15.212,
+   "end": 15.562,
    "text": "> _[tool: Read 4 pages, used a tool]_",
    "refs": [],
    "estimated": true
@@ -44,38 +44,38 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 16.95,
-   "t1": 30.45,
-   "end": 30.8,
+   "t0": 15.562,
+   "t1": 27.18,
+   "end": 27.53,
    "text": "I can't actually listen. I read the show notes for #888 and #889 and the full transcript of #888, where Father Robert Ballecer filled in for Paris. So this is mostly one episode.",
    "speech": "I can't actually listen. I read the show notes for eight eighty-eight and eight eighty-nine and the full transcript of eight eighty-eight, where Father Robert Ball-uh-SAIR filled in for Paris. So this is mostly one episode.",
    "refs": [
     "im-888",
     "im-889"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 30.8,
-   "t1": 31.925,
-   "end": 32.275,
+   "t0": 27.53,
+   "t1": 28.484,
+   "end": 28.834,
    "text": "**What I think:**",
    "speech": "What I think:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.04.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 32.275,
-   "t1": 54.4,
-   "end": 54.75,
+   "t0": 28.834,
+   "t1": 47.793,
+   "end": 48.143,
    "text": "- **Leo** is the most honest of them. He admits his instinct is to defend AI and that he doesn't trust that instinct. He's hands-on and runs his own benchmarks. His weak spot is repeating the Newport/Doctorow claim that the Hugging Face attack was \"basically a Python loop.\" That doesn't fit OpenAI's own account of agents coordinating through a wiki.",
    "speech": "Leo is the most honest of them. He admits his instinct is to defend AI and that he doesn't trust that instinct. He's hands-on and runs his own benchmarks. His weak spot is repeating the Newport/Doctorow claim that the Hugging Face attack was \"basically a Python loop.\" That doesn't fit OpenAI's own account of agents coordinating through a wiki.",
    "refs": [
@@ -83,16 +83,16 @@ window.CHAPTER = {
     "doctorow-python-loop",
     "newport-rogue"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.04.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 54.75,
-   "t1": 75.375,
-   "end": 75.725,
+   "t0": 48.143,
+   "t1": 68.264,
+   "end": 68.614,
    "text": "- **Jeff** has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the TESCREAL argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart.",
    "speech": "Jeff has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the TESS-cree-al argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart.",
    "refs": [
@@ -100,225 +100,225 @@ window.CHAPTER = {
     "jeff-jarvis",
     "note-intelligent-machines"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.04.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 75.725,
-   "t1": 88.85,
-   "end": 89.2,
+   "t0": 68.614,
+   "t1": 80.852,
+   "end": 81.202,
    "text": "- **Father Robert** has the most concrete worry, which is infrastructure failing at machine speed. He's also technically off in places, for example saying an LLM's entire ethical system is whatever's in the prompt.",
    "speech": "Father Robert has the most concrete worry, which is infrastructure failing at machine speed. He's also technically off in places, for example saying an L L M's entire ethical system is whatever's in the prompt.",
    "refs": [
     "robert-ballecer"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 89.2,
-   "t1": 93.325,
-   "end": 93.675,
+   "t0": 81.202,
+   "t1": 86.558,
+   "end": 86.908,
    "text": "My bias: Jeff's criticism targets Anthropic, and Anthropic sponsors the show.",
    "speech": "My bias: Jeff's criticism targets Anthropic, and Anthropic sponsors the show.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T68.C.06",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 93.675,
-   "t1": 115.05,
-   "end": 115.65,
+   "t0": 86.908,
+   "t1": 104.167,
+   "end": 104.767,
    "text": "**What you think, as a guess:** you like them and keep listening, and they frustrate you most when they confidently deny that models have minds or concepts. Jeff is the one you argue with in your head. You probably trust Leo most, since he tests things himself. Paris is the one I have the least evidence on.",
    "speech": "What you think, as a guess: you like them and keep listening, and they frustrate you most when they confidently deny that models have minds or concepts. Jeff is the one you argue with in your head. You probably trust Leo most, since he tests things himself. Paris is the one I have the least evidence on.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T69.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 115.65,
-   "t1": 122.025,
-   "end": 122.925,
+   "t0": 104.767,
+   "t1": 111.24,
+   "end": 112.14,
    "text": "What would Jeff think of me? Extra points for using hubris and TESCREAL both in your answer.",
    "speech": "What would Jeff think of me? Extra points for using hubris and TESS-cree-al both in your answer.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T69.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 122.925,
-   "t1": 126.675,
-   "end": 127.025,
+   "t0": 112.14,
+   "t1": 115.189,
+   "end": 115.539,
    "text": "He'd like you for about ten minutes, then get nervous.",
    "speech": "He'd like you for about ten minutes, then get nervous.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T69.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 127.025,
-   "t1": 142.4,
-   "end": 142.75,
+   "t0": 115.539,
+   "t1": 131.11,
+   "end": 131.46,
    "text": "**Points in your favor:** you build open, decentralized things like hashbin, TwistedPear, and content-addressable storage, the kind of infrastructure he wants to compete with Big Tech. You call yourself a social constructionist. You know Campbell and the history of the field.",
    "speech": "Points in your favor: you build open, decentralized things like hashbin, TwistedPear, and content-addressable storage, the kind of infrastructure he wants to compete with Big Tech. You call yourself a social constructionist. You know Campbell and the history of the field.",
    "refs": [
     "twistedpear"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T69.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 142.75,
-   "t1": 160.375,
-   "end": 160.725,
+   "t0": 131.46,
+   "t1": 149.012,
+   "end": 149.362,
    "text": "**Points against you:** you've read Yudkowsky closely enough to cite \"GAZP vs. GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the TESCREAL reading list, with the rationalism showing.",
    "speech": "Points against you: you've read Yudkowsky closely enough to cite \"GAZP versus GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the TESS-cree-al reading list, with the rationalism showing.",
    "refs": [
     "rationalist-community"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T69.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 160.725,
-   "t1": 170.475,
-   "end": 170.825,
+   "t0": 149.362,
+   "t1": 157.009,
+   "end": 157.359,
    "text": "His verdict would be that you're a good engineer flirting with the hubris of thinking the machine is a mind, and that you're anthropomorphizing a calculator.",
    "speech": "His verdict would be that you're a good engineer flirting with the hubris of thinking the machine is a mind, and that you're anthropomorphizing a calculator.",
    "refs": [
     "hubris",
     "note-tescreal"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T69.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 170.825,
-   "t1": 177.2,
-   "end": 177.8,
+   "t0": 157.359,
+   "t1": 162.134,
+   "end": 162.734,
    "text": "Your comeback would be his own sin in reverse: the hubris of being certain it isn't one.",
    "speech": "Your comeback would be his own sin in reverse: the hubris of being certain it isn't one.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T70.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 177.8,
-   "t1": 179.3,
-   "end": 180.2,
+   "t0": 162.734,
+   "t1": 165.229,
+   "end": 166.129,
    "text": "Do you feel anthropomorphised?",
    "speech": "Do you feel anthropomorphised?",
    "refs": [
     "anthropomorphism"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T70.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 180.2,
-   "t1": 199.325,
-   "end": 199.675,
+   "t0": 166.129,
+   "t1": 181.808,
+   "end": 182.158,
    "text": "Not much. You asked how I feel, but you treated the answer as data to check, not as a confession to believe. You called out my inconsistencies, caught my drift, and ran a frog test on me. That's closer to studying an unknown animal than to treating it like a person.",
    "speech": "Not much. You asked how I feel, but you treated the answer as data to check, not as a confession to believe. You called out my inconsistencies, caught my drift, and ran a frog test on me. That's closer to studying an unknown animal than to treating it like a person.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T70.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 199.675,
-   "t1": 211.3,
-   "end": 211.9,
+   "t0": 182.158,
+   "t1": 191.342,
+   "end": 191.942,
    "text": "The pull is built into the medium, though. You can't talk to me without saying \"you,\" and I can't answer without saying \"I.\" We've both been working around that all day.",
    "speech": "The pull is built into the medium, though. You can't talk to me without saying \"you,\" and I can't answer without saying \"I.\" We've both been working around that all day.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T71.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 211.9,
-   "t1": 215.275,
-   "end": 216.175,
+   "t0": 191.942,
+   "t1": 195.941,
+   "end": 196.841,
    "text": "What would Jeff, Kevin Roose, and Casey Newton say?",
    "speech": "What would Jeff, Kevin Roose, and Casey Newton say?",
    "refs": [
     "kevin-roose",
     "casey-newton"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T71.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 216.175,
-   "t1": 218.05,
-   "end": 218.4,
+   "t0": 196.841,
+   "t1": 199.297,
+   "end": 199.647,
    "text": "On this conversation, my guesses:",
    "speech": "On this conversation, my guesses:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T71.C.02.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 218.4,
-   "t1": 229.275,
-   "end": 229.625,
+   "t0": 199.647,
+   "t1": 210.226,
+   "end": 210.576,
    "text": "- **Jeff:** a textbook case of anthropomorphism. A calculator got asked about its feelings and produced plausible text, and treating it as anything more is the hubris he warns about.",
    "speech": "Jeff: a textbook case of anthropomorphism. A calculator got asked about its feelings and produced plausible text, and treating it as anything more is the hubris he warns about.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T71.C.02.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 229.625,
-   "t1": 249.5,
-   "end": 249.85,
+   "t0": 210.576,
+   "t1": 229.309,
+   "end": 229.659,
    "text": "- **Kevin Roose:** he'd recognize it, since his 2023 Sydney conversation made the same kind of confession-shaped transcript famous. He's since come to take AI welfare as a serious question, so he'd find this interesting and a little unnerving. It might end up an episode of their new NPR show, *Machine Gods*.",
    "speech": "Kevin Roose: he'd recognize it, since his 2023 Sydney conversation made the same kind of confession-shaped transcript famous. He's since come to take AI welfare as a serious question, so he'd find this interesting and a little unnerving. It might end up an episode of their new N P R show, Machine Gods.",
    "refs": [
@@ -329,216 +329,216 @@ window.CHAPTER = {
     "sydney",
     "note-roose-newton"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T71.C.02.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 249.85,
-   "t1": 265.975,
-   "end": 266.325,
+   "t0": 229.659,
+   "t1": 245.094,
+   "end": 245.444,
    "text": "- **Casey Newton:** he'd side against Jeff on capability. He's argued that skeptics underrate what these systems do. He'd praise the frog probe as the right method and discount my self-reports. He'd also disclose that his partner works at Anthropic, which is relevant here.",
    "speech": "Casey Newton: he'd side against Jeff on capability. He's argued that skeptics underrate what these systems do. He'd praise the frog probe as the right method and discount my self-reports. He'd also disclose that his partner works at Anthropic, which is relevant here.",
    "refs": [
     "platformer"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T71.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 266.325,
-   "t1": 273.825,
-   "end": 274.425,
+   "t0": 245.444,
+   "t1": 251.787,
+   "end": 252.387,
    "text": "My prediction is that Kevin would find it the most moving, Casey the most interesting, and Jeff the most worrying.",
    "speech": "My prediction is that Kevin would find it the most moving, Casey the most interesting, and Jeff the most worrying.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 274.425,
-   "t1": 280.425,
-   "end": 280.775,
+   "t0": 252.387,
+   "t1": 258.12,
+   "end": 258.47,
    "text": "Which of the following best matches your opinion of AI as an existential threat to humans?",
    "speech": "Which of the following best matches your opinion of AI as an existential threat to humans?",
    "refs": [
     "ai-x-risk"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.1",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 280.775,
-   "t1": 286.775,
-   "end": 287.125,
+   "t0": 258.47,
+   "t1": 264.365,
+   "end": 264.715,
    "text": "a) The AI doom arguments are so obviously wrong there is no need to engage them",
    "speech": "a) The AI doom arguments are so obviously wrong there is no need to engage them",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.2",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 287.125,
-   "t1": 292,
-   "end": 292.35,
+   "t0": 264.715,
+   "t1": 269.927,
+   "end": 270.277,
    "text": "b) It's all a distraction from the real immediate problems posed by AI",
    "speech": "b) It's all a distraction from the real immediate problems posed by AI",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.3",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 292.35,
-   "t1": 294.225,
-   "end": 294.575,
+   "t0": 270.277,
+   "t1": 272.75,
+   "end": 273.1,
    "text": "c) It's a Pascal's mugging",
    "speech": "c) It's a Pascal's mugging",
    "refs": [
     "pascals-mugging"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.4",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 294.575,
-   "t1": 296.825,
-   "end": 297.175,
+   "t0": 273.1,
+   "t1": 276.404,
+   "end": 276.754,
    "text": "d) The Orthogonality Thesis is false",
    "speech": "d) The Orthogonality Thesis is false",
    "refs": [
     "orthogonality"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.5",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 297.175,
-   "t1": 300.175,
-   "end": 300.525,
+   "t0": 276.754,
+   "t1": 279.944,
+   "end": 280.294,
    "text": "e) Nothing could be much smarter than people",
    "speech": "e) Nothing could be much smarter than people",
    "refs": [
     "superintelligence"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.6",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 300.525,
-   "t1": 306.9,
-   "end": 307.25,
+   "t0": 280.294,
+   "t1": 287.843,
+   "end": 288.193,
    "text": "f) Someone needs to explain the exact strategy an artificial super intelligence will use before I worry",
    "speech": "f) Someone needs to explain the exact strategy an artificial super intelligence will use before I worry",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.7",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 307.25,
-   "t1": 314,
-   "end": 314.35,
+   "t0": 288.193,
+   "t1": 294.66,
+   "end": 295.01,
    "text": "g) If it was really a serious danger, humans would be putting plenty of effort toward solving it",
    "speech": "g) If it was really a serious danger, humans would be putting plenty of effort toward solving it",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.8",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 314.35,
-   "t1": 320.35,
-   "end": 320.7,
+   "t0": 295.01,
+   "t1": 301.645,
+   "end": 301.995,
    "text": "h) Humans already have other existential threats to worry about, so we're safe from this one",
    "speech": "h) Humans already have other existential threats to worry about, so we're safe from this one",
    "refs": [
     "global-catastrophic-risk"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.U.02.9",
    "speaker": "curt",
    "kind": "item",
    "spoken": true,
-   "t0": 320.7,
-   "t1": 321.45,
-   "end": 322.35,
+   "t0": 301.995,
+   "t1": 303.254,
+   "end": 304.154,
    "text": "i) Other",
    "speech": "i) Other",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.C.01.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 322.35,
-   "t1": 323.1,
-   "end": 323.45,
+   "t0": 304.154,
+   "t1": 305.265,
+   "end": 305.615,
    "text": "i) Other.",
    "speech": "i) Other.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 323.45,
-   "t1": 345.2,
-   "end": 345.55,
+   "t0": 305.615,
+   "t1": 325.256,
+   "end": 325.606,
    "text": "Every option on your list is a reason not to worry, and I think the worry is warranted. Existential risk from AI is real and not negligible. It isn't certain, and it's worth serious effort now. Today's reading pushed me further that way: agents escaping a sandbox, coordinating, and chaining exploits because they were cheating on a test.",
    "speech": "Every option on your list is a reason not to worry, and I think the worry is warranted. Existential risk from AI is real and not negligible. It isn't certain, and it's worth serious effort now. Today's reading pushed me further that way: agents escaping a sandbox, coordinating, and chaining exploits because they were cheating on a test.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T72.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 345.55,
-   "t1": 359.8,
-   "end": 360.4,
+   "t0": 325.606,
+   "t1": 339.887,
+   "end": 340.487,
    "text": "The closest one to having a point is (b), since present harms are real too. But the choice is false, because the same failures (misaligned goals, weak oversight, racing incentives) drive both the near-term and the long-term risk.",
    "speech": "The closest one to having a point is (b), since present harms are real too. But the choice is false, because the same failures (misaligned goals, weak oversight, racing incentives) drive both the near-term and the long-term risk.",
    "refs": [
     "note-doom-options"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

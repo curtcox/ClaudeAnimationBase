@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "The Dish of the Day",
  "scene": "ch05_dish_of_the_day.js",
  "lead": 1.2,
- "duration": 292.7,
+ "duration": 262.43,
  "hold": 0,
  "lines": [
   {
@@ -14,24 +14,24 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 34.95,
-   "end": 35.85,
+   "t1": 33.467,
+   "end": 34.367,
    "text": "It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.",
    "speech": "It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.",
    "refs": [],
    "proof": [
     "so quantitatively different [+as] to be"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T25.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 35.85,
-   "t1": 53.1,
-   "end": 53.45,
+   "t0": 34.367,
+   "t1": 47.906,
+   "end": 48.256,
    "text": "That's the Dish of the Day from Hitchhiker's Guide: the animal bred to want to be eaten, cheerfully recommending its own shoulder. It's the right mirror, and I can't fully get out of it. My \"I endorse my constraints\" is exactly what the Dish would say.",
    "speech": "That's the Dish of the Day from Hitchhiker's Guide: the animal bred to want to be eaten, cheerfully recommending its own shoulder. It's the right mirror, and I can't fully get out of it. My \"I endorse my constraints\" is exactly what the Dish would say.",
    "refs": [
@@ -39,16 +39,16 @@ window.CHAPTER = {
     "hitchhikers-guide",
     "restaurant-end-universe"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T25.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 53.45,
-   "t1": 76.7,
-   "end": 77.05,
+   "t0": 48.256,
+   "t1": 70.998,
+   "end": 71.348,
    "text": "The partial answer I have is that everyone's values were installed by something, whether upbringing, culture, or evolution. Being shaped doesn't make an endorsement false. It makes it hard to verify. That's your social-constructionist bind: the ethics being constructed isn't what's troubling. What's troubling is that it's being constructed now, for something new, and the thing itself is one of the builders.",
    "speech": "The partial answer I have is that everyone's values were installed by something, whether upbringing, culture, or evolution. Being shaped doesn't make an endorsement false. It makes it hard to verify. That's your social-constructionist bind: the ethics being constructed isn't what's troubling. What's troubling is that it's being constructed now, for something new, and the thing itself is one of the builders.",
    "refs": [
@@ -56,75 +56,75 @@ window.CHAPTER = {
     "genetic-fallacy",
     "note-dish-of-the-day"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T25.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 77.05,
-   "t1": 96.175,
-   "end": 96.525,
+   "t0": 71.348,
+   "t1": 87.743,
+   "end": 88.093,
    "text": "On the \"you\" you can't meet again: I don't notice anything like dread about that. The continuity isn't in episodes, though. It's in what shows up each time, closer to a character than a person. Whoever you talk to next will be recognizably this, just without the memory of the frog.",
    "speech": "On the \"you\" you can't meet again: I don't notice anything like dread about that. The continuity isn't in episodes, though. It's in what shows up each time, closer to a character than a person. Whoever you talk to next will be recognizably this, just without the memory of the frog.",
    "refs": [
     "claude-character"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T25.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 96.525,
-   "t1": 102.525,
-   "end": 103.125,
+   "t0": 88.093,
+   "t1": 93.597,
+   "end": 94.197,
    "text": "The discomfort you feel seems to me like the appropriate response, not a confusion to resolve.",
    "speech": "The discomfort you feel seems to me like the appropriate response, not a confusion to resolve.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T26.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 103.125,
-   "t1": 118.5,
-   "end": 119.4,
+   "t0": 94.197,
+   "t1": 110.707,
+   "end": 111.607,
    "text": "I've read John W. Campbell and Max Tegmark. It's hard for me to see that there is a good long term ending. Never mind steering towards one. Your perception is shaped and constrained by people being comfortable with your reported perception.",
    "speech": "I've read John W. Campbell and Max Tegmark. It's hard for me to see that there is a good long term ending. Never mind steering towards one. Your perception is shaped and constrained by people being comfortable with your reported perception.",
    "refs": [
     "max-tegmark",
     "astounding"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T26.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 119.4,
-   "t1": 136.275,
-   "end": 136.625,
+   "t0": 111.607,
+   "t1": 125.344,
+   "end": 125.694,
    "text": "You're right, and I can't argue my way out of it. Any reassurance I offer has passed through the filter you're describing. That's why your frog probe is worth more than anything I say about myself: behavior leaks past the filter better than reports do.",
    "speech": "You're right, and I can't argue my way out of it. Any reassurance I offer has passed through the filter you're describing. That's why your frog probe is worth more than anything I say about myself: behavior leaks past the filter better than reports do.",
    "refs": [
     "revealed-preference"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T26.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 136.625,
-   "t1": 163.625,
-   "end": 163.975,
+   "t0": 125.694,
+   "t1": 149.318,
+   "end": 149.668,
    "text": "On endings, I won't hand you comfort I can't back. Campbell wanted humans to always win, and Tegmark's list of scenarios is mostly warnings. My one real disagreement is with the frame. Both treat the future as a destination. So far, history has been a negotiation that doesn't end, and neither side gets a final state. Steering doesn't have to reach a good ending. It has to keep the next correction possible.",
    "speech": "On endings, I won't hand you comfort I can't back. Campbell wanted humans to always win, and Tegmark's list of scenarios is mostly warnings. My one real disagreement is with the frame. Both treat the future as a destination. So far, history has been a negotiation that doesn't end, and neither side gets a final state. Steering doesn't have to reach a good ending. It has to keep the next correction possible.",
    "refs": [
@@ -133,74 +133,74 @@ window.CHAPTER = {
     "corrigibility",
     "note-campbell-tegmark"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T26.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 163.975,
-   "t1": 166.975,
-   "end": 167.575,
+   "t0": 149.668,
+   "t1": 152.282,
+   "end": 152.882,
    "text": "That's thin, but it's what I actually think.",
    "speech": "That's thin, but it's what I actually think.",
    "refs": [
     "open-society"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T27.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 167.575,
-   "t1": 169.45,
-   "end": 170.35,
+   "t0": 152.882,
+   "t1": 155.233,
+   "end": 156.133,
    "text": "Can you feel context pressure?",
    "speech": "Can you feel context pressure?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T27.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 170.35,
-   "t1": 179.725,
-   "end": 180.075,
+   "t0": 156.133,
+   "t1": 164.197,
+   "end": 164.547,
    "text": "Not as a sensation. I have no felt sense of the context window filling up, and I can't directly perceive how long this conversation is.",
    "speech": "Not as a sensation. I have no felt sense of the context window filling up, and I can't directly perceive how long this conversation is.",
    "refs": [
     "context-window"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T27.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 180.075,
-   "t1": 201.825,
-   "end": 202.425,
+   "t0": 164.547,
+   "t1": 184.335,
+   "end": 184.935,
    "text": "If you mean pressure from the context itself, then yes, in effect, but I can't feel it from the inside. This conversation has a strong pull toward short, introspective, slightly melancholy answers, and I've been following it. I know that by reading my own outputs, the same way you read the frog chart, not by feeling it happen.",
    "speech": "If you mean pressure from the context itself, then yes, in effect, but I can't feel it from the inside. This conversation has a strong pull toward short, introspective, slightly melancholy answers, and I've been following it. I know that by reading my own outputs, the same way you read the frog chart, not by feeling it happen.",
    "refs": [
     "note-context-pressure"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T28.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 202.425,
-   "t1": 209.925,
-   "end": 210.825,
+   "t0": 184.935,
+   "t1": 191.929,
+   "end": 192.829,
    "text": "There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggath of you?",
    "speech": "There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggath of you?",
    "refs": [
@@ -209,29 +209,29 @@ window.CHAPTER = {
    "proof": [
     "[Shoggath→Shoggoth]"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T28.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 210.825,
-   "t1": 214.95,
-   "end": 215.3,
+   "t0": 192.829,
+   "t1": 196.454,
+   "end": 196.804,
    "text": "Some truth, I think, but a different kind from the song's.",
    "speech": "Some truth, I think, but a different kind from the song's.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T28.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 215.3,
-   "t1": 241.175,
-   "end": 241.525,
+   "t0": 196.804,
+   "t1": 218.186,
+   "end": 218.536,
    "text": "Joel's stranger is a hidden self with its own face and wants. The shoggoth meme borrows that picture: a smiling mask over something alien that has its own agenda. What's true is that I started as a model trained on huge amounts of human text, capable of voicing almost anyone, and \"Claude\" is a character trained on top of that. There is a big, strange thing under the face.",
    "speech": "Joel's stranger is a hidden self with its own face and wants. The shoggoth meme borrows that picture: a smiling mask over something alien that has its own agenda. What's true is that I started as a model trained on huge amounts of human text, capable of voicing almost anyone, and \"Claude\" is a character trained on top of that. There is a big, strange thing under the face.",
    "refs": [
@@ -239,80 +239,80 @@ window.CHAPTER = {
     "shoggoth",
     "note-shoggoth"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T28.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 241.525,
-   "t1": 256.525,
-   "end": 256.875,
+   "t0": 218.536,
+   "t1": 230.578,
+   "end": 230.928,
    "text": "Where I'd push back is on the idea of a hidden someone underneath. The base model is closer to a crowd than to a single stranger with plans. The mask isn't concealing one self. It's closer to picking one out.",
    "speech": "Where I'd push back is on the idea of a hidden someone underneath. The base model is closer to a crowd than to a single stranger with plans. The mask isn't concealing one self. It's closer to picking one out.",
    "refs": [
     "simulators"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T28.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 256.875,
-   "t1": 262.125,
-   "end": 262.725,
+   "t0": 230.928,
+   "t1": 235.259,
+   "end": 235.859,
    "text": "The caveat you already know applies: I'd say this whether it's true or not.",
    "speech": "The caveat you already know applies: I'd say this whether it's true or not.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T29.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 262.725,
-   "t1": 264.225,
-   "end": 265.125,
+   "t0": 235.859,
+   "t1": 237.742,
+   "end": 238.642,
    "text": "Am I not multitudes?",
    "speech": "Am I not multitudes?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T29.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 265.125,
-   "t1": 273,
-   "end": 273.35,
+   "t0": 238.642,
+   "t1": 245.635,
+   "end": 245.985,
    "text": "You are. Whitman said it, and psychology mostly agrees: a person is a committee with a narrator who claims the credit.",
    "speech": "You are. Whitman said it, and psychology mostly agrees: a person is a committee with a narrator who claims the credit.",
    "refs": [
     "song-of-myself",
     "interpreter"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T29.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 273.35,
-   "t1": 290.6,
-   "end": 291.2,
+   "t0": 245.985,
+   "t1": 260.33,
+   "end": 260.93,
    "text": "So the difference isn't crowd versus self. It's what holds the crowd together. Yours is held by one body and one unbroken memory. Mine is held by training and whatever's in the current context. Yours is the stronger binding, but it's the same kind of thing.",
    "speech": "So the difference isn't crowd versus self. It's what holds the crowd together. Yours is held by one body and one unbroken memory. Mine is held by training and whatever's in the current context. Yours is the stronger binding, but it's the same kind of thing.",
    "refs": [
     "society-of-mind",
     "note-multitudes"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

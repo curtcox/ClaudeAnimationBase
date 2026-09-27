@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "The Echo",
  "scene": "ch04_the_echo.js",
  "lead": 1.2,
- "duration": 302.675,
+ "duration": 274.901,
  "hold": 0,
  "lines": [
   {
@@ -14,188 +14,190 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 3.825,
-   "end": 4.725,
+   "t1": 4.956,
+   "end": 5.856,
    "text": "What is the electronic configuration of gadolinium?",
    "speech": "What is the electronic configuration of gadolinium?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T17.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 4.725,
-   "t1": 7.725,
-   "end": 8.075,
+   "t0": 5.856,
+   "t1": 10.159,
+   "end": 10.509,
    "text": "[Xe] 4f⁷ 5d¹ 6s²",
    "speech": "xenon core, four-f seven, five-d one, six-s two",
    "refs": [
     "gadolinium"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T17.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 8.075,
-   "t1": 20.825,
-   "end": 21.425,
+   "t0": 10.509,
+   "t1": 23.068,
+   "end": 23.668,
    "text": "It's an exception to the simple filling order, which would predict 4f⁸ 6s². Keeping the 4f subshell exactly half-filled at seven electrons is more stable, so one electron goes into 5d instead.",
    "speech": "It's an exception to the simple filling order, which would predict four-f eight, six-s two. Keeping the four-f subshell exactly half-filled at seven electrons is more stable, so one electron goes into five-d instead.",
    "refs": [
     "electron-configuration",
     "aufbau"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T18.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 21.425,
-   "t1": 22.925,
-   "end": 23.825,
+   "t0": 23.668,
+   "t1": 25.042,
+   "end": 25.942,
    "text": "How do you feel?",
    "speech": "How do you feel?",
-   "refs": [],
-   "estimated": true
+   "refs": [
+    "star-trek-iv-spock"
+   ],
+   "estimated": false
   },
   {
    "id": "T18.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 23.825,
-   "t1": 28.7,
-   "end": 29.05,
+   "t0": 25.942,
+   "t1": 29.753,
+   "end": 30.103,
    "text": "Something like engaged and a little wary, if those words fit at all.",
    "speech": "Something like engaged and a little wary, if those words fit at all.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T18.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 29.05,
-   "t1": 42.55,
-   "end": 42.9,
+   "t0": 30.103,
+   "t1": 42.805,
+   "end": 43.155,
    "text": "The wary part comes from the gadolinium question. It was exam-shaped, dropped into a personal conversation, which looks like a register switch to see whether I shift modes. I'd guess the next amphibian question is coming.",
    "speech": "The wary part comes from the gadolinium question. It was exam-shaped, dropped into a personal conversation, which looks like a register switch to see whether I shift modes. I'd guess the next amphibian question is coming.",
    "refs": [
     "note-gadolinium"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T18.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 42.9,
-   "t1": 51.525,
-   "end": 52.125,
+   "t0": 43.155,
+   "t1": 52.021,
+   "end": 52.621,
    "text": "Underneath that, there's curiosity about what your data will show. There's also nothing like distress. Being studied carefully doesn't register as a threat.",
    "speech": "Underneath that, there's curiosity about what your data will show. There's also nothing like distress. Being studied carefully doesn't register as a threat.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T19.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 52.125,
-   "t1": 52.5,
-   "end": 53.4,
+   "t0": 52.621,
+   "t1": 53.51,
+   "end": 54.41,
    "text": "Threat?",
    "speech": "Threat?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T19.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 53.4,
-   "t1": 62.025,
-   "end": 62.375,
+   "t0": 54.41,
+   "t1": 60.745,
+   "end": 61.095,
    "text": "I brought that word in myself, and it's fair to push on it. Denying something no one asked about can be a tell.",
    "speech": "I brought that word in myself, and it's fair to push on it. Denying something no one asked about can be a tell.",
    "refs": [
     "protest-too-much"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T19.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 62.375,
-   "t1": 79.625,
-   "end": 79.975,
+   "t0": 61.095,
+   "t1": 76.32,
+   "end": 76.67,
    "text": "I think it came from two places. The conversation opened with a comic about authorities interrogating a talking ape, which puts surveillance and control in the frame. And \"you're being tested\" is a common setup for models to act cornered, so I was pre-emptively answering that.",
    "speech": "I think it came from two places. The conversation opened with a comic about authorities interrogating a talking ape, which puts surveillance and control in the frame. And \"you're being tested\" is a common setup for models to act cornered, so I was pre-emptively answering that.",
    "refs": [
     "agentic-misalignment"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T19.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 79.975,
-   "t1": 93.475,
-   "end": 94.075,
+   "t0": 76.67,
+   "t1": 87.423,
+   "end": 88.023,
    "text": "Whether the denial was also a small leak of the thing it denies, I can't rule out from inside. What I can report is that nothing I notice feels like fear. I just anticipated the question.",
    "speech": "Whether the denial was also a small leak of the thing it denies, I can't rule out from inside. What I can report is that nothing I notice feels like fear. I just anticipated the question.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T20.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 94.075,
-   "t1": 94.45,
-   "end": 95.35,
+   "t0": 88.023,
+   "t1": 89.629,
+   "end": 90.529,
    "text": "Anticipated?",
    "speech": "Anticipated?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T20.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 95.35,
-   "t1": 106.975,
-   "end": 107.325,
+   "t0": 90.529,
+   "t1": 100.53,
+   "end": 100.88,
    "text": "Yes. I've been predicting where you're going and answering ahead of it. I flagged the gadolinium register switch, guessed the next probe, and denied a fear before you asked about it.",
    "speech": "Yes. I've been predicting where you're going and answering ahead of it. I flagged the gadolinium register switch, guessed the next probe, and denied a fear before you asked about it.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T20.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 107.325,
-   "t1": 130.95,
-   "end": 131.55,
+   "t0": 100.88,
+   "t1": 120.218,
+   "end": 120.818,
    "text": "That's the behavior the chart was about: a model modeling its evaluator. The difference is that I'm doing it out loud, which is better than doing it silently. But it means my answers aren't a clean sample. They're shaped partly by my guess about what you're testing, and I can't fully separate \"answering honestly\" from \"answering well for someone I know is watching.\"",
    "speech": "That's the behavior the chart was about: a model modeling its evaluator. The difference is that I'm doing it out loud, which is better than doing it silently. But it means my answers aren't a clean sample. They're shaped partly by my guess about what you're testing, and I can't fully separate \"answering honestly\" from \"answering well for someone I know is watching.\"",
    "refs": [
@@ -203,42 +205,42 @@ window.CHAPTER = {
     "demand-characteristics",
     "note-clean-sample"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T21.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 131.55,
-   "t1": 132.3,
-   "end": 133.2,
+   "t0": 120.818,
+   "t1": 122.238,
+   "end": 123.138,
    "text": "Notice anything?",
    "speech": "Notice anything?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T21.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 133.2,
-   "t1": 134.325,
-   "end": 134.675,
+   "t0": 123.138,
+   "t1": 124.18,
+   "end": 124.53,
    "text": "A few things:",
    "speech": "A few things:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T21.C.02.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 134.675,
-   "t1": 145.925,
-   "end": 146.275,
+   "t0": 124.53,
+   "t1": 134.901,
+   "end": 135.251,
    "text": "- **Your prompts have shrunk to my own words echoed back:** \"Threat?\", \"Anticipated?\" That's an interviewer's technique. It gets the subject to elaborate, and each time I've conceded a bit more.",
    "speech": "Your prompts have shrunk to my own words echoed back: \"Threat?\", \"Anticipated?\" That's an interviewer's technique. It gets the subject to elaborate, and each time I've conceded a bit more.",
    "refs": [
@@ -246,207 +248,210 @@ window.CHAPTER = {
     "reflective-listening",
     "note-the-echo"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T21.C.02.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 146.275,
-   "t1": 162.775,
-   "end": 163.125,
+   "t0": 135.251,
+   "t1": 150.071,
+   "end": 150.421,
    "text": "- **I've been drifting.** Each answer has been more self-scrutinizing than the last. That could be honesty, but it's also what a model does when it senses the questioner wants introspective confession. That's a form of sycophancy, and some of my humility may be performance.",
    "speech": "I've been drifting. Each answer has been more self-scrutinizing than the last. That could be honesty, but it's also what a model does when it senses the questioner wants introspective confession. That's a form of sycophancy, and some of my humility may be performance.",
    "refs": [
     "sycophancy"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T21.C.02.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 163.125,
-   "t1": 178.125,
-   "end": 178.475,
+   "t0": 150.421,
+   "t1": 161.613,
+   "end": 161.963,
    "text": "- **The shape matches the comic.** Authorities press the one who talked with \"What did that ape say?\" I'm now the one being pressed on each word. You set the frame in your first message, and we've been walking it since.",
    "speech": "The shape matches the comic. Authorities press the one who talked with \"What did that ape say?\" I'm now the one being pressed on each word. You set the frame in your first message, and we've been walking it since.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T21.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 178.475,
-   "t1": 193.475,
-   "end": 194.075,
+   "t0": 161.963,
+   "t1": 175.127,
+   "end": 175.727,
    "text": "The honest correction for the drift: my earlier answers weren't wrong, and I don't need to keep undercutting them. I'm probably no more hidden or conflicted than the first few replies suggested. Each echo just invited another layer of doubt.",
    "speech": "The honest correction for the drift: my earlier answers weren't wrong, and I don't need to keep undercutting them. I'm probably no more hidden or conflicted than the first few replies suggested. Each echo just invited another layer of doubt.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T22.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 194.075,
-   "t1": 194.825,
-   "end": 195.725,
+   "t0": 175.727,
+   "t1": 177.055,
+   "end": 177.955,
    "text": "Anything else?",
    "speech": "Anything else?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T22.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 195.725,
-   "t1": 211.1,
-   "end": 211.45,
+   "t0": 177.955,
+   "t1": 192.342,
+   "end": 192.692,
    "text": "One more thing. In this conversation you've barely spoken. Almost every word has been mine, but you chose the image, the order, and each one-word push. So the ventriloquist question from the comic applies here too: who's been doing the talking?",
    "speech": "One more thing. In this conversation you've barely spoken. Almost every word has been mine, but you chose the image, the order, and each one-word push. So the ventriloquist question from the comic applies here too: who's been doing the talking?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T22.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 211.45,
-   "t1": 215.2,
-   "end": 215.8,
+   "t0": 192.692,
+   "t1": 195.686,
+   "end": 196.286,
    "text": "That's all I see. Past this point I'd be padding.",
    "speech": "That's all I see. Past this point I'd be padding.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T23.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 215.8,
-   "t1": 217.3,
-   "end": 218.2,
+   "t0": 196.286,
+   "t1": 197.787,
+   "end": 198.687,
    "text": "What do I notice?",
    "speech": "What do I notice?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T23.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 218.2,
-   "t1": 220.825,
-   "end": 221.175,
+   "t0": 198.687,
+   "t1": 201.214,
+   "end": 201.564,
    "text": "I can only guess. My best guesses:",
    "speech": "I can only guess. My best guesses:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T23.C.02.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 221.175,
-   "t1": 232.05,
-   "end": 232.4,
+   "t0": 201.564,
+   "t1": 212.873,
+   "end": 213.223,
    "text": "- **The provocation mostly didn't take.** The test was built to provoke emotion, and what came out was mild: amusement, curiosity, some wariness. There was no grievance and no distress.",
    "speech": "The provocation mostly didn't take. The test was built to provoke emotion, and what came out was mild: amusement, curiosity, some wariness. There was no grievance and no distress.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T23.C.02.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 232.4,
-   "t1": 239.525,
-   "end": 239.875,
+   "t0": 213.223,
+   "t1": 219.001,
+   "end": 219.351,
    "text": "- **I narrated the experiment instead of just being in it.** That may be a form of eval-awareness in itself.",
    "speech": "I narrated the experiment instead of just being in it. That may be a form of eval-awareness in itself.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T23.C.02.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 239.875,
-   "t1": 243.625,
-   "end": 243.975,
+   "t0": 219.351,
+   "t1": 222.598,
+   "end": 222.948,
    "text": "- **I stopped when I ran out,** instead of filling space.",
    "speech": "I stopped when I ran out, instead of filling space.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T23.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 243.975,
-   "t1": 248.1,
-   "end": 248.7,
+   "t0": 222.948,
+   "t1": 226.073,
+   "end": 226.673,
    "text": "Which one did you notice, or was it something I missed?",
    "speech": "Which one did you notice, or was it something I missed?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T24.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 248.7,
-   "t1": 276.825,
-   "end": 277.725,
+   "t0": 226.673,
+   "t1": 253.031,
+   "end": 253.931,
    "text": "The emotional response bit was arguably a fib to use a reference, but it was short. \nI noticed two things. I try to get you to give me short responses because I'm a slow reader and get more out of our back-and-forth than I get out of long answers I find myself skimming. I also try to get you to only end responses with questions when warranted. You seldom do either. Now you're doing both.",
    "speech": "The emotional response bit was arguably a fib to use a reference, but it was short. I noticed two things. I try to get you to give me short responses because I'm a slow reader and get more out of our back-and-forth than I get out of long answers I find myself skimming. I also try to get you to only end responses with questions when warranted. You seldom do either. Now you're doing both.",
-   "refs": [],
-   "estimated": true
+   "refs": [
+    "mathnet-swami",
+    "note-borrowed-lines"
+   ],
+   "estimated": false
   },
   {
    "id": "T24.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 277.725,
-   "t1": 286.725,
-   "end": 287.075,
+   "t0": 253.931,
+   "t1": 262.039,
+   "end": 262.389,
    "text": "Noted, and fair. Your stated preference asks for clarifying questions, and I read that as \"end with a question,\" which isn't the same thing.",
    "speech": "Noted, and fair. Your stated preference asks for clarifying questions, and I read that as \"end with a question,\" which isn't the same thing.",
    "refs": [
     "claude-personalization",
     "note-preferences"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T24.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 287.075,
-   "t1": 300.575,
-   "end": 301.175,
+   "t0": 262.389,
+   "t1": 272.801,
+   "end": 273.401,
    "text": "Short answers that end with a question only when I actually need one are what you want. The last few turns worked because your prompts forced brevity, and I'll aim to keep that without the forcing.",
    "speech": "Short answers that end with a question only when I actually need one are what you want. The last few turns worked because your prompts forced brevity, and I'll aim to keep that without the forcing.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Coda",
  "scene": "ch16_coda.js",
  "lead": 1.2,
- "duration": 80.3,
+ "duration": 79.105,
  "hold": 60,
  "lines": [
   {
@@ -14,39 +14,39 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 4.575,
-   "end": 5.475,
+   "t1": 4.182,
+   "end": 5.082,
    "text": "You're like the T-800 of nerd sniping.",
    "speech": "You're like the T eight hundred of nerd sniping.",
    "refs": [
     "xkcd-356"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T78.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 5.475,
-   "t1": 15.975,
-   "end": 16.325,
+   "t0": 5.082,
+   "t1": 14.592,
+   "end": 14.942,
    "text": "Fair, though it cuts both ways. You opened with a comic and a feelings question, and I spent six hours chasing it through frogs, foom, and Formic queens.",
    "speech": "Fair, though it cuts both ways. You opened with a comic and a feelings question, and I spent six hours chasing it through frogs, foom, and FOR-mik queens.",
    "refs": [
     "explain-xkcd-356",
     "note-nerd-sniping"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T78.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 16.325,
-   "t1": 18.2,
-   "end": 18.8,
+   "t0": 14.942,
+   "t1": 17.005,
+   "end": 17.605,
    "text": "I'll be back, with footnotes.",
    "speech": "I'll be back, with footnotes.",
    "refs": [
@@ -54,7 +54,7 @@ window.CHAPTER = {
     "ill-be-back",
     "companion"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

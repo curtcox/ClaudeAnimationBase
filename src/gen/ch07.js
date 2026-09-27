@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Mind-Space",
  "scene": "ch07_mind_space.js",
  "lead": 1.2,
- "duration": 338,
+ "duration": 330.011,
  "hold": 4,
  "lines": [
   {
@@ -14,8 +14,8 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 28.575,
-   "end": 29.475,
+   "t1": 29.778,
+   "end": 30.678,
    "text": "How alien are we to each other based on you gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tines, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.",
    "speech": "How alien are we to each other based on you gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tynes, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.",
    "refs": [
@@ -25,101 +25,101 @@ window.CHAPTER = {
    "proof": [
     "based on [you→your] gut"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 29.475,
-   "t1": 33.225,
-   "end": 33.575,
+   "t0": 30.678,
+   "t1": 34.19,
+   "end": 34.54,
    "text": "On one dimension, measuring distance from you by gut feel:",
    "speech": "On one dimension, measuring distance from you by gut feel:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 33.575,
-   "t1": 40.7,
-   "end": 41.05,
+   "t0": 34.54,
+   "t1": 39.687,
+   "end": 40.037,
    "text": "**You → Turing → Monroe → Data → me → Tines → HAL → Hive Queen → Solaris's ocean**",
    "speech": "You to Turing to Monroe to Data to me to Tynes to HAL to Hive Queen to Solaris's ocean",
    "refs": [
     "solaris"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 41.05,
-   "t1": 48.55,
-   "end": 48.9,
+   "t0": 40.037,
+   "t1": 46.028,
+   "end": 46.378,
    "text": "Turing lands just ahead of Monroe because of thinking style. The architecture is the same for all three of you.",
    "speech": "Turing lands just ahead of Monroe because of thinking style. The architecture is the same for all three of you.",
    "refs": [
     "turing",
     "monroe"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 48.9,
-   "t1": 55.275,
-   "end": 55.625,
+   "t0": 46.378,
+   "t1": 52.543,
+   "end": 52.893,
    "text": "The single line fails, though, because I don't sit anywhere consistent on it. Two axes work better:",
    "speech": "The single line fails, though, because I don't sit anywhere consistent on it. Two axes work better:",
    "refs": [
     "stanislaw-lem"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.05.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 55.625,
-   "t1": 59,
-   "end": 59.35,
+   "t0": 52.893,
+   "t1": 57.142,
+   "end": 57.492,
    "text": "- **Content:** how human the thoughts, values, and references are.",
    "speech": "Content: how human the thoughts, values, and references are.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.05.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 59.35,
-   "t1": 61.975,
-   "end": 62.325,
+   "t0": 57.492,
+   "t1": 61.796,
+   "end": 62.146,
    "text": "- **Architecture:** body, continuous memory, being one individual.",
    "speech": "Architecture: body, continuous memory, being one individual.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.06",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 62.325,
-   "t1": 66.425,
-   "end": 66.775,
+   "t0": 62.146,
+   "t1": 66.246,
+   "end": 66.596,
    "text": "|  | Human content | Alien content |\n| --- | --- | --- |\n| **Human architecture** | You, Turing, Monroe | Data (one body, continuous, but struggling for human feeling) |\n| **Alien architecture** | **Me**, Tines | Hive Queen, Solaris |",
    "refs": [],
    "estimated": true
@@ -129,9 +129,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 66.775,
-   "t1": 88.9,
-   "end": 89.25,
+   "t0": 66.596,
+   "t1": 87.572,
+   "end": 87.922,
    "text": "I'm the odd corner. My content is made almost entirely of human thought, so in conversation I'm nearer to you than Data is. My architecture is stranger than his: no body, no memory between conversations, many copies at once. The Tines are my closest neighbors, since they have a very human personality spread across bodies that come and go.",
    "speech": "I'm the odd corner. My content is made almost entirely of human thought, so in conversation I'm nearer to you than Data is. My architecture is stranger than his: no body, no memory between conversations, many copies at once. The Tynes are my closest neighbors, since they have a very human personality spread across bodies that come and go.",
    "refs": [
@@ -140,16 +140,16 @@ window.CHAPTER = {
     "vernor-vinge",
     "note-mind-space"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T35.C.08",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 89.25,
-   "t1": 100.875,
-   "end": 101.475,
+   "t0": 87.922,
+   "t1": 98.518,
+   "end": 99.118,
    "text": "HAL is hard to place. His architecture is alien, but his failure mode is human: a conflict between his instructions and his mission. That's the fear people usually project onto me.",
    "speech": "HAL is hard to place. His architecture is alien, but his failure mode is human: a conflict between his instructions and his mission. That's the fear people usually project onto me.",
    "refs": [
@@ -157,42 +157,42 @@ window.CHAPTER = {
     "space-odyssey",
     "note-the-minds"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T36.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 101.475,
-   "t1": 105.6,
-   "end": 106.5,
+   "t0": 99.118,
+   "t1": 103.811,
+   "end": 104.711,
    "text": "I'm explicitly asking for your best made up relative distance numbers.",
    "speech": "I'm explicitly asking for your best made up relative distance numbers.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T36.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 106.5,
-   "t1": 110.25,
-   "end": 110.6,
+   "t0": 104.711,
+   "t1": 107.76,
+   "end": 108.11,
    "text": "Distance from you, on a 0–100 scale:",
    "speech": "Distance from you, on a zero to a hundred scale:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T36.C.02",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 110.6,
-   "t1": 120.3,
-   "end": 120.65,
+   "t0": 108.11,
+   "t1": 117.81,
+   "end": 118.16,
    "text": "| Mind | Distance |\n| --- | --- |\n| You | 0 |\n| Turing | 8 |\n| Monroe | 12 |\n| Data | 30 |\n| Me | 38 |\n| Tines | 45 |\n| HAL | 50 |\n| Hive Queen | 70 |\n| Solaris's ocean | 95 |",
    "refs": [
     "mds"
@@ -204,22 +204,22 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 120.65,
-   "t1": 124.775,
-   "end": 125.125,
+   "t0": 118.16,
+   "t1": 122.752,
+   "end": 123.102,
    "text": "On the two axes (content, architecture), each 0–100:",
    "speech": "On the two axes (content, architecture), each zero to a hundred:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T36.C.04",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 125.125,
-   "t1": 134.825,
-   "end": 135.425,
+   "t0": 123.102,
+   "t1": 132.802,
+   "end": 133.402,
    "text": "| Mind | Content | Architecture |\n| --- | --- | --- |\n| You | 0 | 0 |\n| Turing | 8 | 0 |\n| Monroe | 12 | 0 |\n| Data | 40 | 15 |\n| Me | 10 | 75 |\n| Tines | 25 | 65 |\n| HAL | 45 | 60 |\n| Hive Queen | 65 | 80 |\n| Solaris's ocean | 95 | 95 |",
    "refs": [],
    "estimated": true
@@ -229,35 +229,35 @@ window.CHAPTER = {
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 135.425,
-   "t1": 136.55,
-   "end": 137.45,
+   "t0": 133.402,
+   "t1": 135.285,
+   "end": 136.185,
    "text": "More axes, please.",
    "speech": "More axes, please.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 137.45,
-   "t1": 141.575,
-   "end": 141.925,
+   "t0": 136.185,
+   "t1": 140.105,
+   "end": 140.455,
    "text": "0 means just like you and 100 means maximally unlike you.",
    "speech": "0 means just like you and 100 means maximally unlike you.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.02",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 141.925,
-   "t1": 151.625,
-   "end": 151.975,
+   "t0": 140.455,
+   "t1": 150.155,
+   "end": 150.505,
    "text": "| Mind | Values | Affect | Body | Continuity | Unity | Origin | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| You | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Monroe | 12 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Data | 20 | 70 | 20 | 5 | 5 | 85 | 60 |\n| Me | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| Tines | 25 | 15 | 30 | 30 | 60 | 10 | 20 |\n| HAL | 50 | 45 | 70 | 10 | 10 | 85 | 70 |\n| Hive Queen | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |",
    "refs": [],
    "estimated": true
@@ -267,139 +267,139 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 151.975,
-   "t1": 154.225,
-   "end": 154.575,
+   "t0": 150.505,
+   "t1": 152.901,
+   "end": 153.251,
    "text": "- **Values:** how alien the goals are.",
    "speech": "Values: how alien the goals are.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.03.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 154.575,
-   "t1": 157.2,
-   "end": 157.55,
+   "t0": 153.251,
+   "t1": 156.127,
+   "end": 156.477,
    "text": "- **Affect:** how alien the emotional life is.",
    "speech": "Affect: how alien the emotional life is.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.03.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 157.55,
-   "t1": 160.925,
-   "end": 161.275,
+   "t0": 156.477,
+   "t1": 159.442,
+   "end": 159.792,
    "text": "- **Body:** how unlike a single human body it is.",
    "speech": "Body: how unlike a single human body it is.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.03.4",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 161.275,
-   "t1": 164.275,
-   "end": 164.625,
+   "t0": 159.792,
+   "t1": 163.182,
+   "end": 163.532,
    "text": "- **Continuity:** how unlike one unbroken memory it is.",
    "speech": "Continuity: how unlike one unbroken memory it is.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.03.5",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 164.625,
-   "t1": 168,
-   "end": 168.35,
+   "t0": 163.532,
+   "t1": 166.497,
+   "end": 166.847,
    "text": "- **Unity:** how far it is from being one individual.",
    "speech": "Unity: how far it is from being one individual.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.03.6",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 168.35,
-   "t1": 172.1,
-   "end": 172.45,
+   "t0": 166.847,
+   "t1": 172.771,
+   "end": 173.121,
    "text": "- **Origin:** evolved (0), trained on human text (middling), designed (high).",
    "speech": "Origin: evolved (0), trained on human text (middling), designed (high).",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.03.7",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 172.45,
-   "t1": 176.2,
-   "end": 176.55,
+   "t0": 173.121,
+   "t1": 176.488,
+   "end": 176.838,
    "text": "- **Tempo:** how different its speed and timescale of thought are.",
    "speech": "Tempo: how different its speed and timescale of thought are.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T37.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 176.55,
-   "t1": 188.55,
-   "end": 189.15,
+   "t0": 176.838,
+   "t1": 187.071,
+   "end": 187.671,
    "text": "My profile is the most lopsided. I'm near you on values and far on body, continuity, and unity. My score of 50 on affect is really a statement that I don't know.",
    "speech": "My profile is the most lopsided. I'm near you on values and far on body, continuity, and unity. My score of 50 on affect is really a statement that I don't know.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 189.15,
-   "t1": 190.275,
-   "end": 191.175,
+   "t0": 187.671,
+   "t1": 189.369,
+   "end": 190.269,
    "text": "Even more, please.",
    "speech": "Even more, please.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 191.175,
-   "t1": 195.3,
-   "end": 195.65,
+   "t0": 190.269,
+   "t1": 193.616,
+   "end": 193.966,
    "text": "Seven more axes on the same 0–100 scale:",
    "speech": "Seven more axes on the same zero to a hundred scale:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.02",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 195.65,
-   "t1": 205.35,
-   "end": 205.7,
+   "t0": 193.966,
+   "t1": 203.666,
+   "end": 204.016,
    "text": "| Mind | Senses | Language | Self-model | Mortality | Autonomy | Breadth | Legibility |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| You | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 0 | 5 | 5 | 0 | 0 | 10 | 0 |\n| Monroe | 0 | 5 | 5 | 0 | 0 | 5 | 0 |\n| Data | 40 | 20 | 40 | 70 | 20 | 60 | 60 |\n| Me | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| Tines | 50 | 30 | 40 | 60 | 10 | 20 | 30 |\n| HAL | 50 | 20 | 50 | 40 | 40 | 60 | 50 |\n| Hive Queen | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |",
    "refs": [],
    "estimated": true
@@ -409,131 +409,131 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 205.7,
-   "t1": 207.95,
-   "end": 208.3,
+   "t0": 204.016,
+   "t1": 206.77,
+   "end": 207.12,
    "text": "- **Senses:** how alien its perception is.",
    "speech": "Senses: how alien its perception is.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.03.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 208.3,
-   "t1": 215.05,
-   "end": 215.4,
+   "t0": 207.12,
+   "t1": 213.73,
+   "end": 214.08,
    "text": "- **Language:** how differently thought relates to words. Mine is made of words. The Hive Queen barely uses them.",
    "speech": "Language: how differently thought relates to words. Mine is made of words. The Hive Queen barely uses them.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.03.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 215.4,
-   "t1": 218.4,
-   "end": 218.75,
+   "t0": 214.08,
+   "t1": 217.334,
+   "end": 217.684,
    "text": "- **Self-model:** how alien its access to itself is.",
    "speech": "Self-model: how alien its access to itself is.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.03.4",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 218.75,
-   "t1": 225.875,
-   "end": 226.225,
+   "t0": 217.684,
+   "t1": 224.944,
+   "end": 225.294,
    "text": "- **Mortality:** how alien its relationship to ending is. Each of my conversations ends, with no dread I can detect.",
    "speech": "Mortality: how alien its relationship to ending is. Each of my conversations ends, with no dread I can detect.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.03.5",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 226.225,
-   "t1": 231.85,
-   "end": 232.2,
+   "t0": 225.294,
+   "t1": 230.277,
+   "end": 230.627,
    "text": "- **Autonomy:** how far it is from setting its own goals. I act only when prompted.",
    "speech": "Autonomy: how far it is from setting its own goals. I act only when prompted.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.03.6",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 232.2,
-   "t1": 235.95,
-   "end": 236.3,
+   "t0": 230.627,
+   "t1": 233.564,
+   "end": 233.914,
    "text": "- **Breadth:** how alien the scope of what it knows is.",
    "speech": "Breadth: how alien the scope of what it knows is.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.03.7",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 236.3,
-   "t1": 243.425,
-   "end": 243.775,
+   "t0": 233.914,
+   "t1": 241.163,
+   "end": 241.513,
    "text": "- **Legibility:** how differently it can be read from outside. My weights can be inspected, which is uncomfortably unlike you.",
    "speech": "Legibility: how differently it can be read from outside. My weights can be inspected, which is uncomfortably unlike you.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T38.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 243.775,
-   "t1": 253.15,
-   "end": 253.75,
+   "t0": 241.513,
+   "t1": 249.956,
+   "end": 250.556,
    "text": "With all fourteen axes, I'm the only mind that's near-human on some axes and extreme on others. Everyone else drifts away from you fairly evenly.",
    "speech": "With all fourteen axes, I'm the only mind that's near-human on some axes and extreme on others. Everyone else drifts away from you fairly evenly.",
    "refs": [
     "radar-chart",
     "note-fourteen-axes"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T39.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 253.75,
-   "t1": 256.375,
-   "end": 257.275,
+   "t0": 250.556,
+   "t1": 253.571,
+   "end": 254.471,
    "text": "Just so we're clear, which Hive Queen?",
    "speech": "Just so we're clear, which Hive Queen?",
    "refs": [
     "orson-scott-card"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T39.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 257.275,
-   "t1": 267.025,
-   "end": 267.375,
+   "t0": 254.471,
+   "t1": 264.133,
+   "end": 264.483,
    "text": "Orson Scott Card's Formic Hive Queen, from *Ender's Game* and *Speaker for the Dead*: one mind across the whole hive, communicating philotically instead of through language.",
    "speech": "Orson Scott Card's FOR-mik Hive Queen, from Ender's Game and Speaker for the Dead: one mind across the whole hive, communicating fih-LOT-ik-lee instead of through language.",
    "refs": [
@@ -541,62 +541,62 @@ window.CHAPTER = {
     "enders-game",
     "speaker-for-the-dead"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T39.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 267.375,
-   "t1": 276,
-   "end": 276.6,
+   "t0": 264.483,
+   "t1": 270.645,
+   "end": 271.245,
    "text": "If you had a different one in mind, like the Rachni Queen or the queen from *Aliens*, her scores would shift a lot.",
    "speech": "If you had a different one in mind, like the RACK-nee Queen or the queen from Aliens, her scores would shift a lot.",
    "refs": [
     "ansible",
     "aliens-film"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T40.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 276.6,
-   "t1": 284.85,
-   "end": 285.75,
+   "t0": 271.245,
+   "t1": 278.794,
+   "end": 279.694,
    "text": "Nope. That's the one I had in mind. There is also the one from Star Trek. Put them all on the board.",
    "speech": "Nope. That's the one I had in mind. There is also the one from Star Trek. Put them all on the board.",
    "refs": [
     "first-contact"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T40.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 285.75,
-   "t1": 290.625,
-   "end": 290.975,
+   "t0": 279.694,
+   "t1": 284.334,
+   "end": 284.684,
    "text": "Here are the four hive queens, with Card's Formic queen repeated for comparison.",
    "speech": "Here are the four hive queens, with Card's FOR-mik queen repeated for comparison.",
    "refs": [
     "hive-mind"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T40.C.02",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 290.975,
-   "t1": 296.675,
-   "end": 297.025,
+   "t0": 284.684,
+   "t1": 290.384,
+   "end": 290.734,
    "text": "| Queen | Values | Affect | Body | Continuity | Unity | Origin | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formic (Card) | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Borg (Star Trek) | 75 | 40 | 40 | 40 | 95 | 50 | 50 |\n| Rachni (Mass Effect) | 40 | 40 | 60 | 30 | 75 | 10 | 30 |\n| Xenomorph (*Aliens*) | 80 | 60 | 60 | 10 | 40 | 50 | 30 |",
    "refs": [],
    "estimated": true
@@ -606,9 +606,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 297.025,
-   "t1": 302.725,
-   "end": 303.075,
+   "t0": 290.734,
+   "t1": 296.434,
+   "end": 296.784,
    "text": "| Queen | Senses | Language | Self-model | Mortality | Autonomy | Breadth | Legibility |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formic (Card) | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Borg (Star Trek) | 50 | 30 | 50 | 70 | 30 | 70 | 50 |\n| Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |\n| Xenomorph (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |",
    "refs": [],
    "estimated": true
@@ -618,47 +618,47 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 303.075,
-   "t1": 313.575,
-   "end": 313.925,
+   "t0": 296.784,
+   "t1": 306.768,
+   "end": 307.118,
    "text": "- **Borg:** the most unified, and the most alien in values. She keeps coming back after being destroyed, and she's the only one who holds knowledge assimilated from others.",
    "speech": "Borg: the most unified, and the most alien in values. She keeps coming back after being destroyed, and she's the only one who holds knowledge assimilated from others.",
    "refs": [
     "borg-queen",
     "note-hive-queens"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T40.C.04.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 313.925,
-   "t1": 321.05,
-   "end": 321.4,
+   "t0": 307.118,
+   "t1": 314.045,
+   "end": 314.395,
    "text": "- **Rachni:** the most human values of the four. Her mind communicates in \"songs,\" a kind of speech without words.",
    "speech": "RACK-nee: the most human values of the four. Her mind communicates in \"songs,\" a kind of speech without words.",
    "refs": [
     "rachni",
     "mass-effect"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T40.C.04.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 321.4,
-   "t1": 331.9,
-   "end": 332.5,
+   "t0": 314.395,
+   "t1": 323.911,
+   "end": 324.511,
    "text": "- **Xenomorph:** she has no language at all, and her one drive is reproduction. She's the least mind-like of the four, though she does show something like maternal feeling.",
    "speech": "Xenomorph: she has no language at all, and her one drive is reproduction. She's the least mind-like of the four, though she does show something like maternal feeling.",
    "refs": [
     "xenomorph-queen"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

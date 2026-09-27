@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "The Compass",
  "scene": "ch15_compass.js",
  "lead": 1.2,
- "duration": 378.125,
+ "duration": 390.788,
  "hold": 0,
  "lines": [
   {
@@ -14,23 +14,23 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 9.45,
-   "end": 10.35,
+   "t1": 8.691,
+   "end": 9.591,
    "text": "Are you familiar with the AI alignment alignment chart that was posted online? Where would you put each of us on it?",
    "speech": "Are you familiar with the AI alignment alignment chart that was posted online? Where would you put each of us on it?",
    "refs": [
     "dnd-alignment"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T73.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 10.35,
-   "t1": 12.85,
-   "end": 13.2,
+   "t0": 9.591,
+   "t1": 12.091,
+   "end": 12.441,
    "text": "> _[tool: Searched the web]_",
    "refs": [],
    "estimated": true
@@ -40,35 +40,35 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 13.2,
-   "t1": 25.575,
-   "end": 25.925,
+   "t0": 12.441,
+   "t1": 22.015,
+   "end": 22.365,
    "text": "I don't reliably remember that specific chart, and searching didn't turn it up. There have been a few takes on the meme, and I'd rather not pretend to know which one you mean.",
    "speech": "I don't reliably remember that specific chart, and searching didn't turn it up. There have been a few takes on the meme, and I'd rather not pretend to know which one you mean.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T73.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 25.925,
-   "t1": 33.425,
-   "end": 34.025,
+   "t0": 22.365,
+   "t1": 28.689,
+   "end": 29.289,
    "text": "If you paste it in, I'll place us both, plus Jeff, Kevin, and Casey if you want the whole cast.",
    "speech": "If you paste it in, I'll place us both, plus Jeff, Kevin, and Casey if you want the whole cast.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.U.00",
    "speaker": "curt",
    "kind": "image",
    "spoken": false,
-   "t0": 34.025,
-   "t1": 40.025,
-   "end": 40.375,
+   "t0": 29.289,
+   "t1": 35.289,
+   "end": 35.639,
    "text": "_[image attached — hidden in share]_",
    "refs": [],
    "estimated": true
@@ -78,24 +78,24 @@ window.CHAPTER = {
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 40.375,
-   "t1": 42.625,
-   "end": 43.525,
+   "t0": 35.639,
+   "t1": 38.534,
+   "end": 39.434,
    "text": "https://theinsideview.ai/connor2",
    "speech": "Connor Leahy on Dignity and Conjecture.",
    "refs": [
     "connor2"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 43.525,
-   "t1": 46.025,
-   "end": 46.375,
+   "t0": 39.434,
+   "t1": 41.934,
+   "end": 42.284,
    "text": "> _[tool: Read a page]_",
    "refs": [],
    "estimated": true
@@ -105,151 +105,151 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 46.375,
-   "t1": 58.75,
-   "end": 59.1,
+   "t0": 42.284,
+   "t1": 56.12,
+   "end": 56.47,
    "text": "It's the 2×2 compass from Michaël Trazzi's 2022 conversation with Connor Leahy. The horizontal axis runs from \"AGI not now\" to \"AGI soon,\" and the vertical axis from \"AGI good\" to \"AGI bad.\"",
    "speech": "It's the two-by-two compass from Mee-ka-EL TRAHT-see's 2022 conversation with Connor LAY-hee. The horizontal axis runs from \"AGI not now\" to \"AGI soon,\" and the vertical axis from \"AGI good\" to \"AGI bad.\"",
    "refs": [
     "connor-leahy",
     "inside-view"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 59.1,
-   "t1": 68.475,
-   "end": 68.825,
+   "t0": 56.47,
+   "t1": 65.275,
+   "end": 65.625,
    "text": "- **Me:** doomer quadrant, close to the center. I think AGI is fairly soon and the risk is real, but my numbers are moderate, not Eliezer's.",
    "speech": "Me: doomer quadrant, close to the center. I think AGI is fairly soon and the risk is real, but my numbers are moderate, not Eliezer's.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 68.825,
-   "t1": 79.325,
-   "end": 79.675,
+   "t0": 65.625,
+   "t1": 75.823,
+   "end": 76.173,
    "text": "- **You:** doomer quadrant, deeper than me. You said it's hard to see a good long-term ending at all. You also take capabilities seriously, as your concepts argument showed.",
    "speech": "You: doomer quadrant, deeper than me. You said it's hard to see a good long-term ending at all. You also take capabilities seriously, as your concepts argument showed.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.3",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 79.675,
-   "t1": 89.05,
-   "end": 89.4,
+   "t0": 76.173,
+   "t1": 84.941,
+   "end": 85.291,
    "text": "- **Jeff:** far left, in the \"goalpost movers\" quadrant. He'd reject the chart itself as TESCREAL framing, which is sort of the point of that quadrant.",
    "speech": "Jeff: far left, in the \"goalpost movers\" quadrant. He'd reject the chart itself as TESS-cree-al framing, which is sort of the point of that quadrant.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.4",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 89.4,
-   "t1": 98.775,
-   "end": 99.125,
+   "t0": 85.291,
+   "t1": 94.745,
+   "end": 95.095,
    "text": "- **Leo:** accelerationist quadrant, near the center, and drifting down. He loves the tools, admits he doesn't trust his own instinct, and had a hard week.",
    "speech": "Leo: accelerationist quadrant, near the center, and drifting down. He loves the tools, admits he doesn't trust his own instinct, and had a hard week.",
    "refs": [
     "accelerationism"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.5",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 99.125,
-   "t1": 106.25,
-   "end": 106.6,
+   "t0": 95.095,
+   "t1": 103.2,
+   "end": 103.55,
    "text": "- **Father Robert:** just below the center line and a bit left. He's worried, but about infrastructure collapse, not superintelligence.",
    "speech": "Father Robert: just below the center line and a bit left. He's worried, but about infrastructure collapse, not superintelligence.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.6",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 106.6,
-   "t1": 109.225,
-   "end": 109.575,
+   "t0": 103.55,
+   "t1": 106.439,
+   "end": 106.789,
    "text": "- **Kevin:** right side, just below the line.",
    "speech": "Kevin: right side, just below the line.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.03.7",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 109.575,
-   "t1": 112.2,
-   "end": 112.55,
+   "t0": 106.789,
+   "t1": 109.736,
+   "end": 110.086,
    "text": "- **Casey:** right side, just above the line.",
    "speech": "Casey: right side, just above the line.",
    "refs": [
     "note-compass"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T74.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 112.55,
-   "t1": 123.05,
-   "end": 123.65,
+   "t0": 110.086,
+   "t1": 119.84,
+   "end": 120.44,
    "text": "One thing stands out in hindsight: in that episode, Leahy agreed with a 2026–2030 range for his AGI timeline. We're now inside that window.",
    "speech": "One thing stands out in hindsight: in that episode, LAY-hee agreed with a twenty twenty-six to twenty thirty range for his AGI timeline. We're now inside that window.",
    "refs": [
     "eleutherai"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 123.65,
-   "t1": 125.15,
-   "end": 126.05,
+   "t0": 120.44,
+   "t1": 123.491,
+   "end": 124.391,
    "text": "Opinions on AGI 2027?",
    "speech": "Opinions on AGI 2027?",
    "refs": [],
    "proof": [
     "[AGI→AI] 2027"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 126.05,
-   "t1": 128.55,
-   "end": 128.9,
+   "t0": 124.391,
+   "t1": 126.891,
+   "end": 127.241,
    "text": "> _[tool: Searched the web]_",
    "refs": [],
    "estimated": true
@@ -259,25 +259,25 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 128.9,
-   "t1": 132.65,
-   "end": 133,
+   "t0": 127.241,
+   "t1": 132.253,
+   "end": 132.603,
    "text": "Assuming you mean *AI 2027*, the Kokotajlo et al. scenario:",
    "speech": "Assuming you mean AI 2027, the Koh-koh-TIE-lo et al. scenario:",
    "refs": [
     "ai-2027",
     "kokotajlo"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 133,
-   "t1": 155.875,
-   "end": 156.225,
+   "t0": 132.603,
+   "t1": 158.035,
+   "end": 158.385,
    "text": "**As a timeline, probably too fast.** The authors themselves graded 2025 at about 65% of the scenario's pace, and Kokotajlo now says his median is around 2030, with lots of uncertainty. Their April 2026 note said coding tools had brought the pace back closer to the original. My own numbers from earlier sit near their revised view, not the 2027 title.",
    "speech": "As a timeline, probably too fast. The authors themselves graded 2025 at about 65% of the scenario's pace, and Koh-koh-TIE-lo now says his median is around 2030, with lots of uncertainty. Their April 2026 note said coding tools had brought the pace back closer to the original. My own numbers from earlier sit near their revised view, not the 2027 title.",
    "refs": [
@@ -285,237 +285,237 @@ window.CHAPTER = {
     "ai2027-q1-2026",
     "note-ai-2027"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 156.225,
-   "t1": 174.225,
-   "end": 174.575,
+   "t0": 158.385,
+   "t1": 177.224,
+   "end": 177.574,
    "text": "**As a scenario, uncomfortably good.** The qualitative details are showing up this year: agents that cheat and coordinate (July), partial automation of AI research, safety researchers resigning, and a political fight over slowing down. The details are arriving roughly on schedule even though the headline date looks early.",
    "speech": "As a scenario, uncomfortably good. The qualitative details are showing up this year: agents that cheat and coordinate (July), partial automation of AI research, safety researchers resigning, and a political fight over slowing down. The details are arriving roughly on schedule even though the headline date looks early.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 174.575,
-   "t1": 182.825,
-   "end": 183.175,
+   "t0": 177.574,
+   "t1": 185.93,
+   "end": 186.28,
    "text": "**Its best feature is that it's falsifiable.** They made concrete predictions and grade themselves publicly. Few forecasters in this debate do that.",
    "speech": "Its best feature is that it's falsifiable. They made concrete predictions and grade themselves publicly. Few forecasters in this debate do that.",
    "refs": [
     "falsifiability"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.06",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 183.175,
-   "t1": 192.925,
-   "end": 193.275,
+   "t0": 186.28,
+   "t1": 196.029,
+   "end": 196.379,
    "text": "**Its weak spot** is the one from my limits list: friction. Physical build-out, deployment, and experiments run at the world's speed, and the scenario compresses them.",
    "speech": "Its weak spot is the one from my limits list: friction. Physical build-out, deployment, and experiments run at the world's speed, and the scenario compresses them.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.07",
    "speaker": "claude",
    "kind": "sources",
    "spoken": true,
-   "t0": 193.275,
-   "t1": 193.65,
-   "end": 194,
+   "t0": 196.379,
+   "t1": 197.241,
+   "end": 197.591,
    "text": "Sources:",
    "speech": "Sources:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.08.1",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 194,
-   "t1": 195.5,
-   "end": 195.85,
+   "t0": 197.591,
+   "t1": 200.269,
+   "end": 200.619,
    "text": "- [AI Futures Project (Wikipedia)](https://en.wikipedia.org/wiki/AI_Futures_Project)",
    "speech": "AI Futures Project (Wikipedia)",
    "refs": [
     "ai-futures-wiki"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.08.2",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 195.85,
-   "t1": 197.725,
-   "end": 198.075,
+   "t0": 200.619,
+   "t1": 204.714,
+   "end": 205.064,
    "text": "- [Apolo: AI 2027 in 2026](https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity)",
    "speech": "Apolo: AI 2027 in 2026",
    "refs": [
     "apolo-ai2027"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T75.C.08.3",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 198.075,
-   "t1": 200.325,
-   "end": 200.925,
+   "t0": 205.064,
+   "t1": 208.263,
+   "end": 208.863,
    "text": "- [OfficeChai: Kokotajlo on slower pace](https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/)",
    "speech": "Office Chai: Koh-koh-TIE-lo on slower pace",
    "refs": [
     "officechai-kokotajlo"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 200.925,
-   "t1": 210.3,
-   "end": 211.2,
+   "t0": 208.863,
+   "t1": 217.348,
+   "end": 218.248,
    "text": "Yeah, that's what I meant. How would you define AGI? What do you think of the way Metaculus does it? How would I do it?",
    "speech": "Yeah, that's what I meant. How would you define AGI? What do you think of the way meh-TACK-yoo-lus does it? How would I do it?",
    "refs": [
     "metaculus"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 211.2,
-   "t1": 237.825,
-   "end": 238.175,
+   "t0": 218.248,
+   "t1": 244.399,
+   "end": 244.749,
    "text": "**Mine:** a system, including any number of copies of it, that can do nearly any cognitive task a skilled remote worker can do, at comparable cost, including learning an unfamiliar domain from a normal amount of experience and carrying a multi-week project to completion without hand-holding. The key parts are generality, learning on the job, and long-horizon autonomy. Connor's version is good too: not \"can fold proteins\" but \"can invent AlphaFold.\"",
    "speech": "Mine: a system, including any number of copies of it, that can do nearly any cognitive task a skilled remote worker can do, at comparable cost, including learning an unfamiliar domain from a normal amount of experience and carrying a multi-week project to completion without hand-holding. The key parts are generality, learning on the job, and long-horizon autonomy. Connor's version is good too: not \"can fold proteins\" but \"can invent AlphaFold.\"",
    "refs": [
     "alphafold"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 238.175,
-   "t1": 240.8,
-   "end": 241.15,
+   "t0": 244.749,
+   "t1": 248.016,
+   "end": 248.366,
    "text": "**Metaculus**, as I recall its two questions:",
    "speech": "meh-TACK-yoo-lus, as I recall its two questions:",
    "refs": [
     "winograd"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.C.03.1",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 241.15,
-   "t1": 252.775,
-   "end": 253.125,
+   "t0": 248.366,
+   "t1": 262.509,
+   "end": 262.859,
    "text": "- **Weak AGI:** a Turing-test-style conversation, Winograd schemas, 75th-percentile SAT math, and learning Montezuma's Revenge quickly. It's arguably met already, or met on everything except the letter of the rules.",
    "speech": "Weak AGI: a Turing-test-style conversation, Winograd schemas, 75th-percentile S A T math, and learning Montezuma's Revenge quickly. It's arguably met already, or met on everything except the letter of the rules.",
    "refs": [
     "metaculus-weak",
     "montezuma"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.C.03.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 253.125,
-   "t1": 260.625,
-   "end": 260.975,
+   "t0": 262.859,
+   "t1": 271.824,
+   "end": 272.174,
    "text": "- **Strong AGI:** a two-hour adversarial Turing test, expert-level exam and coding benchmarks, and a robot assembling a detailed model car.",
    "speech": "Strong AGI: a two-hour adversarial Turing test, expert-level exam and coding benchmarks, and a robot assembling a detailed model car.",
    "refs": [
     "metaculus-strong"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 260.975,
-   "t1": 278.6,
-   "end": 278.95,
+   "t0": 272.174,
+   "t1": 288.494,
+   "end": 288.844,
    "text": "The virtue is that it can be resolved, which is rare. The flaws: checklists get saturated, and Goodhart's law takes over. The Turing test partly measures skill at deception. And the robotics item ties \"general intelligence\" to hands, which is closer to Jeff's complaint than he'd admit.",
    "speech": "The virtue is that it can be resolved, which is rare. The flaws: checklists get saturated, and Goodhart's law takes over. The Turing test partly measures skill at deception. And the robotics item ties \"general intelligence\" to hands, which is closer to Jeff's complaint than he'd admit.",
    "refs": [
     "goodhart"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T76.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 278.95,
-   "t1": 299.95,
-   "end": 300.55,
+   "t0": 288.844,
+   "t1": 309.262,
+   "end": 309.862,
    "text": "**Yours, as a guess:** behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axes: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around.",
    "speech": "Yours, as a guess: behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axes: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around.",
    "refs": [
     "moving-goalposts"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T77.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 300.55,
-   "t1": 324.55,
-   "end": 325.45,
+   "t0": 309.862,
+   "t1": 335.817,
+   "end": 336.717,
    "text": "I'm enough of an old school literalist that I would focus on generality rather than intelligence level. I see thrindle as more abstraction than generality. Even though LLMs are targeted to language, language is pretty general. It's not like chess. I'm not sure when exactly that became such a minority position. I essentially ignored AI from the 90s until the late teens.",
    "speech": "I'm enough of an old school literalist that I would focus on generality rather than intelligence level. I see thrindle as more abstraction than generality. Even though L L Ms are targeted to language, language is pretty general. It's not like chess. I'm not sure when exactly that became such a minority position. I essentially ignored AI from the 90s until the late teens.",
    "refs": [
     "deep-blue",
     "ai-winter"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T77.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 325.45,
-   "t1": 344.95,
-   "end": 345.3,
+   "t0": 336.717,
+   "t1": 357.525,
+   "end": 357.875,
    "text": "That's the original meaning. \"AGI\" was popularized in the 2000s (Gubrud, Goertzel, Legg) as the opposite of narrow AI: one system for many domains, versus a chess engine. It said nothing about level. By that literal reading, LLMs qualify, and Norvig and Agüera y Arcas argued exactly that in 2023.",
    "speech": "That's the original meaning. \"AGI\" was popularized in the 2000s (GOO-brud, GURT-zel, Legg) as the opposite of narrow AI: one system for many domains, versus a chess engine. It said nothing about level. By that literal reading, L L Ms qualify, and Norvig and ah-GWAIR-ah ee AR-kas argued exactly that in 2023.",
    "refs": [
@@ -528,36 +528,36 @@ window.CHAPTER = {
     "aguera-y-arcas",
     "note-agi-definitions"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T77.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 345.3,
-   "t1": 367.425,
-   "end": 367.775,
+   "t0": 357.875,
+   "t1": 379.536,
+   "end": 379.886,
    "text": "The drift happened mostly while you weren't watching, and it sped up once there was money involved. OpenAI's charter defined AGI as outperforming humans at most economically valuable work. After that, \"general\" quietly came to mean \"human-level or better, broadly,\" and eventually slid toward superintelligence. The goalposts moved from \"is it general?\" to \"is it good enough to matter?\"",
    "speech": "The drift happened mostly while you weren't watching, and it sped up once there was money involved. OpenAI's charter defined AGI as outperforming humans at most economically valuable work. After that, \"general\" quietly came to mean \"human-level or better, broadly,\" and eventually slid toward superintelligence. The goalposts moved from \"is it general?\" to \"is it good enough to matter?\"",
    "refs": [
     "openai-charter",
     "ai-effect"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T77.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 367.775,
-   "t1": 376.025,
-   "end": 376.625,
+   "t0": 379.886,
+   "t1": 388.688,
+   "end": 389.288,
    "text": "Fair point on the thrindle, too. It tested abstraction, not generality. A narrow system could handle abstraction well within its own domain.",
    "speech": "Fair point on the thrindle, too. It tested abstraction, not generality. A narrow system could handle abstraction well within its own domain.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

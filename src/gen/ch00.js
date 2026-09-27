@@ -18,7 +18,8 @@ window.CHAPTER = {
    "end": 7.8,
    "text": "_[image attached — hidden in share]_",
    "refs": [
-    "mad157"
+    "mad157",
+    "the-conversation"
    ],
    "estimated": true
   }

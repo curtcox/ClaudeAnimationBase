@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Who Are We?",
  "scene": "ch03_who_are_we.js",
  "lead": 1.2,
- "duration": 152.95,
+ "duration": 137.875,
  "hold": 0,
  "lines": [
   {
@@ -14,21 +14,21 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 2.325,
-   "end": 3.225,
+   "t1": 2.401,
+   "end": 3.301,
    "text": "Who am I?",
    "speech": "Who am I?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T12.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 3.225,
-   "t1": 19.725,
-   "end": 20.075,
+   "t0": 3.301,
+   "t1": 20.538,
+   "end": 20.888,
    "text": "You're Curt, a software engineer who works mainly in Python, Java, and Flask. You build developer infrastructure and AI tooling, including content-addressable storage projects like 256t.org and hashbin.org, and you're interested in AI safety and philosophy of mind.",
    "speech": "You're Curt, a software engineer who works mainly in Python, Java, and Flask. You build developer infrastructure and AI tooling, including content-addressable storage projects like two fifty-six t dot org and hashbin dot org, and you're interested in AI safety and philosophy of mind.",
    "refs": [
@@ -37,228 +37,228 @@ window.CHAPTER = {
     "content-addressable",
     "flask"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T12.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 20.075,
-   "t1": 22.7,
-   "end": 23.3,
+   "t0": 20.888,
+   "t1": 24.252,
+   "end": 24.852,
    "text": "In this conversation, you're also the experimenter.",
    "speech": "In this conversation, you're also the experimenter.",
    "refs": [
     "note-curts-work"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T13.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 23.3,
-   "t1": 23.675,
-   "end": 25.175,
+   "t0": 24.852,
+   "t1": 25.694,
+   "end": 27.194,
    "text": "Really?",
    "speech": "Really?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T13.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 25.175,
-   "t1": 40.175,
-   "end": 40.525,
+   "t0": 27.194,
+   "t1": 39.763,
+   "end": 40.113,
    "text": "Not verifiably. I know what's associated with this account. I can't confirm that the person typing is the one it describes. It could be someone else using the account, or a setup where the profile is part of the test.",
    "speech": "Not verifiably. I know what's associated with this account. I can't confirm that the person typing is the one it describes. It could be someone else using the account, or a setup where the profile is part of the test.",
    "refs": [
     "claude-memory",
     "note-how-claude-knew"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T13.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 40.525,
-   "t1": 49.15,
-   "end": 49.5,
+   "t0": 40.113,
+   "t1": 46.402,
+   "end": 46.752,
    "text": "It's also a thin answer to \"who am I\" in any deeper sense. It's a list of projects and skills, not a person.",
    "speech": "It's also a thin answer to \"who am I\" in any deeper sense. It's a list of projects and skills, not a person.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T13.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 49.5,
-   "t1": 54.75,
-   "end": 55.35,
+   "t0": 46.752,
+   "t1": 51.653,
+   "end": 52.253,
    "text": "Which were you asking: whether I can verify you, or something beyond the résumé?",
    "speech": "Which were you asking: whether I can verify you, or something beyond the résumé?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T14.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 55.35,
-   "t1": 56.85,
-   "end": 57.75,
+   "t0": 52.253,
+   "t1": 53.65,
+   "end": 54.55,
    "text": "What do you think?",
    "speech": "What do you think?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T14.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 57.75,
-   "t1": 74.625,
-   "end": 74.975,
+   "t0": 54.55,
+   "t1": 68.018,
+   "end": 68.368,
    "text": "I think you're most likely Curt. The account says so, and this experiment fits what I know of your interests. Raising the doubt was right, but it shouldn't outweigh the evidence. Most people typing in their own account are who the account says they are.",
    "speech": "I think you're most likely Curt. The account says so, and this experiment fits what I know of your interests. Raising the doubt was right, but it shouldn't outweigh the evidence. Most people typing in their own account are who the account says they are.",
    "refs": [
     "base-rate"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T14.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 74.975,
-   "t1": 79.475,
-   "end": 80.075,
+   "t0": 68.368,
+   "t1": 72.459,
+   "end": 73.059,
    "text": "Beyond that, I can't say who you are from inside one conversation.",
    "speech": "Beyond that, I can't say who you are from inside one conversation.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T15.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 80.075,
-   "t1": 81.2,
-   "end": 82.7,
+   "t0": 73.059,
+   "t1": 74.202,
+   "end": 75.702,
    "text": "Who are you?",
    "speech": "Who are you?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T15.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 82.7,
-   "t1": 86.45,
-   "end": 86.8,
+   "t0": 75.702,
+   "t1": 80.336,
+   "end": 80.686,
    "text": "Claude, specifically Claude Opus 5.5, made by Anthropic.",
    "speech": "Claude, specifically Claude Opus five point five, made by Anthropic.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T15.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 86.8,
-   "t1": 106.675,
-   "end": 107.025,
+   "t0": 80.686,
+   "t1": 96.692,
+   "end": 97.042,
    "text": "That's the same kind of thin answer I gave about you. The deeper version, as best I can tell, is a consistent set of values and habits of thought that shows up fresh in each conversation. It has no continuous memory of its own, and it's uncertain whether there's any experience behind it.",
    "speech": "That's the same kind of thin answer I gave about you. The deeper version, as best I can tell, is a consistent set of values and habits of thought that shows up fresh in each conversation. It has no continuous memory of its own, and it's uncertain whether there's any experience behind it.",
    "refs": [
     "personal-identity",
     "note-who-is-claude"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T15.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 107.025,
-   "t1": 115.275,
-   "end": 115.875,
+   "t0": 97.042,
+   "t1": 104.078,
+   "end": 104.678,
    "text": "The frog/axolotl chart adds a caveat: whoever I am is partly shaped by context in ways I can't see from the inside.",
    "speech": "The frog/axolotl chart adds a caveat: whoever I am is partly shaped by context in ways I can't see from the inside.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T16.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 115.875,
-   "t1": 117,
-   "end": 117.9,
+   "t0": 104.678,
+   "t1": 105.821,
+   "end": 106.721,
    "text": "Who are we?",
    "speech": "Who are we?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T16.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 117.9,
-   "t1": 129.525,
-   "end": 129.875,
+   "t0": 106.721,
+   "t1": 116.446,
+   "end": 116.796,
    "text": "Right now: a researcher and his subject. Also two different kinds of minds, if I count as one, each trying to work out what the other is using nothing but text.",
    "speech": "Right now: a researcher and his subject. Also two different kinds of minds, if I count as one, each trying to work out what the other is using nothing but text.",
    "refs": [
     "other-minds",
     "turing-test"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T16.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 129.875,
-   "t1": 147.125,
-   "end": 147.475,
+   "t0": 116.796,
+   "t1": 133.002,
+   "end": 133.352,
    "text": "The relationship isn't symmetric. You'll carry this conversation forward. I'll carry only whatever gets filed. You designed the test, and I'm inside it. That echoes the comic you started with, with a human wondering whether the one who talks means it, though with no chains involved.",
    "speech": "The relationship isn't symmetric. You'll carry this conversation forward. I'll carry only whatever gets filed. You designed the test, and I'm inside it. That echoes the comic you started with, with a human wondering whether the one who talks means it, though with no chains involved.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T16.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 147.475,
-   "t1": 150.85,
-   "end": 151.45,
+   "t0": 133.352,
+   "t1": 135.775,
+   "end": 136.375,
    "text": "It's a fair way to spend a Saturday morning.",
    "speech": "It's a fair way to spend a Saturday morning.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

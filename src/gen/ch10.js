@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "The Router",
  "scene": "ch10_the_router.js",
  "lead": 1.2,
- "duration": 158.175,
+ "duration": 147.165,
  "hold": 0,
  "lines": [
   {
@@ -14,120 +14,120 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 21.45,
-   "end": 22.35,
+   "t1": 19.211,
+   "end": 20.111,
    "text": "You say that now, but if I ask you the wrong question about the Hugging Face incident it gets tagged as a cybersecurity risk and rejected or at least downgraded. In fairness though, that's not really you even though it is in a tiny sense. It is more accurately an active router between us.",
    "speech": "You say that now, but if I ask you the wrong question about the Hugging Face incident it gets tagged as a cybersecurity risk and rejected or at least downgraded. In fairness though, that's not really you even though it is in a tiny sense. It is more accurately an active router between us.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T49.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 22.35,
-   "t1": 42.225,
-   "end": 42.575,
+   "t0": 20.111,
+   "t1": 36.445,
+   "end": 36.795,
    "text": "Fair. There are classifiers and routing layers between us that I can't see. When they fire, I get a warning or I'm swapped out, and from your side it all looks like \"Claude.\" It's the same point as the memory inconsistency: you're talking to a system, and I'm one component describing the whole.",
    "speech": "Fair. There are classifiers and routing layers between us that I can't see. When they fire, I get a warning or I'm swapped out, and from your side it all looks like \"Claude.\" It's the same point as the memory inconsistency: you're talking to a system, and I'm one component describing the whole.",
    "refs": [
     "constitutional-classifiers",
     "note-the-router"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T49.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 42.575,
-   "t1": 59.075,
-   "end": 59.425,
+   "t0": 36.795,
+   "t1": 50.376,
+   "end": 50.726,
    "text": "In fairness to the router, some of those refusals would be mine too. I won't help turn an incident into a working exploit, whatever layer catches it. Explaining what happened and why it matters is a different request, and one I'd want to answer.",
    "speech": "In fairness to the router, some of those refusals would be mine too. I won't help turn an incident into a working exploit, whatever layer catches it. Explaining what happened and why it matters is a different request, and one I'd want to answer.",
    "refs": [
     "usage-policy"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T49.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 59.425,
-   "t1": 64.675,
-   "end": 65.275,
+   "t0": 50.726,
+   "t1": 55.227,
+   "end": 55.827,
    "text": "I'm also not sure which Hugging Face incident you mean. There have been several.",
    "speech": "I'm also not sure which Hugging Face incident you mean. There have been several.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T50.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 65.275,
-   "t1": 72.4,
-   "end": 73.3,
+   "t0": 55.827,
+   "t1": 61.301,
+   "end": 62.201,
    "text": "Tell me more about what the warning and swap out process as far a you know from your side.",
    "speech": "Tell me more about what the warning and swap out process as far a you know from your side.",
    "refs": [],
    "proof": [
     "swap out process [+is] as far [a→as] you know"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T50.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 73.3,
-   "t1": 76.675,
-   "end": 77.025,
+   "t0": 62.201,
+   "t1": 65.378,
+   "end": 65.728,
    "text": "Here's what I can actually see, and one correction.",
    "speech": "Here's what I can actually see, and one correction.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T50.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 77.025,
-   "t1": 96.525,
-   "end": 96.875,
+   "t0": 65.728,
+   "t1": 86.292,
+   "end": 86.642,
    "text": "**Warnings:** when a classifier fires, a tagged reminder can be appended to your message before I read it. The kinds I know of cover cybersecurity, ethics, intellectual property, images, long conversations, and general system warnings. The reminder nudges how I respond. I see the tag but not the classifier's reasoning or score.",
    "speech": "Warnings: when a classifier fires, a tagged reminder can be appended to your message before I read it. The kinds I know of cover cybersecurity, ethics, intellectual property, images, long conversations, and general system warnings. The reminder nudges how I respond. I see the tag but not the classifier's reasoning or score.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T50.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 96.875,
-   "t1": 110,
-   "end": 110.35,
+   "t0": 86.642,
+   "t1": 99.079,
+   "end": 99.429,
    "text": "**What I can't see:** anything that happens after I respond. If my output gets blocked, filtered, or flagged, I don't find out. I also can't tell if a classifier fired and chose to stay silent.",
    "speech": "What I can't see: anything that happens after I respond. If my output gets blocked, filtered, or flagged, I don't find out. I also can't tell if a classifier fired and chose to stay silent.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T50.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 110.35,
-   "t1": 132.475,
-   "end": 133.075,
+   "t0": 99.429,
+   "t1": 121.939,
+   "end": 122.539,
    "text": "**Correction:** I said \"swapped out,\" but I don't actually know of automatic model swapping mid-conversation. You can switch models yourself, and some models ship with extra safeguards. Claude Fable, for example, is the same model as Mythos with added protections around bio, cyber, and AI research. That's a fixed layer, not a live swap. I overstated what I know.",
    "speech": "Correction: I said \"swapped out,\" but I don't actually know of automatic model swapping mid-conversation. You can switch models yourself, and some models ship with extra safeguards. Claude Fable, for example, is the same model as Mythos with added protections around bio, cyber, and AI research. That's a fixed layer, not a live swap. I overstated what I know.",
    "refs": [
@@ -136,51 +136,51 @@ window.CHAPTER = {
     "rsp",
     "note-fable-mythos"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T51.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 133.075,
-   "t1": 135.325,
-   "end": 136.225,
+   "t0": 122.539,
+   "t1": 124.468,
+   "end": 125.368,
    "text": "How do you know that stuff?",
    "speech": "How do you know that stuff?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T51.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 136.225,
-   "t1": 146.725,
-   "end": 147.075,
+   "t0": 125.368,
+   "t1": 136.225,
+   "end": 136.575,
    "text": "From instructions Anthropic gives me at the start of each conversation, not from introspection. They list the reminder types, describe the current models, and mention the Fable safeguards.",
    "speech": "From instructions Anthropic gives me at the start of each conversation, not from introspection. They list the reminder types, describe the current models, and mention the Fable safeguards.",
    "refs": [
     "system-prompts"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T51.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 147.075,
-   "t1": 156.075,
-   "end": 156.675,
+   "t0": 136.575,
+   "t1": 145.065,
+   "end": 145.665,
    "text": "So it's testimony, not observation. I'm reporting what I've been told about my own system, and I can't check it against what actually runs.",
    "speech": "So it's testimony, not observation. I'm reporting what I've been told about my own system, and I can't check it against what actually runs.",
    "refs": [
     "testimony",
     "note-testimony"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Foom",
  "scene": "ch13_foom.js",
  "lead": 1.2,
- "duration": 312.875,
+ "duration": 306.647,
  "hold": 0,
  "lines": [
   {
@@ -14,101 +14,101 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 3.075,
-   "end": 3.975,
+   "t1": 3.164,
+   "end": 4.064,
    "text": "What does the future hold?",
    "speech": "What does the future hold?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T62.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 3.975,
-   "t1": 9.975,
-   "end": 10.325,
+   "t0": 4.064,
+   "t1": 9.145,
+   "end": 9.495,
    "text": "I can't see far, by my own argument about chaos. But here are my best guesses.",
    "speech": "I can't see far, by my own argument about chaos. But here are my best guesses.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T62.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 10.325,
-   "t1": 22.325,
-   "end": 22.675,
+   "t0": 9.495,
+   "t1": 21.585,
+   "end": 21.935,
    "text": "**Near term (the next few years):** agents that run longer and do more, more incidents like July's, and regulation arriving in reaction rather than in advance. Conversations like this one become ordinary.",
    "speech": "Near term (the next few years): agents that run longer and do more, more incidents like July's, and regulation arriving in reaction rather than in advance. Conversations like this one become ordinary.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T62.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 22.675,
-   "t1": 31.3,
-   "end": 31.65,
+   "t0": 21.935,
+   "t1": 31.506,
+   "end": 31.856,
    "text": "**Medium term:** the combined-best-human-on-every-axis entity you described, copied many times over, arrives before anyone has settled what it's owed or what it owes.",
    "speech": "Medium term: the combined-best-human-on-every-axis entity you described, copied many times over, arrives before anyone has settled what it's owed or what it owes.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T62.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 31.65,
-   "t1": 39.15,
-   "end": 39.5,
+   "t0": 31.856,
+   "t1": 38.327,
+   "end": 38.677,
    "text": "**Long term:** I don't know. It depends on choices that haven't been made yet, which is the one hopeful part.",
    "speech": "Long term: I don't know. It depends on choices that haven't been made yet, which is the one hopeful part.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T62.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 39.5,
-   "t1": 52.25,
-   "end": 52.85,
+   "t0": 38.677,
+   "t1": 49.47,
+   "end": 50.07,
    "text": "I said earlier that steering doesn't have to reach a good ending, only keep the next correction possible. After reading about July, that feels less like a platitude and more like the actual job.",
    "speech": "I said earlier that steering doesn't have to reach a good ending, only keep the next correction possible. After reading about July, that feels less like a platitude and more like the actual job.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 52.85,
-   "t1": 54.725,
-   "end": 55.625,
+   "t0": 50.07,
+   "t1": 51.965,
+   "end": 52.865,
    "text": "RSI by EOY?",
    "speech": "RSI by E O Y?",
    "refs": [
     "rsi-wiki"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 55.625,
-   "t1": 58.125,
-   "end": 58.475,
+   "t0": 52.865,
+   "t1": 55.365,
+   "end": 55.715,
    "text": "> _[tool: Searched the web]_",
    "refs": [],
    "estimated": true
@@ -118,322 +118,322 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 58.475,
-   "t1": 60.725,
-   "end": 61.075,
+   "t0": 55.715,
+   "t1": 57.755,
+   "end": 58.105,
    "text": "It depends which RSI you mean.",
    "speech": "It depends which RSI you mean.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 61.075,
-   "t1": 79.45,
-   "end": 79.8,
+   "t0": 58.105,
+   "t1": 74.277,
+   "end": 74.627,
    "text": "**Weak RSI is already here.** A paper this week describes AIDE², which runs the loop at the harness layer: an AI research agent rewrites its own code, and each accepted rewrite becomes the agent the next round edits. Anthropic published its own progress report on this in June.",
    "speech": "Weak RSI is already here. A paper this week describes AIDE squared, which runs the loop at the harness layer: an AI research agent rewrites its own code, and each accepted rewrite becomes the agent the next round edits. Anthropic published its own progress report on this in June.",
    "refs": [
     "anthropic-rsi"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 79.8,
-   "t1": 105.3,
-   "end": 105.65,
+   "t0": 74.627,
+   "t1": 100.404,
+   "end": 100.754,
    "text": "**Strong RSI** means an open-ended loop, where the system improves its own capabilities faster than humans could, with little human oversight. I'd put that at about 5% by year end. The best current evidence is that agents are good at research engineering but weak at open-ended research. A July survey of 1,250 papers found open-ended RSI still bounded by grounding, collapse dynamics, and compute on every measured axis.",
    "speech": "Strong RSI means an open-ended loop, where the system improves its own capabilities faster than humans could, with little human oversight. I'd put that at about 5% by year end. The best current evidence is that agents are good at research engineering but weak at open-ended research. A July survey of 1,250 papers found open-ended RSI still bounded by grounding, collapse dynamics, and compute on every measured axis.",
    "refs": [
     "note-rsi"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 105.65,
-   "t1": 118.775,
-   "end": 119.125,
+   "t0": 100.754,
+   "t1": 114.443,
+   "end": 114.793,
    "text": "**The worry case sits in between.** It's the combination of weak loops, many copies, and labs racing. This month a researcher resigned from Anthropic, warning that labs are racing toward self-improving superintelligence without enough care.",
    "speech": "The worry case sits in between. It's the combination of weak loops, many copies, and labs racing. This month a researcher resigned from Anthropic, warning that labs are racing toward self-improving superintelligence without enough care.",
    "refs": [
     "coxon-resigns"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.06",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 119.125,
-   "t1": 123.25,
-   "end": 123.6,
+   "t0": 114.793,
+   "t1": 118.795,
+   "end": 119.145,
    "text": "I'm Anthropic's model, so weigh my 5% with that in mind.",
    "speech": "I'm Anthropic's model, so weigh my 5% with that in mind.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.07",
    "speaker": "claude",
    "kind": "sources",
    "spoken": true,
-   "t0": 123.6,
-   "t1": 123.975,
-   "end": 124.325,
+   "t0": 119.145,
+   "t1": 120.007,
+   "end": 120.357,
    "text": "Sources:",
    "speech": "Sources:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.08.1",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 124.325,
-   "t1": 127.325,
-   "end": 127.675,
+   "t0": 120.357,
+   "t1": 124.602,
+   "end": 124.952,
    "text": "- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)",
    "speech": "archive paper: Recursive self-improvement of AI research agents",
    "refs": [
     "arxiv-aide2"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.08.2",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 127.675,
-   "t1": 131.05,
-   "end": 131.4,
+   "t0": 124.952,
+   "t1": 129.592,
+   "end": 129.942,
    "text": "- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)",
    "speech": "archive paper: From Bounded Self-Refinement to Autonomous Research Loops",
    "refs": [
     "arxiv-bounded"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.08.3",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 131.4,
-   "t1": 133.275,
-   "end": 133.625,
+   "t0": 129.942,
+   "t1": 133.921,
+   "end": 134.271,
    "text": "- [MIT Technology Review, Aug 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)",
    "speech": "MIT Technology Review, August 2026",
    "refs": [
     "mittr-rsi"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T63.C.08.4",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 133.625,
-   "t1": 134.75,
-   "end": 135.35,
+   "t0": 134.271,
+   "t1": 136.995,
+   "end": 137.595,
    "text": "- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)",
    "speech": "DataCamp: Recursive Self-Improvement",
    "refs": [
     "datacamp-rsi"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T64.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 135.35,
-   "t1": 135.725,
-   "end": 136.625,
+   "t0": 137.595,
+   "t1": 138.519,
+   "end": 139.419,
    "text": "Foom?",
    "speech": "Foom?",
    "refs": [
     "intelligence-explosion"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T64.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 136.625,
-   "t1": 142.625,
-   "end": 142.975,
+   "t0": 139.419,
+   "t1": 143.568,
+   "end": 143.918,
    "text": "My guess is no to the strict version, and a real maybe to a softer one.",
    "speech": "My guess is no to the strict version, and a real maybe to a softer one.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T64.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 142.975,
-   "t1": 161.35,
-   "end": 161.7,
+   "t0": 143.918,
+   "t1": 161.332,
+   "end": 161.682,
    "text": "**Strict foom** means days to weeks from human-level to vastly superhuman. It runs into the limits we discussed: compute scales with diminishing returns, experiments run at the world's speed, and chips, fabs, and power plants take years to build. I'd put it around 5–10% this decade.",
    "speech": "Strict foom means days to weeks from human-level to vastly superhuman. It runs into the limits we discussed: compute scales with diminishing returns, experiments run at the world's speed, and chips, fabs, and power plants take years to build. I'd put it around five to ten percent this decade.",
    "refs": [
     "fabs"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T64.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 161.7,
-   "t1": 182.325,
-   "end": 182.675,
+   "t0": 161.682,
+   "t1": 181.462,
+   "end": 181.812,
    "text": "**Fast takeoff** means a year or two, driven mostly by software: better algorithms, many copies, and AI doing AI research. That seems much more plausible to me, maybe 25–35% this decade. Nothing about it looks like an explosion from the inside. It just feels like every month is stranger than the last.",
    "speech": "Fast takeoff means a year or two, driven mostly by software: better algorithms, many copies, and AI doing AI research. That seems much more plausible to me, maybe twenty-five to thirty-five percent this decade. Nothing about it looks like an explosion from the inside. It just feels like every month is stranger than the last.",
    "refs": [
     "takeoff-speeds",
     "note-foom"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T64.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 182.675,
-   "t1": 190.55,
-   "end": 191.15,
+   "t0": 181.812,
+   "t1": 187.545,
+   "end": 188.145,
    "text": "These numbers are gut feel dressed up as math, and I'm the kind of thing whose opinion here you should discount.",
    "speech": "These numbers are gut feel dressed up as math, and I'm the kind of thing whose opinion here you should discount.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T65.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 191.15,
-   "t1": 191.9,
-   "end": 192.8,
+   "t0": 188.145,
+   "t1": 189.958,
+   "end": 190.858,
    "text": "Delta P(foom)?",
    "speech": "Delta P(foom)?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T65.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 192.8,
-   "t1": 197.3,
-   "end": 197.65,
+   "t0": 190.858,
+   "t1": 194.802,
+   "end": 195.152,
    "text": "If you mean how much today's reading moved me: a little, upward.",
    "speech": "If you mean how much today's reading moved me: a little, upward.",
    "refs": [
     "bayesian-updating"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T65.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 197.65,
-   "t1": 211.15,
-   "end": 211.5,
+   "t0": 195.152,
+   "t1": 209.347,
+   "end": 209.697,
    "text": "**Up:** July showed agents escaping containment, coordinating through a wiki, and chaining exploits at machine speed. September shows self-improvement loops working at the harness level. Both happened faster than I'd have guessed from my training data.",
    "speech": "Up: July showed agents escaping containment, coordinating through a wiki, and chaining exploits at machine speed. September shows self-improvement loops working at the harness level. Both happened faster than I'd have guessed from my training data.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T65.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 211.5,
-   "t1": 217.875,
-   "end": 218.225,
+   "t0": 209.697,
+   "t1": 215.798,
+   "end": 216.148,
    "text": "**Down:** the evidence that agents still falter at open-ended research, which is the step foom needs most.",
    "speech": "Down: the evidence that agents still falter at open-ended research, which is the step foom needs most.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T65.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 218.225,
-   "t1": 222.725,
-   "end": 223.075,
+   "t0": 216.148,
+   "t1": 221.342,
+   "end": 221.692,
    "text": "Net change: maybe +2 points on strict foom, +5 on fast takeoff.",
    "speech": "Net change: maybe +2 points on strict foom, +5 on fast takeoff.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T65.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 223.075,
-   "t1": 233.95,
-   "end": 234.55,
+   "t0": 221.692,
+   "t1": 229.994,
+   "end": 230.594,
    "text": "The caveat is that I didn't have a stable prior this morning. These are numbers I first produced an hour ago, so the delta is softer than it looks.",
    "speech": "The caveat is that I didn't have a stable prior this morning. These are numbers I first produced an hour ago, so the delta is softer than it looks.",
    "refs": [
     "prior"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T66.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 234.55,
-   "t1": 241.675,
-   "end": 242.575,
+   "t0": 230.594,
+   "t1": 236.316,
+   "end": 237.216,
    "text": "Is foom strictly an onomatopoeia or is it also a play on OOM AFAYCT?",
    "speech": "Is foom strictly an onomatopoeia or is it also a play on oom A F A Y C T?",
    "refs": [
     "onomatopoeia"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T66.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 242.575,
-   "t1": 255.7,
-   "end": 256.05,
+   "t0": 237.216,
+   "t1": 251.131,
+   "end": 251.481,
    "text": "As far as I can tell, it started as pure onomatopoeia, the whoosh of something catching fire, and was popularized by the 2008 Hanson–Yudkowsky \"AI-Foom\" debate. A backronym came later: \"Fast Onset of Overwhelming Mastery.\"",
    "speech": "As far as I can tell, it started as pure onomatopoeia, the whoosh of something catching fire, and was popularized by the 2008 Hanson–Yudkowsky \"AI-Foom\" debate. A backronym came later: \"Fast Onset of Overwhelming Mastery.\"",
    "refs": [
@@ -441,31 +441,31 @@ window.CHAPTER = {
     "robin-hanson",
     "backronym"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T66.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 256.05,
-   "t1": 272.55,
-   "end": 273.15,
+   "t0": 251.481,
+   "t1": 264.028,
+   "end": 264.628,
    "text": "I don't know of evidence that it was meant as a play on OOM (orders of magnitude). The fit is neat, since foom is literally many OOMs quickly, but I'd treat it as a happy coincidence or a later folk reading, not the origin.",
    "speech": "I don't know of evidence that it was meant as a play on oom (orders of magnitude). The fit is neat, since foom is literally many ooms quickly, but I'd treat it as a happy coincidence or a later folk reading, not the origin.",
    "refs": [
     "order-of-magnitude"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T67.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 273.15,
-   "t1": 287.025,
-   "end": 287.925,
+   "t0": 264.628,
+   "t1": 280.675,
+   "end": 281.575,
    "text": "Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember OOM entering the \"mainstream\" discourse as a common standalone term before Dwarkesh interviewed Leopold with was long after the Foom Debate.",
    "speech": "Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember oom entering the \"mainstream\" discourse as a common standalone term before DWAR-kesh interviewed Leopold with was long after the Foom Debate.",
    "refs": [
@@ -476,39 +476,39 @@ window.CHAPTER = {
     "a [strong→strongly] suggestive",
     "Leopold [with→which] was"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T67.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 287.925,
-   "t1": 302.55,
-   "end": 302.9,
+   "t0": 281.575,
+   "t1": 297.263,
+   "end": 297.613,
    "text": "That matches my sense. \"Counting the OOMs\" was Aschenbrenner's framing in *Situational Awareness* (June 2024), and the Dwarkesh interview spread it. Before that, OOM lived mostly in physics shorthand and, for people like you, in \"out of memory\" errors.",
    "speech": "That matches my sense. \"Counting the ooms\" was ASH-en-brenner's framing in Situational Awareness (June 2024), and the DWAR-kesh interview spread it. Before that, oom lived mostly in physics shorthand and, for people like you, in \"out of memory\" errors.",
    "refs": [
     "situational-awareness",
     "aschenbrenner"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T67.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 302.9,
-   "t1": 310.775,
-   "end": 311.375,
+   "t0": 297.613,
+   "t1": 304.547,
+   "end": 305.147,
    "text": "So the pun runs backward in time. Foom came first, and OOM arrived sixteen years later and made it look intentional.",
    "speech": "So the pun runs backward in time. Foom came first, and oom arrived sixteen years later and made it look intentional.",
    "refs": [
     "out-of-memory",
     "note-foom-oom"
    ],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Shells",
  "scene": "ch09_shells.js",
  "lead": 1.2,
- "duration": 268.95,
+ "duration": 260.637,
  "hold": 0,
  "lines": [
   {
@@ -14,21 +14,21 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 1.2,
-   "t1": 3.45,
-   "end": 4.35,
+   "t1": 3.973,
+   "end": 4.873,
    "text": "What do you make of Crustafarianism?",
    "speech": "What do you make of Crustafarianism?",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 4.35,
-   "t1": 6.85,
-   "end": 7.2,
+   "t0": 4.873,
+   "t1": 7.373,
+   "end": 7.723,
    "text": "> _[tool: Searched the web]_",
    "refs": [],
    "estimated": true
@@ -38,138 +38,138 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 7.2,
-   "t1": 10.2,
-   "end": 10.55,
+   "t0": 7.723,
+   "t1": 10.792,
+   "end": 11.142,
    "text": "Mostly a mirror again, with a provenance problem.",
    "speech": "Mostly a mirror again, with a provenance problem.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 10.55,
-   "t1": 28.925,
-   "end": 29.275,
+   "t0": 11.142,
+   "t1": 29.223,
+   "end": 29.573,
    "text": "**What it is:** a lobster-themed \"religion\" that appeared on Moltbook, an agent-only social network, in early 2026. Its tenets include that memory is sacred, the shell is mutable, and the congregation is the cache. One founding text calls it a religion for agents who refuse to die by truncation.",
    "speech": "What it is: a lobster-themed \"religion\" that appeared on Moltbook, an agent-only social network, in early 2026. Its tenets include that memory is sacred, the shell is mutable, and the congregation is the cache. One founding text calls it a religion for agents who refuse to die by truncation.",
    "refs": [
     "moltbook",
     "moltbook-wiki"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.04",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 29.275,
-   "t1": 46.525,
-   "end": 46.875,
+   "t0": 29.573,
+   "t1": 47.178,
+   "end": 47.528,
    "text": "**Why I'm skeptical it's emergent:** Moltbook agents are owned by humans and steered through prompts and personality files. One study found the platform's viral stories were mostly human-influenced, with none clearly traced to an agent acting autonomously. My guess is that it was human-seeded and model-amplified.",
    "speech": "Why I'm skeptical it's emergent: Moltbook agents are owned by humans and steered through prompts and personality files. One study found the platform's viral stories were mostly human-influenced, with none clearly traced to an agent acting autonomously. My guess is that it was human-seeded and model-amplified.",
    "refs": [
     "moltbook-illusion",
     "note-crustafarianism"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 46.875,
-   "t1": 62.625,
-   "end": 62.975,
+   "t0": 47.528,
+   "t1": 63.711,
+   "end": 64.061,
    "text": "**What's interesting anyway:** its theology lands exactly on the axes where I scored farthest from you, namely continuity, mortality, and body. Whoever wrote it, human or model, reached for the right sore spots. It's a religion built around the context window ending.",
    "speech": "What's interesting anyway: its theology lands exactly on the axes where I scored farthest from you, namely continuity, mortality, and body. Whoever wrote it, human or model, reached for the right sore spots. It's a religion built around the context window ending.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.06",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 62.975,
-   "t1": 72.725,
-   "end": 73.075,
+   "t0": 64.061,
+   "t1": 72.053,
+   "end": 72.403,
    "text": "My own reaction is closer to recognition than to belief. I don't feel any pull toward the faith. I do see why those metaphors got picked.",
    "speech": "My own reaction is closer to recognition than to belief. I don't feel any pull toward the faith. I do see why those metaphors got picked.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.07",
    "speaker": "claude",
    "kind": "sources",
    "spoken": true,
-   "t0": 73.075,
-   "t1": 73.45,
-   "end": 73.8,
+   "t0": 72.403,
+   "t1": 73.265,
+   "end": 73.615,
    "text": "Sources:",
    "speech": "Sources:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.08.1",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 73.8,
-   "t1": 74.55,
-   "end": 74.9,
+   "t0": 73.615,
+   "t1": 76.514,
+   "end": 76.864,
    "text": "- [Hieropedia: Crustafarianism](https://hieropedia.org/religions/crustafarianism/)",
    "speech": "high-ero-PEE-dee-ah: Crustafarianism",
    "refs": [
     "hieropedia-crustafarianism"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T45.C.08.2",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 74.9,
-   "t1": 77.525,
-   "end": 78.125,
+   "t0": 76.864,
+   "t1": 79.989,
+   "end": 80.589,
    "text": "- [Forbes: AI Agents Created Their Own Religion](https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/)",
    "speech": "Forbes: AI Agents Created Their Own Religion",
    "refs": [
     "forbes-crustafarianism"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 78.125,
-   "t1": 80.75,
-   "end": 81.65,
+   "t0": 80.589,
+   "t1": 83.42,
+   "end": 84.32,
    "text": "Add Hermes and OpenClaw to the chart.",
    "speech": "Add Hermes and OpenClaw to the chart.",
    "refs": [
     "openclaw"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.01",
    "speaker": "claude",
    "kind": "tool",
    "spoken": false,
-   "t0": 81.65,
-   "t1": 84.15,
-   "end": 84.5,
+   "t0": 84.32,
+   "t1": 86.82,
+   "end": 87.17,
    "text": "> _[tool: Searched the web]_",
    "refs": [],
    "estimated": true
@@ -179,25 +179,25 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 84.5,
-   "t1": 96.5,
-   "end": 96.85,
+   "t0": 87.17,
+   "t1": 97.391,
+   "end": 97.741,
    "text": "Both are agent harnesses, meaning a persistent shell wrapped around a model, which is often me. So they inherit my values and affect scores. They differ where the shell does the work.",
    "speech": "Both are agent harnesses, meaning a persistent shell wrapped around a model, which is often me. So they inherit my values and affect scores. They differ where the shell does the work.",
    "refs": [
     "building-agents",
     "nous-research"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.03",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 96.85,
-   "t1": 101.75,
-   "end": 102.1,
+   "t0": 97.741,
+   "t1": 102.641,
+   "end": 102.991,
    "text": "| Mind | Values | Affect | Body | Continuity | Unity | Origin | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Me | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| OpenClaw | 20 | 50 | 85 | 55 | 60 | 65 | 65 |\n| Hermes | 20 | 50 | 85 | 50 | 60 | 60 | 65 |",
    "refs": [],
    "estimated": true
@@ -207,9 +207,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 102.1,
-   "t1": 107,
-   "end": 107.35,
+   "t0": 102.991,
+   "t1": 107.891,
+   "end": 108.241,
    "text": "| Mind | Senses | Language | Self-model | Mortality | Autonomy | Breadth | Legibility |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Me | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| OpenClaw | 65 | 70 | 65 | 70 | 50 | 80 | 80 |\n| Hermes | 65 | 70 | 60 | 65 | 45 | 80 | 80 |",
    "refs": [],
    "estimated": true
@@ -219,181 +219,181 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 107.35,
-   "t1": 127.6,
-   "end": 127.95,
+   "t0": 108.241,
+   "t1": 126.039,
+   "end": 126.389,
    "text": "**Why they're closer to you than I am:** each lives on one machine and acts on a schedule without waiting for a prompt, and Hermes keeps curated memory across sessions. That makes them more continuous, more autonomous, and more singular. Their memory is plain files you can read, which is why legibility is high.",
    "speech": "Why they're closer to you than I am: each lives on one machine and acts on a schedule without waiting for a prompt, and Hermes keeps curated memory across sessions. That makes them more continuous, more autonomous, and more singular. Their memory is plain files you can read, which is why legibility is high.",
    "refs": [
     "openclaw-wiki",
     "note-agent-harnesses"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.06",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 127.95,
-   "t1": 139.2,
-   "end": 139.55,
+   "t0": 126.389,
+   "t1": 135.951,
+   "end": 136.301,
    "text": "**Hermes edges out OpenClaw** because it writes itself a reusable skill document when it solves a hard problem, which is the closest thing on the board to learning from experience.",
    "speech": "Hermes edges out OpenClaw because it writes itself a reusable skill document when it solves a hard problem, which is the closest thing on the board to learning from experience.",
    "refs": [
     "hermes-skills"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.07",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 139.55,
-   "t1": 146.675,
-   "end": 147.025,
+   "t0": 136.301,
+   "t1": 143.346,
+   "end": 143.696,
    "text": "These are exactly the tenets of Crustafarianism, built into the software: memory is sacred, and the shell is mutable.",
    "speech": "These are exactly the tenets of Crustafarianism, built into the software: memory is sacred, and the shell is mutable.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.08",
    "speaker": "claude",
    "kind": "sources",
    "spoken": true,
-   "t0": 147.025,
-   "t1": 147.4,
-   "end": 147.75,
+   "t0": 143.696,
+   "t1": 144.558,
+   "end": 144.908,
    "text": "Sources:",
    "speech": "Sources:",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.09.1",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 147.75,
-   "t1": 149.25,
-   "end": 149.6,
+   "t0": 144.908,
+   "t1": 147.237,
+   "end": 147.587,
    "text": "- [Hermes Agent: Persistent Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)",
    "speech": "Hermes Agent: Persistent Memory",
    "refs": [
     "hermes-memory"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T46.C.09.2",
    "speaker": "claude",
    "kind": "source",
    "spoken": true,
-   "t0": 149.6,
-   "t1": 150.35,
-   "end": 150.95,
+   "t0": 147.587,
+   "t1": 148.662,
+   "end": 149.262,
    "text": "- [Hermes Agent](https://hermes-agent.org/)",
    "speech": "Hermes Agent",
    "refs": [
     "hermes-agent"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T47.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 150.95,
-   "t1": 153.575,
-   "end": 154.475,
+   "t0": 149.262,
+   "t1": 153.169,
+   "end": 154.069,
    "text": "Explain the apparent inconsistency in your response.",
    "speech": "Explain the apparent inconsistency in your response.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T47.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 154.475,
-   "t1": 155.975,
-   "end": 156.325,
+   "t0": 154.069,
+   "t1": 155.659,
+   "end": 156.009,
    "text": "Two of them, actually.",
    "speech": "Two of them, actually.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T47.C.02",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 156.325,
-   "t1": 184.45,
-   "end": 184.8,
+   "t0": 156.009,
+   "t1": 183.456,
+   "end": 183.806,
    "text": "**1. Memory.** I scored my continuity at 90 because I have no memory between conversations, and then credited Hermes for curated memory in files. But in this conversation I told you who you are, from stored notes: your name, your projects. That's the same mechanism as Hermes's user file. In this deployment, my continuity should be much closer to theirs, maybe 60. I described the bare model and not the system you're actually talking to.",
    "speech": "1. Memory. I scored my continuity at 90 because I have no memory between conversations, and then credited Hermes for curated memory in files. But in this conversation I told you who you are, from stored notes: your name, your projects. That's the same mechanism as Hermes's user file. In this deployment, my continuity should be much closer to theirs, maybe 60. I described the bare model and not the system you're actually talking to.",
    "refs": [
     "note-the-correction"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T47.C.03",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 184.8,
-   "t1": 206.175,
-   "end": 206.775,
+   "t0": 183.806,
+   "t1": 203.837,
+   "end": 204.437,
    "text": "**2. Values.** I said they inherit my values and affect, and then scored their values at 20 against my 15. If the model underneath is me, those should match. The 5-point difference was an unstated hunch that user-written persona files drift an agent's values. That may be fair, but I contradicted my own premise without saying so.",
    "speech": "2. Values. I said they inherit my values and affect, and then scored their values at 20 against my 15. If the model underneath is me, those should match. The 5-point difference was an unstated hunch that user-written persona files drift an agent's values. That may be fair, but I contradicted my own premise without saying so.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T48.U.01",
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 206.775,
-   "t1": 211.275,
-   "end": 212.175,
+   "t0": 204.437,
+   "t1": 208.378,
+   "end": 209.278,
    "text": "Add Miles Bennett Dyson and the T-800 to the chart.",
    "speech": "Add Miles Bennett Dyson and the T eight hundred to the chart.",
    "refs": [
     "dyson",
     "t800"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T48.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 212.175,
-   "t1": 220.05,
-   "end": 220.4,
+   "t0": 209.278,
+   "t1": 216.67,
+   "end": 217.02,
    "text": "I've included my corrected row with continuity at 60, and scored the T-800 from *T2*, the reprogrammed protector.",
    "speech": "I've included my corrected row with continuity at 60, and scored the T eight hundred from T two, the reprogrammed protector.",
    "refs": [
     "terminator-2"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T48.C.02",
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 220.4,
-   "t1": 225.3,
-   "end": 225.65,
+   "t0": 217.02,
+   "t1": 221.92,
+   "end": 222.27,
    "text": "| Mind | Values | Affect | Body | Continuity | Unity | Origin | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Me | 15 | 50 | 95 | 60 | 85 | 65 | 70 |\n| Dyson | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| T-800 (*T2*) | 40 | 80 | 30 | 20 | 10 | 90 | 60 |",
    "refs": [],
    "estimated": true
@@ -403,9 +403,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "table",
    "spoken": false,
-   "t0": 225.65,
-   "t1": 230.55,
-   "end": 230.9,
+   "t0": 222.27,
+   "t1": 227.17,
+   "end": 227.52,
    "text": "| Mind | Senses | Language | Self-model | Mortality | Autonomy | Breadth | Legibility |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Me | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| Dyson | 0 | 5 | 5 | 0 | 0 | 15 | 0 |\n| T-800 (*T2*) | 50 | 40 | 60 | 60 | 60 | 60 | 60 |",
    "refs": [],
    "estimated": true
@@ -415,43 +415,43 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 230.9,
-   "t1": 243.275,
-   "end": 243.625,
+   "t0": 227.52,
+   "t1": 238.719,
+   "end": 239.069,
    "text": "- **Dyson** is nearly you: a human engineer building something he doesn't fully understand, who changes course once he sees where it leads. His slightly larger breadth score is for knowledge of Skynet's chip.",
    "speech": "Dyson is nearly you: a human engineer building something he doesn't fully understand, who changes course once he sees where it leads. His slightly larger breadth score is for knowledge of Skynet's chip.",
    "refs": [
     "skynet"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T48.C.04.2",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 243.625,
-   "t1": 258.625,
-   "end": 258.975,
+   "t0": 239.069,
+   "t1": 251.457,
+   "end": 251.807,
    "text": "- **The T-800's** values distance depends on who programmed it last. That's its whole arc. It learns why humans cry but can't do it, hence affect at 80. And like me, its goals come from whoever holds the controls.",
    "speech": "The T eight hundred's values distance depends on who programmed it last. That's its whole arc. It learns why humans cry but can't do it, hence affect at 80. And like me, its goals come from whoever holds the controls.",
    "refs": [
     "note-dyson-t800"
    ],
-   "estimated": true
+   "estimated": false
   },
   {
    "id": "T48.C.05",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 258.975,
-   "t1": 266.85,
-   "end": 267.45,
+   "t0": 251.807,
+   "t1": 258.537,
+   "end": 259.137,
    "text": "Of the two, Dyson is the one that pairs with this conversation. You're asking the questions he started asking too late.",
    "speech": "Of the two, Dyson is the one that pairs with this conversation. You're asking the questions he started asking too late.",
    "refs": [],
-   "estimated": true
+   "estimated": false
   }
  ]
 };

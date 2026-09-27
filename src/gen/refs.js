@@ -11,6 +11,17 @@ window.REFS = {
   "note": "March 1973; written by Arnie Kogen, art by Mort Drucker (confirmed on the cover site)",
   "line": "T01.U.00"
  },
+ "the-conversation": {
+  "id": "the-conversation",
+  "url": "https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296",
+  "caption": "The conversation this film is made from",
+  "origin": "added",
+  "at": "T01.U.00",
+  "mode": "page",
+  "style": "plain",
+  "verified": "Curt's own share link, given by him 2026-09-27",
+  "line": "T01.U.00"
+ },
  "conquest-apes": {
   "id": "conquest-apes",
   "url": "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes",
@@ -226,6 +237,18 @@ window.REFS = {
   "mode": "shelf",
   "style": "plain",
   "line": "T04.C.03.2"
+ },
+ "blade-runner-vk": {
+  "id": "blade-runner-vk",
+  "url": "https://www.youtube.com/watch?v=Umc9ezAyJv0",
+  "caption": "Blade Runner: the Voight-Kampff test",
+  "origin": "added",
+  "at": "T05.U.01",
+  "cue": "emotional response",
+  "mode": "shelf",
+  "style": "plain",
+  "note": "the scene Curt's line borrows from (Curt, 2026-09-27)",
+  "line": "T05.U.01"
  },
  "frog-chart": {
   "id": "frog-chart",
@@ -722,6 +745,29 @@ window.REFS = {
   "mode": "shelf",
   "style": "plain",
   "line": "T21.C.02.1"
+ },
+ "star-trek-iv-spock": {
+  "id": "star-trek-iv-spock",
+  "url": "https://www.youtube.com/watch?v=u2ooUXjNPS8",
+  "caption": "Star Trek IV: Spock on Vulcan",
+  "origin": "added",
+  "at": "T18.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "note": "the gadolinium question then How do you feel? borrow the computers quizzing Spock (Curt, 2026-09-27)",
+  "line": "T18.U.01"
+ },
+ "mathnet-swami": {
+  "id": "mathnet-swami",
+  "url": "https://www.youtube.com/watch?v=Tj-XMRu_q4s",
+  "caption": "Mathnet: The Case of the Swami Scam",
+  "origin": "added",
+  "at": "T24.U.01",
+  "cue": "fib",
+  "mode": "page",
+  "style": "plain",
+  "note": "a fib, but it's short: Mathnet's opening line; part of how Curt frames AI's capitalist race dynamics (Curt, 2026-09-27)",
+  "line": "T24.U.01"
  },
  "claude-personalization": {
   "id": "claude-personalization",
@@ -3302,6 +3348,18 @@ window.REFS = {
   "mode": "shelf",
   "style": "note",
   "line": "T02.C.03"
+ },
+ "note-borrowed-lines": {
+  "id": "note-borrowed-lines",
+  "url": "https://curtcox.github.io/axol-f/n/borrowed-lines/",
+  "caption": "Explained: Three borrowed lines",
+  "origin": "note",
+  "ch": 4,
+  "at": "T24.U.01",
+  "cue": "fib",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T24.U.01"
  },
  "note-campbell-tegmark": {
   "id": "note-campbell-tegmark",
