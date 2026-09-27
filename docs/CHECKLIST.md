@@ -10,8 +10,8 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [ ] Decide whether your real look replaces the stand-in (deferred so far).
 
 ## Next for me
-- [ ] After tonight's rebuild ends, redraw chapters 0, 1 and 4 (drawn before the borrowed-line codes and the caricature pass).
-- [ ] Check the rebuild's log for failed steps.
+- [x] Redraw every chapter with the borrowed-line codes, the caricature pass and the layout fix (rebuild of 2026-09-27, all steps passed).
+- [x] Check the rebuild's log for failed steps.
 - [ ] Check the storyboards' "Reads to check" items, 2–4 per chapter, against the drafts.
 - [ ] Build the 48 code styles still showing plain (mic, blueprint, two-mics, door, compass, honeycomb, lobster-shell and others). They scan fine as they are.
 - [x] Do a careful pass on the comic page's caricatures in the cold open.
