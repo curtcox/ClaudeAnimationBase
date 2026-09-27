@@ -16,6 +16,9 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [x] Dress the 47 code styles that were showing plain (mic, blueprint, two-mics, door, compass, honeycomb, lobster-shell and others): made with Still QR through the ChatGPT app, and drawn by the film from `assets/qr/`. All 117 codes pass the film's scan check.
 - [ ] Redraw the chapters with the new codes (`npm run rebuild`).
 - [x] Do a careful pass on the comic page's caricatures in the cold open.
+- [x] A blind-read check (`npm run reads -- --chapter=N`, key in `docs/reads/`): chapter 9 done, 4 frames flagged and 10 worth a look.
+- [ ] Fix chapter 9's flagged reads (the scissors, the chip swap, the tear, the lobsters' tone) once you've seen the report.
+- [ ] Write read keys for the other chapters and run them.
 
 ## Voices (phase 3)
 - [ ] Pick 3 stock ElevenLabs voices each for Curt and Claude and read a 10-line sampler.
