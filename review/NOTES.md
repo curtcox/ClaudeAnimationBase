@@ -95,15 +95,22 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 11. July
 
-- **5:08.0** · T56.C.02 · shot I · Curt `nmujxidvwi6`
-  I'm not sure how much of this is draft artifact here, but the beard is far too long. Think Roger Delgado.
-  [the frame](frames/ch11-nmujxidvwi6.jpg)
-  - Claude: That was the back of your head: the long grey shape is your ponytail, not a beard. It read as a face, so from behind you now have ears, hair combed back to a dark tie, and no gap. Your beard from the front stays the short circle beard. Say if you want it shorter still.
+- **4:48.4** · T56.U.01 · shot I · Curt `nmuk38hcdbc`
+  I guess I'm meant to be looking out of a window here? It isn't clear to me.
+  Consider putting something outside the window if so.
+  Also, change my pose to either hands folded behind my head or arms crossed behind my back.
+  [the frame](frames/ch11-nmuk38hcdbc.jpg)
+  - Claude: Yes, a window. Now there's a town at dusk outside it: towers with a few lit windows over roofs and trees. While the light cycles through 'other days', the towers sink away to the older town, then come back. You stand with your arms crossed behind your back. I tried hands folded behind your head first, but from behind, the hands kept reading as a face. The code for that pose is kept (arms: 'behindHead') if you'd rather see it.
 
 - **3:17.4** · T54.U.01 · Claude asks · ✓ resolved `nmujvc926ll`
   The ChatGPT sting: the camera pushes toward Curt, and a smiley mask shows on his head for about half a second. Is that the right length for the joke?
   Options: “Right length” · “Longer” · “Shorter” · “Drop the mask”
   - Curt: Right length
+
+- **5:08.0** · T56.C.02 · shot I · Curt · ✓ resolved `nmujxidvwi6`
+  I'm not sure how much of this is draft artifact here, but the beard is far too long. Think Roger Delgado.
+  [the frame](frames/ch11-nmujxidvwi6.jpg)
+  - Claude: That was the back of your head: the long grey shape is your ponytail, not a beard. It read as a face, so from behind you now have ears, hair combed back to a dark tie, and no gap. Your beard from the front stays the short circle beard. Say if you want it shorter still.
 
 ## 12. Limits
 
@@ -126,4 +133,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Claude: Kevin has the glasses (as drawn). A labelled 3×3 grid of everyone now opens Curt's question here.
 
 ---
-1 open, 18 resolved.
+1 open, 19 resolved.

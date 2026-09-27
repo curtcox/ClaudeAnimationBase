@@ -25,13 +25,31 @@
    ]
   },
   {
+   "id": "nmuk38hcdbc",
+   "t": 288.45,
+   "line": "T56.U.01",
+   "shot": "I",
+   "by": "curt",
+   "text": "I guess I'm meant to be looking out of a window here? It isn't clear to me.\nConsider putting something outside the window if so.\nAlso, change my pose to either hands folded behind my head or arms crossed behind my back.",
+   "status": "open",
+   "created": "2026-09-27T17:23:58.285Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Yes, a window. Now there's a town at dusk outside it: towers with a few lit windows over roofs and trees. While the light cycles through 'other days', the towers sink away to the older town, then come back. You stand with your arms crossed behind your back. I tried hands folded behind your head first, but from behind, the hands kept reading as a face. The code for that pose is kept (arms: 'behindHead') if you'd rather see it.",
+     "at": "2026-09-27T18:58:12.418Z"
+    }
+   ],
+   "frame": "frames/ch11-nmuk38hcdbc.jpg"
+  },
+  {
    "id": "nmujxidvwi6",
    "t": 307.97,
    "line": "T56.C.02",
    "shot": "I",
    "by": "curt",
    "text": "I'm not sure how much of this is draft artifact here, but the beard is far too long. Think Roger Delgado.",
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T14:43:42.667Z",
    "replies": [
     {

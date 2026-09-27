@@ -418,10 +418,29 @@
     let sky = mixCol('#E8A0A0', RED, .6 * alarmAt(t));
     if (cyc > 0 && cyc < 1) { const f = cyc * days.length, i = Math.floor(f); sky = mixCol(sky, days[Math.min(i, days.length - 1)], Math.sin(frac(f) * Math.PI) * .8); }
     paint(rectPts(300, 100, 690, 620), { wash: sky, fill: mixCol(sky, '#FFFFFF', .3), fillOp: 80, ink: PAL.ink, sw: 2 });
+    outside(t, sky, cyc > 0 && cyc < 1 ? Math.sin(cyc * Math.PI) : 0);
     inkLine([[645, 100], [645, 720]], 10, '#6B5646', 'ink', 0); inkLine([[300, 410], [990, 410]], 10, '#6B5646', 'ink', 0);
     paint(rectPts(270, 720, 750, 40), { wash: '#6B5646', ink: PAL.ink, sw: 1 });
     glow(645, 420, 600, sky, .35);
-    curtAs(645, 1320, 62, { view: 'back', pose: 'stand', seed: 2, boilKey: 'curt window' });
+    curtAs(645, 1320, 62, { view: 'back', pose: 'stand', arms: 'behindBack', seed: 2, boilKey: 'curt window' });
+  }
+  // what Curt is looking at: a town at dusk under that sky, towers with a few lit windows over houses and trees. then
+  // (0..1): while the light cycles back through other days, the towers sink away to the older town, and come back.
+  function outside(t, sky, then) {
+    boilSeed('outside');
+    const far = mixCol(sky, '#3A2A34', .5), near = mixCol(sky, '#2A2028', .75), lit = mixCol('#F6D98A', sky, .2);
+    for (const [x, w, h] of [[318, 64, 330], [396, 56, 240], [462, 78, 390], [812, 72, 300], [892, 58, 430], [952, 36, 250]]) {
+      const hh = h * (1 - then); if (hh < 6) continue;
+      paint(rectPts(x, 600 - hh, w, hh), { wash: far, ink: null });
+      for (let r = 0; r * 34 + 30 < hh; r++) for (let c = 0; c * 20 + 16 < w; c++)
+        if (hash(x * 7 + r * 13 + c) > .72) paint(rectPts(x + 8 + c * 20, 600 - hh + 16 + r * 34, 9, 13), { wash: lit, ink: null });
+    }
+    for (let i = 0; i < 9; i++) {   // the older town: roofs and trees in front
+      const x = 306 + i * 78;
+      if (i % 3 === 1) paint(ellPts(x + 34, 552, 38, 46, 16), { wash: near, ink: null });
+      else { paint(rectPts(x, 548, 68, 60), { wash: near, ink: null }); paint([[x - 6, 550], [x + 34, 510 - 8 * hash(i)], [x + 74, 550]], { wash: near, ink: null }); }
+    }
+    paint(rectPts(300, 596, 690, 124), { wash: mixCol(near, '#1E1820', .3), ink: null });
   }
   function shotI(t) {
     const u = L('T56.U.01'), c1 = L('T56.C.01'), c2 = L('T56.C.02');

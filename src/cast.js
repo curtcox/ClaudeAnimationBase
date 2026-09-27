@@ -34,6 +34,7 @@ const clawdMouth = (k, rest = null) => k < .15 ? rest : k < .55 ? 'o' : 'open';
 //       presets by name: 'hang', 'chin', 'point', 'up', 'hip', 'shrug', 'wave', 'table'
 //     or aL / aR (raise: 0 = hanging, 1.5 = straight out sideways) + eL / eR (elbow bend)
 //   hand: 'table' puts both forearms flat on a table at the seat's height + 3.2u
+//   arms (view 'back' only): 'behindHead' (hands folded behind his head) | 'behindBack' (forearms crossed behind him)
 //   seed (blink timing), boilKey
 function curt(x, y, u, o = {}) {
   const id = o.boilKey ?? 'curt', rs = p => boilSeed(`curt ${id} ${p}`);
@@ -77,13 +78,36 @@ function curt(x, y, u, o = {}) {
         el = [sh[0] + Math.sin(a1) * L1, sh[1] + Math.cos(a1) * L1];
         hand = [el[0] + Math.sin(a2) * L2, el[1] + Math.cos(a2) * L2];
       }
-      if (hoodie) {   // a sleeve along the arm, then a cuff and the hand poking out
-        paint(ribbon([sh, el, [lerp(el[0], hand[0], .82), lerp(el[1], hand[1], .82)]], 1.05 * u, .85 * u), { wash: hc, fill: hcDk, fillOp: 50, tex: .4, ink: PAL.ink, sw: sw * .7 });
-        line([[lerp(el[0], hand[0], .8), lerp(el[1], hand[1], .8)], hand], .9);
-      } else line([sh, el, hand], .95);
+      limb(sh, el, hand);
     }
   };
-  if (back) drawArms();
+  function limb(sh, el, hand) {
+    if (hoodie) {   // a sleeve along the arm, then a cuff and the hand poking out
+      paint(ribbon([sh, el, [lerp(el[0], hand[0], .82), lerp(el[1], hand[1], .82)]], 1.05 * u, .85 * u), { wash: hc, fill: hcDk, fillOp: 50, tex: .4, ink: PAL.ink, sw: sw * .7 });
+      line([[lerp(el[0], hand[0], .8), lerp(el[1], hand[1], .8)], hand], .9);
+    } else line([sh, el, hand], .95);
+  }
+  // from behind, arms that come round to his back: o.arms 'behindHead' (hands folded behind his head, elbows out) or
+  // 'behindBack' (forearms crossed at the small of his back). Drawn over him, since from behind they're on our side.
+  const shoulder = s_ => hoodie ? [neck[0] + s_ * 1.55 * u, neck[1] + .95 * u] : [neck[0], neck[1] + .6 * u];
+  const skin = mixCol(PAL.cream, '#B98A6A', .35);
+  const hands = (P, key) => { rs(key); for (const p of P) paint(ellPts(p[0], p[1], .38 * u, .3 * u, 14), { wash: skin, ink: PAL.ink, sw: sw * .45 }); };
+  const armsBehind = () => {
+    if (o.arms === 'behindHead') {
+      // the laced hands cup the back of his head: one skin-toned patch, fingers crossing on the diagonal (two round fists or a
+      // pale bar read as a face from behind); elbows up and out past his ears
+      const hy = neck[1] - 1.55 * u;
+      for (const s_ of [-1, 1]) { rs('arm up' + s_); limb(shoulder(s_), [neck[0] + s_ * 3.0 * u, neck[1] - 2.5 * u], [neck[0] + s_ * .6 * u, hy]); }
+      rs('laced fingers');
+      paint(ellPts(neck[0], hy, .95 * u, .6 * u, 18), { wash: skin, ink: PAL.ink, sw: sw * .45 });
+      for (let i = -1; i <= 1; i++) for (const d of [-1, 1]) inkLine([[neck[0] + (i * .45 - .22 * d) * u, hy - .35 * u], [neck[0] + (i * .45 + .22 * d) * u, hy + .35 * u]], sw * .22, mixCol(skin, PAL.ink, .5), 'inkfine', 0);
+    } else if (o.arms === 'behindBack') {
+      const hy = hip[1] - 1.3 * u, P = [];
+      for (const s_ of [-1, 1]) { rs('arm back' + s_); const hand = [neck[0] - s_ * 1.1 * u, hy - (s_ + 1) * .15 * u]; limb(shoulder(s_), [neck[0] + s_ * 2.1 * u, neck[1] + 2.9 * u], hand); P.push(hand); }
+      hands(P, 'clasped hands');
+    }
+  };
+  if (back && !o.arms) drawArms();
   // behind the head: the ponytail (front view: it swings out behind him), the hood
   if (o.hair === 'ponytail' && !back) { rs('pony'); curtPonytail(head, R, -f, u, hairCol, sw, false, o.ponyTip); }
   if (hoodie) {
@@ -128,6 +152,7 @@ function curt(x, y, u, o = {}) {
     if (o.hair === 'bun') paint(ellPts(head[0] - f * R * (back ? 0 : .55), head[1] - R * (back ? .55 : .92), R * .38, R * .34, 16), { wash: hairCol, ink: PAL.ink, sw: sw * .7 });
   }
   if (back) {
+    if (o.arms) armsBehind();   // over the ponytail's tip too
     if (o.glasses) { rs('glasses'); for (const d of [-1, 1]) line([[head[0] + d * R * .98, head[1] + R * .02], [head[0] + d * R * .8, head[1] + R * .08]], .4); }   // the arms over the ears
     if (o.draw) { rs('draw'); o.draw({ head, neck, hip, u, sw }); } boilSeed('after curt ' + id); return { head, neck, hip };
   }
