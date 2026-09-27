@@ -109,13 +109,13 @@ video{width:100%;border-radius:10px;background:#000}#line{min-height:5.5em;margi
 #bar b{position:absolute;top:0;bottom:0;width:2px;background:#1E1A22}
 .compose{background:#fff;border:1px solid #D9D2C4;border-radius:10px;padding:.7rem}.compose textarea,.nt textarea{width:100%;box-sizing:border-box;font:17px/1.4 Georgia,serif;padding:.4rem;border:1px solid #CFC6B4;border-radius:6px}
 button{font:600 .85rem system-ui;padding:.35rem .7rem;border-radius:6px;border:1px solid #B8AE9C;background:#FBF8F0;cursor:pointer;margin:.3rem .3rem 0 0}button.go{background:#8A3A22;color:#fff;border-color:#8A3A22}
-.nt{border:1px solid #E0D8C8;border-radius:10px;padding:.5rem .7rem;margin:.5rem 0;background:#fff;overflow-wrap:anywhere}.nt.claude{border-left:5px solid #A84D33}.nt.curt{border-left:5px solid #3A6FC9}.nt.resolved{opacity:.55}.nt.near{box-shadow:0 0 0 3px #F2C14E}
+.nt{border:1px solid #E0D8C8;border-radius:10px;padding:.5rem .7rem;margin:.5rem 0;background:#fff;overflow-wrap:anywhere}.nt.claude{border-left:5px solid #A84D33}.nt.curt{border-left:5px solid #3A6FC9}.nt.resolved{opacity:.55}.nt.near{box-shadow:0 0 0 3px #F2C14E}.nt.target{box-shadow:0 0 0 4px #3A6FC9}
 .who{font:700 .75rem system-ui;letter-spacing:.04em}.claude .who{color:#A84D33}.curt .who{color:#3A6FC9}.rep{margin:.3rem 0 0 1rem;font-size:.95rem}.rep.curt .who{color:#3A6FC9}.rep.claude .who{color:#A84D33}.rep .who{margin-right:.4em}
 .nt .opts button{font-weight:500}.small{font:.8rem system-ui;color:#6A6470}</style></head><body><main>
 <div><p class="crumbs"><a href="../">Frog or Axolotl</a> · <a href="../ch${pad(c.n)}/">chapter ${c.n} links</a> · watch</p><h1 style="margin-top:0">${c.n}. ${esc(c.title)}</h1>
 <div id="stage"><video id="v" src="ch${pad(c.n)}.mp4" controls preload="metadata"></video><div id="pinlayer"></div></div><div id="line"></div>
 <p class="note">Highlighted links are on screen now. Click a time to jump there; links open in a new tab. <label><input type="checkbox" id="follow" checked> keep the list following the video</label></p>
-<section id="notes" hidden><h2>Review notes</h2>
+<section id="notes" hidden><h2>Review notes <a href="/review/" class="small">(what needs review, all chapters)</a></h2>
 <div id="bar" title="Notes: Claude's questions in red, yours in blue. Click one to jump there."></div>
 <div class="compose"><div class="small">Your note at <b id="at">0:00.0</b> <span id="atline"></span></div>
 <textarea id="txt" rows="3" placeholder="Type a note about this moment. The video pauses while you write."></textarea>
@@ -148,7 +148,17 @@ tick();
   const stamp = t => t == null ? 'whole chapter' : Math.floor(t / 60) + ':' + (t % 60).toFixed(1).padStart(4, '0');
   const lineAt = t => { let c = null; for (const l of lines) if (l.t0 <= t) c = l; return c; }, shotAt = t => { let c = null; for (const s of shots) if (s.t0 <= t) c = s; return c; };
   $('notes').hidden = false;
-  let noteT = 0, point = null, prevT = 0;
+  // how much of this draft has been watched, for the review index: each stretch played without a jump
+  let from = null, upto = 0;
+  const sendSeen = () => { if (from != null && upto > from + .5) fetch('/api/seen', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ch: CH, a: from, b: upto }) }).catch(() => {}); };
+  v.addEventListener('timeupdate', () => {
+    const t = v.currentTime; if (v.paused || v.seeking) return;
+    if (from == null || t < upto - .1 || t > upto + 1.5) { sendSeen(); from = t; }   // a jump starts a new stretch
+    const was = upto; upto = t; if (Math.floor(t / 5) !== Math.floor(was / 5)) sendSeen();
+  });
+  v.addEventListener('pause', sendSeen); v.addEventListener('ended', () => { upto = v.duration; sendSeen(); });
+  v.addEventListener('seeking', () => { sendSeen(); from = null; });
+  let noteT = 0, point = null, prevT = 0, target = null;   // target: the note a #n= link opened at
   const post = async body => { const r = await fetch('/api/notes', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ch: CH, ...body }) }); if (!r.ok) throw new Error((await r.json()).error); return r.json(); };
   const reload = async () => { doc = await (await fetch('/api/notes?ch=' + CH)).json(); draw(); };
   function showAt() {
@@ -183,7 +193,7 @@ tick();
   function draw() {
     $('bar').innerHTML = doc.notes.filter(n => n.t != null).map(n => '<i class="' + (n.status === 'resolved' ? 'resolved' : n.by) + '" style="left:' + (n.t / (v.duration || 1) * 100) + '%" data-t="' + n.t + '" title="' + esc(stamp(n.t) + ': ' + n.text.slice(0, 80)) + '"></i>').join('') + '<b id="head"></b>';
     $('bar').querySelectorAll('i').forEach(el => el.onclick = () => { v.currentTime = +el.dataset.t; });
-    $('nlist').innerHTML = doc.notes.map(n => '<div class="nt ' + n.by + (n.status === 'resolved' ? ' resolved' : '') + '" data-id="' + n.id + '">'
+    $('nlist').innerHTML = doc.notes.map(n => '<div class="nt ' + n.by + (n.status === 'resolved' ? ' resolved' : '') + (n.id === target ? ' target' : '') + '" data-id="' + n.id + '">'
       + '<div><span class="who">' + (n.by === 'claude' ? 'CLAUDE ASKS' : 'CURT') + '</span> · <a href="#" class="jump" data-t="' + (n.t ?? '') + '">' + stamp(n.t) + '</a>'
       + (n.line ? ' <span class="small">' + esc(n.line) + (n.shot ? ' · shot ' + esc(n.shot) : '') + '</span>' : '') + (n.status === 'resolved' ? ' <span class="small">✓ resolved</span>' : '') + '</div>'
       + '<div>' + esc(n.text).replace(/\\n/g, '<br>') + '</div>'
@@ -202,6 +212,13 @@ tick();
     });
   }
   v.addEventListener('loadedmetadata', draw);
+  // from the review index: #n=<note id> opens at that note, #t=<seconds> at that moment
+  function goHash() {
+    const h = new URLSearchParams(location.hash.slice(1)), n = h.get('n') && doc.notes.find(x => x.id === h.get('n')), t = n ? n.t : h.has('t') ? +h.get('t') : null;
+    if (t != null) { const seek = () => { v.currentTime = t; }; v.readyState ? seek() : v.addEventListener('loadedmetadata', seek, { once: true }); }
+    if (n) { target = n.id; draw(); const el = document.querySelector('.nt.target'); if (el) el.scrollIntoView({ block: 'center' }); }
+  }
+  window.addEventListener('hashchange', goHash);
   // as the video plays: the playhead on the bar, notes near now glow, and it stops at Claude's open questions
   (function follow() {
     const t = v.currentTime, head = $('head'); if (head && v.duration) head.style.left = (t / v.duration * 100) + '%';
@@ -212,7 +229,7 @@ tick();
     }
     prevT = t; requestAnimationFrame(follow);
   })();
-  draw(); showAt();
+  draw(); showAt(); goHash();
 })();
 </script></body></html>
 `;

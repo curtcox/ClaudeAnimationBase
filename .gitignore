@@ -5,3 +5,4 @@ assets/ref/
 audio/scratch/
 audio/*.wav
 site/public/
+review/seen.json

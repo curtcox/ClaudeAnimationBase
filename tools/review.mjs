@@ -5,7 +5,7 @@
 //   npm run review -- ask --chapter=2 --t=129.5 "question"  (or neither --at nor --t: about the whole chapter)
 //   npm run review -- reply --chapter=2 --id=n… "text"      npm run review -- resolve --chapter=2 --id=n…
 // --at is resolved to a time now (the line's start, plus --dt); the line id is kept with it, for when timings change.
-import { load, save, newId, stamp, timeline, lineAt, writeDigest, DIR } from './review_lib.mjs';
+import { load, save, newId, stamp, timeline, lineAt, writeDigest, waitingOn, DIR } from './review_lib.mjs';
 import { readdirSync, existsSync, readFileSync } from 'node:fs';
 
 const argv = process.argv.slice(2), cmd = argv[0] && !argv[0].startsWith('--') ? argv.shift() : 'list';
@@ -21,7 +21,7 @@ if (cmd === 'list') {
     const doc = load(+f.slice(2, 4)); if (ch != null && doc.chapter !== ch) continue;
     for (const note of doc.notes) {
       if (!args.all && note.status === 'resolved') continue;
-      const last = (note.replies || []).at(-1), waiting = last ? (last.by === 'claude' ? 'curt' : 'claude') : (note.by === 'claude' ? 'curt' : 'claude');
+      const waiting = waitingOn(note);
       console.log(`ch ${doc.chapter} ${stamp(note.t).padStart(6)} ${(note.line || '').padEnd(11)} ${note.shot ? 'shot ' + note.shot : '      '}  ${note.by === 'claude' ? 'Q ' : 'C '} ${note.id}  [${note.status === 'resolved' ? 'resolved' : 'waiting on ' + waiting}]`);
       console.log(`     ${note.text.replace(/\n/g, '\n     ')}`);
       if (note.options?.length) console.log(`     options: ${note.options.join(' | ')}`);
