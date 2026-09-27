@@ -12,7 +12,7 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 | 4 | The Echo | 32 | 5:03 | estimated |
 | 5 | The Dish of the Day | 20 | 4:53 | estimated |
 | 6 | Thrindles | 30 | 6:14 | estimated |
-| 7 | Mind-Space | 47 | 5:34 | estimated |
+| 7 | Mind-Space | 47 | 5:38 | estimated |
 | 8 | Contradictions | 24 | 3:25 | estimated |
 | 9 | Shells | 32 | 4:29 | estimated |
 | 10 | The Router | 12 | 2:38 | estimated |

@@ -5,8 +5,8 @@ window.CHAPTER = {
  "title": "Mind-Space",
  "scene": "ch07_mind_space.js",
  "lead": 1.2,
- "duration": 334,
- "hold": 0,
+ "duration": 338,
+ "hold": 4,
  "lines": [
   {
    "id": "T35.U.01",

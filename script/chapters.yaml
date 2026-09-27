@@ -37,6 +37,7 @@
   slug: mind_space
   title: Mind-Space
   turns: [35, 40]
+  hold_s: 4                # the whole board, thirteen stars, before the wipe
 - n: 8
   slug: contradictions
   title: Contradictions

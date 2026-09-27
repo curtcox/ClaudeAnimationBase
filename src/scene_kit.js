@@ -8,6 +8,7 @@
 //   fade(k, col)                   a full-frame veil (k = 1 opaque), e.g. fading up from black
 //   rectAt(a, b, k)                a rect [x, y, w, h] part way from a to b (for things that fly between screens)
 //   prop cards: indexCard, doorway, balance, logbook (small, reusable pictures several chapters need)
+//   mdTable(id), tableCard(tb, x, y, w, o)   a transcript table, parsed from its line and painted exactly
 
 const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, col, { ink: false, font: `${Math.round(size)}px "Patrick Hand", sans-serif`, ...o });
 
@@ -118,4 +119,35 @@ function balance(cx, cy, s, tilt, left, right) {
     paint([[px - s * .35, py + s * .5], [px + s * .35, py + s * .5], [px + s * .22, py + s * .62], [px - s * .22, py + s * .62]], { wash: '#C9A45A', ink: PAL.ink, sw: 1 });
     if (fn) fn(px, py + s * .5);
   }
+}
+
+// ---------- tables (VIDEO_PLAN rule 3: shown, not read) ----------
+// A transcript table, parsed from its line's own text so every cell is exactly what was said: { head: [...], rows: [[...]] },
+// cells as { txt, bold } (markdown ** and * are dropped from the text; ** marks bold).
+function mdTable(id) {
+  const cells = r => r.trim().replace(/^\||\|$/g, '').split('|').map(c => { c = c.trim(); return { txt: c.replace(/\*\*|\*/g, ''), bold: /\*\*/.test(c) }; });
+  const ls = L(id).text.split('\n').filter(s => s.trim().startsWith('|'));
+  return { head: cells(ls[0]), rows: ls.slice(2).map(cells) };
+}
+// Paint a table card at (x, y), w wide. o: k (0..1: rows appear top to bottom), rowH, size, first (the first column's share
+// of the width), hi (a row's first cell to highlight), hiCol, colK (0..n: columns after the first appear left to right),
+// key. Returns its height.
+function tableCard(tb, x, y, w, o = {}) {
+  const n = tb.rows.length, rh = o.rowH || 44, h = rh * (n + 1) + 16, size = o.size || rh * .56, k = o.k ?? 1;
+  const cols = tb.head.length, c0 = w * (o.first ?? .26), cw = (w - c0) / Math.max(1, cols - 1);
+  const cx = i => i === 0 ? x + 14 : x + c0 + cw * (i - .5);
+  boilSeed('table ' + (o.key || x)); occupy(x, y, x + w, y + h, 1, 'table');
+  paint(rrPts(x + 8, y + 10, w, h, 10), { fill: PAL.ink, fillOp: 40, bleed: .2, ink: null });
+  paint(rrPts(x, y, w, h, 10), { wash: '#FBF8F0', ink: PAL.ink, sw: 1.2 });
+  inkLine([[x + 10, y + rh + 4], [x + w - 10, y + rh + 4]], 1.6, PAL.ink, 'inkfine', 0);
+  const colOn = i => i === 0 ? 1 : clamp((o.colK ?? cols) - (i - 1));
+  tb.head.forEach((c, i) => { if (colOn(i) > 0 && c.txt) lab(c.txt, cx(i), y + rh * .55, size * .92, '#4E5B78', { align: i ? 'center' : 'left', alpha: colOn(i), font: `bold ${Math.round(size * .92)}px "Patrick Hand", sans-serif` }); });
+  tb.rows.forEach((r, j) => {
+    const kk = clamp(k * n - j); if (kk <= 0) return;
+    const ry = y + rh * (j + 1.55) + 4;
+    if (o.hi && r[0].txt === o.hi) paint(rectPts(x + 6, ry - rh * .5, w - 12, rh), { wash: o.hiCol || '#FFE9A0', washOp: 170, ink: null });
+    r.forEach((c, i) => { if (colOn(i) > 0 && c.txt) lab(c.txt, cx(i), ry, size * (c.txt.length > 30 ? .72 : 1), c.bold || i === 0 ? PAL.ink : '#3A3342',
+      { align: i ? 'center' : 'left', alpha: kk * colOn(i), ...(c.bold ? { font: `bold ${Math.round(size)}px "Patrick Hand", sans-serif` } : {}) }); });
+  });
+  return h;
 }
