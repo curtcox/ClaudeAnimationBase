@@ -90,7 +90,7 @@ async function openPage(tag = '') {
   const page = await browser.newPage();
   page.on('console', m => { if (['error', 'warn'].includes(m.type())) console.log(`[page${tag}]`, m.text()); });
   page.on('pageerror', e => console.log(`[page error${tag}]`, e.message));
-  await page.goto(pathToFileURL(resolve('studio.html')).href + '?render' + (CH ? `&chapter=${CH}` : '') + (REVIEW ? '&review=1' : '') + (DRAFT ? '&draft=1' : ''), { waitUntil: 'networkidle0' });
+  await page.goto(pathToFileURL(resolve('studio.html')).href + '?render' + (CH ? `&chapter=${CH}` : '') + (REVIEW ? '&review=1' : '') + (DRAFT ? '&draft=1' : ''), { waitUntil: 'networkidle0', timeout: 120000 });
   await page.waitForFunction('window.ready === true', { timeout: 60000 });
   if (args.loop) {
     const ok = await page.evaluate(name => { if (!LOOPS[name]) return false; window.LOOP = LOOPS[name]; return true; }, args.loop);
@@ -128,8 +128,9 @@ if (args.sheet || args.strip) {
   const [a, b] = args.range ? span(args.range) : [0, len], n = Math.round((b - a) * fps);
   const out = args.out || `out/${args.loop ? 'loop_' + args.loop : 'png'}`, workers = +(args.workers || 3); mkdirSync(out, { recursive: true });
   let next = 0; const start = Date.now();
-  await Promise.all(Array.from({ length: workers }, async (_, w) => {
-    const page = await openPage('#' + w);
+  // open every worker's page first: a page still loading behind others that are already rendering can stall past its timeout
+  const pages = []; for (let w = 0; w < workers; w++) pages.push(await openPage('#' + w));
+  await Promise.all(pages.map(async page => {
     while (next < n) { const i = next++; writeFileSync(`${out}/f${String(i).padStart(4, '0')}.png`, await frameOf(page, a + i / fps, 'image/png')); }
   }));
   console.log(`${n} frames → ${out}  (${((Date.now() - start) / n).toFixed(0)} ms/frame)`);
@@ -145,8 +146,9 @@ if (args.sheet || args.strip) {
   const todo = []; for (let i = first; i <= last; i++) { const f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`; if (!existsSync(f) || statSync(f).size < 1000) todo.push(i); }
   console.log(`${todo.length} frames to render (${last - first + 1 - todo.length} already done), ${workers} workers`);
   let next = 0, done = 0; const start = Date.now();
-  await Promise.all(Array.from({ length: workers }, async (_, w) => {
-    const page = await openPage('#' + w);
+  // open every worker's page first: a page still loading behind others that are already rendering can stall past its timeout
+  const pages = []; for (let w = 0; w < workers; w++) pages.push(await openPage('#' + w));
+  await Promise.all(pages.map(async page => {
     while (next < todo.length) {
       const i = todo[next++], f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`;
       const buf = await frameOf(page, i / fps, 'image/jpeg', DRAFT ? .88 : .94, OUT_W);
