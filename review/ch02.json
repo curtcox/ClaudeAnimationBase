@@ -13,7 +13,7 @@
     "Put some on the chapter's web page only",
     "Accept the wait"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:03:54.886Z",
    "replies": [
     {
@@ -25,6 +25,11 @@
      "by": "curt",
      "text": "Use the same general rule everywhere. When adding too many QR codes on screen causes a problem create a page for that part of the video so that a single QR code can be used to point to the page with all of the context and references.",
      "at": "2026-09-27T16:11:09.543Z"
+    },
+    {
+     "by": "claude",
+     "text": "Done, and it's the general rule now. Here the chart's rows (six tests, three sets of real chats) and the register and control ideas are one code, to the register-and-controls explainer, which now describes and links all of them. The error-bars paper moved onto the one-sample explainer's code too. The chapter checks now find no pile-ups or late codes in any chapter.",
+     "at": "2026-09-27T17:04:21.792Z"
     }
    ]
   }

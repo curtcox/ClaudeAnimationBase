@@ -255,7 +255,7 @@
     if (t < c4.t0) {   // medium term: the rim star copied down a row; a balance with both pans empty
       paperWorld(t);
       const owed = say('T62.C.03', 'before anyone has settled', -.4);
-      if (t < owed) { const n = Math.floor(lerp(1, 7, seg(t, say('T62.C.03', 'copied many times over', -.6), say('T62.C.03', 'copied many times over', 1.5)))); for (let i = 0; i < n; i++) radarStar(i ? 280 + (i - 1) * 170 : 645, i ? 780 : 330, i ? 80 : 190, Array(14).fill(100), '#C9A441', { grow: 1 }); return; }
+      if (t < owed) { const n = Math.floor(lerp(1, 7, seg(t, say('T62.C.03', 'copied many times over', -.6), say('T62.C.03', 'copied many times over', 1.5)))); for (let i = 0; i < n; i++) radarStar(i ? 280 + (i - 1) * 170 : 645, i ? 780 : 330, i ? 80 : 190, Array(14).fill(100), '#C9A441', { grow: i ? 1 : seg(t, c3.t0, say('T62.C.03', 'on-every-axis', .6)), labels: i ? 0 : seg(t, c3.t0, c3.t0 + 1.2), labelSize: 22 }); return; }
       balance(645, 400, 360, .06 * Math.sin(t * 1.3), null, null);
       radarStar(645, 250, 90, Array(14).fill(100), '#C9A441', { grow: 1 });
       return;

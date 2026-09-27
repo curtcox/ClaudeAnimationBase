@@ -11,14 +11,17 @@ evil"; [Wikipedia](https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons
 Claude can't find the one he means, so Curt pastes the image and a link.
 
 **The chart.** A 2×2 "compass" of AI opinions, the first of several such memes reviewed in a 2022 podcast episode,
-[*Connor Leahy on Dignity and Conjecture*](https://theinsideview.ai/connor2), where Michaël Trazzi interviews
-[Connor Leahy](https://en.wikipedia.org/wiki/Connor_Leahy), a co-founder of the open AI research group
-[EleutherAI](https://en.wikipedia.org/wiki/EleutherAI) and of the AI-safety company Conjecture.
+[*Connor Leahy on Dignity and Conjecture*](https://theinsideview.ai/connor2), where Michaël Trazzi (host of the
+podcast [*The Inside View*](https://theinsideview.ai/)) interviews [Connor Leahy](https://en.wikipedia.org/wiki/Connor_Leahy),
+a co-founder of the open AI research group [EleutherAI](https://en.wikipedia.org/wiki/EleutherAI) and of the AI-safety
+company [Conjecture](https://www.conjecture.dev/).
 - **Left to right:** "unimpressed (AGI not now)" to "(AGI soon)", with "scale maximalists" (people who think making AI
   bigger is enough) on the right.
 - **Top to bottom:** "AGI good" to "AGI bad".
-- **Quadrants:** goalpost movers (top left), tech accelerationists (top right), doomers (bottom right), longtermists
-  (bottom left). Connor's photo is circled, among the doomers.
+- **Quadrants:** goalpost movers (top left), tech [accelerationists](https://en.wikipedia.org/wiki/Effective_accelerationism)
+  (people who want AI built as fast as possible; top right), [doomers](https://en.wikipedia.org/wiki/P(doom)) (bottom
+  right), [longtermists](https://en.wikipedia.org/wiki/Longtermism) (bottom left). Connor's photo is circled, among the
+  doomers.
 
 **Where Claude puts the cast:**
 - **Claude:** doomer quadrant, close to the centre: AGI fairly soon, risk real, "but my numbers are moderate".

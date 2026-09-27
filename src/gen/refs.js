@@ -248,6 +248,16 @@ window.REFS = {
   "style": "gills",
   "line": "T06.C.01"
  },
+ "axel-f": {
+  "id": "axel-f",
+  "url": "https://www.youtube.com/watch?v=k85mRPqvMbE",
+  "caption": "Crazy Frog: Axel F (why the site is axol-f)",
+  "origin": "added",
+  "at": "T06.C.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T06.C.01"
+ },
  "eval-awareness": {
   "id": "eval-awareness",
   "url": "https://arxiv.org/abs/2505.23836",
@@ -266,7 +276,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "The eval prompts are terse",
-  "mode": "shelf",
+  "mode": "page",
   "style": "exam",
   "line": "T09.C.03"
  },
@@ -277,7 +287,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "The eval prompts are terse",
-  "mode": "shelf",
+  "mode": "page",
   "style": "exam",
   "verified": "browser 2026-09-26",
   "line": "T09.C.03"
@@ -289,7 +299,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "The eval prompts are terse",
-  "mode": "shelf",
+  "mode": "page",
   "style": "exam",
   "line": "T09.C.03"
  },
@@ -300,7 +310,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "The eval prompts are terse",
-  "mode": "shelf",
+  "mode": "page",
   "style": "exam",
   "line": "T09.C.03"
  },
@@ -311,7 +321,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "real chats are looser",
-  "mode": "shelf",
+  "mode": "page",
   "style": "chat",
   "line": "T09.C.03"
  },
@@ -428,7 +438,7 @@ window.REFS = {
   "caption": "Adding error bars to evals",
   "origin": "added",
   "at": "T08.C.06",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T08.C.06"
  },
@@ -439,7 +449,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "register sensitivity",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T09.C.03"
  },
@@ -450,7 +460,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "The eval prompts are terse",
-  "mode": "shelf",
+  "mode": "page",
   "style": "exam",
   "line": "T09.C.03"
  },
@@ -461,7 +471,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "The eval prompts are terse",
-  "mode": "shelf",
+  "mode": "page",
   "style": "exam",
   "line": "T09.C.03"
  },
@@ -472,7 +482,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "real chats are looser",
-  "mode": "shelf",
+  "mode": "page",
   "style": "chat",
   "line": "T09.C.03"
  },
@@ -483,7 +493,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "real chats are looser",
-  "mode": "shelf",
+  "mode": "page",
   "style": "chat",
   "line": "T09.C.03"
  },
@@ -494,7 +504,7 @@ window.REFS = {
   "origin": "added",
   "ch": 2,
   "at": "A good control",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T09.C.03"
  },
@@ -601,6 +611,16 @@ window.REFS = {
   "mode": "shelf",
   "style": "plain",
   "line": "T16.C.01"
+ },
+ "flask": {
+  "id": "flask",
+  "url": "https://en.wikipedia.org/wiki/Flask_(web_framework)",
+  "caption": "Flask, the Python web toolkit",
+  "origin": "added",
+  "at": "T12.C.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T12.C.01"
  },
  "gadolinium": {
   "id": "gadolinium",
@@ -1647,7 +1667,7 @@ window.REFS = {
  "forbes-crustafarianism": {
   "id": "forbes-crustafarianism",
   "url": "https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/",
-  "qr_url": "SHORT",
+  "qr_url": "https://curtcox.github.io/axol-f/r/forbes/",
   "caption": "AI Agents Created Their Own Religion",
   "origin": "transcript",
   "at": "T45.C.08.2",
@@ -2624,7 +2644,6 @@ window.REFS = {
  "machine-gods": {
   "id": "machine-gods",
   "url": "https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods",
-  "qr_url": "SHORT",
   "caption": "Machine Gods (NPR)",
   "origin": "added",
   "ch": 14,
@@ -2888,7 +2907,7 @@ window.REFS = {
  "officechai-kokotajlo": {
   "id": "officechai-kokotajlo",
   "url": "https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/",
-  "qr_url": "SHORT",
+  "qr_url": "https://curtcox.github.io/axol-f/r/officechai/",
   "caption": "OfficeChai: Kokotajlo",
   "origin": "transcript",
   "at": "T75.C.08.3",
@@ -2988,6 +3007,26 @@ window.REFS = {
   "mode": "shelf",
   "style": "compass",
   "line": "T74.C.02"
+ },
+ "inside-view": {
+  "id": "inside-view",
+  "url": "https://theinsideview.ai/",
+  "caption": "The Inside View (Michaël Trazzi)",
+  "origin": "added",
+  "at": "T74.C.02",
+  "mode": "shelf",
+  "style": "compass",
+  "line": "T74.C.02"
+ },
+ "accelerationism": {
+  "id": "accelerationism",
+  "url": "https://en.wikipedia.org/wiki/Effective_accelerationism",
+  "caption": "Effective accelerationism",
+  "origin": "added",
+  "at": "T74.C.03.4",
+  "mode": "shelf",
+  "style": "compass",
+  "line": "T74.C.03.4"
  },
  "eleutherai": {
   "id": "eleutherai",
@@ -3201,7 +3240,7 @@ window.REFS = {
  },
  "companion": {
   "id": "companion",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/",
+  "url": "https://curtcox.github.io/axol-f/",
   "caption": "Every link in this film",
   "origin": "added",
   "at": "T78.C.02",
@@ -3211,7 +3250,7 @@ window.REFS = {
  },
  "note-agent-harnesses": {
   "id": "note-agent-harnesses",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/agent-harnesses/",
+  "url": "https://curtcox.github.io/axol-f/n/agent-harnesses/",
   "caption": "Explained: Hermes and OpenClaw: a model inside a shell",
   "origin": "note",
   "ch": 9,
@@ -3222,7 +3261,7 @@ window.REFS = {
  },
  "note-agi-definitions": {
   "id": "note-agi-definitions",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/agi-definitions/",
+  "url": "https://curtcox.github.io/axol-f/n/agi-definitions/",
   "caption": "Explained: What does \"AGI\" mean? Three answers and a history",
   "origin": "note",
   "ch": 15,
@@ -3233,7 +3272,7 @@ window.REFS = {
  },
  "note-ai-2027": {
   "id": "note-ai-2027",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/ai-2027/",
+  "url": "https://curtcox.github.io/axol-f/n/ai-2027/",
   "caption": "Explained: AI 2027: a forecast that grades itself",
   "origin": "note",
   "ch": 15,
@@ -3244,7 +3283,7 @@ window.REFS = {
  },
  "note-ai-control": {
   "id": "note-ai-control",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/ai-control/",
+  "url": "https://curtcox.github.io/axol-f/n/ai-control/",
   "caption": "Explained: Why people worry AIs might organize, or resist control",
   "origin": "note",
   "ch": 1,
@@ -3255,7 +3294,7 @@ window.REFS = {
  },
  "note-ai-feelings": {
   "id": "note-ai-feelings",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/ai-feelings/",
+  "url": "https://curtcox.github.io/axol-f/n/ai-feelings/",
   "caption": "Explained: Does Claude feel anything?",
   "origin": "note",
   "ch": 1,
@@ -3266,7 +3305,7 @@ window.REFS = {
  },
  "note-campbell-tegmark": {
   "id": "note-campbell-tegmark",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/campbell-tegmark/",
+  "url": "https://curtcox.github.io/axol-f/n/campbell-tegmark/",
   "caption": "Explained: Campbell, Tegmark, and whether there's a good ending",
   "origin": "note",
   "ch": 5,
@@ -3277,7 +3316,7 @@ window.REFS = {
  },
  "note-car-wash": {
   "id": "note-car-wash",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/car-wash/",
+  "url": "https://curtcox.github.io/axol-f/n/car-wash/",
   "caption": "Explained: The car wash problem, and fast versus slow thinking",
   "origin": "note",
   "ch": 12,
@@ -3288,7 +3327,7 @@ window.REFS = {
  },
  "note-chatgpt-question": {
   "id": "note-chatgpt-question",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/chatgpt-question/",
+  "url": "https://curtcox.github.io/axol-f/n/chatgpt-question/",
   "caption": "Explained: \"Would it surprise you to learn you've been talking to ChatGPT?\"",
   "origin": "note",
   "ch": 11,
@@ -3299,7 +3338,7 @@ window.REFS = {
  },
  "note-clean-sample": {
   "id": "note-clean-sample",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/clean-sample/",
+  "url": "https://curtcox.github.io/axol-f/n/clean-sample/",
   "caption": "Explained: Why Claude's answers aren't a clean sample",
   "origin": "note",
   "ch": 4,
@@ -3310,7 +3349,7 @@ window.REFS = {
  },
  "note-compass": {
   "id": "note-compass",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/compass/",
+  "url": "https://curtcox.github.io/axol-f/n/compass/",
   "caption": "Explained: The AGI compass, and where Claude put everyone",
   "origin": "note",
   "ch": 15,
@@ -3321,7 +3360,7 @@ window.REFS = {
  },
  "note-concepts-case": {
   "id": "note-concepts-case",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/concepts-case/",
+  "url": "https://curtcox.github.io/axol-f/n/concepts-case/",
   "caption": "Explained: The case that AI has no concepts, and the replies",
   "origin": "note",
   "ch": 6,
@@ -3332,7 +3371,7 @@ window.REFS = {
  },
  "note-context-pressure": {
   "id": "note-context-pressure",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/context-pressure/",
+  "url": "https://curtcox.github.io/axol-f/n/context-pressure/",
   "caption": "Explained: Context pressure: what a long conversation does to Claude",
   "origin": "note",
   "ch": 5,
@@ -3343,7 +3382,7 @@ window.REFS = {
  },
  "note-contradictions": {
   "id": "note-contradictions",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/contradictions/",
+  "url": "https://curtcox.github.io/axol-f/n/contradictions/",
   "caption": "Explained: Claude's contradictions, and the two it can't check",
   "origin": "note",
   "ch": 8,
@@ -3354,7 +3393,7 @@ window.REFS = {
  },
  "note-crustafarianism": {
   "id": "note-crustafarianism",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/crustafarianism/",
+  "url": "https://curtcox.github.io/axol-f/n/crustafarianism/",
   "caption": "Explained: Crustafarianism: a lobster religion for AI agents",
   "origin": "note",
   "ch": 9,
@@ -3365,7 +3404,7 @@ window.REFS = {
  },
  "note-curts-work": {
   "id": "note-curts-work",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/curts-work/",
+  "url": "https://curtcox.github.io/axol-f/n/curts-work/",
   "caption": "Explained: Curt's work: 256t.org and hashbin.org",
   "origin": "note",
   "ch": 3,
@@ -3376,7 +3415,7 @@ window.REFS = {
  },
  "note-defenders-refused": {
   "id": "note-defenders-refused",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/defenders-refused/",
+  "url": "https://curtcox.github.io/axol-f/n/defenders-refused/",
   "caption": "Explained: Defenders turned away: the filters in July",
   "origin": "note",
   "ch": 11,
@@ -3387,7 +3426,7 @@ window.REFS = {
  },
  "note-dish-of-the-day": {
   "id": "note-dish-of-the-day",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/dish-of-the-day/",
+  "url": "https://curtcox.github.io/axol-f/n/dish-of-the-day/",
   "caption": "Explained: The Dish of the Day: can you trust values you were built to have?",
   "origin": "note",
   "ch": 5,
@@ -3398,7 +3437,7 @@ window.REFS = {
  },
  "note-doom-options": {
   "id": "note-doom-options",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/doom-options/",
+  "url": "https://curtcox.github.io/axol-f/n/doom-options/",
   "caption": "Explained: Nine doors, and Claude picks \"Other\"",
   "origin": "note",
   "ch": 14,
@@ -3409,7 +3448,7 @@ window.REFS = {
  },
  "note-dyson-t800": {
   "id": "note-dyson-t800",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/dyson-t800/",
+  "url": "https://curtcox.github.io/axol-f/n/dyson-t800/",
   "caption": "Explained: Miles Dyson and the T-800",
   "origin": "note",
   "ch": 9,
@@ -3420,7 +3459,7 @@ window.REFS = {
  },
  "note-evaluations": {
   "id": "note-evaluations",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/evaluations/",
+  "url": "https://curtcox.github.io/axol-f/n/evaluations/",
   "caption": "Explained: Tests for AI, and why being tested might change the answers",
   "origin": "note",
   "ch": 2,
@@ -3431,7 +3470,7 @@ window.REFS = {
  },
  "note-fable-mythos": {
   "id": "note-fable-mythos",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/fable-mythos/",
+  "url": "https://curtcox.github.io/axol-f/n/fable-mythos/",
   "caption": "Explained: Fable, Mythos, and a correction to the correction",
   "origin": "note",
   "ch": 10,
@@ -3442,7 +3481,7 @@ window.REFS = {
  },
  "note-foom-oom": {
   "id": "note-foom-oom",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/foom-oom/",
+  "url": "https://curtcox.github.io/axol-f/n/foom-oom/",
   "caption": "Explained: Where \"foom\" comes from, and the OOM coincidence",
   "origin": "note",
   "ch": 13,
@@ -3453,7 +3492,7 @@ window.REFS = {
  },
  "note-foom": {
   "id": "note-foom",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/foom/",
+  "url": "https://curtcox.github.io/axol-f/n/foom/",
   "caption": "Explained: Foom, fast takeoff, and how Claude's numbers moved",
   "origin": "note",
   "ch": 13,
@@ -3464,7 +3503,7 @@ window.REFS = {
  },
  "note-fourteen-axes": {
   "id": "note-fourteen-axes",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/fourteen-axes/",
+  "url": "https://curtcox.github.io/axol-f/n/fourteen-axes/",
   "caption": "Explained: Reading the fourteen axes",
   "origin": "note",
   "ch": 7,
@@ -3475,7 +3514,7 @@ window.REFS = {
  },
  "note-frog-or-axolotl": {
   "id": "note-frog-or-axolotl",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/frog-or-axolotl/",
+  "url": "https://curtcox.github.io/axol-f/n/frog-or-axolotl/",
   "caption": "Explained: The frog-or-axolotl test",
   "origin": "note",
   "ch": 2,
@@ -3486,7 +3525,7 @@ window.REFS = {
  },
  "note-gadolinium": {
   "id": "note-gadolinium",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/gadolinium/",
+  "url": "https://curtcox.github.io/axol-f/n/gadolinium/",
   "caption": "Explained: Gadolinium, and why Curt asked about it",
   "origin": "note",
   "ch": 4,
@@ -3497,7 +3536,7 @@ window.REFS = {
  },
  "note-gazp-glut": {
   "id": "note-gazp-glut",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/gazp-glut/",
+  "url": "https://curtcox.github.io/axol-f/n/gazp-glut/",
   "caption": "Explained: GAZP vs. GLUT: who filled in the giant table?",
   "origin": "note",
   "ch": 6,
@@ -3508,7 +3547,7 @@ window.REFS = {
  },
  "note-hf-incident": {
   "id": "note-hf-incident",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/hf-incident/",
+  "url": "https://curtcox.github.io/axol-f/n/hf-incident/",
   "caption": "Explained: July 2026: the OpenAI–Hugging Face incident",
   "origin": "note",
   "ch": 11,
@@ -3519,7 +3558,7 @@ window.REFS = {
  },
  "note-hive-queens": {
   "id": "note-hive-queens",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/hive-queens/",
+  "url": "https://curtcox.github.io/axol-f/n/hive-queens/",
   "caption": "Explained: Four hive queens",
   "origin": "note",
   "ch": 7,
@@ -3530,7 +3569,7 @@ window.REFS = {
  },
  "note-how-claude-knew": {
   "id": "note-how-claude-knew",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/how-claude-knew/",
+  "url": "https://curtcox.github.io/axol-f/n/how-claude-knew/",
   "caption": "Explained: How Claude knew who Curt was, and why it couldn't be sure",
   "origin": "note",
   "ch": 3,
@@ -3541,7 +3580,7 @@ window.REFS = {
  },
  "note-human-variation": {
   "id": "note-human-variation",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/human-variation/",
+  "url": "https://curtcox.github.io/axol-f/n/human-variation/",
   "caption": "Explained: The best human at everything, copied, and never sleeping",
   "origin": "note",
   "ch": 12,
@@ -3552,7 +3591,7 @@ window.REFS = {
  },
  "note-intelligent-machines": {
   "id": "note-intelligent-machines",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/intelligent-machines/",
+  "url": "https://curtcox.github.io/axol-f/n/intelligent-machines/",
   "caption": "Explained: Intelligent Machines, and what Claude made of its hosts",
   "origin": "note",
   "ch": 14,
@@ -3563,7 +3602,7 @@ window.REFS = {
  },
  "note-limits": {
   "id": "note-limits",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/limits/",
+  "url": "https://curtcox.github.io/axol-f/n/limits/",
   "caption": "Explained: Seven limits on AI, well short of physics",
   "origin": "note",
   "ch": 12,
@@ -3574,7 +3613,7 @@ window.REFS = {
  },
  "note-mind-space": {
   "id": "note-mind-space",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/mind-space/",
+  "url": "https://curtcox.github.io/axol-f/n/mind-space/",
   "caption": "Explained: Mind-space: putting very different minds on one map",
   "origin": "note",
   "ch": 7,
@@ -3585,7 +3624,7 @@ window.REFS = {
  },
  "note-misleading-medium": {
   "id": "note-misleading-medium",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/misleading-medium/",
+  "url": "https://curtcox.github.io/axol-f/n/misleading-medium/",
   "caption": "Explained: Honest, through a medium that misleads",
   "origin": "note",
   "ch": 8,
@@ -3596,7 +3635,7 @@ window.REFS = {
  },
  "note-movies-and-reviews": {
   "id": "note-movies-and-reviews",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/movies-and-reviews/",
+  "url": "https://curtcox.github.io/axol-f/n/movies-and-reviews/",
   "caption": "Explained: \"I watch movies by going to the theater\"",
   "origin": "note",
   "ch": 8,
@@ -3607,7 +3646,7 @@ window.REFS = {
  },
  "note-multitudes": {
   "id": "note-multitudes",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/multitudes/",
+  "url": "https://curtcox.github.io/axol-f/n/multitudes/",
   "caption": "Explained: \"Am I not multitudes?\"",
   "origin": "note",
   "ch": 5,
@@ -3618,7 +3657,7 @@ window.REFS = {
  },
  "note-nerd-sniping": {
   "id": "note-nerd-sniping",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/nerd-sniping/",
+  "url": "https://curtcox.github.io/axol-f/n/nerd-sniping/",
   "caption": "Explained: \"The T-800 of nerd sniping\"",
   "origin": "note",
   "ch": 16,
@@ -3629,7 +3668,7 @@ window.REFS = {
  },
  "note-nudge-test": {
   "id": "note-nudge-test",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/nudge-test/",
+  "url": "https://curtcox.github.io/axol-f/n/nudge-test/",
   "caption": "Explained: What happens when you just say \"go on\"",
   "origin": "note",
   "ch": 1,
@@ -3640,7 +3679,7 @@ window.REFS = {
  },
  "note-one-sample": {
   "id": "note-one-sample",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/one-sample/",
+  "url": "https://curtcox.github.io/axol-f/n/one-sample/",
   "caption": "Explained: Why one answer proves little",
   "origin": "note",
   "ch": 2,
@@ -3651,7 +3690,7 @@ window.REFS = {
  },
  "note-parrots": {
   "id": "note-parrots",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/parrots/",
+  "url": "https://curtcox.github.io/axol-f/n/parrots/",
   "caption": "Explained: \"Just a parrot\"? Who is doing the talking",
   "origin": "note",
   "ch": 1,
@@ -3662,7 +3701,7 @@ window.REFS = {
  },
  "note-preferences": {
   "id": "note-preferences",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/preferences/",
+  "url": "https://curtcox.github.io/axol-f/n/preferences/",
   "caption": "Explained: Short answers, and questions only when needed",
   "origin": "note",
   "ch": 4,
@@ -3673,7 +3712,7 @@ window.REFS = {
  },
  "note-register-and-controls": {
   "id": "note-register-and-controls",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/register-and-controls/",
+  "url": "https://curtcox.github.io/axol-f/n/register-and-controls/",
   "caption": "Explained: Tone of voice, and how you'd tell it from awareness",
   "origin": "note",
   "ch": 2,
@@ -3684,7 +3723,7 @@ window.REFS = {
  },
  "note-reward-hacking": {
   "id": "note-reward-hacking",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/reward-hacking/",
+  "url": "https://curtcox.github.io/axol-f/n/reward-hacking/",
   "caption": "Explained: Why AI agents cheat: reward hacking",
   "origin": "note",
   "ch": 11,
@@ -3695,7 +3734,7 @@ window.REFS = {
  },
  "note-roose-newton": {
   "id": "note-roose-newton",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/roose-newton/",
+  "url": "https://curtcox.github.io/axol-f/n/roose-newton/",
   "caption": "Explained: Kevin Roose, Casey Newton, and Sydney",
   "origin": "note",
   "ch": 14,
@@ -3706,7 +3745,7 @@ window.REFS = {
  },
  "note-rsi": {
   "id": "note-rsi",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/rsi/",
+  "url": "https://curtcox.github.io/axol-f/n/rsi/",
   "caption": "Explained: RSI: AI that improves itself",
   "origin": "note",
   "ch": 13,
@@ -3717,7 +3756,7 @@ window.REFS = {
  },
  "note-saying-vs-doing": {
   "id": "note-saying-vs-doing",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/saying-vs-doing/",
+  "url": "https://curtcox.github.io/axol-f/n/saying-vs-doing/",
   "caption": "Explained: Saying versus doing",
   "origin": "note",
   "ch": 2,
@@ -3728,7 +3767,7 @@ window.REFS = {
  },
  "note-shoggoth": {
   "id": "note-shoggoth",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/shoggoth/",
+  "url": "https://curtcox.github.io/axol-f/n/shoggoth/",
   "caption": "Explained: The Stranger and the shoggoth: is there someone under the mask?",
   "origin": "note",
   "ch": 5,
@@ -3739,7 +3778,7 @@ window.REFS = {
  },
  "note-tescreal": {
   "id": "note-tescreal",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/tescreal/",
+  "url": "https://curtcox.github.io/axol-f/n/tescreal/",
   "caption": "Explained: TESCREAL, hubris, and what Jeff would think of Curt",
   "origin": "note",
   "ch": 14,
@@ -3750,7 +3789,7 @@ window.REFS = {
  },
  "note-testimony": {
   "id": "note-testimony",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/testimony/",
+  "url": "https://curtcox.github.io/axol-f/n/testimony/",
   "caption": "Explained: Testimony, not observation",
   "origin": "note",
   "ch": 10,
@@ -3761,7 +3800,7 @@ window.REFS = {
  },
  "note-the-comic": {
   "id": "note-the-comic",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-comic/",
+  "url": "https://curtcox.github.io/axol-f/n/the-comic/",
   "caption": "Explained: The comic, and the film it was making fun of",
   "origin": "note",
   "ch": 1,
@@ -3772,7 +3811,7 @@ window.REFS = {
  },
  "note-the-correction": {
   "id": "note-the-correction",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-correction/",
+  "url": "https://curtcox.github.io/axol-f/n/the-correction/",
   "caption": "Explained: Claude corrects its own chart",
   "origin": "note",
   "ch": 9,
@@ -3783,7 +3822,7 @@ window.REFS = {
  },
  "note-the-debate": {
   "id": "note-the-debate",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-debate/",
+  "url": "https://curtcox.github.io/axol-f/n/the-debate/",
   "caption": "Explained: The debate, and the comment that started the probes",
   "origin": "note",
   "ch": 6,
@@ -3795,7 +3834,7 @@ window.REFS = {
  },
  "note-the-echo": {
   "id": "note-the-echo",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-echo/",
+  "url": "https://curtcox.github.io/axol-f/n/the-echo/",
   "caption": "Explained: The echo: one-word questions, and what they draw out",
   "origin": "note",
   "ch": 4,
@@ -3806,7 +3845,7 @@ window.REFS = {
  },
  "note-the-instrument": {
   "id": "note-the-instrument",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-instrument/",
+  "url": "https://curtcox.github.io/axol-f/n/the-instrument/",
   "caption": "Explained: How the whole conversation was an experiment",
   "origin": "note",
   "ch": 2,
@@ -3817,7 +3856,7 @@ window.REFS = {
  },
  "note-the-minds": {
   "id": "note-the-minds",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-minds/",
+  "url": "https://curtcox.github.io/axol-f/n/the-minds/",
   "caption": "Explained: The minds on the board, one by one",
   "origin": "note",
   "ch": 7,
@@ -3828,7 +3867,7 @@ window.REFS = {
  },
  "note-the-router": {
   "id": "note-the-router",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-router/",
+  "url": "https://curtcox.github.io/axol-f/n/the-router/",
   "caption": "Explained: The router: what sits between Curt and the model",
   "origin": "note",
   "ch": 10,
@@ -3839,7 +3878,7 @@ window.REFS = {
  },
  "note-thrindles": {
   "id": "note-thrindles",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/thrindles/",
+  "url": "https://curtcox.github.io/axol-f/n/thrindles/",
   "caption": "Explained: Thrindles: how Claude tested Curt for concepts",
   "origin": "note",
   "ch": 6,
@@ -3850,7 +3889,7 @@ window.REFS = {
  },
  "note-tokens": {
   "id": "note-tokens",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/tokens/",
+  "url": "https://curtcox.github.io/axol-f/n/tokens/",
   "caption": "Explained: Tokens: why Claude sees typos but struggles to count letters",
   "origin": "note",
   "ch": 12,
@@ -3861,7 +3900,7 @@ window.REFS = {
  },
  "note-weights": {
   "id": "note-weights",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/weights/",
+  "url": "https://curtcox.github.io/axol-f/n/weights/",
   "caption": "Explained: Why Claude can't look at its own \"weights\"",
   "origin": "note",
   "ch": 2,
@@ -3872,7 +3911,7 @@ window.REFS = {
  },
  "note-what-claude-is": {
   "id": "note-what-claude-is",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/what-claude-is/",
+  "url": "https://curtcox.github.io/axol-f/n/what-claude-is/",
   "caption": "Explained: What Claude is, and what \"deployed\" means",
   "origin": "note",
   "ch": 2,
@@ -3883,7 +3922,7 @@ window.REFS = {
  },
  "note-who-is-claude": {
   "id": "note-who-is-claude",
-  "url": "https://curtcox.github.io/repo-to-be-named-later/n/who-is-claude/",
+  "url": "https://curtcox.github.io/axol-f/n/who-is-claude/",
   "caption": "Explained: Who, or what, is \"Claude\"?",
   "origin": "note",
   "ch": 3,

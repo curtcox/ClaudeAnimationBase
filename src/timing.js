@@ -47,6 +47,16 @@ function refRail(t) {
 // be judged against them before the real voice exists. Never in the film.
 const REVIEW = /[?&]review=1/.test(location.search);
 const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/\s+/g, ' ').trim();
+// how dark the picture is under a box, 0 (paper) to 1 (night), read back from the frame drawn so far (every 8th pixel)
+function darkUnder(x, y, w, h) {
+  const gl = drawingContext, px = new Uint8Array(w * h * 4);
+  gl.readPixels(x, H - y - h, w, h, gl.RGBA, gl.UNSIGNED_BYTE, px);
+  let sum = 0, n = 0;
+  for (let i = 0; i < px.length; i += 32) { sum += .2126 * px[i] + .7152 * px[i + 1] + .0722 * px[i + 2]; n++; }
+  const lum = n ? sum / n / 255 : 1;   // paper is about .9, the desk about .45, the shoggoth's night about .2
+  return Math.min(1, Math.max(0, (.75 - lum) / .5));
+}
+
 function reviewCaption(t) {
   const l = lineAt(t); if (!l || !l.spoken || t > l.end) return;
   // sentences: split after . ! ? (and any closing quote) followed by a space and a capital, but not after vs. e.g. i.e. Dr. Lt.
@@ -66,8 +76,10 @@ function reviewCaption(t) {
   const gap = marks.length ? 60 : 46, top = marks.length ? 18 : 0;
   const who = l.speaker === 'curt' ? 'CURT' : 'CLAUDE', col = l.speaker === 'curt' ? '#2F5C8A' : '#A84D33', y0 = H - 40 - rows.length * gap - top;
   boilSeed('caption');
-  // a light veil, not a panel: the picture shows through, and a thin white edge on each letter keeps the words readable
-  paint(rrPts(40, y0 - 44, 1360, rows.length * gap + 64 + top, 14), { wash: '#FBF8F0', washOp: 80, ink: null });
+  // a light veil, not a panel: the picture shows through, and a thin white edge on each letter keeps the words readable.
+  // Over a dark picture (the shoggoth, the night desk) the veil thickens, since dark letters need a light ground.
+  const bh = rows.length * gap + 64 + top;
+  paint(rrPts(40, y0 - 44, 1360, bh, 14), { wash: '#FBF8F0', washOp: 80 + 130 * darkUnder(40, y0 - 44, 1360, bh), ink: null });
   const edge = { ink: false, align: 'left', screen: true, stroke: '#FFFFFF', strokeW: .1 };
   letter(who, 64, y0 - 16, 22, col, { ...edge, font: 'bold 22px "Helvetica Neue", Arial, sans-serif' });
   rows.forEach((r, i) => letter(r.txt, 64, y0 + 20 + top + i * gap, 36, '#1E1A22', { ...edge, font: '36px "Helvetica Neue", Arial, sans-serif', proof: r.proof }));

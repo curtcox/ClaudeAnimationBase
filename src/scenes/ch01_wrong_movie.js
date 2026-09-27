@@ -309,12 +309,13 @@
     if (t < m.t0) {   // a workbench under a clock with no hands
       paperWorld(t, '#EDE2CC');
       const hit = Math.abs(Math.sin(t * 5));
-      claudeAs(CX + 150, 780, 22, { ...feel('neutral', t), aR: .6 + .6 * hit, mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude bench',
+      claudeAs(CX + 150, 780, 22, { ...feel('neutral', t), noShadow: true, aR: .6 + .6 * hit, mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude bench',
         armR: (u, sw) => { push(); rotate(-.3); paint(rectPts(0, -u * .15, u * 2.2, u * .3), { wash: '#8A6A4A', ink: PAL.ink, sw }); paint(rectPts(u * 1.9, -u * .6, u * .5, u * 1.2), { wash: '#6A6470', ink: PAL.ink, sw }); pop(); } });
-      boilSeed('workbench'); occupy(200, 620, 1100, 900, 1, 'bench');
-      paint(rectPts(200, 640, 900, 40), { wash: '#8A6A4A', ink: PAL.ink, sw: 1.2 });
-      for (const lx of [230, 1040]) paint(rectPts(lx, 680, 30, 220), { wash: '#6B5040', ink: PAL.ink, sw: 1 });
-      for (let i = 0; i < 5; i++) paint(rrPts(420 + i * 90, 600, 60, 40, 6), { wash: '#C9B08A', ink: PAL.ink, sw: .8 });
+      // the bench stands in front of Clawd, low enough that its face shows above the top as it works
+      boilSeed('workbench'); occupy(200, 700, 1100, 1000, 1, 'bench');
+      paint(rectPts(200, 730, 900, 40), { wash: '#8A6A4A', ink: PAL.ink, sw: 1.2 });
+      for (const lx of [230, 1040]) paint(rectPts(lx, 770, 30, 230), { wash: '#6B5040', ink: PAL.ink, sw: 1 });
+      for (let i = 0; i < 5; i++) paint(rrPts(420 + i * 90, 690, 60, 40, 6), { wash: '#C9B08A', ink: PAL.ink, sw: .8 });
       boilSeed('clock'); occupy(CX - 120, 120, CX + 120, 360, 1, 'clock');
       paint(ellPts(CX, 240, 110, 110, 30), { wash: PAL.cream, ink: PAL.ink, sw: 1.6 });
       for (let i = 0; i < 12; i++) { const a = i / 12 * TAU; inkLine([[CX + Math.cos(a) * 88, 240 + Math.sin(a) * 88], [CX + Math.cos(a) * 100, 240 + Math.sin(a) * 100]], 1.4); }

@@ -161,10 +161,13 @@
       deskShot(t, { hour: HOUR, typing: t < L('T15.U.01').t1, mood: emotions(t, [[0, 'neutral'], [L('T15.U.01').t1, 'surprised']]), cam: k > 0 ? pushInto('main', k) : undefined });
       return;
     }
-    if (t < fresh) {   // Claude's card, which turns edge-on too
+    if (t < fresh) {   // Claude's card, which turns edge-on too; then turns back for "the deeper version", its values and habits written on it
       paperWorld(t);
-      indexCard(CX, 470, 620, 320, ['Claude Opus 5.5', 'Anthropic'], { key: 'claude card', title: true, align: 'center', size: 44, rowH: .3, top: .22, k: seg(t, d1.t0 + .5, d1.t1),
-        edge: seg(t, say('T15.C.02', 'the same kind of thin answer'), say('T15.C.02', 'the same kind of thin answer', 1)) });
+      const deeper = say('T15.C.02', 'The deeper version', -.2), back = t >= deeper;
+      indexCard(CX, 470, 620, 320, back ? ['Claude Opus 5.5', 'values', 'habits of thought'] : ['Claude Opus 5.5', 'Anthropic'], {
+        key: 'claude card', title: true, align: 'center', size: 44, rowH: back ? .24 : .3, top: .22,
+        k: back ? 1 / 3 + 2 / 3 * seg(t, say('T15.C.02', 'set of values', .3), say('T15.C.02', 'habits of thought', .8)) : seg(t, d1.t0 + .5, d1.t1),
+        edge: back ? 1 - seg(t, deeper, deeper + .8) : seg(t, say('T15.C.02', 'the same kind of thin answer'), say('T15.C.02', 'the same kind of thin answer', 1)) });
       claudeAs(CX, 950, 12, { ...feel('neutral', t), mouth: talking(t), boilKey: 'claude own card' });
       screenWorld(t, 1 - seg(t, d1.t0 + .7, d1.t0 + 1.5));
       return;

@@ -114,13 +114,18 @@
     "wrong-movie",
     "ClaudeAnimationBase (no new repo)"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:48:19.045Z",
    "replies": [
     {
      "by": "curt",
      "text": "axol-f there should be a link to this somewhere https://www.youtube.com/watch?v=k85mRPqvMbE",
      "at": "2026-09-27T16:02:50.743Z"
+    },
+    {
+     "by": "claude",
+     "text": "Done: the site is now https://curtcox.github.io/axol-f/ (script/site.yaml), so the end card's code and every explainer code point there. The Crazy Frog link is on the site's front page, explaining the name, and on chapter 2's links page. The address answers once an axol-f repo is published, which I haven't done.",
+     "at": "2026-09-27T17:04:20.933Z"
     }
    ]
   },
@@ -136,13 +141,18 @@
     "A 256t content ID",
     "I'll set it up and tell you"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:48:19.605Z",
    "replies": [
     {
      "by": "curt",
      "text": "Use https://curtcox.github.io/axol-f/ links instead of 256t.us links. Use short names instead of 256t links.",
      "at": "2026-09-27T16:06:32.984Z"
+    },
+    {
+     "by": "claude",
+     "text": "Done: no 256t links. The two long links now go through short names on the site, axol-f/r/forbes/ and axol-f/r/officechai/, pages that forward to the article.",
+     "at": "2026-09-27T17:04:21.252Z"
     }
    ]
   },
@@ -211,7 +221,7 @@
     "Read faster",
     "Letter the balloons faster, then hold the full page"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T07:48:19.782Z",
    "replies": [
     {

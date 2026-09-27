@@ -13,8 +13,8 @@
 #           once, a link board; >= 6 s) | page (no code in the film: listed on the companion site, and on the explainer
 #           that stands for it, e.g. ch 6's thread, where the film shows one code for the-debate)
 #   style   QR dressing, see VIDEO_PLAN.md §4 (implemented in src/qr.js)
-#   qr_url  what the code encodes when it differs from url: the site's own short form, or SHORT (needs a 256t short
-#           link on 256t.us; its path form is still open)
+#   qr_url  what the code encodes when it differs from url: a shorter form of the same page, or one of the companion
+#           site's short links (base + r/NAME/, script/site.yaml), a page that forwards to url; build_site writes it
 #   also    other transcript URLs this code stands for (the same page linked twice)
 #   ecc     error-correction level, when the mode's default (feature H, shelf M) doesn't scan reliably for this URL
 #   verified how a bot-walled page was confirmed by hand (the checker can't fetch it)
@@ -50,14 +50,16 @@
 # ---- 2 Frog or Axolotl -------------------------------------------------------------------------------------------
 - { id: frog-chart, url: "https://x.com/fjzzq2002/status/2103556166903038213/photo/1", caption: "Frog or axolotl?", origin: attachment, at: T08.U.00, mode: feature, style: lilypad, note: "the link Curt gave; x.com redirects it to the post (with the chart) when logged out" }
 - { id: axolotl, url: "https://en.wikipedia.org/wiki/Axolotl", caption: "Axolotl", origin: added, at: T06.C.01, mode: shelf, style: gills }
+- { id: axel-f, url: "https://www.youtube.com/watch?v=k85mRPqvMbE", caption: "Crazy Frog: Axel F (why the site is axol-f)", origin: added, at: T06.C.01, mode: page, style: plain }
 - { id: eval-awareness, url: "https://arxiv.org/abs/2505.23836", caption: "LLMs often know when they're being evaluated", origin: added, ch: 2, at: "eval-awareness", mode: shelf, style: lilypad }
-- { id: gpqa, url: "https://arxiv.org/abs/2311.12022", caption: "GPQA", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
-- { id: swe-bench-verified, url: "https://openai.com/index/introducing-swe-bench-verified/", caption: "SWE-bench Verified", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam, verified: "browser 2026-09-26" }
-- { id: kernelbench, url: "https://arxiv.org/abs/2502.10517", caption: "KernelBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
-- { id: hle, url: "https://lastexam.ai/", caption: "Humanity's Last Exam", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
-- { id: wildchat, url: "https://arxiv.org/abs/2405.01470", caption: "WildChat", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
+- { id: gpqa, url: "https://arxiv.org/abs/2311.12022", caption: "GPQA", origin: added, ch: 2, at: "The eval prompts are terse", mode: page, style: exam }
+- { id: swe-bench-verified, url: "https://openai.com/index/introducing-swe-bench-verified/", caption: "SWE-bench Verified", origin: added, ch: 2, at: "The eval prompts are terse", mode: page, style: exam, verified: "browser 2026-09-26" }
+- { id: kernelbench, url: "https://arxiv.org/abs/2502.10517", caption: "KernelBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: page, style: exam }
+- { id: hle, url: "https://lastexam.ai/", caption: "Humanity's Last Exam", origin: added, ch: 2, at: "The eval prompts are terse", mode: page, style: exam }
+- { id: wildchat, url: "https://arxiv.org/abs/2405.01470", caption: "WildChat", origin: added, ch: 2, at: "real chats are looser", mode: page, style: chat }
 
-# more for chapter 2: every model, benchmark, dataset and idea it names, one scan away
+# more for chapter 2: every model, benchmark, dataset and idea it names, one scan away. The chart's rows (tests, real
+# chats) and the register/control ideas are mode page: one code, to the register-and-controls explainer, holds them all
 - { id: claude-opus-5-5, url: "https://www.anthropic.com/claude-opus-5-5", caption: "Introducing Claude Opus 5.5", origin: added, at: T07.C.01, mode: shelf, style: plain }
 - { id: claude-app, url: "https://claude.com/download", caption: "The Claude app", origin: added, ch: 2, at: "we're talking in the Claude app", mode: shelf, style: plain }
 - { id: hawthorne, url: "https://en.wikipedia.org/wiki/Hawthorne_effect", caption: "The Hawthorne effect", origin: added, ch: 2, at: "whether or not anyone's grading", mode: shelf, style: plain }
@@ -68,13 +70,13 @@
 - { id: tracing-thoughts, url: "https://www.anthropic.com/research/tracing-thoughts-language-model", caption: "Tracing the thoughts of a language model", origin: added, ch: 2, at: "inspect my own weights", mode: shelf, style: plain }
 - { id: gpt-5-6, url: "https://openai.com/index/gpt-5-6/", caption: "GPT-5.6 (Sol, Terra, Luna)", origin: added, at: T08.C.05.1, mode: shelf, style: plain, verified: "browser 2026-09-26" }
 - { id: gpt-5-6-luna, url: "https://developers.openai.com/api/docs/models/gpt-5.6-luna", caption: "GPT-5.6 Luna", origin: added, at: T08.C.05.1, mode: shelf, style: plain }
-- { id: error-bars, url: "https://www.anthropic.com/research/statistical-approach-to-model-evals", caption: "Adding error bars to evals", origin: added, at: T08.C.06, mode: shelf, style: plain }
-- { id: register, url: "https://en.wikipedia.org/wiki/Register_(sociolinguistics)", caption: "Register (sociolinguistics)", origin: added, ch: 2, at: "register sensitivity", mode: shelf, style: plain }
-- { id: impossiblebench, url: "https://arxiv.org/abs/2510.20270", caption: "ImpossibleBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
-- { id: swe-marathon, url: "https://arxiv.org/abs/2606.07682", caption: "SWE-Marathon", origin: added, ch: 2, at: "The eval prompts are terse", mode: shelf, style: exam }
-- { id: swe-chat, url: "https://arxiv.org/abs/2604.20779", caption: "SWE-chat", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
-- { id: sharegpt-vicuna, url: "https://www.lmsys.org/blog/2023-03-30-vicuna/", caption: "ShareGPT (via Vicuna)", origin: added, ch: 2, at: "real chats are looser", mode: shelf, style: chat }
-- { id: scientific-control, url: "https://en.wikipedia.org/wiki/Scientific_control", caption: "Scientific control", origin: added, ch: 2, at: "A good control", mode: shelf, style: plain }
+- { id: error-bars, url: "https://www.anthropic.com/research/statistical-approach-to-model-evals", caption: "Adding error bars to evals", origin: added, at: T08.C.06, mode: page, style: plain }
+- { id: register, url: "https://en.wikipedia.org/wiki/Register_(sociolinguistics)", caption: "Register (sociolinguistics)", origin: added, ch: 2, at: "register sensitivity", mode: page, style: plain }
+- { id: impossiblebench, url: "https://arxiv.org/abs/2510.20270", caption: "ImpossibleBench", origin: added, ch: 2, at: "The eval prompts are terse", mode: page, style: exam }
+- { id: swe-marathon, url: "https://arxiv.org/abs/2606.07682", caption: "SWE-Marathon", origin: added, ch: 2, at: "The eval prompts are terse", mode: page, style: exam }
+- { id: swe-chat, url: "https://arxiv.org/abs/2604.20779", caption: "SWE-chat", origin: added, ch: 2, at: "real chats are looser", mode: page, style: chat }
+- { id: sharegpt-vicuna, url: "https://www.lmsys.org/blog/2023-03-30-vicuna/", caption: "ShareGPT (via Vicuna)", origin: added, ch: 2, at: "real chats are looser", mode: page, style: chat }
+- { id: scientific-control, url: "https://en.wikipedia.org/wiki/Scientific_control", caption: "Scientific control", origin: added, ch: 2, at: "A good control", mode: page, style: plain }
 - { id: claude-code, url: "https://claude.com/product/claude-code", caption: "Claude Code", origin: added, at: T09.C.05, mode: shelf, style: plain }
 - { id: sampling, url: "https://en.wikipedia.org/wiki/Sampling_(statistics)", caption: "Sampling", origin: added, ch: 2, at: "one draw from a distribution", mode: shelf, style: plain }
 
@@ -88,6 +90,7 @@
 - { id: personal-identity, url: "https://plato.stanford.edu/entries/identity-personal/", caption: "Personal identity", origin: added, at: T15.C.02, mode: shelf, style: plain }
 - { id: other-minds, url: "https://en.wikipedia.org/wiki/Problem_of_other_minds", caption: "The problem of other minds", origin: added, at: T16.C.01, mode: shelf, style: plain }
 - { id: turing-test, url: "https://en.wikipedia.org/wiki/Turing_test", caption: "The Turing test", origin: added, at: T16.C.01, mode: shelf, style: plain }
+- { id: flask, url: "https://en.wikipedia.org/wiki/Flask_(web_framework)", caption: "Flask, the Python web toolkit", origin: added, at: T12.C.01, mode: page, style: plain }
 
 # ---- 4 The Echo --------------------------------------------------------------------------------------------------
 - { id: gadolinium, url: "https://en.wikipedia.org/wiki/Gadolinium", caption: "Gadolinium", origin: added, at: T17.C.01, mode: feature, style: electron-shells }
@@ -208,7 +211,7 @@
 
 # ---- 9 Shells ----------------------------------------------------------------------------------------------------
 - { id: hieropedia-crustafarianism, url: "https://hieropedia.org/religions/crustafarianism/", caption: "Crustafarianism", origin: transcript, at: T45.C.08.1, mode: feature, style: lobster-shell }
-- { id: forbes-crustafarianism, url: "https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/", qr_url: SHORT, caption: "AI Agents Created Their Own Religion", origin: transcript, at: T45.C.08.2, mode: shelf, style: lobster-shell, verified: "browser 2026-09-26" }
+- { id: forbes-crustafarianism, url: "https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/", qr_url: "https://curtcox.github.io/axol-f/r/forbes/", caption: "AI Agents Created Their Own Religion", origin: transcript, at: T45.C.08.2, mode: shelf, style: lobster-shell, verified: "browser 2026-09-26" }
 - { id: moltbook, url: "https://www.moltbook.com/", caption: "Moltbook", origin: added, ch: 9, at: "appeared on Moltbook", mode: shelf, style: lobster-shell }
 - { id: hermes-memory, url: "https://hermes-agent.nousresearch.com/docs/user-guide/features/memory", caption: "Hermes Agent: Persistent Memory", origin: transcript, at: T46.C.09.1, mode: feature, style: winged-sandal }
 - { id: hermes-agent, url: "https://hermes-agent.org/", caption: "Hermes Agent", origin: transcript, at: T46.C.09.2, mode: shelf, style: winged-sandal }
@@ -319,7 +322,7 @@
 - { id: im-889, url: "https://twit.tv/shows/intelligent-machines/episodes/889", caption: "Intelligent Machines #889", origin: added, at: T68.C.02, mode: shelf, style: mic }
 - { id: tescreal, url: "https://en.wikipedia.org/wiki/TESCREAL", caption: "TESCREAL", origin: added, at: T68.C.04.2, mode: shelf, style: boxing-ring }
 - { id: roose-sydney, url: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html", caption: "Roose's Sydney conversation", origin: added, at: T71.C.02.2, mode: shelf, style: two-mics, verified: "Curt, headline, 2026-09-27 (paywalled)" }
-- { id: machine-gods, url: "https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods", qr_url: SHORT, caption: "Machine Gods (NPR)", origin: added, ch: 14, at: "Machine Gods", mode: page, style: two-mics }
+- { id: machine-gods, url: "https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods", caption: "Machine Gods (NPR)", origin: added, ch: 14, at: "Machine Gods", mode: page, style: two-mics }
 # the show's own promo: a short YouTube address, so its code scans with no short link (the NPR story stays on the site)
 - { id: machine-gods-promo, url: "https://www.youtube.com/watch?v=1T-WWVZHj0g", qr_url: "https://youtu.be/1T-WWVZHj0g", caption: "This is Machine Gods", origin: added, ch: 14, at: "Machine Gods", mode: shelf, style: two-mics }
 - { id: hardfork-hf, url: "https://www.youtube.com/watch?v=JtmUbZRCpEI", caption: "Hard Fork: the Hugging Face attack", origin: added, at: T71.C.02.2, mode: page, style: tv }
@@ -349,7 +352,7 @@
 - { id: ai-2027, url: "https://ai-2027.com/", caption: "AI 2027", origin: added, at: T75.C.02, mode: feature, style: calendar }
 - { id: ai-futures-wiki, url: "https://en.wikipedia.org/wiki/AI_Futures_Project", caption: "AI Futures Project", origin: transcript, at: T75.C.08.1, mode: shelf, style: calendar }
 - { id: apolo-ai2027, url: "https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity", caption: "Apolo: AI 2027 in 2026", origin: transcript, at: T75.C.08.2, mode: shelf, style: calendar }
-- { id: officechai-kokotajlo, url: "https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/", qr_url: SHORT, caption: "OfficeChai: Kokotajlo", origin: transcript, at: T75.C.08.3, mode: shelf, style: calendar }
+- { id: officechai-kokotajlo, url: "https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/", qr_url: "https://curtcox.github.io/axol-f/r/officechai/", caption: "OfficeChai: Kokotajlo", origin: transcript, at: T75.C.08.3, mode: shelf, style: calendar }
 - { id: metaculus-weak, url: "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/", caption: "Metaculus: weak AGI", origin: added, at: T76.C.03.1, mode: shelf, style: dial, verified: "browser 2026-09-26" }
 - { id: metaculus-strong, url: "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/", caption: "Metaculus: strong AGI", origin: added, at: T76.C.03.2, mode: shelf, style: dial, verified: "browser 2026-09-26" }
 - { id: alphafold, url: "https://en.wikipedia.org/wiki/AlphaFold", caption: "AlphaFold", origin: added, at: T76.C.01, mode: shelf, style: plain }
@@ -360,6 +363,8 @@
 # more for chapter 15: the meme's origin, the people on the compass, AI 2027's own grading, and the history of "AGI"
 - { id: dnd-alignment, url: "https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)", caption: "Alignment charts (D&D)", origin: added, at: T73.U.01, mode: shelf, style: compass }
 - { id: connor-leahy, url: "https://en.wikipedia.org/wiki/Connor_Leahy", caption: "Connor Leahy", origin: added, at: T74.C.02, mode: shelf, style: compass }
+- { id: inside-view, url: "https://theinsideview.ai/", caption: "The Inside View (Michaël Trazzi)", origin: added, at: T74.C.02, mode: shelf, style: compass }
+- { id: accelerationism, url: "https://en.wikipedia.org/wiki/Effective_accelerationism", caption: "Effective accelerationism", origin: added, at: T74.C.03.4, mode: shelf, style: compass }
 - { id: eleutherai, url: "https://en.wikipedia.org/wiki/EleutherAI", caption: "EleutherAI", origin: added, at: T74.C.04, mode: shelf, style: plain }
 - { id: kokotajlo, url: "https://en.wikipedia.org/wiki/Daniel_Kokotajlo_(researcher)", caption: "Daniel Kokotajlo", origin: added, at: T75.C.02, mode: shelf, style: calendar }
 - { id: ai2027-grading, url: "https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions", caption: "Grading AI 2027's 2025 predictions", origin: added, at: T75.C.03, mode: page, style: calendar }
@@ -385,5 +390,5 @@
 - { id: the-terminator, url: "https://en.wikipedia.org/wiki/The_Terminator", caption: "The Terminator (1984)", origin: added, at: T78.C.02, mode: page, style: chrome-red-eye }
 - { id: ill-be-back, url: "https://en.wikipedia.org/wiki/I%27ll_be_back", caption: "\"I'll be back\"", origin: added, at: T78.C.02, mode: page, style: chrome-red-eye }
 # the companion page: the one code at the end that holds every link in the film, by chapter and time (the address follows
-# script/site.yaml's base, still a placeholder until the repo is named)
-- { id: companion, url: "https://curtcox.github.io/repo-to-be-named-later/", caption: "Every link in this film", origin: added, at: T78.C.02, mode: feature, style: note }
+# script/site.yaml's base)
+- { id: companion, url: "https://curtcox.github.io/axol-f/", caption: "Every link in this film", origin: added, at: T78.C.02, mode: feature, style: note }

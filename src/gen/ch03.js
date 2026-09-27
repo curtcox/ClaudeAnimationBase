@@ -34,7 +34,8 @@ window.CHAPTER = {
    "refs": [
     "256t",
     "hashbin",
-    "content-addressable"
+    "content-addressable",
+    "flask"
    ],
    "estimated": true
   },

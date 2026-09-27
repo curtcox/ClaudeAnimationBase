@@ -111,7 +111,8 @@ window.CHAPTER = {
    "text": "It's the 2×2 compass from Michaël Trazzi's 2022 conversation with Connor Leahy. The horizontal axis runs from \"AGI not now\" to \"AGI soon,\" and the vertical axis from \"AGI good\" to \"AGI bad.\"",
    "speech": "It's the two-by-two compass from Mee-ka-EL TRAHT-see's 2022 conversation with Connor LAY-hee. The horizontal axis runs from \"AGI not now\" to \"AGI soon,\" and the vertical axis from \"AGI good\" to \"AGI bad.\"",
    "refs": [
-    "connor-leahy"
+    "connor-leahy",
+    "inside-view"
    ],
    "estimated": true
   },
@@ -164,7 +165,9 @@ window.CHAPTER = {
    "end": 99.125,
    "text": "- **Leo:** accelerationist quadrant, near the center, and drifting down. He loves the tools, admits he doesn't trust his own instinct, and had a hard week.",
    "speech": "Leo: accelerationist quadrant, near the center, and drifting down. He loves the tools, admits he doesn't trust his own instinct, and had a hard week.",
-   "refs": [],
+   "refs": [
+    "accelerationism"
+   ],
    "estimated": true
   },
   {

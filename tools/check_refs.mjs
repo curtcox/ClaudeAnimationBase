@@ -47,7 +47,7 @@ for (const r of refs) {
   r.px = SIZE[r.mode] / (r.modules + 2 * QUIET);
 }
 // SHORT: what the direct URL would need, to show why
-for (const r of refs.filter(r => r.qr_url === 'SHORT')) { const q = qrcode(0, ECC[r.mode]); q.addData(r.url); q.make(); r.directPx = SIZE[r.mode] / (q.getModuleCount() + 2 * QUIET); }
+for (const r of refs.filter(r => r.qr_url === 'SHORT' && r.mode !== 'page')) { const q = qrcode(0, ECC[r.mode]); q.addData(r.url); q.make(); r.directPx = SIZE[r.mode] / (q.getModuleCount() + 2 * QUIET); }
 
 // the web
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';

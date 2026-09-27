@@ -299,7 +299,7 @@
       if (t > thr) { const k = seg(t, thr, thr + .6); boilSeed('threshold'); paint(rectPts(720, 520, 440, 22), { wash: '#6A6470', ink: PAL.ink, sw: .8 }); inkLine([[700, 440], [lerp(700, 1180, k), lerp(440, 620, k)]], 8, RED, 'ink', 0); }
       return;
     }
-    radarStar(645, 520, 330, Array(14).fill(100), '#C9A441', { grow: seg(t, axes, say('T76.C.05', 'every axis at once', .6)) });
+    radarStar(645, 520, 330, Array(14).fill(100), '#C9A441', { grow: seg(t, axes, say('T76.C.05', 'every axis at once', .6)), labels: seg(t, axes, axes + 1.4), labelSize: 26 });
     if (t > say('T76.C.05', "can't wrap your head around", -1)) curtAs(1130, 1040, 12, { brows: 'up', boilKey: 'curt head' });
   }
   // G: Curt: a pocket knife beside one enormous blade; the thrindle under the magnifier; a chessboard beside a library; a

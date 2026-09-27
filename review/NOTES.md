@@ -4,21 +4,6 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 0. Cold open
 
-- **whole chapter** · Claude asks `nmujio6p1ux`
-  Repo name for the companion site (it becomes curtcox.github.io/NAME/). Shorter makes a smaller code. Or it could live in this repo, with no new one: curtcox.github.io/ClaudeAnimationBase/
-  Options: “frog-or-axolotl” · “axolotl” · “wrong-movie” · “ClaudeAnimationBase (no new repo)”
-  - Curt: axol-f there should be a link to this somewhere https://www.youtube.com/watch?v=k85mRPqvMbE
-
-- **whole chapter** · Claude asks `nmujio74lqf`
-  How should a 256t.us short link look? A short name is easiest to scan. A 256t content ID is 94 characters, only a little shorter than these URLs, so it barely helps.
-  Options: “256t.us/NAME, a short name (e.g. 256t.us/forbes)” · “A 256t content ID” · “I'll set it up and tell you”
-  - Curt: Use https://curtcox.github.io/axol-f/ links instead of 256t.us links. Use short names instead of 256t links.
-
-- **0:19.0** · T01.U.00 · shot A · Claude asks `nmujio79iq7`
-  With all ten balloons read one by one, the cold open is now about 1 minute of silent reading (it was 32 s). OK?
-  Options: “OK” · “Read faster” · “Letter the balloons faster, then hold the full page”
-  - Curt: OK
-
 - **whole chapter** · Claude asks · ✓ resolved `nmujh32l6mo`
   The companion page's code (in the closing wall of codes) needs the site's real address. What should the repo be called? It becomes curtcox.github.io/NAME/.
   - Curt: Give me a list of suggestions.
@@ -42,6 +27,18 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Curt: That looks right. I can only see the headline. I don't have an account.
   - Claude: Thanks, marked as checked. The headline is all we need.
 
+- **whole chapter** · Claude asks · ✓ resolved `nmujio6p1ux`
+  Repo name for the companion site (it becomes curtcox.github.io/NAME/). Shorter makes a smaller code. Or it could live in this repo, with no new one: curtcox.github.io/ClaudeAnimationBase/
+  Options: “frog-or-axolotl” · “axolotl” · “wrong-movie” · “ClaudeAnimationBase (no new repo)”
+  - Curt: axol-f there should be a link to this somewhere https://www.youtube.com/watch?v=k85mRPqvMbE
+  - Claude: Done: the site is now https://curtcox.github.io/axol-f/ (script/site.yaml), so the end card's code and every explainer code point there. The Crazy Frog link is on the site's front page, explaining the name, and on chapter 2's links page. The address answers once an axol-f repo is published, which I haven't done.
+
+- **whole chapter** · Claude asks · ✓ resolved `nmujio74lqf`
+  How should a 256t.us short link look? A short name is easiest to scan. A 256t content ID is 94 characters, only a little shorter than these URLs, so it barely helps.
+  Options: “256t.us/NAME, a short name (e.g. 256t.us/forbes)” · “A 256t content ID” · “I'll set it up and tell you”
+  - Curt: Use https://curtcox.github.io/axol-f/ links instead of 256t.us links. Use short names instead of 256t links.
+  - Claude: Done: no 256t links. The two long links now go through short names on the site, axol-f/r/forbes/ and axol-f/r/officechai/, pages that forward to the article.
+
 - **0:11.5** · T01.U.00 · shot B · Claude asks · ✓ resolved `nmujh329jcf`
   I lettered 4 of the page's 9 balloons, and shortened the villain's. The page has: "Because an intelligent, talking ape could lead the other apes out of their slavery . . . and we must perpetuate slavery! We have always needed slaves, and we always will!" Since accuracy comes first, should the page show every balloon, in full?
   Options: “Every balloon, in full” · “Just the villain's in full” · “Keep it as is”
@@ -54,6 +51,11 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Curt: Fine for now
   - Claude: OK, leaving them.
 
+- **0:19.0** · T01.U.00 · shot A · Claude asks · ✓ resolved `nmujio79iq7`
+  With all ten balloons read one by one, the cold open is now about 1 minute of silent reading (it was 32 s). OK?
+  Options: “OK” · “Read faster” · “Letter the balloons faster, then hold the full page”
+  - Curt: OK
+
 - **0:27.0** · T01.U.00 · shot D · Claude asks · ✓ resolved `nmujh32hflq`
   I made the cold open 3 seconds longer (23 s of hold, not 20), so the page and its code sit side by side without overlapping, and the title gets time. OK?
   Options: “OK” · “Keep it at 20 s”
@@ -62,18 +64,19 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 1. The Wrong Movie
 
-- **4:17.0** · T04.C.03.1 · shot H · Claude asks `nmujh32wrvg`
+- **4:17.0** · T04.C.03.1 · shot H · Claude asks · ✓ resolved `nmujh32wrvg`
   The chapter check finds 10 places here where the picture holds still for over 8 seconds (this one is 12.8 s). Are held shots like this fine, or should every long line get more movement?
   Options: “Held shots are fine” · “Add movement”
   - Curt: Held shots are fine
 
 ## 2. Frog or Axolotl
 
-- **2:36.4** · T09.C.03 · shot H · Claude asks `nmujh330m1n`
+- **2:36.4** · T09.C.03 · shot H · Claude asks · ✓ resolved `nmujh330m1n`
   Nine source codes pile up in this stretch, and some wait up to 35 s to find room. Which fix?
   Options: “A painted board of links in the scene, several at once” · “Put some on the chapter's web page only” · “Accept the wait”
   - Claude: A fourth option, from your corkboard answer in chapter 6: one code here, to an explainer page that holds all nine sources.
   - Curt: Use the same general rule everywhere. When adding too many QR codes on screen causes a problem create a page for that part of the video so that a single QR code can be used to point to the page with all of the context and references.
+  - Claude: Done, and it's the general rule now. Here the chart's rows (six tests, three sets of real chats) and the register and control ideas are one code, to the register-and-controls explainer, which now describes and links all of them. The error-bars paper moved onto the one-sample explainer's code too. The chapter checks now find no pile-ups or late codes in any chapter.
 
 ## 4. The Echo
 
@@ -123,4 +126,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Claude: Kevin has the glasses (as drawn). A labelled 3×3 grid of everyone now opens Curt's question here.
 
 ---
-6 open, 13 resolved.
+1 open, 18 resolved.

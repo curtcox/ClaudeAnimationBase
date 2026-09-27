@@ -170,7 +170,9 @@ function thrindle(x, y, s, t, o = {}) {
 }
 
 // A radar star (ch 7's mind-space board, and every chapter that adds to it): vals 0..100 (0 at the centre, 100 at the rim), one spoke per axis; grow 0..1; o.dotted (axis index);
-// o.axes (how many axes to show: 7 or 14; the second seven slot in between the first as they grow, o.more 0..7)
+// o.axes (how many axes to show: 7 or 14; the second seven slot in between the first as they grow, o.more 0..7);
+// o.labels 0..1 writes the fourteen axis names (chapter 7's two tables) round the rim, o.labelSize their size
+const AXIS_NAMES = ['Values', 'Affect', 'Body', 'Continuity', 'Unity', 'Origin', 'Tempo', 'Senses', 'Language', 'Self-model', 'Mortality', 'Autonomy', 'Breadth', 'Legibility'];
 function radarStar(x, y, r, vals, col, o = {}) {
   const g = o.grow ?? 1, more = o.more ?? (vals.length > 7 ? 7 : 0), pts = [];
   boilSeed('star ' + x + ' ' + y);
@@ -186,6 +188,10 @@ function radarStar(x, y, r, vals, col, o = {}) {
     if (first || clamp(more - (i - 1) / 2) > 0) inkLine([[x, y], [x + Math.cos(a) * r, y + Math.sin(a) * r]], .5, '#D9D2C4', 'inkfine', 0);
   }
   paint(pts, { wash: col, washOp: 150, ink: mixCol(col, PAL.ink, .4), sw: 1.2 });
+  if (o.labels > 0) for (let i = 0; i < 14; i++) {
+    const a = -Math.PI / 2 + i / 14 * TAU, idx = i % 2 === 0 ? i / 2 : 7 + (i - 1) / 2, sz = o.labelSize || Math.max(20, r * .11), c = Math.cos(a);
+    lab(AXIS_NAMES[idx], x + c * (r + sz * .5) + c * sz * 1.6, y + Math.sin(a) * (r + sz * .9), sz, '#4E5B78', { alpha: clamp(o.labels * 14 - i) });
+  }
   if (o.dotted != null) {   // an axis whose score means "I don't know": dotted, a question mark at its tip
     const i = o.dotted * 2, a = -Math.PI / 2 + i / 14 * TAU, rr = r * .06 + r * .94 * vals[o.dotted] / 100 * g;
     for (let d = 0; d < 6; d++) inkLine([[x + Math.cos(a) * rr * d / 6, y + Math.sin(a) * rr * d / 6], [x + Math.cos(a) * rr * (d + .5) / 6, y + Math.sin(a) * rr * (d + .5) / 6]], 3, PAL.clayDk, 'ink', 0);

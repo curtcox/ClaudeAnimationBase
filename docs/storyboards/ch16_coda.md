@@ -41,8 +41,8 @@ companion page's caption.
 
 **Explainers:** "The T-800 of nerd sniping" (`nerd-sniping`).
 
-**Open:** the companion page's code needs the site's real address (`script/site.yaml` still has the placeholder), and
-the wall needs a layout for a few hundred codes. At that density they're decorative, not scannable, except the companion
+**Open:** the companion page's code points at https://curtcox.github.io/axol-f/ (`script/site.yaml`), which answers
+once the axol-f repo is published; the wall needs a layout for a few hundred codes. At that density they're decorative, not scannable, except the companion
 page's, which carries them all.
 
 ## Reads to check (rule 4)

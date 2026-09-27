@@ -1,4 +1,5 @@
 # The companion site: plain-language explainer pages and every link in the film, by chapter and time.
 # Published to GitHub Pages (a workflow like PDoomVideo's). Every QR code that points at the site follows base.
-base: https://curtcox.github.io/repo-to-be-named-later/   # placeholder: the repo gets its long-term name later
+base: https://curtcox.github.io/axol-f/   # the repo axol-f (Curt's pun: an axolotl, and Crazy Frog's "Axel F")
+short: r/         # a short link lives at base + short + name + '/': a page that forwards to a long URL (a ref's qr_url)
 notes: n/          # an explainer lives at base + notes + id + '/'

@@ -55,7 +55,15 @@ know.</p><p>Every one of them is here, in order, a chapter at a time, with short
 alone isn't enough. <strong>The yellow ones are the explanations.</strong> Start there if a moment in the film lost you.</p>
 <h2>Chapters</h2><ul>${chapters.map((c, i) => `<li><a href="ch${pad(c.n)}/">${c.n}. ${esc(c.title)}</a> <span class="when">${stamp(offset[i])}</span></li>`).join('')}</ul>
 <p class="note">The explanations were written by Claude, the AI in the film, for this site, and checked against the linked
-sources. Times are approximate until the film's final voices are recorded.</p>`, 0));
+sources. Times are approximate until the film's final voices are recorded.</p>
+<p class="note">Why is this site called <em>axol-f</em>? An axolotl, one letter away from
+<a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Crazy Frog's "Axel F"</a>: a frog, or an axolotl.</p>`, 0));
+// short links: a ref whose code is one of this site's short addresses (base + r/NAME/) gets a page that forwards to its url
+for (const r of refs.filter(r => r.qr_url && r.qr_url.startsWith(site.base + site.short))) {
+  const name = r.qr_url.slice((site.base + site.short).length).replace(/\/$/, '');
+  write(`${OUT}/${site.short}${name}/index.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${esc(r.url)}">
+<link rel="canonical" href="${esc(r.url)}"><title>${esc(r.caption)}</title></head><body><p>Going to <a href="${esc(r.url)}">${esc(r.caption)}</a>…</p></body></html>\n`);
+}
 chapters.forEach((c, i) => {
   const lines = script.lines.filter(l => l.ch === c.n), items = [];
   for (const l of lines) {
