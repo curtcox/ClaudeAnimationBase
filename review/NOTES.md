@@ -99,9 +99,10 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 12. Limits
 
-- **2:47.1** · T60.C.02.1 · Claude asks `nmujvc8pbuk`
+- **2:47.1** · T60.C.02.1 · Claude asks · ✓ resolved `nmujvc8pbuk`
   The storyboard built the seven limits side by side on one board. I show each limit big, one at a time (its name and formula readable), then the whole board of seven when Claude says items 1 and 4 matter most. OK?
   Options: “OK” · “Build the board up side by side” · “Something else”
+  - Curt: OK
 
 ## 14. The Pundits
 
@@ -110,4 +111,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   Options: “Enough” · “More distinct shapes” · “Name cards instead of figures”
 
 ---
-8 open, 10 resolved.
+7 open, 11 resolved.
