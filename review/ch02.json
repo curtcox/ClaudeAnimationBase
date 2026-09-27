@@ -15,7 +15,13 @@
    ],
    "status": "open",
    "created": "2026-09-27T07:03:54.886Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "claude",
+     "text": "A fourth option, from your corkboard answer in chapter 6: one code here, to an explainer page that holds all nine sources.",
+     "at": "2026-09-27T12:33:11.439Z"
+    }
+   ]
   }
  ]
 }

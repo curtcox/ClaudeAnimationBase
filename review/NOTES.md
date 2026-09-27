@@ -68,6 +68,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **2:36.4** · T09.C.03 · shot H · Claude asks `nmujh330m1n`
   Nine source codes pile up in this stretch, and some wait up to 35 s to find room. Which fix?
   Options: “A painted board of links in the scene, several at once” · “Put some on the chapter's web page only” · “Accept the wait”
+  - Claude: A fourth option, from your corkboard answer in chapter 6: one code here, to an explainer page that holds all nine sources.
 
 ## 4. The Echo
 
