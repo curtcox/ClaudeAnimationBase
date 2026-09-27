@@ -31,6 +31,14 @@
   at: T26.C.02
   mode: shelf
   style: note
+- id: note-chatgpt-question
+  url: https://curtcox.github.io/repo-to-be-named-later/n/chatgpt-question/
+  caption: "Explained: \"Would it surprise you to learn you've been talking to ChatGPT?\""
+  origin: note
+  ch: 11
+  at: T54.C.01
+  mode: shelf
+  style: note
 - id: note-clean-sample
   url: https://curtcox.github.io/repo-to-be-named-later/n/clean-sample/
   caption: "Explained: Why Claude's answers aren't a clean sample"
@@ -77,6 +85,14 @@
   origin: note
   ch: 3
   at: T12.C.02
+  mode: shelf
+  style: note
+- id: note-defenders-refused
+  url: https://curtcox.github.io/repo-to-be-named-later/n/defenders-refused/
+  caption: "Explained: Defenders turned away: the filters in July"
+  origin: note
+  ch: 11
+  at: T52.C.06.4
   mode: shelf
   style: note
 - id: note-dish-of-the-day
@@ -141,6 +157,14 @@
   origin: note
   ch: 6
   at: T34.C.01
+  mode: shelf
+  style: note
+- id: note-hf-incident
+  url: https://curtcox.github.io/repo-to-be-named-later/n/hf-incident/
+  caption: "Explained: July 2026: the OpenAI–Hugging Face incident"
+  origin: note
+  ch: 11
+  at: T52.C.04
   mode: shelf
   style: note
 - id: note-hive-queens
@@ -229,6 +253,14 @@
   origin: note
   ch: 2
   at: T09.C.03
+  mode: shelf
+  style: note
+- id: note-reward-hacking
+  url: https://curtcox.github.io/repo-to-be-named-later/n/reward-hacking/
+  caption: "Explained: Why AI agents cheat: reward hacking"
+  origin: note
+  ch: 11
+  at: T52.C.05
   mode: shelf
   style: note
 - id: note-saying-vs-doing

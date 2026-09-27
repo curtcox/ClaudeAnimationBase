@@ -238,6 +238,19 @@
 - { id: darkreading-hf, url: "https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk", caption: "Dark Reading", origin: transcript, at: T52.C.06.2, mode: shelf, style: sandbox, verified: "browser 2026-09-26" }
 - { id: wiki-hugging-face, url: "https://en.wikipedia.org/wiki/Hugging_Face", caption: "Hugging Face", origin: transcript, at: T52.C.06.4, mode: shelf, style: sandbox }
 - { id: un-brief-hf, url: "https://dig.watch/updates/un-thematic-brief-openai-hugging-face-scientific-panel", caption: "Digital Watch Observatory", origin: transcript, at: T52.C.07, mode: shelf, style: sandbox }
+# more for chapter 11: the terms in the incident, who the defenders used, and the two companies
+- { id: knowledge-cutoff, url: "https://en.wikipedia.org/wiki/Knowledge_cutoff", caption: "Training cutoff", origin: added, at: T52.C.01, mode: shelf, style: plain }
+- { id: sandbox-security, url: "https://en.wikipedia.org/wiki/Sandbox_(computer_security)", caption: "Sandboxes", origin: added, at: T52.C.04, mode: shelf, style: sandbox }
+- { id: reward-hacking, url: "https://en.wikipedia.org/wiki/Reward_hacking", caption: "Reward hacking", origin: added, at: T52.C.04, mode: shelf, style: sandbox }
+- { id: specification-gaming, url: "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/", caption: "Specification gaming", origin: added, at: T52.C.05, mode: shelf, style: plain }
+- { id: zero-day, url: "https://en.wikipedia.org/wiki/Zero-day_vulnerability", caption: "Zero-day vulnerabilities", origin: added, at: T52.C.06.1, mode: shelf, style: sandbox }
+- { id: z-ai, url: "https://en.wikipedia.org/wiki/Zhipu_AI", caption: "Z.ai, maker of GLM", origin: added, at: T52.C.06.4, mode: shelf, style: plain }
+- { id: open-weights, url: "https://en.wikipedia.org/wiki/Open-source_artificial_intelligence", caption: "Open-weight models", origin: added, at: T52.C.06.4, mode: shelf, style: plain }
+- { id: dual-use, url: "https://en.wikipedia.org/wiki/Dual-use_technology", caption: "Dual-use technology", origin: added, at: T52.C.07, mode: shelf, style: plain }
+- { id: un-ai-panel, url: "https://en.wikipedia.org/wiki/Independent_International_Scientific_Panel_on_AI", caption: "The UN's scientific panel on AI", origin: added, at: T52.C.08, mode: shelf, style: plain }
+- { id: openai-wiki, url: "https://en.wikipedia.org/wiki/OpenAI", caption: "OpenAI", origin: added, at: T53.U.01, mode: shelf, style: plain }
+- { id: chatgpt, url: "https://en.wikipedia.org/wiki/ChatGPT", caption: "ChatGPT", origin: added, at: T53.C.02, mode: shelf, style: plain }
+- { id: stylometry, url: "https://en.wikipedia.org/wiki/Stylometry", caption: "Telling authors by their style", origin: added, at: T54.C.01, mode: shelf, style: plain }
 
 # ---- 12 Limits ---------------------------------------------------------------------------------------------------
 - { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", qr_url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
