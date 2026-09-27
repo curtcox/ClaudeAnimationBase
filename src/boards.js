@@ -9,7 +9,7 @@
 //   paperCard(x, y, w, h, col) a painted card to put things on
 
 const QR_SHELF_HOLD = 5.5, QR_FEATURE_HOLD = 7;
-const FEATURES_SEEN = new Map();   // feature cards the scenes have shown: { id: { t0, hold } } (for refTimes)
+const FEATURES_SEEN = new Map();   // feature cards and board codes the scenes have shown: { id: { t0, hold, kind } } (for refTimes)
 
 function paperCard(x, y, w, h, col = '#FBF8F0', o = {}) {
   occupy(x, y, x + w, y + h, o.weight ?? 1, o.tag || 'card');
@@ -130,6 +130,22 @@ function qrFeature(ref, t, t0, o = {}) {
   const n0 = LETTERS.length;
   refQR(R, x, y - 20, 480, { k: R.style === 'mad' ? seg(t, t0, t0 + 4) : k, t });
   for (let i = n0; i < LETTERS.length; i++) LETTERS[i].noOcc = true;   // the card's own lettering is part of the card
+}
+// A link board's code (refs with mode: board): a scene pins several codes at once on something it draws (a corkboard of
+// comments), a deliberate exception to the two-at-a-time rule. The scene places each one; from t0 to t1 it's on screen.
+// The chapter check counts board codes apart from the rest, and holds them to BOARD_MIN seconds.
+const BOARD_SIZE = 300, BOARD_MIN = 6;
+function qrBoard(ref, t, t0, t1, x, y, o = {}) {
+  const k = seg(t, t0, t0 + .5), out = seg(t, t1 - .4, t1);
+  if (k <= 0 || out >= 1) return;
+  const R = REFS[ref], size = o.size || BOARD_SIZE, half = size * .56;
+  FEATURES_SEEN.set(R.id, { id: R.id, t0, hold: t1 - t0, kind: 'board' });
+  occupy(x - half, y - half, x + half, y + half + 30, 3, 'board:' + R.id);
+  boilSeed('qr board ' + R.id);
+  paint(rrPts(x - half, y - half, half * 2, half * 2 + 30, 14), { wash: PAL.paper, washOp: 240 * clamp(k * 2) * (1 - out), ink: PAL.ink, sw: 1.1 });
+  const n0 = LETTERS.length;
+  if (out < .8) refQR(R, x, y - 10, size, { k, t, noFrame: true, captionOpts: { size: 22 } });
+  for (let i = n0; i < LETTERS.length; i++) LETTERS[i].noOcc = true;
 }
 // Shelf tags: one after another in the lower-right corner, each held QR_SHELF_HOLD s.
 function qrShelf(refs, t, t0, o = {}) {

@@ -36,7 +36,7 @@ const jsQR = require('jsqr');
 const ZX = require('@zxing/library');
 const { scanImageData } = require('@undecaf/zbar-wasm');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
-const SIZE = { feature: 480, shelf: 380 }, ECC = { feature: 'H', shelf: 'M' };
+const SIZE = { feature: 480, shelf: 380, board: 300 }, ECC = { feature: 'H', shelf: 'M', board: 'M' };
 const OUT = 'out/qr_check', REPORT = args.styles ? 'script/qr_styles_report.md' : args.only ? `${OUT}/only_report.md` : 'script/qr_report.md';
 // the cache: bump TRIALS when the trials or the pass rule change, so every code is decoded again
 const TRIALS = 'v3: 13 scales .5-1.4, youtube crf28, phone; every trial read by one, two decoders read 13+', CACHE_F = 'out/qr_cache.json';

@@ -70,19 +70,19 @@ function refTimes() {
   FEATURES_SEEN.clear();
   for (let t = 0; t < DUR; t += .5) occupancyAt(t);
   return railPlan().map(p => ({ id: p.id, t0: +p.t0.toFixed(2), t1: +(p.t0 + p.hold).toFixed(2), kind: 'shelf' }))
-    .concat([...FEATURES_SEEN.values()].map(f => ({ id: f.id, t0: +f.t0.toFixed(2), t1: +(f.t0 + f.hold).toFixed(2), kind: 'feature' })))
+    .concat([...FEATURES_SEEN.values()].map(f => ({ id: f.id, t0: +f.t0.toFixed(2), t1: +(f.t0 + f.hold).toFixed(2), kind: f.kind || 'feature' })))
     .sort((a, b) => a.t0 - b.t0);
 }
 
 // The chapter check (tools/lint_chapter.mjs): what a viewer would trip over, found from the DRY replay, without painting.
-//   crowded   more than MAX_TOGETHER codes on screen at once
+//   crowded   more than MAX_TOGETHER codes on screen at once (a scene's link board, mode: board, counts apart)
 //   covers    a code hides more than a fifth of something that matters (weight ≥ .5: a board, a character, lettering)
 //   brief     a code is on screen less than its minimum (feature 6 s, shelf 5 s), e.g. cut off by a shot or the chapter's end
 //   no room   the layout pass found no clean spot for a code in time (it covers content, or fell back to a corner)
 //   late      a code waited more than 8 s for room, so it arrives well after the words it belongs to
 //   static    (warning) the picture's layout doesn't change for more than 8 s: a held talking head
 function chapterLint(o = {}) {
-  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 6, shelf: 5 };
+  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 6, shelf: 5, board: BOARD_MIN };
   const shotAt = t => { let i = 0; while (i + 1 < SHOTS.length && t >= SHOTS[i + 1][0]) i++; return (SHOTS[i][1].name || 'shot' + i).replace(/^shot/, ''); };
   const stamp = t => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}`;
   const issues = [], add = (kind, t, msg) => issues.push({ kind, t: +t.toFixed(2), where: `${stamp(t)} shot ${shotAt(t)}, ${lineAt(t)?.id ?? 'lead-in'}`, msg });
@@ -93,18 +93,20 @@ function chapterLint(o = {}) {
     const occ = occupancyAt(t), codes = [];
     for (const p of plan) if (t >= p.t0 && t <= p.t0 + p.hold) codes.push({ id: p.id, kind: 'shelf', r: [p.x - p.half, p.y - p.half, p.x + p.half, p.y + p.half + 34] });
     for (const e of occ) if ((e[5] || '').startsWith('qr:')) codes.push({ id: e[5].slice(3), kind: 'feature', r: e.slice(0, 4) });
+    for (const e of occ) if ((e[5] || '').startsWith('board:')) codes.push({ id: e[5].slice(6), kind: 'board', r: e.slice(0, 4) });
     for (const c of codes) { const s = seen.get(c.id) || { kind: c.kind, n: 0, t0: t }; s.n++; seen.set(c.id, s); }
-    if (codes.length > MAX_TOGETHER && !crowded) add('crowded', t, `${codes.length} codes at once: ${codes.map(c => c.id).join(', ')}`);
-    crowded = codes.length > MAX_TOGETHER;
+    const loose = codes.filter(c => c.kind !== 'board');
+    if (loose.length > MAX_TOGETHER && !crowded) add('crowded', t, `${loose.length} codes at once: ${loose.map(c => c.id).join(', ')}`);
+    crowded = loose.length > MAX_TOGETHER;
     for (const c of codes) for (const e of occ) {
-      if (e[4] < .5 || e[5] === 'qr:' + c.id) continue;
+      if (e[4] < .5 || e[5] === 'qr:' + c.id || e[5] === 'board:' + c.id || (c.kind === 'board' && (e[5] || '').startsWith('board:'))) continue;
       const cap = REFS[c.id] && REFS[c.id].caption;
       if (c.kind === 'feature' && cap && e[5] && e[5].toLowerCase() === 'text: ' + cap.toLowerCase()) continue;   // its own caption
       const k = overlap(c.r, e) / area(e), key = c.id + '|' + (e[5] || box(e));
       if (k > .2 && !told.has(key)) { told.add(key); add('covers', t, `${c.id} (${c.kind}) hides ${Math.round(k * 100)}% of ${e[5] || 'content at ' + box(e)}`); }
     }
     // the layout's fingerprint: what matters, where, to the nearest 40 px (so boil and bobbing don't count as change)
-    const sig = occ.filter(e => e[4] >= .5 && !(e[5] || '').startsWith('qr:')).map(e => e.slice(0, 4).map(v => Math.round(v / 40)).join(',') + (e[5] || '')).sort().join('|');
+    const sig = occ.filter(e => e[4] >= .5 && !/^(qr|board):/.test(e[5] || '')).map(e => e.slice(0, 4).map(v => Math.round(v / 40)).join(',') + (e[5] || '')).sort().join('|');
     if (sig !== prevSig) { if (prevSig !== null && t - runStart > STATIC) add('static', runStart, `the picture holds still for ${(t - runStart).toFixed(1)} s`); prevSig = sig; runStart = t; }
   }
   if (DUR - runStart > STATIC) add('static', runStart, `the picture holds still for ${(DUR - runStart).toFixed(1)} s, to the end`);

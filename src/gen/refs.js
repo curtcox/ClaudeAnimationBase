@@ -948,7 +948,7 @@ window.REFS = {
   "caption": "the comment",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "shelf",
+  "mode": "board",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -959,7 +959,7 @@ window.REFS = {
   "caption": "the reply",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "shelf",
+  "mode": "board",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -970,7 +970,7 @@ window.REFS = {
   "caption": "Curt's reply",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "shelf",
+  "mode": "board",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -980,7 +980,7 @@ window.REFS = {
   "caption": "@ZM-dm3jg",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "shelf",
+  "mode": "board",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -993,7 +993,7 @@ window.REFS = {
   "caption": "@OntologyExplained",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "shelf",
+  "mode": "board",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -1003,7 +1003,7 @@ window.REFS = {
   "caption": "@CurtCox",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "shelf",
+  "mode": "board",
   "style": "corkboard",
   "line": "T30.U.01"
  },
