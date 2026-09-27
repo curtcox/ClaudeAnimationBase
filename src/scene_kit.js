@@ -13,9 +13,12 @@ const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, 
 
 // When a phrase is said, estimated from where it sits in the line's speech (the voice's word timings can replace this).
 function atWord(id, phrase, dk = 0) {
-  const l = L(id), s = (l.speech || l.text).toLowerCase(), i = s.indexOf(phrase.toLowerCase());
-  if (i < 0) throw new Error(`"${phrase}" isn't in ${id}`);
-  return l.t0 + (l.t1 - l.t0) * i / s.length + dk;
+  const l = L(id), f = phrase.toLowerCase();
+  for (const s of [l.speech, l.text]) {   // the speech spells some words out ("R L H F"), so fall back to the written text
+    const i = (s || '').toLowerCase().indexOf(f);
+    if (i >= 0) return l.t0 + (l.t1 - l.t0) * i / s.length + dk;
+  }
+  throw new Error(`"${phrase}" isn't in ${id}`);
 }
 
 // ---------- the desk, over Curt's shoulder ----------
@@ -27,6 +30,8 @@ function atWord(id, phrase, dk = 0) {
 //   axolotl, frog  0..1: pop onto the desk (the motif); axoLook, frogLook
 //   curt         extra options for Curt (e.g. hoodie colour)
 //   extra(t)     more to paint in world space, after Curt
+// (a screen given as undefined keeps its default, so a shot can write screens: { main: cond ? {...} : undefined })
+const defined = o => Object.fromEntries(Object.entries(o || {}).filter(([, v]) => v !== undefined));
 function deskShot(t, o = {}) {
   const cam = o.cam || DESK.cam;
   camBegin(cam[0] + 6 * Math.sin(t * .3), cam[1] + 3 * Math.sin(t * .23), cam[2] * (1 + .004 * Math.sin(t * .2)));
@@ -35,7 +40,7 @@ function deskShot(t, o = {}) {
     main: { kind: 'claude', pose: { ...mood, assemble: o.assemble ?? 1, mouth: clawdMouth(talkOf(t, 'claude'), mood.mouth), lookX: o.lookX ?? mood.lookX } },
     left: { kind: 'code' }, right: { kind: 'code', speed: .7 }, upL: { kind: 'code', speed: .8 }, upR: { kind: 'code', speed: 1.3 },
     tall: { kind: 'code', speed: 2.5 }, lapL: { kind: 'code', speed: .5 }, lapR: { kind: 'code', speed: 1.1 },
-    ...(o.base || {}), ...(o.screens || {}),
+    ...defined(o.base), ...defined(o.screens),
   } });
   deskFront(t);
   const axo = o.axolotl ?? 0, fr = o.frog ?? 0;

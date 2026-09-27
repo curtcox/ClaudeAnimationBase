@@ -172,7 +172,10 @@ const SCREEN_KINDS = {
 
 function deskScreen(name, t, spec = {}) {
   const [x, y, w, h] = DESK.screens[name], lap = name.startsWith('lap');
-  occupy(x - 10, y - 10, x + w + 10, y + h + 10, name === 'main' ? 1 : .12, 'screen ' + name);
+  // how much covering this screen hurts: Claude's, fully; a side screen's picture (the comic, a chart) repeats what the
+  // scene shows, a little; scrolling code or a dark screen is set dressing, so a reference code may sit over it
+  const filler = !spec.kind || spec.kind === 'code' || spec.kind === 'off';
+  occupy(x - 10, y - 10, x + w + 10, y + h + 10, name === 'main' ? 1 : filler ? .02 : .12, 'screen ' + name);
   boilSeed('desk screen ' + name);
   // bezel (and, for monitors, a stand; for laptops, the keyboard deck in front)
   paint(rrPts(x - 10, y - 10, w + 20, h + 20, 8), { wash: '#1A181D', ink: PAL.ink, sw: 1 });

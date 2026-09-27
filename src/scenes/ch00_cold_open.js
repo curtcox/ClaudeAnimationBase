@@ -41,8 +41,7 @@
   // D: the page shrinks onto the Desk's main monitor (the Desk's first appearance), and the title is painted across the top
   function shotD(t) {
     const fly = ease(seg(t, tD, tD + 1.4)), landed = fly >= 1;
-    const onMain = (x, y, w, h) => { paint(rectPts(x, y, w, h), { wash: MAD.paper, ink: null }); madPage(x, y + (h - w * MAD.H / MAD.W) / 2, w, { mini: true }); };
-    deskShot(t, { hour: 7, screens: { main: landed ? { kind: 'fn', fn: onMain, glow: '#FFE9C4' } : { kind: 'off' } }, mood: emotions(t, [[0, 'neutral']]), assemble: 0 });
+    deskShot(t, { hour: 7, screens: { main: landed ? { kind: 'comic', glow: '#FFE9C4' } : { kind: 'off' } }, mood: emotions(t, [[0, 'neutral']]), assemble: 0 });
     if (!landed) {   // the page in flight, from where C left it to the monitor's glass (under this frame's camera)
       const [x, y, w] = DESK.screens.main, h = DESK.screens.main[3], ph = w * MAD.H / MAD.W;
       const a = toScreen(x, y + (h - ph) / 2, LAST_CAM), b = toScreen(x + w, y + (h + ph) / 2, LAST_CAM);

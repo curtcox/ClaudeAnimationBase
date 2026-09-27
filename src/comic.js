@@ -8,7 +8,9 @@
 // o: k1..k4 how much of each balloon is showing (0..1; the officer's, the handler's, the villain's, the turtleneck's),
 //    apeLook (-1..1: the ape's eyes slide), turn (0..1: the turtleneck man turns from the villain to us; default 1),
 //    grey (0..1: panel 2 drains to 1960s newsprint grey), only ('left' | 'right'), mini (no lettering: a thumbnail),
-//    t (for the boil-free idle motion)
+//    hideTurtle (a scene draws him itself), t
+//   madApe(x, y, r, o), madTurtle(x, y, r, o)   the ape and the man in the turtleneck, anywhere (the mirror, the fourth wall)
+//   SCREEN_KINDS.comic    any Desk monitor can show the page
 
 const MAD = {
   W: 2080, H: 978,
@@ -26,10 +28,7 @@ const MAD = {
 function madPage(x, y, w, o = {}) {
   const s = w / MAD.W, h = MAD.H * s, X = v => x + v * s, Y = v => y + v * s;
   occupy(x, y, x + w, y + h, 1, 'comic');
-  const reg = (pts, col, sw = 1.2, op = 255) => {   // off register: the colour lands a little down and right of its ink
-    paint(pts.map(([a, b]) => [a + 6, b + 5]), { wash: col, washOp: op, ink: null });
-    paint(pts, { ink: PAL.ink, sw });
-  };
+  const reg = madReg;
   const t = o.t ?? T;
   push(); translate(x, y); scale(s);
   boilSeed('mad paper');
@@ -50,6 +49,37 @@ function madPage(x, y, w, o = {}) {
     });
   }
   return h;
+}
+
+// off register: the colour lands a little down and right of its ink (in page units)
+function madReg(pts, col, sw = 1.2, op = 255) {
+  paint(pts.map(([a, b]) => [a + 6, b + 5]), { wash: col, washOp: op, ink: null });
+  paint(pts, { ink: PAL.ink, sw });
+}
+
+// The ape, sheepish: head (r) and shoulders. o: look (-1..1, its eyes slide), rot (a head tilt), op (0..255: a paper-thin
+// mask lets light through), body: false for the head alone, bodyH (in r). Drawn in whatever space it's called in.
+function madApe(x, y, r, o = {}) {
+  boilSeed('mad ape ' + (o.key || x));
+  const op = o.op ?? 255;
+  if (o.body !== false) madBody(madReg, x, y + r * .95, r * 2.7, r * (o.bodyH ?? 5), '#7A5A48');
+  push(); translate(x, y); rotate(o.rot || 0);
+  paint(ellPts(0, 0, r, r * 1.12, 20), { wash: MAD.ape, washOp: op, ink: PAL.ink, sw: 1.2 });
+  paint(ellPts(0, r * .42, r * .65, r * .5, 16), { wash: MAD.apeLt, washOp: op, ink: PAL.ink, sw: .9 });
+  const lk = (o.look ?? 0) * r * .13;
+  for (const d of [-1, 1]) { paint(ellPts(d * r * .33, -r * .23, r * .17, r * .13, 8), { wash: '#FBF6E6', washOp: op, ink: PAL.ink, sw: .6 }); paint(ellPts(d * r * .33 + lk, -r * .21, r * .08, r * .09, 6), { wash: PAL.ink, washOp: op, ink: null }); }
+  inkLine([[-r * .5, -r * .46], [-r * .15, -r * .38]], 1.1); inkLine([[r * .15, -r * .38], [r * .5, -r * .46]], 1.1);
+  inkLine([[-r * .23, r * .65], [0, r * .6], [r * .23, r * .65]], 1);   // the sheepish mouth
+  pop();
+}
+
+// The man in the turtleneck (head r): turn 0..1 from the villain to us. Drawn in whatever space it's called in.
+function madTurtle(x, y, r, o = {}) {
+  const tn = o.turn ?? 1, gc = o.gc || (c => c);
+  madBody(madReg, x, y + r * 1.3, r * 3.3, r * 5.5, gc('#E6DCCB'));
+  boilSeed('mad turtleneck ' + (o.key || ''));
+  for (let i = 0; i < 5; i++) inkLine([[x - r, y + r * 1.2 + i * r * .24], [x + r, y + r * 1.2 + i * r * .24]], .8, PAL.ink, 'inkfine', .2);   // the ribbed collar
+  madHead(x, y, r, { hair: 'afro', turn: tn, look: lerp(-1, 0, tn), skin: gc('#7A5238'), smile: tn });
 }
 
 // a balloon's box and tail (painted in page units, inside madPage's transform); k pops it in
@@ -115,14 +145,7 @@ function madLeft(reg, o, t) {
   madHead(hx, hy, 50, { beard: '#8A7A66', hair: 'grey', turn: .8, look: .3 });
   // the ape, sheepish: its eyes slide sideways
   const [ax, ay] = MAD.faces.ape;
-  madBody(reg, ax, ay + 50, 140, 260, '#7A5A48');
-  boilSeed('mad ape');
-  reg(ellPts(ax, ay, 52, 58, 20), MAD.ape);
-  paint(ellPts(ax, ay + 22, 34, 26, 16), { wash: MAD.apeLt, ink: PAL.ink, sw: .9 });
-  const lk = (o.apeLook ?? 0) * 7;
-  for (const d of [-1, 1]) { paint(ellPts(ax + d * 17, ay - 12, 9, 7, 8), { wash: '#FBF6E6', ink: PAL.ink, sw: .6 }); paint(ellPts(ax + d * 17 + lk, ay - 11, 4, 4.5, 6), { wash: PAL.ink, ink: null }); }
-  inkLine([[ax - 26, ay - 24], [ax - 8, ay - 20]], 1.1); inkLine([[ax + 8, ay - 20], [ax + 26, ay - 24]], 1.1);
-  inkLine([[ax - 12, ay + 34], [ax, ay + 31], [ax + 12, ay + 34]], 1);   // the sheepish mouth
+  madApe(ax, ay, 52, { look: o.apeLook ?? 0, key: 'page' });
   reg([[hx + 50, hy + 110], [ax + 40, ay + 70], [ax + 30, ay + 95], [hx + 40, hy + 140]], '#C9B08A');                  // the handler's arm around it
   // a second ape behind, and the panel border
   boilSeed('mad ape 2'); reg(ellPts(850, 660, 44, 50, 18), MAD.ape); paint(ellPts(850, 680, 28, 20, 14), { wash: MAD.apeLt, ink: PAL.ink, sw: .8 });
@@ -150,12 +173,11 @@ function madRight(reg, o, t) {
   const [vx, vy] = MAD.faces.villain;
   madBody(reg, vx, vy + 55, 150, 280, gc('#7C7468'));
   madHead(vx, vy, 52, { hair: 'grey', shout: .6, turn: .45, look: .6, brow: -1, skin: gc('#E8C4A0') });
-  // the man in the turtleneck: he turns from the villain to us
-  const [tx, ty] = MAD.faces.turtle, tn = o.turn ?? 1;
-  madBody(reg, tx, ty + 75, 190, 320, gc('#E6DCCB'));
-  boilSeed('mad turtleneck');
-  for (let i = 0; i < 5; i++) inkLine([[tx - 60, ty + 70 + i * 14], [tx + 60, ty + 70 + i * 14]], .8, PAL.ink, 'inkfine', .2);   // the ribbed collar
-  madHead(tx, ty, 58, { hair: 'afro', turn: tn, look: lerp(-1, 0, tn), skin: gc('#7A5238'), smile: tn });
+  // the man in the turtleneck: he turns from the villain to us (o.hideTurtle: a scene draws him itself, leaning out)
+  if (!o.hideTurtle) madTurtle(MAD.faces.turtle[0], MAD.faces.turtle[1], 58, { turn: o.turn ?? 1, gc, key: 'page' });
   paint(rectPts(px, py, pw, ph), { ink: PAL.ink, sw: 2.2 });
   madBalloon('villain', o.k3 ?? 1); madBalloon('turtle', o.k4 ?? 1);
 }
+
+// the page on a monitor, letterboxed on newsprint
+SCREEN_KINDS.comic = (x, y, w, h) => { paint(rectPts(x, y, w, h), { wash: MAD.paper, ink: null }); madPage(x, y + (h - w * MAD.H / MAD.W) / 2, w, { mini: true }); };
