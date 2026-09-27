@@ -9,6 +9,7 @@
 //   rectAt(a, b, k)                a rect [x, y, w, h] part way from a to b (for things that fly between screens)
 //   prop cards: indexCard, doorway, balance, logbook (small, reusable pictures several chapters need)
 //   mdTable(id), tableCard(tb, x, y, w, o)   a transcript table, parsed from its line and painted exactly
+//   thrindle(x, y, s, t, o)        ch 6's invented creature
 
 const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, col, { ink: false, font: `${Math.round(size)}px "Patrick Hand", sans-serif`, ...o });
 
@@ -150,4 +151,17 @@ function tableCard(tb, x, y, w, o = {}) {
       { align: i ? 'center' : 'left', alpha: kk * colOn(i), ...(c.bold ? { font: `bold ${Math.round(size)}px "Patrick Hand", sans-serif` } : {}) }); });
   });
   return h;
+}
+
+// ---------- the thrindle (ch 6's invented creature, back in ch 8): small, round, furry; s its size (it shrinks in a
+// crowd); o.anti: its inside-out twin ----------
+const THR = '#B98AC9', THR_DK = '#7A4E8A';
+function thrindle(x, y, s, t, o = {}) {
+  if (s <= .02) return;
+  boilSeed('thrindle ' + (o.key || '')); const r = 60 * s, col = o.anti ? '#9CD68C' : THR, dk = o.anti ? '#4E8A3E' : THR_DK;
+  occupy(x - r, y - r * 2, x + r, y, 1, 'thrindle');
+  const pts = []; for (let i = 0; i < 36; i++) { const a = i / 36 * TAU, rr = r * (1 + .12 * (i % 2) + .03 * Math.sin(t * 3 + i)); pts.push([x + Math.cos(a) * rr, y - r + Math.sin(a) * rr * .9]); }
+  paint(pts, { wash: col, fill: dk, fillOp: 70, tex: .6, ink: PAL.ink, sw: 1.1 });
+  for (const d of [-1, 1]) { paint(ellPts(x + d * r * .32, y - r * 1.1, r * .2, r * .24, 10), { wash: o.anti ? PAL.ink : '#FBF6E6', ink: PAL.ink, sw: .6 }); paint(ellPts(x + d * r * .32 + r * .05 * Math.sin(t), y - r * 1.08, r * .09, r * .11, 8), { wash: o.anti ? '#FBF6E6' : PAL.ink, ink: null }); }
+  for (const d of [-1, 1]) inkLine([[x + d * r * .4, y - r * .1], [x + d * r * .45, y + r * .12]], 2 * s, PAL.ink, 'ink', 0);
 }

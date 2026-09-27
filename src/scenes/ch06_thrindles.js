@@ -9,18 +9,7 @@
   const say = (id, phrase, dk) => atWord(id, phrase, dk);
   const talking = t => clawdMouth(talkOf(t, 'claude'));
   const win = (t, a, b, d = .5) => seg(t, a, a + d) * (1 - seg(t, b, b + d));
-  const THR = '#B98AC9', THR_DK = '#7A4E8A';
 
-  // ---------- the thrindle: small, round, furry; s its size (shrinks in a crowd); o.anti: its inside-out twin ----------
-  function thrindle(x, y, s, t, o = {}) {
-    if (s <= .02) return;
-    boilSeed('thrindle ' + (o.key || '')); const r = 60 * s, col = o.anti ? '#9CD68C' : THR, dk = o.anti ? '#4E8A3E' : THR_DK;
-    occupy(x - r, y - r * 2, x + r, y, 1, 'thrindle');
-    const pts = []; for (let i = 0; i < 36; i++) { const a = i / 36 * TAU, rr = r * (1 + .12 * (i % 2) + .03 * Math.sin(t * 3 + i)); pts.push([x + Math.cos(a) * rr, y - r + Math.sin(a) * rr * .9]); }
-    paint(pts, { wash: col, fill: dk, fillOp: 70, tex: .6, ink: PAL.ink, sw: 1.1 });
-    for (const d of [-1, 1]) { paint(ellPts(x + d * r * .32, y - r * 1.1, r * .2, r * .24, 10), { wash: o.anti ? PAL.ink : '#FBF6E6', ink: PAL.ink, sw: .6 }); paint(ellPts(x + d * r * .32 + r * .05 * Math.sin(t), y - r * 1.08, r * .09, r * .11, 8), { wash: o.anti ? '#FBF6E6' : PAL.ink, ink: null }); }
-    for (const d of [-1, 1]) inkLine([[x + d * r * .4, y - r * .1], [x + d * r * .45, y + r * .12]], 2 * s, PAL.ink, 'ink', 0);
-  }
   // tiny figures crowding round a point: n of them (0..16), k how close they've come
   function crowdAround(x, y, n, k, t, key = '') {
     boilSeed('crowd round ' + key);
