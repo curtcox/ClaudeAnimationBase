@@ -77,6 +77,19 @@
         pop();
       }
     }
+    // "a publicly released model… in the Claude app": chat windows pop up all around, one of them this conversation
+    const apps = seg(t, L('T07.C.01').t0 + .6, L('T07.C.01').t0 + 2.2) * (1 - seg(t, l2.t0 - .4, l2.t0 + .2));
+    if (apps > 0) for (let i = 0; i < 14; i++) {
+      const a = i / 14 * TAU + .3, r = 330 + 90 * hash(i), wx = 960 + Math.cos(a) * r * 1.5, wy = 520 + Math.sin(a) * r * .8, kk = clamp(apps * 14 - i);
+      if (kk <= 0) continue;
+      const mine = i === 3;
+      boilSeed('app ' + i);
+      push(); translate(wx, wy); scale(backOut(kk) * (mine ? 1.25 : 1));
+      paint(rrPts(-85, -55, 170, 110, 14), { wash: mine ? '#FFF1CE' : '#F6F2EA', ink: PAL.ink, sw: mine ? 2 : 1 });
+      for (let j = 0; j < 3; j++) paint(rrPts(j % 2 ? -10 : -70, -38 + j * 28, 80, 18, 8), { wash: j % 2 ? '#F2C4A8' : '#DCD6CC', ink: null });
+      if (mine) { paint(ellPts(60, -30, 12, 12, 12), { wash: PAL.cream, ink: PAL.ink, sw: 1.2 }); inkLine([[60, -18], [60, 0]], 1.4); }   // a tiny stick-figure Curt
+      pop();
+    }
     // Clawd: one Clawd, walking from the exam room into the living room, the same face in both
     const x = rooms > 0 ? lerp(510, 1410, ease(seg(t, at('T07.C.02', .15), at('T07.C.02', .7)))) : 960;
     const walking = t > at('T07.C.02', .15) && t < at('T07.C.02', .7);
@@ -232,8 +245,22 @@
       qrShelf(['gpqa', 'swe-bench-verified', 'kernelbench', 'hle'], t, h3.t0 + .3);
       qrShelf(['wildchat'], t, at('T09.C.03', .5) + QR_SHELF_HOLD * .9);
     } else if (t < h5.t0) {   // evals are recognizably different from deployment: the two rooms, side by side
+      const snap = seg(t, at('T09.C.04', .3), at('T09.C.04', .55)), fix = seg(t, at('T09.C.04', .62), at('T09.C.04', .85));
       examRoom(120, 200, 780, 620, t); livingRoom(1020, 200, 780, 620, t);
-      claudeAs(510, 720, 18, { ...feel('nervous', t), boilKey: 'claude exam' });
+      if (fix > 0) {   // "the fix is realism in evals": the exam room gets a sofa and a lamp
+        boilSeed('realism');
+        paint(rrPts(180, 200 + 620 * .42 + (1 - easeOut(fix)) * 500, 300, 110, 16), { wash: '#B5654A', ink: PAL.ink, sw: 1.1 });
+        if (fix > .5) glow(820, 330, 150, '#FFD9A0', .6 * ease(seg(fix, .5, 1)));
+        if (fix > .7) amphibIcon(640, 470 - Math.sin(clamp((fix - .7) / .3) * Math.PI) * 80, 60, 2, t, 1);   // a probe hops in
+      }
+      if (snap > 0 && fix < 1) {   // "behavior measured on benchmarks may not transfer": the arrow across snaps
+        boilSeed('transfer');
+        const brk = seg(snap, .55, .75), y = 150;
+        inkLine([[520, y + 20], [800, y - 20 - brk * 30], [940, y - 10 + brk * 60]], 6, '#6A6470', 'ink', .5);
+        inkLine([[980, y + 10 + brk * 40], [1140, y - 20], [1400, y + 20]], 6, '#6A6470', 'ink', .5);
+        paint([[1400, y + 20], [1370, y - 5], [1375, y + 40]], { wash: '#6A6470', ink: null });
+      }
+      claudeAs(510, 720, 18, { ...feel(fix > .5 ? 'relieved' : 'nervous', t), boilKey: 'claude exam' });
       claudeAs(1410, 720, 18, { ...feel('happy', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude living' });
     } else {           // the most telling row: the author's own Claude Code sessions
       frogChart(200, 90, 1520, 900, { k: 1, t, highlight: 9 });
@@ -298,7 +325,15 @@
       const roll = seg(t, k32.t0, k32.t0 + 1.4);
       for (let i = 0; i < 10; i++) amphibIcon(560 + i * 90, 540 - Math.sin(clamp(roll * 1.4 - i * .04) * Math.PI) * 160, 70, i === 4 && roll > .8 ? 0 : [0, 0, 0, 1, 1, 2, 2, 2, 2, 3][i], t, i);
       lab('one draw', 960, 800, 44);
-    } else {   // harder to game in either direction: a tug of war that doesn't move
+    } else if (t < at('T11.C.04', .28)) {   // "the first reading is actually somewhat reassuring"
+      glow(960, 560, 380, '#FFD27A', .7);
+      claudeAs(960, 760, 26, { ...feel('relieved', t), mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude relief' });
+    } else if (t >= at('T11.C.04', .62)) {   // "…can't tell you reliably which mode I'm in, which cuts the other way"
+      examRoom(160, 200, 700, 600, t); livingRoom(1060, 200, 700, 600, t);
+      boilSeed('doorway'); paint(rectPts(880, 260, 160, 540), { wash: '#6F5A4A', ink: PAL.ink, sw: 1.2 });
+      const lk = Math.sin(t * 2.2);
+      claudeAs(960, 780, 18, { ...feel('confused', t), lookX: lk, view: lk > .4 ? 'q' : lk < -.4 ? 'q' : 'front', flip: lk < -.4, emote: '?', emoteK: 1, mouth: clawdMouth(talkOf(t, 'claude')), boilKey: 'claude doorway' });
+    } else {   // "harder to game in either direction": a tug of war that doesn't move
       boilSeed('tug');
       inkLine([[380, 560], [960, 560 + Math.sin(t * 6) * 4], [1540, 560]], 6, '#8A6A4A', 'ink', .5);
       claudeAs(420, 700, 12, { ...feel('determined', t), view: 'side', flip: true, rot: -.15, boilKey: 'tug L' });

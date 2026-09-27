@@ -199,7 +199,8 @@ function paintAt(pts, o) {
   }
 }
 function inkLine(pts, sw = 1, col = PAL.ink, br = 'ink', curv = .5) {
-  // p5.brush's spline draws nothing for exactly two points, so a straight line gets its midpoint
+  // p5.brush's spline throws for fewer than two points and draws nothing for exactly two, so a straight line gets its midpoint
+  if (pts.length < 2) return;
   if (pts.length === 2) pts = [pts[0], [(pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2], pts[1]];
   centred(pts, (P) => { brush.noFill(); brush.noWash(); brush.noHatch(); brush.set(br, col, sw); brush.spline(P, curv); });
 }
