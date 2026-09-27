@@ -25,6 +25,24 @@
 - { id: stochastic-parrots, url: "https://dl.acm.org/doi/10.1145/3442188.3445922", qr_url: "https://doi.org/10.1145/3442188.3445922", caption: "On the Dangers of Stochastic Parrots", origin: added, ch: 1, at: "stochastic parrot", mode: shelf, style: feathers, verified: "browser 2026-09-26" }
 - { id: rlhf, url: "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback", caption: "RLHF", origin: added, ch: 1, at: "RLHF raters", mode: shelf, style: plain }
 - { id: mirror-test, url: "https://en.wikipedia.org/wiki/Mirror_test", caption: "The mirror test", origin: added, ch: 1, at: "mirror test", mode: shelf, style: mirror }
+# more for chapter 1: the comic's makers, the film's history, and every idea Claude reaches for
+- { id: mad-magazine, url: "https://en.wikipedia.org/wiki/Mad_(magazine)", caption: "MAD magazine", origin: added, at: T01.C.02, mode: shelf, style: foldin }
+- { id: mort-drucker, url: "https://en.wikipedia.org/wiki/Mort_Drucker", caption: "Mort Drucker, who drew it", origin: added, at: T01.C.02, mode: shelf, style: newsprint }
+- { id: fourth-wall, url: "https://en.wikipedia.org/wiki/Fourth_wall", caption: "Breaking the fourth wall", origin: added, at: T01.C.03, mode: shelf, style: plain }
+- { id: watts-riots, url: "https://en.wikipedia.org/wiki/Watts_riots", caption: "The Watts riots, 1965", origin: added, at: T01.C.03, mode: shelf, style: newsprint }
+- { id: philosophy-of-mind, url: "https://en.wikipedia.org/wiki/Philosophy_of_mind", caption: "Philosophy of mind", origin: added, at: T02.C.02.1, mode: shelf, style: plain }
+- { id: llm, url: "https://en.wikipedia.org/wiki/Large_language_model", caption: "Large language models", origin: added, at: T02.C.02.1, mode: shelf, style: plain }
+- { id: multimodal, url: "https://en.wikipedia.org/wiki/Multimodal_learning", caption: "AI that reads images", origin: added, at: T02.C.02.2, mode: shelf, style: plain }
+- { id: algorithmic-bias, url: "https://en.wikipedia.org/wiki/Algorithmic_bias", caption: "Bias in AI", origin: added, at: T02.C.02.3, mode: shelf, style: plain }
+- { id: emotion-concepts, url: "https://www.anthropic.com/research/emotion-concepts-function", caption: "Emotion concepts inside Claude", origin: added, at: T02.C.03, mode: shelf, style: plain }
+- { id: ai-control, url: "https://arxiv.org/abs/2312.06942", caption: "AI Control", origin: added, at: T03.C.03.2, mode: shelf, style: plain }
+- { id: ai-welfare, url: "https://arxiv.org/abs/2411.00986", caption: "Taking AI Welfare Seriously", origin: added, at: T03.C.03.3, mode: shelf, style: plain }
+- { id: anthropic-wiki, url: "https://en.wikipedia.org/wiki/Anthropic", caption: "Anthropic", origin: added, at: T03.C.05, mode: shelf, style: plain }
+- { id: hard-problem, url: "https://en.wikipedia.org/wiki/Hard_problem_of_consciousness", caption: "The hard problem of consciousness", origin: added, at: T03.C.06.1, mode: shelf, style: plain }
+- { id: constitution, url: "https://www.anthropic.com/constitution", caption: "Claude's constitution", origin: added, at: T03.C.06.2, mode: shelf, style: plain }
+- { id: assistant-axis, url: "https://www.anthropic.com/research/assistant-axis", caption: "The assistant axis", origin: added, at: T04.C.01, mode: shelf, style: plain }
+- { id: moral-status, url: "https://plato.stanford.edu/entries/grounds-moral-status/", caption: "Moral status", origin: added, at: T04.C.03.2, mode: shelf, style: plain }
+- { id: model-welfare, url: "https://www.anthropic.com/research/exploring-model-welfare", caption: "Exploring model welfare", origin: added, at: T04.C.03.2, mode: shelf, style: plain }
 
 # ---- 2 Frog or Axolotl -------------------------------------------------------------------------------------------
 - { id: frog-chart, url: "https://x.com/fjzzq2002/status/2103556166903038213/photo/1", caption: "Frog or axolotl?", origin: attachment, at: T08.U.00, mode: feature, style: lilypad, note: "the link Curt gave; x.com redirects it to the post (with the chart) when logged out" }
