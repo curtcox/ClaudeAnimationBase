@@ -25,7 +25,7 @@ for (const r of refs) {
   if (seen.has(r.id)) note(`duplicate id ${r.id}`); seen.add(r.id);
   for (const k of ['id', 'url', 'caption', 'origin', 'at', 'mode', 'style']) if (!r[k]) note(`${r.id}: missing ${k}`);
   if (!['transcript', 'attachment', 'added', 'note'].includes(r.origin)) note(`${r.id}: bad origin ${r.origin}`);
-  if (!SIZE[r.mode]) note(`${r.id}: bad mode ${r.mode}`);
+  if (!SIZE[r.mode] && r.mode !== 'page') note(`${r.id}: bad mode ${r.mode}`);
   r.line = resolveAnchor(r, lines, byId);
   if (!r.line) { note(`${r.id}: can't find line for at: ${JSON.stringify(r.at)}${r.ch == null ? ' (phrase needs ch)' : ''}`); continue; }
   if (r.cue && !r.line.text.includes(r.cue)) note(`${r.id}: cue ${JSON.stringify(r.cue)} isn't in ${r.line.id}`);
@@ -41,7 +41,7 @@ for (const l of lines) for (const { url } of l.refs || []) {
 // QR density
 for (const r of refs) {
   const data = r.qr_url || r.url;
-  if (!data || data === 'SHORT') continue;
+  if (!data || data === 'SHORT' || r.mode === 'page') continue;   // page: no code in the film
   const q = qrcode(0, r.ecc || ECC[r.mode]); q.addData(data); q.make();
   r.modules = q.getModuleCount(); r.version = (r.modules - 17) / 4;
   r.px = SIZE[r.mode] / (r.modules + 2 * QUIET);

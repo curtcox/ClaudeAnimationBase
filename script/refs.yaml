@@ -10,7 +10,8 @@
 #   ch      chapter (needed when `at` is a phrase)
 #   cue     a phrase in that line: the code goes up when it's said, not when the line starts
 #   mode    feature (big card, >= 6 s hold) | shelf (corner tag, >= 5 s) | board (pinned by the scene with others at
-#           once, a link board like ch 6's corkboard; >= 6 s)
+#           once, a link board; >= 6 s) | page (no code in the film: listed on the companion site, and on the explainer
+#           that stands for it, e.g. ch 6's thread, where the film shows one code for the-debate)
 #   style   QR dressing, see VIDEO_PLAN.md §4 (implemented in src/qr.js)
 #   qr_url  what the code encodes when it differs from url: the site's own short form, or SHORT (needs a 256t short
 #           link on 256t.us; its path form is still open)
@@ -127,15 +128,15 @@
 - { id: society-of-mind, url: "https://en.wikipedia.org/wiki/Society_of_Mind", caption: "Minsky: The Society of Mind", origin: added, at: T29.C.02, mode: shelf, style: plain }
 
 # ---- 6 Thrindles -------------------------------------------------------------------------------------------------
-- { id: debate-video, url: "https://www.youtube.com/watch?v=oxHKesSpqBM", caption: "Will AI Kill Everyone by 2050?", origin: transcript, at: T30.U.01, mode: feature, style: tv }
+- { id: debate-video, url: "https://www.youtube.com/watch?v=oxHKesSpqBM", caption: "Will AI Kill Everyone by 2050?", origin: transcript, at: T30.U.01, mode: page, style: tv }
 # The pasted comment thread: each comment pinned to the corkboard carries its own code, its author's channel beside it.
 # youtu.be keeps the lc= comment anchor (checked: it redirects to watch?lc=…&v=…), and is shorter.
-- { id: comment-zm, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg", caption: "the comment", origin: transcript, at: T30.U.01, mode: board, style: corkboard }
-- { id: comment-ontology, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8", caption: "the reply", origin: transcript, at: T30.U.01, mode: board, style: corkboard }
-- { id: comment-curt, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB", caption: "Curt's reply", origin: transcript, at: T30.U.01, mode: board, style: corkboard }
-- { id: channel-zm, url: "https://www.youtube.com/@ZM-dm3jg", caption: "@ZM-dm3jg", origin: transcript, at: T30.U.01, mode: board, style: corkboard }
-- { id: channel-ontology, url: "https://www.youtube.com/@OntologyExplained", also: ["https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA"], caption: "@OntologyExplained", origin: transcript, at: T30.U.01, mode: board, style: corkboard }
-- { id: channel-curt, url: "https://www.youtube.com/@CurtCox", caption: "@CurtCox", origin: transcript, at: T30.U.01, mode: board, style: corkboard }
+- { id: comment-zm, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg", caption: "the comment", origin: transcript, at: T30.U.01, mode: page, style: corkboard }
+- { id: comment-ontology, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8", caption: "the reply", origin: transcript, at: T30.U.01, mode: page, style: corkboard }
+- { id: comment-curt, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB", qr_url: "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB", caption: "Curt's reply", origin: transcript, at: T30.U.01, mode: page, style: corkboard }
+- { id: channel-zm, url: "https://www.youtube.com/@ZM-dm3jg", caption: "@ZM-dm3jg", origin: transcript, at: T30.U.01, mode: page, style: corkboard }
+- { id: channel-ontology, url: "https://www.youtube.com/@OntologyExplained", also: ["https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA"], caption: "@OntologyExplained", origin: transcript, at: T30.U.01, mode: page, style: corkboard }
+- { id: channel-curt, url: "https://www.youtube.com/@CurtCox", caption: "@CurtCox", origin: transcript, at: T30.U.01, mode: page, style: corkboard }
 - { id: code-talkers, url: "https://en.wikipedia.org/wiki/Code_talker", caption: "Navajo code talkers", origin: added, ch: 6, at: "Navajo as a code", mode: shelf, style: field-radio }
 - { id: symbol-grounding, url: "https://en.wikipedia.org/wiki/Symbol_grounding_problem", ecc: M, caption: "The symbol grounding problem", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: plain }
 - { id: chinese-room, url: "https://plato.stanford.edu/entries/chinese-room/", caption: "The Chinese Room", origin: added, ch: 6, at: "Harnad and Searle", mode: shelf, style: rulebook }

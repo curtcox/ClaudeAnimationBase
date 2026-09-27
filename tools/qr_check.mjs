@@ -64,7 +64,7 @@ if (args.styles) {
   const only = args.only ? new Set(String(args.only).split(',')) : null;
   cases = loadRefs().filter(r => !only || only.has(r.id))
     .map(r => ({ id: r.id, url: r.qr_url || r.url, style: r.style, mode: r.mode, ecc: r.ecc }))
-    .filter(c => c.url && c.url !== 'SHORT');
+    .filter(c => c.url && c.url !== 'SHORT' && c.mode !== 'page');   // page: no code in the film
 }
 
 // ---- render ----

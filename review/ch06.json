@@ -13,9 +13,20 @@
     "Too busy: fewer at once",
     "Codes don't scan (I'll reply)"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T08:54:31.389Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "curt",
+     "text": "The video should only have one link here. It should link to an explainer page. That explainer page should include a screenshot of the YouTube video being talked about, the comments, and links to everything.",
+     "at": "2026-09-27T12:14:38.383Z"
+    },
+    {
+     "by": "claude",
+     "text": "Done. The corkboard now has one code, to the debate explainer. That page now shows the video (YouTube's own thumbnail, linked, not copied), the three comments word for word with links to each and to each channel, and the other links. The video's code at the chapter's start is gone too; it's on that page.",
+     "at": "2026-09-27T12:22:30.821Z"
+    }
+   ]
   }
  ]
 }

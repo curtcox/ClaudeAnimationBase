@@ -160,13 +160,13 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 
 | id | caption | origin | at | mode · style | QR | status | page title |
 |---|---|---|---|---|---|---|---|
-| debate-video | Will AI Kill Everyone by 2050? | transcript | T30.U.01 | feature · tv | v5, 10.7 px | 200 |  |
-| comment-zm | the comment | transcript | T30.U.01 | board · corkboard | v4, 7.3 px | 200 |  |
-| comment-ontology | the reply | transcript | T30.U.01 | board · corkboard | v5, 6.7 px | 200 |  |
-| comment-curt | Curt's reply | transcript | T30.U.01 | board · corkboard | v5, 6.7 px | 200 |  |
-| channel-zm | @ZM-dm3jg | transcript | T30.U.01 | board · corkboard | v3, 8.1 px | 200 |  |
-| channel-ontology | @OntologyExplained | transcript | T30.U.01 | board · corkboard | v3, 8.1 px | 200 |  |
-| channel-curt | @CurtCox | transcript | T30.U.01 | board · corkboard | v3, 8.1 px | 200 |  |
+| debate-video | Will AI Kill Everyone by 2050? | transcript | T30.U.01 | page · tv | — | 200 |  |
+| comment-zm | the comment | transcript | T30.U.01 | page · corkboard | — | 200 |  |
+| comment-ontology | the reply | transcript | T30.U.01 | page · corkboard | — | 200 |  |
+| comment-curt | Curt's reply | transcript | T30.U.01 | page · corkboard | — | 200 |  |
+| channel-zm | @ZM-dm3jg | transcript | T30.U.01 | page · corkboard | — | 200 |  |
+| channel-ontology | @OntologyExplained | transcript | T30.U.01 | page · corkboard | — | 200 |  |
+| channel-curt | @CurtCox | transcript | T30.U.01 | page · corkboard | — | 200 |  |
 | code-talkers | Navajo code talkers | added | T31.C.02.1 | shelf · field-radio | v3, 10.3 px | 200 | Code talker - Wikipedia |
 | symbol-grounding | The symbol grounding problem | added | T33.C.02.1 | shelf · plain | v4, 9.3 px | 200 | Symbol grounding problem - Wikipedia |
 | chinese-room | The Chinese Room | added | T33.C.02.1 | shelf · rulebook | v4, 9.3 px | 200 | The Chinese Room Argument (Stanford Encyclopedia of Philosophy) |
@@ -194,7 +194,7 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | computer-use | Claude using a computer | added | T34.C.02 | shelf · plain | v4, 9.3 px | 200 | Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku \ Anthropic |
 | note-concepts-case | Explained: The case that AI has no concepts, and the replies | note | T33.C.03 | shelf · note | v5, 8.4 px | — |  |
 | note-gazp-glut | Explained: GAZP vs. GLUT: who filled in the giant table? | note | T34.C.01 | shelf · note | v4, 9.3 px | — |  |
-| note-the-debate | Explained: The debate, and the comment that started the probes | note | T30.C.01 | shelf · note | v4, 9.3 px | — |  |
+| note-the-debate | Explained: The debate, and the comment that started the probes | note | T30.U.01 | feature · note | v7, 9.1 px | — |  |
 | note-thrindles | Explained: Thrindles: how Claude tested Curt for concepts | note | T31.C.02.2 | shelf · note | v4, 9.3 px | — |  |
 
 ## 7 Mind-Space

@@ -420,8 +420,9 @@
   caption: "Explained: The debate, and the comment that started the probes"
   origin: note
   ch: 6
-  at: T30.C.01
-  mode: shelf
+  at: T30.U.01
+  cue: ZM-dm3jg
+  mode: feature
   style: note
 - id: note-the-echo
   url: https://curtcox.github.io/repo-to-be-named-later/n/the-echo/

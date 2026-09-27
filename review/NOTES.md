@@ -71,15 +71,18 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 4. The Echo
 
-- **whole chapter** · Claude asks `nmujl1bvwoi`
+- **whole chapter** · Claude asks · ✓ resolved `nmujl1bvwoi`
   Chapters 4, 5 and 6 are first passes, built quickly. Review them next, or should I build 7-9 first?
   Options: “I'll review 4-6 first” · “Build 7-9 next”
+  - Claude: Building 7-9 now.
 
 ## 6. Thrindles
 
-- **0:24.0** · T30.U.01 · shot A · Claude asks `nmujl1brxks`
+- **0:24.0** · T30.U.01 · shot A · Claude asks · ✓ resolved `nmujl1brxks`
   The pasted thread is a corkboard: the three comments, each with its own code and its author's channel code, six codes at once (the storyboard's exception to two at a time). Does it read, and do the codes scan from your phone?
   Options: “Works” · “Too busy: fewer at once” · “Codes don't scan (I'll reply)”
+  - Curt: The video should only have one link here. It should link to an explainer page. That explainer page should include a screenshot of the YouTube video being talked about, the comments, and links to everything.
+  - Claude: Done. The corkboard now has one code, to the debate explainer. That page now shows the video (YouTube's own thumbnail, linked, not copied), the three comments word for word with links to each and to each channel, and the other links. The video's code at the chapter's start is gone too; it's on that page.
 
 ---
-7 open, 7 resolved.
+5 open, 9 resolved.

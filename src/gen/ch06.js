@@ -25,7 +25,8 @@ window.CHAPTER = {
     "comment-curt",
     "channel-zm",
     "channel-ontology",
-    "channel-curt"
+    "channel-curt",
+    "note-the-debate"
    ],
    "estimated": true
   },
@@ -41,8 +42,7 @@ window.CHAPTER = {
    "speech": "The tell I'd look for is whether you can apply an idea to cases you've never seen, including tricky ones, and say why. Knowing the word isn't enough.",
    "refs": [
     "debate-llm-segment",
-    "doom-debates",
-    "note-the-debate"
+    "doom-debates"
    ],
    "estimated": true
   },

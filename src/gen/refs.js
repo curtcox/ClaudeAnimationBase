@@ -937,7 +937,7 @@ window.REFS = {
   "caption": "Will AI Kill Everyone by 2050?",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "feature",
+  "mode": "page",
   "style": "tv",
   "line": "T30.U.01"
  },
@@ -948,7 +948,7 @@ window.REFS = {
   "caption": "the comment",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "board",
+  "mode": "page",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -959,7 +959,7 @@ window.REFS = {
   "caption": "the reply",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "board",
+  "mode": "page",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -970,7 +970,7 @@ window.REFS = {
   "caption": "Curt's reply",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "board",
+  "mode": "page",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -980,7 +980,7 @@ window.REFS = {
   "caption": "@ZM-dm3jg",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "board",
+  "mode": "page",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -993,7 +993,7 @@ window.REFS = {
   "caption": "@OntologyExplained",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "board",
+  "mode": "page",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -1003,7 +1003,7 @@ window.REFS = {
   "caption": "@CurtCox",
   "origin": "transcript",
   "at": "T30.U.01",
-  "mode": "board",
+  "mode": "page",
   "style": "corkboard",
   "line": "T30.U.01"
  },
@@ -3753,10 +3753,11 @@ window.REFS = {
   "caption": "Explained: The debate, and the comment that started the probes",
   "origin": "note",
   "ch": 6,
-  "at": "T30.C.01",
-  "mode": "shelf",
+  "at": "T30.U.01",
+  "cue": "ZM-dm3jg",
+  "mode": "feature",
   "style": "note",
-  "line": "T30.C.01"
+  "line": "T30.U.01"
  },
  "note-the-echo": {
   "id": "note-the-echo",

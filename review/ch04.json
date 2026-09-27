@@ -12,9 +12,15 @@
     "I'll review 4-6 first",
     "Build 7-9 next"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T08:54:31.532Z",
-   "replies": []
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Building 7-9 now.",
+     "at": "2026-09-27T12:22:31.096Z"
+    }
+   ]
   }
  ]
 }

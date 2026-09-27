@@ -1,7 +1,8 @@
 // ch06_thrindles.js: chapter 6 (T30–T34). Storyboard: docs/storyboards/ch06_thrindles.md.
 // A comment thread says LLMs have no concepts; Curt asks to be tested. The thrindle, an invented creature, is the probe
 // (and the chapter's gauge: it shrinks as a crowd grows around it). Then Claude argues the other side, and loses, fairly,
-// on everything but grounding. The pasted thread is a corkboard: a link board of six codes (refs mode: board).
+// on everything but grounding. The pasted thread is a corkboard of its three comments, with one code: the explainer page
+// that holds the video, the comments and every link (Curt's call; their own links are refs mode: page).
 (() => {
   const HOUR = 11;
   const CW = 1290, CX = CW / 2;
@@ -88,15 +89,16 @@
     const k = frac(t * .5); paint(rectPts(lerp(x - 220, x - 150, k), y - 42, 40, 20), { wash: '#FBF8F0', ink: PAL.ink, sw: .6 });
   }
 
-  // ---------- the corkboard: the pasted thread as three pinned cards, each with its comment's code and its author's ----------
+  // ---------- the corkboard: the pasted thread as three pinned cards; its one code is the explainer's ----------
   const COMMENTS = [
-    { handle: '@ZM-dm3jg', body: ["He lost me when he said LLMs don't have any concepts"], code: 'comment-zm', channel: 'channel-zm', cue: 'Z M:' },
-    { handle: '@OntologyExplained', body: ['I would love to know what concepts they have!'], code: 'comment-ontology', channel: 'channel-ontology', cue: 'Ontology Explained: I would' },
-    { handle: '@CurtCox', body: ['@OntologyExplained Perhaps we just have different', 'concepts of concepts. Propose some questions to pose', "to me and different LLMs. Maybe I don't have", 'concepts, either.'], code: 'comment-curt', channel: 'channel-curt', cue: 'Curt Cox:' },
+    { handle: '@ZM-dm3jg', body: ["He lost me when he said LLMs don't have any concepts"], cue: 'Z M:' },
+    { handle: '@OntologyExplained', body: ['I would love to know what concepts they have!'], cue: 'Ontology Explained: I would' },
+    { handle: '@CurtCox', body: ['@OntologyExplained Perhaps we just have different', 'concepts of concepts. Propose some questions to pose', "to me and different LLMs. Maybe I don't have", 'concepts, either.'], cue: 'Curt Cox:' },
   ];
   function corkboard(t, end) {
     boilSeed('cork'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: '#B98A5E', fill: '#9A6E48', fillOp: 110, tex: .9, bleed: .2, ink: null });
     for (let i = 0; i < 90; i++) paint(ellPts(hash(i) * W, hash(i + 90) * H, 4, 3, 6), { wash: '#7A5238', washOp: 120, ink: null });
+    qrFeature('note-the-debate', t, say('T30.U.01', 'Z M:', .6), { hold: end - say('T30.U.01', 'Z M:', .6) - .5 });
     COMMENTS.forEach((c, i) => {
       const t0 = say('T30.U.01', c.cue, -.3), k = seg(t, t0, t0 + .5), y = 190 + i * 350;
       if (k <= 0) return;
@@ -108,8 +110,6 @@
       lab(c.handle, 170, y - 92 + dy, 34, PAL.ink, { align: 'left', font: 'bold 34px "Patrick Hand", sans-serif' });
       lab('2 days ago', 170 + c.handle.length * 17 + 30, y - 90 + dy, 26, '#8C8894', { align: 'left' });
       c.body.forEach((ln, j) => lab(ln, 100, y - 30 + j * 44 + dy, 32, '#26222A', { align: 'left' }));
-      qrBoard(c.code, t, t0 + .5, end, 1110, y - 12);
-      qrBoard(c.channel, t, t0 + 1, end, 1560, y - 12);
     });
   }
 
@@ -127,7 +127,6 @@
     deskShot(t, { hour: HOUR, typing: t < u.t1, assemble: t < probe ? .15 : seg(t, probe, probe + 1.4), mood: emotions(t, [[0, 'neutral'], [probe + 1.2, 'determined']]),
       screens: { left: { kind: 'fn', fn: tv, glow: '#9DB4BE' } } });
     if (t < board) { const [x, y, w, h] = screenRect('left'); lab('Will AI Kill Everyone by 2050?', x + w / 2, y + h * .17, 20, PAL.ink); }
-    qrFeature('debate-video', t, 1.8, { hold: 6.5 });
     if (t < .6) brushWipe(.5 + t / 1.2);
   }
   // B: the method (a key in strange locks); the thrindle appears, and shrinks as a crowd gathers; the three probe cards
