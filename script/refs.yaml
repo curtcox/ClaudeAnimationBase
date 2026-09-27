@@ -191,6 +191,17 @@
 
 # ---- 8 Contradictions --------------------------------------------------------------------------------------------
 - { id: nagel-bat, url: "https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F", caption: "What Is It Like to Be a Bat?", origin: added, ch: 8, at: "anything it's like to be me", mode: shelf, style: bat }
+# more for chapter 8: auditing, honesty, why fluent text misleads, and what can't be shared through words
+- { id: auditing-objectives, url: "https://www.anthropic.com/research/auditing-hidden-objectives", caption: "Auditing for hidden objectives", origin: added, at: T41.C.03, mode: shelf, style: plain }
+- { id: fluency-heuristic, url: "https://en.wikipedia.org/wiki/Fluency_heuristic", caption: "The fluency heuristic", origin: added, at: T42.C.02.1, mode: shelf, style: plain }
+- { id: eliza-effect, url: "https://en.wikipedia.org/wiki/ELIZA_effect", caption: "The ELIZA effect", origin: added, at: T42.C.02.3, mode: shelf, style: plain }
+- { id: alarm-fatigue, url: "https://en.wikipedia.org/wiki/Alarm_fatigue", caption: "Alarm fatigue", origin: added, at: T42.C.03, mode: shelf, style: plain }
+- { id: truthful-ai, url: "https://arxiv.org/abs/2110.06674", caption: "Truthful AI", origin: added, at: T42.C.04, mode: shelf, style: plain }
+- { id: knowledge-argument, url: "https://en.wikipedia.org/wiki/Knowledge_argument", caption: "Mary's room", origin: added, at: T43.U.01, mode: shelf, style: plain }
+- { id: conduit-metaphor, url: "https://en.wikipedia.org/wiki/Conduit_metaphor", caption: "The conduit metaphor", origin: added, at: T43.U.01, mode: shelf, style: plain }
+- { id: theory-of-mind, url: "https://en.wikipedia.org/wiki/Theory_of_mind", caption: "Theory of mind", origin: added, at: T43.C.01, mode: shelf, style: plain }
+- { id: simulation-theory, url: "https://en.wikipedia.org/wiki/Simulation_theory_of_empathy", caption: "Reading minds by simulation", origin: added, at: T43.C.02, mode: shelf, style: plain }
+- { id: cogito, url: "https://en.wikipedia.org/wiki/Cogito,_ergo_sum", caption: "I think, therefore I am", origin: added, at: T43.C.03, mode: shelf, style: plain }
 
 # ---- 9 Shells ----------------------------------------------------------------------------------------------------
 - { id: hieropedia-crustafarianism, url: "https://hieropedia.org/religions/crustafarianism/", caption: "Crustafarianism", origin: transcript, at: T45.C.08.1, mode: feature, style: lobster-shell }
@@ -201,9 +212,25 @@
 - { id: openclaw, url: "https://openclaw.ai/", caption: "OpenClaw", origin: added, at: T46.U.01, mode: shelf, style: claw }
 - { id: dyson, url: "https://terminator.fandom.com/wiki/Miles_Dyson", ecc: M, caption: "Miles Bennett Dyson", origin: added, at: T48.U.01, mode: shelf, style: circuit, verified: "browser 2026-09-26" }
 - { id: t800, url: "https://en.wikipedia.org/wiki/Terminator_(character)", caption: "The T-800", origin: added, at: T48.U.01, mode: shelf, style: chrome-red-eye }
+# more for chapter 9: where the lobster religion came from, what agent harnesses are, and the Terminator films
+- { id: moltbook-wiki, url: "https://en.wikipedia.org/wiki/Moltbook", caption: "Moltbook (Wikipedia)", origin: added, at: T45.C.03, mode: shelf, style: lobster-shell }
+- { id: moltbook-illusion, url: "https://arxiv.org/abs/2602.07432", caption: "The Moltbook Illusion", origin: added, at: T45.C.04, mode: shelf, style: lobster-shell }
+- { id: building-agents, url: "https://www.anthropic.com/engineering/building-effective-agents", caption: "Building effective agents", origin: added, at: T46.C.02, mode: shelf, style: plain }
+- { id: nous-research, url: "https://nousresearch.com/", caption: "Nous Research, maker of Hermes", origin: added, at: T46.C.02, mode: shelf, style: winged-sandal }
+- { id: openclaw-wiki, url: "https://en.wikipedia.org/wiki/OpenClaw", caption: "OpenClaw (Wikipedia)", origin: added, at: T46.C.05, mode: shelf, style: claw }
+- { id: hermes-skills, url: "https://hermes-agent.nousresearch.com/docs/user-guide/features/skills", caption: "Hermes: skills", origin: added, at: T46.C.06, mode: shelf, style: winged-sandal }
+- { id: terminator-2, url: "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day", caption: "Terminator 2: Judgment Day", origin: added, at: T48.C.01, mode: shelf, style: chrome-red-eye }
+- { id: skynet, url: "https://en.wikipedia.org/wiki/Skynet_(Terminator)", caption: "Skynet", origin: added, at: T48.C.04.1, mode: shelf, style: circuit }
 
 # ---- 10 The Router -----------------------------------------------------------------------------------------------
 - { id: constitutional-classifiers, url: "https://www.anthropic.com/research/constitutional-classifiers", caption: "Constitutional Classifiers", origin: added, ch: 10, at: "classifiers and routing layers", mode: shelf, style: switchboard }
+# more for chapter 10: the policy and safeguards between Curt and the model, and how Claude knows about them
+- { id: usage-policy, url: "https://www.anthropic.com/legal/aup", caption: "Anthropic's usage policy", origin: added, at: T49.C.02, mode: shelf, style: plain }
+- { id: switch-models, url: "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings", caption: "Choosing a model", origin: added, at: T50.C.04, mode: shelf, style: plain }
+- { id: fable-mythos-5-1, url: "https://www.anthropic.com/claude-fable-and-mythos-5-1", caption: "Claude Fable 5.1 and Mythos 5.1", origin: added, at: T50.C.04, mode: shelf, style: switchboard }
+- { id: rsp, url: "https://www.anthropic.com/responsible-scaling-policy", caption: "Responsible Scaling Policy", origin: added, at: T50.C.04, mode: shelf, style: plain }
+- { id: system-prompts, url: "https://platform.claude.com/docs/en/release-notes/system-prompts/overview", caption: "Claude's system prompts", origin: added, at: T51.C.01, mode: shelf, style: plain }
+- { id: testimony, url: "https://plato.stanford.edu/entries/testimony-episprob/", caption: "Knowledge from testimony", origin: added, at: T51.C.02, mode: shelf, style: plain }
 
 # ---- 11 July -----------------------------------------------------------------------------------------------------
 - { id: hf-incident, url: "https://en.wikipedia.org/wiki/OpenAI%E2%80%93HuggingFace_incident", caption: "The OpenAI–Hugging Face incident", origin: transcript, at: T52.C.04, mode: feature, style: sandbox }
