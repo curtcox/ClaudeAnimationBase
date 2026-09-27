@@ -294,6 +294,23 @@ No single decoder is the gate, because each has blind spots. ZXing-js fails some
 outright, which we confirmed with ideal black-and-white renders. jsQR misses sporadically at particular scales. The
 build fails on any miss. There's also a final human check: scan every code off a TV and off a laptop with a phone.
 
+Results are cached (`out/qr_cache.json`). Every code is rendered on each run (about a minute for all of them), and one whose
+picture, URL, size and ECC haven't changed keeps its last result, so only new or changed codes are decoded again. A picture
+counts as unchanged when a 64×64 thumbnail matches to within 3 levels, which allows for the GPU's rounding. Only a full run
+writes `script/qr_report.md`: `--only` writes `out/qr_check/only_report.md`, and `--styles` writes
+`script/qr_styles_report.md`. Shelf codes in wide styles are tested without their dressing, as the film shows them.
+
+### The chapter check (`tools/lint_chapter.mjs`, `npm run lint:chapter`)
+In about a second per chapter, with no rendering, it replays the chapter DRY and reports:
+- **crowded**: more than two codes at once;
+- **covers**: a code hiding over a fifth of a board, character or lettering;
+- **brief**: a feature under 6 s or a shelf code under 5 s;
+- **no room** / **late**: a code that found no clean spot, or waited over 8 s for one;
+- **static** (a warning): the layout doesn't change for over 8 s.
+
+The layout planner never covers content if it can help it. A code waits (up to 40 s) for a clean spot, so a burst of
+links shows up as **late** rather than as clutter.
+
 ---
 
 ## 5. Cast: caricatures
@@ -377,7 +394,11 @@ src/
 ### Changes to the existing kit
 - **`render.mjs`**:
   - `--chapter=N` loads `studio.html?chapter=N` and uses per-chapter frame dirs (`out/frames/chNN`) and audio;
-  - `--qr-stills` feeds `qr_check.mjs`.
+  - `--draft` makes a review cut about 7× faster than a final: flat washes stand in for watercolor fills (about 60% of a
+    frame's cost), 12 fps, 1280 wide, review captions on, the scratch voice muxed in → `out/chNN_draft.mp4`.
+    Chapter 2 takes about 6 minutes.
+  - Each chapter's frames dir keeps a manifest of what drew each shot, so a re-render (draft or final) repaints only the
+    shots whose code, timing or codes changed, and everything if the engine changed. `--shots=D,E` forces those shots.
 - **`studio.html`**: loads the chapter's generated timeline and scene script from `?chapter=`, and the scrubber
   spans that chapter.
 - **`config.js`**: `duration` comes from the chapter timeline. With no music, `bpm` is ~84, an unhurried pulse for

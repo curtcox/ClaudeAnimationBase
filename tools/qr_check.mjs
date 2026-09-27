@@ -12,13 +12,20 @@
 // jsQR misses sporadically at particular scales), so no single one is the gate, and one decoder's bug can't fail a code
 // the other two read.
 //   node tools/qr_check.mjs                  every reference in script/refs.yaml (in its style, mode and ECC)
-//   node tools/qr_check.mjs --only=id,id     just these references
+//                                            → script/qr_report.md
+//   node tools/qr_check.mjs --only=id,id     just these references → out/qr_check/only_report.md (the full report is untouched)
 //   node tools/qr_check.mjs --styles         every style in src/qr_styles.js, on a sample URL, at shelf and feature sizes
-// Writes script/qr_report.md; the failing crops go to out/qr_check/. Exit 1 if anything fails.
+//                                            → script/qr_styles_report.md
+//   --fresh                                  ignore the cache
+// Results are cached by what was actually rendered (out/qr_cache.json): each code is rendered every time, and if its URL,
+// size, ECC and the trials are the same as last time and its picture matches (a 64×64 thumbnail of the crop, within a few
+// levels, since the GPU's rounding varies a hair between runs), its last result stands. Rendering all of them takes about a
+// minute; only new or changed codes go through the 15 trials. The failing crops go to out/qr_check/. Exit 1 if anything fails.
 import puppeteer from 'puppeteer-core';
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 import { PNG } from 'pngjs';
@@ -30,7 +37,21 @@ const ZX = require('@zxing/library');
 const { scanImageData } = require('@undecaf/zbar-wasm');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 const SIZE = { feature: 480, shelf: 380 }, ECC = { feature: 'H', shelf: 'M' };
-const OUT = 'out/qr_check', REPORT = 'script/qr_report.md';
+const OUT = 'out/qr_check', REPORT = args.styles ? 'script/qr_styles_report.md' : args.only ? `${OUT}/only_report.md` : 'script/qr_report.md';
+// the cache: bump TRIALS when the trials or the pass rule change, so every code is decoded again
+const TRIALS = 'v3: 13 scales .5-1.4, youtube crf28, phone; every trial read by one, two decoders read 13+', CACHE_F = 'out/qr_cache.json';
+const cache = !args.fresh && existsSync(CACHE_F) ? JSON.parse(readFileSync(CACHE_F, 'utf8')) : {};
+const keyOf = c => createHash('sha1').update([c.id, c.url, c.mode, c.ecc || ECC[c.mode], SIZE[c.mode], TRIALS].join('|')).digest('hex');
+// a 64×64 grey thumbnail of the crop (block averages), and whether two are the same picture
+function thumb(png) {
+  const n = 64, b = Math.floor(png.width / n), out = [];
+  for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) {
+    let s = 0; for (let y = 0; y < b; y++) for (let x = 0; x < b; x++) { const k = ((j * b + y) * png.width + i * b + x) * 4; s += png.data[k] * .299 + png.data[k + 1] * .587 + png.data[k + 2] * .114; }
+    out.push(Math.round(s / (b * b)));
+  }
+  return Buffer.from(out).toString('base64');
+}
+const samePicture = (a, b) => { const x = Buffer.from(a, 'base64'), y = Buffer.from(b, 'base64'); return x.length === y.length && x.every((v, i) => Math.abs(v - y[i]) <= 3); };
 mkdirSync(OUT, { recursive: true });
 
 // ---- what to test ----
@@ -67,7 +88,8 @@ async function renderCase(c) {
   const url = await page.evaluate((c, size, ecc) => {
     window.LOOP = t => {
       paint(rectPts(-40, -40, W + 80, H + 80), { wash: PAL.paper, washOp: 120, ink: null });
-      window.QR_GEOM = qrCard(c.url, W / 2, H / 2, size, qrStyleFor(c.style), { ecc, t });
+      // as the film shows it: a shelf code in a wide style loses its dressing (look.js shelfFramed)
+      window.QR_GEOM = qrCard(c.url, W / 2, H / 2, size, qrStyleFor(c.style), { ecc, t, noFrame: c.mode === 'shelf' && !shelfFramed({ style: c.style }) });
     };
     window.LOOP.len = 1;
     return window.renderAt(.5, 'image/png');
@@ -117,10 +139,18 @@ function phone(file, box) {
 }
 
 const results = [];
+let reused = 0;
 for (const c of cases) {
-  const buf = await renderCase(c), file = `${OUT}/tmp.png`; writeFileSync(file, buf);
+  const buf = await renderCase(c), file = `${OUT}/tmp.png`, key = keyOf(c);
   const s = SIZE[c.mode], m = Math.round(s * .45), box = [960 - s / 2 - m, 540 - s / 2 - m, s + 2 * m, s + 2 * m].map(Math.round);
-  const pixel = crop(readPng(buf), ...box), yt = crop(youtube(file), ...box), ph = phone(file, box), sw = await screenSweep(file, box, c.url);
+  const pixel = crop(readPng(buf), ...box), th = thumb(pixel);
+  if (cache[key] && cache[key].thumb && samePicture(cache[key].thumb, th)) {
+    const row = { ...c, implemented: known.has(c.resolved), ...cache[key], cached: true }; results.push(row); reused++;
+    console.log(`${row.ok ? 'ok  ' : 'FAIL'} ${c.id} (unchanged since it was checked)`);
+    continue;
+  }
+  writeFileSync(file, buf);
+  const yt = crop(youtube(file), ...box), ph = phone(file, box), sw = await screenSweep(file, box, c.url);
   const row = { ...c, implemented: known.has(c.resolved) };
   row.trials = [...sw, await trial(yt, c.url), await trial(ph, c.url)];
   row.pixel = (await trial(pixel, c.url)).r;
@@ -130,6 +160,9 @@ for (const c of cases) {
   row.ok = row.passed === row.trials.length && [row.jsqr, row.zxing, row.zbar].filter(n => n >= 13).length >= 2;
   if (!row.ok) writeFileSync(`${OUT}/${c.id.replace(/\//g, '_')}.png`, PNG.sync.write(pixel));
   results.push(row);
+  cache[key] = Object.fromEntries(['trials', 'pixel', 'youtube', 'phone', 'passed', 'jsqr', 'zxing', 'zbar', 'ok'].map(k => [k, row[k]]));
+  cache[key].checked = new Date().toISOString().slice(0, 10); cache[key].thumb = th;
+  writeFileSync(CACHE_F, JSON.stringify(cache));
   console.log(`${row.ok ? 'ok  ' : 'FAIL'} ${c.id} (${c.style}${row.implemented ? '' : ', not built yet: plain'}, ${c.mode})  read ${row.passed}/15  (jsQR ${row.jsqr}, ZXing ${row.zxing}, ZBar ${row.zbar})`);
 }
 await browser.close();
@@ -138,7 +171,7 @@ for (const f of ['tmp.png', 'tmp.mp4', 'tmp_yt.png', 'tmp_ph.png', 'tmp_sc.png']
 const fails = results.filter(r => !r.ok), tick = a => a.map(b => b ? '✓' : '✗').join(' ');
 writeFileSync(REPORT, `# QR scan report
 
-Generated by \`tools/qr_check.mjs${args.styles ? ' --styles' : ''}\`. Each code is rendered through the full engine at its on-screen size
+Generated by \`tools/qr_check.mjs${args.styles ? ' --styles' : args.only ? ' --only=…' : ''}\`. Each code is rendered through the full engine at its on-screen size
 (feature ${SIZE.feature} px at ECC ${ECC.feature}, shelf ${SIZE.shelf} px at ECC ${ECC.shelf}) and decoded in 15 trials: the frame resampled at 13 scales
 from 0.5× to 1.4×, a 720p CRF-28 re-encode (youtube), and a keystoned, blurred and noised photo (phone). Three decoders
 read every trial: jsQR, ZXing's JavaScript port and ZBar (WebAssembly). A code passes when every trial is read (exact URL)
@@ -146,11 +179,11 @@ by at least one decoder, and at least two decoders each read 13 or more of the 1
 each has blind spots: ZXing-js fails some perfect, computer-generated codes outright, and jsQR misses sporadically at
 particular scales.
 
-**${results.length - fails.length} of ${results.length} pass.**${fails.length ? ` Failing: ${fails.map(r => r.id).join(', ')} (crops in \`${OUT}/\`).` : ''}
+**${results.length - fails.length} of ${results.length} pass.**${reused ? ` (${reused} unchanged since their last check, so their results are reused.)` : ''}${fails.length ? ` Failing: ${fails.map(r => r.id).join(', ')} (crops in \`${OUT}/\`).` : ''}
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|
 ${results.map(r => `| ${r.ok ? '' : '**✗** '}${r.id} | ${r.style}${r.resolved !== r.style ? ` → ${r.resolved}` : ''}${r.implemented ? '' : ' *(plain for now)*'} | ${r.mode} | ${r.passed}/15 | ${r.jsqr} | ${r.zxing} | ${r.zbar} | ${tick(r.youtube)} | ${tick(r.phone)} | ${tick(r.pixel)} |`).join('\n')}
 `);
-console.log(`${results.length - fails.length}/${results.length} pass; wrote ${REPORT}`);
+console.log(`${results.length - fails.length}/${results.length} pass (${reused} unchanged, reused); wrote ${REPORT}`);
 if (fails.length) process.exit(1);

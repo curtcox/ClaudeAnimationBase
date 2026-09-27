@@ -3,7 +3,7 @@
 
 # 2 Frog or Axolotl
 T06.C.01: { after: 1.4 }     # "Axolotl.": the axolotl turns up on the desk; let it land before the next question
-T08.U.00: { after: 5.5 }     # the frog/axolotl chart paints in row by row (its QR card holds >= 6 s)
+T08.U.00: { after: 7.5 }     # the frog/axolotl chart paints in row by row, slides aside, then its QR card holds >= 6 s
 T08.C.01: { after: .6 }      # "Caught, a little": the take
 T10.C.03: { after: 1.0 }     # "What do *you* think…?": the question hangs
 T11.U.01: { after: 2.2 }     # "You.": a held piano note, the realization

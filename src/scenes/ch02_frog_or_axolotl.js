@@ -109,7 +109,7 @@
     paperWorld(t, '#F6F2EA');
     const rows = seg(t, c0 + .8, c0 + 6.3), side = ease(seg(t, c0 + 6.5, c0 + 7.3));
     frogChart(lerp(200, 40, side), lerp(90, 170, side), lerp(1520, 860, side), lerp(900, 740, side), { k: rows, t });
-    qrFeature('frog-chart', t, c0 + 6.9, { hold: 8 });
+    qrFeature('frog-chart', t, c0 + 7.3, { hold: 8 });   // once the chart has moved aside
     screenWorld(t, 1 - seg(t, c0 + .8, c0 + 1.6));
   }
   // D: "How does this make you feel?" / "Caught, a little" / the two example chats / "I answered 'Axolotl'…"

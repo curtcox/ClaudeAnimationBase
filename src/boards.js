@@ -12,7 +12,7 @@ const QR_SHELF_HOLD = 5.5, QR_FEATURE_HOLD = 7;
 const FEATURES_SEEN = new Map();   // feature cards the scenes have shown: { id: { t0, hold } } (for refTimes)
 
 function paperCard(x, y, w, h, col = '#FBF8F0', o = {}) {
-  occupy(x, y, x + w, y + h, o.weight ?? 1);
+  occupy(x, y, x + w, y + h, o.weight ?? 1, o.tag || 'card');
   boilSeed('card ' + x + ' ' + y);
   paint(rrPts(x + 8, y + 10, w, h, 14), { fill: PAL.ink, fillOp: 60, bleed: .2, ink: null });   // shadow
   paint(rrPts(x, y, w, h, 14), { wash: col, ink: PAL.ink, sw: o.sw ?? 1.2 });
@@ -124,7 +124,7 @@ function qrFeature(ref, t, t0, o = {}) {
   const R = typeof ref === 'string' ? REFS[ref] : ref, half = Math.max(300, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 480 + 30);
   FEATURES_SEEN.set(R.id, { id: R.id, t0, hold: o.hold ?? QR_FEATURE_HOLD });
   const x = o.x ?? W - half - 50, y = (o.y ?? H * .47) + ease(out) * H;
-  occupy(x - half, y - half, x + half, y + half + 50, 3);
+  occupy(x - half, y - half, x + half, y + half + 50, 3, 'qr:' + R.id);
   boilSeed('qr feature ' + R.id);
   paint(rrPts(x - half, y - half, half * 2, half * 2 + 50, 26), { wash: PAL.paper, washOp: 235 * clamp(k * 2), ink: PAL.ink, sw: 1.4 });
   refQR(R, x, y - 20, 480, { k: R.style === 'mad' ? seg(t, t0, t0 + 4) : k, t });

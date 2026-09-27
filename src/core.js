@@ -185,7 +185,16 @@ function centred(pts, draw) {
   const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
   push(); translate(cx, cy); draw(pts.map(([x, y]) => [x - cx, y - cy])); pop();
 }
-function paint(pts, o = {}) { if (!DRY) centred(pts, (P) => paintAt(P, o)); }
+// DRAFT (studio.html?draft=1, render.mjs --draft): a quick look for review cuts. Watercolor fills, about 60% of a frame's
+// cost, become flat washes of the same colour; everything else (timing, layout, strokes, lettering) is the final's.
+const DRAFT = /[?&]draft=1/.test(location.search);
+const isHex = c => typeof c === 'string' && /^#[0-9a-f]{6}$/i.test(c);
+function draftFill(o) {
+  const k = clamp((o.fillOp ?? 170) / 255);
+  if (!o.wash) return { ...o, wash: o.fill, washOp: 255 * k * .8, fill: null };
+  return { ...o, wash: isHex(o.wash) && isHex(o.fill) ? mixCol(o.wash, o.fill, k * .7) : o.wash, fill: null };
+}
+function paint(pts, o = {}) { if (!DRY) centred(pts, (P) => paintAt(P, DRAFT && o.fill ? draftFill(o) : o)); }
 function paintAt(pts, o) {
   if (o.wash || o.fill || o.hatch) {
     if (o.wash) brush.wash(o.wash, o.washOp ?? 255); else brush.noWash();
@@ -306,7 +315,15 @@ function composite(t) {
   c.globalCompositeOperation = 'multiply'; c.drawImage(grainC, 0, 0);
   c.globalCompositeOperation = 'source-over';
 }
-window.renderAt = async (t, type = 'image/png', q = .92) => { T = t; await redraw(); composite(t); return outC.toDataURL(type, q); };
+// w (optional): return the frame scaled to w px wide (drafts go out at 1280, a third of the pixels to encode and send)
+let smallC = null;
+window.renderAt = async (t, type = 'image/png', q = .92, w = W) => {
+  T = t; await redraw(); composite(t);
+  if (w >= W) return outC.toDataURL(type, q);
+  if (!smallC || smallC.width !== w) { smallC = document.createElement('canvas'); smallC.width = w; smallC.height = Math.round(w * H / W); }
+  const c = smallC.getContext('2d'); c.imageSmoothingQuality = 'high'; c.drawImage(outC, 0, 0, smallC.width, smallC.height);
+  return smallC.toDataURL(type, q);
+};
 // Contact sheet of several times, for visual checks: returns { url, ms[] }. crop = [x, y, w, h] fills each cell with just
 // that region of the frame, at full resolution (for checking faces, hands and contacts up close). at = [x, y, w, h]
 // instead crops w × h around the WORLD point (x, y), wherever each frame's camera put it (a foot, a splash, a prop on

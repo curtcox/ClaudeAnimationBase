@@ -172,7 +172,7 @@ const SCREEN_KINDS = {
 
 function deskScreen(name, t, spec = {}) {
   const [x, y, w, h] = DESK.screens[name], lap = name.startsWith('lap');
-  occupy(x - 10, y - 10, x + w + 10, y + h + 10, name === 'main' ? 1 : .12);
+  occupy(x - 10, y - 10, x + w + 10, y + h + 10, name === 'main' ? 1 : .12, 'screen ' + name);
   boilSeed('desk screen ' + name);
   // bezel (and, for monitors, a stand; for laptops, the keyboard deck in front)
   paint(rrPts(x - 10, y - 10, w + 20, h + 20, 8), { wash: '#1A181D', ink: PAL.ink, sw: 1 });
@@ -205,7 +205,7 @@ function deskFront(t, o = {}) {
   // the laptops, on the desk
   for (const name of ['lapL', 'lapR']) if ((desk.screens || {})[name] !== null) deskScreen(name, t, (desk.screens || {})[name] || {});
   boilSeed('desk front items');
-  occupy(740, yb + 40, 1480, yb + 125, .15);
+  occupy(740, yb + 40, 1480, yb + 125, .15, 'desk items');
   // keyboard, mouse, a mug
   paint([[760, yb + 60], [1160, yb + 60], [1180, yb + 120], [740, yb + 120]], { wash: '#2E2B33', ink: PAL.ink, sw: 1 });
   for (let r = 0; r < 3; r++) for (let c = 0; c < 14; c++) paint(rectPts(772 + c * 28.5 + r * 3, yb + 68 + r * 16, 22, 11), { wash: '#4A4652', ink: null });

@@ -7,7 +7,7 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 |---|---|---|---|---|
 | 0 | Cold open | 1 | 0:29 | — |
 | 1 | The Wrong Movie | 38 | 5:38 | estimated |
-| 2 | Frog or Axolotl | 33 | 4:55 | voiced |
+| 2 | Frog or Axolotl | 33 | 4:57 | voiced |
 | 3 | Who Are We? | 18 | 2:32 | estimated |
 | 4 | The Echo | 32 | 5:03 | estimated |
 | 5 | The Dish of the Day | 20 | 4:53 | estimated |

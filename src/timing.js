@@ -72,3 +72,46 @@ function refTimes() {
     .concat([...FEATURES_SEEN.values()].map(f => ({ id: f.id, t0: +f.t0.toFixed(2), t1: +(f.t0 + f.hold).toFixed(2), kind: 'feature' })))
     .sort((a, b) => a.t0 - b.t0);
 }
+
+// The chapter check (tools/lint_chapter.mjs): what a viewer would trip over, found from the DRY replay, without painting.
+//   crowded   more than MAX_TOGETHER codes on screen at once
+//   covers    a code hides more than a fifth of something that matters (weight ≥ .5: a board, a character, lettering)
+//   brief     a code is on screen less than its minimum (feature 6 s, shelf 5 s), e.g. cut off by a shot or the chapter's end
+//   no room   the layout pass found no clean spot for a code in time (it covers content, or fell back to a corner)
+//   late      a code waited more than 8 s for room, so it arrives well after the words it belongs to
+//   static    (warning) the picture's layout doesn't change for more than 8 s: a held talking head
+function chapterLint(o = {}) {
+  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 6, shelf: 5 };
+  const shotAt = t => { let i = 0; while (i + 1 < SHOTS.length && t >= SHOTS[i + 1][0]) i++; return (SHOTS[i][1].name || 'shot' + i).replace(/^shot/, ''); };
+  const stamp = t => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}`;
+  const issues = [], add = (kind, t, msg) => issues.push({ kind, t: +t.toFixed(2), where: `${stamp(t)} shot ${shotAt(t)}, ${lineAt(t)?.id ?? 'lead-in'}`, msg });
+  const area = r => Math.max(1, (r[2] - r[0]) * (r[3] - r[1])), box = e => e.slice(0, 4).map(Math.round).join(',');
+  const plan = railPlan(), seen = new Map(), told = new Set();
+  let crowded = false, prevSig = null, runStart = 0;
+  for (let t = 0; t < DUR; t += STEP) {
+    const occ = occupancyAt(t), codes = [];
+    for (const p of plan) if (t >= p.t0 && t <= p.t0 + p.hold) codes.push({ id: p.id, kind: 'shelf', r: [p.x - p.half, p.y - p.half, p.x + p.half, p.y + p.half + 34] });
+    for (const e of occ) if ((e[5] || '').startsWith('qr:')) codes.push({ id: e[5].slice(3), kind: 'feature', r: e.slice(0, 4) });
+    for (const c of codes) { const s = seen.get(c.id) || { kind: c.kind, n: 0, t0: t }; s.n++; seen.set(c.id, s); }
+    if (codes.length > MAX_TOGETHER && !crowded) add('crowded', t, `${codes.length} codes at once: ${codes.map(c => c.id).join(', ')}`);
+    crowded = codes.length > MAX_TOGETHER;
+    for (const c of codes) for (const e of occ) {
+      if (e[4] < .5 || e[5] === 'qr:' + c.id) continue;
+      const cap = REFS[c.id] && REFS[c.id].caption;
+      if (c.kind === 'feature' && cap && e[5] && e[5].toLowerCase() === 'text: ' + cap.toLowerCase()) continue;   // its own caption
+      const k = overlap(c.r, e) / area(e), key = c.id + '|' + (e[5] || box(e));
+      if (k > .2 && !told.has(key)) { told.add(key); add('covers', t, `${c.id} (${c.kind}) hides ${Math.round(k * 100)}% of ${e[5] || 'content at ' + box(e)}`); }
+    }
+    // the layout's fingerprint: what matters, where, to the nearest 40 px (so boil and bobbing don't count as change)
+    const sig = occ.filter(e => e[4] >= .5 && !(e[5] || '').startsWith('qr:')).map(e => e.slice(0, 4).map(v => Math.round(v / 40)).join(',') + (e[5] || '')).sort().join('|');
+    if (sig !== prevSig) { if (prevSig !== null && t - runStart > STATIC) add('static', runStart, `the picture holds still for ${(t - runStart).toFixed(1)} s`); prevSig = sig; runStart = t; }
+  }
+  if (DUR - runStart > STATIC) add('static', runStart, `the picture holds still for ${(DUR - runStart).toFixed(1)} s, to the end`);
+  for (const [id, s] of seen) if (s.n * STEP < MIN[s.kind]) add('brief', s.t0, `${id} (${s.kind}) is on screen only ${(s.n * STEP).toFixed(1)} s`);
+  for (const p of plan) {
+    if (p.cost === Infinity) add('no room', p.t0, `${p.id}: the layout found no place and fell back to the corner`);
+    else if (!p.clean) add('no room', p.t0, `${p.id}: no clean spot within ${MAX_WAIT} s, so it covers some content`);
+    if (p.delay > 8) add('late', p.t0, `${p.id} waited ${p.delay.toFixed(1)} s for room`);
+  }
+  return issues.sort((a, b) => a.t - b.t);
+}
