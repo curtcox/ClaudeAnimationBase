@@ -388,8 +388,14 @@ src/
   people.js, minds.js the cast
   board.js            painted tables, the 14-point star glyph, the clothesline, 2×2 compass, bar boards
   talk.js             mouth-from-envelope, speaker focus, the Booth
-  scenes/ch00_cold_open.js … ch13_coda.js
+  scenes/ch00_cold_open.js … ch16_coda.js
+  scene_kit.js        what every scene reaches for: the desk shot, grounds, atWord (a phrase's moment in a line),
+                      index cards, doors, a balance
+  comic.js            the MAD page repainted (madPage), its ape and the man in the turtleneck on their own, and a
+                      `comic` screen kind so any monitor can show it
 ```
+- **`refs.yaml` cues.** A reference may add `cue:` (a phrase in its line) so its code goes up when that phrase is said,
+  not when the line starts; the rail places codes in the order they're said.
 
 ### Changes to the existing kit
 - **`render.mjs`**:
@@ -428,7 +434,7 @@ ElevenLabs needs about 60k characters per full voice pass, plus a few dozen effe
 | 3. Casting | 3 candidate stock ElevenLabs voices each for Claude and for Curt (in the CGP Grey register), read over a 10-line sampler. Then full synthesis and the first effect cues | **voices** |
 | 4. Design sheets | a cast model sheet, the QR style sheet with its scan report, the Booth, board components | **the look** |
 | 5. Pilot | Chapter 2 (*Frog or Axolotl*) end to end: storyboard, build, the review loop from the guide, render with voice | **the pilot** (it sets the pattern for the rest) |
-| 6. Chapters | storyboards ✅ for all 17 (`docs/storyboards/chNN_*.md`, shots keyed to line ids, each with its link table and explainers). Then build → review (`npm run draft`, `npm run lint:chapter`) → render, in batches of 3 | each storyboard, then each batch |
+| 6. Chapters | storyboards ✅ for all 17 (`docs/storyboards/chNN_*.md`, shots keyed to line ids, each with its link table and explainers). Then build → review (`npm run draft`, `npm run lint:chapter`) → render, in batches of 3. Batch 1 built ✅: chapters 0, 1, 3 (with 2, the pilot, the film's first 13 minutes) | each storyboard, then each batch |
 | 7. Assembly | mix, concat, chapter markers, description with timestamped links, companion page, thumbnail | **final cut** |
 | 8. QA | full watch-through, phone-scan every QR off a real screen, loudness check | — |
 
