@@ -127,7 +127,9 @@ function qrFeature(ref, t, t0, o = {}) {
   occupy(x - half, y - half, x + half, y + half + 50, 3, 'qr:' + R.id);
   boilSeed('qr feature ' + R.id);
   paint(rrPts(x - half, y - half, half * 2, half * 2 + 50, 26), { wash: PAL.paper, washOp: 235 * clamp(k * 2), ink: PAL.ink, sw: 1.4 });
+  const n0 = LETTERS.length;
   refQR(R, x, y - 20, 480, { k: R.style === 'mad' ? seg(t, t0, t0 + 4) : k, t });
+  for (let i = n0; i < LETTERS.length; i++) LETTERS[i].noOcc = true;   // the card's own lettering is part of the card
 }
 // Shelf tags: one after another in the lower-right corner, each held QR_SHELF_HOLD s.
 function qrShelf(refs, t, t0, o = {}) {
