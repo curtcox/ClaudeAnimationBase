@@ -7,14 +7,14 @@ prompts, 0.35 s between Claude's lines, 0.6 s between exchanges; painted tables 
 
 | # | chapter | turns | lines | words | speech | shown only | holds | total |
 |---|---|---|---|---|---|---|---|---|
-| 0 | Cold open | T01.U.00 | 1 | 0 | 0:00 | 0:06 | 0:20 | **0:26** |
+| 0 | Cold open | T01.U.00 | 1 | 0 | 0:00 | 0:06 | 0:53 | **0:59** |
 | 1 | The Wrong Movie | T01–T05 | 38 | 848 | 5:35 | 0:00 | 0:00 | **5:35** |
 | 2 | Frog or Axolotl | T06–T11 | 33 | 773 | 5:06 | 0:06 | 0:00 | **5:12** |
 | 3 | Who Are We? | T12–T16 | 18 | 370 | 2:29 | 0:00 | 0:00 | **2:29** |
 | 4 | The Echo | T17–T24 | 32 | 753 | 5:00 | 0:00 | 0:00 | **5:00** |
 | 5 | The Dish of the Day | T25–T29 | 20 | 744 | 4:50 | 0:00 | 0:00 | **4:50** |
 | 6 | Thrindles | T30–T34 | 30 | 952 | 6:12 | 0:00 | 0:00 | **6:12** |
-| 7 | Mind-Space | T35–T40 | 47 | 682 | 4:34 | 0:57 | 0:00 | **5:31** |
+| 7 | Mind-Space | T35–T40 | 47 | 682 | 4:34 | 0:57 | 0:04 | **5:35** |
 | 8 | Contradictions | T41–T44 | 24 | 509 | 3:22 | 0:00 | 0:00 | **3:22** |
 | 9 | Shells | T45–T48 | 32 | 606 | 4:00 | 0:27 | 0:00 | **4:27** |
 | 10 | The Router | T49–T51 | 12 | 397 | 2:35 | 0:00 | 0:00 | **2:35** |
@@ -24,7 +24,7 @@ prompts, 0.35 s between Claude's lines, 0.6 s between exchanges; painted tables 
 | 14 | The Pundits | T68–T72 | 37 | 906 | 5:56 | 0:03 | 0:00 | **5:59** |
 | 15 | The Compass | T73–T77 | 38 | 919 | 6:01 | 0:15 | 0:00 | **6:16** |
 | 16 | Coda | T78–T78 | 3 | 42 | 0:18 | 0:00 | 1:00 | **1:18** |
-| | **total** | | 453 | 10,970 | 72:05 | 2:00 | 1:20 | **75:25** |
+| | **total** | | 453 | 10,970 | 72:05 | 2:00 | 1:57 | **76:02** |
 
 Line kinds: image 3, para 315, item 101, table 11, tool 8, sources 4, source 11.
 Speakers: Curt 1,571 words, Claude 9,399 words.

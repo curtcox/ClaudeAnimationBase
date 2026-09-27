@@ -2514,6 +2514,7 @@ window.REFS = {
   "caption": "Robin Hanson",
   "origin": "added",
   "at": "T66.C.01",
+  "cue": "A backronym came later",
   "mode": "shelf",
   "style": "plain",
   "line": "T66.C.01"
@@ -2524,6 +2525,7 @@ window.REFS = {
   "caption": "Backronyms",
   "origin": "added",
   "at": "T66.C.01",
+  "cue": "A backronym came later",
   "mode": "shelf",
   "style": "plain",
   "line": "T66.C.01"

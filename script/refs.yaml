@@ -306,8 +306,8 @@
 - { id: bayesian-updating, url: "https://en.wikipedia.org/wiki/Bayesian_inference", caption: "Updating on evidence", origin: added, at: T65.C.01, mode: shelf, style: plain }
 - { id: prior, url: "https://en.wikipedia.org/wiki/Prior_probability", caption: "Priors", origin: added, at: T65.C.05, mode: shelf, style: plain }
 - { id: onomatopoeia, url: "https://en.wikipedia.org/wiki/Onomatopoeia", caption: "Onomatopoeia", origin: added, at: T66.U.01, mode: shelf, style: flame }
-- { id: robin-hanson, url: "https://en.wikipedia.org/wiki/Robin_Hanson", caption: "Robin Hanson", origin: added, at: T66.C.01, mode: shelf, style: plain }
-- { id: backronym, url: "https://en.wikipedia.org/wiki/Backronym", caption: "Backronyms", origin: added, at: T66.C.01, mode: shelf, style: plain }
+- { id: robin-hanson, url: "https://en.wikipedia.org/wiki/Robin_Hanson", caption: "Robin Hanson", origin: added, at: T66.C.01, cue: "A backronym came later", mode: shelf, style: plain }
+- { id: backronym, url: "https://en.wikipedia.org/wiki/Backronym", caption: "Backronyms", origin: added, at: T66.C.01, cue: "A backronym came later", mode: shelf, style: plain }
 - { id: order-of-magnitude, url: "https://en.wikipedia.org/wiki/Order_of_magnitude", caption: "Orders of magnitude (OOM)", origin: added, at: T66.C.02, mode: shelf, style: oom-bars }
 - { id: dwarkesh-patel, url: "https://en.wikipedia.org/wiki/Dwarkesh_Patel", caption: "Dwarkesh Patel", origin: added, at: T67.U.01, mode: shelf, style: mic }
 - { id: aschenbrenner, url: "https://en.wikipedia.org/wiki/Leopold_Aschenbrenner", caption: "Leopold Aschenbrenner", origin: added, at: T67.C.01, mode: shelf, style: oom-bars }
