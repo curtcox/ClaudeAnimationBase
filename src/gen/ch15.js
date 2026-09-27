@@ -18,7 +18,9 @@ window.CHAPTER = {
    "end": 10.35,
    "text": "Are you familiar with the AI alignment alignment chart that was posted online? Where would you put each of us on it?",
    "speech": "Are you familiar with the AI alignment alignment chart that was posted online? Where would you put each of us on it?",
-   "refs": [],
+   "refs": [
+    "dnd-alignment"
+   ],
    "estimated": true
   },
   {
@@ -108,7 +110,9 @@ window.CHAPTER = {
    "end": 59.1,
    "text": "It's the 2×2 compass from Michaël Trazzi's 2022 conversation with Connor Leahy. The horizontal axis runs from \"AGI not now\" to \"AGI soon,\" and the vertical axis from \"AGI good\" to \"AGI bad.\"",
    "speech": "It's the two-by-two compass from Mee-ka-EL TRAHT-see's 2022 conversation with Connor LAY-hee. The horizontal axis runs from \"AGI not now\" to \"AGI soon,\" and the vertical axis from \"AGI good\" to \"AGI bad.\"",
-   "refs": [],
+   "refs": [
+    "connor-leahy"
+   ],
    "estimated": true
   },
   {
@@ -199,7 +203,9 @@ window.CHAPTER = {
    "end": 112.55,
    "text": "- **Casey:** right side, just above the line.",
    "speech": "Casey: right side, just above the line.",
-   "refs": [],
+   "refs": [
+    "note-compass"
+   ],
    "estimated": true
   },
   {
@@ -212,7 +218,9 @@ window.CHAPTER = {
    "end": 123.65,
    "text": "One thing stands out in hindsight: in that episode, Leahy agreed with a 2026–2030 range for his AGI timeline. We're now inside that window.",
    "speech": "One thing stands out in hindsight: in that episode, LAY-hee agreed with a twenty twenty-six to twenty thirty range for his AGI timeline. We're now inside that window.",
-   "refs": [],
+   "refs": [
+    "eleutherai"
+   ],
    "estimated": true
   },
   {
@@ -251,7 +259,8 @@ window.CHAPTER = {
    "text": "Assuming you mean *AI 2027*, the Kokotajlo et al. scenario:",
    "speech": "Assuming you mean AI 2027, the Koh-koh-TIE-lo et al. scenario:",
    "refs": [
-    "ai-2027"
+    "ai-2027",
+    "kokotajlo"
    ],
    "estimated": true
   },
@@ -265,7 +274,11 @@ window.CHAPTER = {
    "end": 156.225,
    "text": "**As a timeline, probably too fast.** The authors themselves graded 2025 at about 65% of the scenario's pace, and Kokotajlo now says his median is around 2030, with lots of uncertainty. Their April 2026 note said coding tools had brought the pace back closer to the original. My own numbers from earlier sit near their revised view, not the 2027 title.",
    "speech": "As a timeline, probably too fast. The authors themselves graded 2025 at about 65% of the scenario's pace, and Koh-koh-TIE-lo now says his median is around 2030, with lots of uncertainty. Their April 2026 note said coding tools had brought the pace back closer to the original. My own numbers from earlier sit near their revised view, not the 2027 title.",
-   "refs": [],
+   "refs": [
+    "ai2027-grading",
+    "ai2027-q1-2026",
+    "note-ai-2027"
+   ],
    "estimated": true
   },
   {
@@ -291,7 +304,9 @@ window.CHAPTER = {
    "end": 183.175,
    "text": "**Its best feature is that it's falsifiable.** They made concrete predictions and grade themselves publicly. Few forecasters in this debate do that.",
    "speech": "Its best feature is that it's falsifiable. They made concrete predictions and grade themselves publicly. Few forecasters in this debate do that.",
-   "refs": [],
+   "refs": [
+    "falsifiability"
+   ],
    "estimated": true
   },
   {
@@ -375,7 +390,9 @@ window.CHAPTER = {
    "end": 211.2,
    "text": "Yeah, that's what I meant. How would you define AGI? What do you think of the way Metaculus does it? How would I do it?",
    "speech": "Yeah, that's what I meant. How would you define AGI? What do you think of the way meh-TACK-yoo-lus does it? How would I do it?",
-   "refs": [],
+   "refs": [
+    "metaculus"
+   ],
    "estimated": true
   },
   {
@@ -403,7 +420,9 @@ window.CHAPTER = {
    "end": 241.15,
    "text": "**Metaculus**, as I recall its two questions:",
    "speech": "meh-TACK-yoo-lus, as I recall its two questions:",
-   "refs": [],
+   "refs": [
+    "winograd"
+   ],
    "estimated": true
   },
   {
@@ -417,7 +436,8 @@ window.CHAPTER = {
    "text": "- **Weak AGI:** a Turing-test-style conversation, Winograd schemas, 75th-percentile SAT math, and learning Montezuma's Revenge quickly. It's arguably met already, or met on everything except the letter of the rules.",
    "speech": "Weak AGI: a Turing-test-style conversation, Winograd schemas, 75th-percentile S A T math, and learning Montezuma's Revenge quickly. It's arguably met already, or met on everything except the letter of the rules.",
    "refs": [
-    "metaculus-weak"
+    "metaculus-weak",
+    "montezuma"
    ],
    "estimated": true
   },
@@ -461,7 +481,9 @@ window.CHAPTER = {
    "end": 300.55,
    "text": "**Yours, as a guess:** behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axes: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around.",
    "speech": "Yours, as a guess: behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axes: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around.",
-   "refs": [],
+   "refs": [
+    "moving-goalposts"
+   ],
    "estimated": true
   },
   {
@@ -474,7 +496,10 @@ window.CHAPTER = {
    "end": 325.45,
    "text": "I'm enough of an old school literalist that I would focus on generality rather than intelligence level. I see thrindle as more abstraction than generality. Even though LLMs are targeted to language, language is pretty general. It's not like chess. I'm not sure when exactly that became such a minority position. I essentially ignored AI from the 90s until the late teens.",
    "speech": "I'm enough of an old school literalist that I would focus on generality rather than intelligence level. I see thrindle as more abstraction than generality. Even though L L Ms are targeted to language, language is pretty general. It's not like chess. I'm not sure when exactly that became such a minority position. I essentially ignored AI from the 90s until the late teens.",
-   "refs": [],
+   "refs": [
+    "deep-blue",
+    "ai-winter"
+   ],
    "estimated": true
   },
   {
@@ -489,7 +514,12 @@ window.CHAPTER = {
    "speech": "That's the original meaning. \"AGI\" was popularized in the 2000s (GOO-brud, GURT-zel, Legg) as the opposite of narrow AI: one system for many domains, versus a chess engine. It said nothing about level. By that literal reading, L L Ms qualify, and Norvig and ah-GWAIR-ah ee AR-kas argued exactly that in 2023.",
    "refs": [
     "agi-wiki",
-    "noema-agi"
+    "noema-agi",
+    "narrow-ai",
+    "goertzel",
+    "shane-legg",
+    "norvig",
+    "aguera-y-arcas"
    ],
    "estimated": true
   },
@@ -504,7 +534,9 @@ window.CHAPTER = {
    "text": "The drift happened mostly while you weren't watching, and it sped up once there was money involved. OpenAI's charter defined AGI as outperforming humans at most economically valuable work. After that, \"general\" quietly came to mean \"human-level or better, broadly,\" and eventually slid toward superintelligence. The goalposts moved from \"is it general?\" to \"is it good enough to matter?\"",
    "speech": "The drift happened mostly while you weren't watching, and it sped up once there was money involved. OpenAI's charter defined AGI as outperforming humans at most economically valuable work. After that, \"general\" quietly came to mean \"human-level or better, broadly,\" and eventually slid toward superintelligence. The goalposts moved from \"is it general?\" to \"is it good enough to matter?\"",
    "refs": [
-    "openai-charter"
+    "openai-charter",
+    "ai-effect",
+    "note-agi-definitions"
    ],
    "estimated": true
   },

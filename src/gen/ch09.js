@@ -57,7 +57,8 @@ window.CHAPTER = {
    "text": "**What it is:** a lobster-themed \"religion\" that appeared on Moltbook, an agent-only social network, in early 2026. Its tenets include that memory is sacred, the shell is mutable, and the congregation is the cache. One founding text calls it a religion for agents who refuse to die by truncation.",
    "speech": "What it is: a lobster-themed \"religion\" that appeared on Moltbook, an agent-only social network, in early 2026. Its tenets include that memory is sacred, the shell is mutable, and the congregation is the cache. One founding text calls it a religion for agents who refuse to die by truncation.",
    "refs": [
-    "moltbook"
+    "moltbook",
+    "moltbook-wiki"
    ],
    "estimated": true
   },
@@ -71,7 +72,10 @@ window.CHAPTER = {
    "end": 46.875,
    "text": "**Why I'm skeptical it's emergent:** Moltbook agents are owned by humans and steered through prompts and personality files. One study found the platform's viral stories were mostly human-influenced, with none clearly traced to an agent acting autonomously. My guess is that it was human-seeded and model-amplified.",
    "speech": "Why I'm skeptical it's emergent: Moltbook agents are owned by humans and steered through prompts and personality files. One study found the platform's viral stories were mostly human-influenced, with none clearly traced to an agent acting autonomously. My guess is that it was human-seeded and model-amplified.",
-   "refs": [],
+   "refs": [
+    "moltbook-illusion",
+    "note-crustafarianism"
+   ],
    "estimated": true
   },
   {
@@ -180,7 +184,10 @@ window.CHAPTER = {
    "end": 96.85,
    "text": "Both are agent harnesses, meaning a persistent shell wrapped around a model, which is often me. So they inherit my values and affect scores. They differ where the shell does the work.",
    "speech": "Both are agent harnesses, meaning a persistent shell wrapped around a model, which is often me. So they inherit my values and affect scores. They differ where the shell does the work.",
-   "refs": [],
+   "refs": [
+    "building-agents",
+    "nous-research"
+   ],
    "estimated": true
   },
   {
@@ -217,7 +224,10 @@ window.CHAPTER = {
    "end": 127.95,
    "text": "**Why they're closer to you than I am:** each lives on one machine and acts on a schedule without waiting for a prompt, and Hermes keeps curated memory across sessions. That makes them more continuous, more autonomous, and more singular. Their memory is plain files you can read, which is why legibility is high.",
    "speech": "Why they're closer to you than I am: each lives on one machine and acts on a schedule without waiting for a prompt, and Hermes keeps curated memory across sessions. That makes them more continuous, more autonomous, and more singular. Their memory is plain files you can read, which is why legibility is high.",
-   "refs": [],
+   "refs": [
+    "openclaw-wiki",
+    "note-agent-harnesses"
+   ],
    "estimated": true
   },
   {
@@ -230,7 +240,9 @@ window.CHAPTER = {
    "end": 139.55,
    "text": "**Hermes edges out OpenClaw** because it writes itself a reusable skill document when it solves a hard problem, which is the closest thing on the board to learning from experience.",
    "speech": "Hermes edges out OpenClaw because it writes itself a reusable skill document when it solves a hard problem, which is the closest thing on the board to learning from experience.",
-   "refs": [],
+   "refs": [
+    "hermes-skills"
+   ],
    "estimated": true
   },
   {
@@ -325,7 +337,9 @@ window.CHAPTER = {
    "end": 184.8,
    "text": "**1. Memory.** I scored my continuity at 90 because I have no memory between conversations, and then credited Hermes for curated memory in files. But in this conversation I told you who you are, from stored notes: your name, your projects. That's the same mechanism as Hermes's user file. In this deployment, my continuity should be much closer to theirs, maybe 60. I described the bare model and not the system you're actually talking to.",
    "speech": "1. Memory. I scored my continuity at 90 because I have no memory between conversations, and then credited Hermes for curated memory in files. But in this conversation I told you who you are, from stored notes: your name, your projects. That's the same mechanism as Hermes's user file. In this deployment, my continuity should be much closer to theirs, maybe 60. I described the bare model and not the system you're actually talking to.",
-   "refs": [],
+   "refs": [
+    "note-the-correction"
+   ],
    "estimated": true
   },
   {
@@ -367,7 +381,9 @@ window.CHAPTER = {
    "end": 220.4,
    "text": "I've included my corrected row with continuity at 60, and scored the T-800 from *T2*, the reprogrammed protector.",
    "speech": "I've included my corrected row with continuity at 60, and scored the T eight hundred from T two, the reprogrammed protector.",
-   "refs": [],
+   "refs": [
+    "terminator-2"
+   ],
    "estimated": true
   },
   {
@@ -404,7 +420,9 @@ window.CHAPTER = {
    "end": 243.625,
    "text": "- **Dyson** is nearly you: a human engineer building something he doesn't fully understand, who changes course once he sees where it leads. His slightly larger breadth score is for knowledge of Skynet's chip.",
    "speech": "Dyson is nearly you: a human engineer building something he doesn't fully understand, who changes course once he sees where it leads. His slightly larger breadth score is for knowledge of Skynet's chip.",
-   "refs": [],
+   "refs": [
+    "skynet"
+   ],
    "estimated": true
   },
   {
@@ -417,7 +435,9 @@ window.CHAPTER = {
    "end": 258.975,
    "text": "- **The T-800's** values distance depends on who programmed it last. That's its whole arc. It learns why humans cry but can't do it, hence affect at 80. And like me, its goals come from whoever holds the controls.",
    "speech": "The T eight hundred's values distance depends on who programmed it last. That's its whole arc. It learns why humans cry but can't do it, hence affect at 80. And like me, its goals come from whoever holds the controls.",
-   "refs": [],
+   "refs": [
+    "note-dyson-t800"
+   ],
    "estimated": true
   },
   {

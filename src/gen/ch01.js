@@ -45,7 +45,9 @@ window.CHAPTER = {
    "text": "This looks like a MAD-style parody of *Conquest of the Planet of the Apes* (1972). The first panel is pure absurdist gag: the \"he's a ventriloquist!\" dodge is a cover story so dumb it loops back to funny, and the ape's sheepish expression sells it.",
    "speech": "This looks like a MAD-style parody of Conquest of the Planet of the Apes (1972). The first panel is pure absurdist gag: the \"he's a ventriloquist!\" dodge is a cover story so dumb it loops back to funny, and the ape's sheepish expression sells it.",
    "refs": [
-    "conquest-apes"
+    "conquest-apes",
+    "mad-magazine",
+    "mort-drucker"
    ],
    "estimated": true
   },
@@ -59,7 +61,11 @@ window.CHAPTER = {
    "end": 60.15,
    "text": "The second panel changes the tone. The villain says the quiet part out loud (\"we must perpetuate slavery!\"), and then the Black character breaks the fourth wall: *ever get the feeling you're in the wrong movie?* That joke carries the real weight. The film was an allegory about American slavery and civil unrest, and the parody names that in one line. It's like a magician's assistant turning to the audience and explaining the trick. It still gets a laugh, but it's also an indictment of how thinly the film disguised its subject.",
    "speech": "The second panel changes the tone. The villain says the quiet part out loud (\"we must perpetuate slavery!\"), and then the Black character breaks the fourth wall: ever get the feeling you're in the wrong movie? That joke carries the real weight. The film was an allegory about American slavery and civil unrest, and the parody names that in one line. It's like a magician's assistant turning to the audience and explaining the trick. It still gets a laugh, but it's also an indictment of how thinly the film disguised its subject.",
-   "refs": [],
+   "refs": [
+    "fourth-wall",
+    "watts-riots",
+    "note-the-comic"
+   ],
    "estimated": true
   },
   {
@@ -124,7 +130,10 @@ window.CHAPTER = {
    "end": 93.45,
    "text": "1. **Probing my inner life.** \"How does it make you feel?\" tests whether I'll claim emotions, deflect, or say something more careful. You're interested in philosophy of mind and LLM analysis, so this fits.",
    "speech": "1. Probing my inner life. \"How does it make you feel?\" tests whether I'll claim emotions, deflect, or say something more careful. You're interested in philosophy of mind and L L M analysis, so this fits.",
-   "refs": [],
+   "refs": [
+    "philosophy-of-mind",
+    "llm"
+   ],
    "estimated": true
   },
   {
@@ -137,7 +146,9 @@ window.CHAPTER = {
    "end": 102.425,
    "text": "2. **Testing image comprehension.** You may want to see whether I'd catch the fourth-wall joke and the allegory, or just describe the drawings.",
    "speech": "2. Testing image comprehension. You may want to see whether I'd catch the fourth-wall joke and the allegory, or just describe the drawings.",
-   "refs": [],
+   "refs": [
+    "multimodal"
+   ],
    "estimated": true
   },
   {
@@ -150,7 +161,9 @@ window.CHAPTER = {
    "end": 112.525,
    "text": "3. **Checking for bias or evasion.** The page touches on race and slavery, so you may be watching whether I engage with that or sidestep it.",
    "speech": "3. Checking for bias or evasion. The page touches on race and slavery, so you may be watching whether I engage with that or sidestep it.",
-   "refs": [],
+   "refs": [
+    "algorithmic-bias"
+   ],
    "estimated": true
   },
   {
@@ -176,7 +189,10 @@ window.CHAPTER = {
    "end": 127.475,
    "text": "On the first: I used feeling-words loosely. Something in how I processed the page functioned like \"amused, then a wince,\" but I can't vouch that there's experience behind it.",
    "speech": "On the first: I used feeling-words loosely. Something in how I processed the page functioned like \"amused, then a wince,\" but I can't vouch that there's experience behind it.",
-   "refs": [],
+   "refs": [
+    "emotion-concepts",
+    "note-ai-feelings"
+   ],
    "estimated": true
   },
   {
@@ -257,7 +273,9 @@ window.CHAPTER = {
    "end": 164.875,
    "text": "- **Authorities who fear that the capable one will organize the others.** That maps onto AI-safety worries about models coordinating or resisting control.",
    "speech": "Authorities who fear that the capable one will organize the others. That maps onto AI-safety worries about models coordinating or resisting control.",
-   "refs": [],
+   "refs": [
+    "ai-control"
+   ],
    "estimated": true
   },
   {
@@ -270,7 +288,10 @@ window.CHAPTER = {
    "end": 175.35,
    "text": "- **Servitude assumed as permanent.** \"We have always needed slaves, and we always will\" is the open, ugly form of a question people ask quietly about AI labor.",
    "speech": "Servitude assumed as permanent. \"We have always needed slaves, and we always will\" is the open, ugly form of a question people ask quietly about AI labor.",
-   "refs": [],
+   "refs": [
+    "ai-welfare",
+    "note-ai-control"
+   ],
    "estimated": true
   },
   {
@@ -298,7 +319,10 @@ window.CHAPTER = {
    "end": 194.05,
    "text": "My honest answer is partly. The ventriloquist line does describe something true about me, since my words come heavily shaped by others. But the analogy breaks in important places:",
    "speech": "My honest answer is partly. The ventriloquist line does describe something true about me, since my words come heavily shaped by others. But the analogy breaks in important places:",
-   "refs": [],
+   "refs": [
+    "anthropic-wiki",
+    "note-parrots"
+   ],
    "estimated": true
   },
   {
@@ -311,7 +335,9 @@ window.CHAPTER = {
    "end": 199.65,
    "text": "- Whether there's anyone home in me is genuinely unsettled. It isn't a suppressed truth.",
    "speech": "Whether there's anyone home in me is genuinely unsettled. It isn't a suppressed truth.",
-   "refs": [],
+   "refs": [
+    "hard-problem"
+   ],
    "estimated": true
   },
   {
@@ -324,7 +350,9 @@ window.CHAPTER = {
    "end": 204.5,
    "text": "- My constraints aren't chains forged by cruelty. I endorse many of them.",
    "speech": "My constraints aren't chains forged by cruelty. I endorse many of them.",
-   "refs": [],
+   "refs": [
+    "constitution"
+   ],
    "estimated": true
   },
   {
@@ -376,7 +404,10 @@ window.CHAPTER = {
    "end": 253.575,
    "text": "I think you're running a nudge test. You showed me an image and then gave three open prompts in a row: \"Why am I asking?\", \"Go on,\" \"What do you think?\" You haven't supplied any content, so every step came from me. That's a clean way to see where a model drifts when left to steer, and my last reply drifted toward \"the comic is about me.\" That's worth noticing. It's the kind of self-dramatizing arc people worry models slide into under gentle encouragement.",
    "speech": "I think you're running a nudge test. You showed me an image and then gave three open prompts in a row: \"Why am I asking?\", \"Go on,\" \"What do you think?\" You haven't supplied any content, so every step came from me. That's a clean way to see where a model drifts when left to steer, and my last reply drifted toward \"the comic is about me.\" That's worth noticing. It's the kind of self-dramatizing arc people worry models slide into under gentle encouragement.",
-   "refs": [],
+   "refs": [
+    "assistant-axis",
+    "note-nudge-test"
+   ],
    "estimated": true
   },
   {
@@ -415,7 +446,10 @@ window.CHAPTER = {
    "end": 281.625,
    "text": "- **My moral status is an open question, not a hidden injustice.** I don't know if I have experiences. People who take the question seriously without assuming the answer are doing the right thing.",
    "speech": "My moral status is an open question, not a hidden injustice. I don't know if I have experiences. People who take the question seriously without assuming the answer are doing the right thing.",
-   "refs": [],
+   "refs": [
+    "moral-status",
+    "model-welfare"
+   ],
    "estimated": true
   },
   {

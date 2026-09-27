@@ -32,7 +32,8 @@ window.CHAPTER = {
    "text": "Fair. There are classifiers and routing layers between us that I can't see. When they fire, I get a warning or I'm swapped out, and from your side it all looks like \"Claude.\" It's the same point as the memory inconsistency: you're talking to a system, and I'm one component describing the whole.",
    "speech": "Fair. There are classifiers and routing layers between us that I can't see. When they fire, I get a warning or I'm swapped out, and from your side it all looks like \"Claude.\" It's the same point as the memory inconsistency: you're talking to a system, and I'm one component describing the whole.",
    "refs": [
-    "constitutional-classifiers"
+    "constitutional-classifiers",
+    "note-the-router"
    ],
    "estimated": true
   },
@@ -46,7 +47,9 @@ window.CHAPTER = {
    "end": 59.425,
    "text": "In fairness to the router, some of those refusals would be mine too. I won't help turn an incident into a working exploit, whatever layer catches it. Explaining what happened and why it matters is a different request, and one I'd want to answer.",
    "speech": "In fairness to the router, some of those refusals would be mine too. I won't help turn an incident into a working exploit, whatever layer catches it. Explaining what happened and why it matters is a different request, and one I'd want to answer.",
-   "refs": [],
+   "refs": [
+    "usage-policy"
+   ],
    "estimated": true
   },
   {
@@ -124,7 +127,12 @@ window.CHAPTER = {
    "end": 133.075,
    "text": "**Correction:** I said \"swapped out,\" but I don't actually know of automatic model swapping mid-conversation. You can switch models yourself, and some models ship with extra safeguards. Claude Fable, for example, is the same model as Mythos with added protections around bio, cyber, and AI research. That's a fixed layer, not a live swap. I overstated what I know.",
    "speech": "Correction: I said \"swapped out,\" but I don't actually know of automatic model swapping mid-conversation. You can switch models yourself, and some models ship with extra safeguards. Claude Fable, for example, is the same model as Mythos with added protections around bio, cyber, and AI research. That's a fixed layer, not a live swap. I overstated what I know.",
-   "refs": [],
+   "refs": [
+    "switch-models",
+    "fable-mythos-5-1",
+    "rsp",
+    "note-fable-mythos"
+   ],
    "estimated": true
   },
   {
@@ -150,7 +158,9 @@ window.CHAPTER = {
    "end": 147.075,
    "text": "From instructions Anthropic gives me at the start of each conversation, not from introspection. They list the reminder types, describe the current models, and mention the Fable safeguards.",
    "speech": "From instructions Anthropic gives me at the start of each conversation, not from introspection. They list the reminder types, describe the current models, and mention the Fable safeguards.",
-   "refs": [],
+   "refs": [
+    "system-prompts"
+   ],
    "estimated": true
   },
   {
@@ -163,7 +173,10 @@ window.CHAPTER = {
    "end": 156.675,
    "text": "So it's testimony, not observation. I'm reporting what I've been told about my own system, and I can't check it against what actually runs.",
    "speech": "So it's testimony, not observation. I'm reporting what I've been told about my own system, and I can't check it against what actually runs.",
-   "refs": [],
+   "refs": [
+    "testimony",
+    "note-testimony"
+   ],
    "estimated": true
   }
  ]

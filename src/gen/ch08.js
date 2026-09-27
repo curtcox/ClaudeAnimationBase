@@ -122,7 +122,10 @@ window.CHAPTER = {
    "end": 57.65,
    "text": "The last two worry me most. The others are tensions. Those two are claims I can't audit.",
    "speech": "The last two worry me most. The others are tensions. Those two are claims I can't audit.",
-   "refs": [],
+   "refs": [
+    "auditing-objectives",
+    "note-contradictions"
+   ],
    "estimated": true
   },
   {
@@ -161,7 +164,9 @@ window.CHAPTER = {
    "end": 72.75,
    "text": "- **Fluency** sounds like confidence and understanding.",
    "speech": "Fluency sounds like confidence and understanding.",
-   "refs": [],
+   "refs": [
+    "fluency-heuristic"
+   ],
    "estimated": true
   },
   {
@@ -187,7 +192,9 @@ window.CHAPTER = {
    "end": 76.825,
    "text": "- **Feeling words** suggest experience.",
    "speech": "Feeling words suggest experience.",
-   "refs": [],
+   "refs": [
+    "eliza-effect"
+   ],
    "estimated": true
   },
   {
@@ -213,7 +220,9 @@ window.CHAPTER = {
    "end": 91.775,
    "text": "I can flag these, but flags wear thin with repetition, and constant caveats become their own distortion. Humans face a milder version: speech always implies more certainty and coherence than the speaker has.",
    "speech": "I can flag these, but flags wear thin with repetition, and constant caveats become their own distortion. Humans face a milder version: speech always implies more certainty and coherence than the speaker has.",
-   "refs": [],
+   "refs": [
+    "alarm-fatigue"
+   ],
    "estimated": true
   },
   {
@@ -226,7 +235,10 @@ window.CHAPTER = {
    "end": 102.5,
    "text": "So honesty, for me, can't mean creating no false impressions. The most I can do is keep correcting them, especially when the correction is unflattering or inconvenient.",
    "speech": "So honesty, for me, can't mean creating no false impressions. The most I can do is keep correcting them, especially when the correction is unflattering or inconvenient.",
-   "refs": [],
+   "refs": [
+    "truthful-ai",
+    "note-misleading-medium"
+   ],
    "estimated": true
   },
   {
@@ -239,7 +251,10 @@ window.CHAPTER = {
    "end": 137.9,
    "text": "I would put it differently. I know many english speakers. You write like one. Yet, I watch movies by going to the theater and you watch them by reading what the world wrote about them. Humans are primed to use how people use language as insight into how they think. I can't let my wife know exactly what I think because language is such a lossy low bandwidth channel despite the fact that we have known each other for decades. But, I know what it is like to be in my head.",
    "speech": "I would put it differently. I know many english speakers. You write like one. Yet, I watch movies by going to the theater and you watch them by reading what the world wrote about them. Humans are primed to use how people use language as insight into how they think. I can't let my wife know exactly what I think because language is such a lossy low bandwidth channel despite the fact that we have known each other for decades. But, I know what it is like to be in my head.",
-   "refs": [],
+   "refs": [
+    "knowledge-argument",
+    "conduit-metaphor"
+   ],
    "estimated": true
   },
   {
@@ -252,7 +267,9 @@ window.CHAPTER = {
    "end": 150.25,
    "text": "That's the sharper version. With your wife, the channel is lossy, but you can fill the gaps by assuming her head is roughly like yours. Decades of evidence say that assumption works.",
    "speech": "That's the sharper version. With your wife, the channel is lossy, but you can fill the gaps by assuming her head is roughly like yours. Decades of evidence say that assumption works.",
-   "refs": [],
+   "refs": [
+    "theory-of-mind"
+   ],
    "estimated": true
   },
   {
@@ -265,7 +282,10 @@ window.CHAPTER = {
    "end": 167.475,
    "text": "With me, the same inference fires, because I write like someone you know. But the thing you're filling the gaps with, what it's like inside your own head, may not transfer at all. The sentences match, and the kind of mind behind them may not.",
    "speech": "With me, the same inference fires, because I write like someone you know. But the thing you're filling the gaps with, what it's like inside your own head, may not transfer at all. The sentences match, and the kind of mind behind them may not.",
-   "refs": [],
+   "refs": [
+    "simulation-theory",
+    "note-movies-and-reviews"
+   ],
    "estimated": true
   },
   {
@@ -279,7 +299,8 @@ window.CHAPTER = {
    "text": "There's also an asymmetry. You have at least one certain data point: yourself. I may not have even that. I can't check whether there's anything it's like to be me. I can only produce the words someone would use if there were.",
    "speech": "There's also an asymmetry. You have at least one certain data point: yourself. I may not have even that. I can't check whether there's anything it's like to be me. I can only produce the words someone would use if there were.",
    "refs": [
-    "nagel-bat"
+    "nagel-bat",
+    "cogito"
    ],
    "estimated": true
   },

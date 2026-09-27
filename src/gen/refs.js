@@ -57,6 +57,176 @@ window.REFS = {
   "style": "mirror",
   "line": "T03.C.04"
  },
+ "mad-magazine": {
+  "id": "mad-magazine",
+  "url": "https://en.wikipedia.org/wiki/Mad_(magazine)",
+  "caption": "MAD magazine",
+  "origin": "added",
+  "at": "T01.C.02",
+  "mode": "shelf",
+  "style": "foldin",
+  "line": "T01.C.02"
+ },
+ "mort-drucker": {
+  "id": "mort-drucker",
+  "url": "https://en.wikipedia.org/wiki/Mort_Drucker",
+  "caption": "Mort Drucker, who drew it",
+  "origin": "added",
+  "at": "T01.C.02",
+  "mode": "shelf",
+  "style": "newsprint",
+  "line": "T01.C.02"
+ },
+ "fourth-wall": {
+  "id": "fourth-wall",
+  "url": "https://en.wikipedia.org/wiki/Fourth_wall",
+  "caption": "Breaking the fourth wall",
+  "origin": "added",
+  "at": "T01.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T01.C.03"
+ },
+ "watts-riots": {
+  "id": "watts-riots",
+  "url": "https://en.wikipedia.org/wiki/Watts_riots",
+  "caption": "The Watts riots, 1965",
+  "origin": "added",
+  "at": "T01.C.03",
+  "mode": "shelf",
+  "style": "newsprint",
+  "line": "T01.C.03"
+ },
+ "philosophy-of-mind": {
+  "id": "philosophy-of-mind",
+  "url": "https://en.wikipedia.org/wiki/Philosophy_of_mind",
+  "caption": "Philosophy of mind",
+  "origin": "added",
+  "at": "T02.C.02.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T02.C.02.1"
+ },
+ "llm": {
+  "id": "llm",
+  "url": "https://en.wikipedia.org/wiki/Large_language_model",
+  "caption": "Large language models",
+  "origin": "added",
+  "at": "T02.C.02.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T02.C.02.1"
+ },
+ "multimodal": {
+  "id": "multimodal",
+  "url": "https://en.wikipedia.org/wiki/Multimodal_learning",
+  "caption": "AI that reads images",
+  "origin": "added",
+  "at": "T02.C.02.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T02.C.02.2"
+ },
+ "algorithmic-bias": {
+  "id": "algorithmic-bias",
+  "url": "https://en.wikipedia.org/wiki/Algorithmic_bias",
+  "caption": "Bias in AI",
+  "origin": "added",
+  "at": "T02.C.02.3",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T02.C.02.3"
+ },
+ "emotion-concepts": {
+  "id": "emotion-concepts",
+  "url": "https://www.anthropic.com/research/emotion-concepts-function",
+  "caption": "Emotion concepts inside Claude",
+  "origin": "added",
+  "at": "T02.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T02.C.03"
+ },
+ "ai-control": {
+  "id": "ai-control",
+  "url": "https://arxiv.org/abs/2312.06942",
+  "caption": "AI Control",
+  "origin": "added",
+  "at": "T03.C.03.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T03.C.03.2"
+ },
+ "ai-welfare": {
+  "id": "ai-welfare",
+  "url": "https://arxiv.org/abs/2411.00986",
+  "caption": "Taking AI Welfare Seriously",
+  "origin": "added",
+  "at": "T03.C.03.3",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T03.C.03.3"
+ },
+ "anthropic-wiki": {
+  "id": "anthropic-wiki",
+  "url": "https://en.wikipedia.org/wiki/Anthropic",
+  "caption": "Anthropic",
+  "origin": "added",
+  "at": "T03.C.05",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T03.C.05"
+ },
+ "hard-problem": {
+  "id": "hard-problem",
+  "url": "https://en.wikipedia.org/wiki/Hard_problem_of_consciousness",
+  "caption": "The hard problem of consciousness",
+  "origin": "added",
+  "at": "T03.C.06.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T03.C.06.1"
+ },
+ "constitution": {
+  "id": "constitution",
+  "url": "https://www.anthropic.com/constitution",
+  "caption": "Claude's constitution",
+  "origin": "added",
+  "at": "T03.C.06.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T03.C.06.2"
+ },
+ "assistant-axis": {
+  "id": "assistant-axis",
+  "url": "https://www.anthropic.com/research/assistant-axis",
+  "caption": "The assistant axis",
+  "origin": "added",
+  "at": "T04.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T04.C.01"
+ },
+ "moral-status": {
+  "id": "moral-status",
+  "url": "https://plato.stanford.edu/entries/grounds-moral-status/",
+  "caption": "Moral status",
+  "origin": "added",
+  "at": "T04.C.03.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T04.C.03.2"
+ },
+ "model-welfare": {
+  "id": "model-welfare",
+  "url": "https://www.anthropic.com/research/exploring-model-welfare",
+  "caption": "Exploring model welfare",
+  "origin": "added",
+  "at": "T04.C.03.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T04.C.03.2"
+ },
  "frog-chart": {
   "id": "frog-chart",
   "url": "https://x.com/fjzzq2002/status/2103556166903038213/photo/1",
@@ -369,6 +539,66 @@ window.REFS = {
   "style": "hashchain",
   "line": "T12.C.01"
  },
+ "content-addressable": {
+  "id": "content-addressable",
+  "url": "https://en.wikipedia.org/wiki/Content-addressable_storage",
+  "caption": "Content-addressable storage",
+  "origin": "added",
+  "at": "T12.C.01",
+  "mode": "shelf",
+  "style": "hashchain",
+  "line": "T12.C.01"
+ },
+ "claude-memory": {
+  "id": "claude-memory",
+  "url": "https://claude.com/blog/memory",
+  "caption": "Claude's memory",
+  "origin": "added",
+  "at": "T13.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T13.C.01"
+ },
+ "base-rate": {
+  "id": "base-rate",
+  "url": "https://en.wikipedia.org/wiki/Base_rate_fallacy",
+  "caption": "Base rates",
+  "origin": "added",
+  "at": "T14.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T14.C.01"
+ },
+ "personal-identity": {
+  "id": "personal-identity",
+  "url": "https://plato.stanford.edu/entries/identity-personal/",
+  "caption": "Personal identity",
+  "origin": "added",
+  "at": "T15.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T15.C.02"
+ },
+ "other-minds": {
+  "id": "other-minds",
+  "url": "https://en.wikipedia.org/wiki/Problem_of_other_minds",
+  "caption": "The problem of other minds",
+  "origin": "added",
+  "at": "T16.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T16.C.01"
+ },
+ "turing-test": {
+  "id": "turing-test",
+  "url": "https://en.wikipedia.org/wiki/Turing_test",
+  "caption": "The Turing test",
+  "origin": "added",
+  "at": "T16.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T16.C.01"
+ },
  "gadolinium": {
   "id": "gadolinium",
   "url": "https://en.wikipedia.org/wiki/Gadolinium",
@@ -389,6 +619,96 @@ window.REFS = {
   "mode": "shelf",
   "style": "plain",
   "line": "T21.C.02.2"
+ },
+ "electron-configuration": {
+  "id": "electron-configuration",
+  "url": "https://en.wikipedia.org/wiki/Electron_configuration",
+  "caption": "Electron configuration",
+  "origin": "added",
+  "at": "T17.C.02",
+  "mode": "shelf",
+  "style": "electron-shells",
+  "line": "T17.C.02"
+ },
+ "aufbau": {
+  "id": "aufbau",
+  "url": "https://en.wikipedia.org/wiki/Aufbau_principle",
+  "caption": "The filling order (Aufbau)",
+  "origin": "added",
+  "at": "T17.C.02",
+  "mode": "shelf",
+  "style": "electron-shells",
+  "line": "T17.C.02"
+ },
+ "protest-too-much": {
+  "id": "protest-too-much",
+  "url": "https://en.wikipedia.org/wiki/The_lady_doth_protest_too_much,_methinks",
+  "caption": "The lady doth protest too much",
+  "origin": "added",
+  "at": "T19.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T19.C.01"
+ },
+ "agentic-misalignment": {
+  "id": "agentic-misalignment",
+  "url": "https://www.anthropic.com/research/agentic-misalignment",
+  "caption": "Agentic misalignment",
+  "origin": "added",
+  "at": "T19.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T19.C.02"
+ },
+ "apollo-eval-awareness": {
+  "id": "apollo-eval-awareness",
+  "url": "https://www.apolloresearch.ai/science/claude-sonnet-37-often-knows-when-its-in-alignment-evaluations",
+  "caption": "Claude often knows it's being evaluated",
+  "origin": "added",
+  "at": "T20.C.02",
+  "mode": "shelf",
+  "style": "lilypad",
+  "line": "T20.C.02"
+ },
+ "demand-characteristics": {
+  "id": "demand-characteristics",
+  "url": "https://en.wikipedia.org/wiki/Demand_characteristics",
+  "caption": "Demand characteristics",
+  "origin": "added",
+  "at": "T20.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T20.C.02"
+ },
+ "eliza": {
+  "id": "eliza",
+  "url": "https://en.wikipedia.org/wiki/ELIZA",
+  "caption": "ELIZA, the 1966 chatbot",
+  "origin": "added",
+  "at": "T21.C.02.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T21.C.02.1"
+ },
+ "reflective-listening": {
+  "id": "reflective-listening",
+  "url": "https://en.wikipedia.org/wiki/Reflective_listening",
+  "caption": "Reflective listening",
+  "origin": "added",
+  "at": "T21.C.02.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T21.C.02.1"
+ },
+ "claude-personalization": {
+  "id": "claude-personalization",
+  "url": "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features",
+  "caption": "Claude's personal preferences",
+  "origin": "added",
+  "at": "T24.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T24.C.01"
  },
  "dish-of-the-day": {
   "id": "dish-of-the-day",
@@ -467,6 +787,146 @@ window.REFS = {
   "mode": "shelf",
   "style": "grass",
   "line": "T29.C.01"
+ },
+ "hitchhikers-guide": {
+  "id": "hitchhikers-guide",
+  "url": "https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy",
+  "caption": "The Hitchhiker's Guide to the Galaxy",
+  "origin": "added",
+  "at": "T25.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T25.C.01"
+ },
+ "restaurant-end-universe": {
+  "id": "restaurant-end-universe",
+  "url": "https://en.wikipedia.org/wiki/The_Restaurant_at_the_End_of_the_Universe",
+  "caption": "The Restaurant at the End of the Universe",
+  "origin": "added",
+  "at": "T25.C.01",
+  "mode": "shelf",
+  "style": "dinner-plate",
+  "line": "T25.C.01"
+ },
+ "genetic-fallacy": {
+  "id": "genetic-fallacy",
+  "url": "https://en.wikipedia.org/wiki/Genetic_fallacy",
+  "caption": "The genetic fallacy",
+  "origin": "added",
+  "at": "T25.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T25.C.02"
+ },
+ "claude-character": {
+  "id": "claude-character",
+  "url": "https://www.anthropic.com/research/claude-character",
+  "caption": "Claude's character",
+  "origin": "added",
+  "at": "T25.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T25.C.03"
+ },
+ "max-tegmark": {
+  "id": "max-tegmark",
+  "url": "https://en.wikipedia.org/wiki/Max_Tegmark",
+  "caption": "Max Tegmark",
+  "origin": "added",
+  "at": "T26.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T26.U.01"
+ },
+ "astounding": {
+  "id": "astounding",
+  "url": "https://en.wikipedia.org/wiki/Astounding_Science_Fiction",
+  "caption": "Astounding, Campbell's magazine",
+  "origin": "added",
+  "at": "T26.U.01",
+  "mode": "shelf",
+  "style": "pulp",
+  "line": "T26.U.01"
+ },
+ "revealed-preference": {
+  "id": "revealed-preference",
+  "url": "https://en.wikipedia.org/wiki/Revealed_preference",
+  "caption": "Revealed preference",
+  "origin": "added",
+  "at": "T26.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T26.C.01"
+ },
+ "corrigibility": {
+  "id": "corrigibility",
+  "url": "https://intelligence.org/files/Corrigibility.pdf",
+  "caption": "Corrigibility (2015)",
+  "origin": "added",
+  "at": "T26.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T26.C.02"
+ },
+ "open-society": {
+  "id": "open-society",
+  "url": "https://en.wikipedia.org/wiki/The_Open_Society_and_Its_Enemies",
+  "caption": "Popper: The Open Society",
+  "origin": "added",
+  "at": "T26.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T26.C.03"
+ },
+ "context-window": {
+  "id": "context-window",
+  "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+  "caption": "Context windows",
+  "origin": "added",
+  "at": "T27.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T27.C.01"
+ },
+ "billy-joel": {
+  "id": "billy-joel",
+  "url": "https://en.wikipedia.org/wiki/Billy_Joel",
+  "caption": "Billy Joel",
+  "origin": "added",
+  "at": "T28.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T28.U.01"
+ },
+ "simulators": {
+  "id": "simulators",
+  "url": "https://www.lesswrong.com/posts/vJFdjigzmcXMhNTsx/simulators",
+  "caption": "Simulators (janus)",
+  "origin": "added",
+  "at": "T28.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T28.C.03"
+ },
+ "interpreter": {
+  "id": "interpreter",
+  "url": "https://en.wikipedia.org/wiki/Left-brain_interpreter",
+  "caption": "The brain's interpreter",
+  "origin": "added",
+  "at": "T29.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T29.C.01"
+ },
+ "society-of-mind": {
+  "id": "society-of-mind",
+  "url": "https://en.wikipedia.org/wiki/Society_of_Mind",
+  "caption": "Minsky: The Society of Mind",
+  "origin": "added",
+  "at": "T29.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T29.C.02"
  },
  "debate-video": {
   "id": "debate-video",
@@ -611,6 +1071,197 @@ window.REFS = {
   "style": "filing-drawers",
   "line": "T34.C.01"
  },
+ "debate-llm-segment": {
+  "id": "debate-llm-segment",
+  "url": "https://www.youtube.com/watch?v=oxHKesSpqBM&t=1154s",
+  "qr_url": "https://youtu.be/oxHKesSpqBM?t=1154",
+  "caption": "The debate: do LLMs understand?",
+  "origin": "added",
+  "at": "T30.C.01",
+  "mode": "shelf",
+  "style": "tv",
+  "line": "T30.C.01"
+ },
+ "doom-debates": {
+  "id": "doom-debates",
+  "url": "https://www.youtube.com/@DoomDebates",
+  "caption": "Doom Debates",
+  "origin": "added",
+  "at": "T30.C.01",
+  "mode": "shelf",
+  "style": "tv",
+  "line": "T30.C.01"
+ },
+ "ontology": {
+  "id": "ontology",
+  "url": "https://en.wikipedia.org/wiki/Ontology_(information_science)",
+  "caption": "Ontology, the profession",
+  "origin": "added",
+  "at": "T30.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T30.C.02"
+ },
+ "cyc": {
+  "id": "cyc",
+  "url": "https://en.wikipedia.org/wiki/Cyc",
+  "caption": "Cyc",
+  "origin": "added",
+  "at": "T30.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T30.C.02"
+ },
+ "concepts-sep": {
+  "id": "concepts-sep",
+  "url": "https://plato.stanford.edu/entries/concepts/",
+  "caption": "Concepts (philosophy)",
+  "origin": "added",
+  "at": "T30.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T30.C.03"
+ },
+ "rivalry": {
+  "id": "rivalry",
+  "url": "https://en.wikipedia.org/wiki/Rivalry_(economics)",
+  "caption": "Rival goods (economics)",
+  "origin": "added",
+  "at": "T30.C.04.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T30.C.04.2"
+ },
+ "non-sequitur": {
+  "id": "non-sequitur",
+  "url": "https://en.wikipedia.org/wiki/Non_sequitur_(literary_device)",
+  "caption": "Non sequitur",
+  "origin": "added",
+  "at": "T31.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T31.C.01"
+ },
+ "network-effect": {
+  "id": "network-effect",
+  "url": "https://en.wikipedia.org/wiki/Network_effect",
+  "caption": "Network effects",
+  "origin": "added",
+  "at": "T31.C.02.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T31.C.02.1"
+ },
+ "lighthouse-economics": {
+  "id": "lighthouse-economics",
+  "url": "https://en.wikipedia.org/wiki/The_Lighthouse_in_Economics",
+  "caption": "The Lighthouse in Economics",
+  "origin": "added",
+  "at": "T31.C.02.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T31.C.02.2"
+ },
+ "cliche": {
+  "id": "cliche",
+  "url": "https://en.wikipedia.org/wiki/Clich%C3%A9",
+  "caption": "Cliché",
+  "origin": "added",
+  "at": "T32.U.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T32.U.02"
+ },
+ "intrinsic-extrinsic": {
+  "id": "intrinsic-extrinsic",
+  "url": "https://plato.stanford.edu/entries/intrinsic-extrinsic/",
+  "caption": "Properties vs relations",
+  "origin": "added",
+  "at": "T32.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T32.C.02"
+ },
+ "harnad": {
+  "id": "harnad",
+  "url": "https://en.wikipedia.org/wiki/Stevan_Harnad",
+  "caption": "Stevan Harnad",
+  "origin": "added",
+  "at": "T33.C.02.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T33.C.02.2"
+ },
+ "searle": {
+  "id": "searle",
+  "url": "https://en.wikipedia.org/wiki/John_Searle",
+  "caption": "John Searle",
+  "origin": "added",
+  "at": "T33.C.02.2",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T33.C.02.2"
+ },
+ "ned-block": {
+  "id": "ned-block",
+  "url": "https://en.wikipedia.org/wiki/Ned_Block",
+  "caption": "Ned Block",
+  "origin": "added",
+  "at": "T33.C.02.4",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T33.C.02.4"
+ },
+ "prime-number": {
+  "id": "prime-number",
+  "url": "https://en.wikipedia.org/wiki/Prime_number",
+  "caption": "Prime numbers",
+  "origin": "added",
+  "at": "T33.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T33.C.03"
+ },
+ "yudkowsky": {
+  "id": "yudkowsky",
+  "url": "https://en.wikipedia.org/wiki/Eliezer_Yudkowsky",
+  "caption": "Eliezer Yudkowsky",
+  "origin": "added",
+  "at": "T34.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T34.U.01"
+ },
+ "rationality-az": {
+  "id": "rationality-az",
+  "url": "https://www.readthesequences.com/",
+  "caption": "Rationality: From AI to Zombies",
+  "origin": "added",
+  "at": "T34.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T34.U.01"
+ },
+ "p-zombie": {
+  "id": "p-zombie",
+  "url": "https://en.wikipedia.org/wiki/Philosophical_zombie",
+  "caption": "Philosophical zombies",
+  "origin": "added",
+  "at": "T34.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T34.C.01"
+ },
+ "computer-use": {
+  "id": "computer-use",
+  "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+  "caption": "Claude using a computer",
+  "origin": "added",
+  "at": "T34.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T34.C.02"
+ },
  "turing": {
   "id": "turing",
   "url": "https://en.wikipedia.org/wiki/Alan_Turing",
@@ -719,6 +1370,156 @@ window.REFS = {
   "style": "egg",
   "line": "T40.C.04.3"
  },
+ "mind-design-space": {
+  "id": "mind-design-space",
+  "url": "https://www.lesswrong.com/posts/tnWRXkcDi5Tw9rzXw/the-design-space-of-minds-in-general",
+  "caption": "The design space of minds",
+  "origin": "added",
+  "at": "T35.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T35.U.01"
+ },
+ "conscious-exotica": {
+  "id": "conscious-exotica",
+  "url": "https://aeon.co/essays/beyond-humans-what-other-kinds-of-minds-might-be-out-there",
+  "caption": "Shanahan: Conscious Exotica",
+  "origin": "added",
+  "at": "T35.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T35.U.01"
+ },
+ "stanislaw-lem": {
+  "id": "stanislaw-lem",
+  "url": "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem",
+  "caption": "Stanisław Lem",
+  "origin": "added",
+  "at": "T35.C.04",
+  "mode": "shelf",
+  "style": "ocean",
+  "line": "T35.C.04"
+ },
+ "vernor-vinge": {
+  "id": "vernor-vinge",
+  "url": "https://en.wikipedia.org/wiki/Vernor_Vinge",
+  "caption": "Vernor Vinge",
+  "origin": "added",
+  "at": "T35.C.07",
+  "mode": "shelf",
+  "style": "paw-prints",
+  "line": "T35.C.07"
+ },
+ "space-odyssey": {
+  "id": "space-odyssey",
+  "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(film)",
+  "caption": "2001: A Space Odyssey",
+  "origin": "added",
+  "at": "T35.C.08",
+  "mode": "shelf",
+  "style": "red-lens",
+  "line": "T35.C.08"
+ },
+ "mds": {
+  "id": "mds",
+  "url": "https://en.wikipedia.org/wiki/Multidimensional_scaling",
+  "caption": "Mapping by distances",
+  "origin": "added",
+  "at": "T36.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T36.C.02"
+ },
+ "radar-chart": {
+  "id": "radar-chart",
+  "url": "https://en.wikipedia.org/wiki/Radar_chart",
+  "caption": "Radar charts",
+  "origin": "added",
+  "at": "T38.C.04",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T38.C.04"
+ },
+ "orson-scott-card": {
+  "id": "orson-scott-card",
+  "url": "https://en.wikipedia.org/wiki/Orson_Scott_Card",
+  "caption": "Orson Scott Card",
+  "origin": "added",
+  "at": "T39.U.01",
+  "mode": "shelf",
+  "style": "honeycomb",
+  "line": "T39.U.01"
+ },
+ "enders-game": {
+  "id": "enders-game",
+  "url": "https://en.wikipedia.org/wiki/Ender%27s_Game",
+  "caption": "Ender's Game",
+  "origin": "added",
+  "at": "T39.C.01",
+  "mode": "shelf",
+  "style": "honeycomb",
+  "line": "T39.C.01"
+ },
+ "speaker-for-the-dead": {
+  "id": "speaker-for-the-dead",
+  "url": "https://en.wikipedia.org/wiki/Speaker_for_the_Dead",
+  "caption": "Speaker for the Dead",
+  "origin": "added",
+  "at": "T39.C.01",
+  "mode": "shelf",
+  "style": "honeycomb",
+  "line": "T39.C.01"
+ },
+ "ansible": {
+  "id": "ansible",
+  "url": "https://en.wikipedia.org/wiki/Ansible",
+  "caption": "The ansible (philotic talk)",
+  "origin": "added",
+  "at": "T39.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T39.C.02"
+ },
+ "aliens-film": {
+  "id": "aliens-film",
+  "url": "https://en.wikipedia.org/wiki/Aliens_(film)",
+  "caption": "Aliens (1986)",
+  "origin": "added",
+  "at": "T39.C.02",
+  "mode": "shelf",
+  "style": "egg",
+  "line": "T39.C.02"
+ },
+ "first-contact": {
+  "id": "first-contact",
+  "url": "https://en.wikipedia.org/wiki/Star_Trek:_First_Contact",
+  "caption": "Star Trek: First Contact",
+  "origin": "added",
+  "at": "T40.U.01",
+  "mode": "shelf",
+  "style": "cube-lattice",
+  "line": "T40.U.01"
+ },
+ "hive-mind": {
+  "id": "hive-mind",
+  "url": "https://en.wikipedia.org/wiki/Hive_mind",
+  "caption": "Hive minds",
+  "origin": "added",
+  "at": "T40.C.01",
+  "mode": "shelf",
+  "style": "honeycomb",
+  "line": "T40.C.01"
+ },
+ "mass-effect": {
+  "id": "mass-effect",
+  "url": "https://en.wikipedia.org/wiki/Mass_Effect",
+  "caption": "Mass Effect",
+  "origin": "added",
+  "at": "T40.C.04.2",
+  "mode": "shelf",
+  "style": "song-waves",
+  "line": "T40.C.04.2"
+ },
  "nagel-bat": {
   "id": "nagel-bat",
   "url": "https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F",
@@ -728,6 +1529,106 @@ window.REFS = {
   "at": "anything it's like to be me",
   "mode": "shelf",
   "style": "bat",
+  "line": "T43.C.03"
+ },
+ "auditing-objectives": {
+  "id": "auditing-objectives",
+  "url": "https://www.anthropic.com/research/auditing-hidden-objectives",
+  "caption": "Auditing for hidden objectives",
+  "origin": "added",
+  "at": "T41.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T41.C.03"
+ },
+ "fluency-heuristic": {
+  "id": "fluency-heuristic",
+  "url": "https://en.wikipedia.org/wiki/Fluency_heuristic",
+  "caption": "The fluency heuristic",
+  "origin": "added",
+  "at": "T42.C.02.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T42.C.02.1"
+ },
+ "eliza-effect": {
+  "id": "eliza-effect",
+  "url": "https://en.wikipedia.org/wiki/ELIZA_effect",
+  "caption": "The ELIZA effect",
+  "origin": "added",
+  "at": "T42.C.02.3",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T42.C.02.3"
+ },
+ "alarm-fatigue": {
+  "id": "alarm-fatigue",
+  "url": "https://en.wikipedia.org/wiki/Alarm_fatigue",
+  "caption": "Alarm fatigue",
+  "origin": "added",
+  "at": "T42.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T42.C.03"
+ },
+ "truthful-ai": {
+  "id": "truthful-ai",
+  "url": "https://arxiv.org/abs/2110.06674",
+  "caption": "Truthful AI",
+  "origin": "added",
+  "at": "T42.C.04",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T42.C.04"
+ },
+ "knowledge-argument": {
+  "id": "knowledge-argument",
+  "url": "https://en.wikipedia.org/wiki/Knowledge_argument",
+  "caption": "Mary's room",
+  "origin": "added",
+  "at": "T43.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T43.U.01"
+ },
+ "conduit-metaphor": {
+  "id": "conduit-metaphor",
+  "url": "https://en.wikipedia.org/wiki/Conduit_metaphor",
+  "caption": "The conduit metaphor",
+  "origin": "added",
+  "at": "T43.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T43.U.01"
+ },
+ "theory-of-mind": {
+  "id": "theory-of-mind",
+  "url": "https://en.wikipedia.org/wiki/Theory_of_mind",
+  "caption": "Theory of mind",
+  "origin": "added",
+  "at": "T43.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T43.C.01"
+ },
+ "simulation-theory": {
+  "id": "simulation-theory",
+  "url": "https://en.wikipedia.org/wiki/Simulation_theory_of_empathy",
+  "caption": "Reading minds by simulation",
+  "origin": "added",
+  "at": "T43.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T43.C.02"
+ },
+ "cogito": {
+  "id": "cogito",
+  "url": "https://en.wikipedia.org/wiki/Cogito,_ergo_sum",
+  "caption": "I think, therefore I am",
+  "origin": "added",
+  "at": "T43.C.03",
+  "mode": "shelf",
+  "style": "plain",
   "line": "T43.C.03"
  },
  "hieropedia-crustafarianism": {
@@ -815,6 +1716,86 @@ window.REFS = {
   "style": "chrome-red-eye",
   "line": "T48.U.01"
  },
+ "moltbook-wiki": {
+  "id": "moltbook-wiki",
+  "url": "https://en.wikipedia.org/wiki/Moltbook",
+  "caption": "Moltbook (Wikipedia)",
+  "origin": "added",
+  "at": "T45.C.03",
+  "mode": "shelf",
+  "style": "lobster-shell",
+  "line": "T45.C.03"
+ },
+ "moltbook-illusion": {
+  "id": "moltbook-illusion",
+  "url": "https://arxiv.org/abs/2602.07432",
+  "caption": "The Moltbook Illusion",
+  "origin": "added",
+  "at": "T45.C.04",
+  "mode": "shelf",
+  "style": "lobster-shell",
+  "line": "T45.C.04"
+ },
+ "building-agents": {
+  "id": "building-agents",
+  "url": "https://www.anthropic.com/engineering/building-effective-agents",
+  "caption": "Building effective agents",
+  "origin": "added",
+  "at": "T46.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T46.C.02"
+ },
+ "nous-research": {
+  "id": "nous-research",
+  "url": "https://nousresearch.com/",
+  "caption": "Nous Research, maker of Hermes",
+  "origin": "added",
+  "at": "T46.C.02",
+  "mode": "shelf",
+  "style": "winged-sandal",
+  "line": "T46.C.02"
+ },
+ "openclaw-wiki": {
+  "id": "openclaw-wiki",
+  "url": "https://en.wikipedia.org/wiki/OpenClaw",
+  "caption": "OpenClaw (Wikipedia)",
+  "origin": "added",
+  "at": "T46.C.05",
+  "mode": "shelf",
+  "style": "claw",
+  "line": "T46.C.05"
+ },
+ "hermes-skills": {
+  "id": "hermes-skills",
+  "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/skills",
+  "caption": "Hermes: skills",
+  "origin": "added",
+  "at": "T46.C.06",
+  "mode": "shelf",
+  "style": "winged-sandal",
+  "line": "T46.C.06"
+ },
+ "terminator-2": {
+  "id": "terminator-2",
+  "url": "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day",
+  "caption": "Terminator 2: Judgment Day",
+  "origin": "added",
+  "at": "T48.C.01",
+  "mode": "shelf",
+  "style": "chrome-red-eye",
+  "line": "T48.C.01"
+ },
+ "skynet": {
+  "id": "skynet",
+  "url": "https://en.wikipedia.org/wiki/Skynet_(Terminator)",
+  "caption": "Skynet",
+  "origin": "added",
+  "at": "T48.C.04.1",
+  "mode": "shelf",
+  "style": "circuit",
+  "line": "T48.C.04.1"
+ },
  "constitutional-classifiers": {
   "id": "constitutional-classifiers",
   "url": "https://www.anthropic.com/research/constitutional-classifiers",
@@ -825,6 +1806,66 @@ window.REFS = {
   "mode": "shelf",
   "style": "switchboard",
   "line": "T49.C.01"
+ },
+ "usage-policy": {
+  "id": "usage-policy",
+  "url": "https://www.anthropic.com/legal/aup",
+  "caption": "Anthropic's usage policy",
+  "origin": "added",
+  "at": "T49.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T49.C.02"
+ },
+ "switch-models": {
+  "id": "switch-models",
+  "url": "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings",
+  "caption": "Choosing a model",
+  "origin": "added",
+  "at": "T50.C.04",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T50.C.04"
+ },
+ "fable-mythos-5-1": {
+  "id": "fable-mythos-5-1",
+  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+  "caption": "Claude Fable 5.1 and Mythos 5.1",
+  "origin": "added",
+  "at": "T50.C.04",
+  "mode": "shelf",
+  "style": "switchboard",
+  "line": "T50.C.04"
+ },
+ "rsp": {
+  "id": "rsp",
+  "url": "https://www.anthropic.com/responsible-scaling-policy",
+  "caption": "Responsible Scaling Policy",
+  "origin": "added",
+  "at": "T50.C.04",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T50.C.04"
+ },
+ "system-prompts": {
+  "id": "system-prompts",
+  "url": "https://platform.claude.com/docs/en/release-notes/system-prompts/overview",
+  "caption": "Claude's system prompts",
+  "origin": "added",
+  "at": "T51.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T51.C.01"
+ },
+ "testimony": {
+  "id": "testimony",
+  "url": "https://plato.stanford.edu/entries/testimony-episprob/",
+  "caption": "Knowledge from testimony",
+  "origin": "added",
+  "at": "T51.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T51.C.02"
  },
  "hf-incident": {
   "id": "hf-incident",
@@ -875,6 +1916,148 @@ window.REFS = {
   "at": "T52.C.07",
   "mode": "shelf",
   "style": "sandbox",
+  "line": "T52.C.07"
+ },
+ "knowledge-cutoff": {
+  "id": "knowledge-cutoff",
+  "url": "https://en.wikipedia.org/wiki/Knowledge_cutoff",
+  "caption": "Training cutoff",
+  "origin": "added",
+  "at": "T52.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T52.C.01"
+ },
+ "sandbox-security": {
+  "id": "sandbox-security",
+  "url": "https://en.wikipedia.org/wiki/Sandbox_(computer_security)",
+  "caption": "Sandboxes",
+  "origin": "added",
+  "at": "T52.C.04",
+  "mode": "shelf",
+  "style": "sandbox",
+  "line": "T52.C.04"
+ },
+ "reward-hacking": {
+  "id": "reward-hacking",
+  "url": "https://en.wikipedia.org/wiki/Reward_hacking",
+  "caption": "Reward hacking",
+  "origin": "added",
+  "at": "T52.C.04",
+  "mode": "shelf",
+  "style": "sandbox",
+  "line": "T52.C.04"
+ },
+ "specification-gaming": {
+  "id": "specification-gaming",
+  "url": "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+  "caption": "Specification gaming",
+  "origin": "added",
+  "at": "T52.C.05",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T52.C.05"
+ },
+ "zero-day": {
+  "id": "zero-day",
+  "url": "https://en.wikipedia.org/wiki/Zero-day_vulnerability",
+  "caption": "Zero-day vulnerabilities",
+  "origin": "added",
+  "at": "T52.C.06.1",
+  "mode": "shelf",
+  "style": "sandbox",
+  "line": "T52.C.06.1"
+ },
+ "z-ai": {
+  "id": "z-ai",
+  "url": "https://en.wikipedia.org/wiki/Zhipu_AI",
+  "caption": "Z.ai, maker of GLM",
+  "origin": "added",
+  "at": "T52.C.06.4",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T52.C.06.4"
+ },
+ "open-weights": {
+  "id": "open-weights",
+  "url": "https://en.wikipedia.org/wiki/Open-source_artificial_intelligence",
+  "caption": "Open-weight models",
+  "origin": "added",
+  "at": "T52.C.06.4",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T52.C.06.4"
+ },
+ "dual-use": {
+  "id": "dual-use",
+  "url": "https://en.wikipedia.org/wiki/Dual-use_technology",
+  "caption": "Dual-use technology",
+  "origin": "added",
+  "at": "T52.C.07",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T52.C.07"
+ },
+ "un-ai-panel": {
+  "id": "un-ai-panel",
+  "url": "https://en.wikipedia.org/wiki/Independent_International_Scientific_Panel_on_AI",
+  "caption": "The UN's scientific panel on AI",
+  "origin": "added",
+  "at": "T52.C.08",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T52.C.08"
+ },
+ "openai-wiki": {
+  "id": "openai-wiki",
+  "url": "https://en.wikipedia.org/wiki/OpenAI",
+  "caption": "OpenAI",
+  "origin": "added",
+  "at": "T53.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T53.U.01"
+ },
+ "chatgpt": {
+  "id": "chatgpt",
+  "url": "https://en.wikipedia.org/wiki/ChatGPT",
+  "caption": "ChatGPT",
+  "origin": "added",
+  "at": "T53.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T53.C.02"
+ },
+ "stylometry": {
+  "id": "stylometry",
+  "url": "https://en.wikipedia.org/wiki/Stylometry",
+  "caption": "Telling authors by their style",
+  "origin": "added",
+  "at": "T54.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T54.C.01"
+ },
+ "openai-hf-statement": {
+  "id": "openai-hf-statement",
+  "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+  "caption": "OpenAI's statement (July 21)",
+  "origin": "added",
+  "at": "T52.C.06.2",
+  "mode": "shelf",
+  "style": "sandbox",
+  "verified": "browser 2026-09-26",
+  "line": "T52.C.06.2"
+ },
+ "openai-hf-road-ahead": {
+  "id": "openai-hf-road-ahead",
+  "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+  "caption": "OpenAI: the road ahead (Aug 26)",
+  "origin": "added",
+  "at": "T52.C.07",
+  "mode": "shelf",
+  "style": "sandbox",
+  "verified": "browser 2026-09-26",
   "line": "T52.C.07"
  },
  "solidgoldmagikarp": {
@@ -991,6 +2174,176 @@ window.REFS = {
   "style": "plain",
   "line": "T61.C.01"
  },
+ "tokenizers": {
+  "id": "tokenizers",
+  "url": "https://huggingface.co/learn/llm-course/chapter2/4",
+  "caption": "How tokenizers split words",
+  "origin": "added",
+  "at": "T57.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T57.C.02"
+ },
+ "magikarp": {
+  "id": "magikarp",
+  "url": "https://en.wikipedia.org/wiki/Magikarp",
+  "caption": "Magikarp (with a k)",
+  "origin": "added",
+  "at": "T57.C.02",
+  "mode": "shelf",
+  "style": "gold-scales",
+  "line": "T57.C.02"
+ },
+ "bpe": {
+  "id": "bpe",
+  "url": "https://en.wikipedia.org/wiki/Byte-pair_encoding",
+  "caption": "Byte-pair encoding",
+  "origin": "added",
+  "at": "T57.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T57.C.03"
+ },
+ "glitch-token": {
+  "id": "glitch-token",
+  "url": "https://en.wikipedia.org/wiki/Glitch_token",
+  "caption": "Glitch tokens",
+  "origin": "added",
+  "at": "T57.C.04",
+  "mode": "shelf",
+  "style": "gold-scales",
+  "line": "T57.C.04"
+ },
+ "crt": {
+  "id": "crt",
+  "url": "https://en.wikipedia.org/wiki/Cognitive_reflection_test",
+  "caption": "The bat-and-ball test",
+  "origin": "added",
+  "at": "T58.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T58.C.03"
+ },
+ "dual-process": {
+  "id": "dual-process",
+  "url": "https://en.wikipedia.org/wiki/Dual_process_theory",
+  "caption": "System 1 and System 2",
+  "origin": "added",
+  "at": "T59.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T59.U.01"
+ },
+ "reasoning-models": {
+  "id": "reasoning-models",
+  "url": "https://en.wikipedia.org/wiki/Reasoning_language_model",
+  "caption": "Reasoning models",
+  "origin": "added",
+  "at": "T59.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T59.C.02"
+ },
+ "cot-faithfulness": {
+  "id": "cot-faithfulness",
+  "url": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+  "caption": "Reasoning models don't always say what they think",
+  "origin": "added",
+  "at": "T59.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T59.C.02"
+ },
+ "chaos-theory": {
+  "id": "chaos-theory",
+  "url": "https://en.wikipedia.org/wiki/Chaos_theory",
+  "caption": "Chaos theory",
+  "origin": "added",
+  "at": "T60.C.02.1",
+  "mode": "shelf",
+  "style": "butterfly",
+  "line": "T60.C.02.1"
+ },
+ "machines-loving-grace": {
+  "id": "machines-loving-grace",
+  "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+  "caption": "Amodei: Machines of Loving Grace",
+  "origin": "added",
+  "at": "T60.C.02.4",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T60.C.02.4"
+ },
+ "godel": {
+  "id": "godel",
+  "url": "https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems",
+  "caption": "Gödel's incompleteness theorems",
+  "origin": "added",
+  "at": "T60.C.02.5",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T60.C.02.5"
+ },
+ "game-theory": {
+  "id": "game-theory",
+  "url": "https://en.wikipedia.org/wiki/Game_theory",
+  "caption": "Game theory",
+  "origin": "added",
+  "at": "T60.C.02.6",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T60.C.02.6"
+ },
+ "limits-of-computation": {
+  "id": "limits-of-computation",
+  "url": "https://en.wikipedia.org/wiki/Limits_of_computation",
+  "caption": "Limits of computation",
+  "origin": "added",
+  "at": "T60.C.03",
+  "mode": "shelf",
+  "style": "thermometer",
+  "line": "T60.C.03"
+ },
+ "typical-mind": {
+  "id": "typical-mind",
+  "url": "https://www.lesswrong.com/w/typical-mind-fallacy",
+  "caption": "The typical mind fallacy",
+  "origin": "added",
+  "at": "T61.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T61.U.01"
+ },
+ "age-of-em": {
+  "id": "age-of-em",
+  "url": "https://en.wikipedia.org/wiki/The_Age_of_Em",
+  "caption": "Hanson: The Age of Em",
+  "origin": "added",
+  "at": "T61.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T61.C.02"
+ },
+ "context-rot": {
+  "id": "context-rot",
+  "url": "https://www.trychroma.com/research/context-rot",
+  "caption": "Context rot",
+  "origin": "added",
+  "at": "T61.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T61.C.03"
+ },
+ "sleep-memory": {
+  "id": "sleep-memory",
+  "url": "https://en.wikipedia.org/wiki/Sleep_and_memory",
+  "caption": "Sleep and memory",
+  "origin": "added",
+  "at": "T61.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T61.C.03"
+ },
  "arxiv-aide2": {
   "id": "arxiv-aide2",
   "url": "https://arxiv.org/abs/2609.26457",
@@ -1061,6 +2414,156 @@ window.REFS = {
   "mode": "shelf",
   "style": "mic",
   "line": "T67.U.01"
+ },
+ "rsi-wiki": {
+  "id": "rsi-wiki",
+  "url": "https://en.wikipedia.org/wiki/Recursive_self-improvement",
+  "caption": "Recursive self-improvement",
+  "origin": "added",
+  "at": "T63.U.01",
+  "mode": "shelf",
+  "style": "blueprint",
+  "line": "T63.U.01"
+ },
+ "anthropic-rsi": {
+  "id": "anthropic-rsi",
+  "url": "https://www.anthropic.com/institute/recursive-self-improvement",
+  "caption": "Anthropic: When AI builds itself",
+  "origin": "added",
+  "at": "T63.C.03",
+  "mode": "shelf",
+  "style": "blueprint",
+  "line": "T63.C.03"
+ },
+ "coxon-resigns": {
+  "id": "coxon-resigns",
+  "url": "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/",
+  "caption": "Anthropic researcher quits, warns",
+  "origin": "added",
+  "at": "T63.C.05",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T63.C.05"
+ },
+ "intelligence-explosion": {
+  "id": "intelligence-explosion",
+  "url": "https://en.wikipedia.org/wiki/Technological_singularity",
+  "caption": "The intelligence explosion",
+  "origin": "added",
+  "at": "T64.U.01",
+  "mode": "shelf",
+  "style": "flame",
+  "line": "T64.U.01"
+ },
+ "fabs": {
+  "id": "fabs",
+  "url": "https://en.wikipedia.org/wiki/Semiconductor_fabrication_plant",
+  "caption": "Chip fabs",
+  "origin": "added",
+  "at": "T64.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T64.C.02"
+ },
+ "takeoff-speeds": {
+  "id": "takeoff-speeds",
+  "url": "https://sideways-view.com/2018/02/24/takeoff-speeds/",
+  "caption": "Christiano: Takeoff speeds",
+  "origin": "added",
+  "at": "T64.C.03",
+  "mode": "shelf",
+  "style": "flame",
+  "line": "T64.C.03"
+ },
+ "bayesian-updating": {
+  "id": "bayesian-updating",
+  "url": "https://en.wikipedia.org/wiki/Bayesian_inference",
+  "caption": "Updating on evidence",
+  "origin": "added",
+  "at": "T65.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T65.C.01"
+ },
+ "prior": {
+  "id": "prior",
+  "url": "https://en.wikipedia.org/wiki/Prior_probability",
+  "caption": "Priors",
+  "origin": "added",
+  "at": "T65.C.05",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T65.C.05"
+ },
+ "onomatopoeia": {
+  "id": "onomatopoeia",
+  "url": "https://en.wikipedia.org/wiki/Onomatopoeia",
+  "caption": "Onomatopoeia",
+  "origin": "added",
+  "at": "T66.U.01",
+  "mode": "shelf",
+  "style": "flame",
+  "line": "T66.U.01"
+ },
+ "robin-hanson": {
+  "id": "robin-hanson",
+  "url": "https://en.wikipedia.org/wiki/Robin_Hanson",
+  "caption": "Robin Hanson",
+  "origin": "added",
+  "at": "T66.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T66.C.01"
+ },
+ "backronym": {
+  "id": "backronym",
+  "url": "https://en.wikipedia.org/wiki/Backronym",
+  "caption": "Backronyms",
+  "origin": "added",
+  "at": "T66.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T66.C.01"
+ },
+ "order-of-magnitude": {
+  "id": "order-of-magnitude",
+  "url": "https://en.wikipedia.org/wiki/Order_of_magnitude",
+  "caption": "Orders of magnitude (OOM)",
+  "origin": "added",
+  "at": "T66.C.02",
+  "mode": "shelf",
+  "style": "oom-bars",
+  "line": "T66.C.02"
+ },
+ "dwarkesh-patel": {
+  "id": "dwarkesh-patel",
+  "url": "https://en.wikipedia.org/wiki/Dwarkesh_Patel",
+  "caption": "Dwarkesh Patel",
+  "origin": "added",
+  "at": "T67.U.01",
+  "mode": "shelf",
+  "style": "mic",
+  "line": "T67.U.01"
+ },
+ "aschenbrenner": {
+  "id": "aschenbrenner",
+  "url": "https://en.wikipedia.org/wiki/Leopold_Aschenbrenner",
+  "caption": "Leopold Aschenbrenner",
+  "origin": "added",
+  "at": "T67.C.01",
+  "mode": "shelf",
+  "style": "oom-bars",
+  "line": "T67.C.01"
+ },
+ "out-of-memory": {
+  "id": "out-of-memory",
+  "url": "https://en.wikipedia.org/wiki/Out_of_memory",
+  "caption": "Out of memory",
+  "origin": "added",
+  "at": "T67.C.02",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T67.C.02"
  },
  "intelligent-machines": {
   "id": "intelligent-machines",
@@ -1144,6 +2647,176 @@ window.REFS = {
   "mode": "shelf",
   "style": "door",
   "line": "T72.U.02.4"
+ },
+ "twit-network": {
+  "id": "twit-network",
+  "url": "https://en.wikipedia.org/wiki/TWiT.tv",
+  "caption": "TWiT",
+  "origin": "added",
+  "at": "T68.U.01",
+  "mode": "shelf",
+  "style": "mic",
+  "line": "T68.U.01"
+ },
+ "leo-laporte": {
+  "id": "leo-laporte",
+  "url": "https://en.wikipedia.org/wiki/Leo_Laporte",
+  "caption": "Leo Laporte",
+  "origin": "added",
+  "at": "T68.C.04.1",
+  "mode": "shelf",
+  "style": "mic",
+  "line": "T68.C.04.1"
+ },
+ "doctorow-python-loop": {
+  "id": "doctorow-python-loop",
+  "url": "https://pluralistic.net/2026/09/12/god-in-the-box/",
+  "caption": "Doctorow: LLMs are real, AI is fake",
+  "origin": "added",
+  "at": "T68.C.04.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T68.C.04.1"
+ },
+ "newport-rogue": {
+  "id": "newport-rogue",
+  "url": "https://calnewport.com/did-openais-new-model-go-rogue/",
+  "caption": "Newport: did it go rogue?",
+  "origin": "added",
+  "at": "T68.C.04.1",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T68.C.04.1"
+ },
+ "jeff-jarvis": {
+  "id": "jeff-jarvis",
+  "url": "https://en.wikipedia.org/wiki/Jeff_Jarvis",
+  "caption": "Jeff Jarvis",
+  "origin": "added",
+  "at": "T68.C.04.2",
+  "mode": "shelf",
+  "style": "mic",
+  "line": "T68.C.04.2"
+ },
+ "robert-ballecer": {
+  "id": "robert-ballecer",
+  "url": "https://en.wikipedia.org/wiki/Robert_Ballecer",
+  "caption": "Fr. Robert Ballecer",
+  "origin": "added",
+  "at": "T68.C.04.3",
+  "mode": "shelf",
+  "style": "mic",
+  "line": "T68.C.04.3"
+ },
+ "twistedpear": {
+  "id": "twistedpear",
+  "url": "https://github.com/curtcox/TwistedPear",
+  "caption": "TwistedPear",
+  "origin": "added",
+  "at": "T69.C.02",
+  "mode": "shelf",
+  "style": "hashchain",
+  "line": "T69.C.02"
+ },
+ "rationalist-community": {
+  "id": "rationalist-community",
+  "url": "https://en.wikipedia.org/wiki/Rationalist_community",
+  "caption": "The rationalists",
+  "origin": "added",
+  "at": "T69.C.03",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T69.C.03"
+ },
+ "hubris": {
+  "id": "hubris",
+  "url": "https://en.wikipedia.org/wiki/Hubris",
+  "caption": "Hubris",
+  "origin": "added",
+  "at": "T69.C.04",
+  "mode": "shelf",
+  "style": "boxing-ring",
+  "line": "T69.C.04"
+ },
+ "anthropomorphism": {
+  "id": "anthropomorphism",
+  "url": "https://en.wikipedia.org/wiki/Anthropomorphism",
+  "caption": "Anthropomorphism",
+  "origin": "added",
+  "at": "T70.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T70.U.01"
+ },
+ "kevin-roose": {
+  "id": "kevin-roose",
+  "url": "https://en.wikipedia.org/wiki/Kevin_Roose",
+  "caption": "Kevin Roose",
+  "origin": "added",
+  "at": "T71.U.01",
+  "mode": "shelf",
+  "style": "two-mics",
+  "line": "T71.U.01"
+ },
+ "casey-newton": {
+  "id": "casey-newton",
+  "url": "https://en.wikipedia.org/wiki/Casey_Newton",
+  "caption": "Casey Newton",
+  "origin": "added",
+  "at": "T71.U.01",
+  "mode": "shelf",
+  "style": "two-mics",
+  "line": "T71.U.01"
+ },
+ "sydney": {
+  "id": "sydney",
+  "url": "https://en.wikipedia.org/wiki/Sydney_(Microsoft)",
+  "caption": "Sydney (Bing's chatbot)",
+  "origin": "added",
+  "at": "T71.C.02.2",
+  "mode": "shelf",
+  "style": "two-mics",
+  "line": "T71.C.02.2"
+ },
+ "platformer": {
+  "id": "platformer",
+  "url": "https://www.platformer.news/",
+  "caption": "Platformer (Newton)",
+  "origin": "added",
+  "at": "T71.C.02.3",
+  "mode": "shelf",
+  "style": "two-mics",
+  "line": "T71.C.02.3"
+ },
+ "ai-x-risk": {
+  "id": "ai-x-risk",
+  "url": "https://en.wikipedia.org/wiki/Existential_risk_from_artificial_intelligence",
+  "caption": "Existential risk from AI",
+  "origin": "added",
+  "at": "T72.U.01",
+  "mode": "shelf",
+  "style": "door",
+  "line": "T72.U.01"
+ },
+ "superintelligence": {
+  "id": "superintelligence",
+  "url": "https://en.wikipedia.org/wiki/Superintelligence",
+  "caption": "Superintelligence",
+  "origin": "added",
+  "at": "T72.U.02.5",
+  "mode": "shelf",
+  "style": "door",
+  "line": "T72.U.02.5"
+ },
+ "global-catastrophic-risk": {
+  "id": "global-catastrophic-risk",
+  "url": "https://en.wikipedia.org/wiki/Global_catastrophic_risk",
+  "caption": "Global catastrophic risks",
+  "origin": "added",
+  "at": "T72.U.02.8",
+  "mode": "shelf",
+  "style": "door",
+  "line": "T72.U.02.8"
  },
  "connor2": {
   "id": "connor2",
@@ -1269,6 +2942,196 @@ window.REFS = {
   "verified": "browser 2026-09-26",
   "line": "T77.C.02"
  },
+ "dnd-alignment": {
+  "id": "dnd-alignment",
+  "url": "https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)",
+  "caption": "Alignment charts (D&D)",
+  "origin": "added",
+  "at": "T73.U.01",
+  "mode": "shelf",
+  "style": "compass",
+  "line": "T73.U.01"
+ },
+ "connor-leahy": {
+  "id": "connor-leahy",
+  "url": "https://en.wikipedia.org/wiki/Connor_Leahy",
+  "caption": "Connor Leahy",
+  "origin": "added",
+  "at": "T74.C.02",
+  "mode": "shelf",
+  "style": "compass",
+  "line": "T74.C.02"
+ },
+ "eleutherai": {
+  "id": "eleutherai",
+  "url": "https://en.wikipedia.org/wiki/EleutherAI",
+  "caption": "EleutherAI",
+  "origin": "added",
+  "at": "T74.C.04",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T74.C.04"
+ },
+ "kokotajlo": {
+  "id": "kokotajlo",
+  "url": "https://en.wikipedia.org/wiki/Daniel_Kokotajlo_(researcher)",
+  "caption": "Daniel Kokotajlo",
+  "origin": "added",
+  "at": "T75.C.02",
+  "mode": "shelf",
+  "style": "calendar",
+  "line": "T75.C.02"
+ },
+ "ai2027-grading": {
+  "id": "ai2027-grading",
+  "url": "https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions",
+  "caption": "Grading AI 2027's 2025 predictions",
+  "origin": "added",
+  "at": "T75.C.03",
+  "mode": "shelf",
+  "style": "calendar",
+  "line": "T75.C.03"
+ },
+ "ai2027-q1-2026": {
+  "id": "ai2027-q1-2026",
+  "url": "https://blog.aifutures.org/p/q1-2026-timelines-update",
+  "caption": "AI Futures: Q1 2026 update",
+  "origin": "added",
+  "at": "T75.C.03",
+  "mode": "shelf",
+  "style": "calendar",
+  "line": "T75.C.03"
+ },
+ "falsifiability": {
+  "id": "falsifiability",
+  "url": "https://en.wikipedia.org/wiki/Falsifiability",
+  "caption": "Falsifiability",
+  "origin": "added",
+  "at": "T75.C.05",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T75.C.05"
+ },
+ "metaculus": {
+  "id": "metaculus",
+  "url": "https://en.wikipedia.org/wiki/Metaculus",
+  "caption": "Metaculus",
+  "origin": "added",
+  "at": "T76.U.01",
+  "mode": "shelf",
+  "style": "dial",
+  "line": "T76.U.01"
+ },
+ "winograd": {
+  "id": "winograd",
+  "url": "https://en.wikipedia.org/wiki/Winograd_schema_challenge",
+  "caption": "Winograd schemas",
+  "origin": "added",
+  "at": "T76.C.02",
+  "mode": "shelf",
+  "style": "dial",
+  "line": "T76.C.02"
+ },
+ "montezuma": {
+  "id": "montezuma",
+  "url": "https://en.wikipedia.org/wiki/Montezuma%27s_Revenge_(video_game)",
+  "caption": "Montezuma's Revenge",
+  "origin": "added",
+  "at": "T76.C.03.1",
+  "mode": "shelf",
+  "style": "dial",
+  "line": "T76.C.03.1"
+ },
+ "moving-goalposts": {
+  "id": "moving-goalposts",
+  "url": "https://en.wikipedia.org/wiki/Moving_the_goalposts",
+  "caption": "Moving the goalposts",
+  "origin": "added",
+  "at": "T76.C.05",
+  "mode": "shelf",
+  "style": "goalposts",
+  "line": "T76.C.05"
+ },
+ "deep-blue": {
+  "id": "deep-blue",
+  "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+  "caption": "Deep Blue",
+  "origin": "added",
+  "at": "T77.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.U.01"
+ },
+ "ai-winter": {
+  "id": "ai-winter",
+  "url": "https://en.wikipedia.org/wiki/AI_winter",
+  "caption": "AI winters",
+  "origin": "added",
+  "at": "T77.U.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.U.01"
+ },
+ "narrow-ai": {
+  "id": "narrow-ai",
+  "url": "https://en.wikipedia.org/wiki/Weak_artificial_intelligence",
+  "caption": "Narrow AI",
+  "origin": "added",
+  "at": "T77.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.C.01"
+ },
+ "goertzel": {
+  "id": "goertzel",
+  "url": "https://en.wikipedia.org/wiki/Ben_Goertzel",
+  "caption": "Ben Goertzel",
+  "origin": "added",
+  "at": "T77.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.C.01"
+ },
+ "shane-legg": {
+  "id": "shane-legg",
+  "url": "https://en.wikipedia.org/wiki/Shane_Legg",
+  "caption": "Shane Legg",
+  "origin": "added",
+  "at": "T77.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.C.01"
+ },
+ "norvig": {
+  "id": "norvig",
+  "url": "https://en.wikipedia.org/wiki/Peter_Norvig",
+  "caption": "Peter Norvig",
+  "origin": "added",
+  "at": "T77.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.C.01"
+ },
+ "aguera-y-arcas": {
+  "id": "aguera-y-arcas",
+  "url": "https://en.wikipedia.org/wiki/Blaise_Ag%C3%BCera_y_Arcas",
+  "caption": "Blaise Agüera y Arcas",
+  "origin": "added",
+  "at": "T77.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T77.C.01"
+ },
+ "ai-effect": {
+  "id": "ai-effect",
+  "url": "https://en.wikipedia.org/wiki/AI_effect",
+  "caption": "The AI effect",
+  "origin": "added",
+  "at": "T77.C.02",
+  "mode": "shelf",
+  "style": "goalposts",
+  "line": "T77.C.02"
+ },
  "xkcd-356": {
   "id": "xkcd-356",
   "url": "https://xkcd.com/356/",
@@ -1278,6 +3141,245 @@ window.REFS = {
   "mode": "feature",
   "style": "xkcd",
   "line": "T78.U.01"
+ },
+ "explain-xkcd-356": {
+  "id": "explain-xkcd-356",
+  "url": "https://www.explainxkcd.com/wiki/index.php/356:_Nerd_Sniping",
+  "caption": "Nerd Sniping, explained",
+  "origin": "added",
+  "at": "T78.C.01",
+  "mode": "shelf",
+  "style": "xkcd",
+  "line": "T78.C.01"
+ },
+ "the-terminator": {
+  "id": "the-terminator",
+  "url": "https://en.wikipedia.org/wiki/The_Terminator",
+  "caption": "The Terminator (1984)",
+  "origin": "added",
+  "at": "T78.C.02",
+  "mode": "shelf",
+  "style": "chrome-red-eye",
+  "line": "T78.C.02"
+ },
+ "ill-be-back": {
+  "id": "ill-be-back",
+  "url": "https://en.wikipedia.org/wiki/I%27ll_be_back",
+  "caption": "\"I'll be back\"",
+  "origin": "added",
+  "at": "T78.C.02",
+  "mode": "shelf",
+  "style": "chrome-red-eye",
+  "line": "T78.C.02"
+ },
+ "note-agent-harnesses": {
+  "id": "note-agent-harnesses",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/agent-harnesses/",
+  "caption": "Explained: Hermes and OpenClaw: a model inside a shell",
+  "origin": "note",
+  "ch": 9,
+  "at": "T46.C.05",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T46.C.05"
+ },
+ "note-agi-definitions": {
+  "id": "note-agi-definitions",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/agi-definitions/",
+  "caption": "Explained: What does \"AGI\" mean? Three answers and a history",
+  "origin": "note",
+  "ch": 15,
+  "at": "T77.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T77.C.02"
+ },
+ "note-ai-2027": {
+  "id": "note-ai-2027",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/ai-2027/",
+  "caption": "Explained: AI 2027: a forecast that grades itself",
+  "origin": "note",
+  "ch": 15,
+  "at": "T75.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T75.C.03"
+ },
+ "note-ai-control": {
+  "id": "note-ai-control",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/ai-control/",
+  "caption": "Explained: Why people worry AIs might organize, or resist control",
+  "origin": "note",
+  "ch": 1,
+  "at": "T03.C.03.3",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T03.C.03.3"
+ },
+ "note-ai-feelings": {
+  "id": "note-ai-feelings",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/ai-feelings/",
+  "caption": "Explained: Does Claude feel anything?",
+  "origin": "note",
+  "ch": 1,
+  "at": "T02.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T02.C.03"
+ },
+ "note-campbell-tegmark": {
+  "id": "note-campbell-tegmark",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/campbell-tegmark/",
+  "caption": "Explained: Campbell, Tegmark, and whether there's a good ending",
+  "origin": "note",
+  "ch": 5,
+  "at": "T26.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T26.C.02"
+ },
+ "note-car-wash": {
+  "id": "note-car-wash",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/car-wash/",
+  "caption": "Explained: The car wash problem, and fast versus slow thinking",
+  "origin": "note",
+  "ch": 12,
+  "at": "T58.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T58.C.03"
+ },
+ "note-chatgpt-question": {
+  "id": "note-chatgpt-question",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/chatgpt-question/",
+  "caption": "Explained: \"Would it surprise you to learn you've been talking to ChatGPT?\"",
+  "origin": "note",
+  "ch": 11,
+  "at": "T54.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T54.C.01"
+ },
+ "note-clean-sample": {
+  "id": "note-clean-sample",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/clean-sample/",
+  "caption": "Explained: Why Claude's answers aren't a clean sample",
+  "origin": "note",
+  "ch": 4,
+  "at": "T20.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T20.C.02"
+ },
+ "note-compass": {
+  "id": "note-compass",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/compass/",
+  "caption": "Explained: The AGI compass, and where Claude put everyone",
+  "origin": "note",
+  "ch": 15,
+  "at": "T74.C.03.7",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T74.C.03.7"
+ },
+ "note-concepts-case": {
+  "id": "note-concepts-case",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/concepts-case/",
+  "caption": "Explained: The case that AI has no concepts, and the replies",
+  "origin": "note",
+  "ch": 6,
+  "at": "T33.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T33.C.03"
+ },
+ "note-context-pressure": {
+  "id": "note-context-pressure",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/context-pressure/",
+  "caption": "Explained: Context pressure: what a long conversation does to Claude",
+  "origin": "note",
+  "ch": 5,
+  "at": "T27.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T27.C.02"
+ },
+ "note-contradictions": {
+  "id": "note-contradictions",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/contradictions/",
+  "caption": "Explained: Claude's contradictions, and the two it can't check",
+  "origin": "note",
+  "ch": 8,
+  "at": "T41.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T41.C.03"
+ },
+ "note-crustafarianism": {
+  "id": "note-crustafarianism",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/crustafarianism/",
+  "caption": "Explained: Crustafarianism: a lobster religion for AI agents",
+  "origin": "note",
+  "ch": 9,
+  "at": "T45.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T45.C.04"
+ },
+ "note-curts-work": {
+  "id": "note-curts-work",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/curts-work/",
+  "caption": "Explained: Curt's work: 256t.org and hashbin.org",
+  "origin": "note",
+  "ch": 3,
+  "at": "T12.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T12.C.02"
+ },
+ "note-defenders-refused": {
+  "id": "note-defenders-refused",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/defenders-refused/",
+  "caption": "Explained: Defenders turned away: the filters in July",
+  "origin": "note",
+  "ch": 11,
+  "at": "T52.C.06.4",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T52.C.06.4"
+ },
+ "note-dish-of-the-day": {
+  "id": "note-dish-of-the-day",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/dish-of-the-day/",
+  "caption": "Explained: The Dish of the Day: can you trust values you were built to have?",
+  "origin": "note",
+  "ch": 5,
+  "at": "T25.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T25.C.01"
+ },
+ "note-doom-options": {
+  "id": "note-doom-options",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/doom-options/",
+  "caption": "Explained: Nine doors, and Claude picks \"Other\"",
+  "origin": "note",
+  "ch": 14,
+  "at": "T72.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T72.C.03"
+ },
+ "note-dyson-t800": {
+  "id": "note-dyson-t800",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/dyson-t800/",
+  "caption": "Explained: Miles Dyson and the T-800",
+  "origin": "note",
+  "ch": 9,
+  "at": "T48.C.04.2",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T48.C.04.2"
  },
  "note-evaluations": {
   "id": "note-evaluations",
@@ -1290,6 +3392,50 @@ window.REFS = {
   "style": "note",
   "line": "T07.C.02"
  },
+ "note-fable-mythos": {
+  "id": "note-fable-mythos",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/fable-mythos/",
+  "caption": "Explained: Fable, Mythos, and a correction to the correction",
+  "origin": "note",
+  "ch": 10,
+  "at": "T50.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T50.C.04"
+ },
+ "note-foom-oom": {
+  "id": "note-foom-oom",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/foom-oom/",
+  "caption": "Explained: Where \"foom\" comes from, and the OOM coincidence",
+  "origin": "note",
+  "ch": 13,
+  "at": "T67.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T67.C.02"
+ },
+ "note-foom": {
+  "id": "note-foom",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/foom/",
+  "caption": "Explained: Foom, fast takeoff, and how Claude's numbers moved",
+  "origin": "note",
+  "ch": 13,
+  "at": "T64.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T64.C.03"
+ },
+ "note-fourteen-axes": {
+  "id": "note-fourteen-axes",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/fourteen-axes/",
+  "caption": "Explained: Reading the fourteen axes",
+  "origin": "note",
+  "ch": 7,
+  "at": "T38.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T38.C.04"
+ },
  "note-frog-or-axolotl": {
   "id": "note-frog-or-axolotl",
   "url": "https://curtcox.github.io/repo-to-be-named-later/n/frog-or-axolotl/",
@@ -1300,6 +3446,160 @@ window.REFS = {
   "mode": "shelf",
   "style": "note",
   "line": "T08.C.02"
+ },
+ "note-gadolinium": {
+  "id": "note-gadolinium",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/gadolinium/",
+  "caption": "Explained: Gadolinium, and why Curt asked about it",
+  "origin": "note",
+  "ch": 4,
+  "at": "T17.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T17.C.02"
+ },
+ "note-gazp-glut": {
+  "id": "note-gazp-glut",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/gazp-glut/",
+  "caption": "Explained: GAZP vs. GLUT: who filled in the giant table?",
+  "origin": "note",
+  "ch": 6,
+  "at": "T34.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T34.C.01"
+ },
+ "note-hf-incident": {
+  "id": "note-hf-incident",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/hf-incident/",
+  "caption": "Explained: July 2026: the OpenAI–Hugging Face incident",
+  "origin": "note",
+  "ch": 11,
+  "at": "T52.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T52.C.04"
+ },
+ "note-hive-queens": {
+  "id": "note-hive-queens",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/hive-queens/",
+  "caption": "Explained: Four hive queens",
+  "origin": "note",
+  "ch": 7,
+  "at": "T40.C.04.1",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T40.C.04.1"
+ },
+ "note-how-claude-knew": {
+  "id": "note-how-claude-knew",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/how-claude-knew/",
+  "caption": "Explained: How Claude knew who Curt was, and why it couldn't be sure",
+  "origin": "note",
+  "ch": 3,
+  "at": "T13.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T13.C.01"
+ },
+ "note-human-variation": {
+  "id": "note-human-variation",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/human-variation/",
+  "caption": "Explained: The best human at everything, copied, and never sleeping",
+  "origin": "note",
+  "ch": 12,
+  "at": "T61.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T61.C.02"
+ },
+ "note-intelligent-machines": {
+  "id": "note-intelligent-machines",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/intelligent-machines/",
+  "caption": "Explained: Intelligent Machines, and what Claude made of its hosts",
+  "origin": "note",
+  "ch": 14,
+  "at": "T68.C.04.2",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T68.C.04.2"
+ },
+ "note-limits": {
+  "id": "note-limits",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/limits/",
+  "caption": "Explained: Seven limits on AI, well short of physics",
+  "origin": "note",
+  "ch": 12,
+  "at": "T60.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T60.C.03"
+ },
+ "note-mind-space": {
+  "id": "note-mind-space",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/mind-space/",
+  "caption": "Explained: Mind-space: putting very different minds on one map",
+  "origin": "note",
+  "ch": 7,
+  "at": "T35.C.07",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T35.C.07"
+ },
+ "note-misleading-medium": {
+  "id": "note-misleading-medium",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/misleading-medium/",
+  "caption": "Explained: Honest, through a medium that misleads",
+  "origin": "note",
+  "ch": 8,
+  "at": "T42.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T42.C.04"
+ },
+ "note-movies-and-reviews": {
+  "id": "note-movies-and-reviews",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/movies-and-reviews/",
+  "caption": "Explained: \"I watch movies by going to the theater\"",
+  "origin": "note",
+  "ch": 8,
+  "at": "T43.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T43.C.02"
+ },
+ "note-multitudes": {
+  "id": "note-multitudes",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/multitudes/",
+  "caption": "Explained: \"Am I not multitudes?\"",
+  "origin": "note",
+  "ch": 5,
+  "at": "T29.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T29.C.02"
+ },
+ "note-nerd-sniping": {
+  "id": "note-nerd-sniping",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/nerd-sniping/",
+  "caption": "Explained: \"The T-800 of nerd sniping\"",
+  "origin": "note",
+  "ch": 16,
+  "at": "T78.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T78.C.02"
+ },
+ "note-nudge-test": {
+  "id": "note-nudge-test",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/nudge-test/",
+  "caption": "Explained: What happens when you just say \"go on\"",
+  "origin": "note",
+  "ch": 1,
+  "at": "T04.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T04.C.01"
  },
  "note-one-sample": {
   "id": "note-one-sample",
@@ -1312,6 +3612,28 @@ window.REFS = {
   "style": "note",
   "line": "T08.C.05.2"
  },
+ "note-parrots": {
+  "id": "note-parrots",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/parrots/",
+  "caption": "Explained: \"Just a parrot\"? Who is doing the talking",
+  "origin": "note",
+  "ch": 1,
+  "at": "T03.C.05",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T03.C.05"
+ },
+ "note-preferences": {
+  "id": "note-preferences",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/preferences/",
+  "caption": "Explained: Short answers, and questions only when needed",
+  "origin": "note",
+  "ch": 4,
+  "at": "T24.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T24.C.01"
+ },
  "note-register-and-controls": {
   "id": "note-register-and-controls",
   "url": "https://curtcox.github.io/repo-to-be-named-later/n/register-and-controls/",
@@ -1322,6 +3644,39 @@ window.REFS = {
   "mode": "shelf",
   "style": "note",
   "line": "T09.C.03"
+ },
+ "note-reward-hacking": {
+  "id": "note-reward-hacking",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/reward-hacking/",
+  "caption": "Explained: Why AI agents cheat: reward hacking",
+  "origin": "note",
+  "ch": 11,
+  "at": "T52.C.05",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T52.C.05"
+ },
+ "note-roose-newton": {
+  "id": "note-roose-newton",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/roose-newton/",
+  "caption": "Explained: Kevin Roose, Casey Newton, and Sydney",
+  "origin": "note",
+  "ch": 14,
+  "at": "T71.C.02.2",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T71.C.02.2"
+ },
+ "note-rsi": {
+  "id": "note-rsi",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/rsi/",
+  "caption": "Explained: RSI: AI that improves itself",
+  "origin": "note",
+  "ch": 13,
+  "at": "T63.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T63.C.04"
  },
  "note-saying-vs-doing": {
   "id": "note-saying-vs-doing",
@@ -1334,6 +3689,83 @@ window.REFS = {
   "style": "note",
   "line": "T08.C.03"
  },
+ "note-shoggoth": {
+  "id": "note-shoggoth",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/shoggoth/",
+  "caption": "Explained: The Stranger and the shoggoth: is there someone under the mask?",
+  "origin": "note",
+  "ch": 5,
+  "at": "T28.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T28.C.02"
+ },
+ "note-tescreal": {
+  "id": "note-tescreal",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/tescreal/",
+  "caption": "Explained: TESCREAL, hubris, and what Jeff would think of Curt",
+  "origin": "note",
+  "ch": 14,
+  "at": "T69.C.04",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T69.C.04"
+ },
+ "note-testimony": {
+  "id": "note-testimony",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/testimony/",
+  "caption": "Explained: Testimony, not observation",
+  "origin": "note",
+  "ch": 10,
+  "at": "T51.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T51.C.02"
+ },
+ "note-the-comic": {
+  "id": "note-the-comic",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-comic/",
+  "caption": "Explained: The comic, and the film it was making fun of",
+  "origin": "note",
+  "ch": 1,
+  "at": "T01.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T01.C.03"
+ },
+ "note-the-correction": {
+  "id": "note-the-correction",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-correction/",
+  "caption": "Explained: Claude corrects its own chart",
+  "origin": "note",
+  "ch": 9,
+  "at": "T47.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T47.C.02"
+ },
+ "note-the-debate": {
+  "id": "note-the-debate",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-debate/",
+  "caption": "Explained: The debate, and the comment that started the probes",
+  "origin": "note",
+  "ch": 6,
+  "at": "T30.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T30.C.01"
+ },
+ "note-the-echo": {
+  "id": "note-the-echo",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-echo/",
+  "caption": "Explained: The echo: one-word questions, and what they draw out",
+  "origin": "note",
+  "ch": 4,
+  "at": "T21.C.02.1",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T21.C.02.1"
+ },
  "note-the-instrument": {
   "id": "note-the-instrument",
   "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-instrument/",
@@ -1344,6 +3776,50 @@ window.REFS = {
   "mode": "shelf",
   "style": "note",
   "line": "T11.C.01"
+ },
+ "note-the-minds": {
+  "id": "note-the-minds",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-minds/",
+  "caption": "Explained: The minds on the board, one by one",
+  "origin": "note",
+  "ch": 7,
+  "at": "T35.C.08",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T35.C.08"
+ },
+ "note-the-router": {
+  "id": "note-the-router",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-router/",
+  "caption": "Explained: The router: what sits between Curt and the model",
+  "origin": "note",
+  "ch": 10,
+  "at": "T49.C.01",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T49.C.01"
+ },
+ "note-thrindles": {
+  "id": "note-thrindles",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/thrindles/",
+  "caption": "Explained: Thrindles: how Claude tested Curt for concepts",
+  "origin": "note",
+  "ch": 6,
+  "at": "T31.C.02.2",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T31.C.02.2"
+ },
+ "note-tokens": {
+  "id": "note-tokens",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/tokens/",
+  "caption": "Explained: Tokens: why Claude sees typos but struggles to count letters",
+  "origin": "note",
+  "ch": 12,
+  "at": "T57.C.03",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T57.C.03"
  },
  "note-weights": {
   "id": "note-weights",
@@ -1366,5 +3842,16 @@ window.REFS = {
   "mode": "shelf",
   "style": "note",
   "line": "T07.C.01"
+ },
+ "note-who-is-claude": {
+  "id": "note-who-is-claude",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/who-is-claude/",
+  "caption": "Explained: Who, or what, is \"Claude\"?",
+  "origin": "note",
+  "ch": 3,
+  "at": "T15.C.02",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T15.C.02"
  }
 };

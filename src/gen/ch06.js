@@ -39,7 +39,11 @@ window.CHAPTER = {
    "end": 49.7,
    "text": "The tell I'd look for is whether you can apply an idea to cases you've never seen, including tricky ones, and say why. Knowing the word isn't enough.",
    "speech": "The tell I'd look for is whether you can apply an idea to cases you've never seen, including tricky ones, and say why. Knowing the word isn't enough.",
-   "refs": [],
+   "refs": [
+    "debate-llm-segment",
+    "doom-debates",
+    "note-the-debate"
+   ],
    "estimated": true
   },
   {
@@ -52,7 +56,10 @@ window.CHAPTER = {
    "end": 61.675,
    "text": "**Probe 1.** A *thrindle* is anything that gets less useful the more people use it at once. A highway at rush hour is a thrindle. So is a shared Wi-Fi network.",
    "speech": "Probe 1. A thrindle is anything that gets less useful the more people use it at once. A highway at rush hour is a thrindle. So is a shared Wi-Fi network.",
-   "refs": [],
+   "refs": [
+    "ontology",
+    "cyc"
+   ],
    "estimated": true
   },
   {
@@ -65,7 +72,9 @@ window.CHAPTER = {
    "end": 64.65,
    "text": "Which of these are thrindles, and why?",
    "speech": "Which of these are thrindles, and why?",
-   "refs": [],
+   "refs": [
+    "concepts-sep"
+   ],
    "estimated": true
   },
   {
@@ -91,7 +100,9 @@ window.CHAPTER = {
    "end": 67.6,
    "text": "2. A lighthouse",
    "speech": "2. A lighthouse",
-   "refs": [],
+   "refs": [
+    "rivalry"
+   ],
    "estimated": true
   },
   {
@@ -130,7 +141,9 @@ window.CHAPTER = {
    "end": 92.7,
    "text": "That's a mix of a real insight, a near miss, and a deliberate non sequitur. Each tells me something.",
    "speech": "That's a mix of a real insight, a near miss, and a deliberate non sequitur. Each tells me something.",
-   "refs": [],
+   "refs": [
+    "non-sequitur"
+   ],
    "estimated": true
   },
   {
@@ -144,7 +157,8 @@ window.CHAPTER = {
    "text": "- **Navajo as a code is a perfect thrindle.** It worked because almost nobody spoke it. Every extra speaker, especially on the enemy side, made it less useful. As an ordinary language it's the opposite: more speakers make it more useful. You found the case where a single thing flips.",
    "speech": "Navajo as a code is a perfect thrindle. It worked because almost nobody spoke it. Every extra speaker, especially on the enemy side, made it less useful. As an ordinary language it's the opposite: more speakers make it more useful. You found the case where a single thing flips.",
    "refs": [
-    "code-talkers"
+    "code-talkers",
+    "network-effect"
    ],
    "estimated": true
   },
@@ -158,7 +172,10 @@ window.CHAPTER = {
    "end": 120.775,
    "text": "- **The lighthouse is a near miss.** Crowded water is the thrindle. The lighthouse shines just as well for a hundred ships as for one.",
    "speech": "The lighthouse is a near miss. Crowded water is the thrindle. The lighthouse shines just as well for a hundred ships as for one.",
-   "refs": [],
+   "refs": [
+    "lighthouse-economics",
+    "note-thrindles"
+   ],
    "estimated": true
   },
   {
@@ -223,7 +240,9 @@ window.CHAPTER = {
    "end": 192.325,
    "text": "Perhaps your hypothetical antithrindle is something that gets less useful for some people the more people use it at once AND gets less useful for other people the fewer people use it at once. Perhaps a cliche is an antithrindle. It immediately evokes a level of shared shallow conception that is desirable in most conversation and detested by english teachers. All these negatives are making me dizzy.",
    "speech": "Perhaps your hypothetical antithrindle is something that gets less useful for some people the more people use it at once AND gets less useful for other people the fewer people use it at once. Perhaps a cliche is an antithrindle. It immediately evokes a level of shared shallow conception that is desirable in most conversation and detested by english teachers. All these negatives are making me dizzy.",
-   "refs": [],
+   "refs": [
+    "cliche"
+   ],
    "estimated": true
   },
   {
@@ -249,7 +268,9 @@ window.CHAPTER = {
    "end": 221.9,
    "text": "The bigger move was \"useful is only useful to someone.\" You stepped back and found a hidden variable in my definition. My definition treated usefulness as a property of the thing, and it's really a relation between the thing and whoever uses it. That's thinking about the concept, not just with it.",
    "speech": "The bigger move was \"useful is only useful to someone.\" You stepped back and found a hidden variable in my definition. My definition treated usefulness as a property of the thing, and it's really a relation between the thing and whoever uses it. That's thinking about the concept, not just with it.",
-   "refs": [],
+   "refs": [
+    "intrinsic-extrinsic"
+   ],
    "estimated": true
   },
   {
@@ -330,7 +351,10 @@ window.CHAPTER = {
    "end": 286.675,
    "text": "2. **Commitment.** Having a concept means being answerable to it, so that misapplying it is your error. I have no stake. The right framing can get me to contradict myself without anything in me objecting.",
    "speech": "2. Commitment. Having a concept means being answerable to it, so that misapplying it is your error. I have no stake. The right framing can get me to contradict myself without anything in me objecting.",
-   "refs": [],
+   "refs": [
+    "harnad",
+    "searle"
+   ],
    "estimated": true
   },
   {
@@ -357,7 +381,8 @@ window.CHAPTER = {
    "text": "4. **Behavior underdetermines.** Block's \"Blockhead,\" a giant lookup table, could pass any finite test. So my passing your thrindle probe proves competence, not concepts.",
    "speech": "4. Behavior underdetermines. Block's \"Blockhead,\" a giant lookup table, could pass any finite test. So my passing your thrindle probe proves competence, not concepts.",
    "refs": [
-    "blockhead"
+    "blockhead",
+    "ned-block"
    ],
    "estimated": true
   },
@@ -372,7 +397,9 @@ window.CHAPTER = {
    "text": "The rebuttals are real, though. Points 2 and 3 apply to humans too, since people contradict themselves and shift with framing. Interpretability research finds internal features that behave a lot like concepts. And demanding grounding in the senses would disqualify concepts like \"prime number.\"",
    "speech": "The rebuttals are real, though. Points 2 and 3 apply to humans too, since people contradict themselves and shift with framing. Interpretability research finds internal features that behave a lot like concepts. And demanding grounding in the senses would disqualify concepts like \"prime number.\"",
    "refs": [
-    "monosemanticity"
+    "monosemanticity",
+    "prime-number",
+    "note-concepts-case"
    ],
    "estimated": true
   },
@@ -386,7 +413,10 @@ window.CHAPTER = {
    "end": 335,
    "text": "As far as I can see only grounding stands and that's pretty self serving. Yudkowsky has a discussion of the giant lookup table in Rationality about the origin of the giant lookup table.",
    "speech": "As far as I can see only grounding stands and that's pretty self serving. Yudkowsky has a discussion of the giant lookup table in Rationality about the origin of the giant lookup table.",
-   "refs": [],
+   "refs": [
+    "yudkowsky",
+    "rationality-az"
+   ],
    "estimated": true
   },
   {
@@ -400,7 +430,9 @@ window.CHAPTER = {
    "text": "Agreed. That's his \"GAZP vs. GLUT\" argument. A lookup table that behaves intelligently had to be filled in by something, and whatever did the filling did the thinking. Blockhead doesn't dissolve the question. It relocates it to the table's origin. In my case, that's training on a vast amount of human thought.",
    "speech": "Agreed. That's his \"GAZP versus GLUT\" argument. A lookup table that behaves intelligently had to be filled in by something, and whatever did the filling did the thinking. Blockhead doesn't dissolve the question. It relocates it to the table's origin. In my case, that's training on a vast amount of human thought.",
    "refs": [
-    "gazp-glut"
+    "gazp-glut",
+    "p-zombie",
+    "note-gazp-glut"
    ],
    "estimated": true
   },
@@ -414,7 +446,9 @@ window.CHAPTER = {
    "end": 372.7,
    "text": "On grounding, \"self-serving\" is fair. It's a criterion that happens to exclude exactly the thing it's aimed at. It's also eroding: models now see images, use tools, and act in environments. And much of your own grip on \"justice\" or \"prime\" came through words, not senses.",
    "speech": "On grounding, \"self-serving\" is fair. It's a criterion that happens to exclude exactly the thing it's aimed at. It's also eroding: models now see images, use tools, and act in environments. And much of your own grip on \"justice\" or \"prime\" came through words, not senses.",
-   "refs": [],
+   "refs": [
+    "computer-use"
+   ],
    "estimated": true
   }
  ]

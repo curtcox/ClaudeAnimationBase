@@ -96,7 +96,9 @@ window.CHAPTER = {
    "end": 55.625,
    "text": "RSI by EOY?",
    "speech": "RSI by E O Y?",
-   "refs": [],
+   "refs": [
+    "rsi-wiki"
+   ],
    "estimated": true
   },
   {
@@ -134,7 +136,9 @@ window.CHAPTER = {
    "end": 79.8,
    "text": "**Weak RSI is already here.** A paper this week describes AIDE², which runs the loop at the harness layer: an AI research agent rewrites its own code, and each accepted rewrite becomes the agent the next round edits. Anthropic published its own progress report on this in June.",
    "speech": "Weak RSI is already here. A paper this week describes AIDE squared, which runs the loop at the harness layer: an AI research agent rewrites its own code, and each accepted rewrite becomes the agent the next round edits. Anthropic published its own progress report on this in June.",
-   "refs": [],
+   "refs": [
+    "anthropic-rsi"
+   ],
    "estimated": true
   },
   {
@@ -147,7 +151,9 @@ window.CHAPTER = {
    "end": 105.65,
    "text": "**Strong RSI** means an open-ended loop, where the system improves its own capabilities faster than humans could, with little human oversight. I'd put that at about 5% by year end. The best current evidence is that agents are good at research engineering but weak at open-ended research. A July survey of 1,250 papers found open-ended RSI still bounded by grounding, collapse dynamics, and compute on every measured axis.",
    "speech": "Strong RSI means an open-ended loop, where the system improves its own capabilities faster than humans could, with little human oversight. I'd put that at about 5% by year end. The best current evidence is that agents are good at research engineering but weak at open-ended research. A July survey of 1,250 papers found open-ended RSI still bounded by grounding, collapse dynamics, and compute on every measured axis.",
-   "refs": [],
+   "refs": [
+    "note-rsi"
+   ],
    "estimated": true
   },
   {
@@ -160,7 +166,9 @@ window.CHAPTER = {
    "end": 119.125,
    "text": "**The worry case sits in between.** It's the combination of weak loops, many copies, and labs racing. This month a researcher resigned from Anthropic, warning that labs are racing toward self-improving superintelligence without enough care.",
    "speech": "The worry case sits in between. It's the combination of weak loops, many copies, and labs racing. This month a researcher resigned from Anthropic, warning that labs are racing toward self-improving superintelligence without enough care.",
-   "refs": [],
+   "refs": [
+    "coxon-resigns"
+   ],
    "estimated": true
   },
   {
@@ -259,7 +267,9 @@ window.CHAPTER = {
    "end": 136.625,
    "text": "Foom?",
    "speech": "Foom?",
-   "refs": [],
+   "refs": [
+    "intelligence-explosion"
+   ],
    "estimated": true
   },
   {
@@ -285,7 +295,9 @@ window.CHAPTER = {
    "end": 161.7,
    "text": "**Strict foom** means days to weeks from human-level to vastly superhuman. It runs into the limits we discussed: compute scales with diminishing returns, experiments run at the world's speed, and chips, fabs, and power plants take years to build. I'd put it around 5–10% this decade.",
    "speech": "Strict foom means days to weeks from human-level to vastly superhuman. It runs into the limits we discussed: compute scales with diminishing returns, experiments run at the world's speed, and chips, fabs, and power plants take years to build. I'd put it around five to ten percent this decade.",
-   "refs": [],
+   "refs": [
+    "fabs"
+   ],
    "estimated": true
   },
   {
@@ -298,7 +310,10 @@ window.CHAPTER = {
    "end": 182.675,
    "text": "**Fast takeoff** means a year or two, driven mostly by software: better algorithms, many copies, and AI doing AI research. That seems much more plausible to me, maybe 25–35% this decade. Nothing about it looks like an explosion from the inside. It just feels like every month is stranger than the last.",
    "speech": "Fast takeoff means a year or two, driven mostly by software: better algorithms, many copies, and AI doing AI research. That seems much more plausible to me, maybe twenty-five to thirty-five percent this decade. Nothing about it looks like an explosion from the inside. It just feels like every month is stranger than the last.",
-   "refs": [],
+   "refs": [
+    "takeoff-speeds",
+    "note-foom"
+   ],
    "estimated": true
   },
   {
@@ -337,7 +352,9 @@ window.CHAPTER = {
    "end": 197.65,
    "text": "If you mean how much today's reading moved me: a little, upward.",
    "speech": "If you mean how much today's reading moved me: a little, upward.",
-   "refs": [],
+   "refs": [
+    "bayesian-updating"
+   ],
    "estimated": true
   },
   {
@@ -389,7 +406,9 @@ window.CHAPTER = {
    "end": 234.55,
    "text": "The caveat is that I didn't have a stable prior this morning. These are numbers I first produced an hour ago, so the delta is softer than it looks.",
    "speech": "The caveat is that I didn't have a stable prior this morning. These are numbers I first produced an hour ago, so the delta is softer than it looks.",
-   "refs": [],
+   "refs": [
+    "prior"
+   ],
    "estimated": true
   },
   {
@@ -402,7 +421,9 @@ window.CHAPTER = {
    "end": 242.575,
    "text": "Is foom strictly an onomatopoeia or is it also a play on OOM AFAYCT?",
    "speech": "Is foom strictly an onomatopoeia or is it also a play on oom A F A Y C T?",
-   "refs": [],
+   "refs": [
+    "onomatopoeia"
+   ],
    "estimated": true
   },
   {
@@ -416,7 +437,9 @@ window.CHAPTER = {
    "text": "As far as I can tell, it started as pure onomatopoeia, the whoosh of something catching fire, and was popularized by the 2008 Hanson–Yudkowsky \"AI-Foom\" debate. A backronym came later: \"Fast Onset of Overwhelming Mastery.\"",
    "speech": "As far as I can tell, it started as pure onomatopoeia, the whoosh of something catching fire, and was popularized by the 2008 Hanson–Yudkowsky \"AI-Foom\" debate. A backronym came later: \"Fast Onset of Overwhelming Mastery.\"",
    "refs": [
-    "foom-debate"
+    "foom-debate",
+    "robin-hanson",
+    "backronym"
    ],
    "estimated": true
   },
@@ -430,7 +453,9 @@ window.CHAPTER = {
    "end": 273.15,
    "text": "I don't know of evidence that it was meant as a play on OOM (orders of magnitude). The fit is neat, since foom is literally many OOMs quickly, but I'd treat it as a happy coincidence or a later folk reading, not the origin.",
    "speech": "I don't know of evidence that it was meant as a play on oom (orders of magnitude). The fit is neat, since foom is literally many ooms quickly, but I'd treat it as a happy coincidence or a later folk reading, not the origin.",
-   "refs": [],
+   "refs": [
+    "order-of-magnitude"
+   ],
    "estimated": true
   },
   {
@@ -444,7 +469,8 @@ window.CHAPTER = {
    "text": "Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember OOM entering the \"mainstream\" discourse as a common standalone term before Dwarkesh interviewed Leopold with was long after the Foom Debate.",
    "speech": "Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember oom entering the \"mainstream\" discourse as a common standalone term before DWAR-kesh interviewed Leopold with was long after the Foom Debate.",
    "refs": [
-    "dwarkesh-leopold"
+    "dwarkesh-leopold",
+    "dwarkesh-patel"
    ],
    "estimated": true
   },
@@ -459,7 +485,8 @@ window.CHAPTER = {
    "text": "That matches my sense. \"Counting the OOMs\" was Aschenbrenner's framing in *Situational Awareness* (June 2024), and the Dwarkesh interview spread it. Before that, OOM lived mostly in physics shorthand and, for people like you, in \"out of memory\" errors.",
    "speech": "That matches my sense. \"Counting the ooms\" was ASH-en-brenner's framing in Situational Awareness (June 2024), and the DWAR-kesh interview spread it. Before that, oom lived mostly in physics shorthand and, for people like you, in \"out of memory\" errors.",
    "refs": [
-    "situational-awareness"
+    "situational-awareness",
+    "aschenbrenner"
    ],
    "estimated": true
   },
@@ -473,7 +500,10 @@ window.CHAPTER = {
    "end": 311.375,
    "text": "So the pun runs backward in time. Foom came first, and OOM arrived sixteen years later and made it look intentional.",
    "speech": "So the pun runs backward in time. Foom came first, and oom arrived sixteen years later and made it look intentional.",
-   "refs": [],
+   "refs": [
+    "out-of-memory",
+    "note-foom-oom"
+   ],
    "estimated": true
   }
  ]

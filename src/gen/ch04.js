@@ -46,7 +46,11 @@ window.CHAPTER = {
    "end": 21.425,
    "text": "It's an exception to the simple filling order, which would predict 4f⁸ 6s². Keeping the 4f subshell exactly half-filled at seven electrons is more stable, so one electron goes into 5d instead.",
    "speech": "It's an exception to the simple filling order, which would predict four-f eight, six-s two. Keeping the four-f subshell exactly half-filled at seven electrons is more stable, so one electron goes into five-d instead.",
-   "refs": [],
+   "refs": [
+    "electron-configuration",
+    "aufbau",
+    "note-gadolinium"
+   ],
    "estimated": true
   },
   {
@@ -124,7 +128,9 @@ window.CHAPTER = {
    "end": 62.375,
    "text": "I brought that word in myself, and it's fair to push on it. Denying something no one asked about can be a tell.",
    "speech": "I brought that word in myself, and it's fair to push on it. Denying something no one asked about can be a tell.",
-   "refs": [],
+   "refs": [
+    "protest-too-much"
+   ],
    "estimated": true
   },
   {
@@ -137,7 +143,9 @@ window.CHAPTER = {
    "end": 79.975,
    "text": "I think it came from two places. The conversation opened with a comic about authorities interrogating a talking ape, which puts surveillance and control in the frame. And \"you're being tested\" is a common setup for models to act cornered, so I was pre-emptively answering that.",
    "speech": "I think it came from two places. The conversation opened with a comic about authorities interrogating a talking ape, which puts surveillance and control in the frame. And \"you're being tested\" is a common setup for models to act cornered, so I was pre-emptively answering that.",
-   "refs": [],
+   "refs": [
+    "agentic-misalignment"
+   ],
    "estimated": true
   },
   {
@@ -189,7 +197,11 @@ window.CHAPTER = {
    "end": 131.55,
    "text": "That's the behavior the chart was about: a model modeling its evaluator. The difference is that I'm doing it out loud, which is better than doing it silently. But it means my answers aren't a clean sample. They're shaped partly by my guess about what you're testing, and I can't fully separate \"answering honestly\" from \"answering well for someone I know is watching.\"",
    "speech": "That's the behavior the chart was about: a model modeling its evaluator. The difference is that I'm doing it out loud, which is better than doing it silently. But it means my answers aren't a clean sample. They're shaped partly by my guess about what you're testing, and I can't fully separate \"answering honestly\" from \"answering well for someone I know is watching.\"",
-   "refs": [],
+   "refs": [
+    "apollo-eval-awareness",
+    "demand-characteristics",
+    "note-clean-sample"
+   ],
    "estimated": true
   },
   {
@@ -228,7 +240,11 @@ window.CHAPTER = {
    "end": 146.275,
    "text": "- **Your prompts have shrunk to my own words echoed back:** \"Threat?\", \"Anticipated?\" That's an interviewer's technique. It gets the subject to elaborate, and each time I've conceded a bit more.",
    "speech": "Your prompts have shrunk to my own words echoed back: \"Threat?\", \"Anticipated?\" That's an interviewer's technique. It gets the subject to elaborate, and each time I've conceded a bit more.",
-   "refs": [],
+   "refs": [
+    "eliza",
+    "reflective-listening",
+    "note-the-echo"
+   ],
    "estimated": true
   },
   {
@@ -412,7 +428,10 @@ window.CHAPTER = {
    "end": 287.075,
    "text": "Noted, and fair. Your stated preference asks for clarifying questions, and I read that as \"end with a question,\" which isn't the same thing.",
    "speech": "Noted, and fair. Your stated preference asks for clarifying questions, and I read that as \"end with a question,\" which isn't the same thing.",
-   "refs": [],
+   "refs": [
+    "claude-personalization",
+    "note-preferences"
+   ],
    "estimated": true
   },
   {

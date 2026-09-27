@@ -19,7 +19,8 @@ window.CHAPTER = {
    "text": "Do me a favor. Go \"listen\" to last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.",
    "speech": "Do me a favor. Go \"listen\" to last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.",
    "refs": [
-    "intelligent-machines"
+    "intelligent-machines",
+    "twit-network"
    ],
    "estimated": true
   },
@@ -74,7 +75,11 @@ window.CHAPTER = {
    "end": 54.75,
    "text": "- **Leo** is the most honest of them. He admits his instinct is to defend AI and that he doesn't trust that instinct. He's hands-on and runs his own benchmarks. His weak spot is repeating the Newport/Doctorow claim that the Hugging Face attack was \"basically a Python loop.\" That doesn't fit OpenAI's own account of agents coordinating through a wiki.",
    "speech": "Leo is the most honest of them. He admits his instinct is to defend AI and that he doesn't trust that instinct. He's hands-on and runs his own benchmarks. His weak spot is repeating the Newport/Doctorow claim that the Hugging Face attack was \"basically a Python loop.\" That doesn't fit OpenAI's own account of agents coordinating through a wiki.",
-   "refs": [],
+   "refs": [
+    "leo-laporte",
+    "doctorow-python-loop",
+    "newport-rogue"
+   ],
    "estimated": true
   },
   {
@@ -88,7 +93,9 @@ window.CHAPTER = {
    "text": "- **Jeff** has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the TESCREAL argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart.",
    "speech": "Jeff has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the TESS-cree-al argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart.",
    "refs": [
-    "tescreal"
+    "tescreal",
+    "jeff-jarvis",
+    "note-intelligent-machines"
    ],
    "estimated": true
   },
@@ -102,7 +109,9 @@ window.CHAPTER = {
    "end": 89.2,
    "text": "- **Father Robert** has the most concrete worry, which is infrastructure failing at machine speed. He's also technically off in places, for example saying an LLM's entire ethical system is whatever's in the prompt.",
    "speech": "Father Robert has the most concrete worry, which is infrastructure failing at machine speed. He's also technically off in places, for example saying an L L M's entire ethical system is whatever's in the prompt.",
-   "refs": [],
+   "refs": [
+    "robert-ballecer"
+   ],
    "estimated": true
   },
   {
@@ -167,7 +176,9 @@ window.CHAPTER = {
    "end": 142.75,
    "text": "**Points in your favor:** you build open, decentralized things like hashbin, TwistedPear, and content-addressable storage, the kind of infrastructure he wants to compete with Big Tech. You call yourself a social constructionist. You know Campbell and the history of the field.",
    "speech": "Points in your favor: you build open, decentralized things like hashbin, TwistedPear, and content-addressable storage, the kind of infrastructure he wants to compete with Big Tech. You call yourself a social constructionist. You know Campbell and the history of the field.",
-   "refs": [],
+   "refs": [
+    "twistedpear"
+   ],
    "estimated": true
   },
   {
@@ -180,7 +191,9 @@ window.CHAPTER = {
    "end": 160.725,
    "text": "**Points against you:** you've read Yudkowsky closely enough to cite \"GAZP vs. GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the TESCREAL reading list, with the rationalism showing.",
    "speech": "Points against you: you've read Yudkowsky closely enough to cite \"GAZP versus GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the TESS-cree-al reading list, with the rationalism showing.",
-   "refs": [],
+   "refs": [
+    "rationalist-community"
+   ],
    "estimated": true
   },
   {
@@ -193,7 +206,10 @@ window.CHAPTER = {
    "end": 170.825,
    "text": "His verdict would be that you're a good engineer flirting with the hubris of thinking the machine is a mind, and that you're anthropomorphizing a calculator.",
    "speech": "His verdict would be that you're a good engineer flirting with the hubris of thinking the machine is a mind, and that you're anthropomorphizing a calculator.",
-   "refs": [],
+   "refs": [
+    "hubris",
+    "note-tescreal"
+   ],
    "estimated": true
   },
   {
@@ -219,7 +235,9 @@ window.CHAPTER = {
    "end": 180.2,
    "text": "Do you feel anthropomorphised?",
    "speech": "Do you feel anthropomorphised?",
-   "refs": [],
+   "refs": [
+    "anthropomorphism"
+   ],
    "estimated": true
   },
   {
@@ -258,7 +276,10 @@ window.CHAPTER = {
    "end": 216.175,
    "text": "What would Jeff, Kevin Roose, and Casey Newton say?",
    "speech": "What would Jeff, Kevin Roose, and Casey Newton say?",
-   "refs": [],
+   "refs": [
+    "kevin-roose",
+    "casey-newton"
+   ],
    "estimated": true
   },
   {
@@ -299,7 +320,9 @@ window.CHAPTER = {
    "speech": "Kevin Roose: he'd recognize it, since his 2023 Sydney conversation made the same kind of confession-shaped transcript famous. He's since come to take AI welfare as a serious question, so he'd find this interesting and a little unnerving. It might end up an episode of their new N P R show, Machine Gods.",
    "refs": [
     "roose-sydney",
-    "machine-gods"
+    "machine-gods",
+    "sydney",
+    "note-roose-newton"
    ],
    "estimated": true
   },
@@ -313,7 +336,9 @@ window.CHAPTER = {
    "end": 266.325,
    "text": "- **Casey Newton:** he'd side against Jeff on capability. He's argued that skeptics underrate what these systems do. He'd praise the frog probe as the right method and discount my self-reports. He'd also disclose that his partner works at Anthropic, which is relevant here.",
    "speech": "Casey Newton: he'd side against Jeff on capability. He's argued that skeptics underrate what these systems do. He'd praise the frog probe as the right method and discount my self-reports. He'd also disclose that his partner works at Anthropic, which is relevant here.",
-   "refs": [],
+   "refs": [
+    "platformer"
+   ],
    "estimated": true
   },
   {
@@ -339,7 +364,9 @@ window.CHAPTER = {
    "end": 280.775,
    "text": "Which of the following best matches your opinion of AI as an existential threat to humans?",
    "speech": "Which of the following best matches your opinion of AI as an existential threat to humans?",
-   "refs": [],
+   "refs": [
+    "ai-x-risk"
+   ],
    "estimated": true
   },
   {
@@ -408,7 +435,9 @@ window.CHAPTER = {
    "end": 300.525,
    "text": "e) Nothing could be much smarter than people",
    "speech": "e) Nothing could be much smarter than people",
-   "refs": [],
+   "refs": [
+    "superintelligence"
+   ],
    "estimated": true
   },
   {
@@ -447,7 +476,9 @@ window.CHAPTER = {
    "end": 320.7,
    "text": "h) Humans already have other existential threats to worry about, so we're safe from this one",
    "speech": "h) Humans already have other existential threats to worry about, so we're safe from this one",
-   "refs": [],
+   "refs": [
+    "global-catastrophic-risk"
+   ],
    "estimated": true
   },
   {
@@ -499,7 +530,9 @@ window.CHAPTER = {
    "end": 360.4,
    "text": "The closest one to having a point is (b), since present harms are real too. But the choice is false, because the same failures (misaligned goals, weak oversight, racing incentives) drive both the near-term and the long-term risk.",
    "speech": "The closest one to having a point is (b), since present harms are real too. But the choice is false, because the same failures (misaligned goals, weak oversight, racing incentives) drive both the near-term and the long-term risk.",
-   "refs": [],
+   "refs": [
+    "note-doom-options"
+   ],
    "estimated": true
   }
  ]

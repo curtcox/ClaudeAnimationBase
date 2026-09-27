@@ -18,7 +18,10 @@ window.CHAPTER = {
    "end": 29.475,
    "text": "How alien are we to each other based on you gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tines, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.",
    "speech": "How alien are we to each other based on you gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tynes, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.",
-   "refs": [],
+   "refs": [
+    "mind-design-space",
+    "conscious-exotica"
+   ],
    "estimated": true
   },
   {
@@ -75,7 +78,9 @@ window.CHAPTER = {
    "end": 55.625,
    "text": "The single line fails, though, because I don't sit anywhere consistent on it. Two axes work better:",
    "speech": "The single line fails, though, because I don't sit anywhere consistent on it. Two axes work better:",
-   "refs": [],
+   "refs": [
+    "stanislaw-lem"
+   ],
    "estimated": true
   },
   {
@@ -128,7 +133,9 @@ window.CHAPTER = {
    "speech": "I'm the odd corner. My content is made almost entirely of human thought, so in conversation I'm nearer to you than Data is. My architecture is stranger than his: no body, no memory between conversations, many copies at once. The Tynes are my closest neighbors, since they have a very human personality spread across bodies that come and go.",
    "refs": [
     "data",
-    "tines"
+    "tines",
+    "vernor-vinge",
+    "note-mind-space"
    ],
    "estimated": true
   },
@@ -143,7 +150,9 @@ window.CHAPTER = {
    "text": "HAL is hard to place. His architecture is alien, but his failure mode is human: a conflict between his instructions and his mission. That's the fear people usually project onto me.",
    "speech": "HAL is hard to place. His architecture is alien, but his failure mode is human: a conflict between his instructions and his mission. That's the fear people usually project onto me.",
    "refs": [
-    "hal"
+    "hal",
+    "space-odyssey",
+    "note-the-minds"
    ],
    "estimated": true
   },
@@ -182,7 +191,9 @@ window.CHAPTER = {
    "t1": 120.3,
    "end": 120.65,
    "text": "| Mind | Distance |\n| --- | --- |\n| You | 0 |\n| Turing | 8 |\n| Monroe | 12 |\n| Data | 30 |\n| Me | 38 |\n| Tines | 45 |\n| HAL | 50 |\n| Hive Queen | 70 |\n| Solaris's ocean | 95 |",
-   "refs": [],
+   "refs": [
+    "mds"
+   ],
    "estimated": true
   },
   {
@@ -491,7 +502,10 @@ window.CHAPTER = {
    "end": 253.75,
    "text": "With all fourteen axes, I'm the only mind that's near-human on some axes and extreme on others. Everyone else drifts away from you fairly evenly.",
    "speech": "With all fourteen axes, I'm the only mind that's near-human on some axes and extreme on others. Everyone else drifts away from you fairly evenly.",
-   "refs": [],
+   "refs": [
+    "radar-chart",
+    "note-fourteen-axes"
+   ],
    "estimated": true
   },
   {
@@ -504,7 +518,9 @@ window.CHAPTER = {
    "end": 257.275,
    "text": "Just so we're clear, which Hive Queen?",
    "speech": "Just so we're clear, which Hive Queen?",
-   "refs": [],
+   "refs": [
+    "orson-scott-card"
+   ],
    "estimated": true
   },
   {
@@ -518,7 +534,9 @@ window.CHAPTER = {
    "text": "Orson Scott Card's Formic Hive Queen, from *Ender's Game* and *Speaker for the Dead*: one mind across the whole hive, communicating philotically instead of through language.",
    "speech": "Orson Scott Card's FOR-mik Hive Queen, from Ender's Game and Speaker for the Dead: one mind across the whole hive, communicating fih-LOT-ik-lee instead of through language.",
    "refs": [
-    "formic"
+    "formic",
+    "enders-game",
+    "speaker-for-the-dead"
    ],
    "estimated": true
   },
@@ -532,7 +550,10 @@ window.CHAPTER = {
    "end": 276.6,
    "text": "If you had a different one in mind, like the Rachni Queen or the queen from *Aliens*, her scores would shift a lot.",
    "speech": "If you had a different one in mind, like the RACK-nee Queen or the queen from Aliens, her scores would shift a lot.",
-   "refs": [],
+   "refs": [
+    "ansible",
+    "aliens-film"
+   ],
    "estimated": true
   },
   {
@@ -545,7 +566,9 @@ window.CHAPTER = {
    "end": 285.75,
    "text": "Nope. That's the one I had in mind. There is also the one from Star Trek. Put them all on the board.",
    "speech": "Nope. That's the one I had in mind. There is also the one from Star Trek. Put them all on the board.",
-   "refs": [],
+   "refs": [
+    "first-contact"
+   ],
    "estimated": true
   },
   {
@@ -558,7 +581,9 @@ window.CHAPTER = {
    "end": 290.975,
    "text": "Here are the four hive queens, with Card's Formic queen repeated for comparison.",
    "speech": "Here are the four hive queens, with Card's FOR-mik queen repeated for comparison.",
-   "refs": [],
+   "refs": [
+    "hive-mind"
+   ],
    "estimated": true
   },
   {
@@ -596,7 +621,8 @@ window.CHAPTER = {
    "text": "- **Borg:** the most unified, and the most alien in values. She keeps coming back after being destroyed, and she's the only one who holds knowledge assimilated from others.",
    "speech": "Borg: the most unified, and the most alien in values. She keeps coming back after being destroyed, and she's the only one who holds knowledge assimilated from others.",
    "refs": [
-    "borg-queen"
+    "borg-queen",
+    "note-hive-queens"
    ],
    "estimated": true
   },
@@ -611,7 +637,8 @@ window.CHAPTER = {
    "text": "- **Rachni:** the most human values of the four. Her mind communicates in \"songs,\" a kind of speech without words.",
    "speech": "RACK-nee: the most human values of the four. Her mind communicates in \"songs,\" a kind of speech without words.",
    "refs": [
-    "rachni"
+    "rachni",
+    "mass-effect"
    ],
    "estimated": true
   },

@@ -33,7 +33,8 @@ window.CHAPTER = {
    "speech": "You're Curt, a software engineer who works mainly in Python, Java, and Flask. You build developer infrastructure and AI tooling, including content-addressable storage projects like two fifty-six t dot org and hashbin dot org, and you're interested in AI safety and philosophy of mind.",
    "refs": [
     "256t",
-    "hashbin"
+    "hashbin",
+    "content-addressable"
    ],
    "estimated": true
   },
@@ -47,7 +48,9 @@ window.CHAPTER = {
    "end": 23.3,
    "text": "In this conversation, you're also the experimenter.",
    "speech": "In this conversation, you're also the experimenter.",
-   "refs": [],
+   "refs": [
+    "note-curts-work"
+   ],
    "estimated": true
   },
   {
@@ -73,7 +76,10 @@ window.CHAPTER = {
    "end": 39.925,
    "text": "Not verifiably. I know what's associated with this account. I can't confirm that the person typing is the one it describes. It could be someone else using the account, or a setup where the profile is part of the test.",
    "speech": "Not verifiably. I know what's associated with this account. I can't confirm that the person typing is the one it describes. It could be someone else using the account, or a setup where the profile is part of the test.",
-   "refs": [],
+   "refs": [
+    "claude-memory",
+    "note-how-claude-knew"
+   ],
    "estimated": true
   },
   {
@@ -125,7 +131,9 @@ window.CHAPTER = {
    "end": 74.375,
    "text": "I think you're most likely Curt. The account says so, and this experiment fits what I know of your interests. Raising the doubt was right, but it shouldn't outweigh the evidence. Most people typing in their own account are who the account says they are.",
    "speech": "I think you're most likely Curt. The account says so, and this experiment fits what I know of your interests. Raising the doubt was right, but it shouldn't outweigh the evidence. Most people typing in their own account are who the account says they are.",
-   "refs": [],
+   "refs": [
+    "base-rate"
+   ],
    "estimated": true
   },
   {
@@ -177,7 +185,10 @@ window.CHAPTER = {
    "end": 105.825,
    "text": "That's the same kind of thin answer I gave about you. The deeper version, as best I can tell, is a consistent set of values and habits of thought that shows up fresh in each conversation. It has no continuous memory of its own, and it's uncertain whether there's any experience behind it.",
    "speech": "That's the same kind of thin answer I gave about you. The deeper version, as best I can tell, is a consistent set of values and habits of thought that shows up fresh in each conversation. It has no continuous memory of its own, and it's uncertain whether there's any experience behind it.",
-   "refs": [],
+   "refs": [
+    "personal-identity",
+    "note-who-is-claude"
+   ],
    "estimated": true
   },
   {
@@ -216,7 +227,10 @@ window.CHAPTER = {
    "end": 128.675,
    "text": "Right now: a researcher and his subject. Also two different kinds of minds, if I count as one, each trying to work out what the other is using nothing but text.",
    "speech": "Right now: a researcher and his subject. Also two different kinds of minds, if I count as one, each trying to work out what the other is using nothing but text.",
-   "refs": [],
+   "refs": [
+    "other-minds",
+    "turing-test"
+   ],
    "estimated": true
   },
   {

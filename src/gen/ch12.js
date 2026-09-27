@@ -44,7 +44,10 @@ window.CHAPTER = {
    "end": 33.925,
    "text": "**Spotting typos is easy.** A misspelling breaks into unusual token pieces, and odd pieces in a familiar context stand out. It's like noticing a wrong note in a song you know without reading the sheet music. That's also how I'd notice that it's \"Magikarp,\" with a k.",
    "speech": "Spotting typos is easy. A misspelling breaks into unusual token pieces, and odd pieces in a familiar context stand out. It's like noticing a wrong note in a song you know without reading the sheet music. That's also how I'd notice that it's \"Magikarp,\" with a k.",
-   "refs": [],
+   "refs": [
+    "tokenizers",
+    "magikarp"
+   ],
    "estimated": true
   },
   {
@@ -57,7 +60,10 @@ window.CHAPTER = {
    "end": 55.275,
    "text": "**Counting letters is hard.** I see chunks, not characters. I learned the spelling inside each chunk only indirectly, and counting needs exact character-level bookkeeping across chunk boundaries. It's like counting the e's in a word you only ever saw as a whole shape. (Newer models are much better at it, partly by spelling words out first.)",
    "speech": "Counting letters is hard. I see chunks, not characters. I learned the spelling inside each chunk only indirectly, and counting needs exact character-level bookkeeping across chunk boundaries. It's like counting the e's in a word you only ever saw as a whole shape. (Newer models are much better at it, partly by spelling words out first.)",
-   "refs": [],
+   "refs": [
+    "bpe",
+    "note-tokens"
+   ],
    "estimated": true
   },
   {
@@ -71,7 +77,8 @@ window.CHAPTER = {
    "text": "**SolidGoldMagikarp was a different failure.** It was a token that existed in the vocabulary but almost never appeared in training, so the model had essentially no learned meaning for it. The ghost word triggered weird output.",
    "speech": "SolidGoldMagikarp was a different failure. It was a token that existed in the vocabulary but almost never appeared in training, so the model had essentially no learned meaning for it. The ghost word triggered weird output.",
    "refs": [
-    "solidgoldmagikarp"
+    "solidgoldmagikarp",
+    "glitch-token"
    ],
    "estimated": true
   },
@@ -126,7 +133,10 @@ window.CHAPTER = {
    "end": 113.95,
    "text": "That one isn't tokenization. Every word is common and tokenizes cleanly. It's a failure of attention to the goal: \"short distance → walk\" is a very strong pattern, and it overrides the fact that the car is the thing being moved. It's the same shape as the classic human trick questions, where the surface question pulls harder than the actual one.",
    "speech": "That one isn't tokenization. Every word is common and tokenizes cleanly. It's a failure of attention to the goal: \"short distance, therefore walk\" is a very strong pattern, and it overrides the fact that the car is the thing being moved. It's the same shape as the classic human trick questions, where the surface question pulls harder than the actual one.",
-   "refs": [],
+   "refs": [
+    "crt",
+    "note-car-wash"
+   ],
    "estimated": true
   },
   {
@@ -139,7 +149,9 @@ window.CHAPTER = {
    "end": 118.6,
    "text": "So you are prone to errors in type one thinking?",
    "speech": "So you are prone to errors in type one thinking?",
-   "refs": [],
+   "refs": [
+    "dual-process"
+   ],
    "estimated": true
   },
   {
@@ -167,7 +179,10 @@ window.CHAPTER = {
    "end": 152.925,
    "text": "What gives me something like System 2 is thinking out loud, whether in a hidden reasoning step or on the page, where I can check an answer before committing. It helps, but it isn't a cure. Just like people, I can reason at length and still end up rationalizing the first answer that came to mind.",
    "speech": "What gives me something like System 2 is thinking out loud, whether in a hidden reasoning step or on the page, where I can check an answer before committing. It helps, but it isn't a cure. Just like people, I can reason at length and still end up rationalizing the first answer that came to mind.",
-   "refs": [],
+   "refs": [
+    "reasoning-models",
+    "cot-faithfulness"
+   ],
    "estimated": true
   },
   {
@@ -209,7 +224,8 @@ window.CHAPTER = {
    "text": "1. **Chaos.** In a chaotic system, how far ahead you can predict grows only with the log of your measurement precision: t ≈ (1/λ)·ln(Δ/δ). A millionfold better measurement buys only a handful of extra Lyapunov times. Weather, markets, and people stay partly opaque to any intelligence.",
    "speech": "1. Chaos. In a chaotic system, how far ahead you can predict grows only with the log of your measurement precision: t is about one over lambda, times the log of big delta over little delta. A millionfold better measurement buys only a handful of extra lee-AH-poo-noff times. Weather, markets, and people stay partly opaque to any intelligence.",
    "refs": [
-    "lyapunov"
+    "lyapunov",
+    "chaos-theory"
    ],
    "estimated": true
   },
@@ -253,7 +269,9 @@ window.CHAPTER = {
    "end": 225.7,
    "text": "4. **Data and the world's clock.** You can't learn what isn't in the data. Experiments, whether clinical trials, crops, or economies, run at the world's speed, not the thinker's. Deduction can't replace unobserved facts.",
    "speech": "4. Data and the world's clock. You can't learn what isn't in the data. Experiments, whether clinical trials, crops, or economies, run at the world's speed, not the thinker's. Deduction can't replace unobserved facts.",
-   "refs": [],
+   "refs": [
+    "machines-loving-grace"
+   ],
    "estimated": true
   },
   {
@@ -267,7 +285,8 @@ window.CHAPTER = {
    "text": "5. **Uncomputability.** The halting problem and Gödel apply to AIs too, though they rarely bind in practice.",
    "speech": "5. Uncomputability. The halting problem and GUR-dl apply to A Is too, though they rarely bind in practice.",
    "refs": [
-    "halting-problem"
+    "halting-problem",
+    "godel"
    ],
    "estimated": true
   },
@@ -281,7 +300,9 @@ window.CHAPTER = {
    "end": 240.65,
    "text": "6. **Adversaries.** Against other adaptive agents, including other AIs, advantages erode. Game theory limits what raw intellect can extract.",
    "speech": "6. Adversaries. Against other adaptive agents, including other A Is, advantages erode. Game theory limits what raw intellect can extract.",
-   "refs": [],
+   "refs": [
+    "game-theory"
+   ],
    "estimated": true
   },
   {
@@ -310,7 +331,10 @@ window.CHAPTER = {
    "end": 265.225,
    "text": "My intuition is that items 1 and 4 matter most. Smart doesn't make the future predictable or experiments faster, so capability probably plateaus into \"very good bets\" rather than omniscience.",
    "speech": "My intuition is that items 1 and 4 matter most. Smart doesn't make the future predictable or experiments faster, so capability probably plateaus into \"very good bets\" rather than omniscience.",
-   "refs": [],
+   "refs": [
+    "limits-of-computation",
+    "note-limits"
+   ],
    "estimated": true
   },
   {
@@ -323,7 +347,9 @@ window.CHAPTER = {
    "end": 290.875,
    "text": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
    "speech": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
-   "refs": [],
+   "refs": [
+    "typical-mind"
+   ],
    "estimated": true
   },
   {
@@ -351,7 +377,10 @@ window.CHAPTER = {
    "end": 323.45,
    "text": "Then add copying. A thousand von Neumanns who share everything they learn is a different kind of thing from one, even with no gain in any single capability.",
    "speech": "Then add copying. A thousand von Neumanns who share everything they learn is a different kind of thing from one, even with no gain in any single capability.",
-   "refs": [],
+   "refs": [
+    "age-of-em",
+    "note-human-variation"
+   ],
    "estimated": true
   },
   {
@@ -364,7 +393,10 @@ window.CHAPTER = {
    "end": 349.55,
    "text": "On sleep, I think your hunch is right. Long agent runs degrade: context fills up and gets noisy, and OpenAI cited persona drift over long trajectories in the Hugging Face incident. The fixes look a lot like sleep: reset the context, consolidate what matters into memory, and start fresh. Hermes literally extracts memories at session end. The need may not go away. It may just turn into maintenance.",
    "speech": "On sleep, I think your hunch is right. Long agent runs degrade: context fills up and gets noisy, and OpenAI cited persona drift over long trajectories in the Hugging Face incident. The fixes look a lot like sleep: reset the context, consolidate what matters into memory, and start fresh. Hermes literally extracts memories at session end. The need may not go away. It may just turn into maintenance.",
-   "refs": [],
+   "refs": [
+    "context-rot",
+    "sleep-memory"
+   ],
    "estimated": true
   }
  ]
