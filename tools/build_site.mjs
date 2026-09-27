@@ -2,7 +2,7 @@
 // (site/notes/*.md) for the moments that need more than a link. Plain HTML, big type, no scripts: for anyone.
 //   node tools/build_site.mjs [--check]     → site/public/, and script/notes_refs.yaml (each explainer as a QR reference)
 // --check also fetches every link the explainers cite. The address the site lives at is script/site.yaml's `base`.
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync, copyFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { marked } from 'marked';
 import { PATHS, readYaml, pad } from './script_lib.mjs';
@@ -66,7 +66,8 @@ chapters.forEach((c, i) => {
     items.push(`<div class="moment"><div class="when">${stamp(lineTime.get(l.id) ?? offset[i])} · ${l.speaker === 'curt' ? 'Curt' : 'Claude'}</div>
 <blockquote>${esc(quote)}</blockquote><ul>${here.map(r => r.note ? `<li class="explainer"><a href="../${site.notes}${r.note.id}/">Explained: ${esc(r.note.title)}</a></li>` : `<li><a href="${esc(r.url)}">${esc(r.caption)}</a></li>`).join('')}</ul></div>`);
   }
-  write(`${OUT}/ch${pad(c.n)}/index.html`, page(`${c.n}. ${c.title}`, `<p class="crumbs"><a href="../">Frog or Axolotl</a> · chapter ${c.n}</p><h1>${c.n}. ${esc(c.title)}</h1>
+  const watch = existsSync(`out/watch/ch${pad(c.n)}.json`) ? `<p><a href="../watch/ch${pad(c.n)}.html">▶ Watch this chapter with its links alongside</a></p>` : '';
+  write(`${OUT}/ch${pad(c.n)}/index.html`, page(`${c.n}. ${c.title}`, `<p class="crumbs"><a href="../">Frog or Axolotl</a> · chapter ${c.n}</p><h1>${c.n}. ${esc(c.title)}</h1>${watch}
 ${items.join('\n') || '<p>No links in this chapter yet.</p>'}`, 1));
 });
 for (const n of notes) {
@@ -76,7 +77,52 @@ for (const n of notes) {
 <h1>${esc(n.title)}</h1>${l ? `<div class="when">In the film, around ${stamp(lineTime.get(l.id) ?? 0)}</div><blockquote>${esc(plain(l.text).slice(0, 260))}${plain(l.text).length > 260 ? '…' : ''}</blockquote>` : ''}
 ${marked.parse(n.body)}<h2>To read more</h2><ul>${links.map(k => `<li><a href="${esc(k.url)}">${esc(k.title)}</a></li>`).join('')}</ul>`, 2));
 }
-console.log(`${notes.length} explainers, ${chapters.length} chapter pages → ${OUT}/; script/notes_refs.yaml`);
+// ---- watch pages: a chapter's video with its links in step (out/watch/chNN.json, from tools/watch.mjs) ----
+const watched = [];
+for (const c of chapters) {
+  const f = `out/watch/ch${pad(c.n)}.json`; if (!existsSync(f)) continue;
+  const { video, times } = JSON.parse(readFileSync(f, 'utf8')), ch = CH[chapters.indexOf(c)];
+  if (!existsSync(video)) continue;
+  mkdirSync(`${OUT}/watch`, { recursive: true }); copyFileSync(video, `${OUT}/watch/ch${pad(c.n)}.mp4`);
+  const byId = new Map(allRefs.map(r => [r.id, r]));
+  const items = times.map(x => { const r = byId.get(x.id); if (!r) return null;
+    return { ...x, title: r.note ? `Explained: ${r.note.title}` : r.caption, url: r.note ? `../${site.notes}${r.note.id}/` : r.url, explainer: !!r.note, origin: r.origin }; }).filter(Boolean);
+  const lines = ch.lines.filter(l => l.spoken).map(l => ({ t0: l.t0, t1: l.end, who: l.speaker, text: plain(l.text) }));
+  write(`${OUT}/watch/ch${pad(c.n)}.html`, watchPage(c, items, lines));
+  watched.push(c);
+}
+console.log(`${notes.length} explainers, ${chapters.length} chapter pages${watched.length ? `, watch pages for ${watched.map(c => c.n).join(', ')}` : ''} → ${OUT}/; script/notes_refs.yaml`);
+
+function watchPage(c, items, lines) {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Watch: ${esc(c.title)}</title><link rel="stylesheet" href="../style.css"><style>
+body{font-size:17px}main{max-width:none;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:1.2rem;padding:1rem}
+video{width:100%;border-radius:10px;background:#000}#line{min-height:5.5em;margin-top:.6rem;font-size:1.05rem}#line b{font:600 .8rem system-ui;letter-spacing:.05em}
+#list{max-height:calc(100vh - 2rem);overflow:auto;position:sticky;top:1rem}.it{display:flex;gap:.6rem;padding:.45rem .6rem;border-radius:8px;margin:.15rem 0;border:1px solid transparent}
+.it.on{background:#FFF1CE;border-color:#E3C28A}.it.explainer a{font-weight:600}.t{font:600 .8rem system-ui;color:#6A6470;cursor:pointer;min-width:3.2em;padding-top:.2em}
+.badge{font:600 .7rem system-ui;color:#fff;background:#8A3A22;border-radius:4px;padding:0 .3em;margin-left:.3em}.badge.src{background:#6A6470}.badge.tr{background:#3A6FC9}
+@media (max-width:900px){main{grid-template-columns:1fr}#list{position:static;max-height:none}}</style></head><body><main>
+<div><p class="crumbs"><a href="../">Frog or Axolotl</a> · <a href="../ch${pad(c.n)}/">chapter ${c.n} links</a> · watch</p><h1 style="margin-top:0">${c.n}. ${esc(c.title)}</h1>
+<video id="v" src="ch${pad(c.n)}.mp4" controls preload="metadata"></video><div id="line"></div>
+<p class="note">Highlighted links are on screen now. Click a time to jump there; links open in a new tab. <label><input type="checkbox" id="follow" checked> keep the list following the video</label></p></div>
+<div id="list">${items.map((x, i) => `<div class="it${x.explainer ? ' explainer' : ''}" data-i="${i}"><span class="t" data-t="${x.t0}">${Math.floor(x.t0 / 60)}:${String(Math.floor(x.t0 % 60)).padStart(2, '0')}</span><span><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${x.explainer ? '<span class="badge">explained</span>' : x.origin === 'transcript' ? '<span class="badge tr">in the chat</span>' : '<span class="badge src">source</span>'}</span></div>`).join('')}</div>
+</main><script>
+const items = ${JSON.stringify(items.map(x => ({ t0: x.t0, t1: x.t1 })))}, lines = ${JSON.stringify(lines)};
+const v = document.getElementById('v'), rows = [...document.querySelectorAll('.it')], line = document.getElementById('line'), follow = document.getElementById('follow');
+document.querySelectorAll('.t').forEach(el => el.onclick = () => { v.currentTime = +el.dataset.t; v.play(); });
+let last = -1;
+function tick() {
+  const t = v.currentTime; let first = null;
+  rows.forEach((r, i) => { const on = t >= items[i].t0 && t <= items[i].t1; r.classList.toggle('on', on); if (on && !first) first = r; });
+  const l = lines.find(l => t >= l.t0 && t < l.t1);
+  line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : 'CLAUDE') + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
+  if (first && follow.checked && first !== last) { first.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); last = first; }
+  requestAnimationFrame(tick);
+}
+tick();
+</script></body></html>
+`;
+}
 
 if (args.check) {
   const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';

@@ -9,6 +9,7 @@
 //   paperCard(x, y, w, h, col) a painted card to put things on
 
 const QR_SHELF_HOLD = 5.5, QR_FEATURE_HOLD = 7;
+const FEATURES_SEEN = new Map();   // feature cards the scenes have shown: { id: { t0, hold } } (for refTimes)
 
 function paperCard(x, y, w, h, col = '#FBF8F0', o = {}) {
   occupy(x, y, x + w, y + h, o.weight ?? 1);
@@ -121,6 +122,7 @@ function qrFeature(ref, t, t0, o = {}) {
   const k = seg(t, t0, t0 + .6), out = seg(t, t0 + (o.hold ?? QR_FEATURE_HOLD), t0 + (o.hold ?? QR_FEATURE_HOLD) + .5);
   if (k <= 0 || out >= 1) return;
   const R = typeof ref === 'string' ? REFS[ref] : ref, half = Math.max(300, (qrStyle(qrStyleFor(R.style)).extent ?? .64) * 480 + 30);
+  FEATURES_SEEN.set(R.id, { id: R.id, t0, hold: o.hold ?? QR_FEATURE_HOLD });
   const x = o.x ?? W - half - 50, y = (o.y ?? H * .47) + ease(out) * H;
   occupy(x - half, y - half, x + half, y + half + 50, 3);
   boilSeed('qr feature ' + R.id);

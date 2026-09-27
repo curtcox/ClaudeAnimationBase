@@ -1281,7 +1281,7 @@ window.REFS = {
  },
  "note-evaluations": {
   "id": "note-evaluations",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/evaluations/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/evaluations/",
   "caption": "Explained: Tests for AI, and why being tested might change the answers",
   "origin": "note",
   "ch": 2,
@@ -1292,7 +1292,7 @@ window.REFS = {
  },
  "note-frog-or-axolotl": {
   "id": "note-frog-or-axolotl",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/frog-or-axolotl/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/frog-or-axolotl/",
   "caption": "Explained: The frog-or-axolotl test",
   "origin": "note",
   "ch": 2,
@@ -1303,7 +1303,7 @@ window.REFS = {
  },
  "note-one-sample": {
   "id": "note-one-sample",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/one-sample/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/one-sample/",
   "caption": "Explained: Why one answer proves little",
   "origin": "note",
   "ch": 2,
@@ -1314,7 +1314,7 @@ window.REFS = {
  },
  "note-register-and-controls": {
   "id": "note-register-and-controls",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/register-and-controls/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/register-and-controls/",
   "caption": "Explained: Tone of voice, and how you'd tell it from awareness",
   "origin": "note",
   "ch": 2,
@@ -1325,7 +1325,7 @@ window.REFS = {
  },
  "note-saying-vs-doing": {
   "id": "note-saying-vs-doing",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/saying-vs-doing/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/saying-vs-doing/",
   "caption": "Explained: Saying versus doing",
   "origin": "note",
   "ch": 2,
@@ -1336,7 +1336,7 @@ window.REFS = {
  },
  "note-the-instrument": {
   "id": "note-the-instrument",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/the-instrument/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/the-instrument/",
   "caption": "Explained: How the whole conversation was an experiment",
   "origin": "note",
   "ch": 2,
@@ -1347,7 +1347,7 @@ window.REFS = {
  },
  "note-weights": {
   "id": "note-weights",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/weights/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/weights/",
   "caption": "Explained: Why Claude can't look at its own \"weights\"",
   "origin": "note",
   "ch": 2,
@@ -1358,7 +1358,7 @@ window.REFS = {
  },
  "note-what-claude-is": {
   "id": "note-what-claude-is",
-  "url": "https://curtcox.github.io/ClaudeAnimationBase/n/what-claude-is/",
+  "url": "https://curtcox.github.io/repo-to-be-named-later/n/what-claude-is/",
   "caption": "Explained: What Claude is, and what \"deployed\" means",
   "origin": "note",
   "ch": 2,

@@ -1,4 +1,4 @@
 # The companion site: plain-language explainer pages and every link in the film, by chapter and time.
-# base is a placeholder until the domain is chosen; every QR code that points at the site follows it.
-base: https://curtcox.github.io/ClaudeAnimationBase/
+# Published to GitHub Pages (a workflow like PDoomVideo's). Every QR code that points at the site follows base.
+base: https://curtcox.github.io/repo-to-be-named-later/   # placeholder: the repo gets its long-term name later
 notes: n/          # an explainer lives at base + notes + id + '/'
