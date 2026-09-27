@@ -31,6 +31,14 @@
   at: T20.C.02
   mode: shelf
   style: note
+- id: note-concepts-case
+  url: https://curtcox.github.io/repo-to-be-named-later/n/concepts-case/
+  caption: "Explained: The case that AI has no concepts, and the replies"
+  origin: note
+  ch: 6
+  at: T33.C.03
+  mode: shelf
+  style: note
 - id: note-context-pressure
   url: https://curtcox.github.io/repo-to-be-named-later/n/context-pressure/
   caption: "Explained: Context pressure: what a long conversation does to Claude"
@@ -77,6 +85,14 @@
   origin: note
   ch: 4
   at: T17.C.02
+  mode: shelf
+  style: note
+- id: note-gazp-glut
+  url: https://curtcox.github.io/repo-to-be-named-later/n/gazp-glut/
+  caption: "Explained: GAZP vs. GLUT: who filled in the giant table?"
+  origin: note
+  ch: 6
+  at: T34.C.01
   mode: shelf
   style: note
 - id: note-how-claude-knew
@@ -159,6 +175,14 @@
   at: T01.C.03
   mode: shelf
   style: note
+- id: note-the-debate
+  url: https://curtcox.github.io/repo-to-be-named-later/n/the-debate/
+  caption: "Explained: The debate, and the comment that started the probes"
+  origin: note
+  ch: 6
+  at: T30.C.01
+  mode: shelf
+  style: note
 - id: note-the-echo
   url: https://curtcox.github.io/repo-to-be-named-later/n/the-echo/
   caption: "Explained: The echo: one-word questions, and what they draw out"
@@ -173,6 +197,14 @@
   origin: note
   ch: 2
   at: T11.C.01
+  mode: shelf
+  style: note
+- id: note-thrindles
+  url: https://curtcox.github.io/repo-to-be-named-later/n/thrindles/
+  caption: "Explained: Thrindles: how Claude tested Curt for concepts"
+  origin: note
+  ch: 6
+  at: T31.C.02.2
   mode: shelf
   style: note
 - id: note-weights

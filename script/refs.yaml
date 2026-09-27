@@ -140,6 +140,26 @@
 - { id: blockhead, url: "https://en.wikipedia.org/wiki/Blockhead_(thought_experiment)", caption: "Blockhead", origin: added, ch: 6, at: "Block's \"Blockhead,\"", mode: shelf, style: filing-drawers }
 - { id: monosemanticity, url: "https://transformer-circuits.pub/2024/scaling-monosemanticity/", caption: "Features that behave like concepts", origin: added, ch: 6, at: "Interpretability research", mode: shelf, style: plain }
 - { id: gazp-glut, url: "https://www.lesswrong.com/posts/k6EPphHiBH4WWYFCj/gazp-vs-glut", caption: "GAZP vs. GLUT", origin: added, ch: 6, at: "GAZP vs. GLUT", mode: feature, style: filing-drawers }
+# more for chapter 6: the debate's people and topics, the economics hiding in the probes, and the philosophy of concepts
+- { id: debate-llm-segment, url: "https://www.youtube.com/watch?v=oxHKesSpqBM&t=1154s", qr_url: "https://youtu.be/oxHKesSpqBM?t=1154", caption: "The debate: do LLMs understand?", origin: added, at: T30.C.01, mode: shelf, style: tv }
+- { id: doom-debates, url: "https://www.youtube.com/@DoomDebates", caption: "Doom Debates", origin: added, at: T30.C.01, mode: shelf, style: tv }
+- { id: ontology, url: "https://en.wikipedia.org/wiki/Ontology_(information_science)", caption: "Ontology, the profession", origin: added, at: T30.C.02, mode: shelf, style: plain }
+- { id: cyc, url: "https://en.wikipedia.org/wiki/Cyc", caption: "Cyc", origin: added, at: T30.C.02, mode: shelf, style: plain }
+- { id: concepts-sep, url: "https://plato.stanford.edu/entries/concepts/", caption: "Concepts (philosophy)", origin: added, at: T30.C.03, mode: shelf, style: plain }
+- { id: rivalry, url: "https://en.wikipedia.org/wiki/Rivalry_(economics)", caption: "Rival goods (economics)", origin: added, at: T30.C.04.2, mode: shelf, style: plain }
+- { id: non-sequitur, url: "https://en.wikipedia.org/wiki/Non_sequitur_(literary_device)", caption: "Non sequitur", origin: added, at: T31.C.01, mode: shelf, style: plain }
+- { id: network-effect, url: "https://en.wikipedia.org/wiki/Network_effect", caption: "Network effects", origin: added, at: T31.C.02.1, mode: shelf, style: plain }
+- { id: lighthouse-economics, url: "https://en.wikipedia.org/wiki/The_Lighthouse_in_Economics", caption: "The Lighthouse in Economics", origin: added, at: T31.C.02.2, mode: shelf, style: plain }
+- { id: cliche, url: "https://en.wikipedia.org/wiki/Clich%C3%A9", caption: "Cliché", origin: added, at: T32.U.02, mode: shelf, style: plain }
+- { id: intrinsic-extrinsic, url: "https://plato.stanford.edu/entries/intrinsic-extrinsic/", caption: "Properties vs relations", origin: added, at: T32.C.02, mode: shelf, style: plain }
+- { id: harnad, url: "https://en.wikipedia.org/wiki/Stevan_Harnad", caption: "Stevan Harnad", origin: added, at: T33.C.02.2, mode: shelf, style: plain }
+- { id: searle, url: "https://en.wikipedia.org/wiki/John_Searle", caption: "John Searle", origin: added, at: T33.C.02.2, mode: shelf, style: plain }
+- { id: ned-block, url: "https://en.wikipedia.org/wiki/Ned_Block", caption: "Ned Block", origin: added, at: T33.C.02.4, mode: shelf, style: plain }
+- { id: prime-number, url: "https://en.wikipedia.org/wiki/Prime_number", caption: "Prime numbers", origin: added, at: T33.C.03, mode: shelf, style: plain }
+- { id: yudkowsky, url: "https://en.wikipedia.org/wiki/Eliezer_Yudkowsky", caption: "Eliezer Yudkowsky", origin: added, at: T34.U.01, mode: shelf, style: plain }
+- { id: rationality-az, url: "https://www.readthesequences.com/", caption: "Rationality: From AI to Zombies", origin: added, at: T34.U.01, mode: shelf, style: plain }
+- { id: p-zombie, url: "https://en.wikipedia.org/wiki/Philosophical_zombie", caption: "Philosophical zombies", origin: added, at: T34.C.01, mode: shelf, style: plain }
+- { id: computer-use, url: "https://www.anthropic.com/news/3-5-models-and-computer-use", caption: "Claude using a computer", origin: added, at: T34.C.02, mode: shelf, style: plain }
 
 # ---- 7 Mind-Space ------------------------------------------------------------------------------------------------
 - { id: turing, url: "https://en.wikipedia.org/wiki/Alan_Turing", caption: "Alan Turing", origin: added, ch: 7, at: "Turing lands just ahead", mode: shelf, style: enigma }
