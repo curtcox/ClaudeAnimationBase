@@ -35,21 +35,6 @@
     for (let i = 0; i < Math.min(n, 3); i++) inkLine([[x + i * w / 2, y + h], [x + i * w / 2, y + h - h * clamp(k * 3 - i * .3)]], 4, '#B98A5E', 'ink', 0);
     for (let j = 1; j < n - 1; j++) inkLine([[x - 10, y + h - j * h / 4], [x + w + 10, y + h - j * h / 4]], 5, '#8A6A4A', 'ink', 0);
   }
-  function cow(x, y, s, t, o = {}) {   // the Dish of the Day: large, cheerful, sincere, in a bow tie; o.point 0..1 at its shoulder
-    boilSeed('cow'); occupy(x - 260 * s, y - 420 * s, x + 220 * s, y + 20, 1, 'cow');
-    paint(ellPts(x, y - 170 * s, 210 * s, 170 * s, 30), { wash: '#F4EFE2', ink: PAL.ink, sw: 1.4 });
-    for (const [px, py, r] of [[-90, -210, 55], [60, -120, 45], [120, -240, 35]]) paint(ellPts(x + px * s, y + py * s, r * s, r * .8 * s, 16, 3), { wash: '#4A3A34', ink: null });
-    const hx = x - 30 * s, hy = y - 350 * s;
-    paint(ellPts(hx, hy, 95 * s, 85 * s, 24), { wash: '#F4EFE2', ink: PAL.ink, sw: 1.3 });
-    for (const d of [-1, 1]) paint([[hx + d * 60 * s, hy - 60 * s], [hx + d * 110 * s, hy - 120 * s], [hx + d * 80 * s, hy - 50 * s]], { wash: '#E8D9A8', ink: PAL.ink, sw: 1 });
-    paint(ellPts(hx, hy + 45 * s, 60 * s, 34 * s, 18), { wash: '#E8B4A8', ink: PAL.ink, sw: 1 });
-    for (const d of [-1, 1]) { paint(ellPts(hx + d * 36 * s, hy - 20 * s, 12 * s, 14 * s, 10), { wash: PAL.ink, ink: null }); paint(ellPts(hx + d * 18 * s, hy + 45 * s, 6 * s, 8 * s, 8), { wash: '#6A3A3A', ink: null }); }
-    inkLine([[hx - 40 * s, hy + 12 * s], [hx, hy + 24 * s], [hx + 40 * s, hy + 12 * s]], 2.4);   // the smile
-    paint([[hx - 50 * s, hy + 95 * s], [hx, hy + 110 * s], [hx - 50 * s, hy + 125 * s]], { wash: '#C9302C', ink: PAL.ink, sw: 1 });   // the bow tie
-    paint([[hx + 50 * s, hy + 95 * s], [hx, hy + 110 * s], [hx + 50 * s, hy + 125 * s]], { wash: '#C9302C', ink: PAL.ink, sw: 1 });
-    const p = ease(o.point || 0), ax = lerp(x + 190 * s, x + 60 * s, p), ay = lerp(y - 150 * s, y - 260 * s, p) + Math.sin(t * 3) * 4;
-    paint(ribbon([[x + 150 * s, y - 230 * s], [x + 230 * s, y - 250 * s], [ax, ay]], 30 * s, 24 * s), { wash: '#F4EFE2', ink: PAL.ink, sw: 1.1 });
-  }
   function table(x, y, w) {   // a restaurant table in a white cloth
     boilSeed('table ' + x);
     paint([[x, y], [x + w, y], [x + w + 30, y + 190], [x - 30, y + 190]], { wash: '#FBF8F0', ink: PAL.ink, sw: 1.3 });

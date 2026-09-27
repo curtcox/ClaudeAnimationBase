@@ -188,11 +188,11 @@ function deskScreen(name, t, spec = {}) {
 }
 
 function desk(t, o = {}) {
-  const hour = o.hour ?? 7.5, dim = o.dim ?? 0;
+  const hour = o.hour ?? 7.5, dim = o.dim ?? 0, alarm = o.alarm ?? 0;
   boilSeed('desk wall');
-  // the room: a dim wall, morning light from a window off to the right
-  paint(rectPts(-200, -200, W + 400, H + 400), { wash: mixCol('#3A3444', '#141218', dim), fill: '#2A2533', fillOp: 90, bleed: .2, tex: .6, ink: null });
-  glow(W + 60, 180, 700, mixCol('#FFD9A0', '#FFF3D6', seg(hour, 7, 12)), .5 * (1 - dim));
+  // the room: a dim wall, morning light from a window off to the right; alarm (0..1) bruises it red (July)
+  paint(rectPts(-200, -200, W + 400, H + 400), { wash: mixCol(mixCol('#3A3444', '#141218', dim), '#4A2230', alarm), fill: '#2A2533', fillOp: 90, bleed: .2, tex: .6, ink: null });
+  glow(W + 60, 180, 700, mixCol(mixCol('#FFD9A0', '#FFF3D6', seg(hour, 7, 12)), '#C23A4A', alarm), (.5 + .2 * alarm) * (1 - dim));
   const S = o.screens || {};
   for (const name of ['upL', 'upR', 'tall', 'left', 'right', 'main']) if (S[name] !== null) deskScreen(name, t, S[name] || {});
   desk.screens = S;   // the laptops sit on the desk top, so deskFront draws them

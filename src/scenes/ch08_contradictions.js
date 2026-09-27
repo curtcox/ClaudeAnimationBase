@@ -45,12 +45,6 @@
   }
 
   // ---------- props ----------
-  function curtRoom(x, y, s, warm = 1) {   // a head's silhouette with a warm lit room inside
-    boilSeed('curt silhouette ' + x);
-    paint([[x - 150 * s, y + 220 * s], [x - 170 * s, y - 60 * s], [x - 90 * s, y - 210 * s], [x + 60 * s, y - 220 * s], [x + 170 * s, y - 100 * s], [x + 200 * s, y + 10 * s], [x + 160 * s, y + 50 * s], [x + 150 * s, y + 220 * s]], { wash: '#3A3342', ink: PAL.ink, sw: 1.2 });
-    paint(rectPts(x - 80 * s, y - 80 * s, 170 * s, 130 * s), { wash: mixCol('#3A3342', '#FFD27A', warm), ink: PAL.ink, sw: .8 });
-    if (warm > 0) { glow(x + 5 * s, y - 15 * s, 160 * s, '#FFD27A', .6 * warm); paint(rectPts(x - 40 * s, y + 10 * s, 90 * s, 30 * s), { wash: '#8A5A3C', ink: null }); }
-  }
   function letter8(x, y, w, h, o = {}) {   // a handwritten letter; o.by: 'hand' | 'lattice' | null
     boilSeed('letter ' + x + ' ' + y);
     paint(rectPts(x, y, w, h), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 });

@@ -11,6 +11,8 @@
 //   mdTable(id), tableCard(tb, x, y, w, o)   a transcript table, parsed from its line and painted exactly
 //   thrindle(x, y, s, t, o)        ch 6's invented creature
 //   radarStar(x, y, r, vals, col, o)   a mind's 7- or 14-point star (ch 7's board)
+//   cow(x, y, s, t, o)             the Dish of the Day (ch 5), back in ch 11
+//   curtRoom(x, y, s, warm)        a head's silhouette with a lit room inside (ch 8), back in ch 11
 
 const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, col, { ink: false, font: `${Math.round(size)}px "Patrick Hand", sans-serif`, ...o });
 
@@ -25,7 +27,7 @@ function atWord(id, phrase, dk = 0) {
 }
 
 // ---------- the desk, over Curt's shoulder ----------
-//   hour         the window's light (7 cool dawn → 12 noon gold)
+//   hour         the window's light (7 cool dawn → 12 noon gold); alarm 0..1 bruises it red (July)
 //   base         the chapter's usual screens; screens: this shot's overrides (null hides a screen)
 //   mood         Claude's emotion keys for the main monitor (emotions()); assemble 0..1 (the crowd gathering); lookX
 //   cam          [cx, cy, zoom] (default: the wide desk, drifting a little)
@@ -39,7 +41,7 @@ function deskShot(t, o = {}) {
   const cam = o.cam || DESK.cam;
   camBegin(cam[0] + 6 * Math.sin(t * .3), cam[1] + 3 * Math.sin(t * .23), cam[2] * (1 + .004 * Math.sin(t * .2)));
   const mood = o.mood || emotions(t, [[0, 'neutral']]);
-  desk(t, { hour: o.hour ?? 7.5, dim: o.dim, screens: {
+  desk(t, { hour: o.hour ?? 7.5, dim: o.dim, alarm: o.alarm, screens: {
     main: { kind: 'claude', pose: { ...mood, assemble: o.assemble ?? 1, mouth: clawdMouth(talkOf(t, 'claude'), mood.mouth), lookX: o.lookX ?? mood.lookX } },
     left: { kind: 'code' }, right: { kind: 'code', speed: .7 }, upL: { kind: 'code', speed: .8 }, upR: { kind: 'code', speed: 1.3 },
     tall: { kind: 'code', speed: 2.5 }, lapL: { kind: 'code', speed: .5 }, lapR: { kind: 'code', speed: 1.1 },
@@ -189,4 +191,27 @@ function radarStar(x, y, r, vals, col, o = {}) {
     for (let d = 0; d < 6; d++) inkLine([[x + Math.cos(a) * rr * d / 6, y + Math.sin(a) * rr * d / 6], [x + Math.cos(a) * rr * (d + .5) / 6, y + Math.sin(a) * rr * (d + .5) / 6]], 3, PAL.clayDk, 'ink', 0);
     lab('?', x + Math.cos(a) * (rr + 30), y + Math.sin(a) * (rr + 30), 40, PAL.clayDk);
   }
+}
+
+// ---------- motifs that come back ----------
+function cow(x, y, s, t, o = {}) {   // the Dish of the Day: large, cheerful, sincere, in a bow tie; o.point 0..1 at its shoulder
+  boilSeed('cow'); occupy(x - 260 * s, y - 420 * s, x + 220 * s, y + 20, 1, 'cow');
+  paint(ellPts(x, y - 170 * s, 210 * s, 170 * s, 30), { wash: '#F4EFE2', ink: PAL.ink, sw: 1.4 });
+  for (const [px, py, r] of [[-90, -210, 55], [60, -120, 45], [120, -240, 35]]) paint(ellPts(x + px * s, y + py * s, r * s, r * .8 * s, 16, 3), { wash: '#4A3A34', ink: null });
+  const hx = x - 30 * s, hy = y - 350 * s;
+  paint(ellPts(hx, hy, 95 * s, 85 * s, 24), { wash: '#F4EFE2', ink: PAL.ink, sw: 1.3 });
+  for (const d of [-1, 1]) paint([[hx + d * 60 * s, hy - 60 * s], [hx + d * 110 * s, hy - 120 * s], [hx + d * 80 * s, hy - 50 * s]], { wash: '#E8D9A8', ink: PAL.ink, sw: 1 });
+  paint(ellPts(hx, hy + 45 * s, 60 * s, 34 * s, 18), { wash: '#E8B4A8', ink: PAL.ink, sw: 1 });
+  for (const d of [-1, 1]) { paint(ellPts(hx + d * 36 * s, hy - 20 * s, 12 * s, 14 * s, 10), { wash: PAL.ink, ink: null }); paint(ellPts(hx + d * 18 * s, hy + 45 * s, 6 * s, 8 * s, 8), { wash: '#6A3A3A', ink: null }); }
+  inkLine([[hx - 40 * s, hy + 12 * s], [hx, hy + 24 * s], [hx + 40 * s, hy + 12 * s]], 2.4);   // the smile
+  paint([[hx - 50 * s, hy + 95 * s], [hx, hy + 110 * s], [hx - 50 * s, hy + 125 * s]], { wash: '#C9302C', ink: PAL.ink, sw: 1 });   // the bow tie
+  paint([[hx + 50 * s, hy + 95 * s], [hx, hy + 110 * s], [hx + 50 * s, hy + 125 * s]], { wash: '#C9302C', ink: PAL.ink, sw: 1 });
+  const p = ease(o.point || 0), ax = lerp(x + 190 * s, x + 60 * s, p), ay = lerp(y - 150 * s, y - 260 * s, p) + Math.sin(t * 3) * 4;
+  paint(ribbon([[x + 150 * s, y - 230 * s], [x + 230 * s, y - 250 * s], [ax, ay]], 30 * s, 24 * s), { wash: '#F4EFE2', ink: PAL.ink, sw: 1.1 });
+}
+function curtRoom(x, y, s, warm = 1) {   // a head's silhouette with a warm lit room inside
+  boilSeed('curt silhouette ' + x);
+  paint([[x - 150 * s, y + 220 * s], [x - 170 * s, y - 60 * s], [x - 90 * s, y - 210 * s], [x + 60 * s, y - 220 * s], [x + 170 * s, y - 100 * s], [x + 200 * s, y + 10 * s], [x + 160 * s, y + 50 * s], [x + 150 * s, y + 220 * s]], { wash: '#3A3342', ink: PAL.ink, sw: 1.2 });
+  paint(rectPts(x - 80 * s, y - 80 * s, 170 * s, 130 * s), { wash: mixCol('#3A3342', '#FFD27A', warm), ink: PAL.ink, sw: .8 });
+  if (warm > 0) { glow(x + 5 * s, y - 15 * s, 160 * s, '#FFD27A', .6 * warm); paint(rectPts(x - 40 * s, y + 10 * s, 90 * s, 30 * s), { wash: '#8A5A3C', ink: null }); }
 }
