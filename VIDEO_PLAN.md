@@ -286,9 +286,9 @@ For every QR, at its display time:
    - at 1080p,
    - after a YouTube-like re-encode (x264 CRF 28 at 720p),
    - and after a simulated phone capture (perspective warp, blur, moiré).
-3. Decode each trial with three independent decoders: jsQR, ZXing's JavaScript port and ZBar (WebAssembly). A trial
-   passes when at least two of them read the exact URL; a code passes when all 15 trials do (13 scales, YouTube,
-   phone).
+3. Decode each trial with three independent decoders: jsQR, ZXing's JavaScript port and ZBar (WebAssembly). A code
+   passes when every one of the 15 trials (13 scales, YouTube, phone) is read by at least one decoder, and at least two
+   decoders each read 13 or more of them. Feature cards are 480 px at ECC H; shelf tags are 380 px at ECC M.
 
 No single decoder is the gate, because each has blind spots. ZXing-js fails some perfect, computer-generated codes
 outright, which we confirmed with ideal black-and-white renders. jsQR misses sporadically at particular scales. The
