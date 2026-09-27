@@ -53,9 +53,9 @@ difference.
 | T52.C.04 | hf-incident (feature; its chip is voiced) · sandbox-security · reward-hacking · note-hf-incident (explainer) |
 | T52.C.05 | specification-gaming · note-reward-hacking (explainer) |
 | T52.C.06.1 | 80k-hf (voiced) · zero-day |
-| T52.C.06.2 | darkreading-hf (voiced) |
+| T52.C.06.2 | darkreading-hf (voiced) · openai-hf-statement |
 | T52.C.06.4 | wiki-hugging-face (voiced) · z-ai · open-weights · note-defenders-refused (explainer) |
-| T52.C.07 | un-brief-hf (voiced) · dual-use |
+| T52.C.07 | un-brief-hf (voiced) · dual-use · openai-hf-road-ahead |
 | T52.C.08 | un-ai-panel |
 | T53.U.01 | openai-wiki |
 | T53.C.02 | chatgpt |

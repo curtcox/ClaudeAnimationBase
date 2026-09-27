@@ -111,6 +111,14 @@
   at: T25.C.01
   mode: shelf
   style: note
+- id: note-doom-options
+  url: https://curtcox.github.io/repo-to-be-named-later/n/doom-options/
+  caption: 'Explained: Nine doors, and Claude picks "Other"'
+  origin: note
+  ch: 14
+  at: T72.C.03
+  mode: shelf
+  style: note
 - id: note-dyson-t800
   url: https://curtcox.github.io/repo-to-be-named-later/n/dyson-t800/
   caption: "Explained: Miles Dyson and the T-800"
@@ -215,6 +223,14 @@
   at: T61.C.02
   mode: shelf
   style: note
+- id: note-intelligent-machines
+  url: https://curtcox.github.io/repo-to-be-named-later/n/intelligent-machines/
+  caption: "Explained: Intelligent Machines, and what Claude made of its hosts"
+  origin: note
+  ch: 14
+  at: T68.C.04.2
+  mode: shelf
+  style: note
 - id: note-limits
   url: https://curtcox.github.io/repo-to-be-named-later/n/limits/
   caption: "Explained: Seven limits on AI, well short of physics"
@@ -303,6 +319,14 @@
   at: T52.C.05
   mode: shelf
   style: note
+- id: note-roose-newton
+  url: https://curtcox.github.io/repo-to-be-named-later/n/roose-newton/
+  caption: "Explained: Kevin Roose, Casey Newton, and Sydney"
+  origin: note
+  ch: 14
+  at: T71.C.02.2
+  mode: shelf
+  style: note
 - id: note-rsi
   url: https://curtcox.github.io/repo-to-be-named-later/n/rsi/
   caption: "Explained: RSI: AI that improves itself"
@@ -325,6 +349,14 @@
   origin: note
   ch: 5
   at: T28.C.02
+  mode: shelf
+  style: note
+- id: note-tescreal
+  url: https://curtcox.github.io/repo-to-be-named-later/n/tescreal/
+  caption: "Explained: TESCREAL, hubris, and what Jeff would think of Curt"
+  origin: note
+  ch: 14
+  at: T69.C.04
   mode: shelf
   style: note
 - id: note-testimony

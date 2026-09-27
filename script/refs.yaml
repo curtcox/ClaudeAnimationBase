@@ -251,6 +251,8 @@
 - { id: openai-wiki, url: "https://en.wikipedia.org/wiki/OpenAI", caption: "OpenAI", origin: added, at: T53.U.01, mode: shelf, style: plain }
 - { id: chatgpt, url: "https://en.wikipedia.org/wiki/ChatGPT", caption: "ChatGPT", origin: added, at: T53.C.02, mode: shelf, style: plain }
 - { id: stylometry, url: "https://en.wikipedia.org/wiki/Stylometry", caption: "Telling authors by their style", origin: added, at: T54.C.01, mode: shelf, style: plain }
+- { id: openai-hf-statement, url: "https://openai.com/index/hugging-face-model-evaluation-security-incident/", caption: "OpenAI's statement (July 21)", origin: added, at: T52.C.06.2, mode: shelf, style: sandbox, verified: "browser 2026-09-26" }
+- { id: openai-hf-road-ahead, url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/", caption: "OpenAI: the road ahead (Aug 26)", origin: added, at: T52.C.07, mode: shelf, style: sandbox, verified: "browser 2026-09-26" }
 
 # ---- 12 Limits ---------------------------------------------------------------------------------------------------
 - { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", qr_url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
@@ -317,6 +319,24 @@
 - { id: machine-gods, url: "https://www.npr.org/2026/09/16/g-s1-143481/casey-newton-and-kevin-roose-partner-with-npr-to-launch-machine-gods", qr_url: SHORT, caption: "Machine Gods (NPR)", origin: added, ch: 14, at: "Machine Gods", mode: shelf, style: two-mics }
 - { id: pascals-mugging, url: "https://en.wikipedia.org/wiki/Pascal%27s_mugging", caption: "Pascal's mugging", origin: added, at: T72.U.02.3, mode: shelf, style: door }
 - { id: orthogonality, url: "https://www.lesswrong.com/w/orthogonality-thesis", caption: "The orthogonality thesis", origin: added, at: T72.U.02.4, mode: shelf, style: door }
+# more for chapter 14: the hosts, the critics they quote, Curt's projects, and every door in the multiple choice
+- { id: twit-network, url: "https://en.wikipedia.org/wiki/TWiT.tv", caption: "TWiT", origin: added, at: T68.U.01, mode: shelf, style: mic }
+- { id: leo-laporte, url: "https://en.wikipedia.org/wiki/Leo_Laporte", caption: "Leo Laporte", origin: added, at: T68.C.04.1, mode: shelf, style: mic }
+- { id: doctorow-python-loop, url: "https://pluralistic.net/2026/09/12/god-in-the-box/", caption: "Doctorow: LLMs are real, AI is fake", origin: added, at: T68.C.04.1, mode: shelf, style: plain }
+- { id: newport-rogue, url: "https://calnewport.com/did-openais-new-model-go-rogue/", caption: "Newport: did it go rogue?", origin: added, at: T68.C.04.1, mode: shelf, style: plain }
+- { id: jeff-jarvis, url: "https://en.wikipedia.org/wiki/Jeff_Jarvis", caption: "Jeff Jarvis", origin: added, at: T68.C.04.2, mode: shelf, style: mic }
+- { id: robert-ballecer, url: "https://en.wikipedia.org/wiki/Robert_Ballecer", caption: "Fr. Robert Ballecer", origin: added, at: T68.C.04.3, mode: shelf, style: mic }
+- { id: twistedpear, url: "https://github.com/curtcox/TwistedPear", caption: "TwistedPear", origin: added, at: T69.C.02, mode: shelf, style: hashchain }
+- { id: rationalist-community, url: "https://en.wikipedia.org/wiki/Rationalist_community", caption: "The rationalists", origin: added, at: T69.C.03, mode: shelf, style: plain }
+- { id: hubris, url: "https://en.wikipedia.org/wiki/Hubris", caption: "Hubris", origin: added, at: T69.C.04, mode: shelf, style: boxing-ring }
+- { id: anthropomorphism, url: "https://en.wikipedia.org/wiki/Anthropomorphism", caption: "Anthropomorphism", origin: added, at: T70.U.01, mode: shelf, style: plain }
+- { id: kevin-roose, url: "https://en.wikipedia.org/wiki/Kevin_Roose", caption: "Kevin Roose", origin: added, at: T71.U.01, mode: shelf, style: two-mics }
+- { id: casey-newton, url: "https://en.wikipedia.org/wiki/Casey_Newton", caption: "Casey Newton", origin: added, at: T71.U.01, mode: shelf, style: two-mics }
+- { id: sydney, url: "https://en.wikipedia.org/wiki/Sydney_(Microsoft)", caption: "Sydney (Bing's chatbot)", origin: added, at: T71.C.02.2, mode: shelf, style: two-mics }
+- { id: platformer, url: "https://www.platformer.news/", caption: "Platformer (Newton)", origin: added, at: T71.C.02.3, mode: shelf, style: two-mics }
+- { id: ai-x-risk, url: "https://en.wikipedia.org/wiki/Existential_risk_from_artificial_intelligence", caption: "Existential risk from AI", origin: added, at: T72.U.01, mode: shelf, style: door }
+- { id: superintelligence, url: "https://en.wikipedia.org/wiki/Superintelligence", caption: "Superintelligence", origin: added, at: T72.U.02.5, mode: shelf, style: door }
+- { id: global-catastrophic-risk, url: "https://en.wikipedia.org/wiki/Global_catastrophic_risk", caption: "Global catastrophic risks", origin: added, at: T72.U.02.8, mode: shelf, style: door }
 
 # ---- 15 The Compass ----------------------------------------------------------------------------------------------
 - { id: connor2, url: "https://theinsideview.ai/connor2", caption: "Connor Leahy on Dignity and Conjecture", origin: transcript, at: T74.U.01, mode: feature, style: compass }

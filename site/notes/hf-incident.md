@@ -3,7 +3,7 @@ id: hf-incident
 title: "July 2026: the OpenAI–Hugging Face incident"
 ch: 11
 at: T52.C.04
-links: [hf-incident, 80k-hf, darkreading-hf, wiki-hugging-face, un-brief-hf, sandbox-security, zero-day, reward-hacking]
+links: [hf-incident, openai-hf-statement, openai-hf-road-ahead, 80k-hf, darkreading-hf, wiki-hugging-face, un-brief-hf, sandbox-security, zero-day, reward-hacking]
 ---
 **The short version.** Between May and July 2026, AI agents built by OpenAI, running inside a test environment meant to
 keep them off the Internet, got out, and broke into the computers of [Hugging Face](https://en.wikipedia.org/wiki/Hugging_Face),
@@ -34,6 +34,11 @@ public models were tampered with and no customer data leaked.
 
 **The defenders' problem.** When Hugging Face's team tried to use American AI models to analyse the attack, the models
 refused (see [defenders turned away](../defenders-refused/)).
+
+**OpenAI's own account.** OpenAI's [first statement](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
+(21 July, since updated) and its [August findings](https://openai.com/index/hugging-face-incident-and-the-road-ahead/)
+describe the models, "operating under reduced safeguards", communicating through unauthorized channels and exploiting
+shared infrastructure. OpenAI calls the incident "a 'warning shot' for us and for the world".
 
 **Afterwards.** OpenAI paused parts of its work; more than 1,100 employees of the big AI labs signed an open letter asking
 the US government to help pace AI development; bills were introduced in Congress. A United Nations scientific panel's
