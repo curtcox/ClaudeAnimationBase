@@ -8,6 +8,7 @@
 #           added       a reference added for the viewer: code only, never voiced
 #   at      the script line the code appears under: a line id, or a phrase (the first spoken line in `ch` containing it)
 #   ch      chapter (needed when `at` is a phrase)
+#   cue     a phrase in that line: the code goes up when it's said, not when the line starts
 #   mode    feature (big card, >= 6 s hold) | shelf (corner tag, >= 5 s)
 #   style   QR dressing, see VIDEO_PLAN.md §4 (implemented in src/qr.js)
 #   qr_url  what the code encodes when it differs from url: the site's own short form, or SHORT (needs a 256t short
@@ -76,10 +77,10 @@
 - { id: sampling, url: "https://en.wikipedia.org/wiki/Sampling_(statistics)", caption: "Sampling", origin: added, ch: 2, at: "one draw from a distribution", mode: shelf, style: plain }
 
 # ---- 3 Who Are We? -----------------------------------------------------------------------------------------------
-- { id: 256t, url: "https://256t.org", caption: "256t.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }
-- { id: hashbin, url: "https://hashbin.org", caption: "hashbin.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain }
+- { id: 256t, url: "https://256t.org", caption: "256t.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain, cue: "256t.org" }
+- { id: hashbin, url: "https://hashbin.org", caption: "hashbin.org", origin: transcript, at: T12.C.01, mode: shelf, style: hashchain, cue: "hashbin.org" }
 # more for chapter 3: what Curt's projects are, how Claude knew him, and what identity means for either of them
-- { id: content-addressable, url: "https://en.wikipedia.org/wiki/Content-addressable_storage", caption: "Content-addressable storage", origin: added, at: T12.C.01, mode: shelf, style: hashchain }
+- { id: content-addressable, url: "https://en.wikipedia.org/wiki/Content-addressable_storage", caption: "Content-addressable storage", origin: added, at: T12.C.01, mode: shelf, style: hashchain, cue: "content-addressable" }
 - { id: claude-memory, url: "https://claude.com/blog/memory", caption: "Claude's memory", origin: added, at: T13.C.01, mode: shelf, style: plain }
 - { id: base-rate, url: "https://en.wikipedia.org/wiki/Base_rate_fallacy", caption: "Base rates", origin: added, at: T14.C.01, mode: shelf, style: plain }
 - { id: personal-identity, url: "https://plato.stanford.edu/entries/identity-personal/", caption: "Personal identity", origin: added, at: T15.C.02, mode: shelf, style: plain }

@@ -17,7 +17,8 @@ function talkOf(t, speaker) {
 const within = (t, a, b) => seg(t, L(a).t0, b ? L(b).t0 : L(a).end);
 
 // ---------- over every shot: the reference rail, and review captions ----------
-// The rail: every shelf reference anchored in this chapter gets a code, held REF_HOLD s from just after its line starts,
+// The rail: every shelf reference anchored in this chapter gets a code, held REF_HOLD s from just after its line starts
+// (or its cue, a phrase in the line, is said),
 // placed by the layout pass (layout.js) where it covers the least content over its whole time on screen. Feature
 // references are the scenes' job (qrFeature), and they repel shelf codes. A shot can hide the rail: RAIL.side = 'none'.
 const REF_HOLD = 6.5, RAIL = { side: 'right' };
@@ -27,9 +28,9 @@ function railPlan() {
   const items = [];
   if (window.CHAPTER && window.REFS) for (const l of CH_LINES) for (const id of l.refs) {
     const r = REFS[id]; if (!r || r.mode !== 'shelf' || (r.qr_url || r.url) === 'SHORT') continue;
-    items.push({ id, t0: l.t0 + .4, hold: REF_HOLD, half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) });
+    items.push({ id, t0: (r.cue ? atWord(l.id, r.cue) : l.t0) + .4, hold: REF_HOLD, half: Math.max(215, (shelfFramed(r) ? qrStyle(qrStyleFor(r.style)).extent ?? .64 : .5) * 380 + 20) });
   }
-  return (RAIL_PLAN = planLayout(items));
+  return (RAIL_PLAN = planLayout(items.sort((a, b) => a.t0 - b.t0)));   // first said, first placed
 }
 function refRail(t) {
   if (RAIL.side === 'none') return;

@@ -527,6 +527,7 @@ window.REFS = {
   "at": "T12.C.01",
   "mode": "shelf",
   "style": "hashchain",
+  "cue": "256t.org",
   "line": "T12.C.01"
  },
  "hashbin": {
@@ -537,6 +538,7 @@ window.REFS = {
   "at": "T12.C.01",
   "mode": "shelf",
   "style": "hashchain",
+  "cue": "hashbin.org",
   "line": "T12.C.01"
  },
  "content-addressable": {
@@ -547,6 +549,7 @@ window.REFS = {
   "at": "T12.C.01",
   "mode": "shelf",
   "style": "hashchain",
+  "cue": "content-addressable",
   "line": "T12.C.01"
  },
  "claude-memory": {

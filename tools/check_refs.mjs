@@ -28,6 +28,7 @@ for (const r of refs) {
   if (!SIZE[r.mode]) note(`${r.id}: bad mode ${r.mode}`);
   r.line = resolveAnchor(r, lines, byId);
   if (!r.line) { note(`${r.id}: can't find line for at: ${JSON.stringify(r.at)}${r.ch == null ? ' (phrase needs ch)' : ''}`); continue; }
+  if (r.cue && !r.line.text.includes(r.cue)) note(`${r.id}: cue ${JSON.stringify(r.cue)} isn't in ${r.line.id}`);
   if (r.origin === 'transcript' && !r.line.text.includes(r.url.replace(/^https:\/\//, ''))) note(`${r.id}: transcript link isn't on line ${r.line.id}`);
 }
 // every link in the transcript is covered
