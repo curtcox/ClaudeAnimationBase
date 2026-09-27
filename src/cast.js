@@ -105,6 +105,7 @@ function curt(x, y, u, o = {}) {
   if (!back) drawArms();
   // head: a plain circle, filled with paper so the boil lines behind it don't show through
   rs('head');
+  if (back) for (const d of [-1, 1]) paint(ellPts(head[0] + d * R * .97, head[1] + R * .1, R * .16, R * .26, 10), { wash: PAL.cream, ink: PAL.ink, sw: sw * .5 });   // ears, half behind the head
   paint(ellPts(head[0], head[1], R, R, 26, J), { wash: PAL.cream, ink: null, curv: .5 });
   // the outline as one open stroke that overlaps itself a little, so the brush's start and end don't blot
   const ring = []; for (let i = 0; i <= 30; i++) { const a = -2.2 + i / 28 * TAU; ring.push([head[0] + Math.cos(a) * R + jit(J * .5), head[1] + Math.sin(a) * R + jit(J * .5)]); }
@@ -118,6 +119,11 @@ function curt(x, y, u, o = {}) {
     if (!back) { cap.push([head[0] + f * R * .35, head[1] - R * .72]); cap.push([head[0] - f * R * .25, head[1] - R * .84]); }
     else cap.push([head[0], head[1] + R * .82]);
     paint(cap, { wash: hairCol, ink: PAL.ink, sw: sw * .35, curv: .4 });
+    if (back) {   // from behind: strands combed from the crown down to where the tail is tied, so it reads as the back of a head
+      rs('back hair');
+      const tie = [head[0], head[1] + R * .72], dk = mixCol(hairCol, PAL.ink, .45);
+      for (let i = 0; i < 7; i++) { const a = -Math.PI / 2 + (i - 3) * .36; inkLine([[head[0] + Math.cos(a) * R * .9, head[1] + Math.sin(a) * R * .9], [head[0] + Math.cos(a) * R * .45 + (tie[0] - head[0]) * .2, head[1] + R * .1], tie], sw * .22, dk, 'inkfine', .6); }
+    }
     if (o.hair === 'ponytail' && back) curtPonytail(head, R, 0, u, hairCol, sw, true, o.ponyTip);
     if (o.hair === 'bun') paint(ellPts(head[0] - f * R * (back ? 0 : .55), head[1] - R * (back ? .55 : .92), R * .38, R * .34, 16), { wash: hairCol, ink: PAL.ink, sw: sw * .7 });
   }
@@ -172,7 +178,7 @@ function curtPonytail(head, R, side, u, col, sw, back, tip = col) {
     paint(ribbon(C.slice(i0, i1 + 1), lerp(w0, w1, i0 / (n - 1)), lerp(w0, w1, i1 / (n - 1))), { wash: mixCol(col, tip, (b + .5) / bands), ink: null });
   }
   paint(ribbon(P, w0, w1), { ink: PAL.ink, sw: sw * .7 });
-  paint(ellPts(P[0][0] + (P[1][0] - P[0][0]) * .15, P[0][1] + (P[1][1] - P[0][1]) * .15, u * .45, u * .25, 10), { wash: mixCol(col, PAL.ink, .5), ink: PAL.ink, sw: sw * .5 });
+  paint(ellPts(P[0][0] + (P[1][0] - P[0][0]) * .15, P[0][1] + (P[1][1] - P[0][1]) * .15, u * .55, u * .16, 10), { wash: '#26222C', fill: '#26222C', fillOp: 255, ink: PAL.ink, sw: sw * .5 });   // the hair tie, a solid band
 }
 // Facial hair, painted on the face: (fx, fy) = the face's centre, my = the mouth's height.
 function curtFacial(kind, fx, fy, my, R, u, sw, col, head) {

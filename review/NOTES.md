@@ -87,10 +87,15 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 11. July
 
-- **3:17.4** · T54.U.01 · Claude asks `nmujvc926ll`
+- **3:17.4** · T54.U.01 · Claude asks · ✓ resolved `nmujvc926ll`
   The ChatGPT sting: the camera pushes toward Curt, and a smiley mask shows on his head for about half a second. Is that the right length for the joke?
   Options: “Right length” · “Longer” · “Shorter” · “Drop the mask”
   - Curt: Right length
+
+- **5:08.0** · T56.C.02 · shot I · Curt · ✓ resolved `nmujxidvwi6`
+  I'm not sure how much of this is draft artifact here, but the beard is far too long. Think Roger Delgado.
+  [the frame](frames/ch11-nmujxidvwi6.jpg)
+  - Claude: That was the back of your head: the long grey shape is your ponytail, not a beard. It read as a face, so from behind you now have ears, hair combed back to a dark tie, and no gap. Your beard from the front stays the short circle beard. Say if you want it shorter still.
 
 ## 12. Limits
 
@@ -105,4 +110,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   Options: “Enough” · “More distinct shapes” · “Name cards instead of figures”
 
 ---
-8 open, 9 resolved.
+7 open, 11 resolved.

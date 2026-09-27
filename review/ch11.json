@@ -14,7 +14,7 @@
     "Shorter",
     "Drop the mask"
    ],
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-27T13:42:57.246Z",
    "replies": [
     {
@@ -23,6 +23,24 @@
      "at": "2026-09-27T14:33:27.456Z"
     }
    ]
+  },
+  {
+   "id": "nmujxidvwi6",
+   "t": 307.97,
+   "line": "T56.C.02",
+   "shot": "I",
+   "by": "curt",
+   "text": "I'm not sure how much of this is draft artifact here, but the beard is far too long. Think Roger Delgado.",
+   "status": "resolved",
+   "created": "2026-09-27T14:43:42.667Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "That was the back of your head: the long grey shape is your ponytail, not a beard. It read as a face, so from behind you now have ears, hair combed back to a dark tie, and no gap. Your beard from the front stays the short circle beard. Say if you want it shorter still.",
+     "at": "2026-09-27T14:48:37.775Z"
+    }
+   ],
+   "frame": "frames/ch11-nmujxidvwi6.jpg"
   }
  ]
 }
