@@ -1,0 +1,34 @@
+# What's left
+
+As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
+
+## Waiting on Curt
+- [ ] Review the drafts of the chapters you haven't reviewed yet: 3, 5, 7, 8, 9, 10, 13, 15, 16 (all first passes). Chapters 1 and 11 were only partly watched.
+- [ ] Look at chapter 11's window and pose, and mark note `nmuk38hcdbc` resolved if it works.
+- [ ] Put `ELEVENLABS_API_KEY` in the environment (needed for real voices).
+- [ ] Publish the companion site: create the `axol-f` repo, then push or give me the go-ahead to push. Every explainer code points there, and it doesn't answer yet.
+- [ ] Decide whether your real look replaces the stand-in (deferred so far).
+
+## Next for me
+- [ ] After tonight's rebuild ends, redraw chapters 1 and 4, which were drawn before the borrowed-line codes were added.
+- [ ] Check the rebuild's log for failed steps.
+- [ ] Check the storyboards' "Reads to check" items, 2–4 per chapter, against the drafts.
+- [ ] Build the 48 code styles still showing plain (mic, blueprint, two-mics, door, compass, honeycomb, lobster-shell and others). They scan fine as they are.
+- [ ] Do a careful pass on the comic page's caricatures in the cold open ("fine for now").
+
+## Voices (phase 3)
+- [ ] Pick 3 stock ElevenLabs voices each for Curt and Claude and read a 10-line sampler.
+- [ ] Once you choose, voice everything, then re-time and redraw every chapter.
+- [ ] Add the first sound-effect cues.
+
+## Assembly (phase 7)
+- [ ] Mix the voices and effects.
+- [ ] Join the chapters into one film, with chapter markers.
+- [ ] Write the video description, with timestamped links.
+- [ ] Make the thumbnail.
+- [ ] Final-quality render.
+
+## QA (phase 8)
+- [ ] A full watch-through.
+- [ ] Scan every code with a phone, off a real screen.
+- [ ] Check loudness.
