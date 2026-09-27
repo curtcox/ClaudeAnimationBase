@@ -351,16 +351,16 @@
 - { id: metaculus-strong, url: "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/", caption: "Metaculus: strong AGI", origin: added, at: T76.C.03.2, mode: shelf, style: dial, verified: "browser 2026-09-26" }
 - { id: alphafold, url: "https://en.wikipedia.org/wiki/AlphaFold", caption: "AlphaFold", origin: added, at: T76.C.01, mode: shelf, style: plain }
 - { id: goodhart, url: "https://en.wikipedia.org/wiki/Goodhart%27s_law", caption: "Goodhart's law", origin: added, at: T76.C.04, mode: shelf, style: plain }
-- { id: agi-wiki, url: "https://en.wikipedia.org/wiki/Artificial_general_intelligence", caption: "Artificial general intelligence", origin: added, at: T77.C.01, mode: shelf, style: plain }
-- { id: noema-agi, url: "https://www.noemamag.com/artificial-general-intelligence-is-already-here/", caption: "AGI Is Already Here (Agüera y Arcas & Norvig)", origin: added, at: T77.C.01, mode: shelf, style: plain }
+- { id: agi-wiki, url: "https://en.wikipedia.org/wiki/Artificial_general_intelligence", caption: "Artificial general intelligence", origin: added, at: T77.C.01, mode: page, style: plain }
+- { id: noema-agi, url: "https://www.noemamag.com/artificial-general-intelligence-is-already-here/", caption: "AGI Is Already Here (Agüera y Arcas & Norvig)", origin: added, at: T77.C.01, mode: page, style: plain }
 - { id: openai-charter, url: "https://openai.com/charter/", caption: "OpenAI Charter", origin: added, at: T77.C.02, mode: shelf, style: goalposts, verified: "browser 2026-09-26" }
 # more for chapter 15: the meme's origin, the people on the compass, AI 2027's own grading, and the history of "AGI"
 - { id: dnd-alignment, url: "https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)", caption: "Alignment charts (D&D)", origin: added, at: T73.U.01, mode: shelf, style: compass }
 - { id: connor-leahy, url: "https://en.wikipedia.org/wiki/Connor_Leahy", caption: "Connor Leahy", origin: added, at: T74.C.02, mode: shelf, style: compass }
 - { id: eleutherai, url: "https://en.wikipedia.org/wiki/EleutherAI", caption: "EleutherAI", origin: added, at: T74.C.04, mode: shelf, style: plain }
 - { id: kokotajlo, url: "https://en.wikipedia.org/wiki/Daniel_Kokotajlo_(researcher)", caption: "Daniel Kokotajlo", origin: added, at: T75.C.02, mode: shelf, style: calendar }
-- { id: ai2027-grading, url: "https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions", caption: "Grading AI 2027's 2025 predictions", origin: added, at: T75.C.03, mode: shelf, style: calendar }
-- { id: ai2027-q1-2026, url: "https://blog.aifutures.org/p/q1-2026-timelines-update", caption: "AI Futures: Q1 2026 update", origin: added, at: T75.C.03, mode: shelf, style: calendar }
+- { id: ai2027-grading, url: "https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions", caption: "Grading AI 2027's 2025 predictions", origin: added, at: T75.C.03, mode: page, style: calendar }
+- { id: ai2027-q1-2026, url: "https://blog.aifutures.org/p/q1-2026-timelines-update", caption: "AI Futures: Q1 2026 update", origin: added, at: T75.C.03, mode: page, style: calendar }
 - { id: falsifiability, url: "https://en.wikipedia.org/wiki/Falsifiability", caption: "Falsifiability", origin: added, at: T75.C.05, mode: shelf, style: plain }
 - { id: metaculus, url: "https://en.wikipedia.org/wiki/Metaculus", caption: "Metaculus", origin: added, at: T76.U.01, mode: shelf, style: dial }
 - { id: winograd, url: "https://en.wikipedia.org/wiki/Winograd_schema_challenge", caption: "Winograd schemas", origin: added, at: T76.C.02, mode: shelf, style: dial }
@@ -368,11 +368,11 @@
 - { id: moving-goalposts, url: "https://en.wikipedia.org/wiki/Moving_the_goalposts", caption: "Moving the goalposts", origin: added, at: T76.C.05, mode: shelf, style: goalposts }
 - { id: deep-blue, url: "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)", caption: "Deep Blue", origin: added, at: T77.U.01, mode: shelf, style: plain }
 - { id: ai-winter, url: "https://en.wikipedia.org/wiki/AI_winter", caption: "AI winters", origin: added, at: T77.U.01, mode: shelf, style: plain }
-- { id: narrow-ai, url: "https://en.wikipedia.org/wiki/Weak_artificial_intelligence", caption: "Narrow AI", origin: added, at: T77.C.01, mode: shelf, style: plain }
-- { id: goertzel, url: "https://en.wikipedia.org/wiki/Ben_Goertzel", caption: "Ben Goertzel", origin: added, at: T77.C.01, mode: shelf, style: plain }
-- { id: shane-legg, url: "https://en.wikipedia.org/wiki/Shane_Legg", caption: "Shane Legg", origin: added, at: T77.C.01, mode: shelf, style: plain }
-- { id: norvig, url: "https://en.wikipedia.org/wiki/Peter_Norvig", caption: "Peter Norvig", origin: added, at: T77.C.01, mode: shelf, style: plain }
-- { id: aguera-y-arcas, url: "https://en.wikipedia.org/wiki/Blaise_Ag%C3%BCera_y_Arcas", caption: "Blaise Agüera y Arcas", origin: added, at: T77.C.01, mode: shelf, style: plain }
+- { id: narrow-ai, url: "https://en.wikipedia.org/wiki/Weak_artificial_intelligence", caption: "Narrow AI", origin: added, at: T77.C.01, mode: page, style: plain }
+- { id: goertzel, url: "https://en.wikipedia.org/wiki/Ben_Goertzel", caption: "Ben Goertzel", origin: added, at: T77.C.01, mode: page, style: plain }
+- { id: shane-legg, url: "https://en.wikipedia.org/wiki/Shane_Legg", caption: "Shane Legg", origin: added, at: T77.C.01, mode: page, style: plain }
+- { id: norvig, url: "https://en.wikipedia.org/wiki/Peter_Norvig", caption: "Peter Norvig", origin: added, at: T77.C.01, mode: page, style: plain }
+- { id: aguera-y-arcas, url: "https://en.wikipedia.org/wiki/Blaise_Ag%C3%BCera_y_Arcas", caption: "Blaise Agüera y Arcas", origin: added, at: T77.C.01, mode: page, style: plain }
 - { id: ai-effect, url: "https://en.wikipedia.org/wiki/AI_effect", caption: "The AI effect", origin: added, at: T77.C.02, mode: shelf, style: goalposts }
 
 # ---- 16 Coda -----------------------------------------------------------------------------------------------------

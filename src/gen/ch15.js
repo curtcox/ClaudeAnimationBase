@@ -519,7 +519,8 @@ window.CHAPTER = {
     "goertzel",
     "shane-legg",
     "norvig",
-    "aguera-y-arcas"
+    "aguera-y-arcas",
+    "note-agi-definitions"
    ],
    "estimated": true
   },
@@ -535,8 +536,7 @@ window.CHAPTER = {
    "speech": "The drift happened mostly while you weren't watching, and it sped up once there was money involved. OpenAI's charter defined AGI as outperforming humans at most economically valuable work. After that, \"general\" quietly came to mean \"human-level or better, broadly,\" and eventually slid toward superintelligence. The goalposts moved from \"is it general?\" to \"is it good enough to matter?\"",
    "refs": [
     "openai-charter",
-    "ai-effect",
-    "note-agi-definitions"
+    "ai-effect"
    ],
    "estimated": true
   },

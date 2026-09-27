@@ -2922,7 +2922,7 @@ window.REFS = {
   "caption": "Artificial general intelligence",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -2932,7 +2932,7 @@ window.REFS = {
   "caption": "AGI Is Already Here (Agüera y Arcas & Norvig)",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -2993,7 +2993,7 @@ window.REFS = {
   "caption": "Grading AI 2027's 2025 predictions",
   "origin": "added",
   "at": "T75.C.03",
-  "mode": "shelf",
+  "mode": "page",
   "style": "calendar",
   "line": "T75.C.03"
  },
@@ -3003,7 +3003,7 @@ window.REFS = {
   "caption": "AI Futures: Q1 2026 update",
   "origin": "added",
   "at": "T75.C.03",
-  "mode": "shelf",
+  "mode": "page",
   "style": "calendar",
   "line": "T75.C.03"
  },
@@ -3083,7 +3083,7 @@ window.REFS = {
   "caption": "Narrow AI",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -3093,7 +3093,7 @@ window.REFS = {
   "caption": "Ben Goertzel",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -3103,7 +3103,7 @@ window.REFS = {
   "caption": "Shane Legg",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -3113,7 +3113,7 @@ window.REFS = {
   "caption": "Peter Norvig",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -3123,7 +3123,7 @@ window.REFS = {
   "caption": "Blaise Agüera y Arcas",
   "origin": "added",
   "at": "T77.C.01",
-  "mode": "shelf",
+  "mode": "page",
   "style": "plain",
   "line": "T77.C.01"
  },
@@ -3194,10 +3194,10 @@ window.REFS = {
   "caption": "Explained: What does \"AGI\" mean? Three answers and a history",
   "origin": "note",
   "ch": 15,
-  "at": "T77.C.02",
+  "at": "T77.C.01",
   "mode": "shelf",
   "style": "note",
-  "line": "T77.C.02"
+  "line": "T77.C.01"
  },
  "note-ai-2027": {
   "id": "note-ai-2027",

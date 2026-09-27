@@ -432,15 +432,15 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | metaculus-strong | Metaculus: strong AGI | added | T76.C.03.2 | shelf · dial | v5, 8.4 px | 403 (browser 2026-09-26) | Just a moment... |
 | alphafold | AlphaFold | added | T76.C.01 | shelf · plain | v3, 10.3 px | 200 | AlphaFold - Wikipedia |
 | goodhart | Goodhart's law | added | T76.C.04 | shelf · plain | v4, 9.3 px | 200 | Goodhart's law - Wikipedia |
-| agi-wiki | Artificial general intelligence | added | T77.C.01 | shelf · plain | v4, 9.3 px | 200 | Artificial general intelligence - Wikipedia |
-| noema-agi | AGI Is Already Here (Agüera y Arcas & Norvig) | added | T77.C.01 | shelf · plain | v5, 8.4 px | 200 | Artificial General Intelligence Is Already Here |
+| agi-wiki | Artificial general intelligence | added | T77.C.01 | page · plain | — | 200 | Artificial general intelligence - Wikipedia |
+| noema-agi | AGI Is Already Here (Agüera y Arcas & Norvig) | added | T77.C.01 | page · plain | — | 200 | Artificial General Intelligence Is Already Here |
 | openai-charter | OpenAI Charter | added | T77.C.02 | shelf · goalposts | v3, 10.3 px | 403 (browser 2026-09-26) |  |
 | dnd-alignment | Alignment charts (D&D) | added | T73.U.01 | shelf · compass | v4, 9.3 px | 200 | Alignment (Dungeons & Dragons) - Wikipedia |
 | connor-leahy | Connor Leahy | added | T74.C.02 | shelf · compass | v3, 10.3 px | 200 | Connor Leahy - Wikipedia |
 | eleutherai | EleutherAI | added | T74.C.04 | shelf · plain | v3, 10.3 px | 200 | EleutherAI - Wikipedia |
 | kokotajlo | Daniel Kokotajlo | added | T75.C.02 | shelf · calendar | v4, 9.3 px | 200 | Daniel Kokotajlo - Wikipedia |
-| ai2027-grading | Grading AI 2027's 2025 predictions | added | T75.C.03 | shelf · calendar | v4, 9.3 px | 200 | Grading AI 2027’s 2025 Predictions |
-| ai2027-q1-2026 | AI Futures: Q1 2026 update | added | T75.C.03 | shelf · calendar | v4, 9.3 px | 200 | Q1 2026 Timelines Update |
+| ai2027-grading | Grading AI 2027's 2025 predictions | added | T75.C.03 | page · calendar | — | 200 | Grading AI 2027’s 2025 Predictions |
+| ai2027-q1-2026 | AI Futures: Q1 2026 update | added | T75.C.03 | page · calendar | — | 200 | Q1 2026 Timelines Update |
 | falsifiability | Falsifiability | added | T75.C.05 | shelf · plain | v4, 9.3 px | 200 | Falsifiability - Wikipedia |
 | metaculus | Metaculus | added | T76.U.01 | shelf · dial | v3, 10.3 px | 200 | Metaculus - Wikipedia |
 | winograd | Winograd schemas | added | T76.C.02 | shelf · dial | v4, 9.3 px | 200 | Winograd schema challenge - Wikipedia |
@@ -448,13 +448,13 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | moving-goalposts | Moving the goalposts | added | T76.C.05 | shelf · goalposts | v4, 9.3 px | 200 | Moving the goalposts - Wikipedia |
 | deep-blue | Deep Blue | added | T77.U.01 | shelf · plain | v4, 9.3 px | 200 | Deep Blue (chess computer) - Wikipedia |
 | ai-winter | AI winters | added | T77.U.01 | shelf · plain | v3, 10.3 px | 200 | AI winter - Wikipedia |
-| narrow-ai | Narrow AI | added | T77.C.01 | shelf · plain | v4, 9.3 px | 200 | Weak artificial intelligence - Wikipedia |
-| goertzel | Ben Goertzel | added | T77.C.01 | shelf · plain | v3, 10.3 px | 200 | Ben Goertzel - Wikipedia |
-| shane-legg | Shane Legg | added | T77.C.01 | shelf · plain | v3, 10.3 px | 200 | Shane Legg - Wikipedia |
-| norvig | Peter Norvig | added | T77.C.01 | shelf · plain | v3, 10.3 px | 200 | Peter Norvig - Wikipedia |
-| aguera-y-arcas | Blaise Agüera y Arcas | added | T77.C.01 | shelf · plain | v4, 9.3 px | 200 | Blaise Agüera y Arcas - Wikipedia |
+| narrow-ai | Narrow AI | added | T77.C.01 | page · plain | — | 200 | Weak artificial intelligence - Wikipedia |
+| goertzel | Ben Goertzel | added | T77.C.01 | page · plain | — | 200 | Ben Goertzel - Wikipedia |
+| shane-legg | Shane Legg | added | T77.C.01 | page · plain | — | 200 | Shane Legg - Wikipedia |
+| norvig | Peter Norvig | added | T77.C.01 | page · plain | — | 200 | Peter Norvig - Wikipedia |
+| aguera-y-arcas | Blaise Agüera y Arcas | added | T77.C.01 | page · plain | — | 200 | Blaise Agüera y Arcas - Wikipedia |
 | ai-effect | The AI effect | added | T77.C.02 | shelf · goalposts | v3, 10.3 px | 200 | AI effect - Wikipedia |
-| note-agi-definitions | Explained: What does "AGI" mean? Three answers and a history | note | T77.C.02 | shelf · note | v5, 8.4 px | — |  |
+| note-agi-definitions | Explained: What does "AGI" mean? Three answers and a history | note | T77.C.01 | shelf · note | v5, 8.4 px | — |  |
 | note-ai-2027 | Explained: AI 2027: a forecast that grades itself | note | T75.C.03 | shelf · note | v4, 9.3 px | — |  |
 | note-compass | Explained: The AGI compass, and where Claude put everyone | note | T74.C.03.7 | shelf · note | v4, 9.3 px | — |  |
 

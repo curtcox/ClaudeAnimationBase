@@ -2,8 +2,8 @@
 id: agi-definitions
 title: 'What does "AGI" mean? Three answers and a history'
 ch: 15
-at: T77.C.02
-links: [agi-wiki, metaculus, metaculus-weak, metaculus-strong, alphafold, goodhart, winograd, montezuma, noema-agi, openai-charter, ai-effect, narrow-ai, deep-blue, ai-winter]
+at: T77.C.01
+links: [agi-wiki, metaculus, metaculus-weak, metaculus-strong, alphafold, goodhart, winograd, montezuma, noema-agi, openai-charter, ai-effect, narrow-ai, goertzel, shane-legg, norvig, aguera-y-arcas, deep-blue, ai-winter]
 ---
 **AGI** stands for *artificial general intelligence* ([Wikipedia](https://en.wikipedia.org/wiki/Artificial_general_intelligence)).
 Curt asks for three definitions: Claude's, the forecasting site [Metaculus](https://en.wikipedia.org/wiki/Metaculus)'s,
@@ -29,9 +29,11 @@ would focus on *generality*, not level. Language is "pretty general. It's not li
 the chess computer that beat the world champion in 1997 and could do nothing else). He'd mostly ignored AI from the 90s
 to the late 2010s, a period that began in one of the field's [AI winters](https://en.wikipedia.org/wiki/AI_winter).
 
-**The history agrees with Curt.** The term was popularized in the 2000s (by Mark Gubrud, Ben Goertzel and Shane Legg) as
+**The history agrees with Curt.** The term was popularized in the 2000s (by Mark Gubrud, [Ben Goertzel](https://en.wikipedia.org/wiki/Ben_Goertzel) and
+[Shane Legg](https://en.wikipedia.org/wiki/Shane_Legg)) as
 the opposite of [narrow AI](https://en.wikipedia.org/wiki/Weak_artificial_intelligence): one system for many domains. By
-that reading today's chatbots qualify, which Blaise Agüera y Arcas and Peter Norvig argued in 2023 ([*AGI Is Already
+that reading today's chatbots qualify, which [Blaise Agüera y Arcas](https://en.wikipedia.org/wiki/Blaise_Ag%C3%BCera_y_Arcas) and
+[Peter Norvig](https://en.wikipedia.org/wiki/Peter_Norvig) argued in 2023 ([*AGI Is Already
 Here*](https://www.noemamag.com/artificial-general-intelligence-is-already-here/)). The meaning drifted once money was
 involved: [OpenAI's charter](https://openai.com/charter/) defined AGI as systems that "outperform humans at most
 economically valuable work", and "general" slid toward "human-level or better", then toward superintelligence. People
