@@ -343,6 +343,10 @@ The kit has only Clawd. The film needs a **human rig** and a set of **non-human 
   conversation's own picture (T28: "The base model is closer to a crowd than to a single stranger… The mask isn't
   concealing one self. It's closer to picking one out."). It also avoids claiming a fixed face all the time.
   `LOOK.claude = 'clawd'` switches to plain Clawd.
+  Settled (Claude's call, 2026-09-28): the crowd gathers at chapter openings and in the moments that are about it
+  (ch 5's "multitudes", the probe in ch 6), then Claude stays gathered, listening included. A face that reacts to Curt
+  carries the conversation; a crowd that scattered through every long turn would become a tic and pull the eye off
+  Curt's words.
 - **`src/people.js`**: a parametric 2-D human: head shape, hair, glasses, skin, clothes and a signature prop. It uses
   the same eye and mouth vocabulary as Clawd, so `emotions()` can drive human faces too, and it has three drawn key
   views (front, 3/4, side). Presets:
