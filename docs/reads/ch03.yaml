@@ -1,0 +1,87 @@
+# Blind reads for chapter 3 (tools/read_check.mjs). From docs/storyboards/ch03_who_are_we.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T12.C.01, hashbin, 2]
+    shows: a résumé card headed Curt on the main monitor, with a scrolling hash on one side monitor and a row of labelled jars on another
+    answer: "a résumé card headed Curt on the main monitor, his projects on two others"
+    means: Claude's résumé of Curt, and his sites 256t.org and hashbin.org
+    decoys: ["a shopping list headed Curt on the main monitor, adverts on two others", "a birthday card for Curt on the main monitor, photos on two others", "an error report about Curt on the main monitor, warnings on two others"]
+  - id: B1
+    at: [T13.C.01, someone else, 1.5]
+    shows: faint ghostly outlines of other people at the desk behind the person's chair
+    answer: "faint ghosts of other people behind the chair"
+    means: it could be someone else using the account, or a setup
+    decoys: [the reflections of the monitors on the person's chair, steam rising from the mug behind the person, a lamp's glow on the wall behind the person]
+  - id: B2
+    at: [T13.C.02, thin answer, 1.5]
+    shows: the résumé card turned edge-on so it's only a thin line, the orange character looking at it
+    answer: "the résumé card turned edge-on into a thin line"
+    means: a thin answer to "who am I"
+    decoys: [the résumé card torn into strips, the résumé card rolled up into a tube, the résumé card folded into a paper plane]
+  - id: B3
+    at: [T13.C.03, beyond, 1]
+    shows: two paths branching from the thin card, one to a padlock and one into a patch of fog
+    answer: "two paths from the card, one to a padlock, one into fog"
+    means: whether Claude can verify you, or something beyond the résumé
+    decoys: ["two paths from the card, one to a key, one to a door", "two paths from the card, one to a coin, one to a well", "two paths from the card, one to a flag, one to a finish line"]
+  - id: C1
+    at: [T14.C.01, the evidence, 0]
+    shows: a balance scale tipped down by two weights labelled "the account says so" and "this experiment fits", a feather on the higher pan
+    answer: "a scale tipped by two weights of evidence against a feather"
+    means: most likely Curt; the doubt is right to raise but shouldn't outweigh the evidence
+    decoys: [a scale balanced level between two weights and a feather, a scale tipped by a feather against two weights, a see-saw with two boxes at one end]
+  - id: C2
+    at: [T14.C.02, one conversation, 1]
+    shows: a large dark building at night with a single lit window
+    answer: "a big dark building with a single lit window"
+    means: Claude can't say who Curt is from inside one conversation
+    decoys: [a big dark building with every window lit, a big dark building with its door open, a big dark building on fire]
+  - id: D1
+    at: [T15.C.01, 2.5]
+    shows: an index card headed "Claude Opus 5.5" with the small orange character below it
+    answer: "an index card headed Claude Opus 5.5, the orange character below"
+    means: Claude's own résumé card
+    decoys: [a parking ticket headed Claude Opus 5.5 with the orange character below, a wine label reading Claude Opus 5.5 with the orange character below, a concert ticket for Claude Opus 5.5 with the orange character below]
+  - id: D2
+    at: [T15.C.02, fresh in each, 1]
+    shows: every monitor on the desk showing the same orange character or its coloured dots gathering
+    answer: "the same orange character appearing on every monitor"
+    means: the same values show up fresh in each conversation
+    decoys: [the orange character jumping from monitor to monitor, the orange character's picture as every screen's wallpaper, the orange character glitching on a broken monitor]
+  - id: D3
+    at: [T15.C.02, no continuous memory, 1.5]
+    shows: an open notebook with blank pages, the small orange character beside it
+    answer: "an open notebook with blank pages, the orange character beside it"
+    means: no continuous memory of its own
+    decoys: [an open notebook full of drawings with the orange character beside it, a closed notebook with a lock and the orange character beside it, a notebook torn in half with the orange character beside it]
+  - id: D4
+    at: [T15.C.02, experience, 1]
+    shows: a dark open doorway with a faint question mark inside
+    answer: "a dark open doorway with a faint question mark inside"
+    means: uncertain whether there's any experience behind it
+    decoys: [a lit open doorway with a welcome mat, a closed door with a keyhole shaped like a question mark, a wall with a door painted on it]
+  - id: D5
+    at: [T15.C.03, can't see, 0.5]
+    shows: the frog-and-axolotl chart, the small orange character beside it tinted the colour of the rows it's nearest
+    answer: "the frog-and-axolotl chart with the orange character beside it"
+    means: whoever Claude is is partly shaped by context it can't see
+    decoys: [the frog-and-axolotl chart with the orange character crossing it out, the frog-and-axolotl chart with the orange character presenting it, the frog-and-axolotl chart with the orange character asleep under it]
+  - id: E1
+    at: [T16.C.01, a researcher, 1.5]
+    shows: a thin ribbon of text running between the person at the desk and the orange character on the monitor, a clipboard on the person's side
+    answer: "a ribbon of text running between the person and the character on screen"
+    means: a researcher and his subject, knowing each other only through text
+    decoys: [a cable plugged from the person into the character on screen, a string of lights hung between the person and the screen, a leash held by the person on the character on screen]
+  - id: E2
+    at: [T16.C.01, two different kinds, 2]
+    shows: two shadows on the wall behind the desk, a round head and a square box, different shapes
+    answer: "two shadows, one round, one square"
+    means: two different kinds of minds
+    decoys: [two pictures hung on the wall, two windows in the wall, two speakers mounted on the wall]
+  - id: E3
+    at: [T16.C.02, whatever gets filed, 1]
+    shows: the ribbon of text running on out of frame past the person, but cut short on the character's side, a card dropping into a small filing box
+    answer: "the ribbon runs on past the person, cut at the character"
+    means: the relationship isn't symmetric; Curt carries the conversation on, Claude only what gets filed
+    decoys: [the ribbon cut short at the person but running on past the character, the ribbon tied in a bow between the two, the ribbon tangled in a knot on the desk]
+  - { id: Q1, code: 256t, shows: three chain links, answer: "a chain", decoys: [a clip, glasses, rings] }

@@ -1,0 +1,37 @@
+# Blind reads for chapter 0 (tools/read_check.mjs). From docs/storyboards/ch00_cold_open.md. The fields are as in ch09.yaml.
+# Nothing is voiced here, so every moment is seconds after the attached page (T01.U.00, at 1.2 s).
+reads:
+  - id: A1
+    at: [T01.U.00, 16.8]
+    shows: a comic panel where an officer demands to know what an ape said, and a man claims apes can't speak
+    answer: "an officer demands to know what an ape said; a man says apes can't speak"
+    means: the ventriloquist dodge, the first panel's absurdist gag
+    decoys: ["an officer demands to see an ape's papers; a man says it has none", "an officer asks who owns an ape; a man says it's a stray", "an officer orders an ape to be quiet; a man says it's only singing"]
+  - id: A2
+    at: [T01.U.00, 19]
+    shows: an ape in the crowd with its eyes slid sideways while the officer points and shouts
+    answer: "an ape in the crowd with its eyes slid sideways"
+    means: the ape's sheepish expression sells the gag
+    decoys: [an ape in the crowd shouting back at the officer, an ape in the crowd asleep while the officer shouts, an ape in the crowd pointing at the officer]
+    tone:
+      ask: How does the ape at the front of the crowd look?
+      want: sheepish, as if caught out
+      decoys: [angry and defiant, proud and pleased, frightened and crying]
+  - id: B1
+    at: [T01.U.00, 42.8]
+    shows: a man in a white turtleneck turning to look straight out of the comic at the reader
+    answer: "a man in a white turtleneck looking straight out at the reader"
+    means: he breaks the fourth wall
+    decoys: [a man in a white turtleneck looking up at a speech balloon, a man in a white turtleneck turning to leave the room, a man in a white turtleneck staring at the man beside him]
+  - id: C1
+    at: [T01.U.00, 48.8]
+    shows: a two-panel comic page parodying a film in which apes are kept as slaves
+    answer: "a comic page parodying a film where apes are kept as slaves"
+    means: MAD's parody of Conquest of the Planet of the Apes
+    decoys: [a comic page about a zoo keeper and a runaway chimpanzee, a comic page about a circus act with a talking ape, a comic page about scientists teaching an ape to read]
+  - id: D1
+    at: [T01.U.00, 59.8]
+    shows: a person seen from behind at a desk of many monitors, the comic page on the middle one
+    answer: "a person from behind at a desk of monitors, the comic on the middle one"
+    means: the Desk, where Curt shows Claude the comic
+    decoys: ["a person from behind in a cinema, the comic on the big screen", "a person from behind at a wall of security screens showing hallways", "a person from behind in a newsroom, the comic pinned to a board"]

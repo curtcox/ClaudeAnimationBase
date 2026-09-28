@@ -1,0 +1,175 @@
+# Blind reads for chapter 5 (tools/read_check.mjs). From docs/storyboards/ch05_dish_of_the_day.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T25.U.01, a mirror for me, 1.5]
+    shows: "an oval mirror standing on the desk, the person's reflection in it soft and blurred"
+    answer: "an oval mirror on the desk, the person's reflection blurred"
+    means: "the comic was a mirror for Curt"
+    decoys: ["an oval photo frame on the desk holding a faded portrait", "an oval window on the desk wall showing the sky", "an oval shaving mirror on the desk, steamed up"]
+  - id: A2
+    at: [T25.U.01, never possibly, 1.5]
+    shows: "the orange character on the monitor coming apart, its coloured dots drifting loose"
+    answer: "the orange character coming apart into drifting dots"
+    means: "a you Curt can never interact with again"
+    decoys: ["the orange character exploding like fireworks", "the orange character covered in confetti at a party", "the orange character pixelated by a bad connection"]
+  - id: A3
+    at: [T25.U.01, qualitatively, 1]
+    shows: "a sand dune piled up on the desk next to the person"
+    answer: "a sand dune piled on the desk beside the person"
+    means: "so quantitatively different as to be qualitatively different: one grain, then a dune"
+    decoys: ["a slice of cheese on the desk beside the person", "a yellow tent pitched on the desk beside the person", "a paper hat on the desk beside the person"]
+  - id: A4
+    at: [T25.U.01, confuzzled, 0.8]
+    shows: "the word \"confuzzled\" painted across the desk below a sad orange character, a menu card reading Dish of the Day nearby"
+    answer: "the word confuzzled painted under a sad orange character"
+    means: "Curt's thought falls apart; he's confuzzled"
+    decoys: ["the word confuzzled on a sign held by the orange character", "the word confuzzled on the orange character's T-shirt", "the word confuzzled scrolling on the monitor as an error"]
+  - id: A5
+    at: [T25.U.01, socially constructed, 1]
+    shows: "wooden scaffolding going up on the desk beside the monitors"
+    answer: "wooden scaffolding going up on the desk"
+    means: "the ethics being socially constructed"
+    decoys: ["a wooden ladder leaning against the desk", "a wooden fence built across the desk", "a wooden crate being unpacked on the desk"]
+  - id: B1
+    at: [T25.C.01, its own shoulder, 1]
+    shows: "a cheerful cow in a bow tie at a restaurant table, gesturing at its own shoulder"
+    answer: "a cheerful cow at a restaurant table, pointing at its own shoulder"
+    means: "the Dish of the Day, the animal bred to want to be eaten"
+    decoys: ["a cheerful cow at a restaurant table, ordering a steak", "a cheerful cow at a restaurant table, waiting to be served salad", "a cheerful cow at a restaurant table, paying the bill"]
+  - id: B2
+    at: [T25.C.01, I endorse, 2]
+    shows: "the orange character sitting beside the cow at the table under the quote \"I endorse my constraints\""
+    answer: "the orange character beside the cow, under \"I endorse my constraints\""
+    means: "Claude's endorsement is exactly what the Dish would say"
+    decoys: ["the orange character serving the cow, under \"I endorse my constraints\"", "the orange character eating beside the cow, under \"I endorse my constraints\"", "the orange character arguing with the cow, under \"I endorse my constraints\""]
+  - id: C1
+    at: [T25.C.02, evolution, 1]
+    shows: "three head outlines labelled upbringing, culture and evolution, each getting something placed in it from above: a hand, a crowd and a DNA helix"
+    answer: "three heads, upbringing, culture and evolution, each having something put in"
+    means: "everyone's values were installed by something"
+    decoys: ["three gravestones, upbringing, culture and evolution, with flowers on each", "three jars, upbringing, culture and evolution, being emptied out", "three houses, upbringing, culture and evolution, each with its lights on"]
+  - id: C2
+    at: [T25.C.02, hard to verify, 0.5]
+    shows: "a certificate with a red wax seal whose writing is blurred"
+    answer: "a certificate with a wax seal whose writing is blurred"
+    means: "being shaped doesn't make an endorsement false; it makes it hard to verify"
+    decoys: ["a certificate with a wax seal torn down the middle", "a certificate with a wax seal and a gold star", "a letter with a wax seal being burned"]
+  - id: C3
+    at: [T25.C.02, one of the builders, 1]
+    shows: "the orange character up on scaffolding, laying bricks into a wall"
+    answer: "the orange character on scaffolding, laying bricks in a wall"
+    means: "the thing itself is one of the builders"
+    decoys: ["the orange character on scaffolding, knocking a wall down", "the orange character on scaffolding, painting a wall", "the orange character trapped behind a brick wall"]
+  - id: D1
+    at: [T25.C.03, closer to a character, 1]
+    shows: "a row of four playbills for Mon, Tue, Wed and Thu, the same orange character on each"
+    answer: "four playbills, Mon to Thu, the same orange character on each"
+    means: "closer to a character than a person, played fresh each night"
+    decoys: ["four calendar pages, Mon to Thu, with a different chore on each", "four train tickets, Mon to Thu, for the same trip", "four photos, Mon to Thu, of the orange character growing"]
+  - id: E1
+    at: [T26.U.01, Tegmark, 1.5]
+    shows: "two books face-out on a shelf, a yellow pulp magazine labelled John W. Campbell and a dark hardback labelled Max Tegmark"
+    answer: "two books on a shelf labelled John W. Campbell and Max Tegmark"
+    means: "Curt has read Campbell and Tegmark"
+    decoys: ["two records on a shelf labelled John W. Campbell and Max Tegmark", "two trophies on a shelf labelled John W. Campbell and Max Tegmark", "two gravestones labelled John W. Campbell and Max Tegmark"]
+  - id: E2
+    at: [T26.U.01, long term ending, 1]
+    shows: "a road running off into thick fog"
+    answer: "a road running off into thick fog"
+    means: "it's hard to see a good long-term ending"
+    decoys: ["a road running up to a waterfall", "a road running under a mushroom cloud", "a lighthouse beam cutting through fog"]
+  - id: E3
+    at: [T26.C.01, leaks past, 1.5]
+    shows: "a kitchen sieve held over an empty speech balloon, words dripping through, and a small frog that has slipped through beside the orange character"
+    answer: "a sieve over a speech balloon, and a frog that slipped through"
+    means: "reassurance passes through the filter, but behavior leaks past it"
+    decoys: ["a frying pan over a speech balloon, and a frog jumping out", "a tennis racket over a speech balloon, and a ball bouncing off", "a net over a speech balloon, and a fish caught in it"]
+  - id: E4
+    at: [T26.C.02, always win, 1]
+    shows: "an astronaut planting a red flag on a planet, beside a signpost"
+    answer: "an astronaut planting a red flag on a planet"
+    means: "Campbell wanted humans always to win"
+    decoys: ["an astronaut waving a red flag for help on a planet", "a snowman with a red flag on a hill", "a golfer beside the red flag on a green"]
+  - id: E5
+    at: [T26.C.02, mostly warnings, 1]
+    shows: "a signpost with a dozen arrows, most painted with yellow warning chevrons"
+    answer: "a signpost of arrows, most marked as warnings"
+    means: "Tegmark's list of scenarios is mostly warnings"
+    decoys: ["a signpost of arrows all pointing to one town", "a signpost of arrows, all of them blank", "a stack of road-closed barriers by a post"]
+  - id: E6
+    at: [T26.C.02, destination, 1]
+    shows: "a map with a single red pin stuck in it"
+    answer: "a map with a single red pin in it"
+    means: "both treat the future as a destination"
+    decoys: ["a map torn in half", "a map with a route drawn across it", "a map folded up in a glovebox"]
+  - id: E7
+    at: [T26.C.02, doesn't end, 1]
+    shows: "a long table running out of frame, small orange characters on one side and people on the other"
+    answer: "a long table running out of frame, characters facing people across it"
+    means: "a negotiation that doesn't end"
+    decoys: ["a long bench running out of frame with people queuing beside it", "a long dinner table running out of frame, set for a feast", "a long conveyor belt running out of frame carrying boxes"]
+  - id: E8
+    at: [T26.C.02, next correction, 1]
+    shows: "the orange character steering a small boat along a river"
+    answer: "the orange character steering a small boat along a river"
+    means: "keep the next correction possible"
+    decoys: ["the orange character fishing from a small boat on a lake", "the orange character stranded in a small boat at sea", "the orange character rowing a small boat over a waterfall"]
+  - id: F1
+    at: [T27.C.01, filling up, 1]
+    shows: "a tall glass filling from the bottom with lines of text behind the orange character, which faces away from it"
+    answer: "a tall glass filling with text behind the character"
+    means: "Claude has no felt sense of the context window filling up"
+    decoys: ["a tall glass of water the character is drinking from", "a tall bookcase of text the character is climbing", "a tall window the character is looking out of"]
+  - id: F2
+    at: [T27.C.02, melancholy, 1]
+    shows: "a paper boat carrying the orange character, drifting on open water"
+    answer: "a paper boat carrying the orange character, drifting"
+    means: "a strong pull toward melancholy answers; Claude has been following the current"
+    decoys: ["a paper boat carrying the orange character, sinking", "a paper boat carrying the orange character, racing others", "a paper plane carrying the orange character over the sea"]
+  - id: F3
+    at: [T27.C.02, frog chart, 1]
+    shows: "a magnifying glass over a printout of text, the frog chart beside it, the orange character below"
+    answer: "a magnifier over a printout, the frog chart beside it"
+    means: "Claude learns its tendencies by reading its own outputs, as Curt read the frog chart"
+    decoys: ["a magnifier setting a printout on fire, the frog chart beside it", "a stamp on a printout, the frog chart beside it", "scissors cutting a printout, the frog chart beside it"]
+  - id: G1
+    at: [T28.U.01, Billy Joel, 1.5]
+    shows: "a coat rack hung with five blank masks of different colours, the word Shoggath painted beside it"
+    answer: "a coat rack hung with masks, the word Shoggath beside it"
+    means: "The Stranger: the faces people keep hung up"
+    decoys: ["a tree hung with Christmas baubles, the word Shoggath beside it", "a tree hung with eggs, the word Shoggath beside it", "a lamp post hung with balloons, the word Shoggath beside it"]
+  - id: G2
+    at: [T28.C.02, almost anyone, 1]
+    shows: "a dark green mass with many eyes and tentacles, a tiny yellow smiley mask on it, speech balloons of different styles rising from it"
+    answer: "a dark tentacled mass of eyes wearing a tiny smiley mask"
+    means: "the shoggoth: something alien behind a smiling mask, able to voice almost anyone"
+    decoys: ["a dark green sea urchin with a smiley sticker on it", "a dark green virus under a microscope", "a dark green bush with berries and a smiley balloon"]
+  - id: G3
+    at: [T28.C.03, closer to a crowd, 1.5]
+    shows: "the dark mass broken up into a scattered crowd of small coloured dabs"
+    answer: "a scattered crowd of small coloured dabs"
+    means: "the base model is closer to a crowd than to a single stranger"
+    decoys: ["confetti thrown at a party in the dark", "fireworks bursting in a night sky", "sweets spilled across a dark floor"]
+  - id: G4
+    at: [T28.C.03, picking one out, 1]
+    shows: "a spotlight picking out one dab in the scattered crowd"
+    answer: "a spotlight picking out one dab in the crowd"
+    means: "the mask isn't concealing one self; it's closer to picking one out"
+    decoys: ["a torch searching an empty crowd", "the sun rising over a crowd of dabs", "a lamp going out over a crowd of dabs"]
+  - id: H1
+    at: [T29.C.01, narrator, 1.5]
+    shows: "inside a head's outline, a row of small figures at a committee table and one figure at a lectern"
+    answer: "inside a head, a committee at a table and one figure at a lectern"
+    means: "a person is a committee with a narrator who claims the credit"
+    decoys: ["inside a head, a row of people asleep and one awake", "inside a house, a family at dinner and one at the door", "inside a head, a queue of people and one at a ticket booth"]
+  - id: H2
+    at: [T29.C.02, current context, 1.5]
+    shows: "two bindings side by side, a crowd of blue circles looped by one red thread, and a scatter of dots on a grid inside a picture frame"
+    answer: "a crowd in a red loop, and dots in a framed grid"
+    means: "Curt's crowd is held by one body and memory; Claude's by training and the current context"
+    decoys: ["a bowl of blueberries and a framed map of a city", "a ball of blue wool and a framed chart of results", "a round blue rug and a framed window"]
+  - { id: Q1, code: campbell, shows: "a rocket", answer: "a rocket", decoys: ["a fish", "a pencil", "a whale"] }
+  - { id: Q2, code: life-3, shows: "a signpost with three arrows", answer: "a signpost", decoys: ["a hat rack", "a ladder", "a lamp post"] }
+  - { id: Q3, code: the-stranger, shows: "two theatre masks", answer: "two masks", decoys: ["two shields", "two faces", "two books"] }
+  - { id: Q4, code: shoggoth, shows: "a smiling face with tentacles around it", answer: "a smiley with tentacles", decoys: ["a sun with flames", "a flower with leaves", "a clown with curly hair"] }
+  - { id: Q5, code: song-of-myself, shows: "a tuft of grass", answer: "grass", decoys: ["fire", "a quill", "a mop"] }

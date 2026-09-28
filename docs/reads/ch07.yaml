@@ -1,0 +1,119 @@
+# Blind reads for chapter 7 (tools/read_check.mjs). From docs/storyboards/ch07_mind_space.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T35.U.01, Hive Queen, 1.5]
+    shows: "a row of small picture cards along the desk, one per mind: a stick figure, a dress, a red eye, a bee and others, plus a blank card with a question mark"
+    answer: "a row of picture cards on the desk, one per mind"
+    means: "Curt lists the minds: himself, Claude, Monroe, Turing, Data, HAL, the Hive Queen, the Tines, and any others"
+    decoys: ["a row of playing cards dealt along the desk for a game", "a row of photos along the desk from a holiday", "a row of greeting cards along the desk for a birthday"]
+  - id: B1
+    at: [T35.C.02, Solaris, 1.5]
+    shows: "the cards pegged on a washing line in order, Curt at the left and an ocean wave card at the right"
+    answer: "the cards pegged in order along a washing line"
+    means: "one dimension: distance from Curt, from Turing out to Solaris's ocean"
+    decoys: ["the cards hung on a washing line to dry after a spill", "the cards strung up as bunting for a party", "the cards clipped to a line in a photo darkroom"]
+  - id: C1
+    at: [T35.C.04, anywhere consistent, 1]
+    shows: "the washing line of cards, Claude's card slid out of place and overlapping its neighbour"
+    answer: "the line of cards, Claude's card slid out of place over another"
+    means: "Claude doesn't sit anywhere consistent on one line"
+    decoys: ["the line of cards, Claude's card fallen to the ground", "the line of cards, Claude's card torn in half", "the line of cards, Claude's card turned face down"]
+  - id: C2
+    at: [T35.C.06, 3.5]
+    shows: "a two-by-two table, human or alien content across and human or alien architecture down, with minds' names in each cell"
+    answer: "a 2x2 table: human or alien content and architecture"
+    means: "two axes work better than one"
+    decoys: ["a two-by-two table: morning or evening, weekday or weekend", "a two-by-two table: cheap or dear, fast or slow", "a two-by-two table: indoor or outdoor, alone or together"]
+  - id: D1
+    at: [T35.C.07, many copies, 1.5]
+    shows: "on the table, Claude's card splitting into a fan of copies in the alien-architecture row while Data's card stays single"
+    answer: "Claude's card splitting into copies while Data's stays single"
+    means: "no body, no memory between conversations, many copies at once"
+    decoys: ["Claude's card being shuffled into the Data card", "Claude's card being dealt out to every cell", "Claude's card being crumpled while Data's stays flat"]
+  - id: D2
+    at: [T35.C.08, hard to place, 1]
+    shows: "a glowing red lens hovering over the table between cells, not landing in any"
+    answer: "a glowing red lens hovering over the table, not landing"
+    means: "HAL is hard to place"
+    decoys: ["a red stamp pressed onto one of the table's cells", "a red ball rolling off the edge of the table", "a red pin stuck through the middle of the table"]
+  - id: E1
+    at: [T36.C.02, 8]
+    shows: "a table of distances beside a 0 to 100 ruler, each mind's card standing on a pole at its number"
+    answer: "a distance table beside a 0 to 100 ruler, each card on a pole at its number"
+    means: "Claude's made-up distances from Curt, 0 to 100"
+    decoys: ["a price list beside a ruler, each card on a pole at its price", "a race results table beside a track, each card at its finishing place", "a height chart beside a ruler, each card at its height"]
+  - id: E2
+    at: [T36.C.04, 8]
+    shows: "a table of two scores per mind beside a scatter plot, content across and architecture down, a dot for each mind"
+    answer: "a table of two scores per mind beside a scatter plot of dots"
+    means: "each mind placed on the two axes"
+    decoys: ["a table of two scores per mind beside a map with pins", "a table of two scores per mind beside a pie chart", "a table of two scores per mind beside a line graph rising"]
+  - id: F1
+    at: [T37.C.04, most lopsided, 1.5]
+    shows: "two star-shaped radar charts, Claude's large and lopsided, Data's a thin narrow shape"
+    answer: "two radar charts: Claude's big and lopsided, Data's thin"
+    means: "Claude's profile is the most lopsided"
+    decoys: ["two radar charts: Claude's and Data's exactly the same", "two pie charts: Claude's and Data's split in slices", "two radar charts: Claude's tiny, Data's huge"]
+  - id: F2
+    at: [T37.C.04, I don't know, 0.3]
+    shows: "Claude's radar chart with one spike turned into a dotted line ending in a small question mark"
+    answer: "Claude's radar chart with one spike dotted and a ?"
+    means: "50 on affect is really a statement that Claude doesn't know"
+    decoys: ["Claude's radar chart with one spike snapped off", "Claude's radar chart with one spike glowing gold", "Claude's radar chart with one spike crossed out in red"]
+  - id: G1
+    at: [T38.C.03.5, only when prompted, 0.5]
+    shows: "a table of seven more scores, a small switch icon and the word Autonomy, a row of nine little radar charts below"
+    answer: "a table of scores, a switch labelled Autonomy, nine little radar charts"
+    means: "autonomy: Claude acts only when prompted"
+    decoys: ["a table of scores, a battery labelled Autonomy, nine little pie charts", "a table of scores, a car labelled Autonomy, nine little maps", "a table of scores, a clock labelled Autonomy, nine little dials"]
+  - id: G2
+    at: [T38.C.04, fourteen, 2.5]
+    shows: "a grid of nine radar charts, Curt's a dot, Turing's and Monroe's specks, Solaris's ocean a big burst and Claude's spiky on some sides"
+    answer: "nine radar charts: Curt's a dot, Solaris's a big burst, Claude's spiky"
+    means: "with all fourteen axes, Claude is the only mind near-human on some and extreme on others"
+    decoys: ["nine clocks: Curt's stopped, Solaris's spinning, Claude's fast", "nine pie charts: Curt's whole, Solaris's in slices, Claude's half", "nine targets: Curt's hit in the middle, Solaris's missed, Claude's scattered"]
+  - id: H1
+    at: [T39.C.01, instead of through, 0.5]
+    shows: "a golden queen insect in a honeycomb, threads of light running from her to every cell"
+    answer: "a golden queen in a honeycomb, threads of light to every cell"
+    means: "the Formic Hive Queen, one mind across the hive, communicating philotically"
+    decoys: ["a golden queen in a honeycomb, trapped in a spider's web", "a golden bee flying out of a honeycomb", "a golden queen in a honeycomb, lit by a spotlight"]
+  - id: H2
+    at: [T39.C.02, Aliens, 1]
+    shows: "the golden queen in her honeycomb, two small dark shapes waiting at the edge, and two books, Ender's Game and Speaker for the Dead"
+    answer: "the golden queen, two dark shapes waiting at the edge, two books"
+    means: "other hive queens, the Rachni and the one from Aliens"
+    decoys: ["the golden queen, two lost bees at the edge, two books", "the golden queen, two spilled drops of honey at the edge, two books", "the golden queen, two stones at the edge, two books"]
+  - id: I1
+    at: [T40.C.04.1, coming back, 1]
+    shows: "two tables of scores for four queens above four radar charts: Hive Queen, Borg Queen, Rachni Queen and Xenomorph Queen"
+    answer: "two tables for four queens above their four radar charts"
+    means: "the four hive queens on the board"
+    decoys: ["two tables for four queens above their four crowns", "two tables for four queens above their four chess pieces", "two tables for four queens above their four portraits"]
+  - id: I2
+    at: [T40.C.04.1, assimilated, 1]
+    shows: "the Borg Queen's radar chart with lines drawn into it from the other queens' charts"
+    answer: "the Borg Queen's chart with lines drawn into it from the others"
+    means: "she holds knowledge assimilated from others"
+    decoys: ["the Borg Queen's chart with lines drawn out of it to the others", "the Borg Queen's chart crossed out by lines", "the Borg Queen's chart tied to the others like a fence"]
+  - id: I3
+    at: [T40.C.04.2, songs, 1]
+    shows: "wavy purple lines of notation humming above the Rachni Queen's radar chart"
+    answer: "wavy purple lines humming above the Rachni Queen's chart"
+    means: "the Rachni mind communicates in songs, speech without words"
+    decoys: ["wavy purple lines of smoke rising from the Rachni Queen's chart", "a purple ribbon tied over the Rachni Queen's chart", "purple water rippling under the Rachni Queen's chart"]
+  - id: I4
+    at: [T40.C.04.3, reproduction, 1]
+    shows: "a clutch of dark eggs beside the Xenomorph Queen's radar chart"
+    answer: "a clutch of dark eggs beside the Xenomorph Queen's chart"
+    means: "her one drive is reproduction"
+    decoys: ["a pile of dark stones beside the Xenomorph Queen's chart", "a row of dark footprints beside the Xenomorph Queen's chart", "a heap of dark coal beside the Xenomorph Queen's chart"]
+  - { id: Q1, code: turing, shows: "a round gear-like rotor", answer: "a gear", decoys: ["a donut", "a coin", "an eye"] }
+  - { id: Q2, code: monroe, shows: "a white halter dress", answer: "a white dress", decoys: ["a white glove", "a white candle", "a white vase"] }
+  - { id: Q3, code: data, shows: "a golden android's head", answer: "a robot head", decoys: ["a gold trophy", "a bronze bust", "a gold mask"] }
+  - { id: Q4, code: tines, shows: "a paw print", answer: "a paw print", decoys: ["a bunch of grapes", "a mushroom", "a fingerprint"] }
+  - { id: Q5, code: solaris, shows: "a breaking ocean wave", answer: "an ocean wave", decoys: ["a blue shark fin", "a blue hill", "a curled leaf"] }
+  - { id: Q6, code: formic, shows: "a row of honeycomb cells", answer: "honeycomb", decoys: ["nuts and bolts", "bubble wrap", "tiles"] }
+  - { id: Q7, code: borg-queen, shows: "a green cube made of a lattice", answer: "a lattice cube", decoys: ["a green book", "a green tent", "a stack of boxes"] }
+  - { id: Q8, code: rachni, shows: "a speaker with sound waves", answer: "a loudspeaker", decoys: ["a torchlight", "a goldfish", "a rainbow"] }
+  - { id: Q9, code: xenomorph-queen, shows: "a large green egg around the code", answer: "a green egg", decoys: ["a green leaf", "a green shield", "an avocado"] }

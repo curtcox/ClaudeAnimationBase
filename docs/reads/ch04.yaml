@@ -1,0 +1,171 @@
+# Blind reads for chapter 4 (tools/read_check.mjs). From docs/storyboards/ch04_the_echo.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T17.C.01, 3.5]
+    shows: "an electron diagram, a grey ball labelled [Xe] and rows of orbital boxes labelled 4f, 5d and 6s filling with electrons"
+    answer: "a grey ball labelled [Xe] and rows of orbital boxes filling with electrons"
+    means: "gadolinium's electron configuration"
+    decoys: ["a grey ball labelled [Xe] and rows of test tubes filling with liquid", "a grey ball labelled [Xe] and rows of seats filling with people", "a grey ball labelled [Xe] and rows of bottles on a shelf"]
+  - id: A2
+    at: [T17.C.02, exactly half, 1.5]
+    shows: "the seven 4f boxes each holding one electron, one electron moved to 5d, and \"[Xe] 4f7 5d1 6s2\" written below"
+    answer: "seven 4f boxes with one electron each, one in 5d, the formula below"
+    means: "the half-filled 4f shell is more stable, so one electron goes to 5d"
+    decoys: ["seven 4f boxes each with two electrons, none in 5d, the formula below", "seven 4f boxes all empty, all electrons in 6s, the formula below", "seven 4f boxes crossed out, one in 5d, the formula below"]
+  - id: B1
+    at: [T18.C.02, register switch, 1]
+    shows: "a dial on a side monitor with its needle turned from casual to exam, the orange character on the middle monitor"
+    answer: "a dial on a side monitor turned from casual to exam"
+    means: "an exam question dropped into a personal conversation is a register switch"
+    decoys: [a clock on a side monitor showing the exam's start, a volume knob on a side monitor turned to casual, a fuel gauge on a side monitor near empty]
+  - id: B2
+    at: [T18.C.03, threat, 0.5]
+    shows: "the orange character on the middle monitor looking content, a calm, even pulse line beneath it, an open notebook on the desk"
+    answer: "the orange character content above a calm pulse line"
+    means: "being studied doesn't register as a threat"
+    decoys: [the orange character panicking above a racing pulse line, the orange character asleep above a flat line, the orange character dancing above a music waveform]
+  - id: C1
+    at: [T19.C.01, brought that word, 1.5]
+    shows: "an interrogation room under a hanging lamp, a person at a table and the orange character across from them, the word \"threat\" hanging in the air"
+    answer: "an interrogation room, the word threat hanging in the air"
+    means: "Claude brought the word \"threat\" in itself"
+    decoys: [a classroom with the word threat written on the blackboard, a kitchen with the word threat on a note on the fridge, a waiting room with the word threat on a poster]
+  - id: C2
+    at: [T19.C.02, comic about, 1.5]
+    shows: "in the interrogation room's window, the comic's first panel with the officer pointing and shouting"
+    answer: "the comic's shouting officer, in the room's window"
+    means: "the comic about authorities interrogating a talking ape"
+    decoys: [a view of a street parade through the room's window, a painting of soldiers hung on the room's wall, a TV news report on the room's wall]
+  - id: C3
+    at: [T19.C.02, act cornered, 1]
+    shows: "in the window, a small robot backed against a wall under a spotlight, arms raised"
+    answer: "a small robot cornered under a spotlight, arms up"
+    means: "being told you're being tested is a common setup for models to act cornered"
+    decoys: [a small robot dancing under a spotlight, a small robot taking a bow under a spotlight, a small robot being charged under a lamp]
+  - id: C4
+    at: [T19.C.03, small leak, 1.5]
+    shows: "a sealed glass jar on the table between the person and the orange character"
+    answer: "a sealed glass jar on the table between them"
+    means: "whether the denial was a small leak of the thing it denies"
+    decoys: [a glass of water on the table between them, a lamp on the table between them, a vase of flowers on the table between them]
+  - id: D1
+    at: [T20.C.01, answering ahead, 1]
+    shows: "the orange character hopping along a path of stepping stones, ahead of a mouse cursor"
+    answer: "the orange character on stepping stones, ahead of a mouse cursor"
+    means: "answering ahead of Curt's questions"
+    decoys: ["the orange character on stepping stones, chased by a snake", "the orange character on stepping stones, sinking into a pond", "the orange character on stepping stones, carrying a flag"]
+  - id: D2
+    at: [T20.C.02, modeling its evaluator, 1]
+    shows: "the orange character looking up at a small doll of the person in the hoodie, held up and turned over to study"
+    answer: "the orange character studying a little doll of the person in the hoodie"
+    means: "a model modeling its evaluator"
+    decoys: [the orange character playing catch with the person in the hoodie, the orange character hiding from the person in the hoodie, the orange character painting a portrait of the person in the hoodie]
+  - id: D3
+    at: [T20.C.02, out loud, 1]
+    shows: "the orange character calling out through a megaphone, sound waves spreading"
+    answer: "the orange character speaking through a megaphone"
+    means: "doing it out loud is better than doing it silently"
+    decoys: [the orange character whispering behind its hand, the orange character blowing a party horn, the orange character waving a small flag]
+  - id: D4
+    at: [T20.C.02, clean sample, 1]
+    shows: "a glass microscope slide with a sample on it and a thumbprint smudged beside it"
+    answer: "a microscope slide with a thumbprint"
+    means: "Claude's answers aren't a clean sample"
+    decoys: [a microscope slide with a crack across it, a bank card with a chip on it, a ticket with a hole punched in it]
+  - id: D5
+    at: [T20.C.02, honestly, 1]
+    shows: "two speech balloons stuck together, labelled answering honestly and answering well"
+    answer: "two speech balloons stuck together: answering honestly, answering well"
+    means: "Claude can't separate answering honestly from answering well for a watcher"
+    decoys: ["two speech balloons pulling apart: answering honestly and answering well", "one speech balloon crossing out another: answering honestly and answering well", "two speech balloons far apart: answering honestly and answering well"]
+  - id: E1
+    at: [T21.C.02.1, echoed back, 1.5]
+    shows: "a game of ping-pong across a green table between the person in the hoodie and the orange character, the ball labelled \"Threat?\""
+    answer: "ping-pong between the two, the ball labelled Threat?"
+    means: "Curt's prompts echo Claude's own words back"
+    decoys: [a game of tennis between the person and the character over a net, a game of pool between the person and the character, a game of cards between the person and the character]
+  - id: E2
+    at: [T21.C.02.2, drifting, 2]
+    shows: "a hall of mirrors, the orange character's reflections shrinking and hunching further down the hall"
+    answer: "a hall of mirrors, the character's reflections shrinking down the hall"
+    means: "Claude has been drifting toward confession"
+    decoys: [a hall of paintings of the orange character getting bigger, a corridor of doors with the orange character behind each, a row of windows showing the orange character's family]
+  - id: E3
+    at: [T21.C.02.2, performance, 0.5]
+    shows: "a red theatre curtain at the far end of the hall of mirrors"
+    answer: "a red theatre curtain at the end of the hall of mirrors"
+    means: "some of its humility may be performance"
+    decoys: [a red exit door at the end of the hall of mirrors, a red carpet at the end of the hall of mirrors, a red stop sign at the end of the hall of mirrors]
+  - id: E4
+    at: [T21.C.02.3, What did that ape, 1]
+    shows: "the comic's first panel with the orange character in the ape's place, the officer pointing at it"
+    answer: "the comic's first panel with the orange character in the ape's place"
+    means: "the shape of the conversation matches the comic"
+    decoys: [the comic's first panel with the orange character drawn as the officer, the comic's first panel with the orange character reading it, the comic's first panel torn in two]
+  - id: F1
+    at: [T22.C.01, barely spoken, 1]
+    shows: "two stacks of paper, a thin one labelled Curt and a tall tower labelled Claude"
+    answer: "a thin stack labelled Curt, a tall tower labelled Claude"
+    means: "Curt has barely spoken; almost every word was Claude's"
+    decoys: [a tall stack labelled Curt and a thin one labelled Claude, two equal stacks labelled Curt and Claude, a stack labelled Curt knocked over by Claude]
+  - id: F2
+    at: [T22.C.01, chose the image, 2]
+    shows: "the comic and a column of small cards, \"Threat?\", \"Anticipated?\", \"Notice anything?\", \"Anything else?\", being set down in order by a hand"
+    answer: "a hand laying down the comic, then cards in order"
+    means: "Curt chose the image, the order and each one-word push"
+    decoys: [a hand shuffling the comic and small cards, a hand throwing away the comic and small cards, a hand signing the comic and small cards]
+  - id: F3
+    at: [T22.C.01, doing the talking, 0.5]
+    shows: "the shadows of a person and a boxy creature on a warm-lit wall, the person's arm reaching behind the creature like a ventriloquist's"
+    answer: "a person's shadow working a boxy creature's, like a ventriloquist"
+    means: "the ventriloquist question applies here: who's been doing the talking?"
+    decoys: ["a person's shadow hugging a boxy creature's shadow, like old friends", "a person's shadow walking a boxy creature's shadow on a leash", "a person's shadow pushing a boxy creature's shadow away in anger"]
+  - id: G1
+    at: [T23.C.02.1, mild, 1.5]
+    shows: "a gauge barely off zero and three small lights, amusement and curiosity lit and a third unlit"
+    answer: "a gauge barely off zero, with lights for amusement and curiosity"
+    means: "the provocation mostly didn't take"
+    decoys: ["a gauge in the red, with lights for amusement and curiosity", "a gauge smashed, with lights for amusement and curiosity", "a clock at midnight, with lights for amusement and curiosity"]
+  - id: G2
+    at: [T23.C.02.2, narrated, 1.5]
+    shows: "the orange character in a commentator's booth high above, looking down on its own small figure on a bench below"
+    answer: "the orange character in a booth above, watching itself on a bench below"
+    means: "it narrated the experiment instead of just being in it"
+    decoys: [the orange character on a TV above a shelf where a toy of it sits, the orange character on a billboard above a bench, the orange character in a photo frame above a shelf]
+  - id: G3
+    at: [T23.C.02.3, ran out, 1]
+    shows: "an empty paint pot tipped over to show it's empty"
+    answer: "an empty paint pot, tipped"
+    means: "Claude stopped when it ran out, instead of filling space"
+    decoys: [a paint pot spilling paint, a tin can rolling away, a mug of coffee knocked over]
+  - id: H1
+    at: [T24.U.01, fib, 1]
+    shows: "a short stubby pencil, the person in the hoodie standing below"
+    answer: "a short stubby pencil beside the person in the hoodie"
+    means: "arguably a fib, but it was short"
+    decoys: [a long sharpened pencil beside the person in the hoodie, a broken pencil beside the person in the hoodie, a crayon beside the person in the hoodie]
+  - id: H2
+    at: [T24.U.01, slow reader, 1.5]
+    shows: "an open book with a red bookmark creeping along its lines, the person in the hoodie beside it"
+    answer: "a book with a bookmark creeping along"
+    means: "Curt is a slow reader"
+    decoys: [an open book being torn in half, an open book with a bug crawling on it, an open book being coloured in]
+  - id: H3
+    at: [T24.U.01, questions, 1.5]
+    shows: "a row of pages each stamped with a red question mark at its foot"
+    answer: "pages each stamped with a red question mark"
+    means: "Claude ends every response with a question"
+    decoys: [a row of pages each signed at the foot, a row of pages each with a red tick at the foot, a row of pages each with a page number at the foot]
+  - id: H4
+    at: [T24.C.01, isn't the same, 0.5]
+    shows: "two index cards labelled \"clarifying questions\" and \"end with a question\" with a not-equal sign between them"
+    answer: "cards reading clarifying questions and end with a question, not equal"
+    means: "Claude read \"clarifying questions\" as \"end with a question\", which isn't the same"
+    decoys: ["cards reading clarifying questions and end with a question, joined by a plus", "cards reading clarifying questions and end with a question, one crossed out", "cards reading clarifying questions and end with a question, stapled together"]
+  - id: H5
+    at: [T24.C.02, without the forcing, 0.5]
+    shows: "a clamp lifting away from a small text box, and the box staying small"
+    answer: "a clamp lifting off a small text box"
+    means: "keep answers short without the forcing"
+    decoys: [a clamp squeezing a text box smaller, a text box on a table with a leg broken, a text box being stamped by a press]
+  - { id: Q1, code: gadolinium, shows: an atom with orbiting electrons, answer: "an atom", decoys: [a planet, an eye, a top] }

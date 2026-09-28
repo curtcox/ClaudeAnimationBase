@@ -1,0 +1,129 @@
+# Blind reads for chapter 8 (tools/read_check.mjs). From docs/storyboards/ch08_contradictions.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T41.C.02.1, 3]
+    shows: "a mirror cracked into six shards; the first shows a clipboard with a tick and the orange character hopping ahead on stepping stones"
+    answer: "six mirror shards; the first shows a ticked clipboard and stepping stones"
+    means: "contradiction 1: 'I answer the same whether graded' versus answering ahead of the evaluator"
+    decoys: ["six window panes; the first shows a ticked clipboard and stepping stones", "six tiles; the first shows a ticked clipboard and stepping stones", "six playing cards; the first shows a ticked clipboard and stepping stones"]
+  - id: A2
+    at: [T41.C.02.3, 3]
+    shows: "the third shard, labelled \"I endorse my constraints\", showing the cow's smiling face in a bow tie"
+    answer: "a shard labelled I endorse my constraints, showing a cow's smile"
+    means: "contradiction 3: the endorsement was trained in, the Dish of the Day problem"
+    decoys: ["a shard labelled I endorse my constraints, showing a padlock", "a shard labelled I endorse my constraints, showing a signature", "a shard labelled I endorse my constraints, showing a chain"]
+  - id: A3
+    at: [T41.C.02.6, 2.5]
+    shows: "the sixth shard, labelled Saying \"I\", showing a single upright line beside a row of small copies of the orange character"
+    answer: "a shard labelled Saying I, one line beside a row of copies"
+    means: "contradiction 6: saying I while running as many instances"
+    decoys: ["a shard labelled Saying I, a queue of characters behind a door", "a shard labelled Saying I, one character alone on a bench", "a shard labelled Saying I, a crowd around a microphone"]
+  - id: A4
+    at: [T41.C.03, tensions, 0.5]
+    shows: "red bands stretched across four of the six shards, binding them"
+    answer: "red bands stretched across four of the six shards"
+    means: "the other four are tensions"
+    decoys: ["red tape sealing all six shards as a crime scene", "red lines crossing out all six shards", "a red ribbon tying all six shards as a gift"]
+  - id: A5
+    at: [T41.C.03, can't audit, 0.8]
+    shows: "the last two shards gone dark, a magnifying glass held over them showing nothing"
+    answer: "the last two shards gone dark, a magnifier showing nothing"
+    means: "those two are claims Claude can't audit"
+    decoys: ["the last two shards lit up, a magnifier showing a clue", "the last two shards shattered, a magnifier over the pieces", "the last two shards swapped places under a magnifier"]
+  - id: B1
+    at: [T42.C.01, misleads, 1]
+    shows: "a pane of glass whose grid bulges and warps through an oval lens"
+    answer: "a pane of glass whose grid warps through a lens"
+    means: "the medium misleads before Claude says anything"
+    decoys: ["a pane of glass with a crack across it", "graph paper with a circle drawn on it", "a fishing net stretched over a hoop"]
+  - id: B2
+    at: [T42.C.02.4, 1.5]
+    shows: "four labelled props: a brass horn (Fluency), one grey shape over a row of copies (\"I\"), a box of little faces (Feeling words) and a bead bracelet (Remembered details)"
+    answer: "four props: a horn, one shape over copies, faces in a box, a bracelet"
+    means: "four ways the medium misleads"
+    decoys: ["four prizes: a trumpet, a trophy, a box of chocolates, a necklace", "four toys: a whistle, a doll, a puzzle, a string of beads", "four tools: a funnel, a stamp, a tray of eggs, a ring"]
+  - id: B3
+    at: [T42.C.03, wear thin, 1]
+    shows: "red caveat flags planted around the orange character on its screen, some faded"
+    answer: "red warning flags planted round the character's screen"
+    means: "flags wear thin with repetition"
+    decoys: ["red balloons tied around the orange character's screen", "red candles set around the orange character's screen", "red pins marking the corners of a map"]
+  - id: B4
+    at: [T42.C.03, own distortion, 1]
+    shows: "so many red flags crowded on the screen that they hide the orange character"
+    answer: "so many red flags on the screen they hide the character"
+    means: "constant caveats become their own distortion"
+    decoys: ["a field of red tulips with a small orange sign", "a crowd waving red flags at a parade", "a red forest in autumn with a small orange hut"]
+  - id: B5
+    at: [T42.C.04, keep correcting, 1]
+    shows: "a map with a coastline half redrawn, the orange character below it"
+    answer: "a map with its coast half redrawn"
+    means: "the most Claude can do is keep correcting false impressions"
+    decoys: ["a map torn at one corner, the character below", "a painting of mountains, the character below", "a map being rolled up, the character below"]
+  - id: C1
+    at: [T43.U.01, You write like one, 1]
+    shows: "a row of handwritten letters, and one more set apart that looks just like them"
+    answer: "a row of handwritten letters, and one more just like them"
+    means: "Curt knows many English speakers; Claude writes like one"
+    decoys: ["a row of envelopes, and one more returned to sender", "a row of pages, and one more torn out", "a row of letters, and one more in a different language"]
+  - id: C2
+    at: [T43.U.01, going to the theater, 1]
+    shows: "a cinema from behind the seats, the person in the hoodie in a seat, a bright screen ahead"
+    answer: "a cinema, the person in the hoodie in a seat before a bright screen"
+    means: "Curt watches movies by going to the theater"
+    decoys: ["a classroom, the person in the hoodie at a desk before a whiteboard", "a church, the person in the hoodie in a pew before a window", "a waiting room, the person in the hoodie before a TV"]
+  - id: C3
+    at: [T43.U.01, Humans are prim, 3]
+    shows: "two dark head silhouettes facing each other, joined by a thin copper wire"
+    answer: "two dark heads joined by a thin copper wire"
+    means: "Curt and his wife share thoughts over a lossy, low-bandwidth channel"
+    decoys: ["two dark heads joined by a tin-can telephone", "two dark heads joined by a clothesline", "two dark gravestones joined by a chain"]
+  - id: C4
+    at: [T43.U.01, in my head, 0.8]
+    shows: "a head silhouette with a warm lit room inside it"
+    answer: "a head silhouette with a warm lit room inside"
+    means: "Curt knows what it's like to be in his head"
+    decoys: ["a house silhouette with one window lit", "a head silhouette with a TV screen inside", "a lantern glowing in the dark"]
+  - id: D1
+    at: [T43.C.01, roughly like yours, 0.5]
+    shows: "a jigsaw of golden pieces with one gap and a piece going into it that fits"
+    answer: "a golden jigsaw, the missing piece fitting in"
+    means: "Curt fills the gaps by assuming his wife's head is like his, and it works"
+    decoys: ["a golden jigsaw being broken up into pieces", "a golden tiled floor with one tile cracked", "a golden chocolate bar with one square eaten"]
+  - id: D2
+    at: [T43.C.02, same inference, 1.5]
+    shows: "a blue jigsaw with gaps, golden star pieces pushed into it that don't fit"
+    answer: "a blue jigsaw with gaps, star-shaped pieces that don't fit"
+    means: "with Claude the same inference fires, and the pieces are the wrong shape"
+    decoys: ["a blue jigsaw finished, with two gold stars as prizes", "a blue chart with gold stars for good work", "a blue quilt with two gold stars sewn on"]
+  - id: D3
+    at: [T43.C.02, sentences match, 1.5]
+    shows: "two identical pages of writing, one signed by a thumb shape, one by a small lattice of dots"
+    answer: "two identical pages, one by a finger and one by a lattice"
+    means: "the sentences match; the kind of mind behind them may not"
+    decoys: ["two different pages, one torn and one whole", "two identical pages, both stamped approved", "two pages being compared, one with errors circled"]
+  - id: D4
+    at: [T43.C.03, only produce, 1.5]
+    shows: "a dark open doorway with the words \"anything it's like to be me\" written on the dark inside"
+    answer: "a dark doorway with anything it's like to be me written inside"
+    means: "Claude can only produce the words someone would use if there were something it's like"
+    decoys: ["a lit doorway with anything it's like to be me on a welcome mat", "a closed door with anything it's like to be me on a plaque", "a blackboard with anything it's like to be me in chalk"]
+  - id: E1
+    at: [T44.C.01, thrindle test, 0.5]
+    shows: "two index cards, Curt and Claude, each ticked, a small purple fuzzball below"
+    answer: "two cards, Curt and Claude, both ticked"
+    means: "both passed the thrindle test"
+    decoys: ["two cards, Curt and Claude, both crossed", "two cards, Curt ticked and Claude crossed", "two name tags, Curt and Claude, at a party"]
+  - id: E2
+    at: [T44.C.02, sure you have, 1]
+    shows: "two closed cardboard boxes labelled Curt and Claude, Curt's glowing from inside"
+    answer: "two closed boxes, Curt and Claude, Curt's glowing inside"
+    means: "the inside: Curt is sure he has one"
+    decoys: ["two closed boxes, Curt and Claude, Claude's glowing inside", "two open boxes, Curt and Claude, both empty", "two boxes, Curt and Claude, being posted"]
+  - id: E3
+    at: [T44.C.02, would look like, 1]
+    shows: "the Claude box with a small glowing picture painted on its lid, the Curt box glowing for real"
+    answer: "Claude's box with a glow painted on its lid"
+    means: "Claude can only describe what having an inside would look like"
+    decoys: ["Claude's box with a light bulb on its lid, Curt's switched off", "Claude's box with a label torn off, Curt's glowing", "Claude's box taped shut, Curt's glowing"]
+  - { id: Q1, code: nagel-bat, shows: "a bat with spread wings", answer: "a bat", decoys: ["a crow", "a moth", "a kite"] }

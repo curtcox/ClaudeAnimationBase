@@ -1,0 +1,186 @@
+# Blind reads for chapter 6 (tools/read_check.mjs). From docs/storyboards/ch06_thrindles.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T30.U.01, Debate, 3]
+    shows: "a side monitor playing a debate video, two seated figures under a title card"
+    answer: "a side monitor playing a debate, two seated figures under a title"
+    means: "the debate video whose comments Curt pastes"
+    decoys: ["a side monitor playing a cooking show, two chefs under a title", "a side monitor on a video call, two faces under a name bar", "a side monitor playing a news report, two anchors under a headline"]
+  - id: A2
+    at: [T30.U.01, Z M, 4]
+    shows: "an index card pinned to a corkboard, a comment reading \"He lost me when he said LLMs don't have any concepts\""
+    answer: "a comment card pinned to a corkboard: LLMs don't have concepts"
+    means: "the comment thread that starts the probes"
+    decoys: ["a recipe card pinned to a corkboard: LLMs don't have concepts", "a wanted poster pinned to a corkboard: LLMs don't have concepts", "a sticky note on a fridge: LLMs don't have concepts"]
+  - id: B1
+    at: [T30.C.01, cases you've never, 1]
+    shows: "three strange locks, round, square and star-shaped, a key turning in the square one"
+    answer: "three odd locks, round, square and star, a key turning in one"
+    means: "apply an idea to cases you've never seen"
+    decoys: ["three odd buttons, round, square and star, a finger pressing one", "three odd cookies, round, square and star, one bitten", "three odd shields, round, square and star, one being painted"]
+  - id: B2
+    at: [T30.C.02, rush hour, 1]
+    shows: "the word thrindle above a road jammed bumper to bumper with cars, a small purple fuzzball below"
+    answer: "the word thrindle above a road jammed with cars"
+    means: "a thrindle, like a highway at rush hour"
+    decoys: ["the word thrindle above a row of coloured books", "the word thrindle above a box of crayons", "the word thrindle above a train of coloured carriages"]
+  - id: B3
+    at: [T30.C.02, Wi-Fi, 1]
+    shows: "a signal-strength icon above a row of open laptops"
+    answer: "signal bars above a row of open laptops"
+    means: "a shared Wi-Fi network gets worse the more people use it"
+    decoys: ["a bar chart above a row of flower pots", "a staircase above a row of stools", "a bar chart above a row of bins"]
+  - id: B4
+    at: [T30.C.04.3, 1]
+    shows: "three cards dealt out: 1. A language, 2. A lighthouse, 3. A secret, a small purple fuzzball below"
+    answer: "three cards: a language, a lighthouse, a secret"
+    means: "the first probe: which of these are thrindles?"
+    decoys: ["three cards: a language, a lighthouse, a secret, all crossed out", "three prize tickets: a language, a lighthouse, a secret", "three books: a language, a lighthouse, a secret"]
+  - id: C1
+    at: [T31.U.01, Navajo, 2]
+    shows: "an old military field radio with its handset, joined to cards reading A language and A secret"
+    answer: "an old field radio joined to cards reading A language and A secret"
+    means: "Navajo is a language and a secret: the code talkers"
+    decoys: ["an old toaster joined to cards reading A language and A secret", "an old telephone exchange joined to cards reading A language and A secret", "an old tape recorder joined to cards reading A language and A secret"]
+  - id: C2
+    at: [T31.U.01, crowded, 1.5]
+    shows: "a red and white lighthouse on the shore, the sea in front of it crowded with small sailing boats"
+    answer: "a lighthouse above a sea crowded with sailing boats"
+    means: "Curt's lighthouse must be a thrindle: the more ships, the more crowded the ocean"
+    decoys: ["a lighthouse above a sea with one boat sinking", "a lighthouse above a sea with a regatta finishing", "a lighthouse above a sea full of sharks' fins"]
+  - id: D1
+    at: [T31.C.02.1, enemy side, 1]
+    shows: "the field radio with four pairs of headphones floating beside it"
+    answer: "the field radio with four pairs of headphones beside it"
+    means: "every extra listener, especially the enemy, made the code less useful"
+    decoys: ["the field radio with four pairs of scissors beside it", "the field radio with four horseshoes beside it", "the field radio with four telephones beside it"]
+  - id: D2
+    at: [T31.C.02.1, the opposite, 1.5]
+    shows: "a big green fuzzball with a crowd of small people gathered round it"
+    answer: "a big green fuzzball with a crowd gathered round it"
+    means: "as an ordinary language it's the opposite: more speakers make it more useful"
+    decoys: ["a big green fuzzball chasing a crowd away", "a big green bush with people hiding in it", "a big green tennis ball with a crowd cheering"]
+  - id: D3
+    at: [T31.C.02.2, hundred ships, 1]
+    shows: "the lighthouse beam over a mass of ships, only the crowded water shaded dark"
+    answer: "the lighthouse over a mass of ships, only the crowded water shaded"
+    means: "crowded water is the thrindle; the lighthouse shines as well for a hundred ships as for one"
+    decoys: ["the lighthouse over a mass of ships, an oil spill spreading", "the lighthouse over a mass of ships, a storm cloud's shadow", "the lighthouse over a mass of ships, a whale surfacing"]
+  - id: D4
+    at: [T31.C.02.3, on purpose, 0.5]
+    shows: "the orange character juggling three balls and letting one drop on purpose"
+    answer: "the orange character juggling, dropping one ball on purpose"
+    means: "the \"therefore\" was a joke; you can only break a rule on purpose if you have the rule"
+    decoys: ["the orange character dodging three balls thrown at it", "the orange character sorting three balls by colour", "the orange character bouncing three balls in a game"]
+  - id: D5
+    at: [T31.C.03, show off, 1]
+    shows: "a ticked box labelled \"concepts present\" above a road with a barrier, a red car swerving round it"
+    answer: "a ticked box, concepts present, above a car swerving round a barrier"
+    means: "concepts present; Curt steered around the question to show off"
+    decoys: ["a ticked box, concepts present, above a car crashing into a barrier", "a ticked box, concepts present, above a car stopped at a barrier", "a ticked box, concepts present, above a car parked beside a barrier"]
+  - id: E1
+    at: [T32.U.01, exclude others, 1]
+    shows: "a chalk circle on a green board with some stick figures inside and others outside it"
+    answer: "a chalk circle with some figures inside and others outside"
+    means: "languages and secrets include some and exclude others"
+    decoys: ["a chalk circle with figures dancing round it hand in hand", "a chalk target with figures throwing darts at it", "a chalk clock face with figures as its numbers"]
+  - id: E2
+    at: [T32.U.02, antithrindle, 1]
+    shows: "two fuzzballs side by side, one purple and one green, the green labelled antithrindle"
+    answer: "a purple fuzzball and a green one labelled antithrindle"
+    means: "the antithrindle, the thrindle's mirror twin"
+    decoys: ["a purple fuzzball eating a green one labelled antithrindle", "a purple fuzzball and a green one labelled antithrindle, fighting", "a purple fuzzball hatching from a green one labelled antithrindle"]
+  - id: E3
+    at: [T32.U.02, cliche, 1.5]
+    shows: "a crowd of small people below a row of blue stamp impressions, clear, above a row of fading grey ones"
+    answer: "a crowd below clear blue stamps and fading grey copies"
+    means: "a cliché: clear for the crowd, worn out for the writer"
+    decoys: ["a crowd below a row of blue flags and grey flags", "a crowd below a row of blue tickets and used grey tickets", "a crowd below a row of blue windows and grey windows"]
+  - id: F1
+    at: [T32.C.02, hidden variable, 1]
+    shows: "a card with a hidden slot marked \"?\" and a line running out of it to a tiny person"
+    answer: "a card with a hidden slot marked ?, a line out to a tiny person"
+    means: "Curt found a hidden variable in the definition: useful to someone"
+    decoys: ["a card with a keyhole marked ?, a key held by a tiny person", "a card with a price tag marked ?, a tiny person buying it", "a card with a stamp marked ?, a tiny person posting it"]
+  - id: F2
+    at: [T32.C.02, a re, 1]
+    shows: "a line drawn from a hammer to a hand"
+    answer: "a line drawn from a hammer to a hand"
+    means: "usefulness is a relation between the thing and whoever uses it"
+    decoys: ["a hammer knocking a nail into a board", "a hammer flying away from a hand", "a hammer and a loaf of bread on a table"]
+  - id: F3
+    at: [T32.C.04, couldn't give, 0.5]
+    shows: "three probe cards, each with two ticks, and one blank card below, the orange character beside it"
+    answer: "three cards ticked twice each and one blank card below"
+    means: "Claude would pass the same probes; which answer couldn't an LLM give?"
+    decoys: ["three cards crossed out twice each and one blank card below", "three cards torn in two and one blank card below", "three cards with prices and one blank card below"]
+  - id: G1
+    at: [T33.C.02.1, only to other words, 1]
+    shows: "a panel headed 1. Grounding: the word water joined by lines to other word tiles, a glass of water set apart from them"
+    answer: "the word water tied only to other words, a real glass set apart"
+    means: "grounding: Claude's water links only to other words"
+    decoys: ["the word water tied to a glass, with other words set apart", "the word water written on a glass beside some tiles", "the word water crossed out beside a glass"]
+  - id: G2
+    at: [T33.C.02.1, Searle, 1.5]
+    shows: "a small closed room with a slot in its wall, a person inside at a red rulebook"
+    answer: "a closed room with a slot, a person inside at a rulebook"
+    means: "the Chinese Room"
+    decoys: ["a closed room with a window, a person inside asleep", "a lift with a button, a person inside waiting", "a phone box with a slot, a person inside calling"]
+  - id: G3
+    at: [T33.C.02.2, stake, 1]
+    shows: "a panel headed 2. Commitment: a contract with an empty signature line"
+    answer: "a contract with an empty signature line"
+    means: "commitment: Claude has no stake"
+    decoys: ["a contract signed and stamped", "a contract torn in half", "a contract rolled up and tied with a ribbon"]
+  - id: G4
+    at: [T33.C.02.4, giant lookup, 1.5]
+    shows: "a panel headed 4. Behavior underdetermines: a row of filing cabinets running off into the distance"
+    answer: "a row of filing cabinets running off into the distance"
+    means: "Blockhead, a giant lookup table that could pass any finite test"
+    decoys: ["a row of washing machines running into the distance", "a row of lockers running into the distance", "a row of bookshelves running into the distance"]
+  - id: G5
+    at: [T33.C.03, contradict themselves, 0.5]
+    shows: "a person in a hoodie below two word cards, yes and no, that contradict each other"
+    answer: "a person below two cards, yes and no"
+    means: "people contradict themselves too"
+    decoys: ["a person voting between yes and no", "a person below a sign, yes and no, choosing a door", "a person below a switch, yes and no"]
+  - id: G6
+    at: [T33.C.03, behave a lot like, 1.5]
+    shows: "a circle drawn over a grid of dots, some dots inside lit orange"
+    answer: "a circle on a grid of dots, some lit orange"
+    means: "interpretability finds internal features that behave like concepts"
+    decoys: ["a circle drawn round a patch of spilled beads", "a magnifier over a board game", "a target with darts clustered in the middle"]
+  - id: H1
+    at: [T34.U.01, Rationality, 1]
+    shows: "a thick black book titled Rationality"
+    answer: "a thick black book titled Rationality"
+    means: "Yudkowsky's Rationality: From AI to Zombies"
+    decoys: ["a black box labelled Rationality", "a black door labelled Rationality", "a blackboard with Rationality chalked on it"]
+  - id: H2
+    at: [T34.C.01, did the thinking, 0.5]
+    shows: "the words GAZP vs. GLUT above a wall of small figures, each writing a card"
+    answer: "GAZP vs. GLUT above rows of small figures, each writing a card"
+    means: "whatever filled the lookup table did the thinking"
+    decoys: ["GAZP vs. GLUT above rows of small figures, each asleep at a desk", "GAZP vs. GLUT above rows of small figures, each voting", "GAZP vs. GLUT above rows of empty desks"]
+  - id: H3
+    at: [T34.C.02, aimed at, 0.5]
+    shows: "a brick wall with a doorway cut in the orange character's box-and-legs outline, being bricked up"
+    answer: "a doorway shaped like the orange character, bricked up"
+    means: "a criterion that excludes exactly the thing it's aimed at"
+    decoys: ["a brick wall with a round doorway, bricked up", "a brick wall with a doorway shaped like a key, standing open", "a brick wall with a hole where a window fell out"]
+  - id: H4
+    at: [T34.C.02, eroding, 2]
+    shows: "the bricks coming out of the doorway one by one, an eye among them"
+    answer: "bricks coming out of the doorway, one an eye"
+    means: "grounding is eroding: models now see, use tools and act"
+    decoys: ["more bricks being laid into the doorway", "the brick wall falling down all at once", "the doorway being painted over in white"]
+  - id: H5
+    at: [T34.C.02, justice, 1]
+    shows: "a small child reading an open book whose pages say justice and prime"
+    answer: "a child reading a book whose pages say justice and prime"
+    means: "your grip on justice and prime came through words too"
+    decoys: ["a child writing justice and prime on a blackboard", "a child holding up two signs saying justice and prime", "a child sitting between two doors marked justice and prime"]
+  - { id: Q1, code: code-talkers, shows: "an old field radio", answer: "a field radio", decoys: ["a lunch box", "a suitcase", "a sewing machine"] }
+  - { id: Q2, code: chinese-room, shows: "an open book", answer: "an open book", decoys: ["a treasure chest", "a picture frame", "a pillow"] }
+  - { id: Q3, code: blockhead, shows: "a filing cabinet", answer: "a filing cabinet", decoys: ["a fridge-freezer", "a bank safe", "a chest of drawers"] }
+  - { id: Q4, code: debate-llm-segment, shows: "an old television set", answer: "an old TV", decoys: ["a microwave", "a radio", "a fish tank"] }

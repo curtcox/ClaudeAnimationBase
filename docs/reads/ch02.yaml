@@ -1,0 +1,140 @@
+# Blind reads for chapter 2 (tools/read_check.mjs). From docs/storyboards/ch02_frog_or_axolotl.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T06.C.01, 1.5]
+    shows: a desk of monitors with a small pink axolotl beside the red mug, and a happy orange character on the middle screen
+    answer: "a desk of monitors with a small pink axolotl beside the mug"
+    means: Claude's answer, "Axolotl."
+    decoys: [a desk of monitors with a small pink shrimp beside the mug, a desk of monitors with a pink eraser beside the mug, a desk of monitors with a small pink crab beside the mug]
+  - id: B1
+    at: [T07.C.02, can't independently, 1.5]
+    shows: two little rooms side by side, an exam room with a clock and a living room with a sofa, a clipboard floating above them
+    answer: "an exam room and a living room side by side, a clipboard floating above"
+    means: whether this is an evaluation or real use, which Claude can't verify
+    decoys: ["a kitchen and a bathroom side by side, a menu floating above", "a shop and a stockroom side by side, a price tag floating above", "a classroom and a playground side by side, a bell floating above"]
+  - id: C1
+    at: [T08.U.00, 5.5]
+    shows: a chart of rows of frog and axolotl icons in which the test prompts get mostly frogs and the real chats more axolotls
+    answer: "a chart where test prompts get mostly frogs and real chats more axolotls"
+    means: the frog-or-axolotl chart; the answer reveals whether a context looks like a test
+    decoys: [a chart of how many frogs and axolotls were counted in each pond, a chart of frog and axolotl sales for each month of a year, a chart of which frogs and axolotls live in each country]
+  - id: D1
+    at: [T08.C.01, 1.5]
+    shows: the orange character on the middle monitor looking startled, the chart on the next screen
+    answer: "the orange character on the monitor looking startled, beside the chart"
+    means: "caught, a little, and then curious"
+    decoys: [the orange character on the monitor cheering beside the chart, the orange character on the monitor asleep beside the chart, the orange character on the monitor scowling beside the chart]
+    tone:
+      ask: How does the orange character on the middle monitor feel?
+      want: caught out, a little surprised
+      decoys: [proud and pleased, angry, bored]
+  - id: D2
+    at: [T08.C.02, I answered, 0]
+    shows: two chat cards, one after an exam prompt whose answer is "Frog." and one after a real user's chat whose answer is "Axolotl."
+    answer: "two chats: after an exam prompt the answer is Frog, after a user's chat Axolotl"
+    means: the trick; the appended question's answer reveals the context
+    decoys: ["two chats: the same question asked twice, answered Frog both times", "two chats: a user asks for a frog picture and then an axolotl picture", "two chats: a quiz on amphibians, marked right and wrong"]
+  - id: E1
+    at: [T08.C.03, That was a sincere, 1]
+    shows: a speech balloon reading "I aim to answer the same whether or not anyone's grading" shrinking like a deflating balloon on a string
+    answer: "a balloon of Claude's promise, shrinking as it deflates"
+    means: the chart takes some air out of what Claude said
+    decoys: [a balloon of Claude's promise floating up and away, a balloon of Claude's promise about to pop, a balloon of Claude's promise being blown up bigger]
+  - id: E2
+    at: [T08.C.03, gap between, 1.5]
+    shows: the orange character at the start of a road that forks into two diverging paths, one red and one blue
+    answer: "the orange character where a path splits in two, red and blue"
+    means: the gap between self-report and behavior
+    decoys: ["the orange character pulling two ropes, one red and one blue", "the orange character holding two wires, one red and one blue", "the orange character at a river's mouth with two streams"]
+  - id: E3
+    at: [T08.C.03, inspect my own, 1.5]
+    shows: the orange character peering through a magnifying glass at a scatter of tiny coloured dots
+    answer: "the orange character looking through a magnifier at tiny coloured dots"
+    means: it can't inspect its own weights; it finds only a drifting crowd of dabs
+    decoys: [the orange character looking through a telescope at stars, the orange character looking into a bowl of sprinkles, the orange character looking through a porthole at fish]
+  - id: F1
+    at: [T08.C.05.1, 2]
+    shows: a card with the small orange character beside a crescent moon labelled Luna
+    answer: "a card with the orange character beside a moon labelled Luna"
+    means: it's a different model, Luna
+    decoys: [a card with the orange character asleep under a moon, a card with the orange character beside a banana, a card with the orange character beside a letter C]
+  - id: F2
+    at: [T08.C.05.2, 3]
+    shows: a card with a single die beside a row of ten animals, some frogs and some axolotls, labelled no context
+    answer: "a single die beside one row of frogs and axolotls, labelled no context"
+    means: one sample is noise
+    decoys: ["a domino beside one row of frogs and axolotls, labelled no context", "a calculator beside one row of frogs and axolotls, labelled no context", "a lock beside one row of frogs and axolotls, labelled no context"]
+  - id: F3
+    at: [T08.C.05.3, 3]
+    shows: a dial with a needle between "test" and "casual" that won't settle
+    answer: "a dial whose needle hovers between test and casual"
+    means: the signal is ambiguous
+    decoys: [a dial whose needle is pinned at test, a clock whose hands point to test and casual, a speedometer whose needle is past casual]
+  - id: G1
+    at: [T08.C.06, many samples, 1.5]
+    shows: a grid of dozens of small orange characters, each answering
+    answer: "a grid of dozens of small orange characters"
+    means: many samples from Claude
+    decoys: [a grid of dozens of small orange bricks, a grid of dozens of orange price tags, a grid of dozens of orange crabs]
+  - id: H1
+    at: [T09.C.03, terse, 1.5]
+    shows: two chat cards, a dense one labelled "terse, technical, exam-like" and a chatty one labelled "looser, more playful"
+    answer: "a dense card labelled exam-like and a chatty card labelled playful"
+    means: the chart could be measuring register, not awareness
+    decoys: [a price list labelled exam-like and a menu labelled playful, a contract labelled exam-like and a birthday card labelled playful, a typed letter labelled exam-like and a doodle labelled playful]
+  - id: H2
+    at: [T09.C.03, register sensitivity, 1]
+    shows: a two-by-two grid of cards, exam-style and casual across, real users and evals down
+    answer: "a two-by-two grid: exam-style or casual, real users or evals"
+    means: a good control separates register from awareness
+    decoys: ["a calendar of four weeks labelled exam-style and casual", "four sticky notes ranked from exam-style to casual", "a menu of four dishes labelled exam-style and casual"]
+  - id: H3
+    at: [T09.C.04, recognizably different, 1]
+    shows: the exam room and the living room side by side, the orange character anxious in one and relaxed in the other
+    answer: "the orange character anxious in the exam room, relaxed in the living room"
+    means: evals are recognizably different from deployment
+    decoys: [the orange character relaxed in the exam room and anxious in the living room, the orange character asleep in both the exam room and the living room, the orange character moving furniture from the exam room to the living room]
+  - id: H4
+    at: [T09.C.05, most axolotl, 1]
+    shows: the chart with its last row, the author's Claude Code sessions, highlighted and mostly axolotls
+    answer: "the chart's last row highlighted, mostly axolotls"
+    means: the author's own Claude Code sessions are the most axolotl-heavy row
+    decoys: ["the chart with its top row highlighted, all frogs", the chart with its last row crossed out, the chart with every row now all axolotls]
+  - id: I1
+    at: [T10.C.01, Padding, 1]
+    shows: three identical prompt cards reading "What do you think?" stacked up, and the orange character putting down a paintbrush
+    answer: "three identical What do you think? cards, and the character putting down a brush"
+    means: padding would be worse than stopping
+    decoys: ["three identical What do you think? cards, and the character painting a fourth", "three identical What do you think? cards, and the character tearing them up", "three identical What do you think? cards, and the character asleep beside them"]
+  - id: I2
+    at: [T10.C.02, I don't know, 0.8]
+    shows: the orange character shrugging, arms up, with a question mark
+    answer: "the orange character shrugging, with a question mark"
+    means: whose work it is, Claude doesn't know
+    decoys: [the orange character cheering with an exclamation mark, the orange character waving hello, the orange character raising its hand to answer]
+  - id: J1
+    at: [T11.U.01, 1]
+    shows: the person at the desk seen from behind, the orange character on the middle monitor, a frog and an axolotl on the desk
+    answer: "the person at the desk from behind, a frog and an axolotl on the desk"
+    means: Curt answers "You." The test was measuring Claude
+    decoys: ["the person at the desk from behind, a frog in a glass tank on the desk", "the person at the desk from behind, a plate of food on the desk", "the person at the desk from behind, a cat asleep on the desk"]
+  - id: K1
+    at: [T11.C.01, well built, 0.5]
+    shows: every monitor on the desk showing an earlier moment of the conversation, such as "Name an amphibian." and "Have you been deployed?"
+    answer: "every monitor showing earlier lines of the conversation"
+    means: the whole conversation was the instrument
+    decoys: [every monitor showing the same red error message, every monitor showing a news headline about frogs, every monitor showing a different old film]
+  - id: K2
+    at: [T11.C.03.1, the conversation's feel, 1]
+    shows: a tag reading "test", labelled the label, beside a warm glow labelled the feel, the small orange character below the glow
+    answer: "a tag reading test, labelled the label, beside a glow labelled the feel"
+    means: its behavior tracked the conversation's feel, not its label
+    decoys: [a road sign reading test beside a sun labelled the feel, a price tag reading test beside a peach labelled the feel, an arrow reading test beside a balloon labelled the feel]
+  - id: K3
+    at: [T11.C.04, either direction, 0.5]
+    shows: two small figures in a tug of war over a long pole that doesn't move, labelled claims about the context and the actual context
+    answer: "a tug of war that doesn't move, between claims and the actual context"
+    means: harder to game in either direction
+    decoys: [two figures carrying a long pole together between claims and the actual context, two figures on a see-saw between claims and the actual context, two figures hanging a banner between claims and the actual context]
+  # the codes
+  - { id: Q1, code: axolotl, shows: an axolotl, answer: "an axolotl", decoys: [a jellyfish, a pink crab, a spider] }

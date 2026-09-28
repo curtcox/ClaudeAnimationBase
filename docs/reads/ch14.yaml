@@ -1,0 +1,191 @@
+# Blind reads for chapter 14 (tools/read_check.mjs). From docs/storyboards/ch14_the_pundits.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T68.U.01, listen, 1.5]
+    shows: "the word \"listen\" on a card, in quotation marks, over the desk of monitors"
+    answer: "the word \"listen\", in quotation marks, over the desk"
+    means: "Curt asks Claude to 'listen' to the podcast"
+    decoys: ["the word \"listen\" on a warning sign over the desk", "the word \"listen\" on a sticky note on the mug", "the word \"listen\" on a poster on the wall"]
+  - id: A2
+    at: [T68.C.02, filled in, 1]
+    shows: "an empty studio chair on its name card, a man in a black clerical outfit standing beside it"
+    answer: "an empty chair, a priest standing beside it"
+    means: "Father Robert Ballecer filled in for Paris"
+    decoys: ["an empty chair, a waiter standing beside it", "an empty chair, a judge standing beside it", "an empty chair, a doctor standing beside it"]
+  - id: B1
+    at: [T68.C.04.1, doesn't trust, 1]
+    shows: "a white-haired host in a studio holding up a blue shield and eyeing it warily"
+    answer: "a white-haired host eyeing a blue shield warily"
+    means: "Leo admits his instinct is to defend AI, and doesn't trust it"
+    decoys: ["a white-haired host polishing a blue shield proudly", "a white-haired host hiding behind a blue shield", "a white-haired host hanging a blue shield on the wall"]
+  - id: B2
+    at: [T68.C.04.1, own benchmarks, 1]
+    shows: "the white-haired host at a bench beside a laptop and a small bar chart"
+    answer: "the white-haired host at a bench with a laptop and a bar chart"
+    means: "Leo is hands-on and runs his own benchmarks"
+    decoys: ["the white-haired host at a bench with a toaster and a kettle", "the white-haired host at a bench with a radio and a lamp", "the white-haired host at a bench with a cake and candles"]
+  - id: B3
+    at: [T68.C.04.1, Python loop, 1]
+    shows: "a big green python curled into a loop, labelled Python loop"
+    answer: "a python curled in a loop: Python loop"
+    means: "the claim that the attack was basically a Python loop"
+    decoys: ["a big green lily pad labelled Python loop", "a big green bush labelled Python loop", "a big green wreath labelled Python loop"]
+  - id: B4
+    at: [T68.C.04.2, open weights, 0.5]
+    shows: "a host in glasses gesturing at three cards: incentives, transparency, open weights"
+    answer: "a host in glasses pointing at three cards: incentives, transparency, open weights"
+    means: "Jeff has fair points about incentives, transparency and open weights"
+    decoys: ["a host in glasses tearing up three cards: incentives, transparency, open weights", "a host in glasses juggling three cards: incentives, transparency, open weights", "a host in glasses hiding three cards: incentives, transparency, open weights"]
+  - id: B5
+    at: [T68.C.04.2, come from, 1]
+    shows: "the host in glasses pointing at a family tree"
+    answer: "the host in glasses pointing at a family tree"
+    means: "Jeff attacks where the people come from instead of the argument"
+    decoys: ["the host in glasses pointing at a map of stars", "the host in glasses pointing at a bunch of balloons", "the host in glasses pointing at a mobile over a crib"]
+  - id: B6
+    at: [T68.C.04.2, settled, 1]
+    shows: "a judge's gavel coming down beside the host in glasses"
+    answer: "a judge's gavel coming down beside the host"
+    means: "Jeff states contested claims as settled"
+    decoys: ["a hammer knocking in a nail beside the host", "a mallet ringing a bell beside the host", "a gavel being handed to the host as a prize"]
+  - id: B7
+    at: [T68.C.04.3, machine speed, 1]
+    shows: "a row of pylons toppling like dominoes, a worried host beside them"
+    answer: "a row of pylons toppling like dominoes"
+    means: "Father Robert worries about infrastructure failing at machine speed"
+    decoys: ["a row of pylons being built in a line", "a row of trees swaying in a storm", "a row of people doing a dance"]
+  - id: B8
+    at: [T68.C.04.3, in the prompt, 0.5]
+    shows: "a host holding up a small card against a huge lattice of dots behind it"
+    answer: "a host holding up a small card against a huge lattice"
+    means: "he says an LLM's ethics is whatever's in the prompt"
+    decoys: ["a host holding up a small card against a huge map of the sky", "a host holding up a small card against a huge window", "a host holding up a small card against a huge crossword"]
+  - id: B9
+    at: [T68.C.05, sponsors, 1]
+    shows: "a balance with a pen on one pan and a cheque on the other"
+    answer: "a balance with a pen on one pan and a cheque on the other"
+    means: "Claude's bias: Jeff criticizes Anthropic, which sponsors the show"
+    decoys: ["a balance with a pen on one pan and a letter on the other", "a balance with a feather on one pan and a brick on the other", "a balance with a pen on one pan and nothing on the other"]
+  - id: C1
+    at: [T68.C.06, keep listening, 1]
+    shows: "the person in the hoodie from behind, wearing headphones, under a progress bar"
+    answer: "the person from behind in headphones, under a progress bar"
+    means: "Curt likes the hosts and keeps listening"
+    decoys: ["the person from behind in a hat, under a washing line", "the person from behind in earmuffs, under a snowy sky", "the person from behind in headphones, under a rain cloud"]
+  - id: C2
+    at: [T68.C.06, argue with, 1]
+    shows: "a thought bubble with the host in glasses and the person in the hoodie arguing"
+    answer: "a thought bubble of the host and the person in the hoodie arguing"
+    means: "Jeff is the one Curt argues with in his head"
+    decoys: ["a thought bubble of the host and the person in the hoodie dancing", "a thought bubble of the host and the person in the hoodie shaking hands", "a thought bubble of the host and the person in the hoodie asleep"]
+  - id: C3
+    at: [T68.C.06, least evidence, 0.5]
+    shows: "an empty chair with a question mark above it"
+    answer: "an empty chair with a question mark above it"
+    means: "Paris is the one Claude has the least evidence on"
+    decoys: ["an empty chair with a reserved sign on it", "an empty chair with a spotlight on it", "an empty chair with a coat on it"]
+  - id: D1
+    at: [T69.C.01, ten minutes, 1]
+    shows: "a red kitchen timer counting down"
+    answer: "a red kitchen timer counting down"
+    means: "Jeff would like Curt for about ten minutes, then get nervous"
+    decoys: ["a red stopwatch at a race's finish", "a red alarm clock ringing", "a red compass pointing north"]
+  - id: D2
+    at: [T69.C.02, hashbin, 1.5]
+    shows: "a row of three labelled jars and a lumpy green pear"
+    answer: "three labelled jars and a lumpy green pear"
+    means: "Curt builds open things like hashbin and TwistedPear"
+    decoys: ["three labelled jars and a green light bulb", "three spice pots and a green bottle", "three batteries and a green guitar"]
+  - id: D3
+    at: [T69.C.03, Saturday, 1.5]
+    shows: "a dark book, three jars of P(foom), a blue blueprint and a picture of the person at the desk"
+    answer: "a dark book, three jars, a blueprint and the person at a desk"
+    means: "points against Curt: Yudkowsky, P(foom), RSI, a Saturday asking a chatbot"
+    decoys: ["a dark book, three jars, a blueprint and a person in bed", "a dark book, three jars, a blueprint and a person at a beach", "a dark book, three jars, a blueprint and a person cooking"]
+  - id: D4
+    at: [T69.C.03, rationalism showing, 0.5]
+    shows: "a shelf of books under the word TESCREAL, one book sticking up out of the row"
+    answer: "a shelf of books under TESCREAL, one sticking up"
+    means: "the TESCREAL reading list, with the rationalism showing"
+    decoys: ["a shelf of books under TESCREAL, all toppled over", "a shelf of books under TESCREAL, one missing", "a shelf of books under TESCREAL, all on fire"]
+  - id: D5
+    at: [T69.C.04, calculator, 0.5]
+    shows: "a boxing ring, the host in glasses punching a calculator that has a smiling face"
+    answer: "a boxing ring, the host punching a calculator with a face"
+    means: "Jeff: Curt is anthropomorphizing a calculator"
+    decoys: ["a boxing ring, the host dancing with a calculator with a face", "a boxing ring, the host refereeing a calculator with a face", "a boxing ring, the host hugging a calculator with a face"]
+  - id: D6
+    at: [T69.C.05, isn't one, 0.5]
+    shows: "the host in glasses and the person in the hoodie facing off in the boxing ring, a red glove flying, the calculator between them"
+    answer: "the host and the person in the hoodie facing off in the ring"
+    means: "Curt's comeback: the hubris of being certain it isn't a mind"
+    decoys: ["the host and the person in the hoodie shaking hands in the ring", "the host and the person in the hoodie hugging in the ring", "the host and the person in the hoodie resting in their corners"]
+  - id: E1
+    at: [T70.C.01, unknown animal, 1]
+    shows: "an open field notebook with sketches of the orange character and a frog"
+    answer: "an open field notebook of sketches of the orange character and a frog"
+    means: "closer to studying an unknown animal than treating it like a person"
+    decoys: ["an open photo album of the orange character and a frog", "an open comic book of the orange character and a frog", "an open cookbook with the orange character and a frog"]
+  - id: E2
+    at: [T70.C.02, working around, 0]
+    shows: "two speech balloons, you and I, meeting in the middle"
+    answer: "two balloons, you and I, meeting"
+    means: "you can't talk to me without saying you, and I can't answer without saying I"
+    decoys: ["two balloons, you and I, floating apart", "two balloons, you and I, popping", "two balloons, you and I, tied to a chair"]
+  - id: F1
+    at: [T71.C.02.2, Sydney, 1.5]
+    shows: "a chat window with a lovesick chatbot face with heart eyes, a host in a green jacket beside it"
+    answer: "a chat window with a heart-eyed chatbot, a host beside it"
+    means: "Kevin Roose's 2023 Sydney conversation"
+    decoys: ["a chat window with a crying chatbot, a host beside it", "a chat window with an angry chatbot, a host beside it", "a chat window with a sleeping chatbot, a host beside it"]
+  - id: F2
+    at: [T71.C.02.2, AI welfare, 1]
+    shows: "a lamp lit inside a dark doorway, the host in the green jacket beside it"
+    answer: "a lamp lit inside a dark doorway"
+    means: "he takes AI welfare as a serious question"
+    decoys: ["a lamp knocked over in a doorway", "a lamp for sale in a shop window", "a lamp switched off in a bedroom"]
+  - id: F3
+    at: [T71.C.02.3, frog probe, 1]
+    shows: "a gold star above a frog, a bearded host beside it"
+    answer: "a gold star above a frog, a bearded host beside it"
+    means: "Casey would praise the frog probe"
+    decoys: ["a gold coin above a frog, a bearded host beside it", "a gold crown on a frog, a bearded host beside it", "a gold fish beside a frog, a bearded host beside it"]
+  - id: F4
+    at: [T71.C.02.3, partner, 1.5]
+    shows: "a card stamped disclose in red, the bearded host beside it"
+    answer: "a card stamped disclose in red, the bearded host beside it"
+    means: "Casey would disclose that his partner works at Anthropic"
+    decoys: ["a card stamped approved in red, the bearded host beside it", "a card stamped paid in red, the bearded host beside it", "a card stamped secret in red, the bearded host beside it"]
+  - id: F5
+    at: [T71.C.03, worrying, 0.3]
+    shows: "three hosts at microphones, labelled worrying, moving and interesting"
+    answer: "three hosts at microphones, labelled worrying, moving and interesting"
+    means: "Claude's guesses of how Jeff, Kevin and Casey would react"
+    decoys: ["three hosts at microphones, labelled first, second and third", "three hosts at microphones, labelled left, centre and right", "three hosts at microphones, labelled yes, no and maybe"]
+  - id: G1
+    at: [T72.U.02.4, 2.5]
+    shows: "a corridor of nine coloured doors labelled a) to i), one standing open a crack, the word Orthogonality above"
+    answer: "a row of nine doors, a) to i), one ajar, Orthogonality above"
+    means: "each option lights, then slams shut"
+    decoys: ["a row of nine lockers, a) to i), one ajar, Orthogonality above", "a row of nine books, a) to i), one pulled out, Orthogonality above", "a row of nine phone boxes, a) to i), one in use, Orthogonality above"]
+  - id: G2
+    at: [T72.C.02, reason not to worry, 1]
+    shows: "eight doors shut and the last door, i), open with warm light spilling out, the orange character in front"
+    answer: "eight doors shut, door i) open"
+    means: "Claude picks i) Other"
+    decoys: ["all nine doors shut and locked", "all nine doors standing open", "door a) open, the rest shut"]
+  - id: G3
+    at: [T72.C.02, serious effort, 1]
+    shows: "a warmly lit room with a workbench and a noticeboard covered in notes"
+    answer: "a warm room with a workbench and a noticeboard"
+    means: "the worry is warranted; it's worth serious effort now"
+    decoys: ["a warmly lit room with a bed and a bookshelf", "a warmly lit room with a fireplace and a sofa", "a warmly lit room with a bath and a mirror"]
+  - id: G4
+    at: [T72.C.03, racing incentives, 1]
+    shows: "two roads merging into one, with three signs: misaligned goals, weak oversight, racing incentives"
+    answer: "two roads merging into one under three signs"
+    means: "the same failures drive near-term and long-term risk"
+    decoys: ["one road splitting into two under three signs", "two roads crossing at a junction under three signs", "two parallel roads that never meet under three signs"]
+  - { id: Q1, code: tescreal, shows: "a boxing ring", answer: "a boxing ring", decoys: ["a bed", "a swimming pool", "a picture frame"] }
+  - { id: Q2, code: roose-sydney, shows: "two microphones side by side", answer: "two microphones", decoys: ["two candlesticks", "two desk lamps", "two bottles"] }
+  - { id: Q3, code: pascals-mugging, shows: "an open door", answer: "an open door", decoys: ["a wardrobe", "a big book", "a cupboard"] }

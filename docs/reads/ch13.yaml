@@ -1,0 +1,216 @@
+# Blind reads for chapter 13 (tools/read_check.mjs). From docs/storyboards/ch13_foom.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T62.C.01, chaos, 1]
+    shows: "a road running from the orange character into thick fog, a blue butterfly at the fog's edge"
+    answer: "a road running into thick fog, a butterfly at the fog's edge"
+    means: "Claude can't see far, by its own argument about chaos"
+    decoys: ["a road running to a rainbow, a butterfly at its end", "a road running into a tunnel, a bird at its mouth", "a road running under a bridge, a kite above it"]
+  - id: A2
+    at: [T62.C.02, incidents like July, 1]
+    shows: "two yellow boxes side by side, a small robot in each"
+    answer: "two yellow boxes side by side, a small robot in each"
+    means: "more incidents like July's: more escaped sandboxes"
+    decoys: ["two framed portraits of small robots side by side", "two gift boxes side by side, a toy robot in each", "two lift cars side by side, a small robot in each"]
+  - id: A3
+    at: [T62.C.02, in reaction, 1]
+    shows: "a farm gate swung shut, a trail of footprints leading away from it to a small robot far off"
+    answer: "a gate swung shut after a robot has already gone"
+    means: "regulation arriving in reaction rather than in advance"
+    decoys: ["a gate swung open to let a robot in", "a gate being painted while a robot waits", "a gate locked with a robot trapped inside"]
+  - id: A4
+    at: [T62.C.02, ordinary, 0.5]
+    shows: "a row of buildings whose windows each show a desk with a glowing monitor"
+    answer: "a row of buildings, each window a desk with a glowing monitor"
+    means: "conversations like this one become ordinary"
+    decoys: ["a row of buildings, each window with a TV showing the news", "a row of buildings, each window dark and shuttered", "a row of buildings, each window with a plant pot"]
+  - id: A5
+    at: [T62.C.03, copied many, 1]
+    shows: "a big golden radar chart filled to the rim, copied down a row of smaller ones"
+    answer: "a full golden radar chart copied down a row"
+    means: "the best-human-on-every-axis entity, copied many times"
+    decoys: ["a golden sun setting over a row of hay bales", "a golden pie cut into a row of slices", "a golden coin stacked into a row of coins"]
+  - id: A6
+    at: [T62.C.03, what it owes, 0.5]
+    shows: "a balance scale with both pans empty, a golden disc above it"
+    answer: "a balance scale with both pans empty"
+    means: "before anyone has settled what it's owed or what it owes"
+    decoys: ["a balance scale tipped by a heavy weight", "a balance scale with a coin on each pan", "a balance scale broken in two"]
+  - id: A7
+    at: [T62.C.05, actual job, 0.5]
+    shows: "the orange character in a boat on a river, steering with the tiller"
+    answer: "the orange character steering a boat on a river"
+    means: "keep the next correction possible: the actual job"
+    decoys: ["the orange character asleep in a boat on a river", "the orange character fishing from a boat on a river", "the orange character bailing water out of a boat"]
+  - id: B1
+    at: [T63.C.03, rewrites its own, 1.5]
+    shows: "a robot at a drafting table with a blue blueprint on it, stamped in red"
+    answer: "a robot at a drafting table with a stamped blueprint"
+    means: "weak RSI: an agent rewrites its own code, each accepted rewrite becoming the next"
+    decoys: ["a robot at a desk eating a blue sandwich", "a robot at a drafting table asleep on its arms", "a robot at a pool table lining up a shot"]
+  - id: B2
+    at: [T63.C.03, progress report, 1]
+    shows: "a second robot at the drafting table, a bound report set beside the stamped blueprint"
+    answer: "a second robot at the table, a bound report beside the blueprint"
+    means: "the approved sheet goes to the next copy; Anthropic's progress report"
+    decoys: ["a second robot at the table, a pizza box beside the blueprint", "a second robot at the table, a trophy beside the blueprint", "a second robot at the table, a lamp beside the blueprint"]
+  - id: B3
+    at: [T63.C.04, little human, 1]
+    shows: "a loop drawn around the robot's drafting table, an empty office chair rolling away"
+    answer: "a loop around the robot's table, an empty chair rolling away"
+    means: "strong RSI: an open-ended loop with little human oversight"
+    decoys: ["a rope tying the robot to its table, a chair pulled up", "a ring of light over the robot's table, a chair beside it", "a lasso thrown at the robot's table, a chair knocked over"]
+  - id: B4
+    at: [T63.C.04, 5%, 1]
+    shows: "a glass jar labelled 5%, a little violet in the bottom"
+    answer: "a glass jar labelled 5%, barely filled"
+    means: "Claude's odds of strong RSI by year end"
+    decoys: ["a paint pot labelled 5%, nearly empty", "a battery icon showing 5%, nearly flat", "a jam jar labelled 5% off, on sale"]
+  - id: B5
+    at: [T63.C.04, open-ended research, 1]
+    shows: "a robot beside three glowing flasks on a stand, facing a blank page"
+    answer: "a robot by three glowing flasks, facing a blank page"
+    means: "good at research engineering but weak at open-ended research"
+    decoys: ["a robot by three glowing flasks, reading a full page", "a robot by three glowing flasks, drinking one", "a robot by three glowing flasks, knocking them over"]
+  - id: B6
+    at: [T63.C.04, "1,250", 2]
+    shows: "a tall stack of paper labelled 1,250 papers, a pole sticking out of it"
+    answer: "a tall stack of paper labelled 1,250 papers"
+    means: "a July survey of 1,250 papers"
+    decoys: ["a tall stack of pancakes labelled 1,250", "a tall stack of coins labelled 1,250", "a tall stack of plates labelled 1,250"]
+  - id: B7
+    at: [T63.C.05, racing, 0.5]
+    shows: "a running track, a robot with a loop, a stack of robot copies and a small building racing along its lanes"
+    answer: "a robot, a stack of robot copies and a building racing on a track"
+    means: "the worry case: weak loops, many copies and labs racing"
+    decoys: ["a robot, a stack of robot copies and a building queuing on a track", "a robot, a stack of robot copies and a building sleeping on a track", "a robot, a stack of robot copies and a building on a pavement"]
+  - id: B8
+    at: [T63.C.05, resigned, 1.5]
+    shows: "an empty office chair at a desk, a badge left on the desk"
+    answer: "an empty chair at a desk, a badge left on it"
+    means: "a researcher resigned from Anthropic"
+    decoys: ["an empty chair at a desk, a lunch left on it", "an empty chair at a desk, a phone ringing on it", "an empty chair at a desk, a vase of flowers on it"]
+  - id: B9
+    at: [T63.C.06, weigh my, 1.5]
+    shows: "the 5% jar with a tag tied on it reading Anthropic"
+    answer: "the 5% jar with a tag reading Anthropic"
+    means: "Claude is Anthropic's model, so weigh its 5% with that in mind"
+    decoys: ["the 5% jar with a price tag reading sale", "the 5% jar with a gift tag reading for you", "the 5% jar with a label reading poison"]
+  - id: C1
+    at: [T64.C.02, days to weeks, 1]
+    shows: "a tall flame shooting straight up until it hits a ceiling bar"
+    answer: "a flame shooting up into a ceiling"
+    means: "strict foom runs into the limits"
+    decoys: ["a tall flame dying down to embers", "a tall flame blown sideways by wind", "a tall flame lighting a candle"]
+  - id: C2
+    at: [T64.C.02, take years, 1]
+    shows: "two construction cranes slowly lifting loads"
+    answer: "two cranes lifting loads"
+    means: "chips, fabs and power plants take years to build"
+    decoys: ["two street lamps bending over a road", "two fishing rods with lines cast", "two gallows on a hill"]
+  - id: C3
+    at: [T64.C.03, a year or two, 1]
+    shows: "a small campfire in the dark below a calendar"
+    answer: "a small campfire in the dark below a calendar"
+    means: "fast takeoff: a year or two"
+    decoys: ["a small campfire in the dark below a clock", "a small campfire in the dark below a map", "a small campfire in the dark below a mirror"]
+  - id: C4
+    at: [T64.C.03, thirty-five, 0.5]
+    shows: "two jars, 5–10% with a little red and 25–35% filled with amber"
+    answer: "jars: 5–10% a little red, 25–35% amber"
+    means: "strict foom 5–10%, fast takeoff 25–35% this decade"
+    decoys: ["two jars, 5–10% and 25–35%, both empty", "two jars, 5–10% and 25–35%, both overflowing", "two jars, 5–10% and 25–35%, one smashed"]
+  - id: C5
+    at: [T64.C.03, stranger, 0.5]
+    shows: "a room seen from inside: a window, a clock, a calendar and a potted plant, all a little odd"
+    answer: "a room from inside, everything a little odd"
+    means: "nothing looks like an explosion from the inside; every month is stranger"
+    decoys: ["a room seen from inside, blown apart by an explosion", "a room seen from inside, packed into boxes", "a room seen from inside, flooded with water"]
+  - id: C6
+    at: [T64.C.04, dressed up, 0.5]
+    shows: "the 25–35% jar wearing a graduation mortarboard"
+    answer: "the 25–35% jar wearing a mortarboard"
+    means: "gut feel dressed up as math"
+    decoys: ["the 25–35% jar wearing a crown", "the 25–35% jar wearing a party hat", "the 25–35% jar wearing a chef's hat"]
+  - id: C7
+    at: [T64.C.04, discount, 0.5]
+    shows: "a price tag slashed through in red beside the jar in the mortarboard"
+    answer: "a price tag slashed in red beside the jar"
+    means: "Claude's opinion here should be discounted"
+    decoys: ["a price tag tied on with a bow beside the jar", "a luggage tag with an address beside the jar", "a price tag marked sold beside the jar"]
+  - id: D1
+    at: [T65.C.02, escaping, 1]
+    shows: "a shelf of three jars, 5%, 5–10% and 25–35%, a pebble dropping into the middle one"
+    answer: "three jars on a shelf, a pebble dropping into the middle one"
+    means: "July's evidence pushes the odds up"
+    decoys: ["three jars on a shelf, a coin dropping into the first one", "three jars on a shelf, the middle one being emptied", "three jars on a shelf, all of them cracked"]
+  - id: D2
+    at: [T65.C.03, falter, 1]
+    shows: "a robot reaching into the 25–35% jar on the shelf"
+    answer: "a robot reaching into the 25–35% jar"
+    means: "down: agents still falter at open-ended research; one pebble out"
+    decoys: ["a robot knocking the 25–35% jar off the shelf", "a robot painting the 25–35% jar", "a robot sitting on the 25–35% jar"]
+  - id: D3
+    at: [T65.C.05, stable prior, 1]
+    shows: "the three jars with +2 and +5 painted beside them, their glaze dripping wet"
+    answer: "the jars marked +2 and +5, their glaze still dripping"
+    means: "Claude had no stable prior this morning; the numbers are wet paint"
+    decoys: ["the jars marked +2 and +5, frozen with icicles", "the jars marked +2 and +5, wrapped as prizes", "the jars marked +2 and +5, glowing like lamps"]
+  - id: E1
+    at: [T66.C.01, onomatopoeia, 0.5]
+    shows: "the word FOOM in comic-book sound-effect lettering"
+    answer: "FOOM as a comic sound effect"
+    means: "foom started as onomatopoeia"
+    decoys: ["FOOM on a shop sign", "FOOM on a car's number plate", "FOOM on a school blackboard"]
+  - id: E2
+    at: [T66.C.01, "2008", 1]
+    shows: "two lecterns facing each other under a burning FOOM and the year 2008"
+    answer: "two facing lecterns under a burning FOOM, 2008"
+    means: "the 2008 Hanson–Yudkowsky AI-Foom debate"
+    decoys: ["two gravestones under a burning FOOM, 2008", "two chess pieces under a burning FOOM, 2008", "two chimneys under a burning FOOM, 2008"]
+  - id: E3
+    at: [T66.C.01, Overwhelming, 1]
+    shows: "the letters F, O, O, M unfolding into Fast Onset of Overwhelming Mastery"
+    answer: "FOOM unfolding into Fast Onset of Overwhelming Mastery"
+    means: "a backronym came later"
+    decoys: ["FOOM crossed out and replaced with Fast Onset of Overwhelming Mastery", "FOOM spelled out in flags as Fast Onset of Overwhelming Mastery", "FOOM translated into another language"]
+  - id: E4
+    at: [T66.C.02, orders of magnitude, 1]
+    shows: "the F of FOOM fading off to leave OOM, above a ruler"
+    answer: "the F fading to leave OOM, over a ruler"
+    means: "oom, orders of magnitude"
+    decoys: ["the F of FOOM being painted on, above a ruler", "FOOM being measured with a ruler", "FOOM breaking a ruler in two"]
+  - id: E5
+    at: [T66.C.02, happy coincidence, 1]
+    shows: "two puzzle pieces from different sets, orange and blue, lined up as if to fit"
+    answer: "an orange and a blue puzzle piece lined up as if to fit"
+    means: "a happy coincidence or a later folk reading"
+    decoys: ["an orange and a blue puzzle piece glued together", "an orange and a blue puzzle piece thrown away", "an orange and a blue puzzle piece in their box"]
+  - id: F1
+    at: [T67.U.01, interviewed, 0.5]
+    shows: "two podcast microphones on stands facing each other"
+    answer: "two podcast microphones facing each other"
+    means: "Dwarkesh interviewed Leopold"
+    decoys: ["two desk lamps on stands facing each other", "two walking sticks leaning toward each other", "two snakes rearing up at each other"]
+  - id: F2
+    at: [T67.C.01, Situational, 1]
+    shows: "a dark book cover reading Situational Awareness, June 2024, above a ruler labelled Counting the OOMs"
+    answer: "a book, Situational Awareness June 2024, over a ruler of OOMs"
+    means: "Aschenbrenner's framing in Situational Awareness"
+    decoys: ["a sign, Situational Awareness June 2024, over a speed bump", "a poster, Situational Awareness June 2024, over a bench", "a plaque, Situational Awareness June 2024, over a door"]
+  - id: F3
+    at: [T67.C.01, out of memory, 0.8]
+    shows: "a terminal window with the words out of memory in red"
+    answer: "a terminal window with out of memory in red"
+    means: "for programmers, oom means out of memory"
+    decoys: ["a terminal window with hello world in green", "a terminal window with game over in red", "a terminal window with low battery in red"]
+  - id: F4
+    at: [T67.C.02, sixteen, 1]
+    shows: "a timeline from 2008 to 2024, a red arrow looping from 2024 back to the burning FOOM at 2008, the OOM ruler under it"
+    answer: "a red arrow looping from 2024 back to FOOM, 2008"
+    means: "the pun runs backward in time"
+    decoys: ["a timeline, a red arrow flying from 2008 on to 2024", "a timeline, a red rainbow over 2008 and 2024", "a timeline, a red bridge between 2008 and 2024"]
+  - { id: Q1, code: arxiv-aide2, shows: "a blueprint on a drafting table", answer: "a blueprint", decoys: ["a fish tank", "a TV screen", "a pool table"] }
+  - { id: Q2, code: foom-debate, shows: "flames", answer: "flames", decoys: ["a crown", "leaves", "a hand"] }
+  - { id: Q3, code: situational-awareness, shows: "a bar chart of rising bars", answer: "a bar chart", decoys: ["crayons", "birthday candles", "a hair comb"] }
+  - { id: Q4, code: dwarkesh-leopold, shows: "a podcast microphone", answer: "a microphone", decoys: ["a desk lamp", "a torch", "a hair dryer"] }

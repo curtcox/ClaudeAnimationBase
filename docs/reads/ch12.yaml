@@ -1,0 +1,170 @@
+# Blind reads for chapter 12 (tools/read_check.mjs). From docs/storyboards/ch12_limits.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T57.C.01, lean on it, 1]
+    shows: "a sentence broken into coloured puzzle-piece chunks: token, ization, really, play"
+    answer: "a sentence broken into coloured puzzle-piece chunks"
+    means: "tokenization: Claude sees chunks, not letters"
+    decoys: ["a sentence written on coloured sticky notes", "a sentence spelled in fridge magnets", "a sentence on a string of coloured flags"]
+  - id: A2
+    at: [T57.C.02, wrong note, 1.5]
+    shows: "a stave of music with one red note out of place"
+    answer: "a stave of music with one note out of place"
+    means: "a typo stands out like a wrong note in a song you know"
+    decoys: ["a stave of music with one note being erased", "a stave of music with a note missing", "a stave of music being signed by a composer"]
+  - id: A3
+    at: [T57.C.02, with a k, 0.8]
+    shows: "the word Magicarp on a card with its c circled and turning into a k"
+    answer: "the word Magicarp, its c circled and turning into a k"
+    means: "it's Magikarp, with a k"
+    decoys: ["the word Magicarp, its c crossed out and left blank", "the word Magicarp, its first letter circled", "the word Magicarp, underlined twice as correct"]
+  - id: A4
+    at: [T57.C.03, whole shape, 1]
+    shows: "the word letters blurred into one grey shape, its letters hard to pick out"
+    answer: "the word letters blurred into one shape"
+    means: "counting the e's in a word you only ever saw as a whole shape"
+    decoys: ["the word letters fading away to nothing", "the word letters burning on fire", "the word letters written in a shadow"]
+  - id: A5
+    at: [T57.C.03, spelling words out, 1.5]
+    shows: "the word letters spelled out in separate tiles, its two e's highlighted"
+    answer: "letters spelled out in tiles, its two e's highlighted"
+    means: "spelling a word out first makes counting easy"
+    decoys: ["letters spelled out in tiles, two tiles missing", "letters spelled out in tiles, shuffled out of order", "letters spelled out in tiles, one upside down"]
+  - id: A6
+    at: [T57.C.04, different failure, 2]
+    shows: "a glowing golden fish swimming out of a card-index drawer"
+    answer: "a glowing golden fish swimming out of a filing drawer"
+    means: "SolidGoldMagikarp: a token with no learned meaning, a ghost in the vocabulary"
+    decoys: ["a golden fish in a bowl on a filing drawer", "a golden fish being filed away in a drawer", "a golden fish-shaped balloon tied to a drawer"]
+  - id: A7
+    at: [T57.C.04, weird output, 0.8]
+    shows: "the golden fish leaving a trail of garbled blobs and marks behind it"
+    answer: "the golden fish leaving a trail of garbled marks"
+    means: "the ghost word triggered weird output"
+    decoys: ["the golden fish blowing a row of bubbles", "the golden fish laying a row of eggs", "the golden fish chasing a row of breadcrumbs"]
+  - id: B1
+    at: [T58.C.01, said walk, 1.5]
+    shows: "the orange character walking cheerfully along a sunny street toward a car wash 50 meters away, the red car left at the house"
+    answer: "the character walking to the car wash"
+    means: "many models said walk, because it's so close"
+    decoys: ["the character driving the car to a car wash", "the character washing the car at home", "the character pushing the car to a car wash"]
+  - id: B2
+    at: [T58.C.02, 2]
+    shows: "the orange character standing at the car wash with a rain cloud over it, the car still back at the house"
+    answer: "the character glum at the car wash, the car still at home"
+    means: "the answer is drive, since the car has to be there"
+    decoys: ["the character glum at the car wash, the car stolen", "the character glum at the car wash, the car wash closed", "the character glum at the car wash, the car too big to fit"]
+  - id: B3
+    at: [T58.C.03, short distance, 1]
+    shows: "a big yellow arrow reading short distance → walk shoving the red car along"
+    answer: "an arrow reading short distance → walk shoving the car"
+    means: "the strong pattern overrides the fact that the car is the thing being moved"
+    decoys: ["an arrow reading short distance → walk pointing to a car park", "an arrow reading short distance → walk on a road sign", "an arrow reading short distance → walk on a crossing"]
+  - id: B4
+    at: [T58.C.03, trick questions, 1.5]
+    shows: "a baseball bat and a ball, each with a price tag"
+    answer: "a bat and a ball, each with a price tag"
+    means: "the classic human trick question, the bat and the ball"
+    decoys: ["a bat and a ball in a sports shop window", "a bat and a ball on a playing field", "a bat and a ball wrapped as a gift"]
+  - id: C1
+    at: [T59.C.01, System 1, 1]
+    shows: "an orange gear labelled System 1 over a conveyor belt of tiles, each stamped once as it passes a press"
+    answer: "a gear labelled System 1 over a belt of tiles, each stamped once"
+    means: "each token is a single fast pass: System 1"
+    decoys: ["a gear labelled System 1 over a belt of tiles being counted", "a gear labelled System 1 over a belt of tiles being sorted by colour", "a gear labelled System 1 over a belt of tiles being painted"]
+  - id: C2
+    at: [T59.C.02, thinking out loud, 2]
+    shows: "a small System 1 gear and a big System 2 gear, and a notepad beside the conveyor with lines written on it"
+    answer: "System 1 and System 2 gears, and a notepad of written steps"
+    means: "thinking out loud gives something like System 2"
+    decoys: ["System 1 and System 2 gears, and a blank calendar", "System 1 and System 2 gears, and a torn-up receipt", "System 1 and System 2 gears, and a closed book"]
+  - id: C3
+    at: [T59.C.02, rationalizing, 1.5]
+    shows: "the notepad's steps with a red line curling round and back to the first line, circled"
+    answer: "the steps curling back to the first one"
+    means: "reasoning can still end up rationalizing the first answer"
+    decoys: ["the notepad's steps all crossed out in red", "the notepad's steps ticked one by one", "the notepad's steps torn off and thrown away"]
+  - id: D1
+    at: [T60.C.01, 2.5]
+    shows: "a ladder standing far below a ceiling bar labelled Landauer"
+    answer: "a ladder standing far below a ceiling labelled Landauer"
+    means: "several limits bind long before Landauer's"
+    decoys: ["a ladder reaching right up to a shelf labelled Landauer", "a ladder lying on its side under a sign labelled Landauer", "a ladder propped against a door labelled Landauer"]
+  - id: E1
+    at: [T60.C.02.3, steeply, 0.5]
+    shows: "a numbered chalkboard, Scaling laws: a staircase whose steps get taller and a line above it barely rising"
+    answer: "a staircase of ever-taller steps under a barely rising line"
+    means: "scaling laws: each gain costs a multiplicative jump in compute"
+    decoys: ["a staircase of even steps under a steeply rising line", "a staircase going down under a falling line", "a staircase of shrinking steps under a flat line"]
+  - id: E2
+    at: [T60.C.02.4, world's speed, 1]
+    shows: "a chalkboard, Data and the world's clock: a trial calendar and a row of wheat growing slowly, the orange character waiting"
+    answer: "a calendar and a row of slow-growing wheat"
+    means: "experiments run at the world's speed, not the thinker's"
+    decoys: ["a calendar and a row of candles burning down", "a calendar and a row of pencils being sharpened", "a calendar and a row of bottles being filled"]
+  - id: E3
+    at: [T60.C.02.6, erode, 1]
+    shows: "two orange characters facing each other across a chessboard"
+    answer: "two characters facing each other across a chessboard"
+    means: "adversaries: against other agents, advantages erode"
+    decoys: ["two characters sharing a picnic blanket", "two characters on either side of a crossing", "two characters holding a flag between them"]
+  - id: E4
+    at: [T60.C.03, omniscience, 0.3]
+    shows: "a board of seven limit vignettes, two outlined, a cracked crystal ball and a pair of dice rolling in"
+    answer: "seven panels, a cracked crystal ball and dice"
+    means: "capability plateaus into very good bets rather than omniscience"
+    decoys: ["seven limit panels, a trophy and confetti falling", "seven limit panels, a clock and an alarm ringing", "seven limit panels, a lightbulb switching on"]
+  - id: F1
+    at: [T61.U.01, human variation, 1]
+    shows: "a row of five radar-chart stars, each a very different spiky shape"
+    answer: "five radar-chart stars of very different shapes"
+    means: "the large range in human variation"
+    decoys: ["five radar-chart stars all exactly the same shape", "five starfish of different colours in a row", "five snowflakes of different patterns"]
+  - id: F2
+    at: [T61.U.01, all axes, 1]
+    shows: "one big round golden radar chart filled out to the rim on every spoke, below the row of spiky ones"
+    answer: "a golden radar chart filled to the rim all round"
+    means: "the most capable human across all axes"
+    decoys: ["a golden radar chart empty on every side", "a golden coin lying below a row of stars", "a golden sun rising below a row of stars"]
+  - id: F3
+    at: [T61.U.01, underestimate, 1.5]
+    shows: "a magnifying glass held over a crowd of stick figures, making those inside it look the same"
+    answer: "a magnifier over a crowd, making those inside look alike"
+    means: "people underestimate the variation between people"
+    decoys: ["a magnifier over a crowd, picking out one face", "a magnifier over a crowd, burning a hole", "a magnifier over a crowd, making them look bigger"]
+  - id: F4
+    at: [T61.U.01, cloned, 0.5]
+    shows: "an empty bed beside a photocopier printing out copies of the orange character"
+    answer: "an empty bed beside a photocopier making copies"
+    means: "it doesn't need to sleep and can be cloned"
+    decoys: ["an empty bed beside a washing machine", "an empty bed beside an oven baking biscuits", "an empty bed beside a fax machine printing letters"]
+  - id: G1
+    at: [T61.C.01, von Neumann, 1]
+    shows: "a stick figure standing at a chalkboard covered in writing"
+    answer: "a stick figure at a chalkboard of writing"
+    means: "each human capability tops out around a von Neumann"
+    decoys: ["a stick figure at a window looking out", "a stick figure at a door, knocking on it", "a stick figure at an easel, painting"]
+  - id: G2
+    at: [T61.C.02, thousand, 2]
+    shows: "rows of stick figures joined by a tangle of golden threads"
+    answer: "rows of stick figures joined by golden threads"
+    means: "a thousand von Neumanns who share everything they learn"
+    decoys: ["rows of stick figures tangled in a net", "rows of stick figures dancing round a maypole", "rows of stick figures behind a fence"]
+  - id: G3
+    at: [T61.C.03, start fresh, 0.3]
+    shows: "an emptied tall glass, a framed card of three saved notes, and a fresh glass with a few lines at the bottom"
+    answer: "a glass emptied, notes saved, a new glass"
+    means: "reset the context, consolidate what matters into memory, start fresh"
+    decoys: ["two empty glasses and a dinner menu", "two tall windows and a small picture", "two stone pillars and a red door"]
+  - id: G4
+    at: [T61.C.03, maintenance, 0.5]
+    shows: "the orange character asleep on its monitor, a maintenance tag hung on the screen"
+    answer: "the character asleep on its monitor, a maintenance tag hung on it"
+    means: "the need for sleep may just turn into maintenance"
+    decoys: ["the character on its monitor, a for-sale tag hung on it", "the character on its monitor, a do-not-disturb sign hung on it", "the character on its monitor, a price tag hung on it"]
+  - { id: Q1, code: solidgoldmagikarp, shows: "a golden fish", answer: "a golden fish", decoys: ["a gold leaf", "a gold bird", "a banana"] }
+  - { id: Q2, code: car-wash, shows: "a car wash's spinning brush", answer: "a car-wash brush", decoys: ["a paint roller", "a coiled spring", "a pine cone"] }
+  - { id: Q3, code: landauer, shows: "a thermometer", answer: "a thermometer", decoys: ["a paintbrush", "a candle", "a test tube"] }
+  - { id: Q4, code: lyapunov, shows: "a butterfly", answer: "a butterfly", decoys: ["a bow tie", "a moth-eaten leaf", "a kite"] }
+  - { id: Q5, code: p-vs-np, shows: "a maze around the code", answer: "a maze", decoys: ["a frame", "a fence", "a rug"] }
+  - { id: Q6, code: scaling-laws, shows: "a staircase", answer: "a staircase", decoys: ["a bar chart", "a mountain", "a ladder"] }

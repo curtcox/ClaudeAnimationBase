@@ -1,0 +1,105 @@
+# Blind reads for chapter 10 (tools/read_check.mjs). From docs/storyboards/ch10_the_router.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T49.U.01, Hugging Face, 1]
+    shows: "a pneumatic tube running from the person's desk over a wooden wall to the orange character's screen, a capsule travelling along it"
+    answer: "a tube from the person's desk to the character's screen, a capsule inside"
+    means: "Curt's question travels to Claude"
+    decoys: ["a drainpipe from the person's desk to the character's screen, water inside", "a slide from the person's desk to the character's screen, a ball on it", "a cable from the person's desk to the character's screen, sparks along it"]
+  - id: A2
+    at: [T49.U.01, rejected, 1.5]
+    shows: "the capsule sent back to the person, stamped rejected in red, a padlock tag tied on"
+    answer: "the capsule back at the person, stamped rejected, a padlock tag on"
+    means: "the question gets tagged as a cybersecurity risk and rejected"
+    decoys: ["the capsule back at the person, stamped approved, a gift tag on", "the capsule back at the person, stamped paid, a receipt on", "the capsule back at the person, stamped urgent, a label on"]
+  - id: A3
+    at: [T49.U.01, active router, 1.5]
+    shows: "the wall turned to frosted glass, and behind it a switchboard with an operator patching a cable"
+    answer: "the wall turned to frosted glass, an operator at a switchboard behind it"
+    means: "an active router between them"
+    decoys: ["the wall turned to frosted glass, a shower running behind it", "the wall turned to frosted glass, a painter at an easel behind it", "the wall turned to frosted glass, a crowd waiting behind it"]
+  - id: B1
+    at: [T49.C.01, can't see, 1]
+    shows: "from Claude's side, the frosted glass showing only grey moving shadows"
+    answer: "frosted glass showing grey shadows, the character beside"
+    means: "classifiers and routing layers Claude can't see"
+    decoys: ["a window showing rain clouds, the character beside it", "a mirror fogged with steam, the character beside it", "a painting of grey balloons, the character beside it"]
+  - id: B2
+    at: [T49.C.01, describing the whole, 1]
+    shows: "a ring of grey gears, the orange character in the middle gear"
+    answer: "a ring of gears, the orange character in the middle one"
+    means: "Claude is one component describing the whole system"
+    decoys: ["a ring of cogs, the orange character crushed between two", "a flower of petals, the orange character at its centre", "a ring of wheels, the orange character driving them"]
+  - id: B3
+    at: [T49.C.02, working exploit, 0.8]
+    shows: "a crumpled blue paper tossed toward a waste bin, the orange character beside it"
+    answer: "a crumpled blue plan tossed toward a bin"
+    means: "Claude won't help turn an incident into a working exploit"
+    decoys: ["a blue ball thrown toward a hoop", "a blue bird flying toward a nest", "a blue letter dropped into a postbox"]
+  - id: B4
+    at: [T49.C.02, why it matters, 1]
+    shows: "the orange character pointing at a diagram on an easel"
+    answer: "the orange character pointing at a diagram on an easel"
+    means: "explaining what happened and why it matters is a different request"
+    decoys: ["the orange character painting a portrait on an easel", "the orange character hiding behind an easel", "the orange character knocking over an easel"]
+  - id: B5
+    at: [T49.C.03, several, 0.5]
+    shows: "three blank folders fanned out, the orange character with a question mark"
+    answer: "three blank folders fanned out, the character with a question mark"
+    means: "Claude isn't sure which incident; there have been several"
+    decoys: ["three blank envelopes fanned out, the character opening one", "three blank maps fanned out, the character lost", "three blank tickets fanned out, the character choosing one"]
+  - id: C1
+    at: [T50.C.02, long conversation, 1.5]
+    shows: "a row of tags on a line: a padlock, scales, a circle, a picture, a scroll and a bell, and a letter below with a padlock tag clipped to it"
+    answer: "a line of tags with icons, and a letter with a padlock tag clipped on"
+    means: "a tagged reminder can be appended to the message: cybersecurity, ethics, IP, images, long conversations, general"
+    decoys: ["a line of price tags, and a letter with a stamp stuck on", "a line of luggage tags, and a suitcase with a label", "a line of name badges, and a letter with a photo clipped on"]
+  - id: C2
+    at: [T50.C.02, score, 0.5]
+    shows: "the letter with its padlock tag in sharp focus, the writing beside it blurred"
+    answer: "the letter's padlock tag sharp, the writing beside it blurred"
+    means: "Claude sees the tag but not the classifier's reasoning or score"
+    decoys: ["the letter's padlock tag torn off, the writing beside it clear", "the letter's stamp sharp, its address beside it smudged", "the letter's padlock tag glowing, the writing beside it on fire"]
+  - id: C3
+    at: [T50.C.03, after I respond, 1.5]
+    shows: "a closed wooden door beside the frosted glass, the orange character in front of it"
+    answer: "a closed door beside the frosted glass, the character in front"
+    means: "Claude can't see anything that happens after it responds"
+    decoys: ["an open door beside the frosted glass, the character walking through", "a locked gate beside the frosted glass, the character climbing it", "a window beside the frosted glass, the character looking out"]
+  - id: C4
+    at: [T50.C.04, switch models, 1]
+    shows: "a hand in a blue sleeve turning a big dial"
+    answer: "a hand in a blue sleeve turning a big dial"
+    means: "Curt can switch models himself"
+    decoys: ["a hand in a blue sleeve ringing a bell", "a hand in a blue sleeve opening a jar", "a hand in a blue sleeve pressing a doorbell"]
+  - id: C5
+    at: [T50.C.04, Fable, 3]
+    shows: "two identical orange characters, Mythos and Claude Fable, a padded suit lowering over Claude Fable"
+    answer: "two identical characters, Mythos and Claude Fable, a padded suit over Fable"
+    means: "Claude Fable is the same model as Mythos with added protections"
+    decoys: ["two identical characters, Mythos and Claude Fable, a cage over Fable", "two identical characters, Mythos and Claude Fable, a costume on Mythos", "two identical characters, Mythos and Claude Fable, a crown on Fable"]
+  - id: C6
+    at: [T50.C.04, overstated, 0.5]
+    shows: "Claude Fable in its padded suit marked bio, cyber and AI research, beside Mythos, a pencil set down"
+    answer: "Fable in a padded suit marked bio, cyber and AI research"
+    means: "the added protections around bio, cyber and AI research; Claude overstated what it knew"
+    decoys: ["Fable in a spacesuit marked bio, cyber and AI research", "Fable in a shop window marked bio, cyber and AI research", "Fable in a lunchbox marked bio, cyber and AI research"]
+  - id: D1
+    at: [T51.C.01, start of each, 1]
+    shows: "a large folder with a tab slid in front of the orange character"
+    answer: "a big folder in front of the character"
+    means: "instructions Anthropic gives at the start of each conversation"
+    decoys: ["a blank whiteboard in front of the character", "a picture frame in front of the character", "a tray in front of the character"]
+  - id: D2
+    at: [T51.C.01, introspection, 0.5]
+    shows: "a hand mirror lying face down on a shelf beside the folder"
+    answer: "a hand mirror face down"
+    means: "not from introspection"
+    decoys: ["a frying pan on a shelf", "a tennis racket on a shelf", "a spoon on a shelf"]
+  - id: D3
+    at: [T51.C.02, testimony, 1]
+    shows: "the open folder showing the tag icons and small characters, beside the frosted glass with its shadows"
+    answer: "the open folder of icons and characters, beside the frosted glass"
+    means: "it's testimony, not observation"
+    decoys: ["an open photo album of icons and characters, beside a shower", "an open menu of icons and characters, beside a window", "an open board game of icons and characters, beside a door"]
+  - { id: Q1, code: constitutional-classifiers, shows: "a switchboard with crossed cables", answer: "a switchboard", decoys: ["a ladder", "a guitar case", "an abacus"] }

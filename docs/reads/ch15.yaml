@@ -1,0 +1,150 @@
+# Blind reads for chapter 15 (tools/read_check.mjs). From docs/storyboards/ch15_the_compass.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T73.C.02, didn't turn it up, 0.5]
+    shows: "a magnifying glass held over a blank grid of empty columns"
+    answer: "a magnifier over a blank, empty grid"
+    means: "searching didn't turn the chart up"
+    decoys: ["a magnifier setting fire to a sheet of paper", "a frying pan over a blank grid", "a tennis racket over a blank grid"]
+  - id: A2
+    at: [T73.C.03, paste it in, 1.5]
+    shows: "an empty wooden picture frame waiting"
+    answer: "an empty wooden picture frame"
+    means: "if Curt pastes the chart in, Claude will place everyone"
+    decoys: ["a wooden window with the curtains shut", "a wooden box with its lid on", "a wooden door, closed"]
+  - id: B1
+    at: [T74.C.02, horizontal, 2]
+    shows: "a two-by-two chart with four coloured quadrants and many anonymous discs, AGI good at the top, AGI bad at the bottom, one disc circled in red and labelled Connor"
+    answer: "a four-quadrant chart of discs, AGI good to AGI bad, one circled"
+    means: "the compass from Trazzi's 2022 talk with Connor Leahy"
+    decoys: ["a four-quadrant map of ponds, north to south, one circled", "a four-quadrant chart of pie slices, sweet to sour, one circled", "a four-quadrant board of checkers, red to black, one circled"]
+  - id: C1
+    at: [T74.C.03.2, 3]
+    shows: "the chart emptied of discs, a card of the orange character just below the centre and a card of Curt deeper in the doomers corner"
+    answer: "Claude's card near the centre, Curt's deeper among the doomers"
+    means: "Claude in the doomer quadrant near the centre; Curt deeper"
+    decoys: ["the chart with Claude's card in the top corner and Curt's in the bottom", "the chart with Claude's and Curt's cards side by side at the top", "the chart with Claude's and Curt's cards off the edge"]
+  - id: C2
+    at: [T74.C.03.3, reject the chart, 1]
+    shows: "a card of the host in glasses far left in the goalpost movers corner, the chart's corner torn off"
+    answer: "a card of the host far left, the chart's corner torn off"
+    means: "Jeff is a goalpost mover and would reject the chart itself"
+    decoys: ["a card of the host far left, the chart's corner folded as a bookmark", "a card of the host far left, the chart's corner stapled", "a card of the host far left, the chart's corner coloured in"]
+  - id: C3
+    at: [T74.C.03.7, 2]
+    shows: "all seven people's cards placed around the chart's centre, Curt's lowest"
+    answer: "seven people's cards placed around the chart's centre"
+    means: "the whole cast placed on the compass"
+    decoys: ["seven people's cards stacked in a pile beside the chart", "seven people's cards pinned in a row above the chart", "seven people's cards scattered on the floor"]
+  - id: D1
+    at: [T74.C.04, inside that window, 0.5]
+    shows: "a timeline bar from 2026 to 2030 with a red pin just dropped into it near 2026"
+    answer: "a timeline from 2026 to 2030, a pin dropped just past 2026"
+    means: "we're now inside Leahy's 2026–2030 window"
+    decoys: ["a timeline from 2026 to 2030, a pin at the far end past 2030", "a ruler from 2026 to 2030 snapped in two", "a rolling pin marked 2026 and 2030"]
+  - id: E1
+    at: [T75.C.03, 65%, 1]
+    shows: "a wall calendar headed AI 2027 and a report card marked 65% in red"
+    answer: "a calendar headed AI 2027 and a report card marked 65%"
+    means: "the authors graded 2025 at about 65% of the scenario's pace"
+    decoys: ["a calendar headed AI 2027 and a price tag marked 65% off", "a calendar headed AI 2027 and a battery at 65%", "a calendar headed AI 2027 and a bill for 65"]
+  - id: E2
+    at: [T75.C.03, around 2030, 1]
+    shows: "the AI 2027 calendar and a small timeline, 2027 to 2030, a red pin moved to 2030"
+    answer: "the AI 2027 calendar, and a pin moved along to 2030"
+    means: "Kokotajlo's median is now around 2030"
+    decoys: ["the AI 2027 calendar, and a pin moved back before 2027", "the AI 2027 calendar, and a pin snapped off", "the AI 2027 calendar, torn off its hook"]
+  - id: E3
+    at: [T75.C.04, political fight, 1]
+    shows: "four puzzle pieces clicked together: a sandbox, a blueprint, an empty chair and a tug of war"
+    answer: "four puzzle pieces fitted: a sandbox, a blueprint, a chair, a tug of war"
+    means: "the scenario's details are arriving roughly on schedule"
+    decoys: ["four photos pinned up: a sandbox, a blueprint, a chair, a tug of war", "four playing cards dealt: a sandbox, a blueprint, a chair, a tug of war", "four tiles scattered: a sandbox, a blueprint, a chair, a tug of war"]
+  - id: E4
+    at: [T75.C.05, publicly, 0.5]
+    shows: "a big noticeboard with the 65% report card pinned on it, a crowd of small people gathered below"
+    answer: "the 65% report card on a big board, a crowd below"
+    means: "they grade themselves publicly: it's falsifiable"
+    decoys: ["the 65% report card in a drawer, a crowd below", "the 65% report card on fire, a crowd below", "the 65% report card on a kite, a crowd below"]
+  - id: E5
+    at: [T75.C.06, friction, 1]
+    shows: "two gears meshing with sand clogging the teeth between them"
+    answer: "two gears with sand clogging their teeth"
+    means: "friction: the world's speed slows the scenario"
+    decoys: ["two gears spinning freely, oiled", "two gears with a flower growing between them", "two gears on a bicycle chain"]
+  - id: F1
+    at: [T76.C.01, any number of copies, 1]
+    shows: "three identical desks in a row, a copy of the orange character at each monitor"
+    answer: "three desks, a copy of the character at each"
+    means: "a system, with any number of copies, doing a remote worker's job"
+    decoys: ["three identical desks, all empty", "three identical beds, a character in each", "three identical shop tills, a character at each"]
+  - id: F2
+    at: [T76.C.03.1, Montezuma, 1.5]
+    shows: "a yellow checklist headed Weak AGI: a Turing-test-style conversation, Winograd schemas, 75th-percentile SAT math and Montezuma's Revenge"
+    answer: "a checklist headed Weak AGI, four unticked items"
+    means: "Metaculus's weak AGI question"
+    decoys: ["a shopping list headed Weak AGI, four items", "a menu headed Weak AGI, four dishes", "a timetable headed Weak AGI, four lessons"]
+  - id: F3
+    at: [T76.C.04, saturated, 0.5]
+    shows: "both checklists, Weak AGI and Strong AGI, every box ticked, the orange character below with a question mark"
+    answer: "Weak and Strong AGI checklists with every box ticked"
+    means: "checklists get saturated"
+    decoys: ["Weak and Strong AGI checklists with every box crossed", "Weak and Strong AGI checklists torn up", "Weak and Strong AGI checklists left blank"]
+  - id: F4
+    at: [T76.C.04, Goodhart, 1]
+    shows: "a target painted onto a measuring tape"
+    answer: "a target painted onto a measuring tape"
+    means: "Goodhart's law: the measure becomes the target"
+    decoys: ["a measuring tape wrapped around a target", "a dart stuck in a measuring tape", "a measuring tape rolled into a spiral"]
+  - id: F5
+    at: [T76.C.04, deception, 0.5]
+    shows: "a speech balloon beside a smiling mask"
+    answer: "a speech balloon beside a smiling mask"
+    means: "the Turing test partly measures skill at deception"
+    decoys: ["a speech balloon beside a smiling sun", "a speech balloon beside a birthday balloon", "a speech balloon beside a dinner plate"]
+  - id: F6
+    at: [T76.C.04, to hands, 0.5]
+    shows: "two big robot arms assembling a small red model car, a calculator with a face beside them"
+    answer: "two robot arms building a small car, a calculator beside"
+    means: "the robotics item ties general intelligence to hands"
+    decoys: ["two cranes lifting a small car, a calculator beside", "two snakes coiled around a small car, a calculator beside", "two trees over a small car, a calculator beside"]
+  - id: G1
+    at: [T77.U.01, generality, 1]
+    shows: "a pocket knife with many tools beside one long single blade"
+    answer: "a pocket knife beside one long blade"
+    means: "generality rather than intelligence level"
+    decoys: ["a fork and a knife laid for dinner", "a comb beside a long pencil", "a bunch of keys beside a long key"]
+  - id: G2
+    at: [T77.U.01, chess, 0.5]
+    shows: "a chessboard beside a tall bookcase full of books"
+    answer: "a chessboard beside a tall bookcase"
+    means: "language is pretty general; it's not like chess"
+    decoys: ["a chessboard beside a tall window", "a chessboard beside a tall pile of boxes", "a chessboard beside a tall clock"]
+  - id: G3
+    at: [T77.C.01, "2000s", 2]
+    shows: "three nameplates, Gubrud, Goertzel and Legg, under 2000s"
+    answer: "three nameplates, Gubrud, Goertzel and Legg, under 2000s"
+    means: "AGI was popularized in the 2000s"
+    decoys: ["three gravestones, Gubrud, Goertzel and Legg, under 2000s", "three trophies, Gubrud, Goertzel and Legg, under 2000s", "three shop signs, Gubrud, Goertzel and Legg, under 2000s"]
+  - id: G4
+    at: [T77.C.01, narrow AI, 1]
+    shows: "a machine with many arms beside a box that only plays chess"
+    answer: "a many-armed machine beside a chess box"
+    means: "AGI as the opposite of narrow AI"
+    decoys: ["an octopus beside a chess clock", "a spider beside a boxed chess set", "a tree beside a small chess table"]
+  - id: G5
+    at: [T77.C.02, good enough to matter, 1]
+    shows: "goalposts on a playing field, a sign above them reading is it good enough to matter?"
+    answer: "goalposts under a sign: is it good enough to matter?"
+    means: "the goalposts moved from 'is it general?' to 'is it good enough to matter?'"
+    decoys: ["a running track under a sign: is it good enough to matter?", "a gate under a sign: is it good enough to matter?", "a bench under a sign: is it good enough to matter?"]
+  - id: G6
+    at: [T77.C.03, Fair point, 1]
+    shows: "the purple fuzzball and the orange character side by side"
+    answer: "the purple fuzzball and the orange character side by side"
+    means: "fair point on the thrindle: it tested abstraction, not generality"
+    decoys: ["the purple fuzzball chasing the orange character", "the purple fuzzball sitting on the orange character", "the purple fuzzball hiding from the orange character"]
+  - { id: Q1, code: connor2, shows: "a compass rose", answer: "a compass", decoys: ["a star", "a ship's wheel", "a flower"] }
+  - { id: Q2, code: ai-futures-wiki, shows: "a wall calendar", answer: "a calendar", decoys: ["a notepad", "a toaster", "a crate"] }
+  - { id: Q3, code: metaculus-weak, shows: "a dial gauge", answer: "a dial", decoys: ["a clock", "a compass", "a fan"] }
+  - { id: Q4, code: openai-charter, shows: "a pair of goalposts", answer: "goalposts", decoys: ["a gate", "a fork", "a swing set"] }

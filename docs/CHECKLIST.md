@@ -18,7 +18,8 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [x] Do a careful pass on the comic page's caricatures in the cold open.
 - [x] A blind-read check (`npm run reads -- --chapter=N`, key in `docs/reads/`): chapter 9 done, 4 frames flagged and 10 worth a look.
 - [x] Fix chapter 9's flagged reads: none flagged and 5 worth a look (down from 6 and 9 under the stricter test). The lobster-shell code was redrawn in Still QR as a whole lobster. One of the 5 is chapter 9's figure for Curt, which readers doubt is a man; it waits on your decision about your look.
-- [ ] Write read keys for the other chapters and run them.
+- [x] Write read keys for the other chapters: 437 reads across all 17 chapters (`--check` validates a key without rendering).
+- [ ] Run the blind reads for chapters 0–8 and 10–16, and fix what they flag.
 
 ## Voices (phase 3)
 - [ ] Pick 3 stock ElevenLabs voices each for Curt and Claude and read a 10-line sampler.

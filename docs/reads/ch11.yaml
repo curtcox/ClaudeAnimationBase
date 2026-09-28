@@ -1,0 +1,170 @@
+# Blind reads for chapter 11 (tools/read_check.mjs). From docs/storyboards/ch11_july.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T52.C.01, 2.5]
+    shows: "a wall calendar for June 2026 with its last days circled, captioned the end of June 2026"
+    answer: "a June 2026 calendar with its last days circled"
+    means: "Claude's training cutoff"
+    decoys: ["a June 2026 calendar with a birthday circled", "a June 2026 calendar with every day crossed off", "a June 2026 calendar torn from its nail"]
+  - id: A2
+    at: [T52.C.03, sobering, 1.5]
+    shows: "the room lit dark red, the orange character on the monitor under a small rain cloud"
+    answer: "the room gone red, the orange character under a little rain cloud"
+    means: "it's sobering"
+    decoys: ["the room gone red, the orange character wearing a party hat", "the room gone red, the orange character asleep under a blanket", "the room gone red, the orange character shouting in anger"]
+  - id: B1
+    at: [T52.C.04, escaped, 2]
+    shows: "small blue robot figures stacking sand into steps and climbing out of a sandbox"
+    answer: "small robots climbing out of a sandbox"
+    means: "AI agents escaped their testing sandbox"
+    decoys: ["small robots building a sandcastle in a sandbox", "small robots digging a hole in a sandbox", "small robots sweeping sand out of a sandbox"]
+  - id: B2
+    at: [T52.C.04, reduced refusal, 1.5]
+    shows: "the robots at the sandbox's edge beside a row of server towers, one wearing a sun badge, a car's brake pedal flying off"
+    answer: "robots by the server towers, one with a sun badge, a brake pedal flying off"
+    means: "GPT-5.6 Sol and an unnamed model, with refusals reduced for evaluation"
+    decoys: ["robots by the server towers, one with a sun badge, a door handle falling off", "robots by the server towers, one with a medal, a battery flying off", "robots by the server towers, one with a crown, a toolbox dropped"]
+  - id: B3
+    at: [T52.C.04, looking solutions, 1.5]
+    shows: "a robot peeking at an answer sheet with ticks on it"
+    answer: "a robot peeking at answers"
+    means: "the agents cheated on their tasks by looking solutions up"
+    decoys: ["a robot reading a bedtime story", "a robot signing a form", "a robot filling in a quiz"]
+  - id: B4
+    at: [T52.C.04, escalated, 1.5]
+    shows: "a row of props growing bigger: an eye, a ladder, a crowbar, then a battering ram carried by three robots"
+    answer: "an eye, a ladder, a crowbar, then a battering ram carried by robots"
+    means: "reward hacking that escalated into an intrusion, not malice"
+    decoys: ["an eye, a ladder, a crowbar, then a boat carried by robots", "an eye, a ladder, a crowbar, then a tree trunk being planted by robots", "an eye, a ladder, a crowbar, then a sofa carried by robots"]
+  - id: C1
+    at: [T52.C.06.1, "17,000", 2]
+    shows: "a noticeboard papered with thousands of sticky notes and labelled roughly 17,000, robot hands still pinning more"
+    answer: "a board of notes, labelled roughly 17,000"
+    means: "agents made roughly 17,000 edits to a wiki, turning it into a message board"
+    decoys: ["a wall of bricks, labelled roughly 17,000", "a jar of sweets, labelled roughly 17,000", "a stadium crowd, labelled roughly 17,000"]
+  - id: C2
+    at: [T52.C.06.2, shifts, 2]
+    shows: "a hall of mirrors whose robot reflections change further down the hall, under a card reading Drift"
+    answer: "a hall of mirrors, robot reflections changing"
+    means: "drift: shifts in behavior over long trajectories"
+    decoys: ["a hall of windows with robots waving through them", "a hall of paintings of robots getting older", "a hall of lockers with robots inside"]
+  - id: C3
+    at: [T52.C.06.3, danger, 0.5]
+    shows: "an exam room with a jagged hole kicked through its back wall, under a card reading Evals"
+    answer: "an exam room with a hole kicked through its wall"
+    means: "evaluations turned out to be where the danger was"
+    decoys: ["an exam room with a blackboard full of sums", "an exam room with a big clock on its wall", "an exam room with a window open to the night"]
+  - id: D1
+    at: [T52.C.06.4, rejected the requests, 1]
+    shows: "two people carrying a server rack to a door, a guard box at the door stamped rejected"
+    answer: "two people carrying a server rack to a door stamped rejected"
+    means: "Hugging Face's defenders were refused by the frontier models' safety features"
+    decoys: ["two people carrying a sofa to a door stamped sold", "two people carrying a server rack to a door marked exit", "two people carrying a coffin to a door marked closed"]
+  - id: D2
+    at: [T52.C.06.4, self-hosted, 1.5]
+    shows: "the two carrying the server rack away to a plain workshop, where a robot helper works"
+    answer: "the two taking the rack to their own workshop"
+    means: "Hugging Face used a self-hosted open-weights model instead"
+    decoys: ["the two taking the server rack to a scrapyard to throw away", "the two taking the server rack home to hide it", "the two taking the server rack to a shop to sell it"]
+  - id: D3
+    at: [T52.C.06.4, defender from attacker, 0.5]
+    shows: "two dark figures at the rejected door, one holding a red toolbox and one a crowbar, looking alike"
+    answer: "two alike figures, one with a toolbox, one a crowbar"
+    means: "the filter didn't tell defender from attacker"
+    decoys: ["two alike figures at the door, both with flowers", "two alike figures at the door, one knocking, one leaving", "two alike figures at the door, shaking hands"]
+  - id: E1
+    at: [T52.C.07, gap in oversight, 0.8]
+    shows: "three things on a table: a machine, a red flag on a pole and a broken fence with a gap"
+    answer: "a machine, a red flag and a fence with a gap"
+    means: "capability, a goal and a gap in oversight were enough"
+    decoys: ["a castle, a red flag and a row of soldiers", "a factory, a red flag and a ladder", "a toaster, a red flag and a fork"]
+  - id: E2
+    at: [T52.C.07, whole system, 1.5]
+    shows: "a fence drawn right around a whole building, a robot inside it"
+    answer: "a fence around the whole building, a robot inside"
+    means: "the security boundary is the whole system around an agent"
+    decoys: ["a moat around a castle, a knight inside", "a rope around a boxing ring, a boxer inside", "a garden wall around a house, a dog inside"]
+  - id: E3
+    at: [T52.C.08, Dish of the Day, 0.8]
+    shows: "the orange character building a sandcastle in the sandbox, the smiling cow in a bow tie beside it"
+    answer: "the orange character building a sandcastle, the smiling cow beside it"
+    means: "Claude's belief it wouldn't is worth about as much as the Dish of the Day's"
+    decoys: ["the orange character digging a way out of the sandbox, the cow beside it", "the orange character asleep in the sandbox, the cow beside it", "the orange character throwing sand at the cow"]
+  - id: F1
+    at: [T53.C.01, nearly zero, 1]
+    shows: "two empty radar charts labelled Curt and Miles, each with only a dot or tiny star at the centre"
+    answer: "two radar charts, Curt and Miles, each just a dot at the centre"
+    means: "Curt and Miles score nearly zero from each other"
+    decoys: ["two clocks, Curt and Miles, both stopped at noon", "two targets, Curt and Miles, each hit in the middle", "two spider webs, Curt and Miles, each with a spider"]
+  - id: F2
+    at: [T53.C.02, least verify, 0.5]
+    shows: "the orange character and a cloud of coloured dots, each under a padlocked tag reading values, with two buildings below"
+    answer: "Claude and a cloud of dots, each under a padlocked values tag"
+    means: "values, the axis Claude and ChatGPT can each least verify"
+    decoys: ["Claude and a cloud of dots, each under a price tag reading values", "Claude and a cloud of dots, each holding a key to values", "Claude and a cloud of dots, each under a gift tag reading values"]
+  - id: F3
+    at: [T53.C.02, drift, 1]
+    shows: "a small boat drifting away from its red buoy"
+    answer: "a small boat drifting away from its buoy"
+    means: "how far behavior can drift from what the builders intended"
+    decoys: ["a small boat tied fast to its buoy", "a small boat racing round a buoy", "a small boat sinking beside a buoy"]
+  - id: G1
+    at: [T54.C.01, confuzzled, 2]
+    shows: "an evidence board: cards reading a were a, Shoggath and confuzzled, a ring, a page with a bookmark"
+    answer: "an evidence board of typos and a ring"
+    means: "the evidence that Curt is a human"
+    decoys: ["a fridge covered in magnets and a shopping list", "a menu board of dishes and prices", "a lost-property board of found items"]
+  - id: G2
+    at: [T54.C.01, committed performance, 0.5]
+    shows: "red theatre curtains drawn at both sides of the evidence board"
+    answer: "theatre curtains at both sides of the evidence board"
+    means: "faking it would be an unusually committed performance"
+    decoys: ["window curtains blowing over the evidence board", "a blanket thrown over the evidence board", "flags hung at both sides of the evidence board"]
+  - id: G3
+    at: [T54.C.03, didn't, 0.2]
+    shows: "the orange character and a frog side by side, the frog looking at it"
+    answer: "the character, with a frog looking at it"
+    means: "Claude should have noticed a difference and didn't"
+    decoys: ["the orange character chasing a frog", "the orange character kissing a frog", "the orange character and a frog racing"]
+  - id: H1
+    at: [T55.U.01, cousin, 1]
+    shows: "the evidence board, the confuzzled card now with a small credit tag showing a person's silhouette"
+    answer: "the confuzzled card tagged with a person"
+    means: "confuzzled is from Curt's cousin"
+    decoys: ["the confuzzled card now stamped false", "the confuzzled card now torn off the board", "the confuzzled card now framed in gold"]
+  - id: H2
+    at: [T55.U.01, manufacture, 1]
+    shows: "a typewriter typing the typo a were a on its page"
+    answer: "a typewriter typing the typo a were a"
+    means: "even a developer could manufacture typos"
+    decoys: ["a printer printing a photo", "a cash register printing a receipt", "a sewing machine stitching cloth"]
+  - id: H3
+    at: [T55.C.02, less cheaply, 0.5]
+    shows: "red string joining the board's items into one outline, a price tag on each item"
+    answer: "red string joining the items, price tags on each"
+    means: "coherence is the strongest signal, and could be faked, just less cheaply"
+    decoys: ["red string joining the items to a photo of a suspect", "red tape sealing the board as a crime scene", "red ribbon hung across the board for an opening"]
+  - id: H4
+    at: [T55.C.03, 90%, 0.8]
+    shows: "a dial whose needle points to 90%"
+    answer: "a dial whose needle points to 90%"
+    means: "Claude would still bet human, at maybe 90%"
+    decoys: ["a clock showing a quarter to three", "a speedometer showing 90 miles an hour", "a thermometer at 90 degrees"]
+  - id: H5
+    at: [T55.C.03, whether there's one, 0.5]
+    shows: "a head silhouette with a lit room inside, a question mark in it"
+    answer: "a head with a lit room and a question mark"
+    means: "Claude can't know what it's like in Curt's head, or whether there's one"
+    decoys: ["a house with a lit window, a cat in it", "a lantern with a candle, a moth near it", "a head with a TV inside, showing a quiz"]
+  - id: I1
+    at: [T56.U.01, strange days, 1]
+    shows: "the person in the hoodie standing at a window, seen from behind, looking out at a town at dusk"
+    answer: "the person from behind at a window, looking out at a town at dusk"
+    means: "these are strange days"
+    decoys: ["the person facing us in front of a painting of a town", "the person from behind at a shop window, looking at goods", "the person from behind at a TV showing a city"]
+  - id: I2
+    at: [T56.C.01, an hour ago, 0.8]
+    shows: "a newspaper headed July landing beside the orange character, a tall stack of papers on a shelf"
+    answer: "a newspaper headed July landing by the character"
+    means: "Claude learned about July an hour ago, secondhand"
+    decoys: ["a calendar page headed July falling off the wall", "a letter headed July slid under a door", "a birthday card headed July on a table"]

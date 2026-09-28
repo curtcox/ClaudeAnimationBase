@@ -1,0 +1,48 @@
+# Blind reads for chapter 16 (tools/read_check.mjs). From docs/storyboards/ch16_coda.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T78.U.01, nerd sniping, 0.8]
+    shows: "a stick figure standing frozen in the middle of a road, looking at a puzzle on a sign, a red lorry coming"
+    answer: "a stick figure frozen mid-road by a puzzle sign"
+    means: "nerd sniping (xkcd #356)"
+    decoys: ["a stick figure waving down a lorry on a road", "a stick figure crossing a road at a zebra crossing", "a stick figure hitching a ride by a road sign"]
+  - id: B1
+    at: [T78.C.01, comic, 1]
+    shows: "the comic page from the start, small, with the question \"How does this image make you feel?\" below it"
+    answer: "the opening comic, small, over How does this image make you feel?"
+    means: "Curt opened with a comic and a feelings question"
+    decoys: ["a newspaper, small, over How does this image make you feel?", "a family photo, small, over How does this image make you feel?", "a film poster, small, over How does this image make you feel?"]
+  - id: B2
+    at: [T78.C.01, queens, 0.5]
+    shows: "a clock and three cards, frogs, foom and Formic queens, the orange character trotting along below"
+    answer: "a clock and three cards, frogs, foom and Formic queens"
+    means: "six hours chasing it through frogs, foom and Formic queens"
+    decoys: ["a clock and three menu cards: frogs, foom and Formic queens", "a clock and three tickets: frogs, foom and Formic queens", "a clock and three prize ribbons: frogs, foom and Formic queens"]
+  - id: C1
+    at: [T78.C.02, 1.8]
+    shows: "the orange character on the monitor wearing dark sunglasses, giving a thumbs-up"
+    answer: "the orange character in sunglasses, giving a thumbs-up"
+    means: "I'll be back, with footnotes (the Terminator's line)"
+    decoys: ["the orange character in sunglasses, asleep", "the orange character in sunglasses, crying", "the orange character in sunglasses, waving goodbye"]
+    tone:
+      ask: How does the orange character come across here?
+      want: cool and playful
+      decoys: [menacing, sad, confused]
+  - id: D1
+    at: [T78.C.02, 12]
+    shows: "hundreds of small code cards raining down and tiling a wall over the desk"
+    answer: "hundreds of code cards raining into a wall"
+    means: "the footnotes rain in: every code in the film"
+    decoys: ["hundreds of sticky notes blowing off a wall", "hundreds of photos pinned up on a wall", "hundreds of tiles falling off a wall"]
+  - id: E1
+    at: [T78.C.02, 40]
+    shows: "a comic page of panels from the film, beside one large code card captioned Every link in this film"
+    answer: "a comic page of scenes from the film, beside one big code: Every link in this film"
+    means: "the ending rhymes with the opening; one link holds all the others"
+    decoys: ["a sheet of stamps, beside one big code: Every link in this film", "a photo album of holidays, beside one big code: Every link in this film", "a calendar of months, beside one big code: Every link in this film"]
+  - id: E2
+    at: [T78.C.02, 58]
+    shows: "a wall of hundreds of small codes with one big code in the middle captioned Every link in this film"
+    answer: "a wall of small codes round one big code"
+    means: "the QR wall and the companion page"
+    decoys: ["a wall of small tiles around one big mirror", "a wall of small windows around one big door", "a wall of small stamps around one big envelope"]

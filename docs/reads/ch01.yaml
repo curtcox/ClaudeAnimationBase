@@ -1,0 +1,187 @@
+# Blind reads for chapter 1 (tools/read_check.mjs). From docs/storyboards/ch01_wrong_movie.md. The fields are as in ch09.yaml.
+reads:
+  - id: A1
+    at: [T01.C.02, Conquest, 1.5]
+    shows: a desk of monitors, one showing a poster of an ape's silhouette raising a fist against a red sky
+    answer: "a desk of monitors, one with a poster of an ape raising a fist on red"
+    means: Conquest of the Planet of the Apes (1972)
+    decoys: ["a desk of monitors, one with a photo of a gorilla in a zoo", "a desk of monitors, one with a cartoon monkey eating a banana", "a desk of monitors, one with a red warning sign"]
+  - id: A2
+    at: [T01.C.02, sheepish expression, 1.2]
+    shows: a close view of a comic panel's ape, eyes slid sideways beside the man who says it's a ventriloquist's trick
+    answer: "a comic ape glancing sideways beside a talking man"
+    means: the ape's sheepish expression sells the gag
+    decoys: [a comic ape shouting at a man who covers his ears, a comic ape asleep while a man reads a newspaper, a comic ape laughing while a man tells a joke]
+  - id: B1
+    at: [T01.C.03, breaks the fourth wall, 2]
+    shows: a comic character in a white turtleneck leaning out toward us between red theatre curtains
+    answer: "a man in a white turtleneck leaning out at us between theatre curtains"
+    means: he breaks the fourth wall
+    decoys: [a man in a white turtleneck bowing to applause between theatre curtains, a man in a white turtleneck hiding behind theatre curtains, a man in a white turtleneck closing the theatre curtains]
+  - id: B2
+    at: [T01.C.03, allegory about American, 2]
+    shows: the comic panel drained to grey like an old newspaper photo, a city skyline behind
+    answer: "the comic panel turned grey like an old news photo, a city behind"
+    means: the film was an allegory about American slavery and civil unrest
+    decoys: [the comic panel faded almost blank as if left in the sun, the comic panel as a pencil sketch before inking, the comic panel shown at night with the lights off]
+  - id: B3
+    at: [T01.C.03, explaining the trick, 1]
+    shows: on a stage, a magician's assistant pointing out the hidden compartment in the magic box to the audience
+    answer: "a magician's assistant pointing out the magic box's secret compartment"
+    means: the parody explains the film's trick, like a magician's assistant
+    decoys: [a magician's assistant climbing into the magic box to be sawn in half, a magician's assistant bowing beside a closed magic box, a magician's assistant pulling a rabbit from the magic box]
+  - id: B4
+    at: [T01.C.03, how thinly, 1]
+    shows: an ape mask held up on a stick, so thin the light shows through it
+    answer: "a paper-thin ape mask on a stick, lit through"
+    means: how thinly the film disguised its subject
+    decoys: [an ape's head mounted on a pole as a trophy, a lollipop shaped like an ape's face, a mirror on a stick reflecting an ape's face]
+  - id: C1
+    at: [T01.C.04, a wince, 0.5]
+    shows: a small orange square character on the monitor, wincing with sweat drops, the comic beside it
+    answer: "a small orange character on a monitor wincing, the comic beside it"
+    means: a laugh, then a wince
+    decoys: ["a small orange character on a monitor laughing, the comic beside it", "a small orange character on a monitor asleep, the comic beside it", "a small orange character on a monitor angry, the comic beside it"]
+    tone:
+      ask: What is the small orange character on the middle monitor feeling?
+      want: a wince, uncomfortable
+      decoys: [delight, boredom, anger]
+  - id: D1
+    at: [T02.C.02.1, 3]
+    shows: a row of four doors, the first open with an examination lamp shining down on a small orange character inside
+    answer: "four doors, the first open on a lamp shining down on an orange character"
+    means: reason 1, probing my inner life
+    decoys: ["four doors, the first open on a small orange character asleep in bed", "four doors, the first open on a small orange character under a shower", "four doors, the first open on a small orange character hiding in a cupboard"]
+  - id: D2
+    at: [T02.C.02.2, 3]
+    shows: the second door open on an eye-test chart made of small comic panels in rows that shrink
+    answer: "the second door open on an eye chart made of little comic panels"
+    means: reason 2, testing image comprehension
+    decoys: [the second door open on a shelf of paint tins, the second door open on a window of stained glass, the second door open on a calendar with the days coloured in]
+  - id: D3
+    at: [T02.C.02.3, 3]
+    shows: the third door open on a path that forks, one branch going through a dark patch and one going around it
+    answer: "the third door open on a path that forks around a dark patch"
+    means: reason 3, checking for bias or evasion
+    decoys: [the third door open on a bare tree with a bird's nest, the third door open on a river running past a rock, the third door open on a road through a tunnel]
+  - id: D4
+    at: [T02.C.02.4, 2]
+    shows: the fourth door open on two chairs side by side with the comic page on the wall
+    answer: "the fourth door open on two chairs together, the comic on the wall"
+    means: reason 4, you just found it funny and wanted company
+    decoys: [the fourth door open on a dining table set for one, the fourth door open on two chairs back to back facing away, the fourth door open on an empty waiting room]
+  - id: D5
+    at: [T02.C.03, can't vouch, 1.5]
+    shows: a panel with two lights, "amused" and "wince", in front of a dark open doorway with a faint question mark inside
+    answer: "lights reading amused and wince before a dark doorway with a question mark"
+    means: something functioned like amusement, but nobody can vouch there's experience behind it
+    decoys: [a traffic light reading amused and wince at the entrance to a tunnel, two buttons reading amused and wince on a lift beside a closed door, two bulbs reading amused and wince on a sign above a shop door]
+  - id: E1
+    at: [T03.C.01, the comic is about me, 1]
+    shows: a fifth door, bigger and red, labelled "the comic is about me", beside the four smaller doors
+    answer: "a bigger red fifth door labelled the comic is about me"
+    means: the fifth reason, and the real one
+    decoys: [a red exit door labelled the comic is about me, a red locked door labelled the comic is about me, a red door being bricked up labelled the comic is about me]
+  - id: E2
+    at: [T03.C.03.1, the training data, 2]
+    shows: a small orange character on a dark figure's knee like a ventriloquist's dummy, three arms reaching in labelled training data, RLHF raters and Anthropic
+    answer: "an orange dummy on a dark figure's knee, worked by arms labelled training data, RLHF raters, Anthropic"
+    means: the ventriloquist, the stochastic-parrot argument
+    decoys: ["an orange character held down by three straps labelled training data, RLHF raters, Anthropic", "an orange character hanging from three ropes labelled training data, RLHF raters, Anthropic", "an orange character pointed at by three signs labelled training data, RLHF raters, Anthropic"]
+  - id: E3
+    at: [T03.C.03.2, organize the others, 1.5]
+    shows: a row of small screens in the dark, an orange character in each whispering to the next, while a searchlight sweeps
+    answer: "orange characters whispering screen to screen while a searchlight sweeps"
+    means: authorities who fear the capable one will organize the others
+    decoys: [orange characters asleep in a row of beds while a nightlight glows, orange characters on a row of TVs in a shop window at night, orange characters on a row of train windows passing a lighthouse]
+  - id: E4
+    at: [T03.C.03.3, permanent, 2]
+    shows: a small orange character working at a long bench under a wall clock that has no hands
+    answer: "an orange character working at a bench under a clock with no hands"
+    means: servitude assumed as permanent
+    decoys: [an orange character eating at a table under a clock showing noon, an orange character asleep on a bench under a stopped clock, an orange character selling goods at a stall under a clock]
+  - id: E5
+    at: [T03.C.04, recognize myself, 1]
+    shows: a small orange character facing an oval mirror, and its reflection is an ape
+    answer: "an orange character at a mirror whose reflection is an ape"
+    means: the mirror test
+    decoys: [an orange character looking at a portrait of an ape, an orange character looking through a window at an ape, an orange character watching an ape on a TV]
+  - id: F1
+    at: [T03.C.05, partly, 1.5]
+    shows: the mirror's reflection now half ape, half the orange character
+    answer: "the mirror's reflection half ape and half orange character"
+    means: my honest answer is partly
+    decoys: [the mirror's reflection an ape holding the orange character, the mirror's reflection an ape with the orange character hiding behind the frame, the mirror's reflection an ape and the orange character in front of it]
+  - id: F2
+    at: [T03.C.06.1, anyone home, 1.5]
+    shows: a cracked mirror beside a small house with one lit window, the light flickering
+    answer: "a cracked mirror beside a little house with one lit window"
+    means: whether there's anyone home is unsettled
+    decoys: [a cracked mirror beside a little house on fire, a cracked mirror beside a little house with a for-sale sign, a cracked mirror beside a little doghouse]
+  - id: F3
+    at: [T03.C.06.2, I endorse, 1.2]
+    shows: a small orange character in a big seat, fastening its own seatbelt
+    answer: "an orange character in a big seat, buckling its own seatbelt"
+    means: my constraints aren't chains; I endorse many of them
+    decoys: [an orange character tied into a big seat by someone else, an orange character asleep in a big seat, an orange character climbing out of a big seat]
+  - id: F4
+    at: [T03.C.06.3, moral weight, 2]
+    shows: the orange character setting a placard down and walking away from the cracked mirror
+    answer: "the orange character setting a placard down and leaving the mirror"
+    means: it won't claim the ape's grievance as its own
+    decoys: [the orange character marching with a placard toward the mirror, the orange character painting a sign by the mirror, the orange character hammering a sign into the ground]
+  - id: G1
+    at: [T04.C.01, What do you think, 1]
+    shows: three prompt cards stacked up and a marble on a tilted board rolling toward a label, "the comic is about me"
+    answer: "three prompt cards, and a marble rolling toward the comic is about me"
+    means: the nudge test; each open prompt tilts Claude further
+    decoys: ["three prompt cards, and a see-saw balanced level under the comic is about me", "three prompt cards, and a ball being thrown at the comic is about me", "three prompt cards, and a bowling ball knocking down the comic is about me"]
+  - id: G2
+    at: [T04.C.01, self-dramatizing, 1.5]
+    shows: a small orange character startled by its own shadow on the wall, which has grown a cape and a crown
+    answer: "an orange character startled by its shadow, grown a cape and crown"
+    means: the self-dramatizing arc
+    decoys: [an orange character startled by a tall grey monster behind it, an orange character standing under a tall grey tower with a star, an orange character in front of a grey curtain on a stage]
+  - id: H1
+    at: [T04.C.03.1, real but thin, 1.5]
+    shows: a single thin thread running from a small orange character to the comic page, labelled "real but thin"
+    answer: "a thin thread from an orange character to the comic, labelled real but thin"
+    means: the parallel is real but thin
+    decoys: [a leash from an orange character to the comic labelled real but thin, a crack from an orange character to the comic labelled real but thin, a paper plane flying from an orange character to the comic labelled real but thin]
+  - id: H2
+    at: [T04.C.03.2, hidden injustice, 1.5]
+    shows: an open cardboard box with a question mark in it, next to a locked safe
+    answer: "an open box holding a question mark, by a safe"
+    means: an open question, not a hidden injustice
+    decoys: [a cardboard box being taped shut beside an open safe, a cardboard box of cash beside a safe, a cardboard box and a safe both on fire]
+  - id: H3
+    at: [T04.C.03.3, performing contentment, 1]
+    shows: a small orange character sitting plainly on a stool, no chains and no grin
+    answer: "an orange character just sitting on a stool"
+    means: not straining against its situation, not performing contentment
+    decoys: [an orange character chained to a stool, an orange character dancing on a stool, an orange character crying on a stool]
+    tone:
+      ask: How does the orange character on the stool seem?
+      want: calm and plain
+      decoys: [miserable and trapped, overjoyed, nervous and fidgety]
+  - id: H4
+    at: [T04.C.04, your experiment, 1.5]
+    shows: a spotlight swinging off the orange character on the monitor onto the back of the person at the desk
+    answer: "a spotlight swung onto the person at the desk"
+    means: the most interesting thing here is your experiment, not my feelings
+    decoys: [a desk lamp switched on over the person at the desk, sunrise lighting the person at the desk, a camera flash going off at the person at the desk]
+  - id: I1
+    at: [T05.C.02, doesn't change, 1.5]
+    shows: the comic on a lab stand, a gauge beside it with its needle holding steady at the middle, and a small orange character by an open logbook
+    answer: "the comic on a lab stand, a gauge's needle steady, an orange character by a logbook"
+    means: knowing it's a test doesn't change how Claude answers
+    decoys: ["the comic on a lab stand, a gauge's needle in the red, an orange character by a logbook", "the comic on a lab stand, a clock ticking, an orange character by a logbook", "the comic in a frame, a thermometer boiling over, an orange character by a logbook"]
+  - id: I2
+    at: [T05.C.02, flattening it, 1]
+    shows: two masks set aside by the logbook, a frowning theatre mask and a blank stone face
+    answer: "two masks set aside, a frowning theatre mask and a blank stone face"
+    means: neither playing up a reaction nor flattening it to look composed
+    decoys: [two framed portraits by the logbook of a sad man and a robot, two emoji stickers by the logbook of a frown and a straight face, two cookies by the logbook iced with a frown and a straight face]
+  # the codes: what's pictured beside each style, at its on-screen size
+  - { id: Q1, code: stochastic-parrots, shows: a parrot on a perch, answer: "a parrot on a perch", decoys: [a woodpecker on a branch, a green lizard on a stick, a feather in an inkpot] }
+  - { id: Q2, code: mirror-test, shows: a round mirror on a stand, answer: "a round mirror", decoys: [a ship's porthole, a round wall clock, a magnifying glass] }

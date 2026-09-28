@@ -13,7 +13,7 @@
 //
 // The readers are fresh Claude subagents given only the blind/ (or judge/) folder. A model isn't the audience: it misses
 // jokes and in-references and can read too much into a picture. The report finds frames worth a human look; it isn't a
-// verdict. --no-render reuses frames already rendered.
+// verdict. --no-render reuses frames already rendered; --check only checks the key (every phrase found, no id twice).
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync, readdirSync, renameSync, copyFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -21,7 +21,7 @@ import YAML from 'yaml';
 import { loadRefs } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
-if (!args.chapter) { console.error('usage: node tools/read_check.mjs --chapter=N [--judge | --score] [--no-render]'); process.exit(1); }
+if (!args.chapter) { console.error('usage: node tools/read_check.mjs --chapter=N [--check | --judge | --score] [--no-render]'); process.exit(1); }
 const CH = String(args.chapter).padStart(2, '0'), KEY = `docs/reads/ch${CH}.yaml`;
 if (!existsSync(KEY)) { console.error(`no answer key at ${KEY}`); process.exit(1); }
 const reads = YAML.parse(readFileSync(KEY, 'utf8')).reads;
@@ -46,9 +46,16 @@ const magick = a => execFileSync('magick', a, { stdio: ['ignore', 'ignore', 'inh
 function timeOf([id, ...rest]) {
   const l = chapter.lines.find(l => l.id === id); if (!l) throw new Error(`${KEY}: no line ${id}`);
   const after = typeof rest.at(-1) === 'number' ? rest.pop() : 0, phrase = rest[0];
-  if (!phrase) return l.t0 + after;
+  if (phrase == null) return l.t0 + after;
+  if (typeof phrase !== 'string') throw new Error(`${KEY}: the phrase ${phrase} in ${id} must be quoted text`);
   for (const s of [l.speech, l.text]) { const i = (s || '').toLowerCase().indexOf(phrase.toLowerCase()); if (i >= 0) return l.t0 + (l.t1 - l.t0) * i / s.length + after; }
   throw new Error(`${KEY}: "${phrase}" isn't in ${id}`);
+}
+if (args.check) {
+  const ids = reads.map(r => r.id), twice = ids.filter((id, i) => ids.indexOf(id) !== i);
+  if (twice.length) { console.error(`${KEY}: ${twice.join(', ')} used twice`); process.exit(1); }
+  for (const r of reads) if (r.at) timeOf(r.at);
+  console.log(`${KEY}: ${reads.length} reads, ${reads.filter(r => r.code).length} of them codes`); process.exit(0);
 }
 
 // the key, numbered in a shuffled order so the packet doesn't follow the story
