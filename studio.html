@@ -20,7 +20,7 @@
 <body>
 <main>
   <canvas id="out" width="1920" height="1080"></canvas>
-  <div class="bar"><input id="scrub" type="range" min="0" max="11" step="0.0417" value="0"><span id="tt">loading…</span></div>
+  <div class="bar"><select id="pick"></select><input id="scrub" type="range" min="0" max="11" step="0.0417" value="0"><span id="tt">loading…</span></div>
 </main>
 <!-- engine -->
 <script>
@@ -29,6 +29,7 @@
   window.CHAPTER_N = new URLSearchParams(location.search).get('chapter');
   if (CHAPTER_N) document.write(`<script src="src/gen/ch${CHAPTER_N.padStart(2, '0')}.js"><\/script>`);
 </script>
+<script src="src/gen/chapters.js"></script>
 <script src="src/gen/refs.js"></script>
 <script src="src/gen/qr_images.js"></script>
 <script src="src/config.js"></script>
@@ -49,11 +50,18 @@
 <!-- reference sheets (standalone loops) -->
 <script src="src/sheets.js"></script>
 <script src="src/scenes/style_sheets.js"></script>
-<!-- your video: add a script per scene file, in order -->
+<!-- the chapter's scene, or the kit's demo -->
 <script>document.write(`<script src="src/scenes/${window.CHAPTER ? CHAPTER.scene : 'demo.js'}"><\/script>`);</script>
 <script>
   // Open studio.html?loop=emotions (or views) to scrub a standalone loop instead of the video.
   const q = new URLSearchParams(location.search).get('loop'); if (q && LOOPS[q]) window.LOOP = LOOPS[q];
+  // the picker: every chapter, the model and look sheets, and the kit's demo
+  const pick = document.getElementById('pick'), opt = (v, txt) => pick.add(new Option(txt, v));
+  (window.CHAPTERS || []).forEach(c => opt(`chapter=${c.n}`, `${c.n}. ${c.title}`));
+  Object.keys(LOOPS).forEach(k => opt(`loop=${k}`, `sheet: ${k.replace(/_/g, ' ')}`));
+  opt('', "the kit's demo");
+  pick.value = q && LOOPS[q] ? `loop=${q}` : CHAPTER_N != null ? `chapter=${+CHAPTER_N}` : '';
+  pick.onchange = () => location.search = pick.value;
 </script>
 </body>
 </html>

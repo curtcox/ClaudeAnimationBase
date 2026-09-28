@@ -20,7 +20,7 @@ npm run rebuild
 
 This regenerates everything on this computer for watching and reviewing, and needs no one to watch it:
 - the script;
-- the scratch voice and timings;
+- the voices and timings (a line not yet voiced keeps its scratch clip);
 - every chapter's draft video and watch page;
 - the companion site;
 - the checks.

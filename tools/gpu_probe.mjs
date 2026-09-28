@@ -1,5 +1,5 @@
 // Which GPU does headless Chrome's WebGL land on? Prints the unmasked renderer for each flag set.
-// node gpu_probe.mjs <chrome path>
+// node tools/gpu_probe.mjs <chrome path>
 import puppeteer from 'puppeteer-core';
 
 const chrome = process.argv[2];

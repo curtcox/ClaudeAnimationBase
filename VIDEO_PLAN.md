@@ -424,7 +424,7 @@ src/
 - **`render.mjs`**:
   - `--chapter=N` loads `studio.html?chapter=N` and uses per-chapter frame dirs (`out/frames/chNN`) and audio;
   - `--draft` makes a review cut about 7× faster than a final: flat washes stand in for watercolor fills (about 60% of a
-    frame's cost), 12 fps, 1280 wide, review captions on, the scratch voice muxed in → `out/chNN_draft.mp4`.
+    frame's cost), 12 fps, 1280 wide, review captions on, the chapter's voice track muxed in → `out/chNN_draft.mp4`.
     Chapter 2 takes about 6 minutes.
   - Each chapter's frames dir keeps a manifest of what drew each shot, so a re-render (draft or final) repaints only the
     shots whose code, timing or codes changed, and everything if the engine changed. `--shots=D,E` forces those shots.

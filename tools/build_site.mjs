@@ -72,7 +72,7 @@ ${FILM ? `<p class="explainer" style="padding:.6rem 1rem"><a href="film/"><stron
 entirely by code, so you can make it yourself: <a href="${esc(filmCfg.repo || '')}">get the code</a> and run <code>npm start</code>.</p>`}
 <h2>Chapters</h2><ul>${chapters.map((c, i) => `<li><a href="ch${pad(c.n)}/">${c.n}. ${esc(c.title)}</a> <span class="when">${when(startOf(i), 0)}</span></li>`).join('')}</ul>
 <p class="note">The explanations were written by Claude, the AI in the film, for this site, and checked against the linked
-sources. Times are approximate until the film's final voices are recorded.</p>
+sources. Times may still shift a little before the film is finished.</p>
 <p class="note">The film is drawn in code, by Claude. Curt found the code it's built on through an earlier film made
 the same way, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (that's its explainer site).</p>
 <p class="note">Why is this site called <em>axol-f</em>? An axolotl, one letter away from

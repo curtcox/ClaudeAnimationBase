@@ -49,12 +49,12 @@ Without a dedicated GPU, p5.brush's watercolour fills make render times fairly s
 
 ```bash
 npm install
-node render.mjs --clip --out=out/video.mp4
+npm run demo
 ```
 
-That renders the 11-second demo in [src/scenes/demo.js](src/scenes/demo.js). Open [studio.html](studio.html) in Chrome to scrub through it. Add `?loop=emotions` or `?loop=views` to see the model sheets. If Chrome isn't in a standard location, pass `--chrome=<path>` or set `CHROME_PATH`.
+That renders the 11-second demo in [src/scenes/demo.js](src/scenes/demo.js) to `out/demo.mp4`. Open [studio.html](studio.html) in Chrome to scrub through it; its menu picks any chapter of the film, the model sheets or the demo. If Chrome isn't in a standard location, pass `--chrome=<path>` or set `CHROME_PATH`.
 
-On Linux, `render.mjs` starts Chrome with `--no-sandbox` (Ubuntu 23.10+ blocks Chrome's sandbox in headless use) and also finds a Chromium installed by Playwright. With no GPU at all, add `--soft-gl` to render WebGL in software: slow on watercolour fills, but it works. On a headless Linux machine with an NVIDIA GPU (a cloud or cluster node), add `--gpu-angle=gl-egl` (or `vulkan`); `node gpu_probe.mjs <chrome path>` shows which renderer each set of flags gets.
+On Linux, `render.mjs` starts Chrome with `--no-sandbox` (Ubuntu 23.10+ blocks Chrome's sandbox in headless use) and also finds a Chromium installed by Playwright. With no GPU at all, add `--soft-gl` to render WebGL in software: slow on watercolour fills, but it works. On a headless Linux machine with an NVIDIA GPU (a cloud or cluster node), add `--gpu-angle=gl-egl` (or `vulkan`); `node tools/gpu_probe.mjs <chrome path>` shows which renderer each set of flags gets.
 
 ### The kit's files
 
