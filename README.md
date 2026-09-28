@@ -4,6 +4,19 @@ This is a small starter kit with code, instructions and assets for animating a c
 
 ![Clawd's emotions, animated](docs/emotions.webp)
 
+## Frog or Axolotl
+
+This copy of the kit is making one film: *Frog or Axolotl*, a voiced, painted film of a long conversation between Curt
+and Claude, with a companion site holding every link. To see all of it on your computer:
+
+```bash
+npm start
+```
+
+It opens the site in your browser within seconds, then draws the film (an hour or two the first time). See
+[docs/RELEASE.md](docs/RELEASE.md) for what it does, how the site is published, and how the film gets to YouTube, and
+[VIDEO_PLAN.md](VIDEO_PLAN.md) for the film itself.
+
 ## Make a video
 
 Clone it, open it in Claude Code (or any coding agent) and ask for what you want:

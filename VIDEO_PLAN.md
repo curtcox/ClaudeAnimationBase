@@ -398,8 +398,9 @@ tools/
                       (line start and end, word times, per-frame loudness envelope)
   qr_check.mjs        decode test described above
   mix.mjs             per-chapter voice + effects (effects ducked under speech), loudnorm to −14 LUFS
-  assemble.mjs        concat chapters → out/final.mp4, plus YouTube chapter list, description
-                      with timestamped links, the companion page and a thumbnail still
+  assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), plus youtube.md: the
+                      description with chapter markers and the site's address (a thumbnail still: to do)
+  start.mjs           ✅ npm start: a fresh clone to the site in the browser, then the whole film (docs/RELEASE.md)
 src/
   qr.js               vendored qrcode-generator (MIT) → matrix; qrPaint(matrix, style) with the rules above
   people.js, minds.js the cast

@@ -22,8 +22,9 @@
 //                                                       voice muxed in → out/ch02_draft.mp4. Resumable; re-renders only what changed.
 //   A chapter's frames dir keeps a manifest of what drew each shot, so --frames (and --draft) re-render only the shots whose
 //   code, timing or codes changed, and everything when the engine did. --shots=D,E re-renders just those shots regardless.
+//   An encode is skipped when no frame and no voice track is newer than the video (--force encodes anyway).
 import puppeteer from 'puppeteer-core';
-import { spawn } from 'node:child_process';
+import { spawn, execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync, existsSync, statSync, renameSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
@@ -61,13 +62,24 @@ async function encode() {
   const out = args.out || (CH ? `out/ch${CH}${DRAFT ? '_draft' : ''}.mp4` : 'out/video.mp4');
   const audio = args.audio || (CH && existsSync(`audio/ch${CH}.wav`) ? `audio/ch${CH}.wav` : null);
   const have = existsSync(FRAMES_DIR) ? readdirSync(FRAMES_DIR).filter(f => /^f\d{5}\.jpg$/.test(f)).length : 0;
-  let n = 0; while (existsSync(`${FRAMES_DIR}/f${String(n).padStart(5, '0')}.jpg`)) n++;
+  // a chapter stops at its length: frames past it are left over from when it was longer
+  const g = {}; if (CH && !args.loop) new Function('window', readFileSync(`src/gen/ch${CH}.js`, 'utf8'))(g);
+  const cap = g.CHAPTER ? Math.ceil(g.CHAPTER.duration * fps - 1e-9) : Infinity;
+  let n = 0; while (n < cap && existsSync(`${FRAMES_DIR}/f${String(n).padStart(5, '0')}.jpg`)) n++;
   if (!n) { console.error(`no frames in ${FRAMES_DIR}`); process.exit(1); }
-  if (n < have) console.log(`warning: frame ${n} is missing, so the video stops there (${have - n} later frames unused)`);
+  if (n < Math.min(have, cap)) console.log(`warning: frame ${n} is missing, so the video stops there (later frames unused)`);
+  // nothing drawn or voiced since the last encode: keep it (--force encodes anyway)
+  if (!args.force && existsSync(out)) {
+    let newest = audio ? statSync(audio).mtimeMs : 0;
+    for (const f of readdirSync(FRAMES_DIR)) if (/^f\d{5}\.jpg$/.test(f)) newest = Math.max(newest, statSync(`${FRAMES_DIR}/${f}`).mtimeMs);
+    const frames = () => +execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=nb_frames', '-of', 'default=nw=1:nk=1', out]).toString().trim();
+    // (the frame count catches a video from before a cut; -shortest may trim a frame or two to the voice)
+    if (newest < statSync(out).mtimeMs && Math.abs(frames() - n) <= 2) { console.log(`${out} is current (nothing drawn or voiced since it was made)`); return; }
+  }
   console.log(`encoding ${n} frames at ${fps} fps → ${out}${audio ? ' with ' + audio : ''}`);
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-stats', '-framerate', String(fps), '-i', `${FRAMES_DIR}/f%05d.jpg`,
     ...(audio ? ['-i', audio, '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '192k', '-shortest'] : []),
-    '-c:v', 'libx264', '-preset', DRAFT ? 'veryfast' : 'slow', '-crf', DRAFT ? '23' : '17', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out]);
+    '-frames:v', String(n), '-c:v', 'libx264', '-preset', DRAFT ? 'veryfast' : 'slow', '-crf', DRAFT ? '23' : '17', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out]);
   console.log('wrote ' + out);
 }
 if (args.encode) { await encode(); process.exit(0); }

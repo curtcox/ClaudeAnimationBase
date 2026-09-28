@@ -8,7 +8,8 @@
 //   POST /api/seen   { ch, a, b }            a stretch of the current draft just watched, a to b seconds (review/seen.json)
 //   GET  /api/review                         every chapter: what waits on Curt, what waits on Claude, unwatched drafts
 //   GET  /api/rebuild                        the last overnight rebuild (tools/rebuild.mjs): its steps, and any that failed
-// and the review index that reads it, /review/ (tools/review_page.mjs). Every page served here gets a link to it.
+// and the review index that reads it, /review/ (tools/review_page.mjs). Every page served here gets a link to it, and
+// while a rebuild is running, a line saying how far along it is.
 import { createServer } from 'node:http';
 import { createReadStream, existsSync, statSync, writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
@@ -21,6 +22,17 @@ const chOf = v => { const n = parseInt(v, 10); return Number.isInteger(n) && n >
 
 // the link to the review index, added to every page served here (so never on the published site)
 const BADGE = `<a href="/review/" style="position:fixed;right:12px;bottom:12px;z-index:9;font:600 14px system-ui;background:#8A3A22;color:#fff;padding:.45em .8em;border-radius:8px;text-decoration:none;box-shadow:0 2px 6px #0003">Review index</a>`;
+
+// while a rebuild runs (npm start, npm run rebuild), a line at the top of every page says how far along it is
+function progress() {
+  try {
+    const pid = +readFileSync('out/rebuild/lock', 'utf8'); process.kill(pid, 0);
+    const r = JSON.parse(readFileSync('out/rebuild/last.json', 'utf8')), done = r.steps.length, last = r.steps.at(-1);
+    return `<div style="position:sticky;top:0;z-index:9;font:600 14px system-ui;background:#FFF1CE;border-bottom:1px solid #E3C28A;padding:.5em 1em">
+Still making the film: ${done}${r.planned ? ` of about ${r.planned}` : ''} steps done${last ? ` (last: ${last.name}${last.ok ? '' : ', which failed'})` : ''}.
+Chapters appear here as they're finished; <a href="" onclick="location.reload();return false">reload</a> to see what's new.</div>`;
+  } catch { return ''; }
+}
 
 async function api(req, res, url) {
   if (url.pathname === '/api/review') return json(res, 200, overview());
@@ -62,7 +74,7 @@ createServer((req, res) => {
   let f = join(ROOT, p); if (existsSync(f) && statSync(f).isDirectory()) f = join(f, 'index.html');
   if (!existsSync(f)) { res.writeHead(404); return res.end('not found'); }
   if (extname(f) === '.html' && !req.headers.range) {
-    const html = readFileSync(f, 'utf8').replace('</body>', BADGE + '</body>');
+    const html = readFileSync(f, 'utf8').replace('</body>', BADGE + '</body>').replace(/<body>/, m => m + progress());
     res.writeHead(200, { 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-store' }); return res.end(html);
   }
   const size = statSync(f).size, type = TYPES[extname(f)] || 'application/octet-stream', range = req.headers.range?.match(/bytes=(\d*)-(\d*)/);

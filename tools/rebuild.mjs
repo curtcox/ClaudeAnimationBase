@@ -1,17 +1,22 @@
 // rebuild.mjs: regenerates everything needed to watch and review the film on this computer, unattended (overnight).
 //   npm run rebuild                         everything
-//   npm run rebuild -- --chapters=2,5       just those chapters' drafts (the script, timelines and site are still rebuilt)
+//   npm run rebuild -- --chapters=2,5       just those chapters' voices, drafts and checks (the script, timelines, film and site are still rebuilt)
 //   npm run rebuild -- --qr                 also prove every painted code scans (tools/qr_check.mjs; slow)
 //   npm run rebuild -- --no-serve           don't start the review server at the end
+//   npm run rebuild -- --final              final-quality renders (out/chNN.mp4) instead of drafts: many hours
+// (npm start runs this after putting the site up; see tools/start.mjs.)
 //
 // In order, carrying on past failures (each is logged and retried once where a retry can help):
 //   1. the script from the transcript, and the proof that it's still word for word  (build_script, verbatim_check)
 //   2. the scratch voice for every chapter, which retimes the timelines               (scratch_voice → timeline)
+//      It needs the Mac's `say`; elsewhere the committed timing is kept and the drafts are silent.
 //   3. the references against the script, offline                                     (check_refs --offline)
-//   4. each chapter's draft video and its watch page                                  (render --draft, watch --no-site)
-//      Drafts are resumable: only shots whose code, timing or codes changed are repainted.
-//   5. the companion site, the chapter checks, and the review digest                   (build_site, lint_chapter, review digest)
-//   6. the review server, if it isn't already running                                  (serve → http://localhost:8077/review/)
+//   4. each chapter's draft video and its watch page, which adds it to the site        (render --draft, watch)
+//      Drafts are resumable: only shots whose code, timing or codes changed are repainted, and a chapter with nothing
+//      new isn't encoded again.
+//   5. the whole film, joined, and what YouTube needs                                   (assemble)
+//   6. the companion site, the chapter checks, and the review digest                   (build_site, lint_chapter, review digest)
+//   7. the review server, if it isn't already running                                  (serve → http://localhost:8077/review/)
 // It keeps the Mac awake while it runs (caffeinate), refuses to start while another rebuild is running, and writes
 // out/rebuild/<start time>.log (everything the steps printed) and out/rebuild/last.json (each step, ok or not, how
 // long), which the review index shows. Exits 1 if any step failed.
@@ -44,8 +49,9 @@ const stampName = `${started.getFullYear()}-${p2(started.getMonth() + 1)}-${p2(s
 const logPath = `${DIR}/${stampName}.log`, log = createWriteStream(logPath);
 const say = s => { const line = `[${new Date().toTimeString().slice(0, 8)}] ${s}`; console.log(line); log.write(line + '\n'); };
 const steps = [];
+let planned = 0;   // how many steps this run will take, for the site's progress line
 const report = done => writeFileSync(`${DIR}/last.json`, JSON.stringify({ started: started.toISOString(), finished: done ? new Date().toISOString() : null,
-  log: logPath, steps, failed: steps.filter(s => !s.ok).map(s => s.name) }, null, 1) + '\n');
+  log: logPath, planned, steps, failed: steps.filter(s => !s.ok).map(s => s.name) }, null, 1) + '\n');
 
 // one step: a command, its output to the log only (the terminal gets one line per step), retried once if asked
 function run(name, cmd, cmdArgs, { retry = false } = {}) {
@@ -68,29 +74,41 @@ function run(name, cmd, cmdArgs, { retry = false } = {}) {
 }
 
 const node = (name, script, a = [], o) => run(name, process.execPath, [script, ...a], o);
+const FINAL = !!args.final, all = readYaml(PATHS.chapters).map(c => c.n);
+const chapters = args.chapters ? String(args.chapters).split(',').map(Number).filter(n => all.includes(n)) : all;
+planned = 4 + chapters.length * (FINAL ? 3 : 2) + 3 + (args.chapters ? 2 * chapters.length : 2) + (args.qr ? 1 : 0);
 say(`rebuild started; log: ${logPath}`);
 
 // 1-3: script, voice, timelines, references
 if (await node('script from the transcript', 'tools/build_script.mjs')) await node('word-for-word check', 'tools/verbatim_check.mjs');
-await node('scratch voice (all chapters)', 'tools/scratch_voice.mjs', [], { retry: true });
+// with --chapters, only those chapters' voices are made and mixed (seconds, not a minute)
+if (process.platform === 'darwin') {
+  if (args.chapters) for (const n of chapters) await node(`scratch voice (chapter ${n})`, 'tools/scratch_voice.mjs', [`--chapter=${n}`], { retry: true });
+  else await node('scratch voice (all chapters)', 'tools/scratch_voice.mjs', [], { retry: true });
+}
+else { steps.push({ name: 'scratch voice (skipped: needs macOS)', ok: true, secs: 0, attempts: 0 }); say('- scratch voice skipped: it needs the Mac\'s say'); }
 await node('timelines', 'tools/timeline.mjs');
 await node('references (offline)', 'tools/check_refs.mjs', ['--offline']);
 
-// 4: drafts and watch pages
-const all = readYaml(PATHS.chapters).map(c => c.n);
-const chapters = args.chapters ? String(args.chapters).split(',').map(Number).filter(n => all.includes(n)) : all;
+// 4: each chapter's video and watch page (the watch step rebuilds the site, so the chapter shows up there straight away)
 for (const n of chapters) {
-  if (await node(`chapter ${n} draft`, 'render.mjs', [`--chapter=${n}`, '--draft'], { retry: true }))
-    await node(`chapter ${n} watch page`, 'tools/watch.mjs', [`--chapter=${n}`, '--no-site'], { retry: true });
+  const made = FINAL
+    ? await node(`chapter ${n} frames`, 'render.mjs', [`--chapter=${n}`, '--frames'], { retry: true }) && await node(`chapter ${n} encode`, 'render.mjs', [`--chapter=${n}`, '--encode'])
+    : await node(`chapter ${n} draft`, 'render.mjs', [`--chapter=${n}`, '--draft'], { retry: true });
+  if (made) await node(`chapter ${n} watch page`, 'tools/watch.mjs', [`--chapter=${n}`, ...(FINAL ? [`--video=out/ch${String(n).padStart(2, '0')}.mp4`] : [])], { retry: true });
 }
 
-// 5: site, checks, digest
+// 5: the whole film
+await node('the whole film', 'tools/assemble.mjs', FINAL ? ['--final'] : []);
+
+// 6: site, checks, digest
 await node('companion site', 'tools/build_site.mjs');
-await node('chapter checks', 'tools/lint_chapter.mjs');
+if (args.chapters) for (const n of chapters) await node(`chapter ${n} checks`, 'tools/lint_chapter.mjs', [`--chapter=${n}`]);
+else await node('chapter checks', 'tools/lint_chapter.mjs');
 if (args.qr) await node('QR codes scan', 'tools/qr_check.mjs');
 await node('review digest', 'tools/review.mjs', ['digest']);
 
-// 6: the review server
+// 7: the review server
 if (!args['no-serve']) {
   let up = false; try { up = (await fetch('http://localhost:8077/api/review', { signal: AbortSignal.timeout(3000) })).ok; } catch { }
   if (up) say('review server already running: http://localhost:8077/review/');

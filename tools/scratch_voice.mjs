@@ -55,6 +55,8 @@ for (const c of chapters) {
   buf.write('RIFF', 0); buf.writeUInt32LE(36 + n * 2, 4); buf.write('WAVEfmt ', 8); buf.writeUInt32LE(16, 16); buf.writeUInt16LE(1, 20); buf.writeUInt16LE(1, 22);
   buf.writeUInt32LE(SR, 24); buf.writeUInt32LE(SR * 2, 28); buf.writeUInt16LE(2, 32); buf.writeUInt16LE(16, 34); buf.write('data', 36); buf.writeUInt32LE(n * 2, 40);
   for (let i = 0; i < n; i++) buf.writeInt16LE(Math.max(-32768, Math.min(32767, Math.round(mix[i] * 32767 * .9))), 44 + i * 2);
-  writeFileSync(`audio/ch${pad(c.n)}.wav`, buf);
-  console.log(`audio/ch${pad(c.n)}.wav  ${CH.duration.toFixed(1)} s`);
+  // written only when it changed, so an unchanged chapter's draft isn't encoded again (render.mjs compares times)
+  const f = `audio/ch${pad(c.n)}.wav`, same = existsSync(f) && readFileSync(f).equals(buf);
+  if (!same) writeFileSync(f, buf);
+  console.log(`${f}  ${CH.duration.toFixed(1)} s${same ? ' (unchanged)' : ''}`);
 }

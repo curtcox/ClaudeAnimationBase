@@ -7,14 +7,16 @@
 //     at Q), and the pixels per module at its display size; under 6 px/module it needs a short link (VIDEO_PLAN.md §4)
 // And for the transcript: every link in it has a `transcript` reference anchored on the line that contains it.
 // Exit 1 on a structural error (bad anchor, missing transcript link); dead links are reported, not fatal.
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, mkdirSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { PATHS, readYaml, resolveAnchor, loadRefs } from './script_lib.mjs';
 
 const qrcode = createRequire(import.meta.url)('qrcode-generator');
-const REFS = 'script/refs.yaml', REPORT = 'script/refs_report.md';
+const REFS = 'script/refs.yaml';
 const SIZE = { feature: 480, shelf: 380, board: 300, card: 300 }, ECC = { feature: 'H', shelf: 'M', board: 'M', card: 'M' }, QUIET = 4, MIN_PX = 6;
 const offline = process.argv.includes('--offline');
+// an offline run doesn't know the links' status, so it leaves the committed report alone
+const REPORT = offline ? 'out/refs_report_offline.md' : 'script/refs_report.md';
 
 const refs = loadRefs(), lines = readYaml(PATHS.script).lines, chapters = readYaml(PATHS.chapters);
 const errors = [], note = e => errors.push(e);
@@ -94,6 +96,6 @@ for (const c of chapters) {
   md += `\n## ${c.n} ${c.title}\n\n| id | caption | origin | at | mode · style | QR | status | page title |\n|---|---|---|---|---|---|---|---|\n`;
   md += rs.map(r => `| ${r.id} | ${r.caption} | ${r.origin} | ${r.line?.id ?? '?'} | ${r.mode} · ${r.style} | ${r.modules ? `v${r.version}, ${r.px.toFixed(1)} px` : r.qr_url === 'SHORT' ? 'short link' : '—'} | ${r.status ?? '—'}${walled(r) && r.verified ? ` (${r.verified})` : ''} | ${(r.title || '').replace(/\|/g, '\\|')} |`).join('\n') + '\n';
 }
-writeFileSync(REPORT, md);
+mkdirSync('out', { recursive: true }); writeFileSync(REPORT, md);
 console.log(`${refs.length} refs, ${problems.length} need attention, ${errors.length} error(s); wrote ${REPORT}`);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }

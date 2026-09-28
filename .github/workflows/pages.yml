@@ -1,0 +1,49 @@
+# The companion site, published to GitHub Pages on every push to main (docs/RELEASE.md, stage 2).
+# It builds from the committed script, timings and explainers only: no Chrome, no ffmpeg, no voices, about a minute.
+# The film page plays script/site.yaml's film.youtube, else film.preview, else says the film is on its way.
+# One-time setup: the repo's Settings → Pages → Source: "GitHub Actions".
+name: Companion site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Check the references against the script (offline)
+        run: node tools/check_refs.mjs --offline
+      - name: Build the site
+        run: node tools/build_site.mjs
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Warn if the site isn't where the film's codes point
+        run: |
+          want=$(node -e "import('yaml').then(Y=>console.log(Y.parse(require('fs').readFileSync('script/site.yaml','utf8')).base))")
+          got="${{ steps.pages.outputs.base_url }}/"
+          if [ "$want" != "$got" ]; then echo "::warning::The film's codes point at $want but this repo publishes to $got. Rename the repo (or give Pages a custom domain) so they match."; fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

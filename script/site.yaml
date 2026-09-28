@@ -3,3 +3,9 @@
 base: https://curtcox.github.io/axol-f/   # the repo axol-f (Curt's pun: an axolotl, and Crazy Frog's "Axel F")
 short: r/         # a short link lives at base + short + name + '/': a page that forwards to a long URL (a ref's qr_url)
 notes: n/          # an explainer lives at base + notes + id + '/'
+# The film, on the site (tools/build_site.mjs). Built on this computer, the site plays the newest local cut
+# (out/film/film.mp4, from npm run film). Published, it plays the first of these that's set:
+film:
+  youtube:           # the video's id (the part after v=) once it's on YouTube: the site embeds YouTube's player
+  preview:           # until then, a video file's address, e.g. a cut on the repo's releases page (tools/publish_preview.mjs)
+  repo: https://github.com/curtcox/ClaudeAnimationBase   # neither set: the site says the film is on its way, and how to make it from here
