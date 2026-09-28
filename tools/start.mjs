@@ -2,7 +2,7 @@
 //   1. checks what's needed (Node 20+, ffmpeg, Chrome, and on a Mac its `say` voices) and says how to get what's missing
 //   2. installs the packages if they aren't yet (npm ci)
 //   3. builds the companion site, serves it and opens it in your browser: everything but the film, in about a minute
-//   4. then makes the film (tools/rebuild.mjs): the scratch voice, every chapter's draft and watch page, and the whole film
+//   4. then makes the film (tools/rebuild.mjs): the voice track, every chapter's draft and watch page, and the whole film
 //      joined (tools/assemble.mjs). The site shows the progress and gains each chapter as it's done; the film page last.
 // Run it again after a change and only what changed is redone (docs/RELEASE.md, "Iterating").
 //   npm start -- --site-only       steps 1-3
@@ -25,7 +25,7 @@ if (!on('ffmpeg') || !on('ffprobe')) later.push(`ffmpeg, to make the videos: ${p
 const chrome = [process.env.CHROME_PATH, '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'C:/Program Files/Google/Chrome/Application/chrome.exe',
   '/usr/bin/google-chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser'].find(p => p && existsSync(p));
 if (!chrome) later.push('Google Chrome, which draws the film: https://www.google.com/chrome/ (or set CHROME_PATH to a Chrome or Chromium)');
-if (process.platform !== 'darwin') console.log('note: the scratch voice uses the Mac\'s built-in voices, so here the drafts are silent (the timing is the committed one)');
+if (process.platform !== 'darwin' && !existsSync('script/voices.yaml')) console.log('note: the scratch voice uses the Mac\'s built-in voices, so here the drafts are silent (the timing is the committed one)');
 if (missing.length) { console.error('Needed first:\n  ' + missing.join('\n  ')); process.exit(1); }
 if (later.length) console.log('The site will work, but the film needs:\n  ' + later.join('\n  '));
 

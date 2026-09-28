@@ -12,12 +12,12 @@ git clone https://github.com/curtcox/axol-f && cd axol-f && npm start
 `npm start` ([tools/start.mjs](../tools/start.mjs)):
 
 1. Checks for what's needed and says how to get anything missing: Node 20 or newer, Google Chrome, and ffmpeg. On a
-   Mac it also uses the built-in voices for the scratch track; elsewhere the drafts are silent.
+   The voices come with the repo, so no ElevenLabs key is needed.
 2. Installs the packages (`npm ci`), only when they're missing or out of date.
 3. Builds the companion site, serves it at http://localhost:8077/ and opens your browser. **This takes seconds.** The
    site is complete except for the film.
 4. Makes the film ([tools/rebuild.mjs](../tools/rebuild.mjs)). It runs the script and its word-for-word check, the
-   scratch voice and every chapter's draft. Then it joins the chapters into the whole film
+   voice track and every chapter's draft. Then it joins the chapters into the whole film
    ([tools/assemble.mjs](../tools/assemble.mjs)).
    - While it runs, every page shows a progress line.
    - Each chapter appears on the site as it's finished. The film page comes last, at http://localhost:8077/film/.
@@ -34,7 +34,8 @@ renders (many hours), and `--no-open` skips opening the browser.
 | published site | the same, at the site's address, on every push to main | ~1 min after a push | automatic ([pages.yml](../.github/workflows/pages.yml)) |
 | local film | drafts of all 17 chapters, joined, with links in step | 1–2 h first time, then minutes | `npm start` |
 | published preview | the local cut, playable on the published site | upload time | `npm run preview:publish` (optional) |
-| real voices and sound | ElevenLabs voices and the 63 sound cues, mixed | needs the key; not built yet | `tools/tts.mjs`, `sfx.mjs`, `mix.mjs` (planned) |
+| real voices | ElevenLabs voices for every line (`script/voices.yaml`) | ~15 min for the whole script; only changed lines after | `node tools/voice.mjs` (the rebuild runs it) |
+| sound | the 63 sound cues, made and mixed | needs the key; not built yet | `sfx.mjs`, `mix.mjs` (planned) |
 | final cut | 1080p, 24 fps, the whole film, plus YouTube's text | 15–22 h, resumable | `npm start -- --final` |
 | on YouTube | the film, embedded on the published site | upload time | by hand (§5) |
 
@@ -53,9 +54,8 @@ Nothing expensive is made twice. A re-run after a small change redoes only what 
 | step | kept until | cost when nothing changed |
 |---|---|---|
 | packages | `package-lock.json` changes | none |
-| scratch voice clips | a line's words or voice change (`audio/scratch/`, by hash) | about a minute to re-mix |
+| voice clips (ElevenLabs) | a line's words, voice or model change (`assets/vo/`, by hash, committed) | about a minute to re-mix |
 | a chapter's voice track | its mix changes (it's rewritten only then) | none |
-| real voice clips (planned) | a line's words, voice or settings change (by hash) | none |
 | a chapter's frames | that shot's code, timing or codes change (a per-shot manifest) | seconds |
 | a chapter's video | a frame or its voice is newer, or its length changed | under a second |
 | the whole film | any chapter's video is newer | under a second (a join takes 2 s) |

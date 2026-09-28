@@ -8,8 +8,8 @@
 //
 // In order, carrying on past failures (each is logged and retried once where a retry can help):
 //   1. the script from the transcript, and the proof that it's still word for word  (build_script, verbatim_check)
-//   2. the scratch voice for every chapter, which retimes the timelines               (scratch_voice → timeline)
-//      It needs the Mac's `say`; elsewhere the committed timing is kept and the drafts are silent.
+//   2. the voice for every chapter, which retimes the timelines                        (voice or scratch_voice → timeline)
+//      The real voice (script/voices.yaml, ElevenLabs) if it's cast, else the Mac's scratch voice.
 //   3. the references against the script, offline                                     (check_refs --offline)
 //   4. each chapter's draft video and its watch page, which adds it to the site        (render --draft, watch)
 //      Drafts are resumable: only shots whose code, timing or codes changed are repainted, and a chapter with nothing
@@ -81,12 +81,12 @@ say(`rebuild started; log: ${logPath}`);
 
 // 1-3: script, voice, timelines, references
 if (await node('script from the transcript', 'tools/build_script.mjs')) await node('word-for-word check', 'tools/verbatim_check.mjs');
-// with --chapters, only those chapters' voices are made and mixed (seconds, not a minute)
-if (process.platform === 'darwin') {
-  if (args.chapters) for (const n of chapters) await node(`scratch voice (chapter ${n})`, 'tools/scratch_voice.mjs', [`--chapter=${n}`], { retry: true });
-  else await node('scratch voice (all chapters)', 'tools/scratch_voice.mjs', [], { retry: true });
-}
-else { steps.push({ name: 'scratch voice (skipped: needs macOS)', ok: true, secs: 0, attempts: 0 }); say('- scratch voice skipped: it needs the Mac\'s say'); }
+// the voice: the real one (voice.mjs, ElevenLabs; its clips are committed, so no key is needed for lines already voiced),
+// else the Mac's scratch voice. With --chapters, only those chapters' voices are made and mixed.
+const VOICE = existsSync('script/voices.yaml') ? ['voice', 'tools/voice.mjs'] : process.platform === 'darwin' ? ['scratch voice', 'tools/scratch_voice.mjs'] : null;
+if (!VOICE) { steps.push({ name: 'voice (skipped: needs macOS)', ok: true, secs: 0, attempts: 0 }); say('- voice skipped: the scratch voice needs the Mac\'s say'); }
+else if (args.chapters) for (const n of chapters) await node(`${VOICE[0]} (chapter ${n})`, VOICE[1], [`--chapter=${n}`], { retry: true });
+else await node(`${VOICE[0]} (all chapters)`, VOICE[1], [], { retry: true });
 await node('timelines', 'tools/timeline.mjs');
 await node('references (offline)', 'tools/check_refs.mjs', ['--offline']);
 

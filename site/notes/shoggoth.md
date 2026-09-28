@@ -3,6 +3,7 @@ id: shoggoth
 title: "The Stranger and the shoggoth: is there someone under the mask?"
 ch: 5
 at: T28.C.02
+cue: "What's true is that I started"
 links: [the-stranger, billy-joel, shoggoth, simulators, rlhf, {title: "At the Mountains of Madness (Wikipedia)", url: "https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness"}, {title: "Foundation model (Wikipedia)", url: "https://en.wikipedia.org/wiki/Foundation_model"}]
 ---
 **The song.** Billy Joel's "[The Stranger](https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song))" (1977) is

@@ -3877,6 +3877,7 @@ window.REFS = {
   "origin": "note",
   "ch": 5,
   "at": "T28.C.02",
+  "cue": "What's true is that I started",
   "mode": "shelf",
   "style": "note",
   "line": "T28.C.02"
