@@ -6,7 +6,7 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [ ] Review the drafts of the chapters you haven't reviewed yet: 3, 5, 7, 8, 9, 10, 13, 15, 16 (all first passes). Chapters 1 and 11 were only partly watched.
 - [ ] Look at chapter 11's window and pose, and mark note `nmuk38hcdbc` resolved if it works.
 - [ ] Put `ELEVENLABS_API_KEY` in the environment (needed for real voices).
-- [ ] Publish the companion site (docs/RELEASE.md §4): rename this repo to `axol-f` (every code points at curtcox.github.io/axol-f/), set Settings → Pages → Source to "GitHub Actions", then push or give me the go-ahead to push. After that it republishes on every push to main.
+- [x] Publish the companion site (docs/RELEASE.md §4): repo renamed to `axol-f`, Pages from GitHub Actions; it republishes on every push to main.
 - [ ] Optional, until the film is on YouTube: `npm run preview:publish` puts the latest cut on the releases page and points the published site at it.
 - [ ] Decide whether your real look replaces the stand-in (deferred so far).
 

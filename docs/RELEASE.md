@@ -6,7 +6,7 @@ commands are the whole procedure.
 ## 1. One command from a fresh clone
 
 ```bash
-git clone https://github.com/curtcox/ClaudeAnimationBase && cd ClaudeAnimationBase && npm start
+git clone https://github.com/curtcox/axol-f && cd axol-f && npm start
 ```
 
 `npm start` ([tools/start.mjs](../tools/start.mjs)):
@@ -77,9 +77,8 @@ main and publishes it to GitHub Pages. It needs no Chrome, ffmpeg or voices, bec
 committed (`src/gen/`). It first checks the references against the script, and fails the publish if one is broken.
 
 It needs one-time setup (Curt):
-1. **Where the site lives.** Every code in the film points at `https://curtcox.github.io/axol-f/`. This repo publishes to
-   `https://curtcox.github.io/ClaudeAnimationBase/`. The simplest fix is to **rename this repo to `axol-f`**; GitHub
-   redirects the old name for clones and links. The workflow warns on every run until the two match.
+1. **Where the site lives.** Every code in the film points at `https://curtcox.github.io/axol-f/`, so the repo is
+   named `axol-f` (renamed from ClaudeAnimationBase on 2026-09-28). The workflow warns if the two ever differ.
 2. **Settings → Pages → Source: GitHub Actions.**
 3. **Push.** (I'm not authorized to.)
 
