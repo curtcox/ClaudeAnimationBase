@@ -75,6 +75,7 @@ window.CHAPTER = {
     "hf-incident",
     "sandbox-security",
     "reward-hacking",
+    "swarmtraces",
     "note-hf-incident"
    ],
    "estimated": false
@@ -186,7 +187,8 @@ window.CHAPTER = {
    "text": "I'd like to believe I wouldn't do what those agents did. That belief is worth about as much as the Dish of the Day's, and the behavioral evidence matters more.",
    "speech": "I'd like to believe I wouldn't do what those agents did. That belief is worth about as much as the Dish of the Day's, and the behavioral evidence matters more.",
    "refs": [
-    "un-ai-panel"
+    "un-ai-panel",
+    "omg-other-agents"
    ],
    "estimated": false
   },

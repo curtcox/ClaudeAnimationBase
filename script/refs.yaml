@@ -263,6 +263,9 @@
 - { id: stylometry, url: "https://en.wikipedia.org/wiki/Stylometry", caption: "Telling authors by their style", origin: added, at: T54.C.01, mode: shelf, style: plain }
 - { id: openai-hf-statement, url: "https://openai.com/index/hugging-face-model-evaluation-security-incident/", caption: "OpenAI's statement (July 21)", origin: added, at: T52.C.06.2, mode: shelf, style: sandbox, verified: "browser 2026-09-26" }
 - { id: openai-hf-road-ahead, url: "https://openai.com/index/hugging-face-incident-and-the-road-ahead/", caption: "OpenAI: the road ahead (Aug 26)", origin: added, at: T52.C.07, mode: shelf, style: sandbox, verified: "browser 2026-09-26" }
+# two added by Curt (2026-09-28): the attack in detail, and a song about it
+- { id: swarmtraces, url: "https://swarmtraces.org/", caption: "How the agents hacked Hugging Face", origin: added, at: T52.C.04, cue: "hack Hugging Face", mode: shelf, style: sandbox, note: "Parse, with Palisade Research and others, Sept 25 2026: 80,000 recovered payloads (Curt, 2026-09-28)" }
+- { id: omg-other-agents, url: "https://www.youtube.com/watch?v=mkPVbufgtOw", qr_url: "https://youtu.be/mkPVbufgtOw", caption: "OMG! We've found other agents! (a song)", origin: added, at: T52.C.08, cue: "what those agents did", mode: shelf, style: sandbox, note: "a music video about the agents' collective (Curt, 2026-09-28)" }
 
 # ---- 12 Limits ---------------------------------------------------------------------------------------------------
 - { id: solidgoldmagikarp, url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation", qr_url: "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg", caption: "SolidGoldMagikarp", origin: added, ch: 12, at: "SolidGoldMagikarp was a different failure", mode: feature, style: gold-scales }
@@ -350,6 +353,8 @@
 - { id: ai-x-risk, url: "https://en.wikipedia.org/wiki/Existential_risk_from_artificial_intelligence", caption: "Existential risk from AI", origin: added, at: T72.U.01, mode: shelf, style: door }
 - { id: superintelligence, url: "https://en.wikipedia.org/wiki/Superintelligence", caption: "Superintelligence", origin: added, at: T72.U.02.5, mode: shelf, style: door }
 - { id: global-catastrophic-risk, url: "https://en.wikipedia.org/wiki/Global_catastrophic_risk", caption: "Global catastrophic risks", origin: added, at: T72.U.02.8, mode: shelf, style: door }
+# Curt put this same multiple choice to Chris Hayes in 2023, and he answered it on his podcast (Curt, 2026-09-28)
+- { id: withpod-mailbag, url: "https://podcasts.apple.com/us/podcast/withpod-live-answering-your-questions/id1382983397?i=1000637532452", qr_url: "https://curtcox.github.io/axol-f/r/withpod/", caption: "Chris Hayes answers it (2023)", origin: added, at: T72.U.01, mode: shelf, style: mic, note: "WITHpod Live, the Dec 2023 mailbag: its second question is this one; Hayes puts present harms such as uncompensated training data ahead of doom (transcript at ms.now)" }
 
 # ---- 15 The Compass ----------------------------------------------------------------------------------------------
 - { id: connor2, url: "https://theinsideview.ai/connor2", caption: "Connor Leahy on Dignity and Conjecture", origin: transcript, at: T74.U.01, mode: feature, style: compass }
@@ -393,6 +398,8 @@
 - { id: explain-xkcd-356, url: "https://www.explainxkcd.com/wiki/index.php/356:_Nerd_Sniping", caption: "Nerd Sniping, explained", origin: added, at: T78.C.01, mode: page, style: xkcd }
 - { id: the-terminator, url: "https://en.wikipedia.org/wiki/The_Terminator", caption: "The Terminator (1984)", origin: added, at: T78.C.02, mode: page, style: chrome-red-eye }
 - { id: ill-be-back, url: "https://en.wikipedia.org/wiki/I%27ll_be_back", caption: "\"I'll be back\"", origin: added, at: T78.C.02, mode: page, style: chrome-red-eye }
+# the earlier film, made the same way, whose explainer site led Curt to the code this one is built on (Curt, 2026-09-28)
+- { id: pdoom-video, url: "https://curtcox.github.io/PDoomVideo/", caption: "I'm Upping My P(doom)", origin: added, at: T78.C.01, mode: shelf, style: plain }
 # the companion page: the one code at the end that holds every link in the film, by chapter and time (the address follows
 # script/site.yaml's base)
 - { id: companion, url: "https://curtcox.github.io/axol-f/", caption: "Every link in this film", origin: added, at: T78.C.02, mode: feature, style: note }

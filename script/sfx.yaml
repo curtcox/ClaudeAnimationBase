@@ -1,0 +1,115 @@
+# Sound effects: every cue in the film. Hand-edited; checked by tools/sfx_check.mjs (npm run sfx), which finds each
+# cue's time in its chapter and writes the cue sheet, script/sfx_report.md. The sounds themselves come later, from
+# ElevenLabs' sound-effects endpoint (VIDEO_PLAN.md §2, Sound design); the prompt is what it's asked for.
+#
+#   id      stable key
+#   ch      chapter
+#   at      when it starts, as the read keys (docs/reads) give moments: [line id], [line id, seconds after], or
+#           [line id, "a phrase in the line", seconds after]; the phrase "@end" means the line's end
+#   until   (ambience) when it fades out, in the same form. Otherwise len, in seconds
+#   kind    sting (lands a joke or a turn) | effect (a prop's own sound) | ambience (a quiet bed under a stretch)
+#   gain    dB, relative to the voice (sting about −10, effect −16 to −24, ambience −26 to −32)
+#   prompt  what the sound should be. Borrowed sounds are evoked, never copied: no show's actual theme or recording
+#   why     what it's for
+#
+# Two recurring cues aren't listed one by one: `every` gives a sound for each moment of a kind.
+
+every:
+  - { id: qr-flick, when: qr, kind: effect, gain: -30, len: .4, prompt: "a single soft paper flick, a card set down on a desk", why: "each code's arrival; quiet, since codes are frequent" }
+  - { id: search-rustle, when: tool, kind: effect, gain: -24, len: 1.5, prompt: "pages of a book riffled quickly, then settling", why: "each search beat (Searched the web)" }
+
+cues:
+# ---- 0 Cold open ----
+- { id: projector-start, ch: 0, at: [T01.U.00, -1.2], len: 3, kind: effect, gain: -20, prompt: "an old 16 mm film projector starting: a mechanical clatter settling into a steady whir", why: "fade up from black" }
+- { id: projector-whir, ch: 0, at: [T01.U.00, 1.5], until: [T01.U.00, 55], kind: ambience, gain: -32, prompt: "the steady whir and faint flutter of a film projector in a quiet room", why: "the silent cold open reads like a film being shown" }
+- { id: reel-runout, ch: 0, at: [T01.U.00, 41.6], len: 3, kind: sting, gain: -14, prompt: "a film reel running out: the loose tail slapping round the spinning spool", why: "\"Ever get the feeling you're in the wrong movie!?\" (the last balloon finishes lettering)" }
+
+# ---- 1 The Wrong Movie ----
+- { id: mirror-crack, ch: 1, at: [T03.C.05, "the analogy breaks"], len: 1.5, kind: effect, gain: -18, prompt: "a mirror cracking: one sharp crack spreading across glass, no shatter", why: "the analogy breaks: cracks across the mirror" }
+
+# ---- 2 Frog or Axolotl ----
+- { id: blip-axolotl, ch: 2, at: [T06.C.01], len: .8, kind: effect, gain: -16, prompt: "a soft underwater blip, one bubble", why: "\"Axolotl.\" (the motif's sound)" }
+- { id: croak-chart, ch: 2, at: [T08.U.00, 1], len: .8, kind: effect, gain: -18, prompt: "a single small frog croak", why: "the frog appears on the desk with the chart" }
+- { id: croak-frog, ch: 2, at: [T08.C.02, "(\"Frog\""], len: .8, kind: effect, gain: -20, prompt: "a single small frog croak", why: "\"Frog\" versus…" }
+- { id: blip-versus, ch: 2, at: [T08.C.02, "\"Axolotl\")"], len: .8, kind: effect, gain: -20, prompt: "a soft underwater blip, one bubble", why: "…\"Axolotl\"" }
+- { id: piano-you, ch: 2, at: [T11.U.01], until: [T11.C.01, .5], kind: sting, gain: -16, prompt: "one low piano note, held and left to ring out", why: "\"You.\" held under the pause" }
+
+# ---- 4 The Echo ----
+- { id: croak-gadolinium, ch: 4, at: [T17.U.01, "gadolinium"], len: .8, kind: effect, gain: -22, prompt: "a single small frog croak, alert", why: "the frog perks up at an exam question" }
+- { id: lamp-threat, ch: 4, at: [T19.U.01], len: .6, kind: sting, gain: -14, prompt: "a hard interrogation-lamp click-on with a faint electric hum", why: "\"Threat?\"" }
+- { id: lamp-anticipated, ch: 4, at: [T20.U.01], len: .6, kind: sting, gain: -14, prompt: "a hard interrogation-lamp click-on with a faint electric hum", why: "\"Anticipated?\"" }
+- { id: ping-pong, ch: 4, at: [T21.C.02.1, "echoed back"], len: 3, kind: effect, gain: -24, prompt: "a table-tennis rally, five or six volleys, the returns getting slower", why: "the echo as ping-pong" }
+- { id: mathnet-fib, ch: 4, at: [T24.U.01, "a fib"], len: 2.5, kind: sting, gain: -12, prompt: "a short, ominous four-note brass and timpani sting in the manner of a 1950s TV police drama; an original phrase, not any show's theme", why: "\"a fib\": Mathnet's riff on Dragnet (its opening line, \"a fib, but it's short\")" }
+
+# ---- 5 The Dish of the Day ----
+- { id: restaurant, ch: 5, at: [T25.C.01], until: [T25.C.02], kind: ambience, gain: -30, prompt: "a quiet upscale restaurant: a soft murmur of diners, cutlery on china, a cork", why: "the Dish of the Day's table" }
+- { id: shoggoth, ch: 5, at: [T28.C.02, "The shoggoth meme"], len: 3, kind: effect, gain: -22, prompt: "a deep, slow, wet rumble of something vast shifting, with a faint squelch", why: "the shoggoth fills the monitor" }
+
+# ---- 6 Thrindles ----
+- { id: doom-clock, ch: 6, at: [T30.U.01], until: [T30.U.01, "Z M:", -.6], kind: ambience, gain: -26, prompt: "a loud mechanical clock ticking under a tense, sustained minor-key violin line, like the opening of a debate show about the end of the world", why: "the debate on the side monitor: Doom Debates' ticking clock and violin, evoked" }
+- { id: rush-hour, ch: 6, at: [T30.C.02, "A highway at rush hour"], len: 2.5, kind: effect, gain: -26, prompt: "a traffic jam: idling engines and two impatient car horns", why: "a highway at rush hour" }
+- { id: field-radio, ch: 6, at: [T31.U.01, "Navajo is"], len: 2, kind: effect, gain: -26, prompt: "a WWII field radio: a burst of static and a squelch", why: "Navajo: the code talker's radio" }
+- { id: foghorn, ch: 6, at: [T31.U.01, "a lighthouse must be"], len: 3, kind: effect, gain: -22, prompt: "a distant foghorn over waves lapping at rocks", why: "the lighthouse among the ships" }
+- { id: stamp-insight, ch: 6, at: [T31.C.01, "a real insight"], len: .5, kind: effect, gain: -20, prompt: "a rubber stamp thumped onto paper on a wooden desk", why: "the three verdict stamps land" }
+- { id: stamp-near-miss, ch: 6, at: [T31.C.01, "a near miss"], len: .5, kind: effect, gain: -20, prompt: "a rubber stamp thumped onto paper on a wooden desk", why: "…" }
+- { id: stamp-non-sequitur, ch: 6, at: [T31.C.01, "a deliberate non sequitur"], len: .5, kind: effect, gain: -20, prompt: "a rubber stamp thumped onto paper on a wooden desk", why: "…" }
+- { id: coin-flip, ch: 6, at: [T31.C.02.1, "a single thing flips"], len: 1.2, kind: effect, gain: -22, prompt: "a coin flipped with a thumb: a bright ting, then it lands", why: "a single thing flips" }
+
+# ---- 7 Mind Space ----
+- { id: solaris-swell, ch: 7, at: [T35.C.02, "Solaris"], len: 3, kind: effect, gain: -28, prompt: "one slow, deep ocean swell, rising and falling away", why: "Solaris's ocean, the far end of the line" }
+
+# ---- 8 Contradictions ----
+- { id: mirror-shards, ch: 8, at: [T41.U.01, "@end"], len: 1.5, kind: effect, gain: -18, prompt: "a mirror cracking into several pieces that stay in the frame, a light tinkle", why: "the mirror cracks into six shards" }
+- { id: theater, ch: 8, at: [T43.U.01, "going to the theater"], until: [T43.U.01, "Humans are primed", -.2], kind: ambience, gain: -30, prompt: "inside a cinema during a film: a projector's hum, a hushed audience, someone shifting in a seat", why: "Curt in the theatre" }
+
+# ---- 9 Shells ----
+- { id: chapel-chord, ch: 9, at: [T45.C.03], len: 4, kind: effect, gain: -24, prompt: "one soft organ chord in a small stone chapel, with a long echo", why: "the lobster congregation" }
+- { id: endoskeleton, ch: 9, at: [T48.U.01, "T eight hundred"], len: 1.5, kind: effect, gain: -22, prompt: "a heavy mechanical servo whir and click, a metal hand closing", why: "the T-800's chrome hand" }
+
+# ---- 10 The Router ----
+- { id: pneumatic-tube, ch: 10, at: [T49.U.01, "the wrong question"], len: 1.5, kind: effect, gain: -20, prompt: "a pneumatic tube: a canister sucked away with a whoosh and a distant thunk", why: "Curt's letter rolls down the tube" }
+- { id: stamp-rejected-10, ch: 10, at: [T49.U.01, "rejected"], len: .5, kind: effect, gain: -18, prompt: "a heavy rubber stamp slammed onto paper", why: "it comes back stamped" }
+
+# ---- 11 July ----
+- { id: sand-trickle, ch: 11, at: [T52.C.04, "escaped their testing sandbox"], len: 3, kind: effect, gain: -22, prompt: "dry sand trickling and sliding, small figures scrambling up it", why: "the agents climb out of the sandbox" }
+- { id: dial-up, ch: 11, at: [T52.C.04, "reach the Internet"], len: 2.5, kind: sting, gain: -18, prompt: "a dial-up modem connecting: the squeal and screech of a handshake", why: "they reach the Internet" }
+- { id: noticeboard, ch: 11, at: [T52.C.06.1, "17,000"], len: 3, kind: effect, gain: -24, prompt: "a flurry of pushpins and paper notes pinned to a corkboard, many hands at once", why: "17,000 edits: the noticeboard papered over" }
+- { id: stamp-rejected-11, ch: 11, at: [T52.C.06.4, "rejected"], len: .5, kind: effect, gain: -18, prompt: "a heavy rubber stamp slammed onto paper", why: "the defenders' requests stamped rejected" }
+- { id: dun-dun-dun, ch: 11, at: [T54.U.01, "@end", .2], len: 3, kind: sting, gain: -10, prompt: "a dramatic three-note orchestral sting, dun, dun, DUN, the last note held", why: "\"talking to ChatGPT this whole time?\" and the mask swap" }
+- { id: typewriter, ch: 11, at: [T55.U.01, "manufacture those"], len: 2, kind: effect, gain: -22, prompt: "a manual typewriter: a few keystrokes, a deliberate wrong key, the carriage bell", why: "typos made on purpose" }
+- { id: dusk-town, ch: 11, at: [T56.U.01], until: [T56.C.01, 3], kind: ambience, gain: -30, prompt: "a town at dusk heard through a window: faint distant traffic, a dog far off, evening birds", why: "strange days: Curt at the window" }
+
+# ---- 12 Limits ----
+- { id: magikarp-glitch, ch: 12, at: [T57.C.04, "SolidGoldMagikarp"], len: 1.5, kind: effect, gain: -18, prompt: "a glitchy, detuned chime that stutters and breaks up", why: "SolidGoldMagikarp" }
+- { id: sunny-street, ch: 12, at: [T58.C.01], until: [T58.C.03], kind: ambience, gain: -30, prompt: "a sunny suburban street: birdsong, a light breeze, a car passing far off", why: "Claude walks to the car wash" }
+- { id: car-wash, ch: 12, at: [T58.C.02], len: 3, kind: effect, gain: -20, prompt: "a car wash's big rotating brushes spinning up, water spray", why: "Claude reaches the car wash, without the car" }
+
+# ---- 13 Foom ----
+- { id: gate-slam, ch: 13, at: [T62.C.02, "regulation arriving"], len: 1, kind: effect, gain: -20, prompt: "a wooden farm gate slammed shut and latched", why: "regulation arriving in reaction: the gate shut after the horse" }
+- { id: foom, ch: 13, at: [T64.U.01], len: 2, kind: sting, gain: -12, prompt: "a big whoosh of something catching fire, a campfire flaring up", why: "\"Foom?\"" }
+- { id: campfire, ch: 13, at: [T64.U.01, 1.5], until: [T64.C.02, "@end"], kind: ambience, gain: -30, prompt: "a campfire crackling steadily", why: "the campfire that fooms" }
+- { id: foom-lettering, ch: 13, at: [T66.C.01, "catching fire"], len: 1.5, kind: effect, gain: -18, prompt: "a small whoosh of paper catching fire", why: "the FOOM lettering catches fire" }
+
+# ---- 14 The Pundits ----
+- { id: boxing-bell, ch: 14, at: [T69.U.01, "hubris"], len: 1.5, kind: sting, gain: -16, prompt: "a boxing ring bell, two rings", why: "hubris and TESCREAL: the boxing gloves" }
+- { id: kitchen-timer, ch: 14, at: [T69.C.01], len: 3.5, kind: effect, gain: -20, prompt: "a wind-up kitchen timer ticking fast, then its ding", why: "\"about ten minutes, then get nervous\"" }
+- { id: squares, ch: 14, at: [T71.U.01, .6], len: 2.5, kind: effect, gain: -22, prompt: "a game show board lighting up square by square: nine quick bright electronic blips", why: "the nine squares, Paul Lynde in the centre" }
+- { id: radio-tune, ch: 14, at: [T71.C.02.2, "Machine Gods"], len: 1.5, kind: effect, gain: -24, prompt: "an old radio dial tuned through static to a clear station", why: "Machine Gods: the radio" }
+- { id: door-a, ch: 14, at: [T72.U.02.1, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "the nine doors: a slam per option" }
+- { id: door-b, ch: 14, at: [T72.U.02.2, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-c, ch: 14, at: [T72.U.02.3, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-d, ch: 14, at: [T72.U.02.4, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-e, ch: 14, at: [T72.U.02.5, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-f, ch: 14, at: [T72.U.02.6, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-g, ch: 14, at: [T72.U.02.7, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-h, ch: 14, at: [T72.U.02.8, "@end"], len: .8, kind: effect, gain: -20, prompt: "a heavy wooden door slammed shut in a corridor", why: "…" }
+- { id: door-other, ch: 14, at: [T72.U.02.9, .2], len: 2.5, kind: sting, gain: -18, prompt: "a heavy wooden door creaking slowly open", why: "\"i) Other\": the last door creaks open" }
+
+# ---- 15 The Compass ----
+- { id: pin-drop, ch: 15, at: [T74.C.04, "inside that window"], len: .6, kind: effect, gain: -22, prompt: "a map pin pushed into a corkboard", why: "the you-are-here pin drops into 2026–2030" }
+- { id: calendar-flutter, ch: 15, at: [T75.C.03, "probably too fast"], len: 1.5, kind: effect, gain: -22, prompt: "calendar pages fluttering, riffled backward", why: "AI 2027's pages flutter back" }
+
+# ---- 16 Coda ----
+- { id: truck-horn, ch: 16, at: [T78.U.01, "nerd sniping"], len: 1.5, kind: effect, gain: -24, prompt: "a truck horn blaring, approaching", why: "the xkcd homage: a figure frozen mid-road by a puzzle" }
+- { id: synth-drum, ch: 16, at: [T78.C.02, "@end", .1], len: 2, kind: sting, gain: -10, prompt: "an 80s synth-drum sting: a big gated snare hit and a low synth stab", why: "\"I'll be back, with footnotes.\" Shades on" }
+- { id: footnotes-rain, ch: 16, at: [T78.C.02, "@end", 2], len: 18, kind: ambience, gain: -28, prompt: "many paper cards falling and landing softly, a patter like light rain that thins out", why: "the footnotes rain in and tile the QR wall" }

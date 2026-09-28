@@ -370,7 +370,8 @@ window.CHAPTER = {
    "text": "Which of the following best matches your opinion of AI as an existential threat to humans?",
    "speech": "Which of the following best matches your opinion of AI as an existential threat to humans?",
    "refs": [
-    "ai-x-risk"
+    "ai-x-risk",
+    "withpod-mailbag"
    ],
    "estimated": false
   },

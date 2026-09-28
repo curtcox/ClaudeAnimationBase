@@ -1428,6 +1428,20 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.695
  },
+ "mic|M|f|https://curtcox.github.io/axol-f/r/withpod/": {
+  "file": "assets/qr/f/withpod-mailbag.png",
+  "box": [
+   16,
+   64,
+   328
+  ],
+  "img": [
+   456,
+   456
+  ],
+  "n": 33,
+  "reach": 0.695
+ },
  "compass|H|f|https://theinsideview.ai/connor2": {
   "file": "assets/qr/f/connor2.png",
   "box": [
@@ -3054,6 +3068,20 @@ window.QR_IMAGES = {
  },
  "door|M|n|https://en.wikipedia.org/wiki/Global_catastrophic_risk": {
   "file": "assets/qr/n/global-catastrophic-risk.png",
+  "box": [
+   0,
+   0,
+   328
+  ],
+  "img": [
+   328,
+   328
+  ],
+  "n": 33,
+  "reach": 0.5
+ },
+ "mic|M|n|https://curtcox.github.io/axol-f/r/withpod/": {
+  "file": "assets/qr/n/withpod-mailbag.png",
   "box": [
    0,
    0,

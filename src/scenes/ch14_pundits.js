@@ -370,8 +370,9 @@
   // F: three pundits on this conversation: Jeff (the calculator); Kevin (a lovesick chatbot; a lamp in the dark room; a
   // radio); Casey (a scoreboard; the frog's gold star; the slashed price tag; disclose). The prediction: three faces
   // Everyone in the chapter in one labelled 3×3 grid (Brady Bunch / Hollywood Squares), so there's no doubt who is who.
-  // The squares light up one by one; everyone glances toward the centre square, then around.
-  const SQUARES = [['leo', 'Leo'], ['jeff', 'Jeff'], ['paris', 'Paris'], ['robert', 'Father Robert'], ['claude', 'Claude'], ['curt', 'Curt'], ['kevin', 'Kevin Roose'], ['casey', 'Casey Newton'], ['frog', 'the frog']];
+  // The squares light up one by one; everyone glances toward the centre square, then around. Claude has the centre
+  // square, and Hollywood Squares' centre-square label: Paul Lynde (Curt's call).
+  const SQUARES = [['leo', 'Leo'], ['jeff', 'Jeff'], ['paris', 'Paris'], ['robert', 'Father Robert'], ['claude', 'Paul Lynde'], ['curt', 'Curt'], ['kevin', 'Kevin Roose'], ['casey', 'Casey Newton'], ['frog', 'the frog']];
   const SQ_COLS = ['#E8A33A', '#5A8AC9', '#C96A8A', '#6FA85A', '#D97757', '#8A7AC9', '#4FA3A5', '#C9A45A', '#7AAE5A'];
   function squares(t, t0) {
     studio(t);

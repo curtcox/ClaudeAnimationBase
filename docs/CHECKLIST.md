@@ -24,7 +24,8 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 ## Voices (phase 3)
 - [ ] Pick 3 stock ElevenLabs voices each for Curt and Claude and read a 10-line sampler.
 - [ ] Once you choose, voice everything, then re-time and redraw every chapter.
-- [ ] Add the first sound-effect cues.
+- [x] Place the sound-effect cues: 63 in `script/sfx.yaml` (stings, props' sounds, a few quiet ambient beds), plus a paper flick per code and a page rustle per search. `npm run sfx` checks them and writes the cue sheet, `script/sfx_report.md`.
+- [ ] Generate the sounds with ElevenLabs (needs the key) and mix them into the drafts.
 
 ## Assembly (phase 7)
 - [ ] Mix the voices and effects.

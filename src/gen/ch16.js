@@ -35,6 +35,7 @@ window.CHAPTER = {
    "speech": "Fair, though it cuts both ways. You opened with a comic and a feelings question, and I spent six hours chasing it through frogs, foom, and FOR-mik queens.",
    "refs": [
     "explain-xkcd-356",
+    "pdoom-video",
     "note-nerd-sniping"
    ],
    "estimated": false

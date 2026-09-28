@@ -126,12 +126,17 @@ to spend a Saturday morning.")
   consent, and ElevenLabs' terms require it.
 
 ### Sound design
-The track is voice first, with no continuous music. Effects and stings are placed by hand in `sfx.yaml` only where
-they land a joke or a turn, then generated with ElevenLabs' sound-effects endpoint (same key) and mixed well under
-the voice. The first cue list:
+The track is voice first, with no continuous music. Effects and stings land a joke or a turn, and since 2026-09-28
+(Curt) a few scenes also get a quiet ambient bed (a projector's whir, a restaurant, a town at dusk). Every cue is placed
+by hand in `script/sfx.yaml`: its moment (a line, a phrase in it, an offset), its kind, its level under the voice and
+what it should sound like. `npm run sfx` checks the cues against the chapters' timing and writes the cue sheet,
+`script/sfx_report.md`. The sounds are then generated with ElevenLabs' sound-effects endpoint (same key) and mixed well
+under the voice. Borrowed sounds are evoked, never copied: chapter 6's debate on the side monitor gets a ticking clock
+over a tense violin (*Doom Debates*' opening), and chapter 4's "a fib" gets a short brass-and-timpani sting in the
+manner of a 1950s police drama (*Mathnet*'s riff on *Dragnet*), with no show's actual theme. A paper flick marks each
+code's arrival (quiet, so frequent codes don't get tiresome) and a page rustle each search beat.
 
-| moment | cue |
-|---|---|
+---|---|
 | cold open, "Ever get the feeling you're in the wrong movie!?" | a projector clatter, then the film-reel runout |
 | "Name an amphibian." / "Frog." vs "Axolotl." | a single croak / a soft underwater blip (these recur as the motif's sound) |
 | "You." | a low piano note held under the pause |
@@ -380,11 +385,11 @@ script/
   script.yaml         one entry per spoken line: id, chapter, speaker, text, speech_text
                       (pronunciation-normalised), v3 style tags, refs[], visual cue, pause_after
   refs.yaml           every reference: id, url, short_url, caption, qr_style, mode (feature|shelf), chapter
+  sfx.yaml            sound-effect cues: a moment (line id, phrase, offset), kind, gain, prompt
   pronounce.yaml      axolotl, gadolinium ("xenon core, four-f seven, five-d one, six-s two"),
                       TESCREAL, Kokotajlo, Aschenbrenner, Agüera y Arcas, Ballecer, Lyapunov,
                       Margolus–Levitin, Bekenstein, ħ, AFAYCT, EOY, RSI, OOM, formulas…
 tools/
-  sfx.yaml            sound-effect cues: line id + offset, prompt, gain
   tts.mjs             ElevenLabs /with-timestamps → assets/vo/<sha256>.mp3 + alignment JSON,
                       cached by hash of (text, voice, settings), so edits re-synth only changed lines
   sfx.mjs             ElevenLabs sound effects → assets/sfx/<sha256>.mp3, also cached

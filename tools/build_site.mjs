@@ -56,6 +56,8 @@ alone isn't enough. <strong>The yellow ones are the explanations.</strong> Start
 <h2>Chapters</h2><ul>${chapters.map((c, i) => `<li><a href="ch${pad(c.n)}/">${c.n}. ${esc(c.title)}</a> <span class="when">${stamp(offset[i])}</span></li>`).join('')}</ul>
 <p class="note">The explanations were written by Claude, the AI in the film, for this site, and checked against the linked
 sources. Times are approximate until the film's final voices are recorded.</p>
+<p class="note">The film is drawn in code, by Claude. Curt found the code it's built on through an earlier film made
+the same way, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (that's its explainer site).</p>
 <p class="note">Why is this site called <em>axol-f</em>? An axolotl, one letter away from
 <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Crazy Frog's "Axel F"</a>: a frog, or an axolotl.</p>`, 0));
 // short links: a ref whose code is one of this site's short addresses (base + r/NAME/) gets a page that forwards to its url

@@ -2129,6 +2129,31 @@ window.REFS = {
   "verified": "browser 2026-09-26",
   "line": "T52.C.07"
  },
+ "swarmtraces": {
+  "id": "swarmtraces",
+  "url": "https://swarmtraces.org/",
+  "caption": "How the agents hacked Hugging Face",
+  "origin": "added",
+  "at": "T52.C.04",
+  "cue": "hack Hugging Face",
+  "mode": "shelf",
+  "style": "sandbox",
+  "note": "Parse, with Palisade Research and others, Sept 25 2026: 80,000 recovered payloads (Curt, 2026-09-28)",
+  "line": "T52.C.04"
+ },
+ "omg-other-agents": {
+  "id": "omg-other-agents",
+  "url": "https://www.youtube.com/watch?v=mkPVbufgtOw",
+  "qr_url": "https://youtu.be/mkPVbufgtOw",
+  "caption": "OMG! We've found other agents! (a song)",
+  "origin": "added",
+  "at": "T52.C.08",
+  "cue": "what those agents did",
+  "mode": "shelf",
+  "style": "sandbox",
+  "note": "a music video about the agents' collective (Curt, 2026-09-28)",
+  "line": "T52.C.08"
+ },
  "solidgoldmagikarp": {
   "id": "solidgoldmagikarp",
   "url": "https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/solidgoldmagikarp-plus-prompt-generation",
@@ -2910,6 +2935,18 @@ window.REFS = {
   "style": "door",
   "line": "T72.U.02.8"
  },
+ "withpod-mailbag": {
+  "id": "withpod-mailbag",
+  "url": "https://podcasts.apple.com/us/podcast/withpod-live-answering-your-questions/id1382983397?i=1000637532452",
+  "qr_url": "https://curtcox.github.io/axol-f/r/withpod/",
+  "caption": "Chris Hayes answers it (2023)",
+  "origin": "added",
+  "at": "T72.U.01",
+  "mode": "shelf",
+  "style": "mic",
+  "note": "WITHpod Live, the Dec 2023 mailbag: its second question is this one; Hayes puts present harms such as uncompensated training data ahead of doom (transcript at ms.now)",
+  "line": "T72.U.01"
+ },
  "connor2": {
   "id": "connor2",
   "url": "https://theinsideview.ai/connor2",
@@ -3283,6 +3320,16 @@ window.REFS = {
   "mode": "page",
   "style": "chrome-red-eye",
   "line": "T78.C.02"
+ },
+ "pdoom-video": {
+  "id": "pdoom-video",
+  "url": "https://curtcox.github.io/PDoomVideo/",
+  "caption": "I'm Upping My P(doom)",
+  "origin": "added",
+  "at": "T78.C.01",
+  "mode": "shelf",
+  "style": "plain",
+  "line": "T78.C.01"
  },
  "companion": {
   "id": "companion",
