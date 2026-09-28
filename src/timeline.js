@@ -17,8 +17,9 @@ function drawWorld(t) {
   else {
     let i = 0; while (i + 1 < SHOTS.length && t >= SHOTS[i + 1][0]) i++;
     const t0 = SHOTS[i][0], end = i + 1 < SHOTS.length ? SHOTS[i + 1][0] : DUR;
-    SHOTS[i][1](t, t - t0, end - t0);
-    CAM = null;
+    LIFT = liftAt(t);   // raised clear of the caption band, if it has room (layout.js)
+    push(); translate(0, -LIFT);
+    try { SHOTS[i][1](t, t - t0, end - t0); } finally { pop(); CAM = null; LIFT = 0; }
   }
   if (window.AFTER_SHOT) window.AFTER_SHOT(t);   // overlays over every shot (a chapter's reference rail, review captions)
   flushLetters();
@@ -36,6 +37,9 @@ function placeholder(t) {
 //   start of shot B: if (lt < .3) brushWipe(.5 + lt / .6);
 function brushWipe(p, cols = [PAL.clayDk, PAL.clay]) {
   if (p <= 0 || p >= 1) return;
+  fullFrame(() => brushWipeAt(p, cols));
+}
+function brushWipeAt(p, cols) {
   const [c1, c2] = cols, n = 5, bh = (H + 420) / n + 40;
   push(); translate(W / 2, H / 2); rotate(-.1); translate(-W / 2, -H / 2);
   for (let i = 0; i < n; i++) {

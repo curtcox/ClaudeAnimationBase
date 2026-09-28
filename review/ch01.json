@@ -20,6 +20,24 @@
    "frame": "frames/ch01-nmulf3fgmk0.jpg"
   },
   {
+   "id": "nmulr81ysc2",
+   "t": 110.43,
+   "line": "T02.C.02.4",
+   "shot": "D",
+   "by": "curt",
+   "text": "Claude should walk above the captions instead of on the same line as they are.",
+   "status": "open",
+   "created": "2026-09-28T21:23:15.316Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Agreed. Any picture a caption would cover now rises clear of it when it has room above, so here the floor moves up and Clawd walks above the caption. Captions are also wider now, so they take fewer rows. Chapter 1's next draft has it.",
+     "at": "2026-09-28T22:28:47.070Z"
+    }
+   ],
+   "frame": "frames/ch01-nmulr81ysc2.jpg"
+  },
+  {
    "id": "nmujh32wrvg",
    "t": 257,
    "line": "T04.C.03.1",

@@ -96,7 +96,7 @@ const rectAt = (a, b, k) => a.map((v, i) => lerp(v, b[i], k));
 // ---------- grounds ----------
 const paperWorld = (t, col = '#EFE8DA') => { boilSeed('paper world'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: col, fill: '#E2D8C4', fillOp: 70, bleed: .2, tex: .5, ink: null }); };
 const darkWorld = t => { boilSeed('dark world'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: '#2A2530', fill: '#3A3342', fillOp: 90, bleed: .2, tex: .5, ink: null }); glow(W / 2, H * .55, 700, '#E8956A', .3); };
-function fade(k, col = '#15131A') { if (k > .01) { boilSeed('fade'); paint(rectPts(-60, -60, W + 120, H + 120), { wash: col, washOp: 255 * clamp(k), ink: null }); } }
+function fade(k, col = '#15131A') { if (k > .01) fullFrame(() => { boilSeed('fade'); paint(rectPts(-60, -60, W + 120, H + 120), { wash: col, washOp: 255 * clamp(k), ink: null }); }); }
 
 // ---------- props several chapters use ----------
 // An index card with a red top rule; rows of text fill in with k (0..1 across the rows). edge (0..1) turns it edge-on

@@ -1,9 +1,10 @@
 // lint_chapter.mjs: checks a chapter for what a viewer would trip over, in a few seconds and without rendering: codes that
-// crowd, cover content, flash by or found no room, and stretches where the picture holds still (chapterLint() in
-// src/timing.js has the rules).
+// crowd, cover content, flash by or found no room; captions that cover content the picture could lift clear of, or that
+// don't use the frame's width; and stretches where the picture holds still (chapterLint() in src/timing.js has the rules).
 //   node tools/lint_chapter.mjs                 every chapter that has a scene
 //   node tools/lint_chapter.mjs --chapter=2     just that one
-// Exit 1 if anything but a still stretch is found (those are warnings: sometimes a held shot is the point).
+// Exit 1 if anything but a warning is found (a still stretch, a caption over a full frame, a caption a code squeezes:
+// sometimes a held shot is the point, and some pictures fill the frame).
 import puppeteer from 'puppeteer-core';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -24,9 +25,9 @@ for (const c of chapters) {
   const t0 = Date.now(), issues = await page.evaluate(() => typeof SHOTS !== 'undefined' && SHOTS.length ? chapterLint() : null);
   await page.close();
   if (!issues) { console.log(`chapter ${c.n}: no scene yet`); continue; }
-  const bad = issues.filter(i => i.kind !== 'static');
+  const WARN = ['static', 'undercap', 'squeezed'], bad = issues.filter(i => !WARN.includes(i.kind));
   errors += bad.length;
-  console.log(`chapter ${c.n} (${c.title}): ${bad.length} problem${bad.length === 1 ? '' : 's'}, ${issues.length - bad.length} still stretch${issues.length - bad.length === 1 ? '' : 'es'}  [${((Date.now() - t0) / 1000).toFixed(1)} s]`);
+  console.log(`chapter ${c.n} (${c.title}): ${bad.length} problem${bad.length === 1 ? '' : 's'}, ${issues.length - bad.length} warning${issues.length - bad.length === 1 ? '' : 's'}  [${((Date.now() - t0) / 1000).toFixed(1)} s]`);
   for (const i of issues) console.log(`  ${i.kind.padEnd(8)} ${i.where.padEnd(30)} ${i.msg}`);
 }
 await browser.close();

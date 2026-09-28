@@ -323,10 +323,23 @@ In about a second per chapter, with no rendering, it replays the chapter DRY and
 - **covers**: a code hiding over a fifth of a board, character or lettering;
 - **brief**: a feature under 6 s or a shelf code under 5 s;
 - **no room** / **late**: a code that found no clean spot, or waited over 8 s for one;
-- **static** (a warning): the layout doesn't change for over 8 s.
+- **static** (a warning): the layout doesn't change for over 8 s;
+- **caption**: the caption covers something that matters for a second or more when the picture had room to rise clear
+  of it; **undercap** (a warning): the same, but the picture fills the frame down to the caption (Curt from behind at
+  the Desk is most of these);
+- **capwrap**: the caption takes more rows than its width needs; **squeezed** (a warning): a code in the bottom-right
+  corner narrows it into an extra row.
 
 The layout planner never covers content if it can help it. A code waits (up to 40 s) for a clean spot, so a burst of
 links shows up as **late** rather than as clutter.
+
+**The lift.** Captions (the drafts' review captions, and a viewer's subtitles) sit in the bottom band. A picture the
+caption would cover is drawn raised just enough to clear it, as far as everything painted above has room (24 px from
+the top). The lift is fixed for as long as that picture is on screen and changes only on a cut. A shot is split
+where it cuts between the Desk and another world. A picture cut off by the bottom edge, like Curt from behind at the
+Desk, stays put. Grounds and floors that reach the bottom are carried down with the lift, so no gap shows. It's the
+same in the draft and the film. A shot can set its own with `fn.lift` (`layout.js`). Review captions wrap by measured
+width to the whole frame (less any code in the corner), evened out across their rows.
 
 ---
 

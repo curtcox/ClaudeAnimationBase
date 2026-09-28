@@ -88,7 +88,11 @@ function stroll(t, t0, t1, x0, x1, u) {
 // active are placed through it automatically (pass {screen:true} to opt out). One level only: always pair with camEnd().
 // LAST_CAM stays set after camEnd(), until the next frame: renderSheet's crops that follow a world point use it.
 let CAM = null, LAST_CAM = null;
-function camBegin(cx = W / 2, cy = H / 2, zoom = 1, rot = 0) { push(); translate(W / 2, H / 2); rotate(rot); scale(zoom); translate(-cx, -cy); CAM = LAST_CAM = { cx, cy, zoom, rot }; }
+// LIFT: how far the shot being drawn is raised, in px, so its picture clears the caption band (liftAt() in layout.js;
+// 0 outside a shot). A shot draws in its own frame as if unlifted: toScreen() answers in that frame, and lettering,
+// occupancy and the full-frame effects below convert to the real one.
+let LIFT = 0;
+function camBegin(cx = W / 2, cy = H / 2, zoom = 1, rot = 0) { push(); translate(W / 2, H / 2); rotate(rot); scale(zoom); translate(-cx, -cy); CAM = LAST_CAM = { cx, cy, zoom, rot, lift: LIFT }; }
 function camEnd() { pop(); CAM = null; }
 function toScreen(x, y, cam = CAM) {
   if (!cam) return [x, y];
@@ -97,7 +101,9 @@ function toScreen(x, y, cam = CAM) {
 }
 
 // ---------- full-frame effects (call outside a camera, in screen space) ----------
-function flash(k, col = '#FFFDF6') { if (k > .01) paint(rectPts(-60, -60, W + 120, H + 120), { wash: col, washOp: 255 * clamp(k), ink: null }); }
+// fullFrame(fn): fn draws in the real frame, whatever the shot's lift
+function fullFrame(fn) { if (!LIFT) return fn(); push(); translate(0, LIFT); const l = LIFT; LIFT = 0; try { fn(); } finally { LIFT = l; pop(); } }
+function flash(k, col = '#FFFDF6') { if (k > .01) fullFrame(() => paint(rectPts(-60, -60, W + 120, H + 120), { wash: col, washOp: 255 * clamp(k), ink: null })); }
 // Light: glow(x, y, r, col, a) ADDS a soft halo of light for anything that shines (stars, lamps, fireflies, magic).
 // p5.brush mixes every colour like pigment, so yellow painted over blue turns green and light can't be painted; this
 // is the one non-paint mark in the kit. It lands on what's painted so far, under anything painted after it, follows
@@ -105,6 +111,19 @@ function flash(k, col = '#FFFDF6') { if (k > .01) paint(rectPts(-60, -60, W + 12
 // DRY: when true, nothing is painted (paint, inkLine, glow and lettering return at once) but everything else runs, so a
 // frame's logic can be replayed cheaply, e.g. to find where its content sits before placing overlays (see layout.js).
 let DRY = false;
+// INK: while the layout replays a frame DRY (from an identity matrix), the screen extents [x0, y0, x1, y1] of everything
+// painted, declared or not (layout.js's lift keeps it all in frame); null otherwise. Points go through p5's current
+// model matrix, so a translate(), a rotate() or the camera is followed.
+let INK = null;
+function inkOf(pts) {
+  const m = p5.instance._renderer.states.uModelMatrix.mat4;
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const [px, py] of pts) {
+    const x = m[0] * px + m[4] * py + m[12], y = m[1] * px + m[5] * py + m[13];
+    if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+  }
+  INK.push([x0, y0, x1, y1]);
+}
 function glow(x, y, r, col = '#FFC766', a = 1) {
   if (DRY || a <= 0 || r < 1) return;
   flushBrush();
@@ -127,7 +146,7 @@ function irisShape(pts, col = PAL.ink, far = 4000) {
     paint([a2, b2, out(b2), out(a2)], { wash: col, washOp: 255, ink: null });
   }
 }
-function iris(cx, cy, r, col = PAL.ink) { if (r < 4) paint(rectPts(-60, -60, W + 120, H + 120), { wash: col, ink: null }); else irisShape(ellPts(cx, cy, r, r, 40), col); }
+function iris(cx, cy, r, col = PAL.ink) { if (r < 4) fullFrame(() => paint(rectPts(-60, -60, W + 120, H + 120), { wash: col, ink: null })); else irisShape(ellPts(cx, cy, r, r, 40), col); }
 
 let T = 0, paperG = null, grainC = null, letG = null, glowTex = null, outC = null, outX = null;
 let LETTERS = [];
@@ -194,7 +213,13 @@ function draftFill(o) {
   if (!o.wash) return { ...o, wash: o.fill, washOp: 255 * k * .8, fill: null };
   return { ...o, wash: isHex(o.wash) && isHex(o.fill) ? mixCol(o.wash, o.fill, k * .7) : o.wash, fill: null };
 }
-function paint(pts, o = {}) { if (!DRY) centred(pts, (P) => paintAt(P, DRAFT && o.fill ? draftFill(o) : o)); }
+function paint(pts, o = {}) { if (DRY && INK && pts.length) inkOf(pts); if (!DRY) centred(LIFT ? reachDown(pts) : pts, (P) => paintAt(P, DRAFT && o.fill ? draftFill(o) : o)); }
+// In a lifted shot, whatever reached the bottom of its frame (a ground, a floor, a desk, a body cut off by the edge) is
+// carried on down by the lift, so the raised picture never shows a gap below it.
+function reachDown(pts) {
+  const d = LIFT / (CAM ? CAM.zoom : 1) + 2;
+  return pts.map(p => (CAM ? toScreen(p[0], p[1])[1] : p[1]) >= H - 1 ? [p[0], p[1] + d] : p);
+}
 function paintAt(pts, o) {
   if (o.wash || o.fill || o.hatch) {
     if (o.wash) brush.wash(o.wash, o.washOp ?? 255); else brush.noWash();
@@ -211,7 +236,7 @@ function paintAt(pts, o) {
   }
 }
 function inkLine(pts, sw = 1, col = PAL.ink, br = 'ink', curv = .5) {
-  if (DRY) return;
+  if (DRY) { if (INK && pts.length) inkOf(pts); return; }
   // p5.brush's spline throws for fewer than two points and draws nothing for exactly two, so a straight line gets its midpoint
   if (pts.length < 2) return;
   if (pts.length === 2) pts = [pts[0], [(pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2], pts[1]];
@@ -222,6 +247,7 @@ function inkLine(pts, sw = 1, col = PAL.ink, br = 'ink', curv = .5) {
 // Use sparingly: see "No text" in ANIMATION_GUIDE.md. Clawd's emotes are painted and never need these.
 function letter(txt, x, y, size, color, o = {}) {
   if (CAM && !o.screen) { [x, y] = toScreen(x, y); size *= CAM.zoom; o = { ...o, rot: (o.rot || 0) + CAM.rot }; if (o.font) o.font = o.font.replace(/(\d+(\.\d+)?)px/, (m, v) => (v * CAM.zoom) + 'px'); }
+  y -= LIFT;
   LETTERS.push({ txt, x, y, size, color, ...o });
 }
 // Comic sound effect: pops in at age 0, wobbles, fades by `life` seconds.
@@ -387,7 +413,7 @@ window.renderSheet = async (times, cols = 3, w = 640, crop = null, at = null) =>
   for (let i = 0; i < times.length; i++) {
     const t0 = performance.now(); T = times[i]; await redraw(); composite(times[i]); ms.push(Math.round(performance.now() - t0));
     const x = (i % cols) * w, y = Math.floor(i / cols) * h;
-    const [cx, cy] = at ? toScreen(at[0], at[1], LAST_CAM).map((v, j) => v - (j ? ch : cw) / 2) : crop || [0, 0];
+    const [cx, cy] = at ? toScreen(at[0], at[1], LAST_CAM).map((v, j) => j ? v - ch / 2 - (LAST_CAM?.lift || 0) : v - cw / 2) : crop || [0, 0];
     c.drawImage(outC, cx, cy, cw, ch, x, y, w, h); c.fillStyle = 'rgba(0,0,0,.65)'; c.fillRect(x, y, 84, 24); c.fillStyle = '#fff'; c.font = '15px sans-serif'; c.fillText(times[i].toFixed(2) + 's', x + 6, y + 17);
   }
   return { url: sc.toDataURL('image/jpeg', .9), ms };
