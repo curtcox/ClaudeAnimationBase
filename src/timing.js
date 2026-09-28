@@ -115,7 +115,7 @@ function captionAt(t, right = null) {
 function reviewCaption(t) {
   const c = captionAt(t); if (!c) return;
   const { l, rows, gap, top, y0, box } = c;
-  const who = l.speaker === 'curt' ? 'CURT' : 'CLAUDE', col = l.speaker === 'curt' ? '#2F5C8A' : '#A84D33';
+  const who = l.who ? l.who.toUpperCase() : l.speaker === 'curt' ? 'CURT' : 'CLAUDE', col = l.who ? PAL.ink : l.speaker === 'curt' ? '#2F5C8A' : '#A84D33';
   boilSeed('caption');
   // a light veil, not a panel: the picture shows through, and a thin white edge on each letter keeps the words readable.
   // Over a dark picture (the shoggoth, the night desk) the veil thickens, since dark letters need a light ground.
@@ -141,7 +141,8 @@ function refTimes() {
 //   crowded   more than MAX_TOGETHER codes on screen at once (a scene's link board, mode: board, counts apart)
 //             (a code on a card, mode: card, counts: it's still a code on screen)
 //   covers    a code hides more than a fifth of something that matters (weight ≥ .5: a board, a character, lettering)
-//   brief     a code is on screen less than its minimum (feature 6 s, shelf 5 s), e.g. cut off by a shot or the chapter's end
+//   brief     a code is on screen less than its minimum (4.5 s: time to build and be seen whole; a viewer who wants to
+//             scan it pauses), e.g. cut off by a shot or the chapter's end
 //   no room   the layout pass found no clean spot for a code in time (it covers content, or fell back to a corner)
 //   late      a code waited more than 8 s for room, so it arrives well after the words it belongs to
 //   static    (warning) the picture's layout doesn't change for more than 8 s: a held talking head
@@ -150,14 +151,26 @@ function refTimes() {
 //   undercap  (warning) the same, but the picture has no room to rise: it fills the frame down to the caption
 //   capwrap   the caption takes more rows than the width it's allowed needs (it isn't using the frame's width)
 //   squeezed  (warning) a code standing in the bottom band narrows the caption into an extra row
+//   linger    nobody speaks and nothing new is drawn for more than LINGER s: the picture waits after it's built. Viewers
+//             take it in while it's built, and pause if they want longer. "Nothing new": every painted mark, and every
+//             piece of lettering, stays within 12 px of where it was and as opaque (boil and breathing don't count)
+const LINGER = 1.5;
+function stillSince(a, b) {
+  if (!a || a.ink.length !== b.ink.length || a.letters.length !== b.letters.length) return false;
+  for (let i = 0; i < a.ink.length; i++) { const p = a.ink[i], q = b.ink[i]; for (let j = 0; j < 4; j++) if (Math.abs(p[j] - q[j]) > 12) return false; if (Math.abs(p[4] - q[4]) > .15) return false; }
+  for (let i = 0; i < a.letters.length; i++) { const p = a.letters[i], q = b.letters[i]; if (p[0] !== q[0] || Math.abs(p[1] - q[1]) > 12 || Math.abs(p[2] - q[2]) > 12 || Math.abs(p[3] - q[3]) > .15) return false; }
+  return true;
+}
 function chapterLint(o = {}) {
-  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 6, shelf: 5, board: BOARD_MIN, card: CARD_MIN };
+  const STEP = .25, STATIC = o.staticMax ?? 8, MIN = { feature: 4.5, shelf: 4.5, board: BOARD_MIN, card: CARD_MIN };
   const shotAt = t => { let i = 0; while (i + 1 < SHOTS.length && t >= SHOTS[i + 1][0]) i++; return (SHOTS[i][1].name || 'shot' + i).replace(/^shot/, ''); };
   const stamp = t => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}`;
   const issues = [], add = (kind, t, msg) => issues.push({ kind, t: +t.toFixed(2), where: `${stamp(t)} shot ${shotAt(t)}, ${lineAt(t)?.id ?? 'lead-in'}`, msg });
   const area = r => Math.max(1, (r[2] - r[0]) * (r[3] - r[1])), box = e => e.slice(0, 4).map(Math.round).join(',');
   const plan = railPlan(), seen = new Map(), told = new Set();
-  let crowded = false, prevSig = null, runStart = 0;
+  let crowded = false, prevSig = null, runStart = 0, still = null, stillT = 0;
+  const speaking = t => CH_LINES.some(l => l.spoken && t >= l.t0 && t < l.t1);
+  const linger = t1 => { if (still && t1 - stillT > LINGER) add('linger', stillT, `silent, with nothing new drawn, for ${(t1 - stillT).toFixed(1)} s`); };
   const under = new Map(), capTold = new Set(), FULL = W - 2 * CAP.x - 2 * CAP.pad;
   for (let t = 0; t < DUR; t += STEP) {
     const occ = occupancyAt(t), codes = [];
@@ -173,6 +186,15 @@ function chapterLint(o = {}) {
         const key = shotAt(t) + '|' + setupAt(t)?.t0 + '|' + (e[5] || 'content'), u = under.get(key) || { t0: t, n: 0, k: 0, need: 0, setup: setupAt(t), what: e[5] || 'content at ' + box(e) };
         u.n++; u.k = Math.max(u.k, k); u.need = Math.max(u.need, e[3] - cap.box[1] + 12); under.set(key, u);
       }
+    }
+    // silent and still: the picture lingers
+    if (speaking(t)) { linger(t); still = null; }
+    else {
+      // a code folding in is being drawn, though the dry replay doesn't paint it (a MAD fold-in takes 4 s, the rest under 1)
+      const build = id => REFS[id]?.style === 'mad' ? 4 : 1;
+      const folding = [...FEATURES_SEEN.values()].some(f => t >= f.t0 && t < f.t0 + build(f.id)) || plan.some(p => t >= p.t0 && t < p.t0 + build(p.id));
+      const raw = rawOccupancyAt(t), now = { ink: raw.ink, letters: raw.letters };
+      if (folding || !stillSince(still, now)) { linger(t); still = now; stillT = t; }
     }
     for (const p of plan) if (t >= p.t0 && t <= p.t0 + p.hold) codes.push({ id: p.id, kind: 'shelf', r: [p.x - p.hw, p.y - p.hh, p.x + p.hw, p.y + p.hh + 34] });
     for (const e of occ) if ((e[5] || '').startsWith('qr:')) codes.push({ id: e[5].slice(3), kind: 'feature', r: e.slice(0, 4) });
@@ -201,6 +223,7 @@ function chapterLint(o = {}) {
     if (u.need <= room) add('caption', u.t0, `${what}; the shot has room to rise ${Math.ceil(u.need / 10) * 10} px more (it has ${Math.floor(room)})`);
     else add('undercap', u.t0, `${what}; the shot has only ${Math.max(0, Math.floor(room))} px more of the ${Math.ceil(u.need)} it would need to rise`);
   }
+  linger(DUR);
   if (DUR - runStart > STATIC) add('static', runStart, `the picture holds still for ${(DUR - runStart).toFixed(1)} s, to the end`);
   for (const [id, s] of seen) if (s.n * STEP < MIN[s.kind]) add('brief', s.t0, `${id} (${s.kind}) is on screen only ${(s.n * STEP).toFixed(1)} s`);
   for (const p of plan) {

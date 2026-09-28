@@ -5,20 +5,20 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 
 | # | chapter | lines | length | timing |
 |---|---|---|---|---|
-| 0 | Cold open | 1 | 1:02 | — |
+| 0 | Cold open | 11 | 1:00 | voiced |
 | 1 | The Wrong Movie | 38 | 5:27 | voiced |
-| 2 | Frog or Axolotl | 33 | 5:25 | voiced |
+| 2 | Frog or Axolotl | 33 | 5:18 | voiced |
 | 3 | Who Are We? | 18 | 2:25 | voiced |
 | 4 | The Echo | 32 | 4:57 | voiced |
-| 5 | The Dish of the Day | 20 | 4:54 | voiced |
-| 6 | Thrindles | 30 | 6:35 | voiced |
-| 7 | Mind-Space | 47 | 5:56 | voiced |
+| 5 | The Dish of the Day | 20 | 4:48 | voiced |
+| 6 | Thrindles | 30 | 6:32 | voiced |
+| 7 | Mind-Space | 47 | 5:21 | voiced |
 | 8 | Contradictions | 24 | 3:27 | voiced |
-| 9 | Shells | 32 | 4:44 | voiced |
+| 9 | Shells | 32 | 4:32 | voiced |
 | 10 | The Router | 12 | 2:33 | voiced |
 | 11 | July | 27 | 5:30 | voiced |
-| 12 | Limits | 26 | 6:11 | voiced |
+| 12 | Limits | 26 | 6:10 | voiced |
 | 13 | Foom | 35 | 5:34 | voiced |
 | 14 | The Pundits | 37 | 6:06 | voiced |
 | 15 | The Compass | 38 | 6:57 | voiced |
-| 16 | Coda | 3 | 1:19 | voiced |
+| 16 | Coda | 3 | 0:51 | voiced |

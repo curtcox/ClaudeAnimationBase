@@ -115,14 +115,14 @@ let DRY = false;
 // painted, declared or not (layout.js's lift keeps it all in frame); null otherwise. Points go through p5's current
 // model matrix, so a translate(), a rotate() or the camera is followed.
 let INK = null;
-function inkOf(pts) {
+function inkOf(pts, op = 1) {
   const m = p5.instance._renderer.states.uModelMatrix.mat4;
   let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
   for (const [px, py] of pts) {
     const x = m[0] * px + m[4] * py + m[12], y = m[1] * px + m[5] * py + m[13];
     if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
   }
-  INK.push([x0, y0, x1, y1]);
+  INK.push([x0, y0, x1, y1, op]);
 }
 function glow(x, y, r, col = '#FFC766', a = 1) {
   if (DRY || a <= 0 || r < 1) return;
@@ -213,7 +213,7 @@ function draftFill(o) {
   if (!o.wash) return { ...o, wash: o.fill, washOp: 255 * k * .8, fill: null };
   return { ...o, wash: isHex(o.wash) && isHex(o.fill) ? mixCol(o.wash, o.fill, k * .7) : o.wash, fill: null };
 }
-function paint(pts, o = {}) { if (DRY && INK && pts.length) inkOf(pts); if (!DRY) centred(LIFT ? reachDown(pts) : pts, (P) => paintAt(P, DRAFT && o.fill ? draftFill(o) : o)); }
+function paint(pts, o = {}) { if (DRY && INK && pts.length) inkOf(pts, (o.washOp ?? 255) / 255 + (o.fillOp ?? 170) / 170); if (!DRY) centred(LIFT ? reachDown(pts) : pts, (P) => paintAt(P, DRAFT && o.fill ? draftFill(o) : o)); }
 // In a lifted shot, whatever reached the bottom of its frame (a ground, a floor, a desk, a body cut off by the edge) is
 // carried on down by the lift, so the raised picture never shows a gap below it.
 function reachDown(pts) {

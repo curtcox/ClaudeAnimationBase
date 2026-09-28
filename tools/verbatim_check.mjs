@@ -5,10 +5,10 @@
 //   1. conversation.md parses and re-renders byte for byte, and matches the hash script.yaml was built from
 //   2. script.yaml's lines are the transcript's blocks, complete and in order, with identical text
 //   3. every paragraph and list item is spoken; only tables, tool beats, images and sources blocks are silent
-//   4. every spoken line's speech is exactly the automatic reading (markdown stripped + pronounce.yaml), or a
+//   4. every spoken line's speech is exactly the automatic reading (markdown stripped, typos.yaml's fixes, pronounce.yaml), or a
 //      reviewed entry in overrides.yaml
 import { readFileSync, writeFileSync } from 'node:fs';
-import { PATHS, readYaml, sha256, parseConversation, renderConversation, blocksToLines, SPOKEN_KINDS, compileRespellings, autoSpeech } from './script_lib.mjs';
+import { PATHS, readYaml, sha256, parseConversation, renderConversation, blocksToLines, SPOKEN_KINDS, compileRespellings, autoSpeech, loadTypos, meant } from './script_lib.mjs';
 
 const errors = [], note = e => errors.push(e);
 const md = readFileSync(PATHS.conversation, 'utf8');
@@ -29,13 +29,14 @@ for (let i = 0; i < Math.min(want.length, got.length); i++) {
 
 const respellings = compileRespellings(readYaml(PATHS.pronounce));
 const overrides = new Map((readYaml(PATHS.overrides) || []).map(o => [o.id, o]));
+const typos = loadTypos(got);
 const used = new Map(), ovRows = [];
 for (const g of got.filter(l => l.spoken)) {
   const ov = overrides.get(g.id);
-  const expect = ov ? ov.speech.trim().replace(/\s+/g, ' ') : autoSpeech(g.text, respellings).speech;
+  const expect = ov ? ov.speech.trim().replace(/\s+/g, ' ') : autoSpeech(meant(g.text, typos[g.id]), respellings).speech;
   if (g.speech !== expect) note(`${g.id}: speech isn't the ${ov ? 'override' : 'automatic reading'}`);
   if (ov) ovRows.push({ g, ov });
-  else for (const m of autoSpeech(g.text, respellings).used) used.set(m, [...(used.get(m) || []), g.id]);
+  else for (const m of autoSpeech(meant(g.text, typos[g.id]), respellings).used) used.set(m, [...(used.get(m) || []), g.id]);
 }
 for (const id of overrides.keys()) if (!got.some(l => l.id === id)) note(`overrides.yaml: no line ${id}`);
 

@@ -1,27 +1,20 @@
 // ch00_cold_open.js: chapter 0, the cold open (T01.U.00, the attached page). Storyboard: docs/storyboards/ch00_cold_open.md.
-// Nothing is voiced: the viewer reads the MAD page before anyone speaks. Times here are from the image's line (c0) and the
-// chapter's end, since there are no spoken lines to hang them on.
+// The page's ten balloons are voiced (script/cold_open.yaml: lines MAD.<balloon>, one voice per person on the page), and
+// each letters in word by word as it's said. Nothing waits once it's drawn: a viewer who wants longer pauses.
 (() => {
   const c0 = L('T01.U.00').t0;
   // the page in the world: 1800 wide, centred; P(u, v) is a point on it in its own units (comic.js's MAD)
   const PX = 60, PW = 1800, PS = PW / MAD.W, PY = (H - MAD.H * PS) / 2;
   const P = (u, v) => [PX + u * PS, PY + v * PS];
-  // Reading time: the balloons come in reading order, each lettering in at 10 words/s, and the next waits until this one
-  // could be read at ~210 words a minute. READ[name] = [starts, lettered].
-  const READ = {}, PER_WORD = .28, GAP = .8, EYES = 1.6, PAN = 1.6;
-  function reading(names, t0) {
-    for (const n of names) { const w = madWords(n); READ[n] = [t0, t0 + Math.max(.5, w * .1)]; t0 += w * PER_WORD + GAP; }
-    return t0;
-  }
-  const right = MAD.order.filter(n => !MAD.leftSide.includes(n)), TURN = .6;
+  // READ[name] = [starts, lettered]: a balloon letters in across its line
+  const READ = Object.fromEntries(MAD.order.map(n => [n, [L('MAD.' + n).t0, L('MAD.' + n).t1]]));
+  const EYES = 1.6, PAN = 1.6, TURN = .6;   // script/cold_open.yaml's `before`s: the suspect waits EYES + PAN, the turtle TURN
+  const right = MAD.order.filter(n => !MAD.leftSide.includes(n));
   // times: A the left panel (its six balloons, then the ape's eyes), B the right (the turtleneck man turns before his
-  // balloon), C the whole page and its code, D the title. The chapter's hold_s (chapters.yaml) makes room for all of it.
-  const tB = reading(MAD.leftSide, c0 + .6) + EYES;
-  reading(right.slice(0, -1), tB + PAN);
-  const tTurn = READ.villain[0] + madWords('villain') * PER_WORD + GAP; reading(['turtle'], tTurn + TURN);
-  const tC = READ.turtle[0] + madWords('turtle') * PER_WORD + GAP + .4;
-  const tFull = tC + 1.5, tAside = tC + 4, tCode = tAside + .8, tD = DUR - 6, tTitle = tD + 1.7;
-  const QR_HOLD = 6.5;
+  // balloon), C the whole page, moving aside for its code, D the title
+  const tB = READ.suspect[0] - PAN, tTurn = READ.turtle[0] - TURN;
+  const tC = READ.turtle[1] + .3, tFull = tC + 1.5, tAside = tFull, tCode = tAside + .8, tD = DUR - 4, tTitle = tD + 1.7;
+  const QR_HOLD = tD - tCode - .5;   // up until the page flies to the monitor (its fold-in takes 4 s)
   const ks = (t, names) => Object.fromEntries(MAD.order.map(n => [n, names.includes(n) && READ[n] ? seg(t, ...READ[n]) : 1]));
   // the camera on the page: the left panel's balloons and faces, a slow push; across the gutter; then the whole page
   // (zoom 2 frames a panel's balloons and faces; the centres keep the frame on the page)
@@ -30,7 +23,7 @@
   const camRight = t => kf(t, [[tB, [L0[0] + 20, L0[1] + 30, 2.15]], [tB + PAN, [R0[0], R0[1], 2]], [tTurn, [R0[0], R0[1], 2]], [tC, [R0[0], R0[1] + 15, 2.05]]]);
   // beside the code, the page sits in the left of the frame, 860 px wide (the fold-in card takes the right)
   const ASIDE = [960 + (960 - 470) / (860 / PW), 540, 860 / PW];
-  const camPage = t => kf(t, [[tC, [R0[0], R0[1] + 15, 2.05]], [tFull, [960, 540, 1]], [tAside, [960, 540, 1]], [tAside + .8, ASIDE]]);
+  const camPage = t => kf(t, [[tC, [R0[0], R0[1] + 15, 2.05]], [tFull, [960, 540, 1]], [tAside + .8, ASIDE]]);
 
   function page(t, cam, o = {}) {
     camBegin(...cam);
@@ -49,7 +42,7 @@
     const turn = ease(seg(t, tTurn, tTurn + TURN));
     page(t, camRight(t), { apeLook: .7, k: ks(t, right), turn });
   }
-  // C: the whole page, held to be read; then it moves aside for its code, which folds in
+  // C: the whole page, then it moves aside for its code, which folds in
   function shotC(t) {
     page(t, camPage(t), { apeLook: .7 });
     qrFeature('mad157', t, tCode, { hold: QR_HOLD });

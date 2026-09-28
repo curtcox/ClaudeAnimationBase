@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Foom",
  "scene": "ch13_foom.js",
  "lead": 1.2,
- "duration": 334.41,
+ "duration": 334.01,
  "hold": 0,
  "lines": [
   {
@@ -526,10 +526,10 @@ window.CHAPTER = {
    "kind": "para",
    "spoken": true,
    "t0": 288.42,
-   "t1": 306.5,
-   "end": 307.4,
+   "t1": 306.1,
+   "end": 307,
    "text": "Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember OOM entering the \"mainstream\" discourse as a common standalone term before Dwarkesh interviewed Leopold with was long after the Foom Debate.",
-   "speech": "Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember oom entering the \"mainstream\" discourse as a common standalone term before DWAR-kesh interviewed Leopold with was long after the Foom Debate.",
+   "speech": "Agree. It seems like just a coincidence albeit a strongly suggestive one. I don't really remember oom entering the \"mainstream\" discourse as a common standalone term before DWAR-kesh interviewed Leopold which was long after the Foom Debate.",
    "refs": [
     "dwarkesh-leopold",
     "dwarkesh-patel"
@@ -539,17 +539,17 @@ window.CHAPTER = {
     "Leopold [with→which] was"
    ],
    "estimated": false,
-   "mouth": "0006964368887433000000000000009455499963699504995208034778875436543200223000004797689886000366564226999888744465478753055254443300000000000000000788997489999999999877850068999998543685537787767765400000006767999875643455544456448764204544333200000000000784834543999999998343079997978988887355565544443300000084234776655367899850347654455400588538667885778785024544543200000000000997668879999999960037886303554320046333665543524443002",
-   "words": [0,0,7,1.09,10,1.33,16,1.63,21,1.81,26,2.04,28,2.15,40,3.06,47,3.76,49,3.92,56,4.46,67,5.1,72,5.72,74,6.04,80,6.27,87,6.52,96,7,100,7.41,109,7.94,113,8.4,126,9.35,136,10.19,139,10.6,141,10.71,148,11.19,159,12.03,164,12.57,171,13.23,181,14.12,193,14.61,201,15.33,206,15.86,210,16.02,215,16.49,221,17.02,225,17.28,230,17.59]
+   "mouth": "00099754666543200000000000000069355997747973389634054599946734300033000000369875987633564430247899876443345439853044233330000000000000000003999850009787899999997874002999987666675202698546988767776520000000398999987650357665554444208743026442433000000008779704437999998532088877766655444389755443300000000087320699999543668750438976645500098864676446888502343333000000000009743875577899998654798700354540049986543405533",
+   "words": [0,0,7,0.91,10,1.33,16,1.63,21,1.79,26,1.96,28,2.06,40,2.82,47,3.52,49,3.67,58,4.29,69,4.86,74,5.44,76,5.8,82,6.03,89,6.29,98,6.84,102,7.42,111,7.98,115,8.4,128,9.8,138,10.29,141,10.64,143,10.78,150,11.18,161,11.87,166,12.43,173,13.2,183,13.96,195,14.48,203,15.27,209,15.64,213,15.84,218,16.23,224,16.6,228,16.76,233,17.11]
   },
   {
    "id": "T67.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 307.4,
-   "t1": 324.04,
-   "end": 324.39,
+   "t0": 307,
+   "t1": 323.64,
+   "end": 323.99,
    "text": "That matches my sense. \"Counting the OOMs\" was Aschenbrenner's framing in *Situational Awareness* (June 2024), and the Dwarkesh interview spread it. Before that, OOM lived mostly in physics shorthand and, for people like you, in \"out of memory\" errors.",
    "speech": "That matches my sense. \"Counting the ooms\" was ASH-en-brenner's framing in Situational Awareness (June 2024), and the DWAR-kesh interview spread it. Before that, oom lived mostly in physics shorthand and, for people like you, in \"out of memory\" errors.",
    "refs": [
@@ -565,9 +565,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 324.39,
-   "t1": 332.31,
-   "end": 332.91,
+   "t0": 323.99,
+   "t1": 331.91,
+   "end": 332.51,
    "text": "So the pun runs backward in time. Foom came first, and OOM arrived sixteen years later and made it look intentional.",
    "speech": "So the pun runs backward in time. Foom came first, and oom arrived sixteen years later and made it look intentional.",
    "refs": [

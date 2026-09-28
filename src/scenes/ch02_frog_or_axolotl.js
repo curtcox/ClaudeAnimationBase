@@ -102,14 +102,13 @@
     claudeAs(x, rooms > 0 ? 690 : 640, rooms > 0 ? 17 : 22, { ...emotions(t, [[0, 'neutral']]), mouth: clawdMouth(talkOf(t, 'claude')), view: walking ? 'side' : 'front', walk: walking ? t * 2 : undefined, boilKey: 'claude B' });
     screenWorld(t, 1 - seg(t, L('T07.C.01').t0 + .7, L('T07.C.01').t0 + 1.6));
   }
-  // C: the chart (the attached image), repainted row by row; the frog-chart QR
+  // C: the chart (the attached image), repainted row by row beside its frog-chart QR, which stays up while Curt asks
   function shotC(t) {
     const c0 = L('T08.U.00').t0, k = seg(t, c0 - .2, c0 + .8);
     if (k < 1) { deskShot(t, { cam: pushInto('right', k) }); return; }
     paperWorld(t, '#F6F2EA');
-    const rows = seg(t, c0 + .8, c0 + 6.3), side = ease(seg(t, c0 + 6.5, c0 + 7.3));
-    frogChart(lerp(200, 40, side), lerp(90, 170, side), lerp(1520, 860, side), lerp(900, 740, side), { k: rows, t });
-    qrFeature('frog-chart', t, c0 + 7.3, { hold: 8 });   // once the chart has moved aside
+    frogChart(40, 170, 860, 740, { k: seg(t, c0 + .8, c0 + 5.3), t });
+    qrFeature('frog-chart', t, c0 + 1.2, { hold: 8 });
     screenWorld(t, 1 - seg(t, c0 + .8, c0 + 1.6));
   }
   // D: "How does this make you feel?" / "Caught, a little" / the two example chats / "I answered 'Axolotl'…"
@@ -355,7 +354,7 @@
     [0, shotA],
     [L('T07.U.01').t0, shotB],
     [L('T08.U.00').t0 - .2, shotC],
-    [L('T08.U.01').t0, shotD],
+    [L('T08.U.01').t1, shotD],
     [L('T08.C.03').t0, shotE],
     [L('T08.C.04').t0, shotF],
     [L('T08.C.06').t0, shotG],

@@ -7,7 +7,7 @@ import YAML from 'yaml';
 export const PATHS = {
   conversation: 'script/conversation.md', chapters: 'script/chapters.yaml', pronounce: 'script/pronounce.yaml',
   overrides: 'script/overrides.yaml', script: 'script/script.yaml', report: 'script/verbatim_report.md',
-  summary: 'script/summary.md',
+  summary: 'script/summary.md', typos: 'script/typos.yaml',
 };
 export const readYaml = p => YAML.parse(readFileSync(p, 'utf8'));
 export const sha256 = s => createHash('sha256').update(s, 'utf8').digest('hex');
@@ -20,7 +20,7 @@ export const PACE = {
   turnGap: 0.6,      // between one exchange and the next
   tool: 2.5,         // "Searched the web" beat
   image: 6,          // an attached image, shown
-  tableBase: 2.5, tableRow: 0.8,   // a painted table, held long enough to read
+  tableBase: 1, tableRow: 0.3,     // a painted table: as long as it takes to paint in (the viewer reads it as it comes)
 };
 
 const HEADER_RE = /^# Conversation transcript\n\nSource: (\S+)\n\n/;
@@ -109,6 +109,32 @@ export function autoSpeech(text, respellings) {
   s = s.replace(/\s+/g, ' ').trim();
   return { speech: s, used };
 }
+
+// Curt's typos (script/typos.yaml): a mark is the typed text around the slip, the slip in brackets ([typo→fix],
+// [+inserted], [deleted→]). typed(mark) is what's on the page; meant(mark) is what he meant.
+export const typedOf = mark => mark.replace(/ \[\+[^\]]+\]/g, '').replace(/\[\+[^\]]+\] ?/g, '').replace(/\[([^\]→]*)→[^\]]*\]/g, '$1');
+export const meantOf = mark => mark.replace(/\[\+([^\]]+)\]/g, '$1').replace(/\[[^\]→]*→([^\]]*)\]/g, '$1').replace(/ {2,}/g, ' ');
+// { lineId: [mark] }, each mark checked against its line's text
+export function loadTypos(lines) {
+  const byId = new Map(lines.map(l => [l.id, l])), out = {};
+  for (const { line, mark } of readYaml(PATHS.typos) || []) {
+    const l = byId.get(line); if (!l) throw new Error(`typos.yaml: no line ${line}`);
+    if (!l.text.includes(typedOf(mark))) throw new Error(`typos.yaml: "${typedOf(mark)}" isn't in ${line}`);
+    (out[line] ||= []).push(mark);
+  }
+  return out;
+}
+// The lines a chapter's `page` file (chapters.yaml; script/cold_open.yaml) adds: a page's balloons, voiced. Not the
+// transcript's, so never in script.yaml: timeline.mjs times them after the chapter's own lines, voice.mjs voices them.
+export function pageLines(c) {
+  if (!c.page) return [];
+  return readYaml(c.page).map(b => {
+    const speech = b.say.replace(/^\[[^\]]*\]\s*/, '');   // without its audio tag
+    return { id: `MAD.${b.balloon}`, ch: c.n, speaker: b.speaker, who: b.who, kind: 'balloon', spoken: true, text: speech, speech: b.say, words: words(speech), before: b.before || 0 };
+  });
+}
+// the words as Curt meant them: the voice reads these, while the page keeps what he typed
+export const meant = (text, marks = []) => marks.reduce((s, m) => s.replace(typedOf(m), meantOf(m)), text);
 
 export const words = s => (s.match(/\S+/g) || []).length;
 

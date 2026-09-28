@@ -1,0 +1,16 @@
+# The cold open's voices: the MAD #157 page's ten balloons, read aloud as the page is shown. Hand-edited.
+# The page's own words are lettered from src/comic.js (MAD.balloons); these are what each voice says, in reading order.
+# tools/timeline.mjs makes each a line of chapter 0 (id MAD.<balloon>, kind balloon), timed one after another, with
+# `before` seconds of picture first (the ape's eyes, the pan across the gutter, the turtleneck man turning to us).
+# tools/voice.mjs voices them like any other line, in the voices script/voices.yaml casts for the page's people.
+# who names the speaker in captions. say may start with an ElevenLabs v3 audio tag in brackets: how it's said, never said aloud.
+- { balloon: officer,    speaker: officer, who: "the officer", say: "[shouting] Hold it! What did that ape say?!" }
+- { balloon: silly,      speaker: handler, who: "the handler", say: "[nervously] Uh, don't be silly! Apes can't speak!" }
+- { balloon: positive,   speaker: officer, who: "the officer", say: "I'm positive I heard that ape speak!" }
+- { balloon: impossible, speaker: handler, who: "the handler", say: "Impossible! Apes do not have the power of speech!" }
+- { balloon: sound,      speaker: officer, who: "the officer", say: "Then how come I heard sound coming from his mouth?!" }
+- { balloon: handler,    speaker: handler, who: "the handler", say: "Because THAT ape is a ventriloquist!" }
+- { balloon: suspect,    speaker: blond,   who: "the blond man", say: "We suspect you are hiding an intelligent ape that escaped as an infant twenty years ago!", before: 3.2 }
+- { balloon: fuss,       speaker: bearded, who: "the bearded man", say: "It's not true! Besides, why all this fuss about a talking ape?" }
+- { balloon: villain,    speaker: villain, who: "the villain", say: "Because an intelligent, talking ape could lead the other apes out of their slavery... and we must perpetuate slavery! We have always needed slaves, and we always will!" }
+- { balloon: turtle,     speaker: turtle,  who: "the man in the turtleneck", say: "Ever get the feeling you're in the wrong movie?", before: .6 }

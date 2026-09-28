@@ -53,7 +53,8 @@ function replayAt(t) {
     SHOTS[i][1](t, t - t0, end - t0);
   } finally { pop(); }
   CAM = null; occupyLetters();
-  const occ = OCC; occ.ink = INK;   // everything painted, too (the lift's room)
+  const occ = OCC; occ.ink = INK;   // everything painted, too (the lift's room, and the chapter check's linger)
+  occ.letters = LETTERS.map(L => [L.txt, L.x, L.y, (L.alpha ?? 1) * Math.min(1, L.pop ?? 1)]);
   ({ T, CAM, LAST_CAM, LETTERS, OCC, BOILN, CLAWD_N, LIFT, INK } = saved); DRY = saved.dry;
   return occ;
 }

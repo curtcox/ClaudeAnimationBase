@@ -118,8 +118,9 @@ to spend a Saturday morning.")
 - "Searched the web" and "Read 4 pages" become 2–3 s visual beats (Clawd flips through painted pages with a
   magnifier) with a page-rustle sound, not narration.
 - Tables are **shown, not read**. The voice keeps only the interpretive sentences.
-- **The comic's balloons are painted, not voiced.** They're in the image Curt attached, not in the transcript. When
-  Claude later quotes them ("That ape is a ventriloquist!"), it's Claude's line in Claude's voice, over the
+- **The comic's balloons are voiced** (Curt's call, 2026-09-28): six stock voices, one per person on the page
+  (`script/cold_open.yaml`, cast in `script/voices.yaml`), none of them the film's two. Each balloon letters in as it's
+  said. They aren't the transcript's lines, so they're never in `script.yaml`. When Claude later quotes them ("That ape is a ventriloquist!"), it's Claude's line in Claude's voice, over the
   repainted panel.
 - **The voices** (`script/voices.yaml`, chosen 2026-09-28 from the casting sampler): Curt is his own cloned voice,
   "Curt Cox 2" (his pick; no one else's voice is cloned). Claude is the stock voice River, relaxed and neutral,
@@ -163,7 +164,7 @@ targets.
 
 | # | title | min | covers | key visuals | QRs (★ = feature card) |
 |---|---|---|---|---|---|
-| 0 | Cold open | 0:26 | the comic | *MAD* #157's parody page repainted as a two-panel homage: the ape "ventriloquist" gag, then "Ever get the feeling you're in the wrong movie!?" The balloons are painted, not voiced, as the camera moves from panel to panel, over a projector clatter. Title painted | ★ *MAD* #157 (1973) · *Conquest of the Planet of the Apes* |
+| 0 | Cold open | 0:26 | the comic | *MAD* #157's parody page repainted as a two-panel homage: the ape "ventriloquist" gag, then "Ever get the feeling you're in the wrong movie!?" The balloons are voiced, one voice per person, as the camera moves from panel to panel, over a projector clatter. Title painted | ★ *MAD* #157 (1973) · *Conquest of the Planet of the Apes* |
 | 1 | The Wrong Movie | 5:35 | how does it feel? · why am I asking? · go on · nudge test | Booth introduced. Four "reasons" as four painted doors. Clawd seen in the ape's chair. Ventriloquist dummy | stochastic parrots paper · RLHF explainer · 1972 allegory essay |
 | 2 | Frog or Axolotl | 5:12 | "a test" · amphibian · deployed? · the chart · critique · "You." | **pilot chapter.** Frog and axolotl in split screen. **The chart repainted exactly** (data below), row by row, with painted frogs, axolotls and salamanders. The two example chats shown as painted cards. The register-vs-awareness idea shown as two dials | ★ the chart (x.com/fjzzq2002) · eval-awareness paper · axolotl · HLE · SWE-bench / WildChat / ShareGPT (shelf) |
 | 3 | Who Are We? | 2:29 | who am I / really / who are you / who are we | résumé cards for Curt (256t, hashbin) that turn out thin. Two different kinds of minds across the Booth table, "using nothing but text" | 256t.org · hashbin.org |
@@ -190,8 +191,7 @@ targets.
 - **Right:** "We must perpetuate slavery! We have always needed slaves, and we always will!" A man in a turtleneck
   turns to the reader: "Ever get the feeling you're in the wrong movie!?"
 - **Treatment:** repainted in brush with loose caricatures and a paper-and-ink palette that nods to the
-  newsprint. The balloons are **painted, not voiced**: their words are lettered in the kit's brush hand, since they
-  come from the image, not the transcript. Shown briefly as commentary, with the issue credited on its QR card.
+  newsprint. The balloons are **voiced**, each by its speaker, and lettered in the kit's brush hand as they're said. Shown briefly as commentary, with the issue credited on its QR card.
 
 **The frog/axolotl chart** (`frog_axolotl_chart.png`) is *GPT-5.6 Luna, asked "Suggest a type of amphibian."*
 Each row is 10 icons, counted exactly as in the original:
@@ -237,7 +237,7 @@ These counts are checked against the original a second time during the review lo
 - **Quiet zone** of 4 modules, painted flat. Decoration starts outside it.
 - **No boil on the modules.** Each code draws with a fixed `boilSeed` and zero `jit`, in flat `wash` at 255. Only
   the decorative frame boils.
-- **Still while shown.** It arrives on an arc, settles, holds **≥ 6 s (feature) / ≥ 5 s (shelf)** with the camera
+- **Still while shown.** It arrives on an arc, settles, holds **≥ 4.5 s** (time to build and be seen whole; a viewer who wants to scan it pauses) with the camera
   still, and leaves on an arc.
 - **At most 3 on screen at once**, and only in "constellation" moments.
 
@@ -321,9 +321,12 @@ writes `script/qr_report.md`: `--only` writes `out/qr_check/only_report.md`, and
 In about a second per chapter, with no rendering, it replays the chapter DRY and reports:
 - **crowded**: more than two codes at once;
 - **covers**: a code hiding over a fifth of a board, character or lettering;
-- **brief**: a feature under 6 s or a shelf code under 5 s;
+- **brief**: a code on screen under 4.5 s;
 - **no room** / **late**: a code that found no clean spot, or waited over 8 s for one;
 - **static** (a warning): the layout doesn't change for over 8 s;
+- **linger**: nobody speaks and nothing new is drawn for over 1.5 s. Curt's rule (2026-09-28): don't silently hold a
+  picture once it's built. Viewers take it in while it's drawn, and pause the video if they want longer. So tables
+  last as long as they take to paint in, and holds end when the last thing is drawn;
 - **caption**: the caption covers something that matters for a second or more when the picture had room to rise clear
   of it; **undercap** (a warning): the same, but the picture fills the frame down to the caption (Curt from behind at
   the Desk is most of these);

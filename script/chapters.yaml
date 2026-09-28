@@ -4,11 +4,13 @@
 #   ids:   explicit block ids (claimed first)
 #   turns: [first, last] turn numbers, inclusive (every block not already claimed)
 #   hold_s: extra visual-only time the chapter needs beyond its lines (title cards, the QR wall, ...)
+#   page:  a file of voiced balloons the chapter adds after its lines (tools/script_lib.mjs's pageLines)
 - n: 0
   slug: cold_open
   title: Cold open
-  ids: [T01.U.00]          # the MAD #157 page, balloons painted (not voiced), before the first question
-  hold_s: 53               # the comic read balloon by balloon (all ten, in full), its code (>= 6 s beside the page), the title card
+  ids: [T01.U.00]          # the MAD #157 page, before the first question
+  page: script/cold_open.yaml   # its ten balloons, voiced, one after another (lines MAD.<balloon>)
+  hold_s: 9.2              # after the last balloon: the whole page, its code folding in beside it, the title card
 - n: 1
   slug: wrong_movie
   title: The Wrong Movie
@@ -37,7 +39,7 @@
   slug: mind_space
   title: Mind-Space
   turns: [35, 40]
-  hold_s: 4                # the whole board, thirteen stars, before the wipe
+  hold_s: 1                # the whole board, thirteen stars, grows in before the wipe
 - n: 8
   slug: contradictions
   title: Contradictions
@@ -74,4 +76,4 @@
   slug: coda
   title: Coda
   turns: [78, 78]
-  hold_s: 60               # footnotes rain in, QR wall, comic-page pull-back
+  hold_s: 32               # footnotes rain in, QR wall, comic-page pull-back and back (each step as the last ends)

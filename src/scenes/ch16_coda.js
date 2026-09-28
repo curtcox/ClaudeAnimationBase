@@ -11,9 +11,10 @@
   // ---------- the closing's clock ----------
   const RAIN0 = c2.end + .15, RAIN = 12;                  // the footnotes fall, in film order
   const CARD0 = RAIN0 + RAIN + .6;                         // the companion page's code, in the wall's centre
-  const SLIDE0 = CARD0 + 8.5, OUT0 = SLIDE0 + 1.3, OUT1 = OUT0 + 5.8;   // it steps right; the page pulls back
-  const IN0 = OUT1 + 15, IN1 = IN0 + 5.5, BACK1 = IN1 + 1.2;            // held; back into the wall; the code to the centre
-  const TURN = OUT1 + 5, REDEYE = OUT1 + 8.5;               // the frog and the axolotl turn to us; the T-800 eye, once
+  // nothing waits once it's built (a viewer who wants longer pauses): each step starts as the last one finishes
+  const SLIDE0 = CARD0 + 1.6, OUT0 = SLIDE0 + 1.3, OUT1 = OUT0 + 5.8;   // it steps right; the page pulls back
+  const TURN = OUT1 + .3, REDEYE = OUT1 + 1.8;              // the frog and the axolotl turn to us; the T-800 eye, once
+  const IN0 = REDEYE + .8, IN1 = IN0 + 5.5, BACK1 = IN1 + 1.2;          // back into the wall; the code to the centre
 
   // ---------- A: the nerd sniping, on the left monitor ----------
   // a road across the screen, a board on a stand holding the puzzle, someone stopped dead in the road to look at it, and a

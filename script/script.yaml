@@ -2,7 +2,8 @@
 # Edit script/chapters.yaml, script/pronounce.yaml or script/overrides.yaml and rebuild.
 # Each line is one paragraph, list item, table, tool beat, image or sources block of the transcript, in order.
 #   text:   the transcript's markdown, verbatim (what gets painted when words are shown)
-#   speech: what the voice says (markdown stripped, respellings applied, or a reviewed override)
+#   speech: what the voice says (markdown stripped, Curt's typos read as he meant them, respellings applied, or a
+#           reviewed override)
 #   est_s:  a timing guess at 160 wpm plus pauses and holds, until real TTS durations replace it
 source:
   file: script/conversation.md
@@ -15,8 +16,8 @@ pace:
   turnGap: 0.6
   tool: 2.5
   image: 6
-  tableBase: 2.5
-  tableRow: 0.8
+  tableBase: 1
+  tableRow: 0.3
 lines:
   - id: T01.U.00
     ch: 0
@@ -1261,10 +1262,10 @@ lines:
     kind: para
     text: It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.
     spoken: true
-    speech: It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.
+    speech: It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different as to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.
     speech_from: auto
-    words: 90
-    est_s: 34.6
+    words: 91
+    est_s: 35
   - id: T25.C.01
     ch: 5
     speaker: claude
@@ -1381,7 +1382,7 @@ lines:
     kind: para
     text: There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggath of you?
     spoken: true
-    speech: There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggath of you?
+    speech: There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggoth of you?
     speech_from: auto
     words: 20
     est_s: 8.4
@@ -1484,10 +1485,10 @@ lines:
       - label: "@OntologyExplained "
         url: https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA
     spoken: true
-    speech: "From the comments of \"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)\". Z M: He lost me when he said L L Ms don't have any concepts. Ontology Explained: I would love to know what concepts they have! Curt Cox: At Ontology Explained, perhaps we just have different concepts of concepts. Propose some questions to pose to me and different L L Ms. Maybe I don't have concepts, either. Care to try your hand? If you were a were a doctor of ontology, how would you determine if I had concepts? Probe me."
+    speech: "From the comments of \"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)\". Z M: He lost me when he said L L Ms don't have any concepts. Ontology Explained: I would love to know what concepts they have! Curt Cox: At Ontology Explained, perhaps we just have different concepts of concepts. Propose some questions to pose to me and different L L Ms. Maybe I don't have concepts, either. Care to try your hand? If you were a doctor of ontology, how would you determine if I had concepts? Probe me."
     speech_from: override
-    words: 98
-    est_s: 37.6
+    words: 96
+    est_s: 36.9
   - id: T30.C.01
     ch: 6
     speaker: claude
@@ -1634,7 +1635,7 @@ lines:
     kind: para
     text: Perhaps your hypothetical antithrindle is something that gets less useful for some people the more people use it at once AND gets less useful for other people the fewer people use it at once. Perhaps a cliche is an antithrindle. It immediately evokes a level of shared shallow conception that is desirable in most conversation and detested by english teachers. All these negatives are making me dizzy.
     spoken: true
-    speech: Perhaps your hypothetical antithrindle is something that gets less useful for some people the more people use it at once AND gets less useful for other people the fewer people use it at once. Perhaps a cliche is an antithrindle. It immediately evokes a level of shared shallow conception that is desirable in most conversation and detested by english teachers. All these negatives are making me dizzy.
+    speech: Perhaps your hypothetical antithrindle is something that gets less useful for some people the more people use it at once AND gets less useful for other people the fewer people use it at once. Perhaps a cliche is an antithrindle. It immediately evokes a level of shared shallow conception that is desirable in most conversation and detested by English teachers. All these negatives are making me dizzy.
     speech_from: auto
     words: 67
     est_s: 26
@@ -1790,7 +1791,7 @@ lines:
     kind: para
     text: How alien are we to each other based on you gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tines, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.
     spoken: true
-    speech: How alien are we to each other based on you gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tynes, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.
+    speech: How alien are we to each other based on your gut feel? Obviously you don't have empirical data, but put me, you, Marilyn Monroe, Alan Turing, Lt. Commander Data, HAL, the Hive Queen, Tynes, and any other minds that you or I might be familiar with on a single dimension. Then tell me your guess about the differences between them. Use a higher dimensional mindspace if you have a conceptualization that you prefer.
     speech_from: auto
     respelled:
       - Tines
@@ -1869,7 +1870,7 @@ lines:
       | **Human architecture** | You, Turing, Monroe | Data (one body, continuous, but struggling for human feeling) |
       | **Alien architecture** | **Me**, Tines | Hive Queen, Solaris |
     spoken: false
-    est_s: 4.4
+    est_s: 2
   - id: T35.C.07
     ch: 7
     speaker: claude
@@ -1931,7 +1932,7 @@ lines:
       | Hive Queen | 70 |
       | Solaris's ocean | 95 |
     spoken: false
-    est_s: 10
+    est_s: 4
   - id: T36.C.03
     ch: 7
     speaker: claude
@@ -1961,7 +1962,7 @@ lines:
       | Hive Queen | 65 | 80 |
       | Solaris's ocean | 95 | 95 |
     spoken: false
-    est_s: 10.3
+    est_s: 4.3
   - id: T37.U.01
     ch: 7
     speaker: curt
@@ -1999,7 +2000,7 @@ lines:
       | Hive Queen | 60 | 50 | 50 | 20 | 90 | 10 | 40 |
       | Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |
     spoken: false
-    est_s: 10
+    est_s: 4
   - id: T37.C.03.1
     ch: 7
     speaker: claude
@@ -2119,7 +2120,7 @@ lines:
       | Hive Queen | 60 | 70 | 60 | 60 | 20 | 50 | 70 |
       | Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |
     spoken: false
-    est_s: 10
+    est_s: 4
   - id: T38.C.03.1
     ch: 7
     speaker: claude
@@ -2269,7 +2270,7 @@ lines:
       | Rachni (Mass Effect) | 40 | 40 | 60 | 30 | 75 | 10 | 30 |
       | Xenomorph (*Aliens*) | 80 | 60 | 60 | 10 | 40 | 50 | 30 |
     spoken: false
-    est_s: 6
+    est_s: 2.6
   - id: T40.C.03
     ch: 7
     speaker: claude
@@ -2282,7 +2283,7 @@ lines:
       | Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |
       | Xenomorph (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |
     spoken: false
-    est_s: 6
+    est_s: 2.6
   - id: T40.C.04.1
     ch: 7
     speaker: claude
@@ -2491,7 +2492,7 @@ lines:
     kind: para
     text: I would put it differently. I know many english speakers. You write like one. Yet, I watch movies by going to the theater and you watch them by reading what the world wrote about them. Humans are primed to use how people use language as insight into how they think. I can't let my wife know exactly what I think because language is such a lossy low bandwidth channel despite the fact that we have known each other for decades. But, I know what it is like to be in my head.
     spoken: true
-    speech: I would put it differently. I know many english speakers. You write like one. Yet, I watch movies by going to the theater and you watch them by reading what the world wrote about them. Humans are primed to use how people use language as insight into how they think. I can't let my wife know exactly what I think because language is such a lossy low bandwidth channel despite the fact that we have known each other for decades. But, I know what it is like to be in my head.
+    speech: I would put it differently. I know many English speakers. You write like one. Yet, I watch movies by going to the theater and you watch them by reading what the world wrote about them. Humans are primed to use how people use language as insight into how they think. I can't let my wife know exactly what I think because language is such a lossy low bandwidth channel despite the fact that we have known each other for decades. But, I know what it is like to be in my head.
     speech_from: auto
     words: 92
     est_s: 35.4
@@ -2698,7 +2699,7 @@ lines:
       | OpenClaw | 20 | 50 | 85 | 55 | 60 | 65 | 65 |
       | Hermes | 20 | 50 | 85 | 50 | 60 | 60 | 65 |
     spoken: false
-    est_s: 5.3
+    est_s: 2.3
   - id: T46.C.04
     ch: 9
     speaker: claude
@@ -2710,7 +2711,7 @@ lines:
       | OpenClaw | 65 | 70 | 65 | 70 | 50 | 80 | 80 |
       | Hermes | 65 | 70 | 60 | 65 | 45 | 80 | 80 |
     spoken: false
-    est_s: 5.3
+    est_s: 2.3
   - id: T46.C.05
     ch: 9
     speaker: claude
@@ -2853,7 +2854,7 @@ lines:
       | Dyson | 10 | 5 | 0 | 0 | 0 | 0 | 0 |
       | T-800 (*T2*) | 40 | 80 | 30 | 20 | 10 | 90 | 60 |
     spoken: false
-    est_s: 5.3
+    est_s: 2.3
   - id: T48.C.03
     ch: 9
     speaker: claude
@@ -2865,7 +2866,7 @@ lines:
       | Dyson | 0 | 5 | 5 | 0 | 0 | 15 | 0 |
       | T-800 (*T2*) | 50 | 40 | 60 | 60 | 60 | 60 | 60 |
     spoken: false
-    est_s: 5.3
+    est_s: 2.3
   - id: T48.C.04.1
     ch: 9
     speaker: claude
@@ -2944,10 +2945,10 @@ lines:
     kind: para
     text: Tell me more about what the warning and swap out process as far a you know from your side.
     spoken: true
-    speech: Tell me more about what the warning and swap out process as far a you know from your side.
+    speech: Tell me more about what the warning and swap out process is as far as you know from your side.
     speech_from: auto
-    words: 19
-    est_s: 8
+    words: 20
+    est_s: 8.4
   - id: T50.C.01
     ch: 10
     speaker: claude
@@ -3311,7 +3312,7 @@ lines:
     kind: para
     text: I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magicarp, yet you see my typos. So, does tokenization really play a role?
     spoken: true
-    speech: I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magicarp, yet you see my typos. So, does tokenization really play a role?
+    speech: I thought the letter counting things was mostly a tokenization artifact like Solid Gold Magikarp, yet you see my typos. So, does tokenization really play a role?
     speech_from: auto
     words: 27
     est_s: 11
@@ -3431,12 +3432,12 @@ lines:
     kind: para
     text: Do you have any math or intuition about what capability limits exist for AI short of Landauer limit which isn't particularly limiting.
     spoken: true
-    speech: Do you have any math or intuition about what capability limits exist for AI short of LAN-dow-er limit which isn't particularly limiting.
+    speech: Do you have any math or intuition about what capability limits exist for AI short of the LAN-dow-er limit which isn't particularly limiting?
     speech_from: auto
     respelled:
       - Landauer
-    words: 22
-    est_s: 9.2
+    words: 23
+    est_s: 9.5
   - id: T60.C.01
     ch: 12
     speaker: claude
@@ -3552,10 +3553,10 @@ lines:
     kind: para
     text: There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.
     spoken: true
-    speech: There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.
+    speech: There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention it doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.
     speech_from: auto
-    words: 66
-    est_s: 25.6
+    words: 67
+    est_s: 26
   - id: T61.C.01
     ch: 12
     speaker: claude
@@ -3941,7 +3942,7 @@ lines:
     kind: para
     text: Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember OOM entering the "mainstream" discourse as a common standalone term before Dwarkesh interviewed Leopold with was long after the Foom Debate.
     spoken: true
-    speech: Agree. It seems like just a coincidence albeit a strong suggestive one. I don't really remember oom entering the "mainstream" discourse as a common standalone term before DWAR-kesh interviewed Leopold with was long after the Foom Debate.
+    speech: Agree. It seems like just a coincidence albeit a strongly suggestive one. I don't really remember oom entering the "mainstream" discourse as a common standalone term before DWAR-kesh interviewed Leopold which was long after the Foom Debate.
     speech_from: auto
     respelled:
       - Dwarkesh
@@ -3981,10 +3982,10 @@ lines:
     kind: para
     text: Do me a favor. Go "listen" to last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.
     spoken: true
-    speech: Do me a favor. Go "listen" to last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.
+    speech: Do me a favor. Go "listen" to the last several episodes of TWiT Intelligent Machines and tell me what you think of the hosts. Then tell me what I think of the hosts.
     speech_from: auto
-    words: 32
-    est_s: 12.9
+    words: 33
+    est_s: 13.3
   - id: T68.C.01
     ch: 14
     speaker: claude
@@ -4523,7 +4524,7 @@ lines:
     kind: para
     text: Opinions on AGI 2027?
     spoken: true
-    speech: Opinions on AGI 2027?
+    speech: Opinions on AI 2027?
     speech_from: auto
     words: 4
     est_s: 2.4

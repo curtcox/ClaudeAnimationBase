@@ -12,12 +12,13 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync } from '
 import { createHash } from 'node:crypto';
 import { eleven } from './eleven.mjs';
 import { finishVoice, lufs, syncOf } from './voice_lib.mjs';
-import { PATHS, readYaml } from './script_lib.mjs';
+import { PATHS, readYaml, pageLines } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 const cast = readYaml('script/voices.yaml'), DIR = 'assets/vo', PARALLEL = 3, LEVEL = -18;   // every line mixed at LEVEL LUFS
 const only = args.chapter != null ? +args.chapter : null;
-const lines = readYaml(PATHS.script).lines.filter(l => l.spoken && (only == null || l.ch === only));
+const lines = [...readYaml(PATHS.script).lines, ...readYaml(PATHS.chapters).flatMap(pageLines)]   // the transcript's, and the cold open's page
+  .filter(l => l.spoken && (only == null || l.ch === only));
 mkdirSync(DIR, { recursive: true });
 const fileOf = l => `${DIR}/${createHash('sha256').update(`${cast[l.speaker].voice}|${cast.model}|${l.speech}`).digest('hex').slice(0, 16)}`;
 const todo = lines.filter(l => !existsSync(fileOf(l) + '.mp3'));

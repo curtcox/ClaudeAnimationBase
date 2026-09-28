@@ -1,8 +1,9 @@
-# Curt's typos, corrected in red pen wherever his words are lettered (review captions, painted quotes). The words
-# themselves never change: the voice says them as typed, and the typo stays on screen, struck through, with the fix above.
+# Curt's typos. On screen his words stay as typed: wherever they're lettered (review captions, painted quotes) the
+# typo is struck through in red pen, with the fix above. The voice says what he meant (build_script.mjs reads each
+# mark's fix into the line's speech; an override in overrides.yaml carries its fixes by hand).
 # Hand-edited. Each mark is the typed text around the slip, with the slip in brackets:
 #   [typo→fix]   replace      [+word]   insert (a caret, the word above)      [words→]   delete
-# tools/timeline.mjs checks each mark against its line and copies it into src/gen (line.proof); proofMarks() in
+# script_lib.mjs's loadTypos checks each mark against its line; timeline.mjs copies it into src/gen (line.proof); proofMarks() in
 # src/core.js finds and draws them.
 - { line: T25.U.01, mark: "so quantitatively different [+as] to be" }
 - { line: T28.U.01, mark: "[Shoggath→Shoggoth]" }

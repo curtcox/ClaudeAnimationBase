@@ -5,8 +5,8 @@ window.CHAPTER = {
  "title": "Coda",
  "scene": "ch16_coda.js",
  "lead": 1.2,
- "duration": 79.43,
- "hold": 60,
+ "duration": 51.43,
+ "hold": 32,
  "lines": [
   {
    "id": "T78.U.01",

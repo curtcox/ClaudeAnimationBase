@@ -115,7 +115,7 @@ for (const c of chapters) {
   if (!existsSync(video)) continue;
   mkdirSync(`${OUT}/watch`, { recursive: true }); clone(video, `${OUT}/watch/ch${pad(c.n)}.mp4`);
   const items = times.map(x => itemOf(x, 1)).filter(Boolean);
-  const lines = ch.lines.map(l => ({ id: l.id, t0: l.t0, t1: l.end, who: l.speaker, spoken: l.spoken, text: plain(l.text) }));
+  const lines = ch.lines.map(l => ({ id: l.id, t0: l.t0, t1: l.end, who: l.who || l.speaker, spoken: l.spoken, text: plain(l.text) }));
   write(`${OUT}/watch/ch${pad(c.n)}.html`, watchPage(c, items, lines, shots));
   watched.push(c);
 }
@@ -133,7 +133,7 @@ function itemOf(x, depth) { const r = allById.get(x.id); if (!r) return null;
     const s = startOf(i), f = `out/watch/ch${pad(c.n)}.json`;
     if (local && existsSync(f)) for (const x of JSON.parse(readFileSync(f, 'utf8')).times) { const it = itemOf(x, 1); if (it) items.push({ ...it, t0: s + x.t0, t1: s + x.t1 }); }
     else for (const { l, here } of momentsOf(c)) { const t = inFilm(i, l.id); for (const r of here) { const it = itemOf({ id: r.id }, 1); if (it) items.push({ ...it, t0: t, t1: t + 8 }); } }
-    for (const l of CH[i].lines) lines.push({ t0: s + l.t0, t1: s + (l.end ?? l.t1), who: l.speaker, spoken: l.spoken, text: plain(l.text) });
+    for (const l of CH[i].lines) lines.push({ t0: s + l.t0, t1: s + (l.end ?? l.t1), who: l.who || l.speaker, spoken: l.spoken, text: plain(l.text) });
   });
   items.sort((a, b) => a.t0 - b.t0);
   if (local) { mkdirSync(`${OUT}/film`, { recursive: true }); clone('out/film/film.mp4', `${OUT}/film/film.mp4`); }
@@ -170,7 +170,7 @@ function tick() {
   const t = now(); let first = null;
   rows.forEach((r, i) => { const on = t >= items[i].t0 && t <= items[i].t1; r.classList.toggle('on', on); if (on && !first) first = r; });
   const l = lines.find(l => t >= l.t0 && t < l.t1);
-  line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : 'CLAUDE') + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
+  line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : l.who === 'claude' ? 'CLAUDE' : l.who.toUpperCase()) + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
   if (first && follow.checked && first !== last) { first.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); last = first; }
   requestAnimationFrame(tick);
 }
@@ -230,7 +230,7 @@ function tick() {
   const t = v.currentTime; let first = null;
   rows.forEach((r, i) => { const on = t >= items[i].t0 && t <= items[i].t1; r.classList.toggle('on', on); if (on && !first) first = r; });
   const l = lines.find(l => l.spoken && t >= l.t0 && t < l.t1);
-  line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : 'CLAUDE') + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
+  line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : l.who === 'claude' ? 'CLAUDE' : l.who.toUpperCase()) + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
   if (first && follow.checked && first !== last) { first.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); last = first; }
   requestAnimationFrame(tick);
 }

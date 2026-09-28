@@ -1,7 +1,8 @@
 # Storyboard 0: Cold open
 
 One block, T01.U.00 (the attached image), with a 20 s hold for the comic and the title. About 0:27 on estimated timing.
-Nothing is voiced: the page's balloons are **painted, not voiced** (they're in the image, not the transcript).
+The page's balloons are **voiced**, one voice per person on the page (script/cold_open.yaml), though they're in the
+image, not the transcript.
 
 **Logline.** Before anyone speaks, the viewer reads the page Curt is about to show Claude: a 1973 *MAD* gag about
 an ape who can't be allowed to have said what he said.
@@ -18,9 +19,9 @@ doing the talking?", which returns in ch 4 and closes the film.
 **Text.** Only the page's own words: all ten balloons, in full, with the page's line breaks and bold words, lettered in
 the kit's brush hand (src/comic.js). Then the title, *Frog or Axolotl*.
 
-**Timing.** The balloons come in reading order. Each letters in at 10 words/s, and the next waits until it could be read
-at about 210 words a minute (src/scenes/ch00_cold_open.js computes the shots' times from the word counts), so the cold
-open runs about a minute.
+**Timing.** The balloons come in reading order, each voiced line after the last, and each letters in word by word as
+it's said (src/scenes/ch00_cold_open.js takes the shots' times from the voiced lines). Nothing is held once it's drawn,
+so the cold open runs about a minute.
 
 ## Shots
 
@@ -39,6 +40,6 @@ open runs about a minute.
 | (none) | the-conversation: the shared conversation this film is made from (Curt's share link) | page (listed first on the companion site) |
 
 ## Reads to check
-- **A/B:** each balloon on screen long enough to read at about 210 words a minute (the viewer reads; nobody voices them).
-- **C:** the full page holds at least 6 s with its code, the camera still.
+- **A/B:** each balloon letters in as its voice says it.
+- **C:** the code builds beside the page and is seen whole before the title (no silent hold).
 - **D:** the title is the only lettering not from the page.

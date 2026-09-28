@@ -6,3 +6,12 @@ curt:
 claude:
   voice: SAz9YHcvj6GT2YYXdXww   # "River", stock: relaxed, neutral, informative. Claude's pick on paper (it can't listen):
                                  # the one ungendered candidate, calm and even. Provisional until Curt confirms by ear.
+
+# The cold open's comic page (script/cold_open.yaml): six stock voices, one per person on the page, none of them the
+# film's two. Picked from the account's stock voices by their descriptions; provisional until heard.
+officer: { voice: SOYHLrjzK2X1ezoPC6cr }   # "Harry", fierce, rough: the shouting officer
+handler: { voice: N2lVS1w4EtoT3dr4eOWO }   # "Callum", husky trickster: the ape's handler, covering fast
+blond:   { voice: cjVigY5qzO86Huf0OWal }   # "Eric", smooth: the blond man, the cool accusation
+bearded: { voice: pqHfZKP75CvOlQylNhV4 }   # "Bill", wise, old: the bearded man, denying it
+villain: { voice: pNInz6obpgDQGcFmaJgB }   # "Adam", dominant, firm: the villain's speech
+turtle:  { voice: CwhRBWXzGAHq8TQ4Fs17 }   # "Roger", laid-back, casual: the man in the turtleneck, aside to us

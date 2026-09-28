@@ -6,7 +6,7 @@
 // replaces those estimates line by line, and audio/sync.json adds each voiced line's lip sync and word starts.
 // script/beats.yaml adds deliberate holds: { lineId: { before, after } } seconds.
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
-import { PATHS, PACE, readYaml, pad, resolveAnchor, loadRefs } from './script_lib.mjs';
+import { PATHS, PACE, readYaml, pad, resolveAnchor, loadRefs, loadTypos, pageLines } from './script_lib.mjs';
 
 const script = readYaml(PATHS.script), chapters = readYaml(PATHS.chapters), refs = loadRefs();
 const beats = existsSync('script/beats.yaml') ? readYaml('script/beats.yaml') || {} : {};
@@ -29,26 +29,20 @@ function gapAfter(l, next) {
 }
 
 const byId = new Map(script.lines.map(l => [l.id, l]));
-// Curt's typos (script/typos.yaml): each mark must find its spot in its line, or the build stops
-const proofs = {};
-for (const { line, mark } of readYaml('script/typos.yaml') || []) {
-  const l = byId.get(line); if (!l) throw new Error(`typos.yaml: no line ${line}`);
-  const typed = mark.replace(/ \[\+[^\]]+\]/g, '').replace(/\[\+[^\]]+\] ?/g, '').replace(/\[([^\]→]*)→[^\]]*\]/g, '$1');
-  if (!l.text.includes(typed)) throw new Error(`typos.yaml: "${typed}" isn't in ${line}`);
-  (proofs[line] ||= []).push(mark);
-}
+const proofs = loadTypos(script.lines);   // Curt's typos (script/typos.yaml), marked in red pen where his words are lettered
 for (const r of refs) r.line = resolveAnchor(r, script.lines, byId)?.id;
 mkdirSync('src/gen', { recursive: true });
 const summary = [];
 for (const c of chapters) {
-  const ls = script.lines.filter(l => l.ch === c.n);
+  // a chapter with a page (the cold open): its image is up at once, and its voiced balloons follow
+  const page = pageLines(c), ls = [...script.lines.filter(l => l.ch === c.n), ...page];
   let t = LEAD;
   const out = ls.map((l, i) => {
     const b = beats[l.id] || {};
-    t += b.before || 0;
-    const t0 = t, len = lengthOf(l), t1 = t0 + len;
+    t += (b.before || 0) + (l.before || 0);
+    const t0 = t, len = page.length && l.kind === 'image' ? 0 : lengthOf(l), t1 = t0 + len;
     t = t1 + gapAfter(l, ls[i + 1]) + (b.after || 0);
-    return { id: l.id, speaker: l.speaker, kind: l.kind, spoken: l.spoken, t0: +t0.toFixed(3), t1: +t1.toFixed(3), end: +t.toFixed(3),
+    return { id: l.id, speaker: l.speaker, ...(l.who ? { who: l.who } : {}), kind: l.kind, spoken: l.spoken, t0: +t0.toFixed(3), t1: +t1.toFixed(3), end: +t.toFixed(3),
       text: l.text, ...(l.speech ? { speech: l.speech } : {}), refs: refs.filter(r => r.line === l.id).map(r => r.id), ...(proofs[l.id] ? { proof: proofs[l.id] } : {}), estimated: voice[l.id] == null,
       ...(sync[l.id] && voice[l.id] != null ? sync[l.id] : {}) };
   });

@@ -1,6 +1,7 @@
 // lint_chapter.mjs: checks a chapter for what a viewer would trip over, in a few seconds and without rendering: codes that
 // crowd, cover content, flash by or found no room; captions that cover content the picture could lift clear of, or that
-// don't use the frame's width; and stretches where the picture holds still (chapterLint() in src/timing.js has the rules).
+// don't use the frame's width; silent stretches where nothing new is drawn (linger); and stretches where the picture
+// holds still (chapterLint() in src/timing.js has the rules).
 //   node tools/lint_chapter.mjs                 every chapter that has a scene
 //   node tools/lint_chapter.mjs --chapter=2     just that one
 // Exit 1 if anything but a warning is found (a still stretch, a caption over a full frame, a caption a code squeezes:
