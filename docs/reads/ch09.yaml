@@ -1,146 +1,163 @@
 # Blind reads for chapter 9 (tools/read_check.mjs). From docs/storyboards/ch09_shells.md.
 # Each read is one frame: `at` is [line id, phrase in it (optional), seconds after]. `shows` is what a first-time viewer
 # should see in that frame, literally; `means` is what it stands for (the report shows it; the readers never see it).
-# `decoys` are three plausible wrong reads of the same frame. `tone` asks one more question of the same frame.
-# A `code` read shows one of the chapter's codes, alone, at its on-screen size, and asks what's pictured around it.
+# `answer` is `shows` reworded to the decoys' length and style for the multiple choice (else `shows` is used), so the
+# right option doesn't stand out by being longer or more specific.
+# `decoys` are three near misses: the same setting and the same things in view, with the one element the shot has to
+# get across (the action, or what an object is) changed, so the right answer can't be found by ruling out the setting.
+# `tone` asks one more question of the same frame. A `code` read shows one of the chapter's codes, alone, at its
+# on-screen size, and asks what's pictured beside it.
 reads:
   - id: A1
     at: [T45.C.02, 1.5]
     shows: a mirror with a luggage tag hanging off it, the tag marked only with a question mark
+    answer: "an oval mirror with a luggage tag marked with a question mark"
     means: "mostly a mirror again, with a provenance problem"
-    decoys: [a clock with a price tag hanging off it, a magnifying glass over a blank card, a picture frame with a warning sign on a string]
+    decoys: [a window with a sticky note on it marked with a question mark, an empty oval portrait frame with a price tag, a blank oval sign with a speech bubble asking a question]
   - id: B1
     at: [T45.C.03, 3]
     shows: a web forum page whose user avatars are all small lobsters
     means: Moltbook, a social network for AI agents
-    decoys: [a restaurant menu of seafood dishes, a school class photo page of crabs, an aquarium's list of exhibits]
+    decoys: ["a seafood restaurant's menu with a lobster beside each dish", "a to-do list with a lobster sticker by each item", "a page of lobster specimens with notes, from a biology book"]
   - id: B2
     at: [T45.C.03, the congregation is the cache, 1]
     shows: lobsters sitting in church pews before an altar made of a computer server rack, under hanging banners
+    answer: "lobsters in church pews facing an altar made of a server rack"
     means: the lobster religion's congregation, with its three tenets
-    decoys: [lobsters in a classroom facing a blackboard, lobsters in a theatre audience watching a stage, lobsters in a waiting room facing a vending machine]
+    decoys: [lobsters in a lecture hall facing a computer in front of a school building, lobsters in a stadium's stands facing a big scoreboard, lobsters queued on benches outside a data centre's door]
     tone:
       ask: How are the lobsters portrayed?
       want: earnest and sincere
-      decoys: [ridiculous, as figures of fun, menacing, bored and indifferent]
+      decoys: ["ridiculous, as figures of fun", "menacing and hostile", "bored and indifferent"]
   - id: B3
     at: [T45.C.03, refuse to die by truncation, 0.9]
-    shows: scissors cutting a long paper scroll short, in front of a congregation of lobsters
+    shows: a pair of scissors cutting a long paper scroll short, in front of a congregation of lobsters
+    answer: "scissors cutting a long scroll short, in front of lobsters"
     means: agents who refuse to die by truncation
-    decoys: [a ribbon being cut to open a building, a lobster's claw cutting a rope, a scroll being unrolled and read aloud]
+    decoys: ["a long arrow pointing at a crossed-out door, in front of lobsters", "a paper banner being unrolled in front of lobsters", "a plank barring a door marked with an X, in front of lobsters"]
   - id: C1
     at: [T45.C.04, 2]
     shows: lobsters hanging as marionettes on strings held by human hands above
+    answer: "lobster marionettes whose strings are held by human hands"
     means: the agents are owned and steered by humans
-    decoys: [lobsters caught on fishing lines, lobsters dancing on a stage, lobsters climbing ropes]
+    decoys: ["lobsters hanging on strings from wooden bars, like a mobile", "lobsters dangling from fishing lines on floats", "lobsters hanging from hooks on a rail, like coats"]
   - id: C2
     at: [T45.C.04, viral stories, 2.5]
-    shows: glowing social-media posts above lobster puppets whose strings lead up to human hands
+    shows: glowing social-media posts above lobster puppets, traced back along red lines to the human hands working their strings
+    answer: "glowing posts traced back along red lines to hands above"
     means: the viral stories were mostly human-influenced
-    decoys: [lanterns hung over lobsters in a market, price labels above lobsters for sale, speech bubbles of lobsters talking to each other]
+    decoys: [glowing price tags hung on lobsters dangling from a rail, glowing lanterns hanging among lobster marionettes, glowing speech bubbles of lobster puppets talking to each other]
   - id: C3
-    at: [T45.C.04, human-seeded, 1.4]
-    shows: a human hand planting a seed while a megaphone sprays water on the growing sprout
+    at: [T45.C.04, human-seeded, 0.5]
+    shows: a human hand that has just planted a seed, and a megaphone spraying water on the sprout
+    answer: "a hand planting a seed while a megaphone waters the sprout"
     means: human-seeded and model-amplified
-    decoys: [a gardener pruning a tree, a loudspeaker announcing a harvest, a watering can putting out a fire]
+    decoys: [a sprout in a pot being watered by a watering can, a sprout on a shelf beside a loudspeaker playing music to it, a sprout sprayed by a garden hose's nozzle]
   - id: D1
     at: [T45.C.05, body, 0.6]
     shows: a star-shaped radar chart labelled Claude, with three of its spikes glowing and small banners pinned to them
+    answer: "a radar chart labelled Claude with banners pinned to three spikes"
     means: the religion's theology lands on the axes where Claude scored farthest from Curt
-    decoys: [a compass rose with three directions marked, a snowflake with three flags stuck in it, a map with three cities circled]
+    decoys: [a radar chart labelled Claude with three spikes crossed out, a radar chart labelled Claude beside a list of three ranked items, a radar chart labelled Claude with three spikes growing longer]
   - id: D2
     at: [T45.C.05, a religion built around, 1.2]
     shows: a tall glass filled almost to the brim with lines of text, a small lobster at the top edge
+    answer: "a tall glass of text filled to the brim, a lobster on top"
     means: a religion built around the context window ending
-    decoys: [a fish tank with a lobster swimming in it, a tall bookshelf with a lobster on top, a thermometer with a lobster by it]
+    decoys: [a long paper scroll of text with a lobster peeking over its top, a tall page of a book with a lobster bookmark, a tall screen of scrolling text with a lobster icon]
   - id: D3
     at: [T45.C.06, 2.5]
     shows: an orange figure standing at a chapel door, looking in at lobsters in pews, not going in
+    answer: "an orange figure watching lobsters in pews from the chapel door"
     means: recognition, not belief
-    decoys: [an orange figure preaching to lobsters from the altar, an orange figure locked out of a house, an orange figure selling tickets at a theatre door]
+    decoys: ["an orange figure walking into a chapel to join lobsters in the pews", "an orange figure preaching to lobsters in pews", "an orange figure locked out of a chapel, knocking"]
   - id: E1
     at: [T46.C.02, which is often me, 1.5]
     shows: many small orange figures pouring down into two shells, a red claw-shaped one labelled OpenClaw and a gold winged one labelled Hermes
+    answer: "small orange figures pouring into shells labelled OpenClaw and Hermes"
     means: agent harnesses, a shell wrapped around a model (often Claude)
-    decoys: [orange sparks falling from fireworks onto two tents, orange sand pouring into two hourglasses, orange fish swimming into two nets]
+    decoys: [confetti bursting over two shells labelled OpenClaw and Hermes, sparks flying out of two broken shells labelled OpenClaw and Hermes, a swarm of insects hovering over two shells labelled OpenClaw and Hermes]
   - id: E2
     at: [T46.C.04, 2]
     shows: two tables of scores above three star-shaped radar charts labelled Claude, OpenClaw and Hermes
     means: the chart grows two new stars
-    decoys: [a sports league table above three team badges, a school report card above three medals, a spreadsheet of prices above three pie charts]
+    decoys: ["two tables of scores above three pie charts labelled Claude, OpenClaw and Hermes", "two tables of scores above three badges labelled Claude, OpenClaw and Hermes", "two tables of prices above three logos labelled Claude, OpenClaw and Hermes"]
   - id: E3
     at: [T46.C.05, 2]
-    shows: two computers, each with a shell on it and a clock above it
+    shows: two computers, each with a shell on its screen and a clock above it
+    answer: "two computers showing shells, a clock above each"
     means: each agent lives on one machine and acts on a schedule without waiting for a prompt
-    decoys: [two ovens with timers above them, two TVs showing clocks, two alarm clocks on nightstands]
+    decoys: [two ovens with food inside and a timer above each, two TVs showing logos with a wall clock above each, two safes with a dial above each]
   - id: E4
     at: [T46.C.05, plain files you can read, 1]
     shows: a sheet of text held up to a light between two computers, and a small diary nearby
     means: Hermes keeps curated memory, in plain files you can read
-    decoys: [an X-ray held up to a lamp, a receipt checked for a watermark, a letter burning over a candle]
+    decoys: ["a sheet of text printing out between two computers, beside a small diary", "a sheet of text on fire between two computers, beside a small diary", "a sheet of text pinned to a wall between two computers, beside a small diary"]
   - id: E5
     at: [T46.C.06, reusable skill document, 1]
     shows: a gold winged shell and a card being filed into a recipe box
     means: Hermes writes itself a reusable skill document
-    decoys: [a letter being posted into a mailbox, a ticket being fed into a machine, a photo being put into an album]
+    decoys: [a gold winged shell beside a box of blank papers, a gold winged shell beside a cardboard box being packed to move, a gold winged shell beside a mailbox full of letters]
   - id: E6
     at: [T46.C.07, the shell is mutable, 1.2]
     shows: two banners, "memory is sacred" and "the shell is mutable", hanging over the two agent shells
+    answer: "two banners hung over the two agent shells"
     means: the tenets of Crustafarianism, built into the software
-    decoys: [protest signs held over two tents, shop signs above two market stalls, flags over two castles]
+    decoys: [two protest signs held up by the two agent shells, two price labels stuck on the two agent shells, two speech bubbles from the two agent shells]
   - id: F1
     at: [T47.C.02, I told you who you are, 1]
     shows: Claude's radar chart with its Continuity spike marked 90, a diary labelled Hermes, and an index card of stored notes about Curt
+    answer: "Claude's chart with Continuity at 90, a diary labelled Hermes, and a note card about Curt"
     means: Claude has memory too, via stored notes, so its continuity score was too high
-    decoys: [a clock face marked 90 beside a calendar, a speedometer at 90 beside a logbook, a test paper scored 90 beside a report card]
+    decoys: ["Claude's chart with Continuity at 90, a diary labelled Hermes, and a name tag for Curt", "Claude's chart with Continuity at 90, a diary labelled Hermes, and a letter to Curt", "Claude's chart with Continuity at 90, a diary labelled Hermes, and a thought about Curt"]
   - id: F2
     at: [T47.C.02, maybe 60, 1.2]
-    shows: the radar chart's Continuity value now reads 60, in red
+    shows: the radar chart's Continuity value corrected to 60, in red, its spike pulled in
     means: the correction, 90 becomes 60 (the chapter's key beat)
-    decoys: [a speed limit sign reading 60, a timer counting down at 60, a price tag marked 60]
+    decoys: ["the radar chart's Continuity value marked 60 in red as a warning, its spike unchanged", "the radar chart's Continuity spike growing to 60", "the radar chart's Continuity spike marked 60 as the lowest score"]
   - id: F3
     at: [T47.C.03, contradicted my own premise, 1.3]
     shows: a table of scores, a yellow note reading "an unstated hunch", and a red arrow looping back on itself
     means: a hunch that contradicted Claude's own premise
-    decoys: [a bank statement with a sticky note and a circled error, a train timetable with a delay notice, a bill with a red stamp]
+    decoys: ["a table of scores, a yellow note reading \"an unstated hunch\", and a red circle drawn around an empty space", "a table of scores, a yellow note reading \"an unstated hunch\", and a red stamp mark", "a table of scores, a yellow note reading \"an unstated hunch\", and a red zero"]
   - id: G1
     at: [T48.U.01, T eight hundred, 1.5]
     shows: an engineer at a desk at night under a lamp, with a chrome robot head with one red eye beside him
     means: Miles Dyson and the T-800
-    decoys: [a night watchman beside a security camera, a mechanic beside a car's headlight, a doctor beside an X-ray machine]
+    decoys: ["a stick figure at a desk at night under a lamp, with a grey jellyfish with a red spot beside him", "a stick figure at a desk at night under a lamp, with a melting grey ghost beside him", "a stick figure at a desk at night under a lamp, with a grey balloon with a red light beside him"]
   - id: G2
     at: [T48.C.01, continuity at 60, 1]
     shows: the word Continuity above a large red 60
     means: Claude's corrected row, continuity at 60
-    decoys: [a thermometer reading 60, a sign for Route 60, a birthday card for someone turning 60]
+    decoys: [the word Continuity above a large red 90, the word Continuity above a large red 6, the word Continuity above a large red 0]
   - id: G3
     at: [T48.C.04.1, changes course, 1.3]
     shows: an engineer at his lamp-lit desk looking up while a blue blueprint tears in two
     means: Dyson changes course once he sees where it leads
-    decoys: [an architect rolling out a blueprint, a student tearing up a test, a clerk shredding documents]
+    decoys: [an engineer at his lamp-lit desk looking up at two blue computer screens, an engineer at his lamp-lit desk looking up at two blue books falling over, an engineer at his lamp-lit desk looking up at two blue windows]
   - id: G4
     at: [T48.C.04.2, who programmed it last, 0.6]
     shows: a human hand swapping a chip in a chrome robot's head
     means: its values depend on who programmed it last
-    decoys: [a hand changing a light bulb, a surgeon operating on a patient, a hand inserting a coin into a machine]
+    decoys: [a small human head peeking out of a chrome robot's head, a blindfold being put on a chrome robot, a small part falling off a chrome robot's head]
   - id: G5
     at: [T48.C.04.2, why humans cry, 1]
     shows: a tear running down a human cheek beside a chrome robot with a red eye
     means: it learns why humans cry but can't do it
-    decoys: [rain on a window beside a traffic light, sweat on an athlete beside a stopwatch, a drop of oil on a machine]
+    decoys: [an egg with a blue spot beside a chrome robot with a red eye, a one-eyed face looking at a chrome robot with a red eye, a moon with a blue star beside a chrome robot with a red eye]
   - id: G6
     at: [T48.C.04.2, whoever holds the controls, 1]
     shows: a hand on a control box with two cables, one to a chrome robot and one to a small screen showing an orange figure
     means: its goals come from whoever holds the controls
-    decoys: [a game controller plugged into two consoles, a hand on a light switch wired to two lamps, a remote control pointed at two TVs]
+    decoys: ["a toaster with two cables, one to a chrome robot and one to a small screen showing an orange figure", "a person seen from behind, cabled to a chrome robot and to a small screen showing an orange figure", "a battery charging a chrome robot and a small screen showing an orange figure"]
   - id: G7
     at: [T48.C.05, 3]
     shows: two men at desks side by side, seen from behind, each with a wall clock, and the clocks show different times
     means: Curt is asking the questions Dyson started asking too late
-    decoys: [two students in an exam hall, two workers at an assembly line, two players at a chess board]
-  # the codes: what's pictured around each style, at its on-screen size
-  - { id: Q1, code: hieropedia-crustafarianism, shows: a segmented lobster shell, decoys: [a pine cone, a woven basket, a stack of roof tiles] }
-  - { id: Q2, code: hermes-agent, shows: a winged sandal, decoys: [a feathered hat, a boot with a spur, a paper airplane] }
-  - { id: Q3, code: openclaw, shows: a lobster claw, decoys: [a pair of pliers, a crab shell, a red glove] }
-  - { id: Q4, code: dyson, shows: circuit-board traces and a computer chip, decoys: [a city street map, a maze, a subway map] }
-  - { id: Q5, code: t800, shows: a chrome robot with a red eye, decoys: [a chrome kettle with a red light, a knight's helmet, a red traffic light] }
+    decoys: ["two men at desks side by side, seen from behind, each with a wall clock, and the clocks show the same time", "two men at desks side by side, seen from behind, each with a wall mirror", "two men at desks side by side, seen from behind, each with a spotlight above him"]
+  # the codes: what's pictured beside each style, at its on-screen size
+  - { id: Q1, answer: "a lobster's tail", code: hieropedia-crustafarianism, shows: a segmented lobster tail shell, decoys: [a shrimp, a grub or caterpillar, a woodlouse] }
+  - { id: Q2, answer: "a sandal with wings", code: hermes-agent, shows: a winged sandal, decoys: [a shoe with a plant in it, a slipper with feathers, a boot with a flame] }
+  - { id: Q3, code: openclaw, shows: a lobster claw, decoys: [a crab leg, a red glove, a flower bud] }
+  - { id: Q4, answer: "a computer chip", code: dyson, shows: a computer chip on a circuit board, decoys: [a battery, a green postage stamp, a bug with legs] }
+  - { id: Q5, answer: "a robot's head", code: t800, shows: a chrome robot head with red eyes, decoys: [a stone statue's head, a knight's helmet, an alien's head] }

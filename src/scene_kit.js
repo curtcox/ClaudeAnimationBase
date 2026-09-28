@@ -26,6 +26,28 @@ function atWord(id, phrase, dk = 0) {
   throw new Error(`"${phrase}" isn't in ${id}`);
 }
 
+// ---------- a human hand ----------
+// Seen from the back, fingers together, pointing along angle a; (x, y) is the fingertips, and s = 1 is about 215 px from
+// the cuff to the fingertips. o.grip 0..1 curls the fingers (a hand holding something), o.side (1 or -1) which side the
+// thumb is on, o.sleeve the cuff's colour, o.key its boil seed. (A tan block doesn't read as a hand: blind readers saw
+// "a box", "a toaster", "a small head".)
+const SKIN = '#E8C4A0';
+function hand(x, y, s, a = 0, o = {}) {
+  boilSeed('hand ' + (o.key ?? `${Math.round(x)} ${Math.round(y)}`));
+  const g = o.grip || 0, side = o.side ?? -1, sk = o.skin || SKIN, ink = { ink: PAL.ink, sw: 1 };
+  push(); translate(x, y); rotate(a); scale(s);
+  paint(rrPts(-215, -40, 92, 80, 10), { wash: o.sleeve || '#4E5B78', ...ink });   // the cuff
+  paint(rrPts(-138, -38, 96, 76, 26), { wash: sk, ...ink });                      // the back of the hand
+  [52, 62, 60, 46].forEach((len, i) => {                                           // four fingers, the middle longest
+    const yo = (i - 1.5) * 18 * -side, l = len * (1 - .45 * g);
+    paint(rrPts(-60, yo - 9, 22 + l, 18, 9), { wash: sk, ...ink });
+    inkLine([[-38 + l * .5, yo - 5], [-36 + l * .5, yo + 5]], .8, '#A0785A', 'inkfine', 0);   // a knuckle crease
+  });
+  push(); translate(-100, side * 30); rotate(side * .75);                          // the thumb, angled forward
+  paint(rrPts(0, -12, 62 * (1 - .25 * g), 24, 12), { wash: sk, ...ink }); pop();
+  pop();
+}
+
 // ---------- the desk, over Curt's shoulder ----------
 //   hour         the window's light (7 cool dawn → 12 noon gold); alarm 0..1 bruises it red (July)
 //   base         the chapter's usual screens; screens: this shot's overrides (null hides a screen)

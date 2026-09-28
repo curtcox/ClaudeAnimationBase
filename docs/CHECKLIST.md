@@ -17,7 +17,7 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [ ] Redraw the chapters with the new codes (`npm run rebuild`).
 - [x] Do a careful pass on the comic page's caricatures in the cold open.
 - [x] A blind-read check (`npm run reads -- --chapter=N`, key in `docs/reads/`): chapter 9 done, 4 frames flagged and 10 worth a look.
-- [ ] Fix chapter 9's flagged reads (the scissors, the chip swap, the tear, the lobsters' tone) once you've seen the report.
+- [x] Fix chapter 9's flagged reads: 1 flagged (the lobster-shell code, being redrawn in Still QR) and 6 worth a look, down from 6 flagged and 9 worth a look under the stricter test.
 - [ ] Write read keys for the other chapters and run them.
 
 ## Voices (phase 3)
