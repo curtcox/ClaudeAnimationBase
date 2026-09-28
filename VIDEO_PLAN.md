@@ -8,7 +8,7 @@ Decisions made so far:
 
 | topic | decision |
 |---|---|
-| voices | ElevenLabs, two voices: Curt and Claude |
+| voices | ElevenLabs, two voices: Curt (his own clone, "Curt Cox 2") and Claude (River, provisional); `script/voices.yaml` |
 | length | **near-verbatim and accurate is the priority.** Measured in Phase 1: about 75 min (see §1) |
 | sound | voice first. Sound effects and music stings where they earn it (a "dun-dun-DUN"), but no continuous music bed |
 | on-screen text | painted labels on charts and cast, plus QR codes with short painted captions. No subtitles |
@@ -121,9 +121,9 @@ to spend a Saturday morning.")
 - **The comic's balloons are painted, not voiced.** They're in the image Curt attached, not in the transcript. When
   Claude later quotes them ("That ape is a ventriloquist!"), it's Claude's line in Claude's voice, over the
   repainted panel.
-- **Curt's voice (placeholder):** CGP Grey's register, meaning brisk, precise, dry and quick on the uptake. It's a
-  *stock* ElevenLabs voice chosen to match that register, not a clone. Cloning a real person's voice needs their
-  consent, and ElevenLabs' terms require it.
+- **The voices** (`script/voices.yaml`, chosen 2026-09-28 from the casting sampler): Curt is his own cloned voice,
+  "Curt Cox 2" (his pick; no one else's voice is cloned). Claude is the stock voice River, relaxed and neutral,
+  provisionally, until Curt confirms it by ear.
 
 ### Sound design
 The track is voice first, with no continuous music. Effects and stings land a joke or a turn, and since 2026-09-28

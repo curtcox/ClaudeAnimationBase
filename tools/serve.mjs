@@ -16,7 +16,7 @@ import { extname, join, normalize } from 'node:path';
 import { load, save, newId, markSeen, overview, DIR } from './review_lib.mjs';
 import { reviewPage } from './review_page.mjs';
 const ROOT = 'site/public', PORT = +(process.env.PORT || 8077);
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.mp4': 'video/mp4', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.mp4': 'video/mp4', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp3': 'audio/mpeg' };
 const json = (res, code, body) => { res.writeHead(code, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(body)); };
 const chOf = v => { const n = parseInt(v, 10); return Number.isInteger(n) && n >= 0 && n < 100 ? n : null; };
 
@@ -71,7 +71,8 @@ createServer((req, res) => {
   if (/^\/api\/(notes|seen|review|rebuild)$/.test(url.pathname)) return api(req, res, url).catch(e => json(res, 500, { error: e.message }));
   if (url.pathname === '/review' || url.pathname === '/review/') { res.writeHead(200, { 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-store' }); return res.end(reviewPage()); }
   let p = normalize(decodeURIComponent(url.pathname)).replace(/^(\.\.[/\\])+/, '');
-  let f = join(ROOT, p); if (existsSync(f) && statSync(f).isDirectory()) f = join(f, 'index.html');
+  // /voices/ is the casting sampler (tools/voice_sampler.mjs), from out/voices: local only
+  let f = p.startsWith('/voices') ? join('out', p) : join(ROOT, p); if (existsSync(f) && statSync(f).isDirectory()) f = join(f, 'index.html');
   if (!existsSync(f)) { res.writeHead(404); return res.end('not found'); }
   if (extname(f) === '.html' && !req.headers.range) {
     const html = readFileSync(f, 'utf8').replace('</body>', BADGE + '</body>').replace(/<body>/, m => m + progress());

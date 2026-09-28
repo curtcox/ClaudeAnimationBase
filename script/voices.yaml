@@ -1,0 +1,8 @@
+# The film's two voices (ElevenLabs), chosen from the casting sampler (tools/voice_sampler.mjs, http://localhost:8077/voices/).
+# The voice tools read this; change a voice here and every line re-voices (clips are cached by voice, model and words).
+model: eleven_v3
+curt:
+  voice: qCYgSspmts8E3GyY0tyz   # "Curt Cox 2": Curt's own cloned voice (his pick, 2026-09-28)
+claude:
+  voice: SAz9YHcvj6GT2YYXdXww   # "River", stock: relaxed, neutral, informative. Claude's pick on paper (it can't listen):
+                                 # the one ungendered candidate, calm and even. Provisional until Curt confirms by ear.

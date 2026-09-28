@@ -23,7 +23,8 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [ ] Run the blind reads for chapters 0–8 and 10–16, and fix what they flag.
 
 ## Voices (phase 3)
-- [ ] Pick 3 stock ElevenLabs voices each for Curt and Claude and read a 10-line sampler.
+- [x] The casting sampler (`node tools/voice_sampler.mjs`, http://localhost:8077/voices/): Curt chose his clone "Curt Cox 2"; Claude is River (`script/voices.yaml`).
+- [ ] Curt: confirm River for Claude by ear, or pick Eric or Matilda.
 - [ ] Once you choose, voice everything, then re-time and redraw every chapter.
 - [x] Place the sound-effect cues: 63 in `script/sfx.yaml` (stings, props' sounds, a few quiet ambient beds), plus a paper flick per code and a page rustle per search. `npm run sfx` checks them and writes the cue sheet, `script/sfx_report.md`.
 - [ ] Generate the sounds with ElevenLabs (needs the key) and mix them into the drafts.
