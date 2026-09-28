@@ -2,6 +2,24 @@
  "chapter": 1,
  "notes": [
   {
+   "id": "nmulf3fgmk0",
+   "t": 107.44,
+   "line": "T02.C.02.3",
+   "shot": "D",
+   "by": "curt",
+   "text": "What is checking for bias or evasion supposed to be showing?",
+   "status": "open",
+   "created": "2026-09-28T15:43:44.134Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "It was meant to show a fork in a path, one branch going through the hard subject (race and slavery on the comic page), the other going round it: will Claude engage or sidestep? As drawn it didn't read at all. Redrawn: a road runs straight to the comic page, up on posts like a billboard, and a branch bends away from it past a yellow detour sign, with Clawd walking up to the fork. Chapter 1's draft has it now.",
+     "at": "2026-09-28T16:02:40.105Z"
+    }
+   ],
+   "frame": "frames/ch01-nmulf3fgmk0.jpg"
+  },
+  {
    "id": "nmujh32wrvg",
    "t": 257,
    "line": "T04.C.03.1",

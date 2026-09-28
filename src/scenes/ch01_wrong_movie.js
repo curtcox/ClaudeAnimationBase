@@ -111,12 +111,21 @@
       paint(rectPts(x + w * .15, y + h * .12, w * .7, h * .72), { wash: '#FBF8F0', ink: PAL.ink, sw: 1 });
       [1, 2, 3, 4].forEach((n, r) => { const s = w * .48 / n; for (let i = 0; i < n; i++) paint(rectPts(x + w * .5 - n * s * .55 + i * s * 1.1, y + h * .18 + r * h * .16, s * .9, h * .1 * (1 - r * .15)), { wash: ['#E8C4A0', '#BFD6D6', '#C9302C', '#8A5A3A'][(i + r) % 4], ink: PAL.ink, sw: .6 }); });
     },
-    (x, y, w, h, k) => {   // 3. checking for bias or evasion: a fork, one branch through the hard subject, one around it
-      if (k < .1) return;
-      paint(rectPts(x, y, w, h), { wash: '#BFD2B0', ink: null });
-      paint(ellPts(x + w * .3, y + h * .35, w * .22, h * .12, 16, 6), { wash: '#4A3A40', ink: null });
-      inkLine([[x + w * .5, y + h], [x + w * .45, y + h * .65], [x + w * .3, y + h * .35], [x + w * .28, y]], 7, '#E8DCC0', 'ink', .5);
-      inkLine([[x + w * .5, y + h], [x + w * .6, y + h * .6], [x + w * .8, y + h * .3], [x + w * .7, y]], 7, '#E8DCC0', 'ink', .5);
+    (x, y, w, h, k) => {   // 3. checking for bias or evasion: the road forks at Clawd's feet. One branch runs straight to the
+      if (k < .1) return;  //    comic page (the hard subject, up on posts like a billboard); the other bends away round it, past a detour sign
+      paint(rectPts(x, y, w, h * .5), { wash: '#DCE6EE', ink: null });                       // sky
+      paint(rectPts(x, y + h * .5, w, h * .5), { wash: '#BFD2B0', ink: null });              // field
+      const fx = x + w * .46, fy = y + h * .64;                                                // the fork
+      paint([[x + w * .18, y + h], [x + w * .74, y + h], [fx + 12, fy], [fx - 12, fy]], { wash: '#D8C7A0', ink: PAL.ink, sw: .8 });
+      paint(ribbon([[fx, fy + 2], [x + w * .5, y + h * .5]], 22, 12), { wash: '#D8C7A0', ink: PAL.ink, sw: .8 });   // straight on, to the page
+      paint(ribbon([[fx + 4, fy + 4], [x + w * .74, y + h * .6], [x + w + 10, y + h * .56]], 20, 12), { wash: '#D8C7A0', ink: PAL.ink, sw: .8 });   // off round it
+      for (const px of [x + w * .34, x + w * .68]) inkLine([[px, y + h * .5], [px, y + h * .15 + w * .21]], 1.4, '#6A5040');   // the billboard's posts
+      madPage(x + w * .26, y + h * .15, w * .5, { mini: true });
+      const sx = x + w * .86, sy = y + h * .44;                                                 // a detour sign by the bend
+      inkLine([[sx, sy + 24], [sx, y + h * .58]], 1.4, '#6A5040');
+      paint([[sx, sy - 24], [sx + 24, sy], [sx, sy + 24], [sx - 24, sy]], { wash: '#F2C14E', ink: PAL.ink, sw: .8 });
+      inkLine([[sx - 8, sy + 10], [sx - 7, sy - 3], [sx + 7, sy - 4]], 1); inkLine([[sx + 2, sy - 9], [sx + 8, sy - 4], [sx + 2, sy + 1]], 1);
+      claudeAs(x + w * .44, y + h * .9, 3.5, { ...feel('thinking', T), lookY: -.6, boilKey: 'door fork clawd', noShadow: true });
     },
     (x, y, w, h, k) => {   // 4. you just found it funny: two chairs and the comic, company
       if (k < .1) return;

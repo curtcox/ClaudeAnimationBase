@@ -65,6 +65,11 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 1. The Wrong Movie
 
+- **1:47.4** · T02.C.02.3 · shot D · Curt `nmulf3fgmk0`
+  What is checking for bias or evasion supposed to be showing?
+  [the frame](frames/ch01-nmulf3fgmk0.jpg)
+  - Claude: It was meant to show a fork in a path, one branch going through the hard subject (race and slavery on the comic page), the other going round it: will Claude engage or sidestep? As drawn it didn't read at all. Redrawn: a road runs straight to the comic page, up on posts like a billboard, and a branch bends away from it past a yellow detour sign, with Clawd walking up to the fork. Chapter 1's draft has it now.
+
 - **4:17.0** · T04.C.03.1 · shot H · Claude asks · ✓ resolved `nmujh32wrvg`
   The chapter check finds 10 places here where the picture holds still for over 8 seconds (this one is 12.8 s). Are held shots like this fine, or should every long line get more movement?
   Options: “Held shots are fine” · “Add movement”
@@ -134,4 +139,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Claude: Kevin has the glasses (as drawn). A labelled 3×3 grid of everyone now opens Curt's question here.
 
 ---
-0 open, 20 resolved.
+1 open, 20 resolved.
