@@ -18,7 +18,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync, readdirSync, renameSync, copyFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import YAML from 'yaml';
-import { loadRefs } from './script_lib.mjs';
+import { loadRefs, sayAt } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 if (!args.chapter) { console.error('usage: node tools/read_check.mjs --chapter=N [--check | --judge | --score] [--no-render]'); process.exit(1); }
@@ -48,7 +48,7 @@ function timeOf([id, ...rest]) {
   const after = typeof rest.at(-1) === 'number' ? rest.pop() : 0, phrase = rest[0];
   if (phrase == null) return l.t0 + after;
   if (typeof phrase !== 'string') throw new Error(`${KEY}: the phrase ${phrase} in ${id} must be quoted text`);
-  for (const s of [l.speech, l.text]) { const i = (s || '').toLowerCase().indexOf(phrase.toLowerCase()); if (i >= 0) return l.t0 + (l.t1 - l.t0) * i / s.length + after; }
+  for (const s of [l.speech, l.text]) { const i = (s || '').toLowerCase().indexOf(phrase.toLowerCase()); if (i >= 0) return sayAt(l, s, i) + after; }
   throw new Error(`${KEY}: "${phrase}" isn't in ${id}`);
 }
 if (args.check) {

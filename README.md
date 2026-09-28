@@ -1,35 +1,51 @@
-# Claude Animation Base
+# Frog or Axolotl
 
-This is a small starter kit with code, instructions and assets for animating a character in [p5.js](https://p5js.org) and [p5.brush](https://github.com/acamposuribe/p5.brush) with Claude Opus 5.5. It's based on the code from the music video [I'm Upping My P(doom)](https://github.com/JohnHeibel/PDoomVideo) and an analysis of what the model did and didn't do well. I highly recommend playing around with your prompting: make it give you the storyboard before coding, give it very broad instructions, try being very specific, ask for subagents, and try a bunch of other fun ways of testing the model's capabilities. In my testing, it can do a lot with very little, but it's also quite accurate when you give it more requirements. Also try asking the model to swap out the character or make new emotions or costumes, give it your own reference images, and try many other fun things like that. I've found that the reasoning level corresponds to how "extravagant" and detail-oriented the model makes the scene. All test videos were generated with Opus 5.5 on xhigh reasoning in Claude Code.
+A voiced, painted film of one long Saturday-morning conversation between Curt and Claude, from a *MAD* magazine parody
+to eval awareness, minds, the July 2026 Hugging Face incident and P(foom). Every word is the conversation's own, and
+every link it mentions is a QR code on screen, pointing at the companion site: https://curtcox.github.io/axol-f/
 
-![Clawd's emotions, animated](docs/emotions.webp)
+![Curt at the Desk, Claude on the middle screen](docs/desk.jpg)
 
-## Frog or Axolotl
-
-This copy of the kit is making one film: *Frog or Axolotl*, a voiced, painted film of a long conversation between Curt
-and Claude, with a companion site holding every link. To see all of it on your computer:
+## See it
 
 ```bash
 npm start
 ```
 
-It opens the site in your browser within seconds, then draws the film (an hour or two the first time). See
-[docs/RELEASE.md](docs/RELEASE.md) for what it does, how the site is published, and how the film gets to YouTube, and
-[VIDEO_PLAN.md](VIDEO_PLAN.md) for the film itself.
+It opens the companion site in your browser within seconds, then draws the film (an hour or two the first time).
+You need Node.js 20 or newer, Google Chrome and ffmpeg; `npm start` says how to get whatever's missing.
 
-## Make a video
+## What's where
 
-Clone it, open it in Claude Code (or any coding agent) and ask for what you want:
+| path | what it is |
+|---|---|
+| [VIDEO_PLAN.md](VIDEO_PLAN.md) | The film: what's settled, and why |
+| [docs/storyboards/](docs/storyboards/) | A storyboard per chapter |
+| [script/](script/) | The conversation, split into lines and checked word for word; the voices, the references and their codes |
+| [src/scenes/](src/scenes/) | A scene file per chapter |
+| [src/look.js](src/look.js) | Every swappable look: how Curt and Claude appear, the home set, the code styles |
+| [site/](site/) | The companion site's pages and explainers |
+| [docs/RELEASE.md](docs/RELEASE.md) | How the site is published and the film gets to YouTube |
+| [REVIEWING.md](REVIEWING.md) | Watching drafts and leaving review notes |
+| [docs/ART.md](docs/ART.md) | Public-domain art the film could borrow |
 
-> Read ANIMATION_GUIDE.md, then make a 15-second video of Clawd trying to catch a butterfly.
+## Built on Claude Animation Base
 
-The model storyboards first, builds shot by shot, renders contact sheets to check its own work, and writes `out/video.mp4`. [ANIMATION_GUIDE.md](ANIMATION_GUIDE.md) holds the rules it follows: handmade, alive, one piece, no text, transitions always, something happens in every scene, and a solid medium of brush strokes, flat 2D and boiling linework. It also covers timing for the viewer and the core principles of character animation.
+The painting, the characters and the renderer come from John Heibel's
+[Claude Animation Base](https://github.com/JohnHeibel/ClaudeAnimationBase) (MIT; see [LICENSE](LICENSE)), a starter kit
+for animating Clawd in [p5.js](https://p5js.org) and [p5.brush](https://github.com/acamposuribe/p5.brush), made from
+the music video [I'm Upping My P(doom)](https://github.com/JohnHeibel/PDoomVideo). Claude in this film is the kit's
+Clawd, gathering out of a crowd. [ANIMATION_GUIDE.md](ANIMATION_GUIDE.md) is the kit's guide to painting and timing;
+it was written for short, wordless videos, and the film departs from it where [VIDEO_PLAN.md](VIDEO_PLAN.md) says.
 
-## Run it yourself
+![Clawd's emotions, animated](docs/emotions.webp)
 
-You need Node.js, Google Chrome and ffmpeg.
+The kit still works on its own: ask a coding agent to "Read ANIMATION_GUIDE.md, then make a 15-second video of Clawd
+trying to catch a butterfly", or render the kit's demo as below.
 
-Without a dedicated GPU, p5.brush's watercolour fills make render times fairly slow, measured in seconds per frame. If you're running on integrated graphics, I recommend asking the model to avoid those fills and replace them with something else appropriate. (I love the look of the watercolours, though.)
+### Rendering
+
+Without a dedicated GPU, p5.brush's watercolour fills make render times fairly slow, measured in seconds per frame. On integrated graphics, the kit's author suggests asking the model to replace those fills with something lighter. The film's drafts (`npm run draft`) do much the same: flat washes in place of watercolour.
 
 ```bash
 npm install
@@ -40,7 +56,7 @@ That renders the 11-second demo in [src/scenes/demo.js](src/scenes/demo.js). Ope
 
 On Linux, `render.mjs` starts Chrome with `--no-sandbox` (Ubuntu 23.10+ blocks Chrome's sandbox in headless use) and also finds a Chromium installed by Playwright. With no GPU at all, add `--soft-gl` to render WebGL in software: slow on watercolour fills, but it works. On a headless Linux machine with an NVIDIA GPU (a cloud or cluster node), add `--gpu-angle=gl-egl` (or `vulkan`); `node gpu_probe.mjs <chrome path>` shows which renderer each set of flags gets.
 
-## What's here
+### The kit's files
 
 | path | what it is |
 |---|---|
@@ -49,7 +65,6 @@ On Linux, `render.mjs` starts Chrome with `--no-sandbox` (Ubuntu 23.10+ blocks C
 | [src/core.js](src/core.js) | Painting, timing, motion helpers, camera, light, paper |
 | [src/timeline.js](src/timeline.js) | Shots, loops and the brush-wipe transition |
 | [src/config.js](src/config.js) | Length and tempo |
-| [src/scenes/](src/scenes/) | Your video goes here (the demo is an example) |
+| [src/scenes/demo.js](src/scenes/demo.js) | The kit's demo scene |
 | [render.mjs](render.mjs) | Headless renderer: contact sheets, frame strips, crops, stills, MP4 |
-| [REVIEWING.md](REVIEWING.md) | Watching drafts and leaving review notes: `npm run rebuild` (overnight), `npm run serve`, then http://localhost:8077/review/ |
 | [docs/](docs/) | Model sheets: [emotions](docs/emotions.jpg) (also [animated](docs/emotions.webp)) and [views, motion and hats](docs/views.jpg) |

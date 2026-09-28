@@ -8,7 +8,7 @@
 // its chapter. Warns when two stings land within 1.5 s of each other.
 import { readFileSync, writeFileSync } from 'node:fs';
 import YAML from 'yaml';
-import { loadRefs, resolveAnchor, pad } from './script_lib.mjs';
+import { loadRefs, resolveAnchor, pad, sayAt } from './script_lib.mjs';
 
 const FILE = 'script/sfx.yaml', { every = [], cues = [] } = YAML.parse(readFileSync(FILE, 'utf8'));
 const KINDS = new Set(['sting', 'effect', 'ambience']), FIELDS = new Set(['id', 'ch', 'at', 'until', 'len', 'kind', 'gain', 'prompt', 'why', 'when']);
@@ -21,7 +21,7 @@ function timeOf(ch, [id, ...rest], who) {
   if (phrase == null) return l.t0 + after;
   if (typeof phrase !== 'string') throw new Error(`${who}: the phrase ${phrase} in ${id} must be quoted text`);
   if (phrase === '@end') return l.t1 + after;
-  for (const s of [l.speech, l.text]) { const i = (s || '').toLowerCase().indexOf(phrase.toLowerCase()); if (i >= 0) return l.t0 + (l.t1 - l.t0) * i / s.length + after; }
+  for (const s of [l.speech, l.text]) { const i = (s || '').toLowerCase().indexOf(phrase.toLowerCase()); if (i >= 0) return sayAt(l, s, i) + after; }
   throw new Error(`${who}: "${phrase}" isn't in ${id}`);
 }
 

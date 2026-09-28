@@ -10,9 +10,13 @@ const CH_BY_ID = new Map(CH_LINES.map(l => [l.id, l]));
 function L(id) { const l = CH_BY_ID.get(id); if (!l) throw new Error(`no line ${id} in this chapter`); return l; }
 const at = (id, k = 0) => { const l = L(id); return l.t0 + (l.t1 - l.t0) * k; };
 function lineAt(t) { let cur = null; for (const l of CH_LINES) { if (l.t0 <= t) cur = l; else break; } return cur; }
+// A voiced line carries its lip sync (l.mouth: a digit 0-9 per 1/24 s, from the voice's own loudness; tools/voice_lib.mjs),
+// so the mouth opens on the stressed vowels and shuts on the pauses. A line on the scratch voice falls back to talk().
+const MOUTH_HZ = 24;
 function talkOf(t, speaker) {
   const l = lineAt(t);
-  return l && l.spoken && l.speaker === speaker ? talk(t, l.t0, l.t1) : 0;
+  if (!l || !l.spoken || l.speaker !== speaker) return 0;
+  return l.mouth ? (+l.mouth[Math.floor((t - l.t0) * MOUTH_HZ)] || 0) / 9 : talk(t, l.t0, l.t1);
 }
 const within = (t, a, b) => seg(t, L(a).t0, b ? L(b).t0 : L(a).end);
 

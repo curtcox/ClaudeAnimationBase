@@ -6,6 +6,11 @@ The person prompting you decides **what** the video is about. This guide decides
 
 **No design here is final.** Clawd, the emotions, the props and the helpers are a starting point, not a limit. Change any of them, Clawd's own design included, and add whatever new characters, props or emotions the idea needs. Paint new things with the same tools and rules, so they belong with the rest.
 
+> **In this repo.** This is the kit's guide, written for short, wordless videos. *Frog or Axolotl* follows it for the
+> medium (rule 1) and for reads and timing (rule 4), and departs from it where [VIDEO_PLAN.md](VIDEO_PLAN.md) §6 says:
+> it letters words from the conversation (in place of rule 2), its shots last as long as the voice does, and Clawd
+> (Claude) talks, with a mouth that follows the voice.
+
 Look at the model sheets first:
 - [docs/emotions.jpg](docs/emotions.jpg): all 31 emotions.
 - [docs/views.jpg](docs/views.jpg): the five key views, the motion helpers and the hats.

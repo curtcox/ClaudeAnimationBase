@@ -1,6 +1,6 @@
 // cast.js: the film's characters besides Clawd.
 //
-//   curt(x, y, u, o)      Curt, as a placeholder: a minimal stick figure in CGP Grey's manner (a plain round head, dot
+//   curt(x, y, u, o)      Curt: a minimal stick figure in CGP Grey's manner (a plain round head, dot
 //                         eyes, one clean line for everything else). Its bareness next to the painted Clawd is a gag of
 //                         its own. (x, y) = the point between the feet (standing) or the seat (sitting); the head is
 //                         2.2u across and the figure is about 15u tall standing.
@@ -10,7 +10,8 @@
 // Like clawd(), each takes pose options, seeds its own boil per part, and draws one frame. Motion comes from what you
 // pass in (talk(), looks, arm angles from kf()), never from state.
 
-// A speaking envelope, until real voice timing replaces it: 0..1 openness at time t while a line plays from t0 to t1.
+// A made-up speaking envelope, for a line with no lip sync (the scratch voice; see talkOf in timing.js): 0..1 openness at
+// time t while a line plays from t0 to t1.
 // Syllable-ish (about 5 a second), with a little irregularity, and closed outside the line.
 function talk(t, t0, t1) {
   if (t < t0 || t > t1) return 0;

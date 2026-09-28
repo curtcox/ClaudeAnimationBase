@@ -8,7 +8,7 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 ## Needs attention (2)
 
 - **frog-chart** (ch 2): redirects to https://x.com/fjzzq2002/status/2103556166903038213
-- **companion** (ch 16): **404**
+- **tokenizers** (ch 12): **202**
 
 ## 0 Cold open
 
@@ -79,7 +79,7 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | swe-chat | SWE-chat | added | T09.C.03 | page · chat | — | 200 | [2604.20779] SWE-chat: Coding Agent Interactions From Real Users in the Wild |
 | sharegpt-vicuna | ShareGPT (via Vicuna) | added | T09.C.03 | page · chat | — | 200 | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality - LMSYS Org |
 | scientific-control | Scientific control | added | T09.C.03 | page · plain | — | 200 | Scientific control - Wikipedia |
-| claude-code | Claude Code | added | T09.C.05 | shelf · plain | v3, 10.3 px | 200 |  |
+| claude-code | Claude Code | added | T09.C.05 | shelf · plain | v3, 10.3 px | 200 | Claude Code by Anthropic \| AI Coding Agent, Terminal, IDE |
 | sampling | Sampling | added | T11.C.03.2 | shelf · plain | v4, 9.3 px | 200 | Sampling (statistics) - Wikipedia |
 | note-evaluations | Explained: Tests for AI, and why being tested might change the answers | note | T07.C.02 | shelf · note | v4, 9.3 px | — |  |
 | note-frog-or-axolotl | Explained: The frog-or-axolotl test | note | T08.C.02 | shelf · note | v4, 9.3 px | — |  |
@@ -319,7 +319,7 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | openai-hf-statement | OpenAI's statement (July 21) | added | T52.C.06.2 | shelf · sandbox | v5, 8.4 px | 403 (browser 2026-09-26) |  |
 | openai-hf-road-ahead | OpenAI: the road ahead (Aug 26) | added | T52.C.07 | shelf · sandbox | v5, 8.4 px | 403 (browser 2026-09-26) |  |
 | swarmtraces | How the agents hacked Hugging Face | added | T52.C.04 | shelf · sandbox | v2, 11.5 px | 200 | Revealing the details of how OpenAI agents hacked Hugging Face |
-| omg-other-agents | OMG! We've found other agents! (a song) | added | T52.C.06.1 | shelf · sandbox | v3, 10.3 px | 200 |  |
+| omg-other-agents | OMG! We've found other agents! (a song) | added | T52.C.08 | shelf · sandbox | v3, 10.3 px | 200 |  |
 | note-chatgpt-question | Explained: "Would it surprise you to learn you've been talking to ChatGPT?" | note | T54.C.01 | shelf · note | v4, 9.3 px | — |  |
 | note-defenders-refused | Explained: Defenders turned away: the filters in July | note | T52.C.06.4 | shelf · note | v4, 9.3 px | — |  |
 | note-hf-incident | Explained: July 2026: the OpenAI–Hugging Face incident | note | T52.C.04 | shelf · note | v4, 9.3 px | — |  |
@@ -340,7 +340,7 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | margolus-levitin | Margolus–Levitin | added | T60.C.02.7 | shelf · plain | v4, 9.3 px | 200 | Quantum speed limit - Wikipedia |
 | bekenstein | Bekenstein bound | added | T60.C.02.7 | shelf · plain | v4, 9.3 px | 200 | Bekenstein bound - Wikipedia |
 | von-neumann | John von Neumann | added | T61.C.01 | shelf · plain | v4, 9.3 px | 200 | John von Neumann - Wikipedia |
-| tokenizers | How tokenizers split words | added | T57.C.02 | shelf · plain | v4, 9.3 px | 200 | Tokenizers · Hugging Face |
+| tokenizers | How tokenizers split words | added | T57.C.02 | shelf · plain | v4, 9.3 px | 202 |  |
 | magikarp | Magikarp (with a k) | added | T57.C.02 | shelf · gold-scales | v3, 10.3 px | 200 | Magikarp and Gyarados - Wikipedia |
 | bpe | Byte-pair encoding | added | T57.C.03 | shelf · plain | v4, 9.3 px | 200 | Byte-pair encoding - Wikipedia |
 | glitch-token | Glitch tokens | added | T57.C.04 | shelf · gold-scales | v3, 10.3 px | 200 | Glitch token - Wikipedia |
@@ -479,5 +479,5 @@ correction H, shelf tags 380 px at M, and 6 px/module is the floor.
 | the-terminator | The Terminator (1984) | added | T78.C.02 | page · chrome-red-eye | — | 200 | The Terminator - Wikipedia |
 | ill-be-back | "I'll be back" | added | T78.C.02 | page · chrome-red-eye | — | 200 | I'll be back - Wikipedia |
 | pdoom-video | I'm Upping My P(doom) | added | T78.C.01 | shelf · plain | v3, 10.3 px | 200 | I'm Upping My P(doom) |
-| companion | Every link in this film | added | T78.C.02 | feature · note | v4, 11.7 px | 404 | Site not found &middot; GitHub Pages |
+| companion | Every link in this film | added | T78.C.02 | feature · note | v4, 11.7 px | 200 | Frog or Axolotl: the links |
 | note-nerd-sniping | Explained: "The T-800 of nerd sniping" | note | T78.C.01 | shelf · note | v4, 9.3 px | — |  |

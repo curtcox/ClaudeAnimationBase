@@ -5,11 +5,13 @@
 //   node tools/voice.mjs --dry           how many lines and characters would be sent, and nothing else
 // Each clip is kept in assets/vo/<hash>.mp3, with ElevenLabs' character timings beside it (<hash>.json), keyed by voice,
 // model and the words, and committed, so a fresh clone has the voices without a key. Only new or changed lines are sent.
+// Each clip's loudness and timings become audio/sync.json: its lip sync and word starts (voice_lib.mjs's syncOf), which
+// the timeline carries to the scenes. A line on its scratch clip has none, and its mouth keeps the made-up talk() rhythm.
 // A line that can't be voiced (no key, quota spent) keeps its scratch clip if it has one, with a warning; run again later.
 import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { eleven } from './eleven.mjs';
-import { finishVoice, lufs } from './voice_lib.mjs';
+import { finishVoice, lufs, syncOf } from './voice_lib.mjs';
 import { PATHS, readYaml } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
@@ -49,12 +51,13 @@ if (stop) console.log(`stopped early: ${stop.slice(0, 200)}`);
 
 // every line's clip: the real one, else its scratch clip
 const scratch = existsSync('audio/scratch/clips.json') ? JSON.parse(readFileSync('audio/scratch/clips.json', 'utf8')) : {};
-const clips = {}, gains = {}, missing = [];
+const clips = {}, gains = {}, sync = {}, missing = [];
 for (const l of lines) {
   const f = fileOf(l) + '.mp3';
   if (existsSync(f)) {
     clips[l.id] = f;
     const side = JSON.parse(readFileSync(fileOf(l) + '.json', 'utf8'));
+    sync[l.id] = syncOf(f, l.speech, side.alignment);
     if (side.lufs == null) { side.lufs = lufs(f); writeFileSync(fileOf(l) + '.json', JSON.stringify(side) + '\n'); }
     if (isFinite(side.lufs)) gains[l.id] = Math.min(4, 10 ** ((LEVEL - side.lufs) / 20));
   }
@@ -62,5 +65,5 @@ for (const l of lines) {
 }
 if (missing.length) console.log(`warning: ${missing.length} line(s) not voiced yet, using the scratch voice where there is one: ${missing.slice(0, 12).join(' ')}${missing.length > 12 ? ' …' : ''}`);
 writeFileSync('audio/voice.json', JSON.stringify({ model: cast.model, voices: { curt: cast.curt.voice, claude: cast.claude.voice }, missing }, null, 1) + '\n');
-finishVoice(clips, only, gains);
+finishVoice(clips, only, gains, sync);
 process.exitCode = missing.length ? 1 : 0;

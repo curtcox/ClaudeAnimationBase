@@ -1,9 +1,9 @@
 {
-  "name": "claude-animation-base",
+  "name": "axol-f",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "description": "Clawd, painted in p5.brush: a character kit and guide for making hand-painted Clawd animations",
+  "description": "Frog or Axolotl: a voiced, painted film of one conversation between Curt and Claude, and its companion site (built on Claude Animation Base)",
   "engines": {
     "node": ">=20"
   },

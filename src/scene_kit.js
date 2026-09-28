@@ -17,11 +17,18 @@
 const lab = (txt, x, y, size, col = PAL.ink, o = {}) => letter(txt, x, y, size, col, { ink: false, font: `${Math.round(size)}px "Patrick Hand", sans-serif`, ...o });
 
 // When a phrase is said, estimated from where it sits in the line's speech (the voice's word timings can replace this).
+// when character i of s (the line's speech or text) is said: the voice's own word starts when the line has them
+// (l.words, from tools/voice_lib.mjs), else that far through the line. tools/script_lib.mjs has the same for the checks.
+function sayAt(l, s, i) {
+  let w = null;
+  if (l.words && s === l.speech) for (let k = 0; k < l.words.length && l.words[k] <= i; k += 2) w = l.words[k + 1];
+  return w != null ? l.t0 + w : l.t0 + (l.t1 - l.t0) * i / s.length;
+}
 function atWord(id, phrase, dk = 0) {
   const l = L(id), f = phrase.toLowerCase();
   for (const s of [l.speech, l.text]) {   // the speech spells some words out ("R L H F"), so fall back to the written text
     const i = (s || '').toLowerCase().indexOf(f);
-    if (i >= 0) return l.t0 + (l.t1 - l.t0) * i / s.length + dk;
+    if (i >= 0) return sayAt(l, s, i) + dk;
   }
   throw new Error(`"${phrase}" isn't in ${id}`);
 }

@@ -16,7 +16,7 @@ Decisions made so far:
 | the 3 hidden images | in `assets/ref/`: `mad157_apes.png` (*MAD* #157, 1973), `frog_axolotl_chart.png`, `connor2_compass.png`. Used only as reference and repainted in the kit's style |
 | frog/axolotl chart source | https://x.com/fjzzq2002/status/2103556166903038213/photo/1 |
 | QR targets | encode the URL directly. Use a short redirect (256t-based, domain to be decided) only when a direct URL is too long to scan reliably |
-| Curt, for now | looks and sounds like CGP Grey: a minimal stick figure, and a brisk, precise, dry voice. Revisit later |
+| Curt | a minimal stick figure in CGP Grey's manner, look H (ponytail, hoodie, circle beard), greying (`LOOK.curt`); his own voice clone |
 | figures | loose caricatures of real and fictional people |
 
 Working title: **Frog or Axolotl**. Alternatives: *Who's Doing the Talking?* or *The Wrong Movie*.
@@ -368,8 +368,9 @@ The kit has only Clawd. The film needs a **human rig** and a set of **non-human 
   - frog and axolotl
   - a golden carp
   - Hermes and OpenClaw as shelled agents
-- **Clawd talks.** Add a talking mouth driven by the voice's loudness envelope. The rest of the time Clawd keeps
-  the guide's mouthless resting face. Curt's avatar lip-syncs the same way.
+- **Clawd talks** ✅. The mouth follows the voice's own loudness, frame by frame (`audio/sync.json`, made by
+  `tools/voice.mjs`), so it opens on stressed vowels and shuts on pauses. The rest of the time Clawd keeps the guide's
+  mouthless resting face. Curt's avatar lip-syncs the same way. The same timings put word cues (`atWord`) on the word.
 - **Caricature guardrails.** They're affectionate, not mocking, including for people Claude critiques (Jarvis). No
   franchise logos or insignia, and no copying of specific film stills. The legal footing is commentary and parody;
   the video description carries a short fair-use note.
@@ -437,6 +438,7 @@ src/
 - **`ANIMATION_GUIDE.md`**: the rules this project overrides, noted at the top of each storyboard:
   - the no-text rule gives way to painted labels and QR captions;
   - shot length follows the voice track, but rule 4 on reads still applies to every visual beat.
+  - Clawd talks: a lip-synced mouth while Claude's voice plays (§5).
 
 ### Render budget
 About 75 min at 24 fps is about 108,000 frames. At about 1 s/frame on Apple-silicon Metal with `--workers=4`
@@ -469,5 +471,6 @@ ElevenLabs needs about 60k characters per full voice pass, plus a few dozen effe
 
 1. **Short-link domain.** It's needed only for the handful of URLs that are too long to scan. The QR tooling
    reports which ones.
-2. **Your real look and voice.** Deferred. The CGP Grey-style stand-in is built so it can be swapped later.
+2. **Your real look and voice.** Settled: look H, greying, and your own voice clone. The stick figure can still be
+   swapped for a caricature later (`LOOK.curt`).
 3. **`ELEVENLABS_API_KEY`.** Only needed for Phase 3, after the visual and reference rounds.

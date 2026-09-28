@@ -125,3 +125,11 @@ export function loadRefs() {
   const refs = readYaml('script/refs.yaml');
   try { return refs.concat(readYaml('script/notes_refs.yaml') || []); } catch { return refs; }
 }
+
+// when character i of s (a timeline line's speech or text) is said, as src/scene_kit.js's sayAt: the voice's own word
+// starts when the line has them, else that far through the line
+export function sayAt(l, s, i) {
+  let w = null;
+  if (l.words && s === l.speech) for (let k = 0; k < l.words.length && l.words[k] <= i; k += 2) w = l.words[k + 1];
+  return w != null ? l.t0 + w : l.t0 + (l.t1 - l.t0) * i / s.length;
+}

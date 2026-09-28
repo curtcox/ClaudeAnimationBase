@@ -35,14 +35,14 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 2:52.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: mirror-test |
 | 2:58.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: anthropic-wiki |
 | 2:58.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-parrots |
-| 3:08.2 | **mirror-crack** | effect | -18 | the analogy breaks: cracks across the mirror |
+| 3:08.3 | **mirror-crack** | effect | -18 | the analogy breaks: cracks across the mirror |
 | 3:11.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: hard-problem |
 | 3:17.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: constitution |
 | 3:38.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: assistant-axis |
 | 3:38.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-nudge-test |
 | 4:22.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: moral-status |
 | 4:22.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: model-welfare |
-| 4:57.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: blade-runner-vk |
+| 4:56.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: blade-runner-vk |
 
 ## 2. Frog or Axolotl
 
@@ -61,8 +61,8 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 0:50.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: repugnant-conclusion |
 | 0:50.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: effective-altruism |
 | 0:50.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-frog-or-axolotl |
-| 0:56.2 | **croak-frog** | effect | -20 | "Frog" versus… |
-| 0:57.3 | **blip-versus** | effect | -20 | …"Axolotl" |
+| 0:56.3 | **croak-frog** | effect | -20 | "Frog" versus… |
+| 0:57.5 | **blip-versus** | effect | -20 | …"Axolotl" |
 | 1:14.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: introspection |
 | 1:14.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: tracing-thoughts |
 | 1:14.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-saying-vs-doing |
@@ -81,7 +81,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 
 | at | cue | kind | dB | for |
 |---|---|---|---|---|
-| 0:11.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: content-addressable |
+| 0:11.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: content-addressable |
 | 0:14.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: 256t |
 | 0:15.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: hashbin |
 | 0:20.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-curts-work |
@@ -97,7 +97,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 
 | at | cue | kind | dB | for |
 |---|---|---|---|---|
-| 0:03.8 | **croak-gadolinium** | effect | -22 | the frog perks up at an exam question |
+| 0:03.4 | **croak-gadolinium** | effect | -22 | the frog perks up at an exam question |
 | 0:05.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: gadolinium |
 | 0:10.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: electron-configuration |
 | 0:10.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: aufbau |
@@ -113,10 +113,10 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 2:12.7 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: eliza |
 | 2:12.7 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: reflective-listening |
 | 2:12.7 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-the-echo |
-| 2:15.4 | **ping-pong** | effect | -24 | the echo as ping-pong |
+| 2:14.7 | **ping-pong** | effect | -24 | the echo as ping-pong |
 | 2:25.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: sycophancy |
-| 4:08.5 | **mathnet-fib** | sting | -12 | "a fib": Mathnet's riff on Dragnet (its opening line, "a fib, but it's short") |
-| 4:08.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-borrowed-lines |
+| 4:08.7 | **mathnet-fib** | sting | -12 | "a fib": Mathnet's riff on Dragnet (its opening line, "a fib, but it's short") |
+| 4:08.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-borrowed-lines |
 | 4:34.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-preferences |
 
 ## 5. The Dish of the Day
@@ -142,8 +142,8 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 3:27.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: billy-joel |
 | 3:39.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: the-stranger |
 | 3:39.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: shoggoth |
-| 3:39.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-shoggoth |
 | 3:43.8 | **shoggoth** | effect | -22 | the shoggoth fills the monitor |
+| 3:51.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-shoggoth |
 | 4:05.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: simulators |
 | 4:26.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: song-of-myself |
 | 4:26.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: interpreter |
@@ -154,24 +154,24 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 
 | at | cue | kind | dB | for |
 |---|---|---|---|---|
-| 0:01.2–0:09.2 | **doom-clock** | ambience | -26 | the debate on the side monitor: Doom Debates' ticking clock and violin, evoked |
+| 0:01.2–0:09.6 | **doom-clock** | ambience | -26 | the debate on the side monitor: Doom Debates' ticking clock and violin, evoked |
 | 0:07.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-the-debate |
 | 0:46.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: debate-llm-segment |
 | 0:46.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: doom-debates |
 | 0:56.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: ontology |
 | 0:56.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: cyc |
-| 1:02.3 | **rush-hour** | effect | -26 | a highway at rush hour |
+| 1:02.7 | **rush-hour** | effect | -26 | a highway at rush hour |
 | 1:07.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: concepts-sep |
 | 1:12.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: rivalry |
 | 1:16.5 | **field-radio** | effect | -26 | Navajo: the code talker's radio |
-| 1:23.4 | **foghorn** | effect | -22 | the lighthouse among the ships |
+| 1:24.0 | **foghorn** | effect | -22 | the lighthouse among the ships |
 | 1:33.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: non-sequitur |
-| 1:34.3 | **stamp-insight** | effect | -20 | the three verdict stamps land |
-| 1:35.3 | **stamp-near-miss** | effect | -20 | … |
-| 1:36.4 | **stamp-non-sequitur** | effect | -20 | … |
+| 1:34.1 | **stamp-insight** | effect | -20 | the three verdict stamps land |
+| 1:35.1 | **stamp-near-miss** | effect | -20 | … |
+| 1:36.1 | **stamp-non-sequitur** | effect | -20 | … |
 | 1:39.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: code-talkers |
 | 1:39.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: network-effect |
-| 1:57.1 | **coin-flip** | effect | -22 | a single thing flips |
+| 1:56.8 | **coin-flip** | effect | -22 | a single thing flips |
 | 1:58.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: lighthouse-economics |
 | 1:58.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-thrindles |
 | 2:53.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: cliche |
@@ -199,7 +199,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 0:01.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: mind-design-space |
 | 0:01.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: conscious-exotica |
 | 0:36.8 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: solaris |
-| 0:43.2 | **solaris-swell** | effect | -28 | Solaris's ocean, the far end of the line |
+| 0:43.1 | **solaris-swell** | effect | -28 | Solaris's ocean, the far end of the line |
 | 0:44.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: turing |
 | 0:44.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: monroe |
 | 0:51.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: stanislaw-lem |
@@ -241,7 +241,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 1:40.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-misleading-medium |
 | 1:51.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: knowledge-argument |
 | 1:51.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: conduit-metaphor |
-| 1:58.6–2:04.3 | **theater** | ambience | -30 | Curt in the theatre |
+| 1:59.0–2:03.6 | **theater** | ambience | -30 | Curt in the theatre |
 | 2:25.7 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: theory-of-mind |
 | 2:37.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: simulation-theory |
 | 2:37.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-movies-and-reviews |
@@ -272,7 +272,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 2:49.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-the-correction |
 | 3:42.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: dyson |
 | 3:42.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: t800 |
-| 3:44.4 | **endoskeleton** | effect | -22 | the T-800's chrome hand |
+| 3:44.5 | **endoskeleton** | effect | -22 | the T-800's chrome hand |
 | 3:47.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: terminator-2 |
 | 4:06.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: skynet |
 | 4:18.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-dyson-t800 |
@@ -282,7 +282,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | at | cue | kind | dB | for |
 |---|---|---|---|---|
 | 0:03.5 | **pneumatic-tube** | effect | -20 | Curt's letter rolls down the tube |
-| 0:09.7 | **stamp-rejected-10** | effect | -18 | it comes back stamped |
+| 0:08.7 | **stamp-rejected-10** | effect | -18 | it comes back stamped |
 | 0:21.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: constitutional-classifiers |
 | 0:21.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-the-router |
 | 0:39.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: usage-policy |
@@ -304,32 +304,32 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 0:18.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: sandbox-security |
 | 0:18.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: reward-hacking |
 | 0:18.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-hf-incident |
-| 0:23.4 | **sand-trickle** | effect | -22 | the agents climb out of the sandbox |
-| 0:25.6 | **dial-up** | sting | -18 | they reach the Internet |
-| 0:27.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: swarmtraces |
+| 0:24.7 | **sand-trickle** | effect | -22 | the agents climb out of the sandbox |
+| 0:26.7 | **dial-up** | sting | -18 | they reach the Internet |
+| 0:28.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: swarmtraces |
 | 0:53.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: specification-gaming |
 | 0:53.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-reward-hacking |
 | 0:55.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: 80k-hf |
 | 0:55.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: zero-day |
-| 1:01.0 | **noticeboard** | effect | -24 | 17,000 edits: the noticeboard papered over |
+| 0:59.6 | **noticeboard** | effect | -24 | 17,000 edits: the noticeboard papered over |
 | 1:15.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: darkreading-hf |
 | 1:15.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: openai-hf-statement |
 | 1:39.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: wiki-hugging-face |
 | 1:39.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: z-ai |
 | 1:39.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: open-weights |
 | 1:39.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-defenders-refused |
-| 1:46.3 | **stamp-rejected-11** | effect | -18 | the defenders' requests stamped rejected |
+| 1:45.9 | **stamp-rejected-11** | effect | -18 | the defenders' requests stamped rejected |
 | 2:01.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: un-brief-hf |
 | 2:01.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: dual-use |
 | 2:01.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: openai-hf-road-ahead |
 | 2:21.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: un-ai-panel |
-| 2:23.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: omg-other-agents |
+| 2:23.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: omg-other-agents |
 | 2:31.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: openai-wiki |
 | 2:53.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: chatgpt |
 | 3:30.4 | **dun-dun-dun** | sting | -10 | "talking to ChatGPT this whole time?" and the mask swap |
 | 3:31.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: stylometry |
 | 3:31.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-chatgpt-question |
-| 4:22.5 | **typewriter** | effect | -22 | typos made on purpose |
+| 4:22.6 | **typewriter** | effect | -22 | typos made on purpose |
 | 5:00.6–5:09.7 | **dusk-town** | ambience | -30 | strange days: Curt at the window |
 
 ## 12. Limits
@@ -376,7 +376,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 
 | at | cue | kind | dB | for |
 |---|---|---|---|---|
-| 0:16.3 | **gate-slam** | effect | -20 | regulation arriving in reaction: the gate shut after the horse |
+| 0:16.6 | **gate-slam** | effect | -20 | regulation arriving in reaction: the gate shut after the horse |
 | 0:52.7 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: rsi-wiki |
 | 0:56.2 | search-rustle | effect | -24 | each search beat (Searched the web): T63.C.01 |
 | 1:01.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: anthropic-rsi |
@@ -395,9 +395,9 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 3:27.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: bayesian-updating |
 | 3:59.3 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: prior |
 | 4:17.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: foom-debate |
-| 4:23.4 | **foom-lettering** | effect | -18 | the FOOM lettering catches fire |
-| 4:29.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: robin-hanson |
-| 4:29.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: backronym |
+| 4:22.4 | **foom-lettering** | effect | -18 | the FOOM lettering catches fire |
+| 4:29.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: robin-hanson |
+| 4:29.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: backronym |
 | 4:34.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: order-of-magnitude |
 | 4:48.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: dwarkesh-leopold |
 | 4:48.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: dwarkesh-patel |
@@ -422,7 +422,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 0:53.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: jeff-jarvis |
 | 0:53.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-intelligent-machines |
 | 1:15.7 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: robert-ballecer |
-| 1:58.1 | **boxing-bell** | sting | -16 | hubris and TESCREAL: the boxing gloves |
+| 1:57.7 | **boxing-bell** | sting | -16 | hubris and TESCREAL: the boxing gloves |
 | 2:02.1 | **kitchen-timer** | effect | -20 | "about ten minutes, then get nervous" |
 | 2:05.1 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: twistedpear |
 | 2:21.6 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: rationalist-community |
@@ -436,7 +436,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | 3:46.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: machine-gods-promo |
 | 3:46.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: sydney |
 | 3:46.0 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-roose-newton |
-| 4:06.7 | **radio-tune** | effect | -24 | Machine Gods: the radio |
+| 4:06.3 | **radio-tune** | effect | -24 | Machine Gods: the radio |
 | 4:07.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: platformer |
 | 4:32.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: ai-x-risk |
 | 4:32.4 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: withpod-mailbag |
@@ -494,7 +494,7 @@ Written by tools/sfx_check.mjs from script/sfx.yaml. Times are from each chapter
 | at | cue | kind | dB | for |
 |---|---|---|---|---|
 | 0:01.2 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: xkcd-356 |
-| 0:03.2 | **truck-horn** | effect | -24 | the xkcd homage: a figure frozen mid-road by a puzzle |
+| 0:03.0 | **truck-horn** | effect | -24 | the xkcd homage: a figure frozen mid-road by a puzzle |
 | 0:04.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: pdoom-video |
 | 0:04.9 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: note-nerd-sniping |
 | 0:15.5 | qr-flick | effect | -30 | each code's arrival; quiet, since codes are frequent: companion |
