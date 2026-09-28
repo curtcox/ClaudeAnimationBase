@@ -156,7 +156,7 @@ reads:
     means: Curt is asking the questions Dyson started asking too late
     decoys: ["two men at desks side by side, seen from behind, each with a wall clock, and the clocks show the same time", "two men at desks side by side, seen from behind, each with a wall mirror", "two men at desks side by side, seen from behind, each with a spotlight above him"]
   # the codes: what's pictured beside each style, at its on-screen size
-  - { id: Q1, answer: "a lobster's tail", code: hieropedia-crustafarianism, shows: a segmented lobster tail shell, decoys: [a shrimp, a grub or caterpillar, a woodlouse] }
+  - { id: Q1, code: hieropedia-crustafarianism, shows: "a whole lobster, claws raised", answer: "a lobster", decoys: [a shrimp, a scorpion, a crab] }
   - { id: Q2, answer: "a sandal with wings", code: hermes-agent, shows: a winged sandal, decoys: [a shoe with a plant in it, a slipper with feathers, a boot with a flame] }
   - { id: Q3, code: openclaw, shows: a lobster claw, decoys: [a crab leg, a red glove, a flower bud] }
   - { id: Q4, answer: "a computer chip", code: dyson, shows: a computer chip on a circuit board, decoys: [a battery, a green postage stamp, a bug with legs] }

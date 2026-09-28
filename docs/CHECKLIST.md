@@ -17,7 +17,7 @@ As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
 - [ ] Redraw the chapters with the new codes (`npm run rebuild`).
 - [x] Do a careful pass on the comic page's caricatures in the cold open.
 - [x] A blind-read check (`npm run reads -- --chapter=N`, key in `docs/reads/`): chapter 9 done, 4 frames flagged and 10 worth a look.
-- [x] Fix chapter 9's flagged reads: 1 flagged (the lobster-shell code, being redrawn in Still QR) and 6 worth a look, down from 6 flagged and 9 worth a look under the stricter test.
+- [x] Fix chapter 9's flagged reads: none flagged and 5 worth a look (down from 6 and 9 under the stricter test). The lobster-shell code was redrawn in Still QR as a whole lobster. One of the 5 is chapter 9's figure for Curt, which readers doubt is a man; it waits on your decision about your look.
 - [ ] Write read keys for the other chapters and run them.
 
 ## Voices (phase 3)

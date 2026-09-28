@@ -8,7 +8,7 @@ by at least one decoder, and at least two decoders each read 13 or more of the 1
 each has blind spots: ZXing-js fails some perfect, computer-generated codes outright, and jsQR misses sporadically at
 particular scales.
 
-**339 of 339 pass.** (117 unchanged since their last check, so their results are reused.)
+**339 of 339 pass.** (339 unchanged since their last check, so their results are reused.)
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|

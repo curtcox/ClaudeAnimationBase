@@ -25,6 +25,8 @@ if (!args.chapter) { console.error('usage: node tools/read_check.mjs --chapter=N
 const CH = String(args.chapter).padStart(2, '0'), KEY = `docs/reads/ch${CH}.yaml`;
 if (!existsSync(KEY)) { console.error(`no answer key at ${KEY}`); process.exit(1); }
 const reads = YAML.parse(readFileSync(KEY, 'utf8')).reads;
+const FIELDS = new Set(['id', 'at', 'code', 'shows', 'answer', 'means', 'decoys', 'tone']);
+for (const r of reads) for (const f of Object.keys(r)) if (!FIELDS.has(f)) { console.error(`${KEY}: ${r.id} has an unknown field "${f}" (a comma in an unquoted value?)`); process.exit(1); }
 for (const r of reads) for (const d of [r.decoys, r.tone?.decoys].filter(Boolean))   // a comma in a flow list splits an option in two
   if (d.length !== 3) { console.error(`${KEY}: ${r.id} needs 3 decoys, has ${d.length} (quote any option with a comma)`); process.exit(1); }
 for (const r of reads) {   // a right answer much longer or shorter than the decoys gives itself away
