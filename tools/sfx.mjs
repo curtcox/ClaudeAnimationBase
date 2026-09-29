@@ -12,8 +12,8 @@
 // voice, which the voice tools mix at LEVEL LUFS. The same sound twice at one moment (three codes arriving together)
 // plays once. Ambience fades in and out.
 // The levels: script/sfx_levels.md, every cue as mixed, against the voice at that moment, loudest 0.4 s against loudest
-// 0.4 s. It flags a sound that competes with the words (within 6 dB of speech under it; 15 dB for a bed under speech),
-// one likely lost (over 30 dB under the voice), and any stretch of the mix that would clip.
+// 0.4 s. It flags a sound that competes with the words (within 3 dB of speech under it; 12 for a bed under speech), one
+// likely lost (over 20 dB under the voice, where speech masks it; 26 for a bed), and any stretch of the mix that would clip.
 // The page, out/sounds/ (http://localhost:8077/sounds/): each sound alone, and in place (the finished mix at that moment).
 import { existsSync, mkdirSync, readFileSync, writeFileSync, copyFileSync } from 'node:fs';
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -162,7 +162,7 @@ for (let ch = 0; ch <= 16; ch++) {
     const SM = momentary(kweigh(part)), VW = momentary(kv, a, b).filter(v => v > -30), speech = VW.length > 0;
     const S = long ? pct(SM.filter(v => v > -70), .5) : Math.max(...SM), V = speech ? (long ? pct(VW, .5) : Math.max(...VW)) : null;
     const rel = speech ? S - V : S - VPEAK;   // in a pause: against the chapter's speech
-    const [hi, lo] = c.kind === 'ambience' ? [-15, -38] : long ? [-8, -30] : [-6, -30];
+    const [hi, lo] = c.kind === 'ambience' ? [-12, -26] : long ? [-6, -24] : [-3, -20];
     const flag = speech && rel > hi ? 'competes with the words' : rel < lo ? 'likely lost' : !speech && rel > 0 ? 'louder than the speech' : '';
     rows.push({ c, S, V, speech, rel, flag, lead: s.lead });
     placed.set(c, true);
@@ -186,8 +186,8 @@ LUFS (K-weighted, as broadcast loudness is measured). A one-shot (an effect, a s
 loudest 0.4 s against the voice's loudest 0.4 s while it sounds; a bed (ambience, longer music) is its typical level
 against the voice's typical level while it runs. In a pause, it's against the chapter's speech.
 
-What's right: a one-shot under speech sits 6 dB or more below it (stings about 8–12, effects 12–22, quiet ones to 28);
-a bed 15 dB or more below; nothing in a pause louder than the speech. Flagged: **${flagged.length}**.
+What's right: a one-shot under speech sits 3 to 20 dB below it (stings about 4, effects 8–12, the code flick 16); more
+than 20 down, the words mask it and it isn't heard. A bed 12 to 26 dB below; nothing in a pause louder than the speech. Flagged: **${flagged.length}**.
 
 ## Chapters
 

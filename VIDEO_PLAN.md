@@ -143,9 +143,10 @@ each alone, and in place in the mix. On 2026-09-28 Claude proposed 36 more cues,
 They include the only music: a short chapter motif at each chapter's start, a few cues that are music by nature (a wrong
 note in a song you know, one tune on many pianos) and an end-credits theme under the closing QR wall. None of it is a bed
 under the voice. **Levels** are measured the way the voice's are (LUFS): a one-shot by its loudest moment against the
-voice's loudest, a bed by its level against the voice's. `gain` in sfx.yaml is that difference: a sting −10 to −14; a
-sound that carries the idea −12 to −18; a prop −18 to −22; the code flick −26; a bed −24 to −28; music where no one speaks
-−10. script/sfx_levels.md checks every cue as mixed and flags any that competes with the words or would be lost. The
+voice's loudest, a bed by its level against the voice's. `gain` in sfx.yaml is that difference: a sting about −4 to −7;
+a sound that carries the idea −2 to −8; a prop −8 to −12; the code flick −16; a bed −14 to −18; music where no one
+speaks 0. (The first mix was 10 dB lower, and under speech Curt heard none of it: more than about 20 dB down, the words
+mask a sound.) script/sfx_levels.md checks every cue as mixed and flags any that competes with the words or would be lost. The
 sounds leave each chapter's loudness where the voice sets it, and a limiter keeps the mix's peaks under −1 dBFS.
 
 ---|---|

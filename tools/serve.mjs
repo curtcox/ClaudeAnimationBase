@@ -79,12 +79,14 @@ createServer((req, res) => {
     const html = readFileSync(f, 'utf8').replace('</body>', BADGE + '</body>').replace(/<body>/, m => m + progress());
     res.writeHead(200, { 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-store' }); return res.end(html);
   }
-  const size = statSync(f).size, type = TYPES[extname(f)] || 'application/octet-stream', range = req.headers.range?.match(/bytes=(\d*)-(\d*)/);
+  // no-cache and Last-Modified: a redrawn draft (same name, new file) is fetched afresh, never played from the browser's cache
+  const st = statSync(f), size = st.size, type = TYPES[extname(f)] || 'application/octet-stream', range = req.headers.range?.match(/bytes=(\d*)-(\d*)/);
+  const fresh = { 'Cache-Control': 'no-cache', 'Last-Modified': st.mtime.toUTCString() };
   if (range) {
     const a = range[1] ? +range[1] : 0, b = range[2] ? +range[2] : size - 1;
-    res.writeHead(206, { 'Content-Type': type, 'Content-Range': `bytes ${a}-${b}/${size}`, 'Accept-Ranges': 'bytes', 'Content-Length': b - a + 1 });
+    res.writeHead(206, { ...fresh, 'Content-Type': type, 'Content-Range': `bytes ${a}-${b}/${size}`, 'Accept-Ranges': 'bytes', 'Content-Length': b - a + 1 });
     return createReadStream(f, { start: a, end: b }).pipe(res);
   }
-  res.writeHead(200, { 'Content-Type': type, 'Content-Length': size, 'Accept-Ranges': 'bytes' });
+  res.writeHead(200, { ...fresh, 'Content-Type': type, 'Content-Length': size, 'Accept-Ranges': 'bytes' });
   createReadStream(f).pipe(res);
 }).listen(PORT, '127.0.0.1', () => console.log(`companion site: http://localhost:${PORT}/\nwhat needs review: http://localhost:${PORT}/review/  (notes → ${DIR}/NOTES.md)`));
