@@ -70,6 +70,7 @@
 - { match: "LLM's", say: "L L M's" }
 - { match: "LLM", say: "L L M" }
 - { match: "AIs", say: "A Is" }
+- { match: "i) Other", say: "Eye. Other" }   # the list's ninth option: the letter i, not the numeral "one" (Curt, ch 14 review)
 - { match: "NPR", say: "N P R" }
 - { match: "SAT", say: "S A T" }
 - { match: "vs.", say: "versus" }

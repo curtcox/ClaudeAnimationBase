@@ -4324,8 +4324,10 @@ lines:
     kind: item
     text: i) Other
     spoken: true
-    speech: i) Other
+    speech: Eye. Other
     speech_from: auto
+    respelled:
+      - i) Other
     words: 2
     est_s: 1.6
   - id: T72.C.01.1
@@ -4334,8 +4336,10 @@ lines:
     kind: item
     text: i) Other.
     spoken: true
-    speech: i) Other.
+    speech: Eye. Other.
     speech_from: auto
+    respelled:
+      - i) Other
     words: 2
     est_s: 1.1
   - id: T72.C.02

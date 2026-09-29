@@ -49,6 +49,24 @@
      "at": "2026-09-27T15:41:34.244Z"
     }
    ]
+  },
+  {
+   "id": "nmum0m357ia",
+   "t": 324.04,
+   "line": "T72.U.02.9",
+   "shot": "G",
+   "by": "curt",
+   "text": "The audio pronounces \"i\" as \"one\" when it should be \"aye\".",
+   "status": "open",
+   "created": "2026-09-29T01:46:06.570Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Fixed: the voice is now sent \"Eye. Other\" for both your \"i) Other\" and my answer, and speech-to-text hears both as \"I, Other\". The next draft of chapter 14 has it.",
+     "at": "2026-09-29T12:35:10.883Z"
+    }
+   ],
+   "frame": "frames/ch14-nmum0m357ia.jpg"
   }
  ]
 }

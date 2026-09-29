@@ -137,11 +137,16 @@ under the voice. Borrowed sounds are evoked, never copied: chapter 6's debate on
 over a tense violin (*Doom Debates*' opening), and chapter 4's "a fib" gets a short brass-and-timpani sting in the
 manner of a 1950s police drama (*Mathnet*'s riff on *Dragnet*), with no show's actual theme. A paper flick marks each
 code's arrival (quiet, so frequent codes don't get tiresome) and a page rustle each search beat.
-`npm run sounds` (tools/sfx.mjs) makes each sound once (assets/sfx/, committed) and writes a page to hear them,
-http://localhost:8077/sounds/: each alone, and in place under the voice at its level. On 2026-09-28 Claude proposed 36
-more cues (`proposed: true`, green on the page) for Curt to keep, change or cut, among them the only music: a short
-chapter motif at each chapter's start, a few cues that are music by nature (a wrong note in a song you know, one tune on
-many pianos) and an end-credits theme under the closing QR wall, never a bed under the voice.
+`npm run sounds` (tools/sfx.mjs) makes each sound once (assets/sfx/, committed), mixes each chapter's sounds under its
+voice into audio/chNN_full.wav (which the renders use), and writes a page to hear them, http://localhost:8077/sounds/:
+each alone, and in place in the mix. On 2026-09-28 Claude proposed 36 more cues, and Curt took them all (2026-09-29).
+They include the only music: a short chapter motif at each chapter's start, a few cues that are music by nature (a wrong
+note in a song you know, one tune on many pianos) and an end-credits theme under the closing QR wall. None of it is a bed
+under the voice. **Levels** are measured the way the voice's are (LUFS): a one-shot by its loudest moment against the
+voice's loudest, a bed by its level against the voice's. `gain` in sfx.yaml is that difference: a sting −10 to −14; a
+sound that carries the idea −12 to −18; a prop −18 to −22; the code flick −26; a bed −24 to −28; music where no one speaks
+−10. script/sfx_levels.md checks every cue as mixed and flags any that competes with the words or would be lost. The
+sounds leave each chapter's loudness where the voice sets it, and a limiter keeps the mix's peaks under −1 dBFS.
 
 ---|---|
 | cold open, "Ever get the feeling you're in the wrong movie!?" | a projector clatter, then the film-reel runout |

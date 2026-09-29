@@ -10,6 +10,7 @@
 //   1. the script from the transcript, and the proof that it's still word for word  (build_script, verbatim_check)
 //   2. the voice for every chapter, which retimes the timelines                        (voice or scratch_voice → timeline)
 //      The real voice (script/voices.yaml, ElevenLabs) if it's cast, else the Mac's scratch voice.
+//      Then the sound effects and music, made if new and mixed under it                  (sfx → audio/chNN_full.wav)
 //   3. the references against the script, offline                                     (check_refs --offline)
 //   4. each chapter's draft video and its watch page, which adds it to the site        (render --draft, watch)
 //      Drafts are resumable: only shots whose code, timing or codes changed are repainted, and a chapter with nothing
@@ -76,7 +77,7 @@ function run(name, cmd, cmdArgs, { retry = false } = {}) {
 const node = (name, script, a = [], o) => run(name, process.execPath, [script, ...a], o);
 const FINAL = !!args.final, all = readYaml(PATHS.chapters).map(c => c.n);
 const chapters = args.chapters ? String(args.chapters).split(',').map(Number).filter(n => all.includes(n)) : all;
-planned = 4 + chapters.length * (FINAL ? 3 : 2) + 3 + (args.chapters ? 2 * chapters.length : 2) + (args.qr ? 1 : 0);
+planned = 5 + chapters.length * (FINAL ? 3 : 2) + 3 + (args.chapters ? 2 * chapters.length : 2) + (args.qr ? 1 : 0);
 say(`rebuild started; log: ${logPath}`);
 
 // 1-3: script, voice, timelines, references
@@ -88,6 +89,7 @@ if (!VOICE) { steps.push({ name: 'voice (skipped: needs macOS)', ok: true, secs:
 else if (args.chapters) for (const n of chapters) await node(`${VOICE[0]} (chapter ${n})`, VOICE[1], [`--chapter=${n}`], { retry: true });
 else await node(`${VOICE[0]} (all chapters)`, VOICE[1], [], { retry: true });
 await node('timelines', 'tools/timeline.mjs');
+await node('sounds, mixed under the voice', 'tools/sfx.mjs');
 await node('references (offline)', 'tools/check_refs.mjs', ['--offline']);
 
 // 4: each chapter's video and watch page (the watch step rebuilds the site, so the chapter shows up there straight away)

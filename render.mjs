@@ -57,10 +57,18 @@ const span = s => String(s).split(':').map(Number);
 // comma-separated fields, keeping commas inside parentheses ('PLK.MX(1.38),PLK.WL,500,300'); numbers stay numbers
 const fields = s => { const out = []; let d = 0, cur = ''; for (const ch of String(s)) { if (ch === ',' && !d) { out.push(cur); cur = ''; continue; } d += ch === '(' ? 1 : ch === ')' ? -1 : 0; cur += ch; } out.push(cur); return out.map(v => isNaN(+v) ? v : +v); };
 
-// out/frames → MP4, with the chapter's voice track (audio/chNN.wav) when there is one
+// out/frames → MP4, with the chapter's sound: its voice and sound effects (audio/chNN_full.wav, tools/sfx.mjs) when that
+// mix is as new as the voice, else the voice alone (audio/chNN.wav)
+function chapterAudio() {
+  const voice = `audio/ch${CH}.wav`, full = `audio/ch${CH}_full.wav`;
+  if (!existsSync(voice)) return null;
+  if (existsSync(full) && statSync(full).mtimeMs >= statSync(voice).mtimeMs) return full;
+  console.log(`note: ${existsSync(full) ? `${full} is older than the voice` : `no ${full}`}, so this has the voice without its sounds (node tools/sfx.mjs mixes them)`);
+  return voice;
+}
 async function encode() {
   const out = args.out || (CH ? `out/ch${CH}${DRAFT ? '_draft' : ''}.mp4` : 'out/video.mp4');
-  const audio = args.audio || (CH && existsSync(`audio/ch${CH}.wav`) ? `audio/ch${CH}.wav` : null);
+  const audio = args.audio || (CH ? chapterAudio() : null);
   const have = existsSync(FRAMES_DIR) ? readdirSync(FRAMES_DIR).filter(f => /^f\d{5}\.jpg$/.test(f)).length : 0;
   // a chapter stops at its length: frames past it are left over from when it was longer
   const g = {}; if (CH && !args.loop) new Function('window', readFileSync(`src/gen/ch${CH}.js`, 'utf8'))(g);
