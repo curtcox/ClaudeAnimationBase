@@ -20,6 +20,7 @@
     "qr:images": "node tools/qr_images.mjs",
     "reads": "node tools/read_check.mjs",
     "sfx": "node tools/sfx_check.mjs",
+    "sounds": "node tools/sfx.mjs",
     "lint:chapter": "node tools/lint_chapter.mjs",
     "draft": "node render.mjs --draft",
     "site": "node tools/build_site.mjs",

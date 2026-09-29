@@ -137,6 +137,11 @@ under the voice. Borrowed sounds are evoked, never copied: chapter 6's debate on
 over a tense violin (*Doom Debates*' opening), and chapter 4's "a fib" gets a short brass-and-timpani sting in the
 manner of a 1950s police drama (*Mathnet*'s riff on *Dragnet*), with no show's actual theme. A paper flick marks each
 code's arrival (quiet, so frequent codes don't get tiresome) and a page rustle each search beat.
+`npm run sounds` (tools/sfx.mjs) makes each sound once (assets/sfx/, committed) and writes a page to hear them,
+http://localhost:8077/sounds/: each alone, and in place under the voice at its level. On 2026-09-28 Claude proposed 36
+more cues (`proposed: true`, green on the page) for Curt to keep, change or cut, among them the only music: a short
+chapter motif at each chapter's start, a few cues that are music by nature (a wrong note in a song you know, one tune on
+many pianos) and an end-credits theme under the closing QR wall, never a bed under the voice.
 
 ---|---|
 | cold open, "Ever get the feeling you're in the wrong movie!?" | a projector clatter, then the film-reel runout |

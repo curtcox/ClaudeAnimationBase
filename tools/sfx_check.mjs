@@ -1,19 +1,20 @@
 // sfx_check.mjs: checks script/sfx.yaml, the film's sound-effect cues, against the chapters' timing (src/gen/chNN.js)
 // and writes the cue sheet, script/sfx_report.md: every cue by chapter and time, the recurring ones (a paper flick per
-// code, a rustle per search beat) included.
+// code, a rustle per search beat, a motif per chapter) included. tools/sfx.mjs imports its cue sheet to make the sounds.
 //
 //   node tools/sfx_check.mjs      (npm run sfx)
 //
 // Fails when a cue's line or phrase isn't found, an id repeats, a field is unknown or missing, or a cue falls outside
 // its chapter. Warns when two stings land within 1.5 s of each other.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, realpathSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import YAML from 'yaml';
 import { loadRefs, resolveAnchor, pad, sayAt } from './script_lib.mjs';
 
 const FILE = 'script/sfx.yaml', { every = [], cues = [] } = YAML.parse(readFileSync(FILE, 'utf8'));
-const KINDS = new Set(['sting', 'effect', 'ambience']), FIELDS = new Set(['id', 'ch', 'at', 'until', 'len', 'kind', 'gain', 'prompt', 'why', 'when']);
+const KINDS = new Set(['sting', 'effect', 'ambience', 'music']), FIELDS = new Set(['id', 'ch', 'at', 'until', 'len', 'kind', 'gain', 'prompt', 'why', 'when', 'proposed']);
 const chapters = Array.from({ length: 17 }, (_, n) => JSON.parse(readFileSync(`src/gen/ch${pad(n)}.js`, 'utf8').replace(/^[^{]*/, '').replace(/;\s*$/, '')));
-const errors = [], warn = [];
+export const errors = [], warn = [];
 
 function timeOf(ch, [id, ...rest], who) {
   const l = chapters[ch].lines.find(l => l.id === id); if (!l) throw new Error(`${who}: no line ${id} in chapter ${ch}`);
@@ -25,7 +26,8 @@ function timeOf(ch, [id, ...rest], who) {
   throw new Error(`${who}: "${phrase}" isn't in ${id}`);
 }
 
-const ids = new Set(), sheet = [];
+const ids = new Set();
+export const sheet = [];   // every cue placed: { ...cue, ch, t, end } (a recurring cue once per moment), in film order
 for (const c of [...every, ...cues]) {
   try {
     if (ids.has(c.id)) throw new Error(`${c.id} is used twice`); ids.add(c.id);
@@ -49,22 +51,26 @@ for (const e of every) {
     let t = l.t0; try { if (r.cue) t = timeOf(l.ch, [l.id, r.cue], r.id); } catch {}
     sheet.push({ ...e, ch: l.ch, t, end: t + e.len, why: `${e.why}: ${r.id}` });
   } else if (e.when === 'tool') for (const l of lines.filter(l => l.kind === 'tool')) sheet.push({ ...e, ch: l.ch, t: l.t0, end: l.t0 + e.len, why: `${e.why}: ${l.id}` });
-  else errors.push(`${e.id}: when must be qr or tool`);
+  else if (e.when === 'chapter') for (const c of chapters.filter(c => c.n > 0)) sheet.push({ ...e, ch: c.n, t: 0, end: e.len, why: `${e.why}: ${c.title}` });
+  else errors.push(`${e.id}: when must be qr, tool or chapter`);
 }
 
 sheet.sort((a, b) => a.ch - b.ch || a.t - b.t);
 const stings = sheet.filter(c => c.kind === 'sting');
 stings.forEach((c, i) => { const n = stings[i + 1]; if (n && n.ch === c.ch && n.t - c.t < 1.5) warn.push(`${c.id} and ${n.id} land ${(n.t - c.t).toFixed(1)} s apart in chapter ${c.ch}`); });
 
-const mmss = t => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}`;
-const out = ['# Sound-effect cues', '', `Written by tools/sfx_check.mjs from ${FILE}. Times are from each chapter's current timing. ${cues.length} placed cues, plus a paper flick for each code and a rustle for each search beat.`, ''];
-for (const ch of chapters) {
-  const mine = sheet.filter(c => c.ch === ch.n); if (!mine.length) continue;
-  out.push(`## ${ch.n}. ${ch.title}`, '', '| at | cue | kind | dB | for |', '|---|---|---|---|---|');
-  for (const c of mine) out.push(`| ${mmss(c.t)}${c.kind === 'ambience' ? `–${mmss(c.end)}` : ''} | ${c.when ? c.id : `**${c.id}**`} | ${c.kind} | ${c.gain} | ${c.why.replace(/\|/g, '\\|')} |`);
-  out.push('');
+// run directly, it writes the cue sheet; imported (tools/sfx.mjs), it only works the cues out
+if (realpathSync(process.argv[1] || '.') === fileURLToPath(import.meta.url)) {
+  const mmss = t => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, '0')}`;
+  const out = ['# Sound-effect cues', '', `Written by tools/sfx_check.mjs from ${FILE}. Times are from each chapter's current timing. ${cues.length} placed cues (${cues.filter(c => c.proposed).length} of them proposed, not yet agreed), plus a paper flick for each code, a rustle for each search beat and a motif for each chapter. To listen to them: \`node tools/sfx.mjs\`, then http://localhost:8077/sounds/.`, ''];
+  for (const ch of chapters) {
+    const mine = sheet.filter(c => c.ch === ch.n); if (!mine.length) continue;
+    out.push(`## ${ch.n}. ${ch.title}`, '', '| at | cue | kind | dB | for |', '|---|---|---|---|---|');
+    for (const c of mine) out.push(`| ${mmss(c.t)}${c.kind === 'ambience' || c.end - c.t > 5 ? `–${mmss(c.end)}` : ''} | ${c.when ? c.id : `**${c.id}**`}${c.proposed ? ' (proposed)' : ''} | ${c.kind} | ${c.gain} | ${c.why.replace(/\|/g, '\\|')} |`);
+    out.push('');
+  }
+  writeFileSync('script/sfx_report.md', out.join('\n'));
+  for (const w of warn) console.warn('warning: ' + w);
+  if (errors.length) { for (const e of errors) console.error(e); process.exit(1); }
+  console.log(`${FILE}: ${cues.length} cues and ${every.length} recurring (${sheet.length} in all) → script/sfx_report.md`);
 }
-writeFileSync('script/sfx_report.md', out.join('\n'));
-for (const w of warn) console.warn('warning: ' + w);
-if (errors.length) { for (const e of errors) console.error(e); process.exit(1); }
-console.log(`${FILE}: ${cues.length} cues and ${every.length} recurring (${sheet.length} in all) → script/sfx_report.md`);

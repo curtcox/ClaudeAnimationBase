@@ -1,7 +1,7 @@
 // names_check.mjs: how the voices actually say the film's names. Every name in a spoken line (a run of capitalised words
 // that isn't just a sentence's first word, or an acronym) is found in its voiced clip by ElevenLabs' character timings,
 // and ElevenLabs' speech-to-text (Scribe) says what it hears there. A name heard as something else is worth a listen.
-//   node tools/names_check.mjs        writes script/names_report.md and the listening page, site/public/names/
+//   node tools/names_check.mjs        writes script/names_report.md and the listening page, out/names/
 //   node tools/names_check.mjs --dry  just lists the names it finds
 // Each clip is transcribed once (assets/vo/<clip>.stt.json, committed, so a re-run costs nothing until a line changes).
 // Speech-to-text is a second opinion, not an ear: it knows spellings, so a respelled name heard as its written form is
@@ -148,13 +148,13 @@ ${ok.map(row).join('\n')}
 `);
 
 // ---- the listening page: each name, each time, a button that plays it with a couple of seconds either side ----
-mkdirSync('site/public/names/clips', { recursive: true });
+mkdirSync('out/names/clips', { recursive: true });
 const used = new Set(found.map(f => f.clip));
-for (const b of used) { const to = `site/public/names/clips/${b.split('/').pop()}.mp3`; if (!existsSync(to)) copyFileSync(b + '.mp3', to); }
+for (const b of used) { const to = `out/names/clips/${b.split('/').pop()}.mp3`; if (!existsSync(to)) copyFileSync(b + '.mp3', to); }
 const AROUND = 2;   // seconds played either side of the name, for its context
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 const item = f => `<button class="${f.same ? '' : 'off'}" data-c="${f.clip.split('/').pop()}" data-a="${Math.max(0, f.t0 - AROUND).toFixed(2)}" data-b="${(f.t1 + AROUND).toFixed(2)}" title="${esc(f.line)}">▶ ${esc(stamp(f))} · ${esc(f.who)} · ${f.heard ? `heard “${esc(f.heard)}”` : 'not heard'}</button>`;
-writeFileSync('site/public/names/index.html', `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+writeFileSync('out/names/index.html', `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Names, as said</title>
 <style>body{font:17px/1.5 system-ui;max-width:900px;margin:2rem auto;padding:0 16px;background:#FBF8F0;color:#2B2233}
 h2{margin-top:2rem}.n{margin:.9rem 0;padding:.6rem .8rem;background:#fff;border:1px solid #E6DCC6;border-radius:8px}
@@ -174,4 +174,4 @@ document.querySelectorAll('button').forEach(b => b.onclick = () => { a.src = 'cl
 a.ontimeupdate = () => { if (a.currentTime >= stop) a.pause(); };
 </script>
 `);
-console.log(`${names.length} names, ${found.length} times said; ${off.length} heard differently. Wrote script/names_report.md and site/public/names/`);
+console.log(`${names.length} names, ${found.length} times said; ${off.length} heard differently. Wrote script/names_report.md and out/names/`);

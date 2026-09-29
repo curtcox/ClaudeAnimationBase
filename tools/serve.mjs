@@ -71,8 +71,9 @@ createServer((req, res) => {
   if (/^\/api\/(notes|seen|review|rebuild)$/.test(url.pathname)) return api(req, res, url).catch(e => json(res, 500, { error: e.message }));
   if (url.pathname === '/review' || url.pathname === '/review/') { res.writeHead(200, { 'Content-Type': TYPES['.html'], 'Cache-Control': 'no-store' }); return res.end(reviewPage()); }
   let p = normalize(decodeURIComponent(url.pathname)).replace(/^(\.\.[/\\])+/, '');
-  // /voices/ is the casting sampler (tools/voice_sampler.mjs), from out/voices: local only
-  let f = p.startsWith('/voices') ? join('out', p) : join(ROOT, p); if (existsSync(f) && statSync(f).isDirectory()) f = join(f, 'index.html');
+  // local-only listening pages, from out/ (a site build clears site/public, so they don't live there): /voices/ the
+  // casting sampler (tools/voice_sampler.mjs), /names/ the names check (names_check.mjs), /sounds/ the sounds (sfx.mjs)
+  let f = /^[/\\](voices|names|sounds)([/\\]|$)/.test(p) ? join('out', p) : join(ROOT, p); if (existsSync(f) && statSync(f).isDirectory()) f = join(f, 'index.html');
   if (!existsSync(f)) { res.writeHead(404); return res.end('not found'); }
   if (extname(f) === '.html' && !req.headers.range) {
     const html = readFileSync(f, 'utf8').replace('</body>', BADGE + '</body>').replace(/<body>/, m => m + progress());
