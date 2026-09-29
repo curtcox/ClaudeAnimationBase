@@ -339,7 +339,7 @@
       boilSeed('pair ' + pair); occupy(x - 330, 160, x + 330, 900, 1, 'pair');
       push(); translate(x, 480); scale(1.35); translate(-x, -480);
       for (const d of [-1, 1]) { paint(rrPts(x + d * 120 - 100, 300, 200, 300, 12), { wash: pair === 0 && known > 0 ? '#FFF3D0' : '#F4EFE2', ink: PAL.ink, sw: 1.1 }); }
-      if (pair === 0) { curtAs(x - 120, 560, 10, { view: 'front', pose: 'stand', seed: 2, boilKey: 'pair curt' }); curt(x + 120, 560, 10, { view: 'front', pose: 'stand', seed: 11, hoodie: '#E8E0D0', boilKey: 'pair dyson' }); }
+      if (pair === 0) { curtAs(x - 120, 560, 10, { view: 'front', pose: 'stand', seed: 2, boilKey: 'pair curt' }); curt(x + 120, 560, 10, { view: 'front', pose: 'stand', seed: 11, ...PEOPLE.dyson, boilKey: 'pair dyson' }); }
       else { clawd(x - 120, 560, 10, { ...feel('neutral', t), noShadow: true, boilKey: 'pair claude' }); clawdCrowd(x + 120, 560, 10, .45, { boilKey: 'pair chatbot', t }); }
       pop();
       lab(pair === 0 ? 'circumstances' : 'character', x, 760, 52, pair === 0 ? '#4E5B78' : '#8A2A2A', { alpha: seg(t, say('T53.C.03', pair === 0 ? 'differ in circumstances' : 'differ in character', -.2), say('T53.C.03', pair === 0 ? 'differ in circumstances' : 'differ in character', .5)) });

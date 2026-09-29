@@ -17,7 +17,7 @@ Decisions made so far:
 | frog/axolotl chart source | https://x.com/fjzzq2002/status/2103556166903038213/photo/1 |
 | QR targets | encode the URL directly. Use a short redirect (256t-based, domain to be decided) only when a direct URL is too long to scan reliably |
 | Curt | a minimal stick figure in CGP Grey's manner, look H (ponytail, hoodie, circle beard), greying (`LOOK.curt`); his own voice clone |
-| figures | loose caricatures of real and fictional people |
+| figures | loose caricatures of real and fictional people, each in clothes of their own, not hoodies (Curt, 2026-09-29): one look per person wherever they appear (`PEOPLE` in `src/cast.js`: the hosts as their shows' thumbnails dress them, Miles Dyson's lab coat); crowds from a wardrobe (`CROWD`: tees, dresses, a sweater, shirts, a Breton, a jacket, a polo, a suit). Only Curt wears a hoodie. The sheet: `node render.mjs --loop=wardrobe --stills=1 --out=out/style` |
 | classic art | 21 works Curt picked (2026-09-28), hung in their shots from public-domain scans, plus our own evocations of four still under copyright (`docs/ART.md` says where each hangs; `src/gallery.js`). No QR code on them: the companion site links each, and the watch pages list it while it's on screen |
 
 Working title: **Frog or Axolotl**. Alternatives: *Who's Doing the Talking?* or *The Wrong Movie*.

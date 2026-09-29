@@ -446,7 +446,7 @@ window.CHAPTER = {
    "speech": "What do you think?",
    "refs": [],
    "estimated": false,
-   "mouth": "005999874033000300000022332",
+   "mouth": "0059998740330003",
    "words": [0,0,5,0.11,8,0.2,12,0.36]
   },
   {

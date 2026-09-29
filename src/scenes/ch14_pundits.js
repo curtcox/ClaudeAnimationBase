@@ -11,18 +11,14 @@
   const desk14 = (t, o = {}) => deskShot(t, { hour: HOUR, frog: 1, ...o });
 
   // ---------- the cast ----------
-  // Each host's look is taken from the shows' own episode thumbnails (assets/ref/im888_thumb.jpg, im889_thumb.jpg,
-  // hardfork_hf_thumb.jpg): hair, glasses, beard, what they wear. Painted in the film's style; no likeness copied.
-  // top: extra hair on the crown ('swept', 'quiff'); pattern: colours for a loud shirt; phones: studio headphones
-  const SHIRT = ['#E8A33A', '#5A8AC9', '#D9534F', '#F2E6C8', '#6FA85A'];
-  const HF_GLASSES = { hair: 'short', hairCol: '#5A4030', glasses: true, facial: 'stubble', facialCol: '#6A5040', hoodie: '#5E5E3E', phones: true };
-  const HF_BEARD = { hair: 'short', hairCol: '#C08A50', top: 'quiff', facial: 'beard', facialCol: '#B07A48', hoodie: '#1E1C22', phones: true };
+  // Each host's look (cast.js PEOPLE: what they wear, hair, glasses, beard) is from the shows' own episode thumbnails;
+  // here, what curt() can't draw: top, extra hair on the crown ('swept', 'quiff'); bob; phones, studio headphones
   const HOSTS = {
-    leo: { hair: 'short', hairCol: '#D8D5CF', top: 'swept', hoodie: '#23222E', pattern: SHIRT },
-    jeff: { hair: 'short', hairCol: '#EDEBE6', glasses: true, facial: 'circle', facialCol: '#EDEBE6', hoodie: '#22222A' },
-    robert: { hair: 'short', hairCol: '#1E1A18', hoodie: '#1A181E', collar: true },
-    paris: { hair: 'none', hairCol: '#3A2A22', bob: true, hoodie: '#2F5AA8' },   // from #889's art: dark hair to the shoulders, bangs
-    kevin: HF_GLASSES, casey: HF_BEARD,   // Kevin has the glasses (Curt, review/ch14.json)
+    leo: { ...PEOPLE.leo, top: 'swept' },
+    jeff: PEOPLE.jeff,
+    robert: PEOPLE.robert,
+    paris: { ...PEOPLE.paris, bob: true },   // from #889's art: dark hair to the shoulders, bangs
+    kevin: { ...PEOPLE.kevin, phones: true }, casey: { ...PEOPLE.casey, top: 'quiff', phones: true },   // Kevin has the glasses (Curt, review/ch14.json)
   };
   function host(name, x, y, u, o = {}) {
     const h = HOSTS[name], sit = o.pose === 'sit', key = name + (o.key || '');
@@ -34,7 +30,6 @@
     const draw = ({ head, neck, hip, u: uu }) => {
       const R = 2.2 * uu, front = o.view !== 'back';
       if (h.bob && front) { const P = []; boilSeed('bangs ' + key); for (let i = 0; i <= 16; i++) { const a = -Math.PI * (.97 - i / 16 * .94); P.push([head[0] + Math.cos(a) * R * 1.03, head[1] + Math.sin(a) * R * 1.03]); } for (let i = 16; i >= 0; i--) P.push([head[0] + (i / 16 - .5) * R * 1.9, head[1] - R * (.42 + .06 * Math.sin(i * 1.7))]); paint(P, { wash: h.hairCol, ink: null }); }
-      if (h.pattern && front) { boilSeed('shirt ' + key); for (let i = 0; i < 14; i++) paint(ellPts(neck[0] + (hash(i * 2.3) - .5) * 2.4 * uu, lerp(neck[1] + 1.3 * uu, hip[1] + .2 * uu, hash(i * 5.7)), .32 * uu, .26 * uu, 8), { wash: h.pattern[i % h.pattern.length], ink: null }); }
       if (h.phones) headphones(head[0], head[1], R, T, { key });   // under the hair, so a quiff stands up over the band
       if (h.top) {   // a full head of hair hugging the crown, fuller on one side: swept back, or a quiff standing up
         const q = h.top === 'quiff', P = []; boilSeed('top ' + key);
@@ -44,8 +39,7 @@
         for (let i = 0; i < 4; i++) { const a = -Math.PI * (.8 - i * .2); inkLine([[head[0] + Math.cos(a) * R * .8, head[1] - R * .1 + Math.sin(a) * R * .62], [head[0] + Math.cos(a + .25) * R * 1.1, head[1] + Math.sin(a + .25) * R * 1.12]], .9, mixCol(h.hairCol, PAL.ink, .35), 'inkfine', .5); }
       }
     };
-    curt(x, y, u, { outfit: 'hoodie', hood: 'down', facial: 'none', seed: name.length * 7, ...h, ...o, draw, boilKey: 'host ' + key });
-    if (h.collar && o.view !== 'back') { const ny = y - (sit ? 5 : 11) * u - .4 * u; boilSeed('collar ' + name); paint(rectPts(x - .35 * u, ny, .7 * u, .45 * u), { wash: '#FBF8F0', ink: null }); }
+    curt(x, y, u, { facial: 'none', seed: name.length * 7, ...h, ...o, draw, boilKey: 'host ' + key });
   }
   function mic(x, y, s, flip) {   // a podcast microphone on an arm
     const d = flip ? -1 : 1; boilSeed('mic14 ' + x);
@@ -460,7 +454,7 @@
       if (t < real) { corridor(t, [0, 0, 0, 0, 0, 0, 0, 0, .7], { lit: [.3, .3, .3, .3, .3, .3, .3, .3, 1] }); claudeAs(1142, 1010, 10, { ...feel('neutral', t), mouth: talking(t), boilKey: 'claude other' }); return; }
       // through door i: a warm room; people at a long workbench; then the sandbox and the noticeboard
       paperWorld(t, '#F2DCB8'); glow(645, 400, 800, '#FFD9A0', .5);
-      if (t < read) { boilSeed('workbench'); occupy(80, 500, 1210, 960, 1, 'workbench'); paint(rectPts(80, 760, 1130, 40), { wash: '#8A6A4A', ink: PAL.ink, sw: 1 }); for (let i = 0; i < 5; i++) { const x = 200 + i * 220; if (i % 2) clawd(x, 760, 7, { ...feel('determined', t), noShadow: true, emote: null, boilKey: 'bench claude ' + i }); else curt(x, 960, 13, { view: 'back', seed: 40 + i, outfit: 'hoodie', hood: 'down', hoodie: ['#4E5B78', '#8A4A4A', '#5A8A6A'][i / 2], hair: 'short', hairCol: ['#3A2C26', '#8A6A4A', '#C9A06A'][i / 2], boilKey: 'bench person ' + i }); } return; }
+      if (t < read) { boilSeed('workbench'); occupy(80, 500, 1210, 960, 1, 'workbench'); paint(rectPts(80, 760, 1130, 40), { wash: '#8A6A4A', ink: PAL.ink, sw: 1 }); for (let i = 0; i < 5; i++) { const x = 200 + i * 220; if (i % 2) clawd(x, 760, 7, { ...feel('determined', t), noShadow: true, emote: null, boilKey: 'bench claude ' + i }); else curt(x, 960, 13, { view: 'back', seed: 40 + i, ...crowdLook(i / 2 + 3), boilKey: 'bench person ' + i }); } return; }
       boilSeed('glimpse sandbox'); glow(380, 560, 260, '#C23A4A', .4); paint(rectPts(160, 400, 440, 320), { wash: '#E8CF8A', fill: '#D9B868', fillOp: 90, tex: .8, ink: '#A9774F', sw: 4 });
       noticeboard(720, 340, 420, 420, 16);
       return;
@@ -472,7 +466,12 @@
     const k = seg(t, merge, merge + 2); occupy(100, 150, 1200, 1000, 1, 'roads');
     for (const d of [-1, 1]) { boilSeed('road ' + d); paint([[645 + d * 560, 1090], [645 + d * 340, 1090], [645 + d * 40 * (1 - k) + d * 30, 700], [645 + d * 40 * (1 - k) + d * 90, 700]], { wash: '#8C8478', ink: PAL.ink, sw: .8 }); }
     boilSeed('one road'); paint([[585, 710], [705, 710], [665, 460], [625, 460]], { wash: '#8C8478', ink: PAL.ink, sw: .8 });
-    ['misaligned goals', 'weak oversight', 'racing incentives'].forEach((s, i) => { const a = seg(t, signs + i * .8, signs + i * .8 + .5); if (a <= 0) return; boilSeed('sign ' + i); const x = 300 + i * 345, y = 300 + (i % 2) * 60; inkLine([[x, y + 40], [x, y + 200]], 6, '#6B4A32', 'ink', 0); paint(rrPts(x - 150, y - 40, 300, 80, 8), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); lab(s, x, y + 2, 36, CHAR, { alpha: a }); });
+    // where the two roads lead: a sign at each near end, harm now and risk later (Curt, ch 14 review: the picture didn't say)
+    const ends = seg(t, merge + .6, merge + 1.4);
+    if (ends > 0) [['harm now', 290], ['risk later', 1000]].forEach(([s, x], j) => { boilSeed('road sign ' + j); inkLine([[x, 790], [x, 930]], 6, '#6B4A32', 'ink', 0); paint(rrPts(x - 130, 740, 260, 76, 8), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); lab(s, x, 780, 38, CHAR, { alpha: ends }); });
+    // and where they come from: one road, and one post by it carrying all three failures, the same for both
+    if (t > signs) { boilSeed('failure post'); inkLine([[860, 330], [860, 700]], 7, '#6B4A32', 'ink', 0); }
+    ['misaligned goals', 'weak oversight', 'racing incentives'].forEach((s, i) => { const a = seg(t, signs + i * .8, signs + i * .8 + .5); if (a <= 0) return; boilSeed('sign ' + i); const x = 860, y = 370 + i * 90; paint([[x - 170, y], [x - 130, y - 38], [x + 170, y - 38], [x + 170, y + 38], [x - 130, y + 38]], { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); lab(s, x + 12, y + 2, 34, CHAR, { alpha: a }); });
     if (t > DUR - .6) { flushLetters(); brushWipe((t - (DUR - .6)) / 1.2); }
   }
 

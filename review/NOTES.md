@@ -65,15 +65,20 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 1. The Wrong Movie
 
-- **1:50.4** · T02.C.02.4 · shot D · Curt `nmulr81ysc2`
-  Claude should walk above the captions instead of on the same line as they are.
-  [the frame](frames/ch01-nmulr81ysc2.jpg)
-  - Claude: Agreed. Any picture a caption would cover now rises clear of it when it has room above, so here the floor moves up and Clawd walks above the caption. Captions are also wider now, so they take fewer rows. Chapter 1's next draft has it.
+- **3:44.9** · T04.C.01 · shot G · Curt `nmumq4qz1wx`
+  It would be better if the marble sound effect matched the movement of the marble.
+  [the frame](frames/ch01-nmumq4qz1wx.jpg)
+  - Claude: Now four sounds, one per movement: a short roll as each of the three prompts taps the marble, then a longer roll as it drifts to the label.
 
 - **1:47.4** · T02.C.02.3 · shot D · Curt · ✓ resolved `nmulf3fgmk0`
   What is checking for bias or evasion supposed to be showing?
   [the frame](frames/ch01-nmulf3fgmk0.jpg)
   - Claude: It was meant to show a fork in a path, one branch going through the hard subject (race and slavery on the comic page), the other going round it: will Claude engage or sidestep? As drawn it didn't read at all. Redrawn: a road runs straight to the comic page, up on posts like a billboard, and a branch bends away from it past a yellow detour sign, with Clawd walking up to the fork. Chapter 1's draft has it now.
+
+- **1:50.4** · T02.C.02.4 · shot D · Curt · ✓ resolved `nmulr81ysc2`
+  Claude should walk above the captions instead of on the same line as they are.
+  [the frame](frames/ch01-nmulr81ysc2.jpg)
+  - Claude: Agreed. Any picture a caption would cover now rises clear of it when it has room above, so here the floor moves up and Clawd walks above the caption. Captions are also wider now, so they take fewer rows. Chapter 1's next draft has it.
 
 - **4:17.0** · T04.C.03.1 · shot H · Claude asks · ✓ resolved `nmujh32wrvg`
   The chapter check finds 10 places here where the picture holds still for over 8 seconds (this one is 12.8 s). Are held shots like this fine, or should every long line get more movement?
@@ -81,6 +86,11 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Curt: Held shots are fine
 
 ## 2. Frog or Axolotl
+
+- **2:11.6** · T09.C.01 · shot H · Curt `nmumrjicgnk`
+  There is a distracting extra inhale after "What do you think?" in the audio here and elsewhere.
+  [the frame](frames/ch02-nmumrjicgnk.jpg)
+  - Claude: Found it: the voice inhales after the last word of some clips. Here it's your 'What do you think?' (the same clip plays four times in the film). Now any breath after a line's last word or before its first is silenced; 17 lines had one. No timing changes.
 
 - **2:36.4** · T09.C.03 · shot H · Claude asks · ✓ resolved `nmujh330m1n`
   Nine source codes pile up in this stretch, and some wait up to 35 s to find room. Which fix?
@@ -132,10 +142,10 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 14. The Pundits
 
-- **5:24.0** · T72.U.02.9 · shot G · Curt `nmum0m357ia`
-  The audio pronounces "i" as "one" when it should be "aye".
-  [the frame](frames/ch14-nmum0m357ia.jpg)
-  - Claude: Fixed: the voice is now sent "Eye. Other" for both your "i) Other" and my answer, and speech-to-text hears both as "I, Other". The next draft of chapter 14 has it.
+- **6:01.2** · T72.C.03 · shot G · Curt `nmumrc24h2g`
+  I can't tell what the image is supposed to be.
+  [the frame](frames/ch14-nmumrc24h2g.jpg)
+  - Claude: It's meant to be two roads (harm now, risk later) that turn out to be one road, driven by the same three failures. The roads were unlabelled and the signs floated on the horizon. Now each road has a sign, and the three failures are on one signpost where the roads join.
 
 - **0:31.8** · T68.C.03 · Claude asks · ✓ resolved `nmujx0v7ki`
   The hosts are stick figures like you, told apart by hair, glasses and hoodie colour (Father Robert has a white collar). No faces copied. Is that enough, or should they look more different?
@@ -148,5 +158,10 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   Options: “Kevin has the glasses” · “Kevin has the beard” · “Leo and Jeff are the other way round too”
   - Claude: Kevin has the glasses (as drawn). A labelled 3×3 grid of everyone now opens Curt's question here.
 
+- **5:24.0** · T72.U.02.9 · shot G · Curt · ✓ resolved `nmum0m357ia`
+  The audio pronounces "i" as "one" when it should be "aye".
+  [the frame](frames/ch14-nmum0m357ia.jpg)
+  - Claude: Fixed: the voice is now sent "Eye. Other" for both your "i) Other" and my answer, and speech-to-text hears both as "I, Other". The next draft of chapter 14 has it.
+
 ---
-2 open, 21 resolved.
+3 open, 23 resolved.

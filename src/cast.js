@@ -24,7 +24,8 @@ const clawdMouth = (k, rest = null) => k < .15 ? rest : k < .55 ? 'o' : 'open';
 // ---------- Curt ----------
 // Options:
 //   look (costume; see CURT_VARIANTS for named combinations):
-//     hair: 'none' | 'short' | 'ponytail' | 'bun';  outfit: 'stick' | 'hoodie' (+ hoodie: colour, hood: 'down' | 'up')
+//     hair: 'none' | 'short' | 'ponytail' | 'bun';  outfit: 'stick' or one of CURT_GARB below (hoodie, tee, shirt, …),
+//     cloth: its colour (a hoodie's may be given as hoodie:), hood: 'down' | 'up' (a hoodie), and CURT_GARB's options
 //     facial: 'none' | 'stubble' | 'mustache' | 'goatee' | 'circle' | 'beard' | 'chinstrap';  hairCol, facialCol,
 //     ponyTip (the ponytail fades from hairCol at the roots to this at the tip), glasses: true
 //   view: 'front' | 'back' (from behind: no face, the hair and the hood carry him)
@@ -51,7 +52,7 @@ function curt(x, y, u, o = {}) {
     inkLine(P.map(p => [p[0] + jit(J), p[1] + jit(J)]), sw * w, col, 'ink', .4);
   };
 
-  const hoodie = o.outfit === 'hoodie', hc = o.hoodie || '#4E5B78', hcDk = mixCol(hc, PAL.ink, .35), back = o.view === 'back';
+  const garb = CURT_GARB[o.outfit] || null, hoodie = o.outfit === 'hoodie', hc = o.cloth || o.hoodie || garb?.col || '#4E5B78', hcDk = mixCol(hc, PAL.ink, .35), back = o.view === 'back';
   const hairCol = o.hairCol || '#3A2C26';
   if (!o.noShadow && !sit) { rs('shadow'); paint(ellPts(x, y + u * .2, u * 3.2, u * .6, 18), { fill: PAL.ink, fillOp: 70, bleed: .25, tex: .3, border: .1, ink: null }); }
   // legs
@@ -65,8 +66,8 @@ function curt(x, y, u, o = {}) {
     for (const side of ['L', 'R']) {
       rs('arm' + side);
       const s_ = side === 'L' ? -1 : 1, L1 = 2.5 * u, L2 = 2.4 * u;
-      // a stick figure's arms hang from the neck; in a hoodie they hang from real shoulders
-      const sh = hoodie ? [neck[0] + s_ * 1.55 * u, neck[1] + .95 * u] : [neck[0], neck[1] + .6 * u];
+      // a stick figure's arms hang from the neck; clothed, they hang from real shoulders
+      const sh = garb ? [neck[0] + s_ * 1.55 * u, neck[1] + .95 * u] : [neck[0], neck[1] + .6 * u];
       let target = o['hand' + side];
       if (typeof target === 'string') target = CURT_HANDS[target]?.(s_, f, sit, o) ?? null;
       if (o.hand === 'table' && sit && !target) target = CURT_HANDS.table(s_, f, sit, o);
@@ -83,14 +84,19 @@ function curt(x, y, u, o = {}) {
     }
   };
   function limb(sh, el, hand) {
-    if (hoodie) {   // a sleeve along the arm, then a cuff and the hand poking out
+    const sleeve = garb && (o.sleeves || garb.sleeve);
+    if (sleeve === 'long') {   // a sleeve along the arm, then a cuff and the hand poking out
       paint(ribbon([sh, el, [lerp(el[0], hand[0], .82), lerp(el[1], hand[1], .82)]], 1.05 * u, .85 * u), { wash: hc, fill: hcDk, fillOp: 50, tex: .4, ink: PAL.ink, sw: sw * .7 });
       line([[lerp(el[0], hand[0], .8), lerp(el[1], hand[1], .8)], hand], .9);
+    } else if (sleeve === 'short') {   // a short sleeve most of the way to the elbow, then the bare arm
+      const m = [lerp(sh[0], el[0], .68), lerp(sh[1], el[1], .68)];
+      paint(ribbon([sh, [lerp(sh[0], el[0], .34), lerp(sh[1], el[1], .34)], m], 1.2 * u, 1.05 * u), { wash: hc, fill: hcDk, fillOp: 50, tex: .4, ink: PAL.ink, sw: sw * .7 });
+      line([m, el, hand], .95);
     } else line([sh, el, hand], .95);
   }
   // from behind, arms that come round to his back: o.arms 'behindHead' (hands folded behind his head, elbows out) or
   // 'behindBack' (forearms crossed at the small of his back). Drawn over him, since from behind they're on our side.
-  const shoulder = s_ => hoodie ? [neck[0] + s_ * 1.55 * u, neck[1] + .95 * u] : [neck[0], neck[1] + .6 * u];
+  const shoulder = s_ => garb ? [neck[0] + s_ * 1.55 * u, neck[1] + .95 * u] : [neck[0], neck[1] + .6 * u];
   const skin = mixCol(PAL.cream, '#B98A6A', .35);
   const hands = (P, key) => { rs(key); for (const p of P) paint(ellPts(p[0], p[1], .38 * u, .3 * u, 14), { wash: skin, ink: PAL.ink, sw: sw * .45 }); };
   const armsBehind = () => {
@@ -125,7 +131,8 @@ function curt(x, y, u, o = {}) {
       paint(rrPts(hip[0] - 1 * u, hem - 2 * u, 2 * u, 1.2 * u, .4 * u), { wash: hcDk, ink: PAL.ink, sw: sw * .5 });
       for (const d of [-1, 1]) line([[neck[0] + d * .35 * u, top + .2 * u], [neck[0] + d * .4 * u, top + 1.8 * u]], .35);
     } else inkLine([[neck[0], top + .3 * u], [neck[0] + lx * .05, top + 2 * u], [hip[0], hem - .2 * u]], sw * .4, hcDk, 'inkfine', .5);
-  } else { rs('spine'); line([hip, neck]); }
+  } else if (garb) curtGarb(o, garb, { neck, hip, u, sw, f, lean, back, sit, hc, hcDk, line, rs });
+  else { rs('spine'); line([hip, neck]); }
   // arms: shoulder at the neck; an upper arm and a forearm of 2.4u each
   if (!back) drawArms();
   // head: a plain circle, filled with paper so the boil lines behind it don't show through
@@ -228,6 +235,125 @@ function curtFacial(kind, fx, fy, my, R, u, sw, col, head) {
     if (kind === 'beard') mous();
   }
 }
+
+// ---------- what people wear ----------
+// Each outfit's cut. sleeve 'long' | 'short'; neck 'crew' | 'v' | 'points' (a shirt collar) | 'soft' (a polo's) | 'tab'
+// (a clerical collar); placket 'full' | 'short' (the buttons); open: a jacket over o.under; lapels (a suit's, closing to
+// a V); coat (long, to mid-thigh); skirt (a dress: fitted, then flaring to the knee); rib (a sweater's ribbed hem); col: the colour, unless o.cloth.
+// Options on any of them: cloth, sleeves ('long' | 'short'), under (under an open jacket), tie (a colour; false: none),
+// trim (a jersey's), number (true: a jersey's 10), pattern (colours: a loud print), stripes (a colour: vertical, a
+// referee's), bands (a colour: horizontal, a Breton).
+const CURT_GARB = {
+  hoodie:   { sleeve: 'long', col: '#4E5B78' },   // drawn by curt() itself: the hood, the pocket, the drawstrings
+  tee:      { sleeve: 'short', neck: 'crew', col: '#C9A441' },
+  sweater:  { sleeve: 'long', neck: 'crew', rib: true, col: '#8A4A4A' },
+  shirt:    { sleeve: 'long', neck: 'points', placket: 'full', col: '#DCE6F0' },
+  polo:     { sleeve: 'short', neck: 'soft', placket: 'short', col: '#22222A' },
+  clerical: { sleeve: 'long', neck: 'tab', col: '#1A181E' },
+  jersey:   { sleeve: 'short', neck: 'v', trim: '#FBF8F0', col: '#2F5AA8' },
+  jacket:   { sleeve: 'long', neck: 'points', open: true, under: '#1E1C22', col: '#5E5E3E' },   // a field jacket, worn open
+  suit:     { sleeve: 'long', open: true, lapels: true, under: '#F4F1EA', tie: '#8A2A2A', col: '#3A3A44' },
+  labcoat:  { sleeve: 'long', open: true, lapels: true, coat: true, under: '#DCE6F0', tie: '#3E4A6A', col: '#F4F1EA' },
+  dress:    { sleeve: 'short', neck: 'crew', skirt: true, col: '#5A8A6A' },
+};
+function curtGarb(o, g0, { neck, hip, u, sw, f, lean, back, sit, hc, hcDk, line, rs }) {
+  const g = sit ? { ...g0, skirt: false, coat: false } : g0;   // sitting, a skirt or a long coat is out of sight under the table
+  const top = neck[1] + .1 * u, sy = top + .9 * u, sx = 1.9 * u, lx = f * Math.sin(lean) * 2 * u, n0 = neck[0], h0 = hip[0] + lx * .1;
+  const hem = hip[1] + (sit ? -.1 : g.skirt ? 3.4 : g.coat ? 2.6 : g.open ? .7 : .5) * u, hx = (g.skirt ? 2.8 : g.coat ? 1.9 : 1.5) * u, waist = hip[1] - .9 * u;
+  const ink = { ink: PAL.ink, sw: sw * .5 }, cloth = { wash: hc, fill: hcDk, fillOp: 50, tex: .4 };
+  // the body's sides between the shoulder line (k = 0) and the hem (k = 1), side d = -1 | 1
+  const side = (d, k) => [lerp(n0 + d * sx, h0 + d * hx, k), lerp(sy, hem, k)];
+  const across = (k, a) => { const L = side(-1, k), R = side(1, k); return [lerp(L[0], R[0], a), L[1]]; };
+  rs('torso');
+  const body = g.skirt
+    ? [[n0 - sx * .55, top - .1 * u], [n0 + sx * .55, top - .1 * u], [n0 + sx, sy], [h0 + 1.25 * u, waist], [h0 + hx, hem], [h0 - hx, hem], [h0 - 1.25 * u, waist], [n0 - sx, sy]]
+    : [[n0 - sx * .55, top - .1 * u], [n0 + sx * .55, top - .1 * u], [n0 + sx, sy], side(1, 1), side(-1, 1), [n0 - sx, sy]];
+  const under = !back && g.open, uc = o.under || g.under;
+  paint(body, { ...(under ? { wash: uc } : cloth), ...ink, sw: sw * .8, curv: .25 });
+  // prints and stripes, inside the body (a dress keeps to its bodice)
+  const K = g.skirt ? (waist - sy) / (hem - sy) : 1;
+  if (o.pattern && !under) { rs('print'); for (let i = 0; i < 16; i++) { const k = hash(i * 5.7) * .92 * K + .04, p = across(k, .1 + .8 * hash(i * 2.3)); paint(ellPts(p[0], p[1], .3 * u, .25 * u, 8), { wash: o.pattern[i % o.pattern.length], ink: null }); } }
+  if (o.stripes && !under) { rs('stripes'); for (let j = 0; j < 4; j++) { const a = (2 * j + 1.3) / 9, b = a + 1 / 9; paint([across(0, a), across(0, b), across(K, b), across(K, a)], { wash: o.stripes, ink: null }); } }
+  if (o.bands && !under) { rs('bands'); for (let j = 0; j < 4; j++) { const a = (j + .35) / 4.4 * K, b = a + .1 * K; paint([across(a, .02), across(a, .98), across(b, .98), across(b, .02)], { wash: o.bands, ink: null }); } }
+  if (g.rib && !back) { rs('rib'); paint([across(.86, 0), across(.86, 1), across(1, 1), across(1, 0)], { wash: hcDk, ink: null }); }
+  if (g.skirt) { rs('waist'); inkLine([[h0 - 1.25 * u, waist], [h0, waist + .15 * u], [h0 + 1.25 * u, waist]], sw * .35, hcDk, 'inkfine', .5); }
+  if (back) {   // from behind: a collar band for a collared shirt, a seam down a jacket, a jersey's number
+    if (g.neck === 'points' || g.neck === 'soft' || g.neck === 'tab' || g.open) paint(ribbon([[n0 - .8 * u, top - .05 * u], [n0, top + .25 * u], [n0 + .8 * u, top - .05 * u]], .35 * u), { wash: g.open ? hcDk : hc, ...ink });
+    if (g.open) inkLine([[n0, top + .6 * u], [h0, hem - .2 * u]], sw * .35, hcDk, 'inkfine', .5);
+    if (o.number) jerseyTen(n0, top + 2.6 * u, 1.9 * u, o.trim || g.trim, hc);
+    return;
+  }
+  // an open jacket: the shirt shows between its fronts
+  if (g.open) {
+    if (g.lapels) {   // a suit: a white shirt's collar and a tie, then the jacket closing to a V
+      rs('shirt collar'); for (const d of [-1, 1]) paint([[n0 + d * .1 * u, top + .6 * u], [n0 + d * .2 * u, top - .12 * u], [n0 + d * .85 * u, top - .1 * u]], { wash: uc, ink: null });
+      const tie = o.tie ?? g.tie;
+      if (tie) { rs('tie'); paint(ellPts(n0, top + .4 * u, .26 * u, .22 * u, 10), { wash: tie, ink: null }); paint([[n0 - .2 * u, top + .55 * u], [n0 + .2 * u, top + .55 * u], [n0 + .4 * u, top + 2.4 * u], [n0, top + 2.8 * u], [n0 - .4 * u, top + 2.4 * u]], { wash: tie, ink: null }); }
+    }
+    const vy = top + (g.lapels ? 2.9 : 0) * u, gap = g.lapels ? 0 : .5 * u, V = g.lapels ? .95 : .55;
+    for (const d of [-1, 1]) {
+      rs('front ' + d);
+      paint([[n0 + d * V * u, top - .12 * u], [n0 + d * sx * .6, top - .1 * u], [n0 + d * sx, sy], side(d, 1), [h0 + d * gap, hem], [lerp(n0, h0, (vy - top) / (hem - top)) + d * gap, vy]], { ...cloth, ...ink, sw: sw * .8, curv: .15 });
+      if (g.lapels) paint([[n0 + d * V * u, top - .1 * u], [n0 + d * 1.5 * u, top + 1.2 * u], [n0 + d * 1.1 * u, top + 1.4 * u], [n0 + d * .12 * u, vy - .15 * u]], { wash: hcDk, ink: null });
+    }
+    if (g.lapels) { rs('button'); paint(ellPts(lerp(n0, h0, .6) + .25 * u, vy + .5 * u, .16 * u, .16 * u, 8), { wash: hcDk, ...ink }); }
+  }
+  // necks
+  rs('neck');
+  if (g.neck === 'crew') paint(ribbon([[n0 - .75 * u, top - .08 * u], [n0, top + .38 * u], [n0 + .75 * u, top - .08 * u]], .26 * u), { wash: hcDk, ink: null });
+  if (g.neck === 'v') {
+    const trim = o.trim || g.trim, skin = mixCol(PAL.cream, '#B98A6A', .35);
+    paint([[n0 - .7 * u, top - .12 * u], [n0 + .7 * u, top - .12 * u], [n0, top + 1.3 * u]], { wash: skin, ink: null });
+    paint(ribbon([[n0 - .75 * u, top - .1 * u], [n0, top + 1.3 * u], [n0 + .75 * u, top - .1 * u]], .28 * u), { wash: trim, ...ink, sw: sw * .35, curv: 0 });
+  }
+  if (g.neck === 'points' || g.neck === 'soft') for (const d of [-1, 1]) {   // a collar's two points (a polo's smaller and rounder)
+    const soft = g.neck === 'soft';
+    paint([[n0 + d * .12 * u, top - .12 * u], [n0 + d * .8 * u, top - .1 * u], [n0 + d * (soft ? .62 : .5) * u, top + (soft ? .55 : .8) * u], [n0 + d * .1 * u, top + .3 * u]], { wash: hc, ...ink, curv: soft ? .5 : 0 });
+  }
+  if (g.neck === 'tab') {   // a band collar and the white tab at the throat
+    paint(ribbon([[n0 - .8 * u, top - .08 * u], [n0, top + .3 * u], [n0 + .8 * u, top - .08 * u]], .34 * u), { wash: hcDk, ink: null });
+    paint(rectPts(n0 - .3 * u, top + .1 * u, .6 * u, .38 * u), { wash: '#FBF8F0', ink: null });
+  }
+  if (g.placket) {   // the buttons down the front
+    const end = g.placket === 'full' ? hem - .3 * u : top + 1.9 * u, n = g.placket === 'full' ? 5 : 2;
+    rs('placket'); inkLine([[n0, top + .6 * u], [lerp(n0, h0, (end - top) / (hem - top)), end]], sw * .3, mixCol(hc, PAL.ink, .55), 'inkfine', .3);
+    for (let i = 0; i < n; i++) { const y = lerp(top + 1 * u, end - .2 * u, n > 1 ? i / (n - 1) : 0); paint(ellPts(lerp(n0, h0, (y - top) / (hem - top)) + .2 * u, y, .1 * u, .1 * u, 6), { wash: mixCol(hc, '#FBF8F0', .5), ink: null }); }
+  }
+  if (o.number) jerseyTen(n0 + .95 * u, top + 2 * u, 1.1 * u, o.trim || g.trim, hc);
+}
+// a jersey's 10, painted (lettering would float over everything in the frame), h tall: a bar, and an oval with its hole
+// in the shirt's colour bg
+function jerseyTen(x, y, h, col, bg) {
+  paint(rectPts(x - .62 * h, y - .5 * h, .2 * h, h), { wash: col, ink: null });
+  paint(ellPts(x + .15 * h, y, .34 * h, .5 * h, 16), { wash: col, ink: null });
+  paint(ellPts(x + .15 * h, y, .15 * h, .3 * h, 12), { wash: bg, ink: null });
+}
+
+// The people the film shows besides Curt and Claude: one look each, wherever they appear. The hosts (ch 14, ch 15) as
+// their shows' episode thumbnails show them (assets/ref/: im888, im889, hardfork): what they wear, their hair, glasses,
+// beards. Painted in the film's style; no likeness copied.
+const PEOPLE = {
+  leo:    { hair: 'short', hairCol: '#D8D5CF', outfit: 'shirt', cloth: '#23222E', pattern: ['#E8A33A', '#5A8AC9', '#D9534F', '#F2E6C8', '#6FA85A'] },   // a shirt of mission patches
+  jeff:   { hair: 'short', hairCol: '#EDEBE6', glasses: true, facial: 'circle', facialCol: '#EDEBE6', outfit: 'polo', cloth: '#22222A' },
+  robert: { hair: 'short', hairCol: '#1E1A18', outfit: 'clerical' },
+  paris:  { hair: 'none', hairCol: '#3A2A22', outfit: 'jersey', number: true },   // #889's art: a blue soccer jersey, 10
+  kevin:  { hair: 'short', hairCol: '#5A4030', glasses: true, facial: 'stubble', facialCol: '#6A5040', outfit: 'jacket', cloth: '#5E5E3E', under: '#1E1C22' },   // an olive jacket over a black tee
+  casey:  { hair: 'short', hairCol: '#C08A50', facial: 'beard', facialCol: '#B07A48', outfit: 'shirt', cloth: '#1E1C22' },
+  dyson:  { outfit: 'labcoat', hair: 'short', hairCol: '#1E1A18' },   // Miles Dyson (Terminator 2), Cyberdyne's engineer
+};
+// Anyone else: crowdLook(i) dresses the i-th of a crowd, each differently (their hair too, so they read as people)
+const CROWD = [
+  { outfit: 'tee', cloth: '#C9A441', hair: 'short', hairCol: '#3A2C26' },
+  { outfit: 'dress', cloth: '#5A8A6A', hair: 'bun', hairCol: '#8A5A3A' },
+  { outfit: 'sweater', cloth: '#8A4A4A', hair: 'none' },
+  { outfit: 'shirt', cloth: '#DCE6F0', hair: 'short', hairCol: '#C9A06A' },
+  { outfit: 'tee', cloth: '#EDE6D6', bands: '#3E4A6A', hair: 'short', hairCol: '#1E1A18' },
+  { outfit: 'jacket', cloth: '#7A5E44', under: '#E8E0D0', hair: 'short', hairCol: '#6A6470' },
+  { outfit: 'dress', cloth: '#6A5A8A', hair: 'ponytail', hairCol: '#2A2420' },
+  { outfit: 'polo', cloth: '#C96A4A', hair: 'short', hairCol: '#8A6A4A' },
+  { outfit: 'suit', cloth: '#3A3A44', hair: 'short', hairCol: '#9C9791' },
+];
+const crowdLook = i => CROWD[((Math.floor(i) % CROWD.length) + CROWD.length) % CROWD.length];
 
 // Named looks for the pick sheet (look.js chooses one). A–L, as lettered on the sheet.
 const CURT_VARIANTS = {

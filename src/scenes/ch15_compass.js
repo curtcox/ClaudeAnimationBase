@@ -56,17 +56,9 @@
     paint(rrPts(x - 66 * s, y - 86 * s, 132 * s, 150 * s, 10 * s), { wash: '#FBF8F0', ink: PAL.ink, sw: 1 });
     if (name === 'Claude') clawd(x, y + 10 * s, 5.4 * s, { ...feel(o.mood || 'neutral', t), emote: null, noShadow: true, boilKey: 'card claude' });
     else if (name === 'Curt') curtAs(x, y + 36 * s, 6.4 * s, { noShadow: true, boilKey: 'card curt' });
-    else curt(x, y + 36 * s, 6.4 * s, { outfit: 'hoodie', hood: 'down', facial: 'none', noShadow: true, ...HOSTS[name], boilKey: 'card ' + name });
-    if (name === 'Robert') { boilSeed('card collar'); paint(rectPts(x - 2.2 * s, y + 36 * s - 11.4 * 6.4 * s, 4.4 * s, 3 * s), { wash: '#FBF8F0', ink: null }); }
+    else curt(x, y + 36 * s, 6.4 * s, { facial: 'none', noShadow: true, ...PEOPLE[name.toLowerCase()], boilKey: 'card ' + name });
     lab(o.label || name, x, y + 50 * s, 22 * s, PAL.ink);
   }
-  const HOSTS = {
-    Leo: { hair: 'short', hairCol: '#BDB8B0', glasses: true, hoodie: '#6A7A9A' },
-    Jeff: { hair: 'short', hairCol: '#E4E0D8', glasses: true, hoodie: '#8A5A4A' },
-    Robert: { hair: 'short', hairCol: '#2A2420', facial: 'goatee', facialCol: '#2A2420', hoodie: '#1E1C22' },
-    Kevin: { hair: 'short', hairCol: '#4A3A2A', hoodie: '#5A8A6A' },
-    Casey: { hair: 'short', hairCol: '#C9A06A', glasses: true, facial: 'stubble', facialCol: '#A98A5A', hoodie: '#6A5A8A' },
-  };
   // where Claude places everyone, in the compass's own terms: u -1..1 (not now → soon), v -1..1 (good → bad)
   const PLACES = [['T74.C.03.1', 'Claude', .22, .2], ['T74.C.03.2', 'Curt', .6, .62], ['T74.C.03.3', 'Jeff', -.84, -.28],
     ['T74.C.03.4', 'Leo', .26, -.3], ['T74.C.03.5', 'Robert', -.18, .12], ['T74.C.03.6', 'Kevin', .72, .1], ['T74.C.03.7', 'Casey', .72, -.12]];
@@ -243,7 +235,7 @@
       const P = [[a, '#E8CF8A', (x, y, s) => { paint(rectPts(x - 60 * s, y - 40 * s, 120 * s, 80 * s), { wash: '#E8CF8A', ink: '#A9774F', sw: 3 }); glow(x, y, 80, '#C23A4A', .4); }],
         [b, '#8FB6E8', (x, y, s) => { paint(rectPts(x - 70 * s, y - 40 * s, 140 * s, 80 * s), { wash: '#3E6FA8', ink: '#DCE8F4', sw: 1 }); inkLine([[x - 50 * s, y], [x + 40 * s, y]], 1.4, '#DCE8F4', 'inkfine', 0); }],
         [c, '#D8D0C8', (x, y, s) => { paint(rrPts(x - 30 * s, y - 60 * s, 60 * s, 60 * s, 8), { wash: '#6A7A9A', ink: PAL.ink, sw: .8 }); inkLine([[x, y], [x, y + 40 * s]], 5, '#2A2733', 'ink', 0); }],
-        [d, '#E8B8A8', (x, y, s) => { inkLine([[x - 80 * s, y], [x + 80 * s, y]], 4, '#A9774F', 'ink', .3); for (const e of [-1, 1]) curt(x + e * 70 * s, y + 50 * s, 3.4 * s, { lean: -e * .4, noShadow: true, boilKey: 'tug ' + e }); }]];
+        [d, '#E8B8A8', (x, y, s) => { inkLine([[x - 80 * s, y], [x + 80 * s, y]], 4, '#A9774F', 'ink', .3); for (const e of [-1, 1]) curt(x + e * 70 * s, y + 50 * s, 3.4 * s, { ...crowdLook(e < 0 ? 0 : 3), lean: -e * .4, noShadow: true, boilKey: 'tug ' + e }); }]];
       P.forEach(([at, col, draw], i) => piece(330 + (i % 2) * 360, 300 + Math.floor(i / 2) * 360, 1.5, col, seg(t, at, at + .6), 'p' + i, draw));
       if (t > say('T75.C.04', 'roughly on schedule', -.3)) claudeAs(1080, 1000, 10, { ...feel('nervous', t), mouth: talking(t), boilKey: 'claude schedule' });
       return;
@@ -251,7 +243,7 @@
     if (t < c6.t0) {   // a scorecard pinned where everyone can see it
       boilSeed('town board'); occupy(300, 180, 1000, 1000, 1, 'board'); paint(rectPts(360, 200, 560, 480), { wash: '#C9955F', ink: PAL.ink, sw: 1.2 }); for (const x of [400, 880]) paint(rectPts(x - 12, 680, 24, 320), { wash: '#6B4A32', ink: PAL.ink, sw: .8 });
       const k = seg(t, say('T75.C.05', 'grade themselves publicly', -.4), say('T75.C.05', 'grade themselves publicly', .4)); reportCard(640, 440, k);
-      for (let i = 0; i < 6; i++) curt(160 + i * 200 + (i > 2 ? 300 : 0), 1060, 10, { view: 'back', seed: 60 + i, outfit: 'hoodie', hood: 'down', hair: 'short', hoodie: ['#4E5B78', '#8A4A4A', '#5A8A6A', '#C9A441', '#6A6470', '#6A5A8A'][i], hairCol: '#3A2C26', boilKey: 'crowd e ' + i });
+      for (let i = 0; i < 6; i++) curt(160 + i * 200 + (i > 2 ? 300 : 0), 1060, 10, { view: 'back', seed: 60 + i, ...crowdLook(i), boilKey: 'crowd e ' + i });
       return;
     }
     // friction: gears clogged with sand; the cranes, slowly

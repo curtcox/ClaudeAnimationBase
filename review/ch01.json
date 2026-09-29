@@ -26,7 +26,7 @@
    "shot": "D",
    "by": "curt",
    "text": "Claude should walk above the captions instead of on the same line as they are.",
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-28T21:23:15.316Z",
    "replies": [
     {
@@ -36,6 +36,24 @@
     }
    ],
    "frame": "frames/ch01-nmulr81ysc2.jpg"
+  },
+  {
+   "id": "nmumq4qz1wx",
+   "t": 224.88,
+   "line": "T04.C.01",
+   "shot": "G",
+   "by": "curt",
+   "text": "It would be better if the marble sound effect matched the movement of the marble.",
+   "status": "open",
+   "created": "2026-09-29T13:40:27.661Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Now four sounds, one per movement: a short roll as each of the three prompts taps the marble, then a longer roll as it drifts to the label.",
+     "at": "2026-09-29T15:26:56.311Z"
+    }
+   ],
+   "frame": "frames/ch01-nmumq4qz1wx.jpg"
   },
   {
    "id": "nmujh32wrvg",

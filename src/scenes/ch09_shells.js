@@ -314,7 +314,7 @@
   // whoever programmed it last; one tear; the controls; the questions he started asking too late
   function dysonLab(t, o = {}) {
     boilSeed('dyson lab'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: '#2A3040', fill: '#34405A', fillOp: 90, tex: .5, ink: null });
-    curt(330, 777, 24, { pose: 'sit', view: 'q', hand: 'table', seed: 11, boilKey: 'dyson', look: o.look ?? .8, hoodie: '#E8E0D0' });   // seated behind the desk
+    curt(330, 777, 24, { pose: 'sit', view: 'q', hand: 'table', seed: 11, boilKey: 'dyson', look: o.look ?? .8, ...PEOPLE.dyson });   // seated behind the desk
     boilSeed('dyson desk');
     paint(rectPts(160, 700, 900, 50), { wash: '#6A5A4A', ink: PAL.ink, sw: 1.1 }); glow(560, 640, 260, '#FFE2A8', .6);
     inkLine([[700, 700], [680, 520], [600, 500]], 4, '#8C8894', 'ink', .3); paint([[560, 470], [640, 470], [660, 530], [540, 530]], { wash: '#8C8894', ink: PAL.ink, sw: 1 });
@@ -416,7 +416,7 @@
     paperWorld(t);
     for (const [x, who, hr] of [[330, 'curt', 9.8], [960, 'dyson', 11.6]]) {
       boilSeed('side ' + who); paint(rectPts(x - 220, 700, 440, 40), { wash: '#8A6A4A', ink: PAL.ink, sw: 1 });
-      if (who === 'curt') curtAs(x, 1000, 18, { view: 'back', pose: 'sit', seed: 2, boilKey: 'side curt' }); else curt(x, 1000, 18, { view: 'back', pose: 'sit', seed: 11, boilKey: 'side dyson', hoodie: '#E8E0D0' });
+      if (who === 'curt') curtAs(x, 1000, 18, { view: 'back', pose: 'sit', seed: 2, boilKey: 'side curt' }); else curt(x, 1000, 18, { view: 'back', pose: 'sit', seed: 11, boilKey: 'side dyson', ...PEOPLE.dyson });
       clockFace(x + 140, 250, 70, hr);
     }
     if (t > DUR - .6) { flushLetters(); brushWipe((t - (DUR - .6)) / 1.2); }

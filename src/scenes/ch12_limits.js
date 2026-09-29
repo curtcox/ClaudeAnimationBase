@@ -98,7 +98,7 @@
     lab('Hermes', x, y + 40 * s, 36 * s, '#8A6A2A');
   }
   // a thinker in a suit at a chalkboard (von Neumann, loosely: no likeness)
-  function suit(x, y, u, t, key) { curt(x, y, u, { view: 'q', pose: 'stand', seed: 23, hoodie: '#3A3A44', boilKey: 'suit ' + key, look: .8 }); }
+  function suit(x, y, u, t, key) { curt(x, y, u, { view: 'q', pose: 'stand', seed: 23, outfit: 'suit', hair: 'short', hairCol: '#2A2420', boilKey: 'suit ' + key, look: .8 }); }
   const humanVals = i => Array.from({ length: 14 }, (_, j) => 15 + 80 * hash(i * 31 + j * 7));   // illustrative spikes, no data
 
   // ---------- shots ----------
@@ -319,9 +319,9 @@
     }
     if (t < bed) {   // a crowd seen through a lens that makes everyone look the same
       boilSeed('lens crowd'); occupy(100, 200, 1190, 950, 1, 'crowd');
-      for (let i = 0; i < 7; i++) { const x = 170 + i * 158; curt(x, 960, 11 + 5 * hash(i + 3), { view: 'front', pose: 'stand', seed: 30 + i, boilKey: 'crowd ' + i, hoodie: ['#4E5B78', '#8A4A4A', '#5A8A6A', '#C9A441', '#6A6470'][i % 5] }); }
+      for (let i = 0; i < 7; i++) { const x = 170 + i * 158; curt(x, 960, 11 + 5 * hash(i + 3), { view: 'front', pose: 'stand', seed: 30 + i, boilKey: 'crowd ' + i, ...crowdLook(i) }); }
       const lx = 645 + Math.sin(t * .8) * 200; paint(ellPts(lx, 640, 220, 220, 30), { wash: '#DCEBF0', washOp: 200, ink: PAL.ink, sw: 3 });
-      for (let j = 0; j < 3; j++) curt(lx - 100 + j * 100, 800, 9, { view: 'front', pose: 'stand', seed: 30, boilKey: 'same ' + j, hoodie: '#8C8894' });
+      for (let j = 0; j < 3; j++) curt(lx - 100 + j * 100, 800, 9, { view: 'front', pose: 'stand', seed: 30, boilKey: 'same ' + j, outfit: 'tee', cloth: '#8C8894', hair: 'short', hairCol: '#3A2C26' });
       inkLine([[lx + 160, 800], [lx + 260, 940]], 16, '#6B5646', 'ink', 0);
       return;
     }

@@ -47,6 +47,20 @@
   };
   LOOPS.curt_variants.len = 4;
 
+  // Who wears what (cast.js: PEOPLE, then CROWD, the crowds' wardrobe), each from the front and from behind
+  LOOPS.wardrobe = t => {
+    paper();
+    const rows = [Object.entries(PEOPLE), CROWD.map((c, i) => [c.outfit + (c.bands ? ' (Breton)' : ''), c])];
+    rows.forEach((row, r) => row.forEach(([name, look], i) => {
+      const x = 90 + i * (r ? 205 : 265), gy = 420 + r * 470, u = 14;
+      curt(x, gy, u, { facial: 'none', ...look, look: .3, mouth: 'smile', seed: i, boilKey: 'w' + r + i, handR: i % 3 === 1 ? 'chin' : undefined });
+      curt(x + 95, gy - 40, u * .6, { facial: 'none', ...look, view: 'back', seed: i, boilKey: 'wb' + r + i, noShadow: true });
+      label(name, x + 30, gy + 34, 20);
+    }));
+    floor(420); floor(890);
+  };
+  LOOPS.wardrobe.len = 2;
+
   // Claude as a crowd: assembling into Clawd (k = 0 → 1), then Clawd acting
   LOOPS.claude_crowd = t => {
     paper();

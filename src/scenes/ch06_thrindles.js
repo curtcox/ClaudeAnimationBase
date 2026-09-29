@@ -73,7 +73,7 @@
     paint(rectPts(x - 160, y - 150, 320, 270), { wash: '#D9CDB8', ink: PAL.ink, sw: 1.3 });
     paint(rectPts(x - 140, y - 130, 280, 230), { wash: '#F4EFE2', ink: null });
     paint(rectPts(x - 170, y - 40, 30, 16), { wash: '#26222A', ink: null });
-    curt(x - 30, y + 90, 6, { pose: 'sit', view: 'q', seed: 4, boilKey: 'room man', look: .5 });
+    curt(x - 30, y + 90, 6, { pose: 'sit', view: 'q', seed: 4, boilKey: 'room man', look: .5, ...crowdLook(3) });
     paint(rectPts(x + 20, y + 10, 90, 60), { wash: '#C9302C', ink: PAL.ink, sw: .8 });
     const k = frac(t * .5); paint(rectPts(lerp(x - 220, x - 150, k), y - 42, 40, 20), { wash: '#FBF8F0', ink: PAL.ink, sw: .6 });
   }
@@ -244,7 +244,7 @@
       const k = seg(t, circle, circle + 1.2), pts = [];
       for (let i = 0; i <= 40 * k; i++) { const a = i / 40 * TAU; pts.push([645 + Math.cos(a) * 300, 560 + Math.sin(a) * 200]); }
       if (pts.length > 1) inkLine(pts, 5, '#FBF8F0', 'ink', .3);
-      for (let i = 0; i < 10; i++) { const inside = i < 5, a = i / 5 * TAU, r = inside ? 120 : 420; curt(645 + Math.cos(a) * r * (inside ? 1.4 : 1.2), 640 + Math.sin(a) * r * .5, 8, { pose: 'stand', view: 'q', seed: i, boilKey: 'chalk ' + i }); }
+      for (let i = 0; i < 10; i++) { const inside = i < 5, a = i / 5 * TAU, r = inside ? 120 : 420; curt(645 + Math.cos(a) * r * (inside ? 1.4 : 1.2), 640 + Math.sin(a) * r * .5, 8, { pose: 'stand', view: 'q', seed: i, boilKey: 'chalk ' + i, ...crowdLook(i) }); }
       return;
     }
     if (t < u2.t0) {   // useful only to someone: a hammer floating in empty space, until a hand closes on it
@@ -286,7 +286,7 @@
       if (flip > .5) paint(rrPts(-80, -40, 160, 80, 10), { wash: '#E2D8C4', ink: PAL.ink, sw: 1 });
       pop();
       if (flip <= .5 && sx > .5) lab('thrindle: less useful the more people use it', 645, 500, 32, '#3A3342', { alpha: sx });
-      if (flip > .9) { inkLine([[725, 500], [960, 500]], 3, PAL.clayDk, 'ink', 0); curt(1020, 560, 5, { pose: 'stand', view: 'q', seed: 2, boilKey: 'someone' }); lab('?', 645, 500, 50, PAL.clayDk); }
+      if (flip > .9) { inkLine([[725, 500], [960, 500]], 3, PAL.clayDk, 'ink', 0); curt(1020, 560, 5, { pose: 'stand', view: 'q', seed: 2, boilKey: 'someone', ...crowdLook(7) }); lab('?', 645, 500, 50, PAL.clayDk); }
       return;
     }
     if (t < about) {   // the relation: a line drawn from the hammer to the hand
@@ -384,7 +384,7 @@
     paperWorld(t);
     if (t < ref) { PANELS.forEach((p, i) => panel(i, t, 1, { fall: i === 0 ? 0 : ease(seg(t, u.t0 + .8 + i * .3, u.t0 + 1.6 + i * .3)) })); return; }
     if (t < book) {   // a referee wearing one team's shirt
-      curtAs(CX, 920, 22, { pose: 'stand', view: 'front', seed: 6, boilKey: 'referee', hoodie: '#C9302C' });
+      curtAs(CX, 920, 22, { pose: 'stand', view: 'front', seed: 6, boilKey: 'referee', outfit: 'jersey', cloth: '#C9302C', number: true });
       boilSeed('whistle'); paint(ellPts(CX + 60, 520, 18, 12, 10), { wash: '#C9C2B4', ink: PAL.ink, sw: .8 });
       return;
     }
@@ -405,7 +405,7 @@
         if (orbit >= .5) {
           boilSeed('behind'); paint(rectPts(80, 300, 1120, 600), { wash: '#8C8894', washOp: 90, ink: null });
           const toDabs = seg(t, dabs, dabs + 2);
-          if (toDabs < 1) for (let i = 0; i < 18; i++) { const x = 180 + (i % 6) * 180, y = 520 + Math.floor(i / 6) * 150; curt(x, y + 60, 4.5, { pose: 'sit', view: 'q', seed: i, boilKey: 'writer ' + i }); paint(rectPts(x + 20, y + 20, 40, 26), { wash: '#FBF6E6', washOp: 255 * (1 - toDabs), ink: PAL.ink, sw: .5 }); }
+          if (toDabs < 1) for (let i = 0; i < 18; i++) { const x = 180 + (i % 6) * 180, y = 520 + Math.floor(i / 6) * 150; curt(x, y + 60, 4.5, { pose: 'sit', view: 'q', seed: i, boilKey: 'writer ' + i, ...crowdLook(i) }); paint(rectPts(x + 20, y + 20, 40, 26), { wash: '#FBF6E6', washOp: 255 * (1 - toDabs), ink: PAL.ink, sw: .5 }); }
           if (toDabs > 0) clawdCrowd(645, 820, 14, .2 + .15 * toDabs, { boilKey: 'glut crowd', t });
         }
       }
@@ -435,7 +435,7 @@
       return;
     }
     // a child reading: justice and prime came through words
-    curt(430, 900, 11, { pose: 'sit', view: 'q', seed: 8, boilKey: 'child', look: 1 });
+    curt(430, 900, 11, { pose: 'sit', view: 'q', seed: 8, boilKey: 'child', look: 1, outfit: 'tee', cloth: '#D9534F', hair: 'short', hairCol: '#8A5A3A' });
     boilSeed('child book'); paint([[520, 600], [720, 560], [920, 600], [920, 780], [720, 740], [520, 780]], { wash: '#FBF8F0', ink: PAL.ink, sw: 1.2 }); inkLine([[720, 560], [720, 740]], 1);
     lab('justice', 620, 650, 36, '#3A3342', { alpha: seg(t, say('T34.C.02', 'justice', -.2), say('T34.C.02', 'justice', .3)) });
     lab('prime', 820, 650, 36, '#3A3342', { alpha: seg(t, say('T34.C.02', 'prime', -.2), say('T34.C.02', 'prime', .3)) });

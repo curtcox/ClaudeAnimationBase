@@ -10,7 +10,7 @@
 // A line that can't be voiced (no key, quota spent) keeps its scratch clip if it has one, with a warning; run again later.
 import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync } from 'node:fs';
 import { eleven } from './eleven.mjs';
-import { finishVoice, lufs, syncOf, clipBase } from './voice_lib.mjs';
+import { finishVoice, lufs, syncOf, clipBase, breathsOf, MOUTH_HZ } from './voice_lib.mjs';
 import { PATHS, readYaml, pageLines } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
@@ -51,13 +51,18 @@ if (stop) console.log(`stopped early: ${stop.slice(0, 200)}`);
 
 // every line's clip: the real one, else its scratch clip
 const scratch = existsSync('audio/scratch/clips.json') ? JSON.parse(readFileSync('audio/scratch/clips.json', 'utf8')) : {};
-const clips = {}, gains = {}, sync = {}, missing = [];
+const clips = {}, gains = {}, sync = {}, mutes = {}, missing = [];
+// each clip's stray breaths (voice_lib.mjs's breathsOf), found once per clip: audio/breaths.json, { clip: [[from, to], …] }
+const BR = 'audio/breaths.json', breaths = existsSync(BR) ? JSON.parse(readFileSync(BR, 'utf8')) : {};
 for (const l of lines) {
   const f = fileOf(l) + '.mp3';
   if (existsSync(f)) {
     clips[l.id] = f;
     const side = JSON.parse(readFileSync(fileOf(l) + '.json', 'utf8'));
     sync[l.id] = syncOf(f, l.speech, side.alignment);
+    // stray breaths before the first word or after the last are silenced in the mix, and the mouth stays shut through them
+    const key = fileOf(l).split('/').pop(), br = breaths[key] ??= breathsOf(f, side.alignment);
+    if (br.length) { mutes[l.id] = br; const m = [...sync[l.id].mouth]; for (const [p, q] of br) for (let i = Math.floor(p * MOUTH_HZ); i < Math.min(m.length, q * MOUTH_HZ); i++) m[i] = '0'; sync[l.id].mouth = m.join('').replace(/0+$/, ''); }
     if (side.lufs == null) { side.lufs = lufs(f); writeFileSync(fileOf(l) + '.json', JSON.stringify(side) + '\n'); }
     if (isFinite(side.lufs)) gains[l.id] = Math.min(4, 10 ** ((LEVEL - side.lufs) / 20));
   }
@@ -65,5 +70,7 @@ for (const l of lines) {
 }
 if (missing.length) console.log(`warning: ${missing.length} line(s) not voiced yet, using the scratch voice where there is one: ${missing.slice(0, 12).join(' ')}${missing.length > 12 ? ' …' : ''}`);
 writeFileSync('audio/voice.json', JSON.stringify({ model: cast.model, voices: { curt: cast.curt.voice, claude: cast.claude.voice }, missing }, null, 1) + '\n');
-finishVoice(clips, only, gains, sync);
+writeFileSync(BR, `{\n${Object.entries(breaths).sort().map(([k, v]) => ` ${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(',\n')}\n}\n`);
+const nb = Object.keys(mutes).length; if (nb) console.log(`${nb} line(s) with a stray breath silenced`);
+finishVoice(clips, only, gains, sync, mutes);
 process.exitCode = missing.length ? 1 : 0;

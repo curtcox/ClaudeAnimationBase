@@ -57,7 +57,7 @@
    "shot": "G",
    "by": "curt",
    "text": "The audio pronounces \"i\" as \"one\" when it should be \"aye\".",
-   "status": "open",
+   "status": "resolved",
    "created": "2026-09-29T01:46:06.570Z",
    "replies": [
     {
@@ -67,6 +67,24 @@
     }
    ],
    "frame": "frames/ch14-nmum0m357ia.jpg"
+  },
+  {
+   "id": "nmumrc24h2g",
+   "t": 361.24,
+   "line": "T72.C.03",
+   "shot": "G",
+   "by": "curt",
+   "text": "I can't tell what the image is supposed to be.",
+   "status": "open",
+   "created": "2026-09-29T14:14:08.321Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "It's meant to be two roads (harm now, risk later) that turn out to be one road, driven by the same three failures. The roads were unlabelled and the signs floated on the horizon. Now each road has a sign, and the three failures are on one signpost where the roads join.",
+     "at": "2026-09-29T15:26:56.941Z"
+    }
+   ],
+   "frame": "frames/ch14-nmumrc24h2g.jpg"
   }
  ]
 }

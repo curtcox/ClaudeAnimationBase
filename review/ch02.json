@@ -2,6 +2,24 @@
  "chapter": 2,
  "notes": [
   {
+   "id": "nmumrjicgnk",
+   "t": 131.6,
+   "line": "T09.C.01",
+   "shot": "H",
+   "by": "curt",
+   "text": "There is a distracting extra inhale after \"What do you think?\" in the audio here and elsewhere.",
+   "status": "open",
+   "created": "2026-09-29T14:19:55.936Z",
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Found it: the voice inhales after the last word of some clips. Here it's your 'What do you think?' (the same clip plays four times in the film). Now any breath after a line's last word or before its first is silenced; 17 lines had one. No timing changes.",
+     "at": "2026-09-29T15:26:56.625Z"
+    }
+   ],
+   "frame": "frames/ch02-nmumrjicgnk.jpg"
+  },
+  {
    "id": "nmujh330m1n",
    "t": 156.4,
    "line": "T09.C.03",

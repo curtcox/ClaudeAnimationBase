@@ -168,10 +168,22 @@ if (args.sheet || args.strip) {
   let next = 0, done = 0; const start = Date.now();
   // open every worker's page first: a page still loading behind others that are already rendering can stall past its timeout
   const pages = []; for (let w = 0; w < workers; w++) pages.push(await openPage('#' + w));
-  await Promise.all(pages.map(async page => {
+  // A page whose GPU context is lost never answers (protocolTimeout is 0), and the run would wait on it for ever: a frame
+  // that takes over FRAME_MS gets a fresh page and is tried again, twice at most.
+  const FRAME_MS = +(args['frame-timeout'] || 90) * 1000;
+  const within = (p, ms) => { let t; return Promise.race([p, new Promise((_, no) => { t = setTimeout(() => no(new Error(`no frame after ${ms / 1000} s`)), ms); t.unref(); })]).finally(() => clearTimeout(t)); };
+  await Promise.all(pages.map(async (page, w) => {
     while (next < todo.length) {
       const i = todo[next++], f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`;
-      const buf = await frameOf(page, i / fps, 'image/jpeg', DRAFT ? .88 : .94, OUT_W);
+      let buf;
+      for (let tries = 0; !buf; tries++) {
+        try { buf = await within(frameOf(page, i / fps, 'image/jpeg', DRAFT ? .88 : .94, OUT_W), FRAME_MS); }
+        catch (e) {
+          if (tries >= 2) throw e;
+          console.log(`[page#${w}] frame ${i}: ${e.message}; opening a fresh page`);
+          page.close().catch(() => { }); page = await openPage('#' + w);
+        }
+      }
       writeFileSync(f + '.tmp', buf); renameSync(f + '.tmp', f);
       if (++done % 24 === 0 || done === todo.length) {
         const el = (Date.now() - start) / 1000;

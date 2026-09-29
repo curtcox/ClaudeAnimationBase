@@ -136,7 +136,7 @@ window.CHAPTER = {
    "speech": "What do you think?",
    "refs": [],
    "estimated": false,
-   "mouth": "005999874033000300000022332",
+   "mouth": "0059998740330003",
    "words": [0,0,5,0.11,8,0.2,12,0.36]
   },
   {
@@ -246,7 +246,7 @@ window.CHAPTER = {
    "speech": "Who are we?",
    "refs": [],
    "estimated": false,
-   "mouth": "003399999875430000000000000000002222",
+   "mouth": "00339999987543",
    "words": [0,0,4,0.22,8,0.48]
   },
   {

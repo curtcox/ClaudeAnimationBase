@@ -36,7 +36,10 @@ cues:
 
 # ---- 1 The Wrong Movie ----
 - { id: mirror-crack, ch: 1, at: [T03.C.05, "the analogy breaks"], len: 1.5, kind: effect, gain: -8, prompt: "a mirror cracking: one sharp crack spreading across glass, no shatter", why: "the analogy breaks: cracks across the mirror" }
-- { id: marble-nudge, ch: 1, at: [T04.C.01, "nudge test"], len: 2.5, kind: effect, gain: -10, prompt: "a glass marble rolling a short way across a tilted wooden board, nudged three times, each roll a little further", why: "the nudge test: a marble drifts a little further with each open prompt" }
+- { id: marble-tap-1, ch: 1, at: [T04.C.01, '"Why am I asking?"'], len: .9, kind: effect, gain: -10, prompt: "a single glass marble rolling a short way across a wooden board and stopping", why: "the nudge test: each open prompt taps the marble a notch (it moves as the card lands; Curt, ch 1 review: the sound should match the marble)" }
+- { id: marble-tap-2, ch: 1, at: [T04.C.01, '"Go on,"'], len: .9, kind: effect, gain: -10, prompt: "a single glass marble rolling a short way across a wooden board and stopping", why: "the second tap" }
+- { id: marble-tap-3, ch: 1, at: [T04.C.01, '"What do you think?"'], len: .9, kind: effect, gain: -10, prompt: "a single glass marble rolling a short way across a wooden board and stopping", why: "the third tap" }
+- { id: marble-drift, ch: 1, at: [T04.C.01, "drifted toward"], len: 1.8, kind: effect, gain: -12, prompt: "a glass marble rolling slowly and steadily along a long wooden board, then coming to rest", why: "\"drifted toward\": the long roll to the label" }
 
 # ---- 2 Frog or Axolotl ----
 - { id: blip-axolotl, ch: 2, at: [T06.C.01], len: .8, kind: effect, gain: -6, prompt: "a soft underwater blip, one bubble", why: "\"Axolotl.\" (the motif's sound)" }

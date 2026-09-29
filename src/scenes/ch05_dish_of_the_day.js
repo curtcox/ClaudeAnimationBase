@@ -352,10 +352,10 @@
     if (t < bound) {   // a committee inside a head, and a narrator at a lectern taking a bow
       headSilhouette(CX, 580, 1.9, '#E8DDC8');
       boilSeed('committee'); paint(rectPts(360, 600, 480, 50), { wash: '#8A6A4A', ink: PAL.ink, sw: 1 });
-      for (let i = 0; i < 6; i++) curt(390 + i * 84, 640, 4.2, { pose: 'sit', view: 'q', seed: i + 2, boilKey: 'committee ' + i });
+      for (let i = 0; i < 6; i++) curt(390 + i * 84, 640, 4.2, { pose: 'sit', view: 'q', seed: i + 2, boilKey: 'committee ' + i, ...crowdLook(i) });
       const bow = Math.max(0, Math.sin((t - comm) * 2)) * .4;
       paint(rectPts(870, 480, 70, 160), { wash: '#6B5646', ink: PAL.ink, sw: 1 });
-      curt(905, 470, 5, { pose: 'stand', view: 'q', lean: bow, seed: 9, boilKey: 'narrator' });
+      curt(905, 470, 5, { pose: 'stand', view: 'q', lean: bow, seed: 9, boilKey: 'narrator', outfit: 'suit', cloth: '#2A2733', hair: 'short', hairCol: '#6A6470' });
       return;
     }
     // two crowds: Curt's looped by one unbroken thread; Claude's in a lattice, inside a picture frame
