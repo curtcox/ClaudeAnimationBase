@@ -9,9 +9,8 @@
 // the timeline carries to the scenes. A line on its scratch clip has none, and its mouth keeps the made-up talk() rhythm.
 // A line that can't be voiced (no key, quota spent) keeps its scratch clip if it has one, with a warning; run again later.
 import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import { eleven } from './eleven.mjs';
-import { finishVoice, lufs, syncOf } from './voice_lib.mjs';
+import { finishVoice, lufs, syncOf, clipBase } from './voice_lib.mjs';
 import { PATHS, readYaml, pageLines } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
@@ -20,7 +19,7 @@ const only = args.chapter != null ? +args.chapter : null;
 const lines = [...readYaml(PATHS.script).lines, ...readYaml(PATHS.chapters).flatMap(pageLines)]   // the transcript's, and the cold open's page
   .filter(l => l.spoken && (only == null || l.ch === only));
 mkdirSync(DIR, { recursive: true });
-const fileOf = l => `${DIR}/${createHash('sha256').update(`${cast[l.speaker].voice}|${cast.model}|${l.speech}`).digest('hex').slice(0, 16)}`;
+const fileOf = l => clipBase(l, cast);
 const todo = lines.filter(l => !existsSync(fileOf(l) + '.mp3'));
 const chars = todo.reduce((a, l) => a + l.speech.length, 0);
 console.log(`${lines.length} lines; ${todo.length} to voice (${chars.toLocaleString()} characters)`);

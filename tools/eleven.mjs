@@ -14,10 +14,11 @@ function key() {
   return cached;
 }
 
-// a call to https://api.elevenlabs.io/v1/<path>: JSON back, or the raw bytes with { raw: true }
+// a call to https://api.elevenlabs.io/v1/<path>: JSON back, or the raw bytes with { raw: true }; body is JSON, or a FormData
 export async function eleven(path, { method = 'GET', body, raw = false } = {}) {
-  const r = await fetch(`https://api.elevenlabs.io/v1/${path}`, { method, headers: { 'xi-api-key': key(), ...(body ? { 'Content-Type': 'application/json' } : {}) },
-    body: body ? JSON.stringify(body) : undefined });
+  const form = body instanceof FormData;   // a file upload (speech-to-text) goes as multipart, with its own content type
+  const r = await fetch(`https://api.elevenlabs.io/v1/${path}`, { method, headers: { 'xi-api-key': key(), ...(body && !form ? { 'Content-Type': 'application/json' } : {}) },
+    body: form ? body : body ? JSON.stringify(body) : undefined });
   if (!r.ok) throw new Error(`ElevenLabs ${method} ${path}: ${r.status} ${(await r.text()).slice(0, 300)}`);
   return raw ? Buffer.from(await r.arrayBuffer()) : r.json();
 }

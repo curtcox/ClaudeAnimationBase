@@ -4,7 +4,12 @@
 // changes, so an unchanged chapter isn't encoded again).
 import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { PATHS, readYaml, pad } from './script_lib.mjs';
+
+// a voiced line's clip in assets/vo, without its extension (.mp3 the audio, .json ElevenLabs' character timings): keyed
+// by voice, model and the words, so a changed line or voice gets a new clip. cast is script/voices.yaml.
+export const clipBase = (l, cast) => `assets/vo/${createHash('sha256').update(`${cast[l.speaker].voice}|${cast.model}|${l.speech}`).digest('hex').slice(0, 16)}`;
 
 const SR = 44100;
 // a clip's integrated loudness (LUFS), by ffmpeg's EBU R128 meter
