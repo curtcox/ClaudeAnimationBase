@@ -27,6 +27,30 @@
      "at": "2026-09-27T12:22:30.821Z"
     }
    ]
+  },
+  {
+   "id": "nmun7r2sjtp",
+   "t": 25.16,
+   "line": "T30.U.01",
+   "shot": "A",
+   "by": "curt",
+   "text": "The bottom card contents and captions are shown at the same spot making both unreadable. Adjust the layout. There is room to the right to expand the captions and thus make them shorter. The comments could also be tiled so that each one overlaps with the one placed before it, but only covers whitespace on the comment card.",
+   "status": "open",
+   "created": "2026-09-29T21:53:42.883Z",
+   "replies": [],
+   "frame": "frames/ch06-nmun7r2sjtp.jpg"
+  },
+  {
+   "id": "nmun7wl8mzd",
+   "t": 129.29,
+   "line": "T31.C.02.3",
+   "shot": "D",
+   "by": "curt",
+   "text": "The sound of the ball dropping doesn't match the time when the ball hits.",
+   "status": "open",
+   "created": "2026-09-29T21:58:00.069Z",
+   "replies": [],
+   "frame": "frames/ch06-nmun7wl8mzd.jpg"
   }
  ]
 }

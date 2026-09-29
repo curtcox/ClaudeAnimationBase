@@ -22,6 +22,18 @@
      "at": "2026-09-27T14:50:44.313Z"
     }
    ]
+  },
+  {
+   "id": "nmun9bq3ftc",
+   "t": 240.81,
+   "line": "T60.C.02.5",
+   "shot": "E",
+   "by": "curt",
+   "text": "AIs is mispronounced here.",
+   "status": "open",
+   "created": "2026-09-29T22:37:45.819Z",
+   "replies": [],
+   "frame": "frames/ch12-nmun9bq3ftc.jpg"
   }
  ]
 }

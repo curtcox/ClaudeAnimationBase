@@ -99,6 +99,12 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Curt: Use the same general rule everywhere. When adding too many QR codes on screen causes a problem create a page for that part of the video so that a single QR code can be used to point to the page with all of the context and references.
   - Claude: Done, and it's the general rule now. Here the chart's rows (six tests, three sets of real chats) and the register and control ideas are one code, to the register-and-controls explainer, which now describes and links all of them. The error-bars paper moved onto the one-sample explainer's code too. The chapter checks now find no pile-ups or late codes in any chapter.
 
+## 3. Who Are We?
+
+- **1:31.9** · T15.C.02 · shot D · Curt `nmun74ytx26`
+  Fade the background sound in and out rather than starting and stopping abruptly here.
+  [the frame](frames/ch03-nmun74ytx26.jpg)
+
 ## 4. The Echo
 
 - **whole chapter** · Claude asks · ✓ resolved `nmujl1bvwoi`
@@ -108,11 +114,25 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 6. Thrindles
 
+- **0:25.2** · T30.U.01 · shot A · Curt `nmun7r2sjtp`
+  The bottom card contents and captions are shown at the same spot making both unreadable. Adjust the layout. There is room to the right to expand the captions and thus make them shorter. The comments could also be tiled so that each one overlaps with the one placed before it, but only covers whitespace on the comment card.
+  [the frame](frames/ch06-nmun7r2sjtp.jpg)
+
+- **2:09.3** · T31.C.02.3 · shot D · Curt `nmun7wl8mzd`
+  The sound of the ball dropping doesn't match the time when the ball hits.
+  [the frame](frames/ch06-nmun7wl8mzd.jpg)
+
 - **0:24.0** · T30.U.01 · shot A · Claude asks · ✓ resolved `nmujl1brxks`
   The pasted thread is a corkboard: the three comments, each with its own code and its author's channel code, six codes at once (the storyboard's exception to two at a time). Does it read, and do the codes scan from your phone?
   Options: “Works” · “Too busy: fewer at once” · “Codes don't scan (I'll reply)”
   - Curt: The video should only have one link here. It should link to an explainer page. That explainer page should include a screenshot of the YouTube video being talked about, the comments, and links to everything.
   - Claude: Done. The corkboard now has one code, to the debate explainer. That page now shows the video (YouTube's own thumbnail, linked, not copied), the three comments word for word with links to each and to each channel, and the other links. The video's code at the chapter's start is gone too; it's on that page.
+
+## 7. Mind-Space
+
+- **2:10.6** · T37.U.01 · shot F · Curt `nmun8aqugs4`
+  The audio has axes being pronounced as the plural of ax rather than the plural or axis.
+  [the frame](frames/ch07-nmun8aqugs4.jpg)
 
 ## 11. July
 
@@ -135,10 +155,20 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 12. Limits
 
+- **4:00.8** · T60.C.02.5 · shot E · Curt `nmun9bq3ftc`
+  AIs is mispronounced here.
+  [the frame](frames/ch12-nmun9bq3ftc.jpg)
+
 - **2:47.1** · T60.C.02.1 · Claude asks · ✓ resolved `nmujvc8pbuk`
   The storyboard built the seven limits side by side on one board. I show each limit big, one at a time (its name and formula readable), then the whole board of seven when Claude says items 1 and 4 matter most. OK?
   Options: “OK” · “Build the board up side by side” · “Something else”
   - Curt: OK
+
+## 13. Foom
+
+- **4:14.7** · T66.U.01 · shot E · Curt `nmun9mpzw2`
+  AFAYCT is generally pronounced "as far as you can tell"
+  [the frame](frames/ch13-nmun9mpzw2.jpg)
 
 ## 14. The Pundits
 
@@ -164,4 +194,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Claude: Fixed: the voice is now sent "Eye. Other" for both your "i) Other" and my answer, and speech-to-text hears both as "I, Other". The next draft of chapter 14 has it.
 
 ---
-3 open, 23 resolved.
+9 open, 23 resolved.
