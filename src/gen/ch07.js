@@ -55,7 +55,9 @@ window.CHAPTER = {
    "text": "**You → Turing → Monroe → Data → me → Tines → HAL → Hive Queen → Solaris's ocean**",
    "speech": "You to Turing to Monroe to Data to me to Tynes to HAL to Hive Queen to Solaris's ocean",
    "refs": [
-    "solaris"
+    "solaris",
+    "art-great-chain",
+    "art-great-wave"
    ],
    "estimated": false,
    "mouth": "059977773448406069998776653043666644389999986404353268995999752004455556777763000037303279988766643203343339999986400000034644999950005777777630000000376546547899974447753300056544455552",

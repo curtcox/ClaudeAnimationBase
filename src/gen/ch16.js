@@ -38,6 +38,7 @@ window.CHAPTER = {
    "refs": [
     "explain-xkcd-356",
     "pdoom-video",
+    "art-drawing-hands",
     "note-nerd-sniping"
    ],
    "estimated": false,

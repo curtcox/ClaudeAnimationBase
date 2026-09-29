@@ -128,12 +128,14 @@ function reviewCaption(t) {
 window.AFTER_SHOT = t => { if (DRY) return; if (window.CHAPTER) refRail(t); if (REVIEW) reviewCaption(t); OCC = []; };
 
 // When every code is on screen in this chapter: the rail's plan, plus the feature cards the scenes show (found by a DRY
-// sweep). The companion site's watch pages use it to list links in step with the video.
+// sweep), and the old works the scenes hang (gallery.js), which carry no code of their own. The companion site's watch
+// pages use it to list links in step with the video.
 function refTimes() {
-  FEATURES_SEEN.clear();
+  FEATURES_SEEN.clear(); ART_SEEN.clear();
   for (let t = 0; t < DUR; t += .5) occupancyAt(t);
   return railPlan().map(p => ({ id: p.id, t0: +p.t0.toFixed(2), t1: +(p.t0 + p.hold).toFixed(2), kind: 'shelf' }))
     .concat([...FEATURES_SEEN.values()].map(f => ({ id: f.id, t0: +f.t0.toFixed(2), t1: +(f.t0 + f.hold).toFixed(2), kind: f.kind || 'feature' })))
+    .concat([...ART_SEEN].map(([key, a]) => ({ id: ART[key].ref, t0: +a.t0.toFixed(2), t1: +(a.t1 + .5).toFixed(2), kind: 'art' })))
     .sort((a, b) => a.t0 - b.t0);
 }
 

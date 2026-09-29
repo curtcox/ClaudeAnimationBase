@@ -153,7 +153,8 @@ window.CHAPTER = {
    "text": "**Weak RSI is already here.** A paper this week describes AIDE², which runs the loop at the harness layer: an AI research agent rewrites its own code, and each accepted rewrite becomes the agent the next round edits. Anthropic published its own progress report on this in June.",
    "speech": "Weak RSI is already here. A paper this week describes AIDE squared, which runs the loop at the harness layer: an AI research agent rewrites its own code, and each accepted rewrite becomes the agent the next round edits. Anthropic published its own progress report on this in June.",
    "refs": [
-    "anthropic-rsi"
+    "anthropic-rsi",
+    "art-sorcerers-apprentice"
    ],
    "estimated": false,
    "mouth": "05899503599998655999875404544009999668645324654430000000000000000692099508766754227740025453079998623300699788454540046787643200000047353599999505765765006606623089864424665533000000000000699439979999864676448863336753566520348876799870444030057778720267654300000000008973059805352449940473247654886440005303889945637773455400455660340356665422884650023330000000000000000009995349994297000593886404624068888504995365543400466475555343235534466554332",
@@ -352,6 +353,7 @@ window.CHAPTER = {
    "speech": "Fast takeoff means a year or two, driven mostly by software: better algorithms, many copies, and AI doing AI research. That seems much more plausible to me, maybe twenty-five to thirty-five percent this decade. Nothing about it looks like an explosion from the inside. It just feels like every month is stranger than the last.",
    "refs": [
     "takeoff-speeds",
+    "art-icarus",
     "note-foom"
    ],
    "estimated": false,

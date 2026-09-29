@@ -278,7 +278,11 @@
       }
       return;
     }
-    if (t < i3.t0) { mirrors(t, ease(seg(t, i2.t0, say('T21.C.02.2', 'form of sycophancy'))), { curtain: seg(t, say('T21.C.02.2', 'humility may be performance', -.3), i2.t1) }); return; }
+    if (t < i3.t0) {   // the hall of mirrors; beside it, Waterhouse's Echo and Narcissus: the echo and the mirror in one picture
+      mirrors(t, ease(seg(t, i2.t0, say('T21.C.02.2', 'form of sycophancy'))), { curtain: seg(t, say('T21.C.02.2', 'humility may be performance', -.3), i2.t1) });
+      artwork('echo-and-narcissus', 1570, 330, 330, { k: seg(t, i2.t0 + .2, i2.t0 + 2.4) });
+      return;
+    }
     if (t < fix.t0) {   // the comic's first panel, with Claude in the ape's place
       const k = seg(t, i3.t0, i3.t0 + .8), PW = 1900, s = PW / MAD.W;
       camBegin(...kf(t, [[i3.t0, [720 * s + 40, 480 * s + 60, 1.25]], [fix.t0, [520 * s + 40, 430 * s + 60, 1.1]]]));

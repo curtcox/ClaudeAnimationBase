@@ -221,6 +221,8 @@
     if (t < land) { desk12(t, { typing: t < u.t1, mood: emotions(t, [[0, 'neutral']]) }); return; }
     paperWorld(t);
     ladderScene(t, seg(t, c1.t0 + .5, c1.t1));
+    // beside it, Dürer's Melencolia I (1514): a genius stalled among instruments of measure, a seven-rung ladder behind her
+    artwork('melencolia-i', 1440, 430, 520, { k: seg(t, land + 2, land + 4) });
     if (t < c1.t0) claudeAs(1100, 1000, 9, { ...feel('thinking', t), lookY: -1, boilKey: 'claude looks up' });
     else claudeAs(1100, 1000, 9, { ...feel('determined', t), mouth: talking(t), lookX: -1, boilKey: 'claude rungs' });
   }
@@ -284,6 +286,7 @@
       if (FORMULA[cur]) chalk(FORMULA[cur], 645, 330, 64, CHALK, { alpha: seg(t, l.t0 + 1, l.t0 + 2) });
       if (cur === 2) chalk('α around 0.05 to 0.1', 645, 410, 44, CHALK, { alpha: seg(t, say(id, 'around 0.05', -.3), say(id, 'around 0.05', .4)) });
       vignette(cur, 645, 690, 1.2, t, k);
+      if (cur === 0) artwork('merian-butterfly', 1060, 530, 290, { k: seg(t, l.t0 + 1, l.t0 + 2.6), frame: 'wood' });   // Merian's butterflies (1705), pinned by the chalk one
       return;
     }
     // the whole board: seven vignettes; 1 and 4 glow; then very good bets, not omniscience

@@ -121,6 +121,8 @@
     }
     const banners = TENETS.map(([, ph]) => seg(t, say('T45.C.03', ph, -.2), say('T45.C.03', ph, .6)));
     chapel(t, { banners, flinch: win(t, snip + .6, snip + 1.8, .15) });
+    // on the chapel wall, a lobster telephone (after Dalí's, 1936; our own picture): the surreal, for a lobster religion
+    artwork('evoked-lobster-telephone', 1560, 600, 300, { k: seg(t, chapelAt + .8, chapelAt + 2.6) });
     if (t > snip) {   // a long scroll, snipped: the scissors close across it and the cut end falls away, curling
       const k = seg(t, snip, snip + .5), fall = seg(t, snip + .5, snip + 1.6), sy = 520, cut = 620; boilSeed('scroll 9');
       const scroll = (x0, x1, y = sy) => { paint(rectPts(x0, y - 30, x1 - x0, 60), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); for (let x = x0 + 30; x < x1 - 20; x += 44) inkLine([[x, y - 8], [Math.min(x + 30, x1 - 12), y - 8]], 1.2, '#8C8894', 'inkfine', 0), inkLine([[x, y + 10], [Math.min(x + 24, x1 - 12), y + 10]], 1.2, '#8C8894', 'inkfine', 0); };
@@ -356,6 +358,8 @@
     if (t < i2.t0) {   // Dyson looks up from the chip, then tears a blueprint; the chip glints
       const up = seg(t, say('T48.C.04.1', 'changes course', -.4), say('T48.C.04.1', 'changes course', .4)), glint = win(t, say('T48.C.04.1', "Skynet's chip", -.3), i1.t1, .3);
       dysonLab(t, { look: lerp(.8, -.2, up), glint });
+      // over the night desk, the 1831 Frankenstein's frontispiece: a maker recoiling from what he made
+      artwork('frankenstein-1831', 300, 290, 400, { k: seg(t, i1.t0 + .4, i1.t0 + 2.2), frame: 'wood' });
       const tear = seg(t, say('T48.C.04.1', 'changes course', .3), say('T48.C.04.1', 'changes course', 1.4));
       if (tear > 0) {   // a blueprint (a grid, and the chip drawn in white) torn in two along a jagged edge
         boilSeed('blueprint');

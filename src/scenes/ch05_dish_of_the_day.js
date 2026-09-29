@@ -92,7 +92,10 @@
     const mirror = P('It was a mirror'), slaves = P('the slaves line'), never = P('never possibly interact'), carbon = P('true for carbon people'),
       quant = P('quantitatively different'), dish = P('dish of the day'), confuzz = P('confuzzled'), built = P('ethics being socially constructed');
     const u = L('T25.U.01');
-    deskShot(t, { hour: HOUR, dim: DIM, typing: t < u.t1, frog: 1, axolotl: 1,
+    // "It was a mirror for me": on the upper monitor, where Claude might be, Curt from behind (after Magritte's Not to Be
+    // Reproduced; our own picture, src/evocations.js), until the mirror holds only the room
+    const back = t > mirror + .2 && t < carbon + .6 ? { kind: 'art', art: 'evoked-not-to-be-reproduced', k: seg(t, mirror + .2, mirror + 1.8), glow: '#C8C0D8' } : undefined;
+    deskShot(t, { hour: HOUR, dim: DIM, typing: t < u.t1, frog: 1, axolotl: 1, screens: { upR: back },
       mood: emotions(t, [[0, 'neutral'], [slaves + 1, 'thinking'], [never, 'sad', { gloom: .15, emote: null }]]),
       assemble: 1 - .45 * ease(seg(t, never, never + 1.5)) * (1 - seg(t, dish, dish + 1)),
       extra: () => {
@@ -195,6 +198,7 @@
       boilSeed('road'); occupy(100, 300, 1200, 1080, 1, 'road');
       paint([[480, 1080], [800, 1080], [680, 420], [620, 420]], { wash: '#8C8894', ink: PAL.ink, sw: 1 });
       for (let i = 0; i < 6; i++) paint(ellPts(650 + Math.sin(t * .3 + i) * 80, 380 + i * 30, 500, 120, 20, 20), { wash: '#F4F1EA', washOp: 150, ink: null });
+      artwork('wanderer-above-the-sea-of-fog', 1080, 560, 500, { k: seg(t, fog + .2, fog + 1.8) });   // Friedrich's Wanderer, looking into it
       return;
     }
     const noReport = say('T26.C.01', 'Any reassurance I offer', -.3), leak = say('T26.C.01', 'behavior leaks past the filter', -.3);
@@ -296,6 +300,7 @@
       inkLine([[645, 980], [645, 200]], 10, '#6B5646', 'ink', 0); paint(ellPts(645, 980, 150, 24, 16), { wash: '#6B5646', ink: PAL.ink, sw: 1 });
       for (let i = 0; i < 5; i++) { const d = i % 2 ? 1 : -1, y = 260 + i * 110, x = 645 + d * 110; inkLine([[645, y - 20], [x, y]], 4, '#6B5646', 'ink', 0);
         paint(ellPts(x, y + 50, 50, 62, 18), { wash: ['#F4EFE2', '#E8B4A8', '#BFD6D6', '#F2D23A', '#C9C2B4'][i], ink: PAL.ink, sw: 1 }); for (const e of [-1, 1]) paint(ellPts(x + e * 18, y + 40, 8, 5, 8), { wash: PAL.ink, ink: null }); }
+      artwork('ensor-with-masks', 240, 520, 480, { k: seg(t, u.t0 + .7, u.t0 + 2.5) });   // Ensor among his masks
       if (t > typed) lab('Shoggath', 1000, 300, 70, '#1E3A36', { pop: seg(t, typed, typed + .4), proof: typoMarks('T28.U.01', 'Shoggath'), proofK: seg(t, typed + .9, typed + 1.9) });   // red pen: Shoggoth
       if (t < u.t0 + .6) brushWipe(.5 + (t - u.t0) / 1.2);
       return;
@@ -332,7 +337,9 @@
     const u = L('T29.U.01'), c1 = L('T29.C.01'), c2 = L('T29.C.02'), comm = say('T29.C.01', 'a committee', -.3), bound = say('T29.C.02', "what holds the crowd together", -.3);
     if (t < comm) {
       const brk = seg(t, u.t1 - .3, u.t1 + 1.5), grass = seg(t, say('T29.C.01', 'Whitman said it', -.2), say('T29.C.01', 'Whitman said it', 1.2));
+      // "Am I not multitudes?": on the upper monitor, Leviathan, the giant made of hundreds of people (Bosse's frontispiece)
       deskShot(t, { hour: HOUR, dim: DIM, typing: t < u.t1, axolotl: 1, mood: emotions(t, [[0, 'neutral'], [c1.t0, 'happy']]),
+        screens: { upR: { kind: 'art', art: 'leviathan', k: seg(t, u.t0 + .3, u.t0 + 1.8), glow: '#E8DCC0' } },
         extra: () => {
           boilSeed('curt shadow');   // his shadow on the wall behind the desk comes apart into dabs
           for (let i = 0; i < 40; i++) { const tx = 560 + (hash(i) - .5) * 200, ty = 160 + hash(i + 7) * 260, a = hash(i + 3) * TAU, r = 120 * ease(brk);

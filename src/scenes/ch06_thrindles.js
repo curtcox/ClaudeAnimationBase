@@ -351,6 +351,10 @@
         if (i === 2) { frogChart(x - 220, y - 130, 300, 260, { k: 1, t }); boilSeed('needle'); const a = -Math.PI / 2 + .5 * Math.sin(t * 3); inkLine([[x + 200, y + 100], [x + 200 + Math.cos(a) * 80, y + 100 + Math.sin(a) * 80]], 4, PAL.clayDk, 'ink', 0); }
         if (i === 3) { push(); translate(x - 200, y + 150); scale(.45); cabinet(0, 0, 6, t, { clerk: false }); pop(); }
       } }));
+      // "My 'water' links only to other words": a picture of a thing isn't the thing (after Magritte's The Treachery of
+      // Images; our own picture), in the fourth panel's place until that panel comes
+      const water = say('T33.C.02.1', 'My "water"', -.3);
+      if (t < L('T33.C.02.4').t0 - .3) artwork('evoked-treachery-of-images', 950, 700, 300, { k: seg(t, water, water + 1.8), out: seg(t, L('T33.C.02.4').t0 - .8, L('T33.C.02.4').t0 - .3) });
       return;
     }
     // the rebuttals: a person with two contradictory balloons; a lattice where one shape lights up; a 7 out of reach
@@ -405,6 +409,9 @@
           if (toDabs > 0) clawdCrowd(645, 820, 14, .2 + .15 * toDabs, { boilKey: 'glut crowd', t });
         }
       }
+      // "in my case, that's training on a vast amount of human thought": Arcimboldo's Librarian, a man made of books
+      const mine = say('T34.C.01', 'In my case', -.6);
+      artwork('the-librarian', 1560, 520, 540, { k: seg(t, mine, mine + 1.8) });
       qrFeature('gazp-glut', t, c1.t0 + .8, { hold: 6.5 });
       return;
     }

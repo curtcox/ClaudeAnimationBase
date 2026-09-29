@@ -73,7 +73,9 @@
     const c1 = L('T12.C.01'), sites = say('T12.C.01', '256t.org', -.3), exp = say('T12.C.02', 'the experimenter', -.2);
     const zoom = seg(t, c1.t0 - .6, c1.t0 + .4) * (1 - ease(seg(t, sites, sites + 1)));
     deskShot(t, { hour: HOUR, typing: t < L('T12.U.01').t1, cam: deskCam('main', .25 * ease(zoom)),
-      screens: { main: { kind: 'fn', fn: resumeScreen(t), glow: '#FFE9C4' }, left: t > sites ? { kind: 'fn', fn: hashScreen, glow: '#7FD68C' } : undefined, upL: t > sites + .5 ? { kind: 'fn', fn: jarsScreen, glow: '#FFE9C4' } : undefined },
+      screens: { main: { kind: 'fn', fn: resumeScreen(t), glow: '#FFE9C4' }, left: t > sites ? { kind: 'fn', fn: hashScreen, glow: '#7FD68C' } : undefined, upL: t > sites + .5 ? { kind: 'fn', fn: jarsScreen, glow: '#FFE9C4' } : undefined,
+        // the experimenter: Wright of Derby's Experiment on a Bird in the Air Pump, once and briefly (it's sombre)
+        upR: t > exp ? { kind: 'art', art: 'bird-in-the-air-pump', k: seg(t, exp, exp + 1.4), glow: '#FFD9A0' } : undefined },
       curt: t > exp && t < exp + 1.3 ? { hoodie: '#F4F1EA' } : undefined });
     if (t < .6) brushWipe(.5 + t / 1.2);
   }

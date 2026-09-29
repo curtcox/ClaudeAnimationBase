@@ -156,6 +156,8 @@
     const out = seg(t, ask, tagged), back = seg(t, rej - .3, rej + 1.2);
     const k = back > 0 ? lerp(.5, 0, ease(back)) : lerp(0, .5, ease(out));
     const [cx, cy] = along(k), shrink = 1 - .35 * seg(t, down, down + .6);
+    // someone hidden inside the machine: the Mechanical Turk, in Racknitz's cutaway (1789), the operator at his board
+    artwork('mechanical-turk', 1520, 400, 430, { k: seg(t, router + .3, router + 2) });
     if (t < router + 2) {
       capsule(cx, cy, { s: shrink });
       if (t > tagged) { tag(0, cx + 30, cy + 20, .5 * shrink, seg(t, tagged, tagged + .6), { label: false, key: 'on capsule' }); }
@@ -320,6 +322,8 @@
     // testimony: Claude reads at the front; the glass behind stays frosted, the operator's shadow patching away
     room(420, 880, .85, t, { patch: .5 + .5 * Math.sin(t * 1.3) }); frost(60, 140, 720, 800, .82); shadows(60, 140, 720, 800, t);
     folder(740, 470, 520, 380, 1, { key: 'reading', pages });
+    // above it, Dürer's Rhinoceros (1515), drawn from a letter and a sketch by a man who never saw one: testimony
+    artwork('rhinoceros', 1010, 250, 250, { k: seg(t, c2.t0 + .2, c2.t0 + 1.8) });
     claudeAs(1000, 1010, 10, { ...feel('neutral', t), mouth: talking(t), lookX: -.3, lookY: .6, boilKey: 'claude reads' });
     if (red > 0) glow(1300, 60, 900, '#C23A4A', .45 * red);
     if (t > DUR - .6) { flushLetters(); brushWipe((t - (DUR - .6)) / 1.2); }

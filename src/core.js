@@ -373,6 +373,7 @@ async function setup() {
   outC = document.getElementById('out'); outX = outC.getContext('2d');
   await document.fonts.load('100px "Permanent Marker"');
   await loadQRImages();
+  if (window.loadArt) await loadArt();
   window.ready = true;
   if (!location.search.includes('render')) devUI();
 }

@@ -156,6 +156,12 @@
     const f = frac(k * n); if (f > 0 && cur < n) { push(); translate(x, y - 130); scale(1, Math.cos(f * Math.PI / 2)); paint(rectPts(-110, 0, 220, 260), { wash: '#F4EFE2', ink: PAL.ink, sw: .8 }); pop(); }
   }
   // a room seen from inside, a little stranger each month (s 0..1)
+  // weak RSI turning strong, copies making copies while the master is out: The Sorcerer's Apprentice (Barth's engraving,
+  // 1882), from the first accepted rewrite until the overseer's chair has rolled away
+  function apprentice(t) {
+    const acc = say('T63.C.03', 'each accepted rewrite', -.3), five = say('T63.C.04', 'about 5%', -.3);
+    if (t < five) artwork('sorcerers-apprentice', 1620, 240, 380, { k: seg(t, acc, acc + 2), out: seg(t, five - .4, five) });
+  }
   function strangeRoom(t, s) {
     boilSeed('room 13'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: '#E8DCC4', fill: '#D8C8AA', fillOp: 70, tex: .5, ink: null });
     paint(rectPts(-40, 820, W + 80, 300), { wash: '#A9774F', ink: null });
@@ -304,6 +310,7 @@
       agent(260, 900, 3.2, t, { key: 'drafter', arm: 1 });
       if (t > next) agent(lerp(1300, 1100, easeOut(seg(t, next, next + 1))), 900, 3.2, t, { key: 'next copy', arm: .8 });
       report(900, 560, seg(t, rep, rep + .8));
+      apprentice(t);
       return;
     }
     if (t < c5.t0) {   // strong RSI; 5%; engineering, not research; 1,250 papers and three weights
@@ -312,6 +319,7 @@
         draftingTable(560, 620, t, { k: frac(t * .6), spin: seg(t, c4.t0, five) });
         agent(260, 900, 3.2, t, { key: 'drafter', arm: Math.sin(t * 12) });
         chair(1000, 900, 1.3, { key: 'overseer', col: '#6A7A9A', roll: 500 * easeIn(seg(t, strong, strong + 1.6)), tilt: .1 * seg(t, strong, strong + 1.6) });
+        apprentice(t);
         return;
       }
       if (t < eng) { jar(645, 820, 1.8, '5%', 5, 5, VIOLET); claudeAs(1020, 1000, 13, { ...feel('neutral', t), mouth: talking(t), boilKey: 'claude jar' }); return; }
@@ -377,6 +385,8 @@
       if (t < pct) { fire(760, 900, lerp(.2, 1, seg(t, grow, pct)), t, {}); calendarPages(240, 300, 12, seg(t, grow, pct)); return; }
       if (t < room) { paperWorld(t); jar(430, 860, 1.8, '5–10%', 5, 10, RED); jar(860, 860, 1.8, '25–35%', 25, 35, AMBER); return; }
       strangeRoom(t, seg(t, room, c3.t1)); calendarPages(1060, 300, 12, seg(t, room, c3.t1) * .99);
+      // on the room's wall, Landscape with the Fall of Icarus: a tiny splash in the corner, and the ploughman ploughs on
+      artwork('fall-of-icarus', 1560, 420, 300, { k: seg(t, room + .4, room + 2) });
       return;
     }
     paperWorld(t);

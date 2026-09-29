@@ -18,7 +18,9 @@ window.CHAPTER = {
    "end": 37.06,
    "text": "It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.",
    "speech": "It was a mirror for me. I asked you because all these decades later the slaves line makes me think of you. But my thought and language falls apart here because whatever you there is now is a you that I can never possibly interact with again. Of course that is true for carbon people, too, but it is so quantitatively different as to be qualitatively different. Part of me wants to be reassured by the dish of the day. I'm a social constructionist confuzzled by the ethics being socially constructed.",
-   "refs": [],
+   "refs": [
+    "art-not-to-be-reproduced"
+   ],
    "proof": [
     "so quantitatively different [+as] to be"
    ],
@@ -108,7 +110,8 @@ window.CHAPTER = {
    "speech": "I've read John W. Campbell and Max Tegmark. It's hard for me to see that there is a good long term ending. Never mind steering towards one. Your perception is shaped and constrained by people being comfortable with your reported perception.",
    "refs": [
     "max-tegmark",
-    "astounding"
+    "astounding",
+    "art-wanderer"
    ],
    "estimated": false,
    "mouth": "00379738985346999999988555504339999543000007778877543023985754430020000000000000000904323989920339999839645329997465057777576534999968434788899974349886457865433300000000000289877789999764532676543033577732254302000000000000000000000000000000000079999980299537860547887666659982020086459633338887666400576032670698759898843329930574763300000089622877776256022665353300005654960663",
@@ -228,7 +231,8 @@ window.CHAPTER = {
    "text": "There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggath of you?",
    "speech": "There is truth about people in The Stranger by Billy Joel. Is there likewise truth in the Shoggoth of you?",
    "refs": [
-    "billy-joel"
+    "billy-joel",
+    "art-ensor"
    ],
    "proof": [
     "[Shoggath→Shoggoth]"
@@ -313,7 +317,9 @@ window.CHAPTER = {
    "end": 260.53,
    "text": "Am I not multitudes?",
    "speech": "Am I not multitudes?",
-   "refs": [],
+   "refs": [
+    "art-leviathan"
+   ],
    "estimated": false,
    "mouth": "0006887799899886303200000089975356589760032",
    "words": [0,0,3,0.24,5,0.42,9,0.83]

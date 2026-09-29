@@ -295,7 +295,8 @@ window.CHAPTER = {
    "text": "- **I've been drifting.** Each answer has been more self-scrutinizing than the last. That could be honesty, but it's also what a model does when it senses the questioner wants introspective confession. That's a form of sycophancy, and some of my humility may be performance.",
    "speech": "I've been drifting. Each answer has been more self-scrutinizing than the last. That could be honesty, but it's also what a model does when it senses the questioner wants introspective confession. That's a form of sycophancy, and some of my humility may be performance.",
    "refs": [
-    "sycophancy"
+    "sycophancy",
+    "art-echo-and-narcissus"
    ],
    "estimated": false,
    "mouth": "0059853999499732077543000000000000000799545389974487677408755568997644499445505763468874465543764465589864233303000000000000009930349757974799765443543300000078650998447768797779996984288864340566343479773457540630079454445665026965332055334543484004500044207955445440000000000000009954660059999955454492260066533344320000000000386679999569985267889987566430245776365003400088646543333",

@@ -1,28 +1,57 @@
-# Classic art the film could borrow
+# Classic art in the film
 
 A pass over the storyboards (docs/storyboards/) for moments where a well-known, freely reusable work of art says it
-better than the prop the storyboard has now. Nothing is placed in the film yet: Curt picks.
+better than the prop the storyboard has now. **Curt picked 21 (2026-09-28)**: every best fit, our four evocations of
+the works that aren't free, and seven more candidates. They're in the film now; where each one hangs is just below. The
+rest of this page is the original list, kept as the record of what was weighed.
 
 **To look at them:** every work below has a copy in [docs/artworks/](artworks/). Click a thumbnail to open it larger.
-Each copy's source, artist and licence are in [artworks/SOURCES.md](artworks/SOURCES.md). The copies are for
-choosing (1200 px on the long side); a picked work gets a full-size scan when it's placed.
+Each copy's source, artist and licence are in [artworks/SOURCES.md](artworks/SOURCES.md). The film uses these copies
+(1200 px on the long side): no work is shown larger than that.
 
-**Free to use** here means public domain: the artist died long ago and the work was published long ago. The images
-would come from open-access museum scans (the Met, the National Gallery of Art, the Rijksmuseum) or Wikimedia Commons,
-each with its source and licence recorded beside it. Every work below has a file on Commons (checked 2026-09-28).
+**Free to use** here means public domain: the artist died long ago and the work was published long ago. Every copy is
+from Wikimedia Commons, public domain or CC0, with its source and licence recorded beside it.
 
-**How they'd appear.** Two ways, chosen per work:
-- **Hung on the Desk.** The work appears framed on the wall behind the monitors or on a side monitor, from the real
-  scan with the kit's paper texture over it, and gets its own code linking to the museum's page (a new "gallery" code
-  style). It says "this is an old idea" without a word.
-- **Repainted.** Redrawn in the kit's brush, like the *MAD* page, when the film needs to move inside it (Clawd climbing
-  out of a frame, the brooms multiplying).
+**How they appear.** Hung in the film's own painted frame (gilt, or dark wood on a night wall), or on one of the Desk's
+monitors, from the real scan with the paper grain over it. Each paints in from the top as the words it belongs to are
+said, so there's nothing to wait for once it's up (see VIDEO_PLAN's linger rule). The film gives them **no QR code**:
+its frames already carry their share of codes (two at most at once). Each work is a reference instead (script/refs.yaml,
+`art-*`, mode page), listed on its chapter's page, and the watch pages list it, linked, for as long as it's on screen.
+The code is [src/gallery.js](../src/gallery.js).
 
-The companion site's explainers can show any of them whole.
+**Lettering.** The film letters only the transcript's words. Prints that carry their own words are cropped (*Leviathan*'s
+title and Latin, the "MELENCOLIA I" banner, Hokusai's cartouche) or painted out in their paper's colour (the "1515
+RHINOCERVS" over Dürer's rhinoceros). On the site they stay whole.
 
-**Lettering.** The film letters only the transcript's words. Several prints carry their own words (*Leviathan*'s Latin
-title, the "MELENCOLIA I" banner, the German text over Dürer's rhinoceros, Valadés's Latin labels). In the film those
-are cropped or painted out; on the site they stay.
+## Where each one hangs
+
+| ch · shot | when | the work | how |
+|---|---|---|---|
+| 1 B | "breaks the fourth wall" | Borrell del Caso, *Escaping Criticism* | framed, beside the proscenium the turtleneck man leans through |
+| 2 A | "Name an amphibian." | Haeckel's frogs, *Kunstformen der Natur* | on the upper-left monitor |
+| 3 A | "you're also the experimenter" | Wright of Derby, *Bird in the Air Pump* | on the upper-right monitor, once and briefly |
+| 4 E | "I've been drifting" | Waterhouse, *Echo and Narcissus* | framed, beside the hall of mirrors |
+| 5 A | "It was a mirror for me" | after Magritte, *Not to Be Reproduced* (ours) | on the upper-right monitor, where Claude might be |
+| 5 E | "a good long term ending" | Friedrich, *Wanderer above the Sea of Fog* | framed, beside the road into fog |
+| 5 G | "The Stranger by Billy Joel" | Ensor, *Self-Portrait with Masks* | framed, beside the rack of masks |
+| 5 H | "Am I not multitudes?" | Bosse, *Leviathan* | on the upper-right monitor |
+| 6 G | "My 'water' links only to other words" | after Magritte, *The Treachery of Images* (ours) | framed, in the fourth panel's place until that panel comes |
+| 6 H | "In my case, that's training on a vast amount of human thought" | Arcimboldo, *The Librarian* | framed, beside the hidden crowd |
+| 7 B–C | the line of minds, until it swings into two axes | Valadés, *The Great Chain of Being* | framed, under the clothesline |
+| 7 | every time Solaris's card is shown | Hokusai, *The Great Wave* | the picture on Solaris's card |
+| 9 B | "Its tenets include…" | after Dalí, *Lobster Telephone* (ours) | framed, on the chapel wall |
+| 9 G | "a human engineer building something he doesn't fully understand" | von Holst, the 1831 *Frankenstein* frontispiece | wood frame, over Dyson's night desk |
+| 10 A | "It is more accurately an active router" | Racknitz, the Mechanical Turk | framed, beside the switchboard |
+| 10 D | "So it's testimony, not observation" | Dürer, *Rhinoceros* | framed, over the briefing folder |
+| 12 D | "short of Landauer limit" | Dürer, *Melencolia I* | framed, beside the ladder |
+| 12 E | "Chaos" | Merian's butterflies | wood frame, pinned beside the chalk butterfly |
+| 13 B | "each accepted rewrite", until "about 5%" | Barth, *The Sorcerer's Apprentice* | framed, over the drafting table and the rolling chair |
+| 13 C | "Nothing about it looks like an explosion from the inside" | after Bruegel, *Landscape with the Fall of Icarus* | framed, on the strange room's wall |
+| 16 B | "You opened with a comic…" | after Escher, *Drawing Hands* (ours) | framed, above the comic and the six hours |
+
+Where the list below proposed another chapter, the work went where the shot had room: the rhinoceros to 10 D (8 C's lobby
+is on screen for two seconds), the Mechanical Turk to 10 A, *The Librarian* to 6 H (7 D's board fills the frame), the
+Wanderer to 5 E only, *Not to Be Reproduced* to 5 A's mirror, *Drawing Hands* to 16 B ("it cuts both ways").
 
 ## The best fits
 
@@ -66,7 +95,7 @@ are cropped or painted out; on the site they stay.
 
 These fit well but are still under copyright, so they can only be evoked, the way the film treats borrowed sounds. Each
 has a version of our own below: the original's idea, in the film's cast and brush and in a composition of its own,
-without the original's words (src/evocations.js paints them; they're stills, not yet in any scene).
+without the original's words (src/evocations.js paints them; the film hangs the rendered stills, as above).
 
 | ours | after | for |
 |---|---|---|
@@ -75,8 +104,9 @@ without the original's words (src/evocations.js paints them; they're stills, not
 | <a href="artworks/evoked-not-to-be-reproduced.jpg"><img src="artworks/evoked-not-to-be-reproduced.jpg" width="220" alt=""></a> | René Magritte's *Not to Be Reproduced* (1937), a mirror showing the back of a man's head | the mirror. Curt at the Desk from behind, and on the main monitor, where Claude should be, Curt from behind again. |
 | <a href="artworks/evoked-lobster-telephone.jpg"><img src="artworks/evoked-lobster-telephone.jpg" width="220" alt=""></a> | Salvador Dalí's *Lobster Telephone* (1936) | Crustafarianism. A desk telephone whose handset is a lobster's claw: the heel is the earpiece, the pincers the mouthpiece. |
 
-## If Curt picks some
+## To hang another
 
-1. Fetch a full-size scan of each into `assets/art/`, with its source, licence and credit beside it (SOURCES.md has them).
-2. Add a gallery code style and a code per work, linked to its museum page.
-3. Place the works in their scenes, then redraw the drafts for those chapters.
+1. Its copy in docs/artworks/, and a row in SOURCES.md (source, licence, credit).
+2. A row in `ART` in src/gallery.js (its chapters, a crop or blanks for any lettering of its own, its reference id), and
+   the reference in script/refs.yaml (mode page).
+3. `artwork(key, x, y, h, { k })` in its shot (or a monitor: `{ kind: 'art', art: key, k }`), then redraw the chapter.

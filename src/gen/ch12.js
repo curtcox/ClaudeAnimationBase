@@ -223,7 +223,8 @@ window.CHAPTER = {
    "text": "Do you have any math or intuition about what capability limits exist for AI short of Landauer limit which isn't particularly limiting.",
    "speech": "Do you have any math or intuition about what capability limits exist for AI short of the LAN-dow-er limit which isn't particularly limiting?",
    "refs": [
-    "landauer"
+    "landauer",
+    "art-melencolia"
    ],
    "proof": [
     "short of [+the] Landauer limit",
@@ -260,7 +261,8 @@ window.CHAPTER = {
    "speech": "1. Chaos. In a chaotic system, how far ahead you can predict grows only with the log of your measurement precision: t is about one over lambda, times the log of big delta over little delta. A millionfold better measurement buys only a handful of extra lee-AH-poo-noff times. Weather, markets, and people stay partly opaque to any intelligence.",
    "refs": [
     "lyapunov",
-    "chaos-theory"
+    "chaos-theory",
+    "art-merian"
    ],
    "estimated": false,
    "mouth": "0589986553000000000000033698887540232000000000000000000699950247799997602337430476653000000399950099998436864540065400656884000000059985405999998986730674499999403522455697445553002444564365553000000000000000004459987569555799942049987864763775677664799630000038876306644899999500642000996534997224765300057425533755640587423564200000000000000000079999999977667603999842798995687335566530099964447778874464300589998005766662992342356446768400055567620003766433033000000000000000049994999864002599970077423357300563058764000000437990032884356788600246674000233048876555530697652355330232",

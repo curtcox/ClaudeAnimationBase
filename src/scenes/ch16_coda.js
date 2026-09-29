@@ -109,6 +109,10 @@
     if (t < opened) { snipeFrame(t, t < c1.t0 + .8 ? 'stick' : 'clawd'); qrFeature('xkcd-356', t, SNIPE0, { hold: 6.2 }); return; }
     paperWorld(t, '#F3EAD6');
     qrFeature('xkcd-356', t, SNIPE0, { hold: 6.2 });
+    // it cuts both ways: each drawing the other (after Escher's Drawing Hands; our own picture), Curt's hand pencilling in
+    // Claude's last foot while Claude paints in the hand's cuff; up as soon as xkcd's card has gone
+    const hands = SNIPE0 + 6.2 + .5;
+    artwork('evoked-drawing-hands', 920, 200, 260, { k: seg(t, hands, hands + 1.8) });
     if (t < hours) {   // you opened with a comic and a feelings question: the page, and the question under it (left, clear of the code)
       const k = seg(t, opened, opened + .8), qk = seg(t, say('T78.C.01', 'feelings question', -.3), say('T78.C.01', 'feelings question', .4));
       const pw = 620 * lerp(.85, 1, easeOut(k)), ph = pw * MAD.H / MAD.W;

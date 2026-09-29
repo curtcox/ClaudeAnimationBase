@@ -54,6 +54,7 @@ window.CHAPTER = {
    "text": "In this conversation, you're also the experimenter.",
    "speech": "In this conversation, you're also the experimenter.",
    "refs": [
+    "art-air-pump",
     "note-curts-work"
    ],
    "estimated": false,

@@ -18,6 +18,7 @@ Decisions made so far:
 | QR targets | encode the URL directly. Use a short redirect (256t-based, domain to be decided) only when a direct URL is too long to scan reliably |
 | Curt | a minimal stick figure in CGP Grey's manner, look H (ponytail, hoodie, circle beard), greying (`LOOK.curt`); his own voice clone |
 | figures | loose caricatures of real and fictional people |
+| classic art | 21 works Curt picked (2026-09-28), hung in their shots from public-domain scans, plus our own evocations of four still under copyright (`docs/ART.md` says where each hangs; `src/gallery.js`). No QR code on them: the companion site links each, and the watch pages list it while it's on screen |
 
 Working title: **Frog or Axolotl**. Alternatives: *Who's Doing the Talking?* or *The Wrong Movie*.
 

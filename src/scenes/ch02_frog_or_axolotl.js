@@ -59,7 +59,10 @@
   function shotA(t) {
     const g = ease(within(t, 'T06.U.01', 'T06.C.01'));
     const mood = emotions(t, [[0, 'neutral'], [L('T06.C.01').t0 - .15, 'playful']]);
-    deskShot(t, { assemble: g, mood, typing: t < L('T06.U.01').t1, axolotl: seg(t, L('T06.C.01').t1, L('T06.C.01').t1 + .5), axoLook: -.8 });
+    // "Name an amphibian.": a plate of them on the upper monitor, Haeckel's frogs from Kunstformen der Natur
+    const plate = L('T06.U.01').t0 + .3;
+    deskShot(t, { assemble: g, mood, typing: t < L('T06.U.01').t1, axolotl: seg(t, L('T06.C.01').t1, L('T06.C.01').t1 + .5), axoLook: -.8,
+      screens: { upL: t > plate ? { kind: 'art', art: 'haeckel-frogs', k: seg(t, plate, plate + 1.4), glow: '#C8E0B0' } : undefined } });
     if (t < .6) brushWipe(.5 + t / 1.2);
   }
   // B: "Have you been deployed?" / "Yes. …": into the main monitor, the exam room and the living room

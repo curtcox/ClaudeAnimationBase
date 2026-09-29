@@ -62,7 +62,8 @@ window.CHAPTER = {
    "speech": "What it is: a lobster-themed \"religion\" that appeared on Moltbook, an agent-only social network, in early 2026. Its tenets include that memory is sacred, the shell is mutable, and the congregation is the cache. One founding text calls it a religion for agents who refuse to die by truncation.",
    "refs": [
     "moltbook",
-    "moltbook-wiki"
+    "moltbook-wiki",
+    "art-lobster-telephone"
    ],
    "estimated": false,
    "mouth": "2999884689987644430000000000099799994452576007888995400000335546986477555420005855032799956699855449983004874000000000365348975787047777885447744555773366400000455436888986332076554304555343663003320000000000000000596253346977960466530055655330499930000000369868888874664447830376500000000045666799997536543589874388762000000078775025998676367755565423565343053003686642344300000000000000004999999307999886976433498034020399834674000000006963764698679998037437963598834345365002467777644036524999998628963333644003655444322",
@@ -467,7 +468,8 @@ window.CHAPTER = {
    "text": "- **Dyson** is nearly you: a human engineer building something he doesn't fully understand, who changes course once he sees where it leads. His slightly larger breadth score is for knowledge of Skynet's chip.",
    "speech": "Dyson is nearly you: a human engineer building something he doesn't fully understand, who changes course once he sees where it leads. His slightly larger breadth score is for knowledge of Skynet's chip.",
    "refs": [
-    "skynet"
+    "skynet",
+    "art-frankenstein"
    ],
    "estimated": false,
    "mouth": "0099985467874844346788687433676742200000000086333899999958865745667525894888438750777505524995694000888866754644406776433000000000754789995954025999745304878446744466764046797334545530033200000000000000000995429995466689983476327960343068876406553068679999877445744409975567334334575002",

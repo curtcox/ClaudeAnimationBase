@@ -190,6 +190,9 @@
         proscenium(t, seg(t, b3, b3 + .8), seg(t, b3 + .6, b3 + 1.2));
         madTurtle(lerp(home[0], 900, lean), lerp(home[1], 660, lean), lerp(r0, 160, lean), { key: 'leaning out' });
       });
+      // beside the stage, Borrell del Caso's Escaping Criticism (1874): a boy climbing out of his own frame toward us
+      const wall4 = say('T01.C.03', 'breaks the fourth wall');
+      artwork('escaping-criticism', 1620, 290, 440, { k: seg(t, wall4 + .6, wall4 + 2.4) });
       return;
     }
     if (t < b5) {   // (4) the allegory: the panel drains to 1960s newsprint grey, a smoky skyline behind

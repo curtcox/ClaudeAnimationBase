@@ -94,6 +94,7 @@ window.REFS = {
   "caption": "Breaking the fourth wall",
   "origin": "added",
   "at": "T01.C.03",
+  "cue": "breaks the fourth wall",
   "mode": "shelf",
   "style": "plain",
   "line": "T01.C.03"
@@ -104,6 +105,7 @@ window.REFS = {
   "caption": "The Watts riots, 1965",
   "origin": "added",
   "at": "T01.C.03",
+  "cue": "allegory",
   "mode": "shelf",
   "style": "newsprint",
   "line": "T01.C.03"
@@ -3340,6 +3342,216 @@ window.REFS = {
   "mode": "feature",
   "style": "note",
   "line": "T78.C.02"
+ },
+ "art-escaping-criticism": {
+  "id": "art-escaping-criticism",
+  "url": "https://en.wikipedia.org/wiki/Pere_Borrell_del_Caso",
+  "caption": "Escaping Criticism (Borrell del Caso, 1874)",
+  "origin": "added",
+  "at": "T01.C.03",
+  "mode": "page",
+  "style": "plain",
+  "line": "T01.C.03"
+ },
+ "art-haeckel": {
+  "id": "art-haeckel",
+  "url": "https://en.wikipedia.org/wiki/Kunstformen_der_Natur",
+  "caption": "Haeckel's frogs, Kunstformen der Natur (1904)",
+  "origin": "added",
+  "at": "T06.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T06.U.01"
+ },
+ "art-air-pump": {
+  "id": "art-air-pump",
+  "url": "https://en.wikipedia.org/wiki/An_Experiment_on_a_Bird_in_the_Air_Pump",
+  "caption": "An Experiment on a Bird in the Air Pump (Wright of Derby, 1768)",
+  "origin": "added",
+  "at": "T12.C.02",
+  "mode": "page",
+  "style": "plain",
+  "line": "T12.C.02"
+ },
+ "art-echo-and-narcissus": {
+  "id": "art-echo-and-narcissus",
+  "url": "https://en.wikipedia.org/wiki/Echo_and_Narcissus_(Waterhouse_painting)",
+  "caption": "Echo and Narcissus (Waterhouse, 1903)",
+  "origin": "added",
+  "at": "T21.C.02.2",
+  "mode": "page",
+  "style": "plain",
+  "line": "T21.C.02.2"
+ },
+ "art-not-to-be-reproduced": {
+  "id": "art-not-to-be-reproduced",
+  "url": "https://en.wikipedia.org/wiki/Not_to_Be_Reproduced",
+  "caption": "After Magritte's Not to Be Reproduced (1937)",
+  "origin": "added",
+  "at": "T25.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T25.U.01"
+ },
+ "art-wanderer": {
+  "id": "art-wanderer",
+  "url": "https://en.wikipedia.org/wiki/Wanderer_above_the_Sea_of_Fog",
+  "caption": "Wanderer above the Sea of Fog (Friedrich, 1818)",
+  "origin": "added",
+  "at": "T26.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T26.U.01"
+ },
+ "art-ensor": {
+  "id": "art-ensor",
+  "url": "https://en.wikipedia.org/wiki/James_Ensor",
+  "caption": "Self-Portrait with Masks (Ensor, 1899)",
+  "origin": "added",
+  "at": "T28.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T28.U.01"
+ },
+ "art-leviathan": {
+  "id": "art-leviathan",
+  "url": "https://en.wikipedia.org/wiki/Leviathan_(Hobbes_book)",
+  "caption": "Leviathan's frontispiece (Abraham Bosse, 1651)",
+  "origin": "added",
+  "at": "T29.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T29.U.01"
+ },
+ "art-treachery": {
+  "id": "art-treachery",
+  "url": "https://en.wikipedia.org/wiki/The_Treachery_of_Images",
+  "caption": "After Magritte's The Treachery of Images (1929)",
+  "origin": "added",
+  "at": "T33.C.02.1",
+  "mode": "page",
+  "style": "plain",
+  "line": "T33.C.02.1"
+ },
+ "art-librarian": {
+  "id": "art-librarian",
+  "url": "https://en.wikipedia.org/wiki/The_Librarian_(Arcimboldo)",
+  "caption": "The Librarian (Arcimboldo, c. 1566)",
+  "origin": "added",
+  "at": "T34.C.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T34.C.01"
+ },
+ "art-great-chain": {
+  "id": "art-great-chain",
+  "url": "https://en.wikipedia.org/wiki/Great_chain_of_being",
+  "caption": "The Great Chain of Being (Valadés, 1579)",
+  "origin": "added",
+  "at": "T35.C.02",
+  "mode": "page",
+  "style": "plain",
+  "line": "T35.C.02"
+ },
+ "art-great-wave": {
+  "id": "art-great-wave",
+  "url": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
+  "caption": "The Great Wave off Kanagawa (Hokusai)",
+  "origin": "added",
+  "at": "T35.C.02",
+  "mode": "page",
+  "style": "plain",
+  "line": "T35.C.02"
+ },
+ "art-lobster-telephone": {
+  "id": "art-lobster-telephone",
+  "url": "https://en.wikipedia.org/wiki/Lobster_Telephone",
+  "caption": "After Dalí's Lobster Telephone (1936)",
+  "origin": "added",
+  "at": "T45.C.03",
+  "mode": "page",
+  "style": "plain",
+  "line": "T45.C.03"
+ },
+ "art-frankenstein": {
+  "id": "art-frankenstein",
+  "url": "https://en.wikipedia.org/wiki/Frankenstein",
+  "caption": "Frankenstein's 1831 frontispiece (Theodor von Holst)",
+  "origin": "added",
+  "at": "T48.C.04.1",
+  "mode": "page",
+  "style": "plain",
+  "line": "T48.C.04.1"
+ },
+ "art-mechanical-turk": {
+  "id": "art-mechanical-turk",
+  "url": "https://en.wikipedia.org/wiki/Mechanical_Turk",
+  "caption": "The Mechanical Turk (Racknitz's engraving, 1789)",
+  "origin": "added",
+  "at": "T49.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T49.U.01"
+ },
+ "art-rhinoceros": {
+  "id": "art-rhinoceros",
+  "url": "https://en.wikipedia.org/wiki/D%C3%BCrer%27s_Rhinoceros",
+  "caption": "Dürer's Rhinoceros (1515)",
+  "origin": "added",
+  "at": "T51.C.02",
+  "mode": "page",
+  "style": "plain",
+  "line": "T51.C.02"
+ },
+ "art-melencolia": {
+  "id": "art-melencolia",
+  "url": "https://en.wikipedia.org/wiki/Melencolia_I",
+  "caption": "Melencolia I (Dürer, 1514)",
+  "origin": "added",
+  "at": "T60.U.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T60.U.01"
+ },
+ "art-merian": {
+  "id": "art-merian",
+  "url": "https://en.wikipedia.org/wiki/Maria_Sibylla_Merian",
+  "caption": "Merian's butterflies (1705)",
+  "origin": "added",
+  "at": "T60.C.02.1",
+  "mode": "page",
+  "style": "plain",
+  "line": "T60.C.02.1"
+ },
+ "art-sorcerers-apprentice": {
+  "id": "art-sorcerers-apprentice",
+  "url": "https://en.wikipedia.org/wiki/The_Sorcerer%27s_Apprentice",
+  "caption": "The Sorcerer's Apprentice (Barth's engraving, 1882)",
+  "origin": "added",
+  "at": "T63.C.03",
+  "mode": "page",
+  "style": "plain",
+  "line": "T63.C.03"
+ },
+ "art-icarus": {
+  "id": "art-icarus",
+  "url": "https://en.wikipedia.org/wiki/Landscape_with_the_Fall_of_Icarus",
+  "caption": "Landscape with the Fall of Icarus (after Bruegel)",
+  "origin": "added",
+  "at": "T64.C.03",
+  "mode": "page",
+  "style": "plain",
+  "line": "T64.C.03"
+ },
+ "art-drawing-hands": {
+  "id": "art-drawing-hands",
+  "url": "https://en.wikipedia.org/wiki/Drawing_Hands",
+  "caption": "After Escher's Drawing Hands (1948)",
+  "origin": "added",
+  "at": "T78.C.01",
+  "mode": "page",
+  "style": "plain",
+  "line": "T78.C.01"
  },
  "note-agent-harnesses": {
   "id": "note-agent-harnesses",

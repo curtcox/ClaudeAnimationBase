@@ -70,6 +70,7 @@ window.CHAPTER = {
    "refs": [
     "fourth-wall",
     "watts-riots",
+    "art-escaping-criticism",
     "note-the-comic"
    ],
    "estimated": false,

@@ -42,7 +42,7 @@
     if (key === 'tines') for (let i = 0; i < 4; i++) { const dx = (i - 1.5) * 26 * s, dy = (i % 2) * 14 * s; paint(ellPts(x + dx, y + 20 * s + dy, 16 * s, 11 * s, 12), { wash: c, ink: PAL.ink, sw: .6 }); paint(ellPts(x + dx + 12 * s, y + 10 * s + dy, 8 * s, 8 * s, 10), { wash: c, ink: PAL.ink, sw: .6 }); }
     if (key === 'hal') { paint(rrPts(x - 34 * s, y - 50 * s, 68 * s, 110 * s, 6 * s), { wash: '#1E1A22', ink: PAL.ink, sw: .8 }); paint(ellPts(x, y, 20 * s, 20 * s, 16), { wash: c, ink: null }); glow(x, y, 30 * s, '#FF6A4A', .6); }
     if (key === 'hive') { paint(ellPts(x, y + 20 * s, 22 * s, 40 * s, 14), { wash: c, ink: PAL.ink, sw: .8 }); paint(ellPts(x, y - 30 * s, 16 * s, 16 * s, 12), { wash: c, ink: PAL.ink, sw: .8 }); for (const d of [-1, 1]) paint(ellPts(x + d * 30 * s, y, 26 * s, 10 * s, 10, 0, d * .5), { wash: '#FBF1D8', washOp: 170, ink: PAL.ink, sw: .5 }); }
-    if (key === 'solaris') { const pts = []; for (let i = 0; i <= 20; i++) pts.push([x - 55 * s + i * 5.5 * s, y + 10 * s + Math.sin(i * .7 + t * 2) * 14 * s]); paint([...pts, [x + 55 * s, y + 60 * s], [x - 55 * s, y + 60 * s]], { wash: c, ink: PAL.ink, sw: .8 }); }
+    if (key === 'solaris') artwork('great-wave', x, y + 12 * s, 96 * s, { frame: 'none', weight: .1 });   // the ocean: Hokusai's Great Wave
     if (key === 'borg') for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) paint(rectPts(x - 42 * s + i * 28 * s, y - 30 * s + j * 28 * s, 26 * s, 26 * s), { wash: c, ink: '#9CD68C', sw: .6 });
     if (key === 'rachni') for (let i = 0; i < 3; i++) inkLine([[x - 50 * s, y - 20 * s + i * 22 * s], [x - 20 * s, y - 34 * s + i * 22 * s], [x + 10 * s, y - 8 * s + i * 22 * s], [x + 50 * s, y - 24 * s + i * 22 * s]], 3 * s, c, 'ink', .6);
     if (key === 'xeno') { paint(ellPts(x, y + 10 * s, 36 * s, 48 * s, 18), { wash: c, ink: PAL.ink, sw: .8 }); paint(ellPts(x - 10 * s, y - 10 * s, 8 * s, 14 * s, 8), { wash: '#8C8894', washOp: 150, ink: null }); }
@@ -107,7 +107,14 @@
       lab(words.slice(0, Math.min(n, 9)).join(' '), CX, 130, 40, PAL.ink, {}); if (n > 9) lab(words.slice(9, n).join(' '), CX, 185, 40, PAL.ink);
     }
     claudeAs(1120, 1000, 8, { ...feel('neutral', t), mouth: talking(t), lookX: -1, boilKey: 'claude line' });
+    chainOfBeing(t);
     screenWorld(t, 1 - seg(t, inside, inside + .8));
+  }
+  // under the line, the classic single line: Valadés's Great Chain of Being (1579), God to stones, one rank each, from
+  // the line's naming until it swings up into two axes (C)
+  function chainOfBeing(t) {
+    const on = L('T35.C.02').t0 + .5, off = say('T35.C.04', 'Two axes work better', -.2);
+    if (t < off) artwork('great-chain-of-being', 400, 710, 340, { k: seg(t, on, on + 2), out: seg(t, off - .5, off) });
   }
   // C: Claude can't settle on the line; the line swings up into a 2×2 board, and the table fills in, exactly
   function board2x2(t, k, o = {}) {
@@ -141,6 +148,7 @@
     paperWorld(t);
     if (t < swing) {   // Claude's card slides back and forth along the line, unable to settle
       clothesline(t, 1, { dx: { claude: Math.sin((t - c4.t0) * 2.2) * 300 * seg(t, c4.t0, c4.t0 + 1) } });
+      chainOfBeing(t);
       return;
     }
     const k = seg(t, swing, swing + 1.2);

@@ -18,7 +18,9 @@ window.CHAPTER = {
    "end": 21.06,
    "text": "You say that now, but if I ask you the wrong question about the Hugging Face incident it gets tagged as a cybersecurity risk and rejected or at least downgraded. In fairness though, that's not really you even though it is in a tiny sense. It is more accurately an active router between us.",
    "speech": "You say that now, but if I ask you the wrong question about the Hugging Face incident it gets tagged as a cybersecurity risk and rejected or at least downgraded. In fairness though, that's not really you even though it is in a tiny sense. It is more accurately an active router between us.",
-   "refs": [],
+   "refs": [
+    "art-mechanical-turk"
+   ],
    "estimated": false,
    "mouth": "00066753339887988679999755420000000005476057666799954098868899987435986585555546640655798797630665434553064433000000000000635950303499888469756743367987995463346986654455434000000876764599603553200000000000087977898843000000089897645433322000000000000000000000000002995289999864307665553000000572307986479999975577654320000000099999999998999986987504368876543344330022000000000000000006999983099994589963067544666633476457980387567988666456440664430022",
    "words": [0,0,4,0.3,8,0.51,13,0.74,18,1.46,22,1.57,25,1.76,27,1.92,31,2.18,35,2.26,39,2.36,45,2.62,54,3.15,60,3.32,64,3.48,72,3.82,77,4.13,86,4.72,89,5.1,94,5.41,101,5.73,104,5.88,106,5.98,120,6.88,125,7.26,129,7.54,138,8.43,141,8.67,144,8.77,150,9.14,162,10.72,165,11.16,174,11.57,182,12.11,189,12.36,193,12.53,200,12.94,204,13.44,209,13.78,216,13.95,219,14.08,222,14.27,225,14.4,227,14.54,232,14.88,239,15.6,242,16.13,245,16.29,250,16.54,261,17.2,264,17.42,271,17.82,278,18.2,286,18.59]
@@ -200,6 +202,7 @@ window.CHAPTER = {
    "speech": "So it's testimony, not observation. I'm reporting what I've been told about my own system, and I can't check it against what actually runs.",
    "refs": [
     "testimony",
+    "art-rhinoceros",
     "note-testimony"
    ],
    "estimated": false,

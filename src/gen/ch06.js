@@ -387,7 +387,8 @@ window.CHAPTER = {
    "speech": "1. Grounding. A concept connects a mind to the world. My \"water\" links only to other words, never to wetness or thirst. HAR-nad and Searle both press this point.",
    "refs": [
     "symbol-grounding",
-    "chinese-room"
+    "chinese-room",
+    "art-treachery"
    ],
    "estimated": false,
    "mouth": "00699984430000000000003999976478644300000000000000000000580233997533992030388970332566579987778730002427524777764300000000000004899998700323899957654300003687444079999784467947763577532023000000046799468604474079804675333000664000676303343000000000000000002688899999994455545547889987520009985000068440254400057653",
@@ -494,6 +495,7 @@ window.CHAPTER = {
    "refs": [
     "gazp-glut",
     "p-zombie",
+    "art-librarian",
     "note-gazp-glut"
    ],
    "estimated": false,
