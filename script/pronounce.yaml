@@ -35,7 +35,7 @@
 - { match: "Ballecer", say: "Ball-uh-SAIR", verify: true }
 - { match: "Michaël Trazzi", say: "Mee-ka-EL TRAHT-see", verify: true }
 - { match: "Leahy", say: "LAY-hee" }
-- { match: "Gödel", say: "GUR-dl" }
+- { match: "Gödel", say: "Gurdle" }   # not "GUR-dl": capitals got spelled out, "G U R dl"
 - { match: "Goertzel", say: "GURT-zel" }
 - { match: "Gubrud", say: "GOO-brud", verify: true }
 - { match: "Harnad", say: "HAR-nad" }
@@ -59,7 +59,7 @@
 - { match: "HuggingFace", say: "Hugging Face" }
 
 # --- acronyms said as letters or as words -----------------------------------------------------------
-- { match: "TESCREAL", say: "TESS-cree-al" }
+- { match: "TESCREAL", say: "Tess Kree-el" }   # the one of seven tried that both voices said alike, every take
 - { match: "GAZP vs. GLUT", say: "GAZP versus GLUT" }
 - { match: "AFAYCT", say: "A F A Y C T" }
 - { match: "EOY", say: "E O Y" }

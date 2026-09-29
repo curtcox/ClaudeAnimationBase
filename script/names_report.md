@@ -19,15 +19,15 @@ then `node tools/voice.mjs` re-voices just the lines that changed.
 | Aschenbrenner's | ASH-en-brenner's | 1 | Ash and Brenner's | ch 13 5:10 |
 | Father Robert |  | 2 | Father Robert; (not heard) | ch 15 1:40 |
 | Father Robert Ballecer | Father Robert Ball-uh-SAIR | 1 | Father Robert Ball | ch 14 0:23 |
-| GAZP |  | 2 | gasp; GASB | ch 6 5:51, ch 14 2:25 |
+| GAZP |  | 2 | gasp; GASB | ch 6 5:51, ch 14 2:26 |
 | Gubrud | GOO-brud | 1 | (not heard) | ch 15 5:59 |
 | Kokotajlo | Koh-koh-TIE-lo | 2 | Coco Tai Lo; Coco Tylo | ch 15 2:14, ch 15 2:25 |
-| Leahy | LAY-hee | 1 | Lehi | ch 15 1:57 |
+| Leahy | LAY-hee | 1 | Lehi | ch 15 1:56 |
 | Michaël Trazzi's | Mee-ka-EL TRAHT-see's | 1 | Mikael Tratsy's | ch 15 0:44 |
 | Moltbook |  | 3 | Moltbook ×2; Maltbook | ch 9 0:35 |
 | OOM | oom | 4 | oom; OOM ×2; Foom | ch 13 5:26 |
 | Shoggath |  | 1 | shoggoth | ch 11 3:36 |
-| TESCREAL | TESS-cree-al | 4 | Tess Creal; Tess Krye al; Tess Creol; tescreale | ch 14 1:58, ch 14 2:37, ch 15 1:25 |
+| TESCREAL | Tess Kree-el | 4 | Tess Creel ×3; Tess Kriel | ch 14 1:03, ch 14 1:59, ch 14 2:38 |
 
 ## Heard as written
 
@@ -92,7 +92,7 @@ then `node tools/voice.mjs` re-voices just the lines that changed.
 | Foom Debate |  | 1 | FOOM debate |  |
 | Formic | FOR-mik | 1 | formic |  |
 | GLUT |  | 2 | glute; GLUT |  |
-| Gödel | GUR-dl | 1 | GURDL |  |
+| Gödel | Gurdle | 1 | Gödel |  |
 | Goertzel | GURT-zel | 1 | Goertzel |  |
 | Goodhart's |  | 1 | Goodhart's |  |
 | GPT-5.6 Luna | G P T five point six Luna | 1 | GPT 5.6 Luna |  |

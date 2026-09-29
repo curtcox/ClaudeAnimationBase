@@ -19,6 +19,6 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 | 11 | July | 27 | 5:30 | voiced |
 | 12 | Limits | 26 | 6:10 | voiced |
 | 13 | Foom | 35 | 5:34 | voiced |
-| 14 | The Pundits | 37 | 6:06 | voiced |
-| 15 | The Compass | 38 | 6:57 | voiced |
+| 14 | The Pundits | 37 | 6:07 | voiced |
+| 15 | The Compass | 38 | 6:56 | voiced |
 | 16 | Coda | 3 | 0:51 | voiced |

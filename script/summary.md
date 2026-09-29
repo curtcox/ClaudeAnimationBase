@@ -7,7 +7,7 @@ prompts, 0.35 s between Claude's lines, 0.6 s between exchanges; painted tables 
 
 | # | chapter | turns | lines | words | speech | shown only | holds | total |
 |---|---|---|---|---|---|---|---|---|
-| 0 | Cold open | T01.U.00 | 1 | 0 | 0:00 | 0:06 | 0:53 | **0:59** |
+| 0 | Cold open | T01.U.00 | 1 | 0 | 0:00 | 0:06 | 0:09 | **0:16** |
 | 1 | The Wrong Movie | T01–T05 | 38 | 848 | 5:35 | 0:00 | 0:00 | **5:35** |
 | 2 | Frog or Axolotl | T06–T11 | 33 | 773 | 5:06 | 0:06 | 0:00 | **5:12** |
 | 3 | Who Are We? | T12–T16 | 18 | 370 | 2:29 | 0:00 | 0:00 | **2:29** |
@@ -21,10 +21,10 @@ prompts, 0.35 s between Claude's lines, 0.6 s between exchanges; painted tables 
 | 11 | July | T52–T56 | 27 | 800 | 5:13 | 0:03 | 0:00 | **5:16** |
 | 12 | Limits | T57–T61 | 26 | 896 | 5:49 | 0:00 | 0:00 | **5:49** |
 | 13 | Foom | T62–T67 | 35 | 775 | 5:07 | 0:03 | 0:00 | **5:10** |
-| 14 | The Pundits | T68–T72 | 37 | 907 | 5:57 | 0:03 | 0:00 | **6:00** |
-| 15 | The Compass | T73–T77 | 38 | 919 | 6:01 | 0:15 | 0:00 | **6:16** |
+| 14 | The Pundits | T68–T72 | 37 | 910 | 5:58 | 0:03 | 0:00 | **6:01** |
+| 15 | The Compass | T73–T77 | 38 | 920 | 6:01 | 0:15 | 0:00 | **6:16** |
 | 16 | Coda | T78–T78 | 3 | 42 | 0:18 | 0:00 | 0:32 | **0:50** |
-| | **total** | | 453 | 10,973 | 72:07 | 1:15 | 1:26 | **74:47** |
+| | **total** | | 453 | 10,977 | 72:08 | 1:15 | 0:42 | **74:05** |
 
 Line kinds: image 3, para 315, item 101, table 11, tool 8, sources 4, source 11.
-Speakers: Curt 1,574 words, Claude 9,399 words.
+Speakers: Curt 1,575 words, Claude 9,402 words.

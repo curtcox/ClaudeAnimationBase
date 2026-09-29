@@ -107,7 +107,8 @@ for (const { l, ns, base, stt } of todo) {
     cursor = i + said.length;
     const t0 = A.character_start_times_seconds[i], t1 = A.character_end_times_seconds[i + said.length - 1];
     const win = stt.words.filter(([, a, b]) => Math.min(b, t1 + .3) - Math.max(a, t0 - .3) > .3 * Math.max(.05, b - a));
-    const { heard, same } = closest(n.name, win.map(w => w[0]), said);
+    let { heard, same } = closest(n.name, win.map(w => w[0]), said);
+    if (same && /^[A-Z]{3,}$/.test(heard) && n.name !== n.name.toUpperCase()) same = false;   // heard in capitals: spelled out letter by letter (Gödel as "GURDL")
     const tl = timeline[l.id];
     found.push({ name: n.name, said, heard, same, line: l.id, who: l.who || l.speaker, ch: tl?.ch, at: tl ? tl.t0 + t0 : null, clip: base, t0, t1 });
   }
@@ -146,12 +147,13 @@ ${off.map(row).join('\n')}
 ${ok.map(row).join('\n')}
 `);
 
-// ---- the listening page: each name, each time, a button that plays it with a little around it ----
+// ---- the listening page: each name, each time, a button that plays it with a couple of seconds either side ----
 mkdirSync('site/public/names/clips', { recursive: true });
 const used = new Set(found.map(f => f.clip));
 for (const b of used) { const to = `site/public/names/clips/${b.split('/').pop()}.mp3`; if (!existsSync(to)) copyFileSync(b + '.mp3', to); }
+const AROUND = 2;   // seconds played either side of the name, for its context
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-const item = f => `<button class="${f.same ? '' : 'off'}" data-c="${f.clip.split('/').pop()}" data-a="${Math.max(0, f.t0 - .7).toFixed(2)}" data-b="${(f.t1 + .5).toFixed(2)}" title="${esc(f.line)}">▶ ${esc(stamp(f))} · ${esc(f.who)} · ${f.heard ? `heard “${esc(f.heard)}”` : 'not heard'}</button>`;
+const item = f => `<button class="${f.same ? '' : 'off'}" data-c="${f.clip.split('/').pop()}" data-a="${Math.max(0, f.t0 - AROUND).toFixed(2)}" data-b="${(f.t1 + AROUND).toFixed(2)}" title="${esc(f.line)}">▶ ${esc(stamp(f))} · ${esc(f.who)} · ${f.heard ? `heard “${esc(f.heard)}”` : 'not heard'}</button>`;
 writeFileSync('site/public/names/index.html', `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Names, as said</title>
 <style>body{font:17px/1.5 system-ui;max-width:900px;margin:2rem auto;padding:0 16px;background:#FBF8F0;color:#2B2233}
@@ -159,7 +161,7 @@ h2{margin-top:2rem}.n{margin:.9rem 0;padding:.6rem .8rem;background:#fff;border:
 .n b{font-size:1.1rem}.said{color:#6A6470;margin-left:.5em}button{font:14px system-ui;margin:.25rem .3rem 0 0;padding:.3em .6em;border:1px solid #CFC4AE;border-radius:6px;background:#F6F1E6;cursor:pointer}
 button.off{border-color:#C9302C;background:#FBE9E6}</style>
 <h1>How the voices say the names</h1>
-<p>Each button plays the name with a moment around it. Red: speech-to-text heard something other than the name (listen to those first).
+<p>Each button plays the name with ${AROUND} seconds either side. Red: speech-to-text heard something other than the name (listen to those first).
 To fix one, add or change its respelling in <code>script/pronounce.yaml</code>. The report is <code>script/names_report.md</code>.</p>
 <h2>Heard differently (${off.length})</h2>
 ${off.map(n => `<div class="n"><b>${esc(n.name)}</b>${n.said !== n.name ? `<span class="said">sent as “${esc(n.said)}”</span>` : ''}<br>${n.fs.map(item).join('')}</div>`).join('\n')}

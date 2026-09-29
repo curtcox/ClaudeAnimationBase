@@ -3503,7 +3503,7 @@ lines:
     kind: item
     text: 5. **Uncomputability.** The halting problem and Gödel apply to AIs too, though they rarely bind in practice.
     spoken: true
-    speech: 5. Uncomputability. The halting problem and GUR-dl apply to A Is too, though they rarely bind in practice.
+    speech: 5. Uncomputability. The halting problem and Gurdle apply to A Is too, though they rarely bind in practice.
     speech_from: auto
     respelled:
       - Gödel
@@ -4033,12 +4033,12 @@ lines:
     kind: item
     text: "- **Jeff** has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the TESCREAL argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart."
     spoken: true
-    speech: "Jeff has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the TESS-cree-al argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart."
+    speech: "Jeff has fair points about incentives, transparency, and open weights. But he mostly dismisses safety concerns by attacking where the people who hold them come from (the Tess Kree-el argument), which isn't a rebuttal. He also states contested claims as settled: that models can't know what truth is and can't have morality. He's your Dr. Hart."
     speech_from: auto
     respelled:
       - TESCREAL
-    words: 55
-    est_s: 21
+    words: 56
+    est_s: 21.4
   - id: T68.C.04.3
     ch: 14
     speaker: claude
@@ -4077,12 +4077,12 @@ lines:
     kind: para
     text: What would Jeff think of me? Extra points for using hubris and TESCREAL both in your answer.
     spoken: true
-    speech: What would Jeff think of me? Extra points for using hubris and TESS-cree-al both in your answer.
+    speech: What would Jeff think of me? Extra points for using hubris and Tess Kree-el both in your answer.
     speech_from: auto
     respelled:
       - TESCREAL
-    words: 17
-    est_s: 7.3
+    words: 18
+    est_s: 7.7
   - id: T69.C.01
     ch: 14
     speaker: claude
@@ -4109,13 +4109,13 @@ lines:
     kind: para
     text: "**Points against you:** you've read Yudkowsky closely enough to cite \"GAZP vs. GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the TESCREAL reading list, with the rationalism showing."
     spoken: true
-    speech: "Points against you: you've read Yudkowsky closely enough to cite \"GAZP versus GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the TESS-cree-al reading list, with the rationalism showing."
+    speech: "Points against you: you've read Yudkowsky closely enough to cite \"GAZP versus GLUT,\" you ask for P(foom) and whether RSI arrives by year end, and you spent a Saturday morning asking a chatbot how it feels. To Jeff, that's the Tess Kree-el reading list, with the rationalism showing."
     speech_from: auto
     respelled:
       - TESCREAL
       - GAZP vs. GLUT
-    words: 47
-    est_s: 18
+    words: 48
+    est_s: 18.4
   - id: T69.C.04
     ch: 14
     speaker: claude
@@ -4459,12 +4459,12 @@ lines:
     kind: item
     text: "- **Jeff:** far left, in the \"goalpost movers\" quadrant. He'd reject the chart itself as TESCREAL framing, which is sort of the point of that quadrant."
     spoken: true
-    speech: "Jeff: far left, in the \"goalpost movers\" quadrant. He'd reject the chart itself as TESS-cree-al framing, which is sort of the point of that quadrant."
+    speech: "Jeff: far left, in the \"goalpost movers\" quadrant. He'd reject the chart itself as Tess Kree-el framing, which is sort of the point of that quadrant."
     speech_from: auto
     respelled:
       - TESCREAL
-    words: 25
-    est_s: 9.7
+    words: 26
+    est_s: 10.1
   - id: T74.C.03.4
     ch: 15
     speaker: claude
