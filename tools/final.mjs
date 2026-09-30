@@ -20,6 +20,8 @@
 //   row can slip between samples: --shots or --at repaints it.)
 //   The first time, a chapter's existing out/chNN.mp4 is cut into pieces at its keyframes, with no re-encode, and every
 //   piece is checked. With no video yet, the pieces are painted from scratch, split at shot starts.
+//   Sampling misses a single bad frame, so every piece is also scanned, once, for frames that are black all over (a page
+//   whose WebGL context failed without saying so; the film of 30 September had a dozen): a piece with one is repainted.
 //   A chapter that got longer gets new pieces at its end; one that got shorter loses them. Frames are drawn into
 //   out/final/chNN/work and deleted once their piece is made, so a disk needs room for one batch of frames (about 2 GB).
 import { spawnSync, execFileSync } from 'node:child_process';
@@ -67,6 +69,13 @@ const drawFrames = list => {
 };
 const probeFrames = f => +execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=nb_frames', '-of', 'default=nw=1:nk=1', f]).toString().trim();
 // frames at quarter size, as raw RGB: a piece's (all of them) or a list of images
+// frames of a piece that are black all over (brightest point under 6 of 255: the darkest real frame, the coda's fade,
+// peaks near 20)
+const BLANK = 6, blanks = file => {
+  const b = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-fps_mode', 'passthrough', '-vf', 'scale=64:36:flags=area,format=gray', '-f', 'rawvideo', '-'], { maxBuffer: 1 << 28 });
+  const out = []; for (let k = 0; (k + 1) * 2304 <= b.length; k++) { let m = 0; for (let j = k * 2304; j < (k + 1) * 2304; j++) if (b[j] > m) m = b[j]; if (m < BLANK) out.push(k); }
+  return out;
+};
 const small = input => execFileSync('ffmpeg', ['-v', 'error', ...input, '-fps_mode', 'passthrough', '-vf', `scale=${W}:${H}:flags=area,format=rgb24`, '-f', 'rawvideo', '-'], { maxBuffer: 1 << 30 });
 
 // ---- what draws the chapter now ----
@@ -121,6 +130,17 @@ for (const s of plan) {
   else if (args['check-all'] || !current(s)) s.check = true;
 }
 
+// ---- scan: each piece not yet scanned, every frame, for black ones ----
+const scans = plan.filter(s => s.file && !s.repaint && !s.clean);
+if (scans.length) {
+  for (const s of scans) {
+    const b = blanks(`${SEG}/${s.file}`);
+    if (b.length) { s.repaint = true; s.check = false; s.why = `${b.length} black frame${b.length > 1 ? 's' : ''}, the first at ${clock(s.f0 + b[0])}`; }
+    else s.clean = true;
+  }
+  console.log(`scanned ${scans.length} pieces for black frames: ${scans.filter(s => s.repaint).length} have some`);
+}
+
 // ---- check: draw a sample of each piece again, and compare ----
 const checks = plan.filter(s => s.check);
 if (checks.length) {
@@ -152,11 +172,11 @@ if (args.dry) {
   rmSync(WORK, { recursive: true, force: true }); process.exit(0);
 }
 // (a piece waiting to be repainted keeps its old video but no prints, so a run that stops first checks it again)
-M.pieces = plan.filter(s => s.file).map(s => ({ file: s.file, f0: s.f0, n: s.n, engine: s.repaint ? null : s.engine, shots: s.repaint ? {} : s.shots }));
+M.pieces = plan.filter(s => s.file).map(s => ({ file: s.file, f0: s.f0, n: s.n, engine: s.repaint ? null : s.engine, shots: s.repaint ? {} : s.shots, ...(s.clean && !s.repaint ? { clean: true } : {}) }));
 save(M);
 
 // ---- repaint: every frame of each changed piece, in batches, encoded as a piece of its own ----
-const redo = plan.filter(s => s.repaint);
+const redo = plan.filter(s => s.repaint); let unclean = 0;
 for (const s of redo) console.log(`repaint ${span(s)}: ${s.why}`);
 for (let i = 0; i < redo.length;) {
   const batch = []; let frames = 0;
@@ -171,12 +191,16 @@ for (let i = 0; i < redo.length;) {
       '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-an', '-movflags', '+faststart', `${SEG}/${file}`]);
     rmSync(own, { recursive: true, force: true });
     if (probeFrames(`${SEG}/${file}`) !== s.n) { console.error(`the piece ${span(s)} came out the wrong length`); process.exit(1); }
-    M.pieces = M.pieces.filter(p => p.f0 !== s.f0).concat({ file, f0: s.f0, n: s.n, engine: P.engine, shots: printsFor(s) }).sort((a, b) => a.f0 - b.f0);
+    // (render.mjs refuses blank frames, so this should never find one; a piece that has one is kept unscanned, and the
+    // run fails, so the next run repaints it)
+    const b = blanks(`${SEG}/${file}`); if (b.length) { console.error(`the piece ${span(s)} came out with ${b.length} black frames`); unclean++; }
+    M.pieces = M.pieces.filter(p => p.f0 !== s.f0).concat({ file, f0: s.f0, n: s.n, engine: P.engine, shots: printsFor(s), ...(b.length ? {} : { clean: true }) }).sort((a, b) => a.f0 - b.f0);
     save(M);
   }
   console.log(`repainted ${Math.min(i, redo.length)} of ${redo.length} pieces`);
 }
 rmSync(WORK, { recursive: true, force: true });
+if (unclean) { console.error(`${unclean} new pieces have black frames: run again to repaint them`); process.exit(1); }
 const used = new Set(M.pieces.map(p => p.file));
 for (const f of readdirSync(SEG)) if (!used.has(f)) rmSync(`${SEG}/${f}`);
 

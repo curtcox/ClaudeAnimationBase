@@ -11,7 +11,7 @@ Decisions made so far:
 | voices | ElevenLabs, two voices: Curt (his own clone, "Curt Cox 2") and Claude (River); `script/voices.yaml` |
 | length | **near-verbatim and accurate is the priority.** Measured in Phase 1: about 75 min (see §1) |
 | sound | voice first. Sound effects and music stings where they earn it (a "dun-dun-DUN"), but no continuous music bed |
-| on-screen text | painted labels on charts and cast, plus QR codes with short painted captions. No subtitles |
+| on-screen text | painted labels on charts and cast, plus QR codes with short painted captions. Captions of the words, burned in, in the drafts and the film alike (Curt, 2026-09-30) |
 | personal details | everything stays in: name, projects, YouTube comment, wife, cousin |
 | the 3 hidden images | in `assets/ref/`: `mad157_apes.png` (*MAD* #157, 1973), `frog_axolotl_chart.png`, `connor2_compass.png`. Used only as reference and repainted in the kit's style |
 | frog/axolotl chart source | https://x.com/fjzzq2002/status/2103556166903038213/photo/1 |
@@ -353,7 +353,7 @@ In about a second per chapter, with no rendering, it replays the chapter DRY and
 The layout planner never covers content if it can help it. A code waits (up to 40 s) for a clean spot, so a burst of
 links shows up as **late** rather than as clutter.
 
-**The lift.** Captions (the drafts' review captions, and a viewer's subtitles) sit in the bottom band. A picture the
+**The lift.** Captions (burned in, in the drafts and the film) sit in the bottom band. A picture the
 caption would cover is drawn raised just enough to clear it, as far as everything painted above has room (24 px from
 the top). The lift is fixed for as long as that picture is on screen and changes only on a cut. A shot is split
 where it cuts between the Desk and another world. A picture cut off by the bottom edge, like Curt from behind at the
@@ -475,7 +475,7 @@ src/
 ### Changes to the existing kit
 - **`render.mjs`**:
   - `--chapter=N` loads `studio.html?chapter=N` and uses per-chapter frame dirs (`out/frames/chNN`) and audio;
-  - `--draft` makes a review cut: 12 fps, 1280 wide, review captions on, the chapter's voice track muxed in → `out/chNN_draft.mp4`.
+  - `--draft` makes a review cut: 12 fps, 1280 wide, with the captions (as the film has them), the chapter's voice track muxed in → `out/chNN_draft.mp4`.
     Chapter 2 takes about 6 minutes.
   - Each chapter's frames dir keeps a manifest of what drew each shot, so a re-render (draft or final) repaints only the
     shots whose code, timing or codes changed, and everything if the engine changed. `--shots=D,E` forces those shots.

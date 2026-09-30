@@ -55,8 +55,9 @@ function refRail(t) {
     if (out < .8) card ? refQR(R, x, y - 4, 380, { k, t, fit: card.fit, captionOpts }) : refQR(R, x, y - 14, 380, { k, t, captionOpts });
   }
 }
-// Review captions (studio.html?review=1, render.mjs --review): the words being said, a sentence at a time, so the picture can
-// be judged against them before the real voice exists. Never in the film.
+// Captions (studio.html?review=1; render.mjs draws them in every chapter, the draft's and the film's): the words being
+// said, a sentence at a time. They began as a review aid, the picture judged against the words before the voice existed;
+// the film has them too (Curt, 2026-09-30).
 const REVIEW = /[?&]review=1/.test(location.search);
 const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/\s+/g, ' ').trim();
 // how dark the picture is under a box, 0 (paper) to 1 (night), read back from the frame drawn so far (every 8th pixel)

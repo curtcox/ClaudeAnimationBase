@@ -48,6 +48,7 @@
   // a theatre's proscenium in screen space over [0, CW]: red velvet curtains and a valance slide in with k; glass across
   function proscenium(t, k, glass = 0) {
     if (k <= 0) return;
+    flushLetters();   // the balloons' lettering goes behind the curtains, not over them
     boilSeed('proscenium');
     const cw = 150 * easeOut(k);
     for (const [x0, d] of [[0, 1], [CW, -1]]) {

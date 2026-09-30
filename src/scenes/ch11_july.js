@@ -360,7 +360,7 @@
       const show = [['a were a', 0], ['Shoggath', 1], ['confuzzled', 2], ['a wife of decades', 3], ["a slow reader", 4], ['a YouTube comment', 5]].map(([p]) => seg(t, say('T54.C.01', p, -.3), say('T54.C.01', p, .3)));
       evidence(t, show, { pen: ['a were a', 'Shoggath'].map(p => seg(t, say('T54.C.01', p, .6), say('T54.C.01', p, 1.6))) });
       const perf = seg(t, say('T54.C.01', 'unusually committed performance', -.4), c1.t1);
-      if (perf > 0) { boilSeed('curtain'); for (const d of [-1, 1]) paint([[645 + d * 700, 60], [645 + d * lerp(700, 380, ease(perf)), 60], [645 + d * lerp(700, 420, ease(perf)), 1000], [645 + d * 700, 1000]], { wash: '#7A2F3A', fill: '#5A1E26', fillOp: 90, ink: PAL.ink, sw: 1.2 }); }
+      if (perf > 0) { flushLetters(); boilSeed('curtain'); for (const d of [-1, 1]) paint([[645 + d * 700, 60], [645 + d * lerp(700, 380, ease(perf)), 60], [645 + d * lerp(700, 420, ease(perf)), 1000], [645 + d * 700, 1000]], { wash: '#7A2F3A', fill: '#5A1E26', fillOp: 90, ink: PAL.ink, sw: 1.2 }); }
       return;
     }
     if (t < c3.t0) {   // relaying or adapting: a baton passed between two hands, a keyboard below

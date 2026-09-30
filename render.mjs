@@ -17,9 +17,10 @@
 //   Music: --audio=assets/song.mp3 (or PROJECT.audio) is muxed into --clip and --encode. Other flags: --fps=24,
 //   --chrome=<path to Chrome/Chromium>.
 //   Frog or Axolotl: add --chapter=N to any of the above to render that chapter (tools/timeline.mjs generates its timing);
-//   --review burns in captions of the words (a review aid, never in the film).
+//   A chapter's frames carry captions of the words, the draft's and the film's alike (Curt, 2026-09-30); --no-captions
+//   drops them.
 //     node render.mjs --chapter=2 --draft               a review cut, several times faster than a final: 12 fps,
-//                                                       1280 wide, captions on (--no-review drops them), the
+//                                                       1280 wide, with the captions, the
 //                                                       chapter's voice track muxed in → out/ch02_draft.mp4. Resumable; re-renders only what changed.
 //   A chapter's frames dir keeps a manifest of what drew each shot, so --frames (and --draft) re-render only the shots whose
 //   code, timing or codes changed, and everything when the engine did. --shots=D,E re-renders just those shots regardless.
@@ -49,7 +50,7 @@ const CHROME = CHROMES.find(p => p && existsSync(p));
 if (!CHROME) { console.error('Chrome not found: pass --chrome=<path> or set CHROME_PATH'); process.exit(1); }
 // --chapter=N renders that chapter of Frog or Axolotl (studio.html?chapter=N): its own frames dir, and out/chNN.mp4 by default
 const CH = args.chapter ? String(args.chapter).padStart(2, '0') : null;
-const DRAFT = !!args.draft, REVIEW = !!args.review || (DRAFT && !args['no-review']);
+const DRAFT = !!args.draft, REVIEW = !!CH && !args['no-captions'] && !args['no-review'];   // (the captions' old name: review captions)
 const fps = +(args.fps || (DRAFT ? 12 : 24)), OUT_W = DRAFT ? 1280 : 1920, FRAMES_DIR = args['frames-dir'] || (CH ? `out/frames/ch${CH}${DRAFT ? '_draft' : ''}` : 'out/frames');
 // a draft with no other instruction renders its frames, then encodes them
 const AUTO = DRAFT && CH && !['sheet', 'strip', 'stills', 'png', 'frames', 'clip', 'encode'].some(k => args[k]);
@@ -124,10 +125,20 @@ async function openPage(tag = '') {
   return page;
 }
 const frameOf = async (page, t, type, q, w = 1920) => {
-  const [url, lost] = await page.evaluate(async (t, type, q, w) => [await window.renderAt(t, type, q, w), !!drawingContext.isContextLost?.()], t, type, q, w);
+  const [url, lost, paper, out] = await page.evaluate(async (t, type, q, w) => {
+    const url = await window.renderAt(t, type, q, w);
+    // the brightest of a few hundred points of the painting (the WebGL canvas) and of the finished frame
+    const c = (window.__probe ??= document.createElement('canvas').getContext('2d', { willReadFrequently: true }));
+    const peak = src => { c.canvas.width = 64; c.canvas.height = 36; c.drawImage(src, 0, 0, 64, 36); const d = c.getImageData(0, 0, 64, 36).data; let m = 0; for (let i = 0; i < d.length; i += 4) m = Math.max(m, d[i], d[i + 1], d[i + 2]); return m; };
+    return [url, !!drawingContext.isContextLost?.(), peak(drawingContext.canvas), peak(outC)];
+  }, t, type, q, w);
   // a page whose WebGL context was lost goes on handing back frames with the lettering but none of the painting: a
   // failure to retry on a fresh page, never a frame to keep (chapter 1's noon render, 30 September, kept hundreds)
   if (lost) throw new Error('the page lost its WebGL context');
+  // Every frame is painted on paper, and the darkest the film goes (the coda's fade) still peaks near 20 of 255. A page
+  // can also hand back a frame that's black all over, or one with no painting under its lettering, without reporting a
+  // lost context (the film of 30 September had a dozen black frames): the same failure.
+  if (paper < 6 || out < 6) throw new Error(`a blank frame from its WebGL context (painting peaks at ${paper}, the frame at ${out})`);
   const buf = Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
   // a page whose WebGL context was lost hands back an empty image ("data:,"): a failure to retry, never a frame to keep
   if (buf.length < 1000) throw new Error(`an empty frame (${buf.length} bytes)`);
@@ -204,7 +215,7 @@ if (args.sheet || args.strip) {
         try { buf = await within(frameOf(page, i / fps, 'image/jpeg', DRAFT ? .88 : .94, OUT_W), FRAME_MS); }
         catch (e) {
           if (tries >= 2) throw e;
-          const lost = /WebGL context|empty frame/.test(e.message);
+          const lost = /WebGL context|empty frame/.test(e.message);   // (a blank frame's message says "WebGL context" too)
           if (lost) for (const r of recent) { rmSync(`${FRAMES_DIR}/f${String(r).padStart(5, '0')}.jpg`, { force: true }); todo.push(r); done--; }
           console.log(`[page#${w}] frame ${i}: ${e.message}; opening a fresh page${lost && recent.length ? ` (and drawing its last frames, ${recent.join(' ')}, again)` : ''}`);
           if (lost) recent = [];
