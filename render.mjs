@@ -13,6 +13,7 @@
 //     node render.mjs --encode --out=out/video.mp4                                           out/frames → MP4
 //   Standalone loops (LOOPS in the page): add --loop=<name> to any of the above (times are then loop times), or
 //     node render.mjs --loop=emotions --png --out=out/loop_emotions                          one cycle as PNGs (for GIFs)
+//   --add-script=src/x.js injects a script studio.html doesn't load (outside the chapters' render cache): src/thumbnail.js
 //   Music: --audio=assets/song.mp3 (or PROJECT.audio) is muxed into --clip and --encode. Other flags: --fps=24,
 //   --chrome=<path to Chrome/Chromium>.
 //   Frog or Axolotl: add --chapter=N to any of the above to render that chapter (tools/timeline.mjs generates its timing);
@@ -112,6 +113,8 @@ async function openPage(tag = '') {
   page.on('pageerror', e => console.log(`[page error${tag}]`, e.message));
   await page.goto(pathToFileURL(resolve('studio.html')).href + '?render' + (CH ? `&chapter=${CH}` : '') + (REVIEW ? '&review=1' : '') + (DRAFT ? '&draft=1' : ''), { waitUntil: 'networkidle0', timeout: 120000 });
   await page.waitForFunction('window.ready === true', { timeout: 60000 });
+  // a script studio.html doesn't load (so it's outside the chapters' render cache), e.g. src/thumbnail.js
+  if (args['add-script']) await page.addScriptTag({ path: resolve(args['add-script']) });
   if (args.loop) {
     const ok = await page.evaluate(name => { if (!LOOPS[name]) return false; window.LOOP = LOOPS[name]; return true; }, args.loop);
     if (!ok) { console.error(`no loop named "${args.loop}"`); process.exit(1); }

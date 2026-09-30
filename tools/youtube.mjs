@@ -74,6 +74,9 @@ ${short ? `\n**Warning:** ${short} chapter(s) are under 10 s, so YouTube won't s
 ## Tags
 AI, Claude, animation, AI safety, eval awareness, P(doom), mind space, Hugging Face incident, frog, axolotl
 
+## Thumbnail
+\`docs/thumbnail.jpg\` (1280×720; \`npm run thumbnail\` paints it again).
+
 ## After it's up
 Put the video's id (the part after \`v=\`) in \`script/site.yaml\` as \`film: youtube:\`, commit and push: the site then embeds it.
 `;

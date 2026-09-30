@@ -88,7 +88,7 @@ It needs one-time setup (Curt):
 1. `npm start -- --final` makes `out/film/film.mp4` and `out/film/youtube.md`. The latter holds the title, the
    description (with chapter markers and the site's address, checked against YouTube's rules and 5,000-character limit)
    and tags.
-2. Upload `film.mp4` on YouTube Studio and paste those in. Add the thumbnail (not made yet).
+2. Upload `film.mp4` on YouTube Studio and paste those in. Add the thumbnail, `docs/thumbnail.jpg` (`npm run thumbnail`).
 3. Put the video's id in `script/site.yaml` as `film: youtube:`, commit and push. The published site then embeds it.
 
 **Possible automation later** (not easy enough to do now):

@@ -437,7 +437,9 @@ tools/
   assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), then runs youtube.mjs
   youtube.mjs         ✅ out/film/youtube.md: the upload's title, tags and description (the conversation, the site,
                       the repo, chapter markers, then the most important links by time, up to YouTube's 5,000
-                      characters) (a thumbnail still: to do)
+                      characters)
+  thumbnail.mjs       ✅ npm run thumbnail → docs/thumbnail.jpg, painted by src/thumbnail.js (injected by render.mjs
+                      --add-script, so it's outside the chapters' render cache)
   making_of.mjs       ✅ npm run making-of: this project's Claude Code session → making-of/ (Curt's messages, Claude's
                       replies and visible reasoning, one line per action, the helpers; email and home folder
                       removed). The site shows each part formatted and as plain text (making-of/, conversation.txt)

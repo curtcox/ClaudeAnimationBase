@@ -1,43 +1,48 @@
 # What's left
 
-As of 2026-09-27. The phases are in VIDEO_PLAN.md §7.
+As of 2026-09-29. The phases are in VIDEO_PLAN.md §7. Your review notes and my replies are at
+http://localhost:8077/review/ (`npm run review` lists them).
 
 ## Waiting on Curt
-- [ ] Review the drafts of the chapters you haven't reviewed yet: 3, 5, 7, 8, 9, 10, 13, 15, 16 (all first passes). Chapters 1 and 11 were only partly watched.
-- [ ] Look at chapter 11's window and pose, and mark note `nmuk38hcdbc` resolved if it works.
-- [ ] Put `ELEVENLABS_API_KEY` in the environment (needed for real voices).
-- [x] Publish the companion site (docs/RELEASE.md §4): repo renamed to `axol-f`, Pages from GitHub Actions; it republishes on every push to main.
-- [ ] Optional, until the film is on YouTube: `npm run preview:publish` puts the latest cut on the releases page and points the published site at it.
-- [ ] Decide whether your real look replaces the stand-in (deferred so far).
+- [ ] Check the seven notes I fixed, on the new drafts, and mark each resolved: ch 3 (music fades), ch 6 (cards
+      tiled and a full-width caption; the ball drop on the hit), ch 7 ("axes"), ch 12 ("AIs"), ch 13 ("as far as you
+      can tell"), ch 14 (the roads, and the page of people making the same argument).
+- [ ] Push the site workflow update (actions on Node 24). Then I check that the deploy runs clean.
+- [ ] Look at the thumbnail, [docs/thumbnail.jpg](thumbnail.jpg): keep it, or say what to change.
+- [ ] Optional, until the film is on YouTube: `npm run preview:publish` puts the latest cut on the releases page and
+      points the published site at it.
 
 ## Next for me
-- [x] Redraw every chapter with the borrowed-line codes, the caricature pass and the layout fix (rebuild of 2026-09-27, all steps passed).
-- [x] Check the rebuild's log for failed steps.
-- [ ] Check the storyboards' "Reads to check" items, 2–4 per chapter, against the drafts.
-- [x] Dress the 47 code styles that were showing plain (mic, blueprint, two-mics, door, compass, honeycomb, lobster-shell and others): made with Still QR through the ChatGPT app, and drawn by the film from `assets/qr/`. All 117 codes pass the film's scan check.
-- [ ] Redraw the chapters with the new codes (`npm run rebuild`).
-- [x] Do a careful pass on the comic page's caricatures in the cold open.
-- [x] A blind-read check (`npm run reads -- --chapter=N`, key in `docs/reads/`): chapter 9 done, 4 frames flagged and 10 worth a look.
-- [x] Fix chapter 9's flagged reads: none flagged and 5 worth a look (down from 6 and 9 under the stricter test). The lobster-shell code was redrawn in Still QR as a whole lobster. One of the 5 is chapter 9's figure for Curt, which readers doubt is a man; it waits on your decision about your look.
-- [x] Write read keys for the other chapters: 437 reads across all 17 chapters (`--check` validates a key without rendering).
-- [ ] Run the blind reads for chapters 0–8 and 10–16, and fix what they flag.
+- [ ] Fix the loudness. The joined film measures −18.8 LUFS with its true peak at 0.0 dBFS. YouTube plays most videos at
+      about −14 LUFS and won't turn a quiet one up, and a peak at 0 can clip once YouTube re-encodes it. Plan: bring
+      the joined film to −14 LUFS with a −1 dB true-peak limit when it's assembled, then measure again.
+- [ ] The final render, once you've signed off the notes: `npm start -- --final` (1080p, 24 fps, 15–22 hours,
+      resumable). It writes `out/film/film.mp4` and `out/film/youtube.md`.
 
-## Voices (phase 3)
-- [x] The casting sampler (`node tools/voice_sampler.mjs`, http://localhost:8077/voices/): Curt chose his clone "Curt Cox 2"; Claude is River (`script/voices.yaml`).
-- [ ] Curt: confirm River for Claude by ear, or pick Eric or Matilda.
-- [ ] Once you choose, voice everything, then re-time and redraw every chapter.
-- [x] Place the sound-effect cues: 63 in `script/sfx.yaml` (stings, props' sounds, a few quiet ambient beds), plus a paper flick per code and a page rustle per search. `npm run sfx` checks them and writes the cue sheet, `script/sfx_report.md`.
-- [ ] Generate the sounds with ElevenLabs (needs the key) and mix them into the drafts.
+## After the final render
+- [ ] Curt: a full watch-through of the final cut.
+- [ ] Curt: scan a few codes with a phone, off a real screen.
+- [ ] Measure the final cut's loudness again.
+- [ ] Upload (docs/RELEASE.md §5): the film, the title, description and tags from `out/film/youtube.md`, and
+      `docs/thumbnail.jpg`. Then put the video's id in `script/site.yaml` as `film: youtube:` and push; the site
+      embeds it.
 
-## Assembly (phase 7)
-- [ ] Mix the voices and effects.
-- [x] Join the chapters into one film, with chapter markers: `npm run film` (seconds), or `npm start`, which also plays it on the site with every link in step.
-- [x] Write the video description: `out/film/youtube.md`, with chapter markers and the site's address (the timestamped links live on the site; YouTube's 5,000 characters can't hold 400).
-- [x] The release plan, in code: `npm start` from a fresh clone, the Pages workflow, and the caches (docs/RELEASE.md).
-- [ ] Make the thumbnail.
-- [ ] Final-quality render.
+## Done
+- The script, word for word from the conversation, with every reference as a code (408, all scanning) and 64
+  plain-language explainers on the companion site, published at https://curtcox.github.io/axol-f/.
+- Codes point at the site's own forwarding pages when those are shorter than the direct link; no short-link domain.
+- Every chapter drawn, voiced and mixed: your clone "Curt Cox 2", River for Claude, a voice of its own for each
+  cold-open part (all confirmed by ear), the sounds and the film's music under the voice, and every name's
+  pronunciation checked (the names page; Metaculus and Ballecer approved by ear).
+- Your look: H, greying, glasses, the hoodie (only you wear one; everyone else has clothes of their own).
+- You've watched every chapter's draft, and every note but the seven above is resolved.
+- The YouTube description: `out/film/youtube.md` (the conversation, the site, the repo, chapter markers, and the 46
+  most important links by time).
+- The thumbnail: `npm run thumbnail` → `docs/thumbnail.jpg`, painted by the film's own code.
+- Both conversations on the site, formatted and as plain text: the one the film shows, and the one that made it
+  (`making-of/`, refreshed by each rebuild).
+- The release plan in code: `npm start` from a fresh clone, the Pages workflow, the caches (docs/RELEASE.md).
+- Blind reads for chapter 9 (the reads tool and a key for every chapter are in the repo).
 
-## QA (phase 8)
-- [ ] A full watch-through.
-- [ ] Scan every code with a phone, off a real screen.
-- [ ] Check loudness.
+## Dropped
+- The blind reads for the other chapters, and the storyboards' "Reads to check": skipped (Curt, 2026-09-29).
