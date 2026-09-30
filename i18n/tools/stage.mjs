@@ -6,6 +6,7 @@
 // The stage links to the English engine, scenes, tools and packages, so a fix there is a fix in every language. Its own:
 //   script/     the translated script.yaml, chapters, the cold open's balloons, codes and sound cues, made here
 //   assets/vo   the language's voice clips (i18n/<lang>/vo, committed like the English ones)
+//   audio/*.json  the voice's measurements (i18n/<lang>/audio, committed)
 //   src/gen     its timelines, codes and window.I18N (src/gen/i18n.js, for i18n/src/i18n.js)
 //   audio/ out/ site/public   what the tools make
 //   studio.html the English studio with the i18n scripts added after the scene kit
@@ -43,6 +44,14 @@ mkdirSync(SFX, { recursive: true });
 for (const f of readdirSync(SFX)) if (!lstatSync(`${SFX}/${f}`).isSymbolicLink()) renameSync(`${SFX}/${f}`, `${L}/sfx/${f}`);
 for (const f of readdirSync('assets/sfx')) link(`assets/sfx/${f}`, `assets/sfx/${f}`);
 for (const f of readdirSync(`${L}/sfx`)) link(`${L}/sfx/${f}`, `assets/sfx/${f}`);
+// the voice's measurements (durations, lip sync, breaths), which the site's timings need: kept in i18n/<lang>/audio
+// (committed, like the English audio/*.json) and linked in; the voice tools write through the links
+mkdirSync(`${L}/audio`, { recursive: true }); mkdirSync(`${S}/audio`, { recursive: true });
+for (const f of ['durations.json', 'sync.json', 'breaths.json', 'voice.json']) {
+  const p = `${S}/audio/${f}`;
+  if (existsSync(p) && !lstatSync(p).isSymbolicLink()) renameSync(p, `${L}/audio/${f}`);
+  if (existsSync(`${L}/audio/${f}`)) link(`${L}/audio/${f}`, `audio/${f}`);
+}
 for (const f of readdirSync('src')) if (f !== 'gen') link(`src/${f}`, `src/${f}`);
 link('i18n/src/i18n.js', 'src/i18n.js');
 mkdirSync(`${S}/src/gen`, { recursive: true });

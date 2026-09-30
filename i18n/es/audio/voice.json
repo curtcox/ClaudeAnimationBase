@@ -1,0 +1,10 @@
+{
+ "model": "eleven_v3",
+ "voices": {
+  "curt": "qCYgSspmts8E3GyY0tyz",
+  "claude": "SAz9YHcvj6GT2YYXdXww"
+ },
+ "missing": [
+  "T01.C.02"
+ ]
+}

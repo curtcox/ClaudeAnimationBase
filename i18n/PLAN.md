@@ -63,7 +63,8 @@ general change makes every language possible (none so far).
   in the language.
 - `i18n/<lang>/chapters.yaml`, `cold_open.yaml`, `pronounce.yaml`: chapter titles, the cold open's balloons (voiced and
   lettered), respellings for the voice.
-- `i18n/<lang>/vo/`: the language's voice clips, committed like `assets/vo`.
+- `i18n/<lang>/vo/`: the language's voice clips, committed like `assets/vo`; `i18n/<lang>/audio/*.json`, their
+  measurements (durations, lip sync), committed like `audio/*.json`, so the site's timings build without the clips.
 - `i18n/<lang>/site/notes/`: the explainers, translated (the stage links them in as its `site/notes`).
   `i18n/<lang>/site_strings.yaml`: the site's own words (tools/build_site.mjs reads `script/site_strings.yaml` over
   its English `SITE_WORDS`; the one change to an English file so far, and the English site builds byte for byte the
@@ -104,16 +105,23 @@ The tools, run from the project's root:
       how, how else it could have been, and every difference a freer translation would have made, line by line; plus
       the whole film side by side. Its code is in the film on the ventriloquist line (T03.C.03.1, `refs_added.yaml`).
       Every chapter's translation adds its notes.
-- [ ] Publish the Spanish site at `/es/` with the English one (the Pages workflow builds only the English site now);
-      the film's code points at `/es/traduccion/`, so it must be live before the Spanish film is.
-- [ ] Back-translation check of every line; Curt reads the flagged ones (or a Spanish-speaking friend does).
+- [x] Publish the Spanish site at `/es/` with the English one: the Pages workflow builds every translation's site
+      after the English one (2026-09-30). The film's code points at `/es/traduccion/`, so it's live before the film.
+      The site's timings come from the voice's measurements, `i18n/<lang>/audio/*.json` (committed; the stage links
+      them in), so they're estimates until a chapter is voiced.
+- [x] Every line read against its English for drift (Claude, 2026-09-30: all 453, none changed). The same translator
+      checking itself, so a Spanish-speaking reader is still the real check, if Curt finds one.
 - [ ] Voice it: about 76,000 characters of ElevenLabs. Names' pronunciations checked by ear. Done: chapter 1 (5,300
       characters, 6:23); Curt approved the voices (2026-09-30). The ElevenLabs quota ran out on 2026-09-30 with
       one line of chapter 1 (T01.C.02, 264 characters) still to voice; about 71,000 characters to go.
 - [ ] Drafts of every chapter; Curt watches for timing and anything left in English.
 - [x] The site in Spanish: the explainers (64), the site's pages (built in the stage). The codes in the Spanish film
       point there. The making-of stays English, linked from the Spanish site.
-- [ ] The final render (about 5.5 hours) and the join; the Spanish YouTube title, description and tags.
+- [x] The Spanish thumbnail: `i18n/es/thumbnail.jpg`, painted in the stage (`node render.mjs --add-script=src/thumbnail.js
+      --loop=thumbnail --stills=0.5 --out=out/thumbnail`, then scaled to 1280×720; not `tools/thumbnail.mjs`, whose
+      `docs/` is the English one's, linked).
+- [ ] The final render (about 5.5 hours; on the faster Mac) and the join. The YouTube title, tags and description's
+      words are translated (`youtube_strings.yaml`); the description itself is made at the join, from the film's times.
 - [ ] Upload as its own video, linked from the English one, and the English from it.
 
 ## Costs

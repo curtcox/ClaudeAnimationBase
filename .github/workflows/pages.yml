@@ -1,5 +1,6 @@
 # The companion site, published to GitHub Pages on every push to main (docs/RELEASE.md, stage 2).
 # It builds from the committed script, timings and explainers only: no Chrome, no ffmpeg, no voices, about a minute.
+# The translations' sites (i18n/<lang>) go under their language: /es/.
 # The film page plays script/site.yaml's film.youtube, else film.preview, else says the film is on its way.
 # One-time setup: the repo's Settings → Pages → Source: "GitHub Actions".
 name: Companion site
@@ -28,6 +29,16 @@ jobs:
         run: node tools/check_refs.mjs --offline
       - name: Build the site
         run: node tools/build_site.mjs
+      # each translation's site, under its language (/es/, ...): its stage, its timings, its site, its translation page
+      - name: Build the translations' sites
+        run: |
+          for d in i18n/*/script; do
+            lang=$(basename $(dirname $d))
+            node i18n/tools/stage.mjs --lang=$lang
+            (cd i18n/$lang/stage && node tools/timeline.mjs && node tools/build_site.mjs)
+            node i18n/tools/lost.mjs --lang=$lang
+            cp -R i18n/$lang/stage/site/public site/public/$lang
+          done
       - id: pages
         uses: actions/configure-pages@v6
       - name: Warn if the site isn't where the film's codes point
