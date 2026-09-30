@@ -24,6 +24,8 @@
 //   A chapter's frames dir keeps a manifest of what drew each shot, so --frames (and --draft) re-render only the shots whose
 //   code, timing or codes changed, and everything when the engine did. --shots=D,E re-renders just those shots regardless.
 //   An encode is skipped when no frame and no voice track is newer than the video (--force encodes anyway).
+//   Final renders go through tools/final.mjs, which keeps each chapter in pieces and repaints only the pieces a change
+//   touched: it uses --prints (each shot's print, as JSON) and --frames --only=<list.json> --frames-dir=<dir>.
 import puppeteer from 'puppeteer-core';
 import { spawn, execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync, existsSync, statSync, renameSync, readdirSync, readFileSync, rmSync } from 'node:fs';
@@ -48,7 +50,7 @@ if (!CHROME) { console.error('Chrome not found: pass --chrome=<path> or set CHRO
 // --chapter=N renders that chapter of Frog or Axolotl (studio.html?chapter=N): its own frames dir, and out/chNN.mp4 by default
 const CH = args.chapter ? String(args.chapter).padStart(2, '0') : null;
 const DRAFT = !!args.draft, REVIEW = !!args.review || (DRAFT && !args['no-review']);
-const fps = +(args.fps || (DRAFT ? 12 : 24)), OUT_W = DRAFT ? 1280 : 1920, FRAMES_DIR = CH ? `out/frames/ch${CH}${DRAFT ? '_draft' : ''}` : 'out/frames';
+const fps = +(args.fps || (DRAFT ? 12 : 24)), OUT_W = DRAFT ? 1280 : 1920, FRAMES_DIR = args['frames-dir'] || (CH ? `out/frames/ch${CH}${DRAFT ? '_draft' : ''}` : 'out/frames');
 // a draft with no other instruction renders its frames, then encodes them
 const AUTO = DRAFT && CH && !['sheet', 'strip', 'stills', 'png', 'frames', 'clip', 'encode'].some(k => args[k]);
 if (AUTO) args.frames = true;
@@ -160,17 +162,27 @@ if (args.sheet || args.strip) {
     while (next < n) { const i = next++; writeFileSync(`${out}/f${String(i).padStart(4, '0')}.png`, await frameOf(page, a + i / fps, 'image/png')); }
   }));
   console.log(`${n} frames → ${out}  (${((Date.now() - start) / n).toFixed(0)} ms/frame)`);
+} else if (args.prints && CH) {
+  // what drew each shot, for tools/final.mjs: the engine's print and each shot's, with its frames
+  const page = await openPage(), p = await printsOf(page), out = args.out || `out/frames/ch${CH}_prints.json`;
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(out, JSON.stringify({ engine: p.engine, frames: Math.ceil(p.dur * fps - 1e-9),
+    shots: p.info.shots.map(s => ({ name: s.name, f0: Math.ceil(s.t0 * fps - 1e-9), f1: Math.ceil(s.t1 * fps - 1e-9), print: p.shots[s.name] })) }, null, 1) + '\n');
+  console.log('wrote ' + out);
 } else if (args.frames) {
   // Parallel and resumable: each worker pulls the next missing frame; files are written atomically.
   const probe = await openPage(), len = await lengthOf(probe);
   mkdirSync(FRAMES_DIR, { recursive: true });
   let [a, b] = args.range ? span(args.range) : [0, len];
-  if (CH && !args.loop) [a, b] = await refreshFrames(probe, a, b);
+  // --only=<file.json>: just those frame numbers, with no manifest (tools/final.mjs uses it with its own --frames-dir)
+  const only = args.only ? JSON.parse(readFileSync(args.only, 'utf8')) : null;
+  if (CH && !args.loop && !only) [a, b] = await refreshFrames(probe, a, b);
   await probe.close();
   const workers = +(args.workers || 4);
   const first = Math.round(a * fps), last = Math.min(Math.ceil(len * fps) - 1, Math.ceil(b * fps) - 1);
-  const todo = []; for (let i = first; i <= last; i++) { const f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`; if (!existsSync(f) || statSync(f).size < 1000) todo.push(i); }
-  console.log(`${todo.length} frames to render (${last - first + 1 - todo.length} already done), ${workers} workers`);
+  const want = only || Array.from({ length: Math.max(0, last - first + 1) }, (_, k) => first + k);
+  const todo = want.filter(i => { const f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`; return !existsSync(f) || statSync(f).size < 1000; });
+  console.log(`${todo.length} frames to render (${want.length - todo.length} already done), ${workers} workers`);
   let next = 0, done = 0; const start = Date.now();
   // open every worker's page first: a page still loading behind others that are already rendering can stall past its timeout
   const pages = []; for (let w = 0; w < workers; w++) pages.push(await openPage('#' + w));
@@ -225,7 +237,7 @@ await browser.close();
 // Frames of shots whose print changed are deleted (they're then missing, so they render), for the whole chapter whatever
 // the range, and the manifest is updated, so an interrupted run resumes correctly. Returns the range to render (--shots
 // narrows it to those shots, and re-renders them regardless).
-async function refreshFrames(page, a, b) {
+async function printsOf(page) {
   const sha = x => createHash('sha1').update(typeof x === 'string' ? x : JSON.stringify(x)).digest('hex').slice(0, 16);
   const info = await page.evaluate(() => ({ scene: CHAPTER.scene, dur: DUR,
     shots: SHOTS.map(([t0, f], i) => ({ name: (f.name || 'shot' + i).replace(/^shot/, ''), t0, t1: i + 1 < SHOTS.length ? SHOTS[i + 1][0] : DUR, src: f.toString() })),
@@ -236,6 +248,10 @@ async function refreshFrames(page, a, b) {
   for (const s of info.shots) scene = scene.replace(s.src, '');
   const engine = sha([html, scene, ...files.map(f => readFileSync(f, 'utf8')), DRAFT, REVIEW, fps, OUT_W]);
   const shots = Object.fromEntries(info.shots.map(s => [s.name, sha([s.src, s.t0, s.t1, info.plan.filter(p => p[1] < s.t1 && p[2] > s.t0)])]));
+  return { engine, shots, info, dur: info.dur };
+}
+async function refreshFrames(page, a, b) {
+  const { engine, shots, info } = await printsOf(page);
   const mf = `${FRAMES_DIR}/manifest.json`, old = existsSync(mf) ? JSON.parse(readFileSync(mf, 'utf8')) : null;
   const want = args.shots ? String(args.shots).split(',') : null;
   for (const w of want || []) if (!(w in shots)) { console.error(`no shot ${w}; shots are ${Object.keys(shots).join(' ')}`); process.exit(1); }

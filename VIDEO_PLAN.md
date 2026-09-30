@@ -444,6 +444,9 @@ tools/
                       (line start and end, word times, per-frame loudness envelope)
   qr_check.mjs        decode test described above
   mix.mjs             per-chapter voice + effects (effects ducked under speech), loudnorm to −14 LUFS
+  final.mjs           ✅ a chapter's final video, kept in pieces of about ten seconds: after a change, a sample of each
+                      piece the change could touch is drawn again and compared with it, and only the pieces that
+                      differ are repainted; the chapter is the pieces joined without re-encoding
   assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), levels its sound to −14 LUFS
                       with true peaks under −1 dBFS and checks it, then runs youtube.mjs
   youtube.mjs         ✅ out/film/youtube.md: the upload's title, tags and description (the conversation, the site,

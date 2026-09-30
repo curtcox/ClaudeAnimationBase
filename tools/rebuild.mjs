@@ -3,7 +3,8 @@
 //   npm run rebuild -- --chapters=2,5       just those chapters' voices, drafts and checks (the script, timelines, film and site are still rebuilt)
 //   npm run rebuild -- --qr                 also prove every painted code scans (tools/qr_check.mjs; slow)
 //   npm run rebuild -- --no-serve           don't start the review server at the end
-//   npm run rebuild -- --final              final-quality renders (out/chNN.mp4) instead of drafts: many hours
+//   npm run rebuild -- --final              final-quality renders (out/chNN.mp4) instead of drafts: many hours the first
+//                                           time, then only what changed (tools/final.mjs)
 // (npm start runs this after putting the site up; see tools/start.mjs.)
 //
 // In order, carrying on past failures (each is logged and retried once where a retry can help):
@@ -13,6 +14,7 @@
 //      Then the sound effects and music, made if new and mixed under it                  (sfx → audio/chNN_full.wav)
 //   3. the references against the script, offline                                     (check_refs --offline)
 //   4. each chapter's draft video and its watch page, which adds it to the site        (render --draft, watch)
+//      (with --final, its final video, from pieces: tools/final.mjs)
 //      Drafts are resumable: only shots whose code, timing or codes changed are repainted, and a chapter with nothing
 //      new isn't encoded again.
 //   5. the whole film, joined, and what YouTube needs                                   (assemble)
@@ -78,7 +80,7 @@ function run(name, cmd, cmdArgs, { retry = false } = {}) {
 const node = (name, script, a = [], o) => run(name, existsSync(process.execPath) ? process.execPath : 'node', [script, ...a], o);
 const FINAL = !!args.final, all = readYaml(PATHS.chapters).map(c => c.n);
 const chapters = args.chapters ? String(args.chapters).split(',').map(Number).filter(n => all.includes(n)) : all;
-planned = 5 + chapters.length * (FINAL ? 3 : 2) + 3 + (args.chapters ? 2 * chapters.length : 2) + (args.qr ? 1 : 0);
+planned = 5 + chapters.length * 2 + 3 + (args.chapters ? 2 * chapters.length : 2) + (args.qr ? 1 : 0);
 say(`rebuild started; log: ${logPath}`);
 
 // 1-3: script, voice, timelines, references
@@ -95,13 +97,11 @@ await node('references (offline)', 'tools/check_refs.mjs', ['--offline']);
 
 // 4: each chapter's video and watch page (the watch step rebuilds the site, so the chapter shows up there straight away)
 for (const n of chapters) {
+  // a final chapter is kept in pieces, and only the pieces a change touched are painted again (tools/final.mjs)
   const made = FINAL
-    ? await node(`chapter ${n} frames`, 'render.mjs', [`--chapter=${n}`, '--frames'], { retry: true }) && await node(`chapter ${n} encode`, 'render.mjs', [`--chapter=${n}`, '--encode'])
+    ? await node(`chapter ${n} final`, 'tools/final.mjs', [`--chapter=${n}`], { retry: true })
     : await node(`chapter ${n} draft`, 'render.mjs', [`--chapter=${n}`, '--draft'], { retry: true });
   if (made) await node(`chapter ${n} watch page`, 'tools/watch.mjs', [`--chapter=${n}`, ...(FINAL ? [`--video=out/ch${String(n).padStart(2, '0')}.mp4`] : [])], { retry: true });
-  // a final chapter's frames are about 0.7 MB each, some 77 GB for the film: once its video is made they go, so a disk
-  // needs room for one chapter's (up to 7 GB) and the videos. A change to the chapter later repaints all of it.
-  if (made && FINAL && existsSync(`out/ch${String(n).padStart(2, '0')}.mp4`)) rmSync(`out/frames/ch${String(n).padStart(2, '0')}`, { recursive: true, force: true });
 }
 
 // 5: the whole film

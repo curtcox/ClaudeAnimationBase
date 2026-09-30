@@ -23,6 +23,7 @@
     "sounds": "node tools/sfx.mjs",
     "lint:chapter": "node tools/lint_chapter.mjs",
     "draft": "node render.mjs --draft",
+    "final": "node tools/final.mjs",
     "site": "node tools/build_site.mjs",
     "making-of": "node tools/making_of.mjs",
     "thumbnail": "node tools/thumbnail.mjs",
