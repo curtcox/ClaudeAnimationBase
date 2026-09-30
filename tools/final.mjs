@@ -1,7 +1,8 @@
 // final.mjs: a chapter's final-quality video (out/chNN.mp4), kept as pieces so that a fix repaints only what it changed.
 //   node tools/final.mjs --chapter=7              make chapter 7's final video, repainting only what's out of date
 //   --shots=D,E                                   repaint the pieces those shots touch, whatever the checks say
-//   --at=41.5:52                                  repaint the pieces touching that stretch (seconds into the chapter)
+//   --at=41.5:52                                  repaint the pieces touching that stretch (seconds into the chapter;
+//                                                 several, comma-separated: --at=41.5:52,130:131)
 //   --check-all                                   check every piece, even ones whose prints say they're current
 //   --every=6                                     how often a piece being checked is sampled (every Nth frame, and its last)
 //   --workers=4                                   Chrome pages drawing at once
@@ -110,7 +111,7 @@ while (end < TOTAL) {
 // ---- which pieces need a look ----
 const forced = s => {
   if (args.shots && touching(s).some(x => String(args.shots).split(',').includes(x.name))) return `--shots=${args.shots}`;
-  if (args.at) { const [a, b] = String(args.at).split(':').map(Number); if (s.f0 < b * FPS && s.f0 + s.n > a * FPS) return `--at=${args.at}`; }
+  if (args.at && String(args.at).split(',').some(r => { const [a, b] = r.split(':').map(Number); return s.f0 < b * FPS && s.f0 + s.n > a * FPS; })) return `--at=${args.at}`;
   return null;
 };
 const current = s => s.engine === P.engine && JSON.stringify(s.shots) === JSON.stringify(printsFor(s));
