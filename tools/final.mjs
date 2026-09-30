@@ -32,10 +32,11 @@ const N = +args.chapter, CH = pad(N), FPS = 24, EVERY = +(args.every || 6), WORK
 const DIR = `out/final/ch${CH}`, SEG = `${DIR}/pieces`, WORK = `${DIR}/work`, MF = `${DIR}/manifest.json`, VIDEO = `out/ch${CH}.mp4`;
 const PIECE = 240;                  // frames in a new piece: ten seconds
 // The comparison, at quarter size: brightness, and colour averaged over 2 × 2 of those pixels (the video's colour is
-// coarser than its brightness). Measured over chapter 13, a frame drawn again differed from the video by at most 17 levels
-// of 255 in brightness (at a few fine lines) and 10 in colour; the next frame differs by 80 or more, and a word changed in
-// small type by about 100. Past either limit, the frame has changed.
-const W = 480, H = 270, FRAME = W * H * 3, LUMA = 32, COLOUR = 24;
+// coarser than its brightness). Measured over the whole film, a frame drawn again differed from the video by at most 21
+// levels of 255 in brightness (at a few fine lines) and 14 in colour; the next frame differs by 80 or more, a word changed
+// in small type by about 100, and the watercolour texture the final dropped (30 September) by 25 to 120. Past either
+// limit, the frame has changed: a needless repaint costs little, a stale piece kept costs a fix that doesn't show.
+const W = 480, H = 270, FRAME = W * H * 3, LUMA = 26, COLOUR = 18;
 function difference(a, b) {
   let luma = 0, colour = 0, over = 0;
   for (let y = 0; y < H; y += 2) for (let x = 0; x < W; x += 2) {
