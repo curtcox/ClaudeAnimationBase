@@ -13,16 +13,12 @@ http://localhost:8077/review/ (`npm run review` lists them).
       points the published site at it.
 
 ## Next for me
-- [ ] Fix the loudness. The joined film measures −18.8 LUFS with its true peak at 0.0 dBFS. YouTube plays most videos at
-      about −14 LUFS and won't turn a quiet one up, and a peak at 0 can clip once YouTube re-encodes it. Plan: bring
-      the joined film to −14 LUFS with a −1 dB true-peak limit when it's assembled, then measure again.
 - [ ] The final render, once you've signed off the notes: `npm start -- --final` (1080p, 24 fps, 15–22 hours,
       resumable). It writes `out/film/film.mp4` and `out/film/youtube.md`.
 
 ## After the final render
 - [ ] Curt: a full watch-through of the final cut.
 - [ ] Curt: scan a few codes with a phone, off a real screen.
-- [ ] Measure the final cut's loudness again.
 - [ ] Upload (docs/RELEASE.md §5): the film, the title, description and tags from `out/film/youtube.md`, and
       `docs/thumbnail.jpg`. Then put the video's id in `script/site.yaml` as `film: youtube:` and push; the site
       embeds it.
@@ -38,6 +34,8 @@ http://localhost:8077/review/ (`npm run review` lists them).
 - You've watched every chapter's draft, and every note but the seven above is resolved.
 - The YouTube description: `out/film/youtube.md` (the conversation, the site, the repo, chapter markers, and the 46
   most important links by time).
+- The loudness: joining the film brings it to −14 LUFS (YouTube's level) with peaks under −1 dBFS, and checks it
+  (it was −18.8 with peaks at 0).
 - The thumbnail: `npm run thumbnail` → `docs/thumbnail.jpg`, painted by the film's own code.
 - Both conversations on the site, formatted and as plain text: the one the film shows, and the one that made it
   (`making-of/`, refreshed by each rebuild).

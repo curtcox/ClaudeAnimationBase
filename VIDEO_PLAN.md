@@ -147,7 +147,9 @@ voice's loudest, a bed by its level against the voice's. `gain` in sfx.yaml is t
 a sound that carries the idea −2 to −8; a prop −8 to −12; the code flick −16; a bed −14 to −18; music where no one
 speaks 0. (The first mix was 10 dB lower, and under speech Curt heard none of it: more than about 20 dB down, the words
 mask a sound.) script/sfx_levels.md checks every cue as mixed and flags any that competes with the words or would be lost. The
-sounds leave each chapter's loudness where the voice sets it, and a limiter keeps the mix's peaks under −1 dBFS.
+sounds leave each chapter's loudness where the voice sets it, and a limiter keeps the mix's peaks under −1 dBFS. The
+joined film is then brought up to YouTube's −14 LUFS, through a gentle compressor and a true-peak limiter at −1 dBFS
+(assemble.mjs; the voice's −18 left it at −18.8, and the chapters' AAC encode let its true peaks reach 0).
 
 ---|---|
 | cold open, "Ever get the feeling you're in the wrong movie!?" | a projector clatter, then the film-reel runout |
@@ -434,7 +436,8 @@ tools/
                       (line start and end, word times, per-frame loudness envelope)
   qr_check.mjs        decode test described above
   mix.mjs             per-chapter voice + effects (effects ducked under speech), loudnorm to −14 LUFS
-  assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), then runs youtube.mjs
+  assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), levels its sound to −14 LUFS
+                      with true peaks under −1 dBFS and checks it, then runs youtube.mjs
   youtube.mjs         ✅ out/film/youtube.md: the upload's title, tags and description (the conversation, the site,
                       the repo, chapter markers, then the most important links by time, up to YouTube's 5,000
                       characters)
