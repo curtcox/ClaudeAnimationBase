@@ -440,6 +440,13 @@ function filmLook(c, t, k, rnd) {
     c.globalAlpha = (.45 + rnd() * .4) * k; c.fillStyle = dark ? '#16110B' : '#FFFBEF';
     c.beginPath(); for (let j = 0; j < 7; j++) { const a = j / 7 * TAU, q = r * (.6 + rnd() * .6); c.lineTo(x + Math.cos(a) * q, y + Math.sin(a) * q * (.7 + rnd() * .5)); } c.fill();
   }
+  // the reel's cue marks (window.FILM_CUES, times): a ring in the top right corner for four frames, the projectionist's
+  // signal: the first to start the other projector's motor, the second, about eight seconds later, to change over
+  for (const q of window.FILM_CUES || []) if (t >= q && t < q + 4 / 24) {
+    const x = W * .9, y = H * .11, r = H * .032, cr = lcg(Math.round(q * 24) + 7);
+    c.globalAlpha = .85 * k; c.fillStyle = 'rgba(255,250,236,.55)'; c.strokeStyle = '#140E08'; c.lineWidth = r * .22;
+    c.beginPath(); for (let j = 0; j <= 24; j++) { const a = j / 24 * TAU, q2 = r * (1 + (cr() - .5) * .08); c.lineTo(x + Math.cos(a) * q2, y + Math.sin(a) * q2); } c.fill(); c.stroke();
+  }
   if (rnd() < .1) {
     let x = rnd() * W, y = rnd() * H, a = rnd() * TAU; const n = 12 + Math.floor(rnd() * 16);
     c.globalAlpha = .55 * k; c.strokeStyle = '#16110B'; c.lineWidth = .9 + rnd() * .6; c.beginPath(); c.moveTo(x, y);

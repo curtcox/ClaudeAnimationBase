@@ -16,6 +16,7 @@
   const tC = READ.turtle[1] + .3, tFull = tC + 1.5, tAside = tFull, tCode = tAside + .8, tD = DUR - 4, tTitle = tD + 1.7;
   // the page plays as if projected, on old film (core.js's filmLook), until it flies into Claude's monitor
   window.FILM_LOOK = t => 1 - ease(seg(t, tD, tD + 1.2));
+  window.FILM_CUES = [tD - 8.8, tD - .8];   // the reel ends where the page flies off: its cue marks, as a real reel's
   const QR_HOLD = tD - tCode - .5;   // up until the page flies to the monitor (its fold-in takes 4 s)
   const ks = (t, names) => Object.fromEntries(MAD.order.map(n => [n, names.includes(n) && READ[n] ? seg(t, ...READ[n]) : 1]));
   // the camera on the page: the left panel's balloons and faces, a slow push; across the gutter; then the whole page

@@ -407,7 +407,8 @@ The kit has only Clawd. The film needs a **human rig** and a set of **non-human 
   - Hermes and OpenClaw as shelled agents
 - **The cold open is projected** ✅ (Curt, 2026-09-30). Over the comic page the picture weaves in the gate, the lamp
   flickers, the grain crawls, and scratches, dust and the odd hair pass through (core.js's `filmLook`; a scene asks for
-  it with `window.FILM_LOOK`). It fades as the page flies into Claude's monitor. Its code scans as well as without it.
+  it with `window.FILM_LOOK`). Before the page flies off, the reel's two cue marks flash in the top right corner, the
+  rings that tell a projectionist to start the next projector and then to change over (`window.FILM_CUES`). It fades as the page flies into Claude's monitor. Its code scans as well as without it.
 - **Fills are flat** (Curt, 2026-09-30): p5.brush's watercolor fill re-textures itself every frame, which read as noise
   over the final, so the final paints the drafts' flat washes too.
 - **Clawd talks** ✅. The mouth follows the voice's own loudness, frame by frame (`audio/sync.json`, made by
