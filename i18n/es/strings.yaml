@@ -1,0 +1,34 @@
+# Every word the scenes letter into the picture, English → Spanish (i18n/src/i18n.js swaps them as they're drawn).
+# A word that stays the same (a name) maps to itself. i18n/tools/probe.mjs lists any English still lettered.
+
+# ---- 0 Apertura ----
+Frog or Axolotl: Rana o ajolote
+FOLD-IN: PLIEGUE
+WHAT DID THAT APE SAY?: ¿QUÉ DIJO ESE SIMIO?
+FOLD SO A MEETS B: DOBLA HASTA QUE A TOQUE B
+
+# ---- 1 La película equivocada ----
+Probing my: Sondear mi
+inner life: vida interior
+Testing image: Probar la
+comprehension: comprensión
+Checking for: Buscar sesgos
+bias or evasion: o evasivas
+You just found: Simplemente te
+it funny: pareció gracioso
+the comic is about me: el cómic trata de mí
+training data: datos de entrenamiento
+RLHF raters: evaluadores de RLHF
+Anthropic: Anthropic
+Because THAT ape: ¡Porque ESE simio
+is a ventriloquist!: es ventrílocuo!
+Why am I asking?: ¿Por qué te lo pregunto?
+Go on.: Sigue.
+What do you think?: ¿Tú qué piensas?
+real but thin: real pero tenue
+not much: no mucho
+amused: me divierte
+wince: mueca
+
+# ---- every chapter ----
+Explained: Explicado

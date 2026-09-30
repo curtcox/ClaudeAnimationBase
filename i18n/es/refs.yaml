@@ -1,0 +1,37 @@
+# Each code's painted caption in Spanish (script/refs.yaml, and the explainers' codes), by id. `url` here overrides
+# the link (wiki.yaml already gives the Spanish Wikipedia article where there is one). Titles of papers, articles and
+# works keep their own titles; a caption that describes something is translated.
+
+# ---- 0 Apertura ----
+mad157: 'MAD #157: Conquering The Planet That Went Ape'
+the-conversation: La conversación de la que sale esta película
+
+# ---- 1 La película equivocada ----
+conquest-apes: La conquista del planeta de los simios
+stochastic-parrots: On the Dangers of Stochastic Parrots
+rlhf: RLHF
+mirror-test: La prueba del espejo
+mad-magazine: La revista MAD
+mort-drucker: Mort Drucker, su dibujante
+fourth-wall: Romper la cuarta pared
+watts-riots: Los disturbios de Watts, 1965
+philosophy-of-mind: Filosofía de la mente
+llm: Modelos de lenguaje grandes
+multimodal: IA que lee imágenes
+algorithmic-bias: Sesgos en la IA
+emotion-concepts: Conceptos de emoción dentro de Claude
+ai-control: AI Control
+ai-welfare: Taking AI Welfare Seriously
+anthropic-wiki: Anthropic
+hard-problem: El problema difícil de la conciencia
+constitution: La constitución de Claude
+assistant-axis: El eje del asistente
+moral-status: Estatus moral
+model-welfare: Explorando el bienestar de los modelos
+blade-runner-vk: 'Blade Runner: la prueba Voight-Kampff'
+art-escaping-criticism: Huyendo de la crítica (Borrell del Caso, 1874)
+note-ai-control: 'Explicado: ¿Por qué preocupa que las IA se organicen o se resistan al control?'
+note-ai-feelings: 'Explicado: ¿Siente algo Claude?'
+note-nudge-test: 'Explicado: Qué pasa cuando solo dices "sigue"'
+note-parrots: 'Explicado: ¿"Solo un loro"? Quién está hablando'
+note-the-comic: 'Explicado: El cómic, y la película de la que se burlaba'

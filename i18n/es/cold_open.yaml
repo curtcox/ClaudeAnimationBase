@@ -1,0 +1,44 @@
+# The cold open's page in Spanish, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+officer:
+  say: "[shouting] ¡Alto! ¡¿Qué dijo ese simio?!"
+  who: el oficial
+  lines: ['*¡Alto!*', '*¡¿QUÉ*', '*DIJO*', '*ESE*', '*SIMIO?!*']
+silly:
+  say: "[nervously] Eh... ¡no sea ridículo! ¡Los simios no hablan!"
+  who: el cuidador
+  lines: ['Eh... ¡no', 'sea *ridículo!*', '*¡Los simios*', 'no', '*hablan!*']
+positive:
+  say: "¡Estoy seguro de que oí hablar a ese simio!"
+  who: el oficial
+  lines: ['¡Estoy', '*seguro*', 'de que oí', 'hablar a', 'ese simio!']
+impossible:
+  say: "¡Imposible! ¡Los simios no tienen el don de la palabra!"
+  who: el cuidador
+  lines: ['*¡Imposible!*', '¡Los simios', 'no tienen el', '*don* de la', 'palabra!']
+sound:
+  say: "¡¿Entonces cómo es que oí un sonido salir de su boca?!"
+  who: el oficial
+  lines: ['¡¿Entonces cómo es que', 'oí un *sonido* salir', 'de su *boca?!*']
+handler:
+  say: "¡Porque ESE simio es ventrílocuo!"
+  who: el cuidador
+  lines: ['¡Porque *ESE* simio', 'es *ventrílocuo!*']
+suspect:
+  say: "¡Sospechamos que ustedes esconden a un simio inteligente que escapó siendo una cría hace veinte años!"
+  who: el hombre rubio
+  lines: ['¡Sospechamos', 'que esconden', 'a un *simio*', '*inteligente*', 'que escapó', 'siendo una', '*cría* hace', '20 años!']
+fuss:
+  say: "¡No es cierto! Además, ¿por qué tanto alboroto por un simio que habla?"
+  who: el hombre barbudo
+  lines: ['¡*No* es', '*cierto!*', 'Además,', '¿por qué', 'tanto', '*alboroto*', 'por un simio', '*que habla?*']
+villain:
+  say: "¡Porque un simio inteligente y parlante podría sacar a los demás simios de su esclavitud... y debemos perpetuar la esclavitud! ¡Siempre hemos necesitado esclavos, y siempre los necesitaremos!"
+  who: el villano
+  lines: ['¡Porque un simio *inteligente*', 'y *parlante* podría sacar', 'a los *demás* simios de', 'su *esclavitud* . . . ¡y', 'debemos *perpetuar*', 'la esclavitud! ¡Siempre', 'hemos *necesitado* esclavos,', 'y siempre los *necesitaremos!*']
+turtle:
+  say: "¿Alguna vez has sentido que estás en la película equivocada?"
+  who: el hombre del suéter de cuello alto
+  lines: ['¿Alguna', 'vez has', '*sentido*', 'que', 'estás en', 'la *película*', '*equivocada?*']

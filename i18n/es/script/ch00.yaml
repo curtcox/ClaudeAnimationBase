@@ -1,0 +1,4 @@
+# Capítulo 0, Apertura. Each line by id (script/script.yaml): text (painted), speech (said, when it differs from the
+# text with markdown stripped), anchors (English phrase → the Spanish words it's timed to).
+T01.U.00:
+  text: '_[imagen adjunta: oculta en el enlace compartido]_'

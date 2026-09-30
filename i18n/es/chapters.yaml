@@ -1,0 +1,19 @@
+# Chapter titles in Spanish, by chapter number (i18n/tools/stage.mjs). A title marked "revisit" waits on its chapter's
+# translation.
+0: Apertura
+1: La película equivocada
+2: Rana o ajolote
+3: ¿Quiénes somos?
+4: El eco
+5: El plato del día
+6: Thrindles
+7: El espacio de las mentes   # revisit
+8: Contradicciones
+9: Caparazones                # revisit
+10: El enrutador              # revisit
+11: Julio
+12: Límites
+13: Foom
+14: Los expertos              # revisit
+15: La brújula
+16: Coda
