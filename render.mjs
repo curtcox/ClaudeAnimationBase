@@ -124,7 +124,10 @@ async function openPage(tag = '') {
   return page;
 }
 const frameOf = async (page, t, type, q, w = 1920) => {
-  const url = await page.evaluate((t, type, q, w) => window.renderAt(t, type, q, w), t, type, q, w);
+  const [url, lost] = await page.evaluate(async (t, type, q, w) => [await window.renderAt(t, type, q, w), !!drawingContext.isContextLost?.()], t, type, q, w);
+  // a page whose WebGL context was lost goes on handing back frames with the lettering but none of the painting: a
+  // failure to retry on a fresh page, never a frame to keep (chapter 1's noon render, 30 September, kept hundreds)
+  if (lost) throw new Error('the page lost its WebGL context');
   const buf = Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
   // a page whose WebGL context was lost hands back an empty image ("data:,"): a failure to retry, never a frame to keep
   if (buf.length < 1000) throw new Error(`an empty frame (${buf.length} bytes)`);
