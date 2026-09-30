@@ -51,7 +51,7 @@ Chapters
 ${marks.join('\n')}
 `;
 const foot = `
-Drawn in code by Claude (p5.js and p5.brush), from the conversation's transcript. Voices: ElevenLabs.
+Drawn in code by Claude (p5.js and p5.brush), from the conversation's transcript. Voices, sounds and music: ElevenLabs.
 The comic page, the chart and the alignment compass are repainted for commentary; no logos, and the caricatures are affectionate. Fair use: commentary and parody.`;
 const linksHead = '\nSome of the links, by time (the rest are on the site)\n';
 const describe = picked => head + linksHead + picked.slice().sort((a, b) => timeOf(a) - timeOf(b)).map(lineOf).join('\n') + '\n' + foot;
