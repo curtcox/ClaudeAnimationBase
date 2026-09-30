@@ -83,7 +83,8 @@ The tools, run from the project's root:
 - [ ] The codes' captions (409 with the explainers'). Done: chapters 0, 1.
 - [ ] The scenes' lettering (strings.yaml); the probe lists any English word still painted. Done: chapters 0, 1.
 - [ ] Back-translation check of every line; Curt reads the flagged ones (or a Spanish-speaking friend does).
-- [ ] Voice it: about 76,000 characters of ElevenLabs. Names' pronunciations checked by ear.
+- [ ] Voice it: about 76,000 characters of ElevenLabs. Names' pronunciations checked by ear. Done: chapter 1 (5,300
+      characters, 6:23), for Curt to hear his clone in Spanish first.
 - [ ] Drafts of every chapter; Curt watches for timing and anything left in English.
 - [ ] The site in Spanish: the explainers (64), the site's pages, at `/es/`. The codes in the Spanish film point there.
 - [ ] The final render (about 5.5 hours) and the join; the Spanish YouTube title, description and tags.

@@ -10,7 +10,7 @@
 //   audio/ out/ site/public   what the tools make
 //   studio.html the English studio with the i18n scripts added after the scene kit
 // Refreshing keeps audio/, out/ and src/gen's timelines. It prints what's still in English.
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync, symlinkSync, lstatSync, readlinkSync, unlinkSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync, symlinkSync, lstatSync, readlinkSync, unlinkSync, rmSync, renameSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';
 import YAML from 'yaml';
 import { autoSpeech, compileRespellings, words, resolveAnchor } from '../../tools/script_lib.mjs';
@@ -29,9 +29,18 @@ function link(to, at) {   // at (in the stage) → to (from the project's root),
 }
 
 // ---- the engine, linked ----
-for (const f of ['node_modules', 'render.mjs', 'package.json', 'tools', 'docs', 'assets/ref', 'assets/qr', 'assets/sfx', 'script/voices.yaml', 'script/beats.yaml', 'script/sfx_levels.md'])
+for (const f of ['node_modules', 'render.mjs', 'package.json', 'tools', 'docs', 'assets/ref', 'assets/qr', 'script/voices.yaml', 'script/beats.yaml'])
   if (existsSync(f)) link(f, f);
 mkdirSync(`${L}/vo`, { recursive: true }); link(`${L}/vo`, 'assets/vo');
+// the sounds: the English ones, linked one by one, and the language's own (a sting whose length follows the timing),
+// which tools/sfx.mjs makes in the stage and this moves to i18n/<lang>/sfx (committed)
+const SFX = `${S}/assets/sfx`;
+mkdirSync(`${L}/sfx`, { recursive: true });
+if (existsSync(SFX) && lstatSync(SFX).isSymbolicLink()) unlinkSync(SFX);
+mkdirSync(SFX, { recursive: true });
+for (const f of readdirSync(SFX)) if (!lstatSync(`${SFX}/${f}`).isSymbolicLink()) renameSync(`${SFX}/${f}`, `${L}/sfx/${f}`);
+for (const f of readdirSync('assets/sfx')) link(`assets/sfx/${f}`, `assets/sfx/${f}`);
+for (const f of readdirSync(`${L}/sfx`)) link(`${L}/sfx/${f}`, `assets/sfx/${f}`);
 for (const f of readdirSync('src')) if (f !== 'gen') link(`src/${f}`, `src/${f}`);
 link('i18n/src/i18n.js', 'src/i18n.js');
 mkdirSync(`${S}/src/gen`, { recursive: true });
