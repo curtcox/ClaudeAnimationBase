@@ -74,7 +74,8 @@ function run(name, cmd, cmdArgs, { retry = false } = {}) {
   });
 }
 
-const node = (name, script, a = [], o) => run(name, process.execPath, [script, ...a], o);
+// the Node running this, unless it has gone (Homebrew upgrading Node mid-run deletes the old one): then the one on the PATH
+const node = (name, script, a = [], o) => run(name, existsSync(process.execPath) ? process.execPath : 'node', [script, ...a], o);
 const FINAL = !!args.final, all = readYaml(PATHS.chapters).map(c => c.n);
 const chapters = args.chapters ? String(args.chapters).split(',').map(Number).filter(n => all.includes(n)) : all;
 planned = 5 + chapters.length * (FINAL ? 3 : 2) + 3 + (args.chapters ? 2 * chapters.length : 2) + (args.qr ? 1 : 0);
