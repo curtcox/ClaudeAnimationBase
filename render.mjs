@@ -193,7 +193,10 @@ if (args.sheet || args.strip) {
   // that takes over FRAME_MS gets a fresh page and is tried again, twice at most.
   const FRAME_MS = +(args['frame-timeout'] || 90) * 1000;
   const within = (p, ms) => { let t; return Promise.race([p, new Promise((_, no) => { t = setTimeout(() => no(new Error(`no frame after ${ms / 1000} s`)), ms); t.unref(); })]).finally(() => clearTimeout(t)); };
+  // A page's context can be lost a frame or two before it shows, so a page that loses it also gives back its last frames,
+  // to be drawn again elsewhere.
   await Promise.all(pages.map(async (page, w) => {
+    let recent = [];
     while (next < todo.length) {
       const i = todo[next++], f = `${FRAMES_DIR}/f${String(i).padStart(5, '0')}.jpg`;
       let buf;
@@ -201,11 +204,15 @@ if (args.sheet || args.strip) {
         try { buf = await within(frameOf(page, i / fps, 'image/jpeg', DRAFT ? .88 : .94, OUT_W), FRAME_MS); }
         catch (e) {
           if (tries >= 2) throw e;
-          console.log(`[page#${w}] frame ${i}: ${e.message}; opening a fresh page`);
+          const lost = /WebGL context|empty frame/.test(e.message);
+          if (lost) for (const r of recent) { rmSync(`${FRAMES_DIR}/f${String(r).padStart(5, '0')}.jpg`, { force: true }); todo.push(r); done--; }
+          console.log(`[page#${w}] frame ${i}: ${e.message}; opening a fresh page${lost && recent.length ? ` (and drawing its last frames, ${recent.join(' ')}, again)` : ''}`);
+          if (lost) recent = [];
           page.close().catch(() => { }); page = await openPage('#' + w);
         }
       }
       writeFileSync(f + '.tmp', buf); renameSync(f + '.tmp', f);
+      recent.push(i); if (recent.length > 3) recent.shift();
       if (++done % 24 === 0 || done === todo.length) {
         const el = (Date.now() - start) / 1000;
         console.log(`frame ${done}/${todo.length}  ${(el / done * 1000).toFixed(0)} ms/frame effective  eta ${((todo.length - done) * el / done / 60).toFixed(1)} min`);
