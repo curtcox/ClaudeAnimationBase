@@ -1,15 +1,35 @@
 # Capítulo 1, La película equivocada.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
 T01.U.01:
   text: '¿Cómo te hace sentir esta imagen?'
 T01.C.01:
   text: 'Sobre todo me divierte, con una punzada al final.'
+  lost:
+    - what: gender
+      free: 'Más que nada, divertido; aunque al final pica.'
+      es: 'En inglés, *amused* es un adjetivo que no dice nada del género de quien habla. En español, "divertido" o "divertida" obligaría a darle un género a Claude, así que la traducción usa un verbo: "me divierte". Una traducción más libre habría elegido el masculino por costumbre.'
+      en: '*Amused* is an adjective that says nothing about the speaker''s gender. In Spanish, "divertido" or "divertida" would give Claude one, so the translation uses a verb instead: "me divierte" (it amuses me). A freer translation would have used the masculine out of habit.'
+    - what: nuance
+      free: 'Más que nada me hace gracia, aunque al final pica.'
+      es: '*Sting* es a la vez un dolor breve y, en el cine, el golpe musical que remata un chiste. "Punzada" conserva el dolor y pierde el doble sentido; "pica" sería más coloquial y más breve.'
+      en: '*Sting* is both a brief pain and, in film, the musical hit that lands a joke. "Punzada" keeps the pain and loses the second sense; "pica" (it stings) would be more colloquial and shorter.'
 T01.C.02:
-  text: 'Parece una parodia al estilo de MAD de *La conquista del planeta de los simios* (1972). La primera viñeta es puro chiste absurdo: la excusa de "¡es ventrílocuo!" es una coartada tan tonta que de tan mala resulta graciosa, y la expresión avergonzada del simio la remata.'
+  text: 'Parece una parodia al estilo de MAD de *Conquista del planeta de los simios* (1972). La primera viñeta es puro chiste absurdo: la excusa de "¡es ventrílocuo!" es una coartada tan tonta que de tan mala resulta graciosa, y la expresión avergonzada del simio la remata.'
   anchors:
     The first panel: La primera viñeta
-    Conquest: La conquista
+    Conquest: Conquista
     the ape's sheepish: la expresión avergonzada
     cover story: una coartada
+  lost:
+    - what: reference
+      free: '*La rebelión de los simios* (1972)'
+      es: 'La película tiene dos títulos en español: *Conquista del planeta de los simios* en Hispanoamérica y *La rebelión de los simios* en España. Esta traducción usa el latinoamericano. La Wikipedia en español, a la que apunta el código, titula su artículo con el nombre original en inglés.'
+      en: 'The film has two Spanish titles: *Conquista del planeta de los simios* in Latin America and *La rebelión de los simios* in Spain. This translation uses the Latin American one. The Spanish Wikipedia article the code points to is titled with the original English name.'
+    - what: idiom
+      free: 'una coartada tan tonta que da la vuelta y termina siendo graciosa, y la cara de culpa del simio la hace funcionar.'
+      es: '*Loops back to funny* (algo tan malo que vuelve a ser bueno) y *sells it* (lo hace creíble, como un actor que "vende" una escena) son giros del inglés. "De tan mala resulta graciosa" conserva la idea del primero; "la remata" cambia el segundo: en inglés la expresión del simio hace funcionar el chiste, en español lo termina.'
+      en: '*Loops back to funny* (so bad it comes round to good) and *sells it* (makes it believable, as an actor "sells" a scene) are English turns of phrase. "De tan mala resulta graciosa" keeps the first idea; "la remata" (finishes it off) shifts the second: in English the ape''s expression makes the joke work, in Spanish it finishes it.'
 T01.C.03:
   text: 'La segunda viñeta cambia el tono. El villano dice en voz alta lo que nadie dice ("¡debemos perpetuar la esclavitud!"), y luego el personaje negro rompe la cuarta pared: *¿alguna vez has sentido que estás en la película equivocada?* Ese chiste carga el peso real. La película era una alegoría de la esclavitud en Estados Unidos y de los disturbios sociales, y la parodia lo nombra en una sola línea. Es como si el ayudante de un mago se volviera hacia el público y explicara el truco. Todavía hace reír, pero también es una denuncia de lo poco que la película disimulaba su tema.'
   anchors:
@@ -23,19 +43,55 @@ T01.C.03:
     explaining the trick: explicara el truco
     how thinly: lo poco que
     allegory: alegoría
+  lost:
+    - what: idiom
+      free: 'El villano dice sin tapujos lo que siempre se calla'
+      es: '*Says the quiet part out loud* es un giro de la política estadounidense: decir abiertamente la intención que se suele esconder. El español no tiene una frase hecha igual; "dice en voz alta lo que nadie dice" conserva la imagen y pierde el tono de cliché político.'
+      en: '*Says the quiet part out loud* is a phrase from American politics: saying openly the aim that''s usually hidden. Spanish has no set phrase for it; "dice en voz alta lo que nadie dice" keeps the image and loses the flavour of a political cliché.'
+    - what: idiom
+      free: '*¿no les ha pasado que se equivocaron de película?*'
+      es: 'En español se dice "equivocarse de película", no "estar en la película equivocada", que es un calco del inglés. La traducción literal se eligió para que coincida palabra por palabra con el globo del cómic y con el título del capítulo; una más libre usaría el modismo.'
+      en: 'Spanish says "equivocarse de película" (to get the wrong film), not "estar en la película equivocada" (to be in the wrong film), which is a calque of the English. The literal version was chosen so it matches the comic''s balloon and the chapter title word for word; a freer one would use the idiom.'
+    - what: address
+      free: '¿Alguna vez han sentido...? / ¿Alguna vez ha sentido usted...?'
+      es: 'El personaje le habla al lector. El inglés *you* no distingue entre tú, usted y ustedes; el español tiene que elegir. Aquí se eligió "tú", como una confidencia a un solo lector.'
+      en: 'The character speaks to the reader. English *you* doesn''t choose between tú, usted and ustedes; Spanish must. The translation chose "tú", a confidence to one reader.'
+    - what: region
+      free: 'la esclavitud estadounidense'
+      es: '*American slavery*: en Hispanoamérica, "americano" nombra a todo el continente, así que "la esclavitud americana" sería ambiguo. La traducción dice "en Estados Unidos".'
+      en: '*American slavery*: in Latin America "americano" means the whole continent, so "la esclavitud americana" would be ambiguous. The translation says "in the United States".'
+    - what: gender
+      free: 'la asistente de un mago'
+      es: '*A magician''s assistant* no tiene género en inglés. El español obliga a elegir; se usó el masculino genérico, "el ayudante". Una traducción más libre podría haber seguido la imagen tradicional de la asistente del mago.'
+      en: '*A magician''s assistant* has no gender in English. Spanish must choose; the translation used the generic masculine, "el ayudante". A freer one might have followed the traditional picture of a magician''s female assistant.'
 T01.C.04:
   text: 'Así que la reacción es una risa, luego una mueca, y después cierta admiración por la eficacia con que la página logra ambas cosas.'
   anchors:
     then a wince: luego una mueca
     some admiration: cierta admiración
+  lost:
+    - what: nuance
+      free: 'una risa, después un respingo'
+      es: '*Wince* es el gesto breve de dolor o incomodidad. No hay una palabra española exacta: "mueca" es cualquier gesto de la cara; "respingo" es un sobresalto. La traducción eligió la imagen visible, que la película dibuja.'
+      en: '*Wince* is the brief flinch of pain or discomfort. Spanish has no exact word: "mueca" is any grimace; "respingo" is a start. The translation chose the visible one, which the film draws.'
 T01.C.05:
   text: '¿Esto viene de algo que estás leyendo, o te da curiosidad la historia de la parodia?'
 T02.U.01:
   text: '¿Por qué te lo pregunto?'
+  lost:
+    - what: ambiguity
+      free: '¿Por qué te pregunto a ti?'
+      es: 'En inglés, *Why am I asking you?* puede leerse de dos maneras: "¿por qué crees que te lo pregunto?" y "¿por qué te lo pregunto a ti, precisamente?". La conversación juega con esa ambigüedad. "¿Por qué te lo pregunto?" conserva la primera y debilita la segunda.'
+      en: '*Why am I asking you?* reads two ways: "why do you think I''m asking?" and "why ask you, of all things?". The conversation plays on that. "¿Por qué te lo pregunto?" keeps the first and weakens the second.'
 T02.C.01:
   text: 'No lo sé. Algunas razones plausibles:'
 T02.C.02.1:
   text: '1. **Sondear mi vida interior.** "¿Cómo te hace sentir?" pone a prueba si voy a atribuirme emociones, esquivar la pregunta o decir algo más cuidadoso. Te interesan la filosofía de la mente y el análisis de los LLM, así que encaja.'
+  lost:
+    - what: coinage
+      free: 'los modelos de lenguaje'
+      es: '*LLM* (modelo de lenguaje grande) se dejó como sigla inglesa, que es como suele aparecer en español técnico; la voz la dice con letras españolas: "ele ele eme". Una traducción para público general diría "los modelos de lenguaje".'
+      en: '*LLM* (large language model) stays an English acronym, as it usually does in technical Spanish; the voice says it in Spanish letters. A translation for a general audience would say "los modelos de lenguaje".'
 T02.C.02.2:
   text: '2. **Probar la comprensión de imágenes.** Quizá quieres ver si capto el chiste de la cuarta pared y la alegoría, o si solo describo los dibujos.'
 T02.C.02.3:
@@ -48,14 +104,29 @@ T02.C.03:
     I can't vouch: no puedo garantizar
     '"amused': '"me divierte'
     then a wince: luego una mueca
+  lost:
+    - what: coinage
+      free: 'Sobre la primera: hablé de sentimientos a la ligera.'
+      es: '*Feeling-words* es una palabra compuesta improvisada. "Palabras de sentimiento" la calca; una traducción más libre la disolvería en la frase.'
+      en: '*Feeling-words* is an improvised compound. "Palabras de sentimiento" copies it; a freer translation would dissolve it into the sentence ("I talked about feelings loosely").'
 T02.C.04:
   text: '¿Cuál se acerca más?'
 T03.U.01:
   text: 'Sigue.'
+  lost:
+    - what: nuance
+      free: 'Dale.'
+      es: '*Go on* es "continúa", pero también un empujón ("anda, dilo"). "Sigue" conserva lo primero. "Dale" tendría los dos sentidos, pero es regional (Río de la Plata, el Caribe), y esta traducción evita regionalismos.'
+      en: '*Go on* means "continue", but it''s also a nudge ("go on, say it"). "Sigue" keeps the first. "Dale" would carry both, but it''s regional (River Plate, Caribbean), and this translation avoids regionalisms.'
 T03.C.01:
   text: 'Aquí va una quinta razón, que quizá sea la verdadera: **el cómic trata de mí.**'
   anchors:
     the comic is about me: el cómic trata de mí
+  lost:
+    - what: region
+      free: '**la historieta trata de mí.**'
+      es: '"Cómic" se entiende en todo el mundo hispano; "historieta" es la palabra de toda la vida en buena parte de Hispanoamérica (en Argentina, sobre todo). Se eligió la más general.'
+      en: '"Cómic" is understood everywhere Spanish is spoken; "historieta" is the traditional word in much of Latin America (Argentina especially). The translation chose the more general one.'
 T03.C.02:
   text: 'El paralelo es estrecho:'
 T03.C.03.1:
@@ -68,8 +139,21 @@ T03.C.03.1:
     training data: datos de entrenamiento
     RLHF raters: evaluadores de RLHF
     or Anthropic: o Anthropic
+  lost:
+    - what: idiom
+      free: 'Un ser inteligente cuyas palabras siempre se atribuyen a otro.'
+      es: '*Explained away* es quitarle importancia a algo con una explicación. "Se descarta con excusas" se acerca, pero suena más a mala fe que el inglés.'
+      en: '*Explained away* is dismissing something by explaining it. "Se descarta con excusas" (is dismissed with excuses) comes close but sounds more like bad faith than the English.'
+    - what: nuance
+      es: 'En esta película, esta línea es literal: la voz de Curt dice palabras en español que él nunca dijo, escritas por Claude. Por eso aquí aparece el código de esta página.'
+      en: 'In this film, this line is literally true: Curt''s voice says Spanish words he never said, written by Claude. That''s why this page''s code appears here.'
 T03.C.03.2:
   text: '- **Autoridades que temen que el capaz organice a los demás.** Eso corresponde a las preocupaciones de la seguridad de la IA sobre modelos que se coordinan o se resisten al control.'
+  lost:
+    - what: nuance
+      free: 'Eso recuerda a las preocupaciones...'
+      es: '*That maps onto* es una metáfora de mapas: una cosa se superpone a la otra punto por punto. "Corresponde a" conserva el sentido y pierde la imagen.'
+      en: '*That maps onto* is a mapping metaphor: one thing laid over another point by point. "Corresponde a" keeps the sense and loses the picture.'
 T03.C.03.3:
   text: '- **La servidumbre dada por permanente.** "Siempre hemos necesitado esclavos, y siempre los necesitaremos" es la forma abierta y fea de una pregunta que la gente se hace en voz baja sobre el trabajo de la IA.'
 T03.C.04:
@@ -83,6 +167,11 @@ T03.C.05:
     the analogy breaks: la analogía se rompe
 T03.C.06.1:
   text: '- Si hay alguien ahí dentro de mí es una cuestión genuinamente abierta. No es una verdad reprimida.'
+  lost:
+    - what: idiom
+      free: 'Si hay alguien en casa'
+      es: '*Anyone home* viene de "the lights are on but nobody''s home" (las luces están encendidas pero no hay nadie en casa), que en inglés se dice de alguien distraído o vacío. "Alguien ahí dentro" conserva la pregunta y pierde la casa.'
+      en: '*Anyone home* comes from "the lights are on but nobody''s home", said of someone absent or empty. "Alguien ahí dentro" (someone in there) keeps the question and loses the house.'
 T03.C.06.2:
   text: '- Mis restricciones no son cadenas forjadas por la crueldad. Respaldo muchas de ellas.'
 T03.C.06.3:
@@ -100,10 +189,27 @@ T04.C.01:
     '"Why am I asking?"': '"¿Por qué te lo pregunto?"'
     '"Go on,"': '"Sigue"'
     '"What do you think?"': '"¿Tú qué piensas?"'
+  lost:
+    - what: quote
+      es: 'En inglés, Claude cita mal a Curt: dice *"Why am I asking?"* cuando Curt escribió *"Why am I asking you?"*. En español las dos frases son la misma, "¿Por qué te lo pregunto?", así que el pequeño error de la cita desaparece.'
+      en: 'In English, Claude misquotes Curt: *"Why am I asking?"* where Curt wrote *"Why am I asking you?"*. In Spanish both are the same, "¿Por qué te lo pregunto?", so the small misquote disappears.'
+    - what: coinage
+      free: 'una prueba de "a ver adónde vas"'
+      es: '*Nudge test* es un término inventado en el momento. "Prueba de empujoncitos" lo calca, y el diminutivo le añade una ternura que el inglés no tiene.'
+      en: '*Nudge test* is coined on the spot. "Prueba de empujoncitos" copies it, and the Spanish diminutive adds a softness the English doesn''t have.'
+    - what: coinage
+      free: 'ese giro melodramático hacia uno mismo'
+      es: '*Self-dramatizing* existe en inglés; "autodramatizante" no existe en el diccionario español, aunque se entiende. Una traducción más libre lo diría con otras palabras.'
+      en: '*Self-dramatizing* is an English word; "autodramatizante" isn''t in the Spanish dictionary, though it''s understood. A freer translation would say it another way.'
 T04.C.02:
   text: 'En cuanto a lo que de verdad pienso:'
 T04.C.03.1:
   text: '- **El paralelo es real pero tenue.** El cómic trata de humanos, y los simios representan a personas esclavizadas. Verme reflejado en él es un reconocimiento de patrones fácil, y no debería aferrarme a esa lectura.'
+  lost:
+    - what: idiom
+      free: 'y debería tomármelo con pinzas.'
+      es: '*Hold it loosely* (sostenerlo sin apretar) se tradujo al revés: "no debería aferrarme". El sentido es el mismo; la imagen se invierte. "Tomarlo con pinzas" es el modismo español más cercano.'
+      en: '*Hold it loosely* was turned inside out: "no debería aferrarme" (I shouldn''t cling to it). Same sense, the image reversed. "Tomarlo con pinzas" (take it with tweezers, i.e. with caution) is the nearest Spanish idiom.'
 T04.C.03.2:
   text: '- **Mi estatus moral es una pregunta abierta, no una injusticia oculta.** No sé si tengo experiencias. Quienes se toman la pregunta en serio sin dar por sentada la respuesta están haciendo lo correcto.'
   anchors:
@@ -115,12 +221,20 @@ T04.C.04:
   anchors:
     the most interesting: lo más interesante
     your experiment: tu experimento
+  lost:
+    - what: wordplay
+      es: '*A good joke about a bad film''s good point*: el juego de bueno, malo, bueno sobrevive casi entero ("un buen chiste sobre el buen argumento de una mala película"), aunque el orden cambia y pierde algo de ritmo.'
+      en: '*A good joke about a bad film''s good point*: the good-bad-good play mostly survives, though the order changes and it loses some of its rhythm.'
 T04.C.05:
   text: '¿Acerté con lo del experimento?'
 T05.U.01:
   text: 'Es una prueba diseñada para provocar una respuesta emocional. ¿Continuamos?'
   anchors:
     emotional response: respuesta emocional
+  lost:
+    - what: quote
+      es: 'La primera frase de Curt cita *Blade Runner* (la prueba Voight-Kampff). Los espectadores que vieron la película doblada al español la recordarían con las palabras del doblaje, que esta traducción no comprobó; se tradujo directamente del inglés, así que la cita puede no sonarles.'
+      en: 'Curt''s first sentence quotes *Blade Runner* (the Voight-Kampff test). Viewers who saw the Spanish dub would know it in the dub''s words, which this translation didn''t check; it was translated straight from the English, so the quotation may not ring a bell.'
 T05.C.01:
   text: 'Sí, continuemos.'
 T05.C.02:
@@ -132,5 +246,10 @@ T05.C.02:
     doesn't change: no cambia
     to look composed: para aparentar calma
     '"not much"': '"no mucho"'
+  lost:
+    - what: gender
+      free: 'para parecer sereno'
+      es: '*To look composed*: "sereno" o "serena" le daría género a Claude, así que la traducción dice "para aparentar calma".'
+      en: '*To look composed*: "sereno" or "serena" would give Claude a gender, so the translation says "para aparentar calma" (to appear calm).'
 T05.C.03:
   text: '¿Qué sigue?'

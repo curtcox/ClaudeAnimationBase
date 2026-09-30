@@ -1,0 +1,237 @@
+# The translation's own page (i18n/tools/lost.mjs → the Spanish site's traduccion/), in Spanish and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+
+title:
+  es: Cómo se tradujo esta película, y qué se perdió
+  en: How this film was translated, and what was lost
+text_title:
+  es: La película entera, en los dos idiomas
+  en: The whole film, in both languages
+labels:
+  lang_es: Español
+  film_es: Toda la película
+  film_en: The whole film
+  original: Original (inglés)
+  ours: Esta traducción
+  free: Una traducción más libre
+  kinds_es: Qué se pierde, por tipo
+  kinds_en: What gets lost, by kind
+  list_es: Línea por línea
+  list_en: Line by line
+
+sections:
+  - es_title: Esta página
+    en_title: This page
+    es: |
+      *Rana o ajolote* es una película animada hecha con una conversación real, palabra por palabra, entre Curt Cox y
+      Claude, un programa de inteligencia artificial de Anthropic. La conversación fue en inglés. Esta es la versión en
+      español.
+
+      Aquí se explica cómo se tradujo, cómo se pudo haber traducido y qué habría cambiado, línea por línea. Todo está en
+      los dos idiomas para que cualquiera que hable ambos pueda juzgar la traducción por su cuenta. También está
+      [la película entera, en inglés y en español, lado a lado](texto/).
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude,
+      an AI program made by Anthropic. The conversation was in English. This is the Spanish version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line
+      by line. Everything is in both languages so that anyone who speaks both can judge the translation for themselves.
+      There's also [the whole film, in English and Spanish, side by side](texto/).
+
+  - es_title: Quién tradujo
+    en_title: Who translated it
+    es: |
+      Claude (el modelo Claude Opus 5.5) lo tradujo todo: cada línea de la conversación, cada palabra dibujada en la
+      imagen, los títulos, los pies de los códigos y esta página, incluidas las notas sobre lo que se perdió.
+
+      Una de las razones para hacer esta versión es mostrar, sin retoques, cómo traduce Claude. Por eso **ningún
+      traductor humano la corrigió**, y cualquier corrección posterior se anotará en esta página con su fecha (y queda
+      también en el historial público del código).
+
+      Hasta ahora: {lines} de {total} líneas traducidas (capítulos {chapters_done}). Revisión humana: ninguna todavía.
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the
+      picture, the titles, the codes' captions and this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator
+      corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public
+      history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - es_title: Cómo se tradujo
+    en_title: How it was translated
+    es: |
+      - **Fiel, línea por línea.** Cada párrafo y cada punto de lista de la conversación es una línea de la película, y
+        la traducción conserva las mismas líneas, en el mismo orden, con las mismas negritas, cursivas, listas y
+        enlaces. Primero el sentido, después la forma; nunca una adaptación libre.
+      - **Español latinoamericano neutro.** "Ustedes", nunca "vosotros"; palabras que se entienden en toda
+        Hispanoamérica; sin regionalismos.
+      - **Tú y usted.** Curt y Claude se tratan de tú. En el cómic, el cuidador trata de usted al oficial.
+      - **Claude no tiene género gramatical.** El inglés no obliga a decir si Claude es él o ella; el español, sí,
+        con cada adjetivo. La traducción evita esos adjetivos ("me divierte", no "divertido").
+      - **Títulos y nombres.** Una película o un libro va con el título que conoce el público latinoamericano. Un
+        artículo, un estudio o una página web conserva su título original. Los nombres de personas nunca cambian.
+      - **Siglas.** Se dejan como se usan en el español técnico (LLM, RLHF), y la voz las dice con letras españolas.
+      - **Enlaces.** Los códigos que apuntaban a la Wikipedia en inglés apuntan al mismo artículo en español cuando
+        existe (lo dicen los enlaces entre idiomas de la propia Wikipedia; 158 de 202). Las demás fuentes están en su
+        idioma, casi siempre inglés.
+      - **La imagen.** Todo lo escrito en la imagen está en español: rótulos, tarjetas, títulos y los globos del cómic
+        del principio, redibujados con letra española.
+      - **Las voces.** Hablan las mismas voces que en inglés: la voz clonada de Curt y River para Claude (ElevenLabs,
+        modelo eleven_v3). Hablan español con algo de acento. El movimiento de la boca de Claude se calcula otra vez
+        con el audio en español.
+      - **La duración.** El español es más largo: en las {voiced} líneas grabadas hasta ahora, la voz tarda un
+        {longer}% más que en inglés. La animación sigue a la voz, así que la película se alarga en lugar de apurar las
+        palabras.
+      - **Atada a la animación.** Muchas escenas se mueven justo cuando se dice una frase. Cada una de esas frases
+        ({anchors} hasta ahora) necesitó su equivalente en español, lo que a veces mantuvo el orden de las palabras más
+        cerca del inglés de lo necesario.
+      - **Los errores de Curt.** En inglés, la película muestra los errores de tecleo de Curt, tachados en rojo, con la
+        corrección encima. Donde el error sobrevive a la traducción (un nombre mal escrito) se conserva; donde depende
+        del inglés, se pierde, y se anota abajo.
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the
+        translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning
+        first, then form; never a free adaptation.
+      - **Neutral Latin American Spanish.** "Ustedes", never "vosotros"; words understood across Latin America; no
+        regionalisms.
+      - **Tú and usted.** Curt and Claude say "tú" to each other. In the comic, the handler says "usted" to the
+        officer.
+      - **Claude has no grammatical gender.** English doesn't make you say whether Claude is he or she; Spanish does,
+        with every adjective. The translation avoids those adjectives ("me divierte", it amuses me, not "divertido").
+      - **Titles and names.** A film or book goes by the title Latin American audiences know. An article, paper or
+        website keeps its original title. People's names never change.
+      - **Acronyms.** They stay as technical Spanish uses them (LLM, RLHF), and the voice says them in Spanish letters.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in Spanish where there is one
+        (Wikipedia's own links between languages say so; 158 of 202). Other sources are in their own language, almost
+        always English.
+      - **The picture.** Everything written in the picture is in Spanish: labels, cards, titles, and the balloons of the
+        opening comic, relettered in Spanish.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs,
+        the eleven_v3 model). They speak Spanish with something of an accent. Claude's mouth movements are worked out
+        again from the Spanish audio.
+      - **Length.** Spanish runs longer: over the {voiced} lines voiced so far, the voice takes {longer}% longer than
+        in English. The animation follows the voice, so the film grows rather than rushing the words.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
+        far) needed its Spanish counterpart, which sometimes kept the word order closer to the English than it needed
+        to be.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above.
+        Where a slip survives translation (a misspelt name) it's kept; where it depends on English, it's lost, and
+        noted below.
+
+  - es_title: Cómo se pudo haber traducido
+    en_title: How else it could have been translated
+    es: |
+      Cada una de estas opciones era posible. Curt eligió la traducción completa y fiel, con las mismas voces.
+
+      - **Solo subtítulos.** Las voces y la imagen en inglés, con el texto en español abajo. Lo más barato y lo más
+        fiel al sonido original, pero hay que leer mucho y rápido, y lo escrito en la imagen queda en inglés.
+      - **Doblaje sobre la imagen en inglés.** Voces en español, pero rótulos, tarjetas y cómic en inglés.
+      - **Una adaptación libre.** Chistes y modismos reescritos para que funcionen en español, referencias cambiadas
+        por otras más conocidas aquí. Suena más natural; ya no es palabra por palabra la conversación que ocurrió.
+      - **Doblaje profesional sincronizado.** El doblaje de cine ajusta cada frase a la duración del original y al
+        movimiento de los labios, a veces cambiando lo que se dice. Aquí es al revés: la animación se ajusta a la frase.
+      - **Voces nativas.** Actores o voces sintéticas de hablantes nativos: acento natural, pero ya no sería la voz de
+        Curt.
+      - **Español de España.** "Vosotros", otro vocabulario ("ordenador" por "computadora") y otros títulos de
+        películas (*La rebelión de los simios* en lugar de *Conquista del planeta de los simios*).
+      - **Un traductor humano, o una revisión humana.** Lo habitual para una película. Esta no la tuvo, a propósito:
+        el punto es mostrar la traducción de Claude tal como salió.
+    en: |
+      Each of these was possible. Curt chose the full, faithful translation, with the same voices.
+
+      - **Subtitles only.** The English voices and picture, with Spanish text underneath. Cheapest and truest to the
+        original sound, but it means reading a lot, fast, and the writing in the picture stays English.
+      - **A dub over the English picture.** Spanish voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in Spanish, references swapped for better-known
+        ones. It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** Film dubbing fits each line to the original's length and lip movements,
+        sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Actors, or synthetic voices of native speakers: a natural accent, but no longer Curt's
+        voice.
+      - **Spain's Spanish.** "Vosotros", different vocabulary ("ordenador" for "computadora") and different film titles
+        (*La rebelión de los simios* instead of *Conquista del planeta de los simios*).
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the
+        point is to show Claude's translation as it came out.
+
+  - es_title: Qué habría cambiado
+    en_title: What would have been different
+    es: |
+      Una traducción más libre sonaría más natural casi siempre. Usaría los modismos del español en lugar de calcar
+      los del inglés, le daría género a Claude sin pensarlo, citaría las películas con las palabras de su doblaje y
+      reescribiría los juegos de palabras para que funcionen. A cambio, se alejaría de lo que Curt y Claude dijeron de
+      verdad, y la película dejaría de ser un registro exacto de la conversación.
+
+      Abajo están, línea por línea, las {notes} diferencias anotadas hasta ahora: el original, esta traducción, cómo lo
+      diría una traducción más libre, y por qué.
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use Spanish idioms instead of copying
+      English ones, give Claude a gender without a second thought, quote films in the words of their Spanish dubs,
+      and rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually said, and the
+      film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer
+      translation would put it, and why.
+
+  - es_title: Juzga tú
+    en_title: You be the judge
+    es: |
+      Si hablas los dos idiomas, tu opinión es justo lo que esta página busca: un error, una frase que suena rara, una
+      nota que se equivoca, algo que se perdió y no está anotado. Puedes decirlo abriendo un *issue* en
+      [el repositorio de la película](https://github.com/curtcox/axol-f/issues). Cada corrección se anotará aquí.
+    en: |
+      If you speak both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a
+      note that's wrong, something lost that isn't noted. You can say so by opening an issue on
+      [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  es: |
+    Cada nota muestra la línea original, esta traducción y, en amarillo, cómo la diría una traducción más libre (cuando
+    la diferencia se puede escribir). El código a la derecha del tipo identifica la línea en
+    [el texto completo](texto/).
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where
+    the difference can be written out). The code beside the kind identifies the line in [the full text](texto/).
+
+text_intro:
+  es: |
+    Cada línea de la película: a la izquierda, la conversación original en inglés; a la derecha, la traducción que se
+    oye y se ve en la versión en español. Una raya (—) marca una línea que todavía no está traducida.
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard
+    and seen in the Spanish version. A dash (—) marks a line not translated yet.
+
+kinds:
+  gender:     { es: Género gramatical, en: Grammatical gender, what_es: 'El español obliga a elegir un género donde el inglés no.', what_en: 'Spanish forces a gender where English doesn''t.' }
+  address:    { es: Tú, usted, ustedes, en: Forms of address, what_es: 'El inglés *you* es tú, usted y ustedes a la vez.', what_en: 'English *you* is tú, usted and ustedes at once.' }
+  idiom:      { es: Modismos, en: Idioms, what_es: 'Frases hechas del inglés sin equivalente exacto.', what_en: 'English set phrases with no exact equivalent.' }
+  wordplay:   { es: Juegos de palabras, en: Wordplay, what_es: 'Chistes que dependen de las palabras inglesas.', what_en: 'Jokes that depend on the English words.' }
+  nuance:     { es: Matices, en: Shades of meaning, what_es: 'Palabras cuyo sentido se desplaza un poco.', what_en: 'Words whose meaning shifts a little.' }
+  ambiguity:  { es: Ambigüedad, en: Ambiguity, what_es: 'Frases con dos lecturas en inglés y una en español.', what_en: 'Lines with two readings in English and one in Spanish.' }
+  coinage:    { es: Términos acuñados y calcos, en: Coinages and calques, what_es: 'Palabras inventadas o técnicas, copiadas del inglés.', what_en: 'Invented or technical words, copied from the English.' }
+  reference:  { es: Referencias y títulos, en: References and titles, what_es: 'Obras con otro nombre, o sin nombre, en español.', what_en: 'Works known by another name, or none, in Spanish.' }
+  quote:      { es: Citas, en: Quotations, what_es: 'Palabras citadas de otro sitio.', what_en: 'Words quoted from somewhere else.' }
+  region:     { es: Variante regional, en: Regional variety, what_es: 'Palabras que cambian de un país hispanohablante a otro.', what_en: 'Words that change from one Spanish-speaking country to another.' }
+  rhythm:     { es: Ritmo y extensión, en: Rhythm and length, what_es: 'El español es más largo, y el ritmo cambia.', what_en: 'Spanish runs longer, and the rhythm changes.' }
+  typo:       { es: Los errores de Curt, en: Curt's typos, what_es: 'Errores de tecleo que no sobreviven a la traducción.', what_en: 'Typing mistakes that don''t survive translation.' }
+  title:      { es: El título, en: The title, what_es: 'El nombre de la película y de sus capítulos.', what_en: 'The name of the film and its chapters.' }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: título / title
+    original: 'Frog or Axolotl'
+    ours: 'Rana o ajolote'
+    free: '¿Rana o ajolote?'
+    es: '"Axolotl" es, en inglés, una palabra exótica tomada del náhuatl; en español, "ajolote" es una palabra cotidiana en México, de donde es el animal. El título pierde algo de extrañeza y gana cercanía. El repositorio se llama *axol-f*, un juego con "Axel F", la canción de *Beverly Hills Cop* que popularizó Crazy Frog: ese chiste no tiene traducción.'
+    en: '"Axolotl" is, in English, an exotic word borrowed from Nahuatl; in Spanish, "ajolote" is an everyday word in Mexico, where the animal comes from. The title loses some strangeness and gains familiarity. The repository is called *axol-f*, a play on "Axel F", the *Beverly Hills Cop* theme that Crazy Frog made famous: that joke doesn''t translate.'
+  - what: title
+    ch: 0
+    where: título del capítulo / chapter title
+    original: 'Cold open'
+    ours: 'Apertura'
+    es: '*Cold open* es un término de la televisión estadounidense: la escena que empieza antes de los créditos, sin presentación. El español no tiene un término tan preciso; "apertura" o "prólogo" son lo más cercano.'
+    en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. Spanish has no term that exact; "apertura" (opening) or "prólogo" come closest.'

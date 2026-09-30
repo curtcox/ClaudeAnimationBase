@@ -2,3 +2,8 @@
 # text with markdown stripped), anchors (English phrase → the Spanish words it's timed to).
 T01.U.00:
   text: '_[imagen adjunta: oculta en el enlace compartido]_'
+  lost:
+    - what: nuance
+      free: '_[imagen adjunta, que no se ve en el enlace]_'
+      es: 'La marca original, *hidden in share*, viene de la interfaz de Claude: la imagen no se ve cuando la conversación se comparte por enlace. "Oculta en el enlace compartido" lo explica un poco más de lo que lo hace el inglés, que es escueto como una etiqueta.'
+      en: 'The original marker, *hidden in share*, comes from Claude''s interface: the image doesn''t show when the conversation is shared by link. "Oculta en el enlace compartido" spells that out a little more than the English, which is as terse as a label.'

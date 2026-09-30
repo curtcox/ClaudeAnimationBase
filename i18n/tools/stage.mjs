@@ -92,7 +92,8 @@ yaml('script/cold_open.yaml', "The cold open's balloons, translated.", readYaml(
 // refs.yaml: { id: caption } or { id: { caption, url } }; wiki.yaml (wiki_links.mjs): the same Wikipedia article in the language
 const refsTr = optYaml(`${L}/refs.yaml`, {}), wiki = optYaml(`${L}/wiki.yaml`, {});
 const trRef = r => ({ ...r, ...(wiki[r.id] ? { url: wiki[r.id], en_url: r.url } : {}), ...(typeof refsTr[r.id] === 'string' ? { caption: refsTr[r.id] } : refsTr[r.id] || {}) });
-yaml('script/refs.yaml', 'Codes with translated captions and cues.', readYaml('script/refs.yaml').map(r => {
+// refs_added.yaml: codes only this language's film has (its note on the translation), in the same form as refs.yaml
+yaml('script/refs.yaml', 'Codes with translated captions and cues.', [...readYaml('script/refs.yaml'), ...optYaml(`${L}/refs_added.yaml`, [])].map(r => {
   const o = trRef(r);
   if (r.at && !/^T\d\d\.|^MAD\./.test(r.at)) { const l = resolveAnchor(r, en.lines, byId); if (l) o.at = l.id; }
   if (r.cue && /^T\d\d\./.test(o.at)) o.cue = anchorOf(o.at, r.cue) ?? r.cue;
@@ -103,7 +104,8 @@ const sfx = readYaml('script/sfx.yaml');
 for (const c of sfx.cues || []) for (const k of ['at', 'until'])
   if (Array.isArray(c[k]) && typeof c[k][1] === 'string' && c[k][1] !== '@end') c[k] = [c[k][0], anchorOf(c[k][0], c[k][1]) ?? c[k][1], ...c[k].slice(2)];
 yaml('script/sfx.yaml', 'Sound cues timed to the translated words.', sfx);
-yaml('script/typos.yaml', "Curt's typos don't survive translation.", []);
+// Curt's typos, where a slip survives translation (a misspelt name), marked in the translated text
+yaml('script/typos.yaml', "Curt's typos, in the translation.", optYaml(`${L}/typos.yaml`, []));
 const site = readYaml('script/site.yaml');
 yaml('script/site.yaml', 'The site, under its language.', { ...site, base: `${site.base}${lang}/` });
 for (const f of ['pronounce.yaml', 'overrides.yaml']) yaml(`script/${f}`, 'Unused in a translation (see i18n/<lang>/pronounce.yaml).', []);

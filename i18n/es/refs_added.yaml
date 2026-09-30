@@ -1,0 +1,7 @@
+# Codes only the Spanish film has, in script/refs.yaml's form (i18n/tools/stage.mjs adds them to the stage's).
+#
+# The translation's own page (i18n/tools/lost.mjs → the Spanish site's traduccion/): how the film was translated, how
+# else it could have been, and what a freer translation would have said, in Spanish and English. Its code goes up on
+# the ventriloquist line, where Claude says the words are real but someone else is really doing the talking: in a
+# dubbed film that's literally so (Curt's voice, Claude's Spanish).
+- { id: traduccion, url: "https://curtcox.github.io/axol-f/es/traduccion/", host: traduccion/, caption: "Cómo se tradujo, y qué se perdió", origin: added, at: T03.C.03.1, cue: "supuestamente es otro", mode: shelf, style: note }

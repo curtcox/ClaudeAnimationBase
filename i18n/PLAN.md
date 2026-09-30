@@ -32,7 +32,7 @@ Cheapest wide reach, any time: YouTube subtitles in many languages, made from ea
 
 ## Conventions (Spanish)
 
-- Curt and Claude say *tú* to each other; the cold open's officers say *usted*.
+- Curt and Claude say *tú* to each other; in the cold open's comic, the handler says *usted* to the officer.
 - Claude has no grammatical gender: its lines avoid adjectives that would give it one ("me divierte", not "divertido").
 - A film or book goes by the title Latin American audiences know (*La conquista del planeta de los simios*). A paper,
   article or site keeps its own title ("On the Dangers of Stochastic Parrots"). People's names never change.
@@ -82,9 +82,17 @@ The tools, run from the project's root:
 - [x] The cold open's page and voices, the chapter titles (a few to revisit with their chapters).
 - [ ] The codes' captions (409 with the explainers'). Done: chapters 0, 1.
 - [ ] The scenes' lettering (strings.yaml); the probe lists any English word still painted. Done: chapters 0, 1.
+- [x] The translation's own page, in Spanish and English (`i18n/tools/lost.mjs` → the Spanish site's `traduccion/`,
+      from `i18n/es/traduccion.yaml` and each line's `lost` notes): who translated it (Claude, unreviewed, on purpose),
+      how, how else it could have been, and every difference a freer translation would have made, line by line; plus
+      the whole film side by side. Its code is in the film on the ventriloquist line (T03.C.03.1, `refs_added.yaml`).
+      Every chapter's translation adds its notes.
+- [ ] Publish the Spanish site at `/es/` with the English one (the Pages workflow builds only the English site now);
+      the film's code points at `/es/traduccion/`, so it must be live before the Spanish film is.
 - [ ] Back-translation check of every line; Curt reads the flagged ones (or a Spanish-speaking friend does).
 - [ ] Voice it: about 76,000 characters of ElevenLabs. Names' pronunciations checked by ear. Done: chapter 1 (5,300
-      characters, 6:23), for Curt to hear his clone in Spanish first.
+      characters, 6:23); Curt approved the voices (2026-09-30). The ElevenLabs quota ran out on 2026-09-30 with
+      one line of chapter 1 (T01.C.02, 264 characters) still to voice; about 71,000 characters to go.
 - [ ] Drafts of every chapter; Curt watches for timing and anything left in English.
 - [ ] The site in Spanish: the explainers (64), the site's pages, at `/es/`. The codes in the Spanish film point there.
 - [ ] The final render (about 5.5 hours) and the join; the Spanish YouTube title, description and tags.

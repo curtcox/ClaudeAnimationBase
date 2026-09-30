@@ -18,6 +18,10 @@ impossible:
   say: "¡Imposible! ¡Los simios no tienen el don de la palabra!"
   who: el cuidador
   lines: ['*¡Imposible!*', '¡Los simios', 'no tienen el', '*don* de la', 'palabra!']
+  lost:
+    - what: idiom
+      es: '*The power of speech* se tradujo con el modismo español "el don de la palabra", que es más elegante que el original y, por eso mismo, un poco menos torpe de lo que el cuidador pretende sonar.'
+      en: '*The power of speech* became the Spanish set phrase "el don de la palabra" (the gift of speech), which is more elegant than the original and so a little less clumsy than the handler means to sound.'
 sound:
   say: "¡¿Entonces cómo es que oí un sonido salir de su boca?!"
   who: el oficial
@@ -26,10 +30,19 @@ handler:
   say: "¡Porque ESE simio es ventrílocuo!"
   who: el cuidador
   lines: ['¡Porque *ESE* simio', 'es *ventrílocuo!*']
+  lost:
+    - what: rhythm
+      es: 'En el globo, la palabra que el dibujante resalta en negrita es *THAT* (ese). En español se resalta "ESE" igual, pero "ventrílocuo" tiene una sílaba más y el globo queda más apretado; el tamaño de la letra se ajusta solo.'
+      en: 'In the balloon, the word the artist bolds is *THAT*; the Spanish bolds "ESE" the same way, but "ventrílocuo" is longer and the balloon is tighter; the lettering size fits itself.'
 suspect:
   say: "¡Sospechamos que ustedes esconden a un simio inteligente que escapó siendo una cría hace veinte años!"
   who: el hombre rubio
   lines: ['¡Sospechamos', 'que esconden', 'a un *simio*', '*inteligente*', 'que escapó', 'siendo una', '*cría* hace', '20 años!']
+  lost:
+    - what: nuance
+      free: 'que escapó siendo un bebé'
+      es: 'El inglés dice *infant*, una palabra para bebés humanos, aplicada a un simio: el cómic lo humaniza sin decirlo. "Cría" es la palabra para animales, así que ese detalle se pierde. "Siendo un bebé" lo conservaría.'
+      en: 'The English says *infant*, a word for human babies, of an ape: the comic humanizes it without saying so. "Cría" is the word for young animals, so that detail is lost. "Siendo un bebé" (as a baby) would keep it.'
 fuss:
   say: "¡No es cierto! Además, ¿por qué tanto alboroto por un simio que habla?"
   who: el hombre barbudo
@@ -42,3 +55,8 @@ turtle:
   say: "¿Alguna vez has sentido que estás en la película equivocada?"
   who: el hombre del suéter de cuello alto
   lines: ['¿Alguna', 'vez has', '*sentido*', 'que', 'estás en', 'la *película*', '*equivocada?*']
+  lost:
+    - what: idiom
+      free: '¿No les ha pasado que se equivocaron de película?'
+      es: 'Ver la nota de la línea T01.C.03: "equivocarse de película" es el modismo español; "estar en la película equivocada" es un calco, elegido para que el globo, la cita de Claude y el título del capítulo coincidan.'
+      en: 'See the note on line T01.C.03: "equivocarse de película" is the Spanish idiom; "estar en la película equivocada" is a calque, kept so the balloon, Claude''s quotation and the chapter title match.'
