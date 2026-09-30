@@ -32,7 +32,7 @@
 - { match: "Kokotajlo", say: "Koh-koh-TIE-lo", verify: true }
 - { match: "Aschenbrenner", say: "ASH-en-brenner" }
 - { match: "Agüera y Arcas", say: "ah-GWAIR-ah ee AR-kas", verify: true }
-- { match: "Ballecer", say: "Ballasair" }   # as Leo says it: "Ballas Air" run into one word (Curt, 2026-09-29)
+- { match: "Ballecer", say: "Ballasair" }   # as Leo says it: "Ballas Air" run into one word (Curt, 2026-09-29; heard and approved)
 - { match: "Michaël Trazzi", say: "Mee-ka-EL TRAHT-see", verify: true }
 - { match: "Leahy", say: "LAY-hee" }
 - { match: "Gödel", say: "Gurdle" }   # not "GUR-dl": capitals got spelled out, "G U R dl"
@@ -43,7 +43,7 @@
 - { match: "Margolus–Levitin", say: "mar-GO-lus LEV-ih-tin" }
 - { match: "Bekenstein", say: "BECK-en-stine" }
 - { match: "Landauer", say: "LAN-dow-er" }
-- { match: "Metaculus", say: "Metackulus" }   # one word, the meter of "miraculous"; the hyphens made separate words (Curt)
+- { match: "Metaculus", say: "Metackulus" }   # one word, the meter of "miraculous"; the hyphens made separate words (Curt; heard and approved 2026-09-29)
 - { match: "Dwarkesh", say: "DWAR-kesh" }
 - { match: "philotically", say: "fih-LOT-ik-lee" }
 - { match: "Rachni", say: "RACK-nee" }
