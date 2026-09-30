@@ -1,6 +1,6 @@
 # What's left
 
-As of 2026-09-29. The phases are in VIDEO_PLAN.md §7. Your review notes and my replies are at
+As of 2026-09-30. The phases are in VIDEO_PLAN.md §7. Your review notes and my replies are at
 http://localhost:8077/review/ (`npm run review` lists them).
 
 ## Waiting on Curt
@@ -13,9 +13,10 @@ http://localhost:8077/review/ (`npm run review` lists them).
       points the published site at it.
 
 ## Next for me
-- [ ] Once you've signed off the notes: re-render only the chapters a note changed
-      (`npm run rebuild -- --final --chapters=N`, up to about 30 minutes each; their frames are gone), which joins the
-      film again.
+- [ ] Once you've signed off the notes, and for anything you notice in the final: fix it, then
+      `npm run rebuild -- --final --chapters=N`. Each chapter's final is kept in pieces of about ten seconds, and only
+      the pieces the fix changed are painted again (tools/final.mjs), so a small fix takes minutes, not hours; the
+      film is joined again after.
 
 ## After the final render
 - [ ] Curt: a full watch-through of the final cut.
@@ -25,8 +26,11 @@ http://localhost:8077/review/ (`npm run review` lists them).
       embeds it.
 
 ## Done
-- A final candidate (2026-09-30, 5.5 hours): `out/film/film.mp4`, 1:17:28, 1080p, 24 fps, 3.4 GB, −14.2 LUFS, peaks at
-  −1.2; every chapter's checks pass. Made before the seven notes were signed off.
+- A final candidate (2026-09-30, 16:51): `out/film/film.mp4`, 1:17:28, 1080p, 24 fps, 2.8 GB, −14.2 LUFS, peaks at
+  −1.2; every chapter's checks pass, and every piece of it matches a fresh render of the current code. Made before
+  the seven notes were signed off. (The one before it, 04:46, had chapters 14–16 in the old watercolour texture, and
+  the finals made at noon had frames of chapter 1 drawn after the GPU dropped the page's context: painting missing,
+  lettering there. Both are fixed, and render.mjs now redraws such frames.)
 - The script, word for word from the conversation, with every reference as a code (408, all scanning) and 64
   plain-language explainers on the companion site, published at https://curtcox.github.io/axol-f/.
 - Codes point at the site's own forwarding pages when those are shorter than the direct link; no short-link domain.
