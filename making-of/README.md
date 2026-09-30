@@ -4,10 +4,10 @@ The film is made from one conversation between Curt and Claude ([its transcript]
 made in another: this one, in which Curt asked Claude to turn the first into a film, and Claude wrote the code that draws,
 voices and assembles it. This is that second conversation, from Claude Code's own record of the session, a day at a time.
 
-It has every message Curt typed (67), every reply Claude wrote (916), Claude's visible reasoning (160 notes), and one
-line for each thing Claude did: each command, file edit and page read (3066 in all). It leaves out what those
+It has every message Curt typed (73), every reply Claude wrote (949), Claude's visible reasoning (164 notes), and one
+line for each thing Claude did: each command, file edit and page read (3174 in all). It leaves out what those
 commands printed, the images, and the notices the app adds for Claude. When Claude's working memory filled up, it was
-replaced by a summary; a one-line note marks each place (24 times). Curt's email address and the home folder are
+replaced by a summary; a one-line note marks each place (25 times). Curt's email address and the home folder are
 removed. Times are America/Chicago time.
 
 Made by `npm run making-of` (tools/making_of.mjs).

@@ -13,10 +13,9 @@ http://localhost:8077/review/ (`npm run review` lists them).
       points the published site at it.
 
 ## Next for me
-- [ ] The final render: a candidate started 2026-09-29, before the notes were signed off (`npm run rebuild -- --final`;
-      1080p, 24 fps, 15–22 hours, resumable). It writes `out/chNN.mp4`, `out/film/film.mp4` and `out/film/youtube.md`.
-      Each chapter's frames are deleted once its video is made (the disk can't hold the film's 77 GB), so a chapter a
-      note changes is repainted whole (up to about 2 hours).
+- [ ] Once you've signed off the notes: re-render only the chapters a note changed
+      (`npm run rebuild -- --final --chapters=N`, up to about 30 minutes each; their frames are gone), which joins the
+      film again.
 
 ## After the final render
 - [ ] Curt: a full watch-through of the final cut.
@@ -26,6 +25,8 @@ http://localhost:8077/review/ (`npm run review` lists them).
       embeds it.
 
 ## Done
+- A final candidate (2026-09-30, 5.5 hours): `out/film/film.mp4`, 1:17:28, 1080p, 24 fps, 3.4 GB, −14.2 LUFS, peaks at
+  −1.2; every chapter's checks pass. Made before the seven notes were signed off.
 - The script, word for word from the conversation, with every reference as a code (408, all scanning) and 64
   plain-language explainers on the companion site, published at https://curtcox.github.io/axol-f/.
 - Codes point at the site's own forwarding pages when those are shorter than the direct link; no short-link domain.
