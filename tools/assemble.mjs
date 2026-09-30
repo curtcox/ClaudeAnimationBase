@@ -8,7 +8,7 @@
 //   film.json    which renders went in, and where each chapter starts in the film (the site's film page uses it)
 //   youtube.md   the upload's title, description and tags, to paste in (tools/youtube.mjs)
 import { execFileSync, spawnSync } from 'node:child_process';
-import { existsSync, mkdirSync, statSync, writeFileSync, readFileSync, renameSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, statSync, writeFileSync, readFileSync, renameSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { PATHS, readYaml, pad } from './script_lib.mjs';
 
@@ -36,9 +36,11 @@ for (const k of ['audio', 'shape']) if (new Set(info.map(x => x[k])).size > 1)
 const AIM = -14, CEIL = -1;
 const COMP = 'acompressor=threshold=-12dB:ratio=3:attack=5:release=150:knee=6:detection=rms';
 const LIMIT = 'aresample=176400,alimiter=limit=-1.5dB:attack=2:release=80:asc=1:level=0,aresample=44100';
-// integrated loudness (LUFS) and true peak (dBFS) of a file's sound, after an optional filter chain
+// integrated loudness (LUFS) and true peak (dBFS) of a file's sound (or the joined chapters', from the concat list),
+// after an optional filter chain
+const input = f => f.endsWith('.txt') ? ['-f', 'concat', '-safe', '0', '-i', f] : ['-i', f];
 function loudness(f, chain) {
-  const out = spawnSync('ffmpeg', ['-hide_banner', '-i', f, '-vn', '-af', `${chain ? chain + ',' : ''}ebur128=peak=true`, '-f', 'null', '-'], { encoding: 'utf8', maxBuffer: 1 << 28 }).stderr;
+  const out = spawnSync('ffmpeg', ['-hide_banner', ...input(f), '-vn', '-af', `${chain ? chain + ',' : ''}ebur128=peak=true`, '-f', 'null', '-'], { encoding: 'utf8', maxBuffer: 1 << 28 }).stderr;
   const sum = out.slice(out.lastIndexOf('Summary:'));
   return { i: +sum.match(/I:\s+(-?[\d.]+) LUFS/)[1], tp: +sum.match(/Peak:\s+(-?[\d.]+) dBFS/)[1] };
 }
@@ -46,7 +48,7 @@ function level(from, to) {
   const chain = g => `${COMP},volume=${g.toFixed(2)}dB,${LIMIT}`;
   let g = AIM - loudness(from, COMP).i;
   g += AIM - loudness(from, chain(g)).i;
-  execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', from, '-map', '0:v', '-map', '0:a', '-c:v', 'copy', '-af', chain(g), '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', to], { stdio: 'inherit' });
+  execFileSync('ffmpeg', ['-y', '-v', 'error', ...input(from), '-map', '0:v', '-map', '0:a', '-c:v', 'copy', '-af', chain(g), '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', to], { stdio: 'inherit' });
 }
 
 // a chapter video much shorter than its timeline was cut off (an encode that stopped at a bad frame): don't join it
@@ -59,11 +61,10 @@ const fresh = existsSync(OUT) && existsSync(`${DIR}/film.json`) && JSON.parse(re
 if (fresh && !args.force) console.log(`${OUT} is current (every chapter is older than it)`);
 else {
   writeFileSync(`${DIR}/list.txt`, videos.map(f => `file '${resolve(f).replace(/'/g, "'\\''")}'`).join('\n') + '\n');
-  const joined = `${DIR}/joined.mp4`;
-  execFileSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', `${DIR}/list.txt`, '-c', 'copy', joined], { stdio: 'inherit' });
-  if (info[0].audio) level(joined, OUT + '.part.mp4');
-  else execFileSync('ffmpeg', ['-y', '-v', 'error', '-i', joined, '-c', 'copy', '-movflags', '+faststart', OUT + '.part.mp4']);
-  renameSync(OUT + '.part.mp4', OUT); rmSync(joined);
+  // straight from the chapters, with no joined copy in between (a final film is several GB)
+  if (info[0].audio) level(`${DIR}/list.txt`, OUT + '.part.mp4');
+  else execFileSync('ffmpeg', ['-y', '-v', 'error', ...input(`${DIR}/list.txt`), '-c', 'copy', '-movflags', '+faststart', OUT + '.part.mp4']);
+  renameSync(OUT + '.part.mp4', OUT);
   console.log(`${OUT}: ${chapters.length} chapters, ${hms(total)}${info[0].audio ? '' : ' (no voice track)'}`);
 }
 const loud = info[0].audio ? loudness(OUT) : null;

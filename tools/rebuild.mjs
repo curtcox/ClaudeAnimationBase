@@ -98,6 +98,9 @@ for (const n of chapters) {
     ? await node(`chapter ${n} frames`, 'render.mjs', [`--chapter=${n}`, '--frames'], { retry: true }) && await node(`chapter ${n} encode`, 'render.mjs', [`--chapter=${n}`, '--encode'])
     : await node(`chapter ${n} draft`, 'render.mjs', [`--chapter=${n}`, '--draft'], { retry: true });
   if (made) await node(`chapter ${n} watch page`, 'tools/watch.mjs', [`--chapter=${n}`, ...(FINAL ? [`--video=out/ch${String(n).padStart(2, '0')}.mp4`] : [])], { retry: true });
+  // a final chapter's frames are about 0.7 MB each, some 77 GB for the film: once its video is made they go, so a disk
+  // needs room for one chapter's (up to 7 GB) and the videos. A change to the chapter later repaints all of it.
+  if (made && FINAL && existsSync(`out/ch${String(n).padStart(2, '0')}.mp4`)) rmSync(`out/frames/ch${String(n).padStart(2, '0')}`, { recursive: true, force: true });
 }
 
 // 5: the whole film

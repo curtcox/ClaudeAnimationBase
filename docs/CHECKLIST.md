@@ -13,8 +13,10 @@ http://localhost:8077/review/ (`npm run review` lists them).
       points the published site at it.
 
 ## Next for me
-- [ ] The final render, once you've signed off the notes: `npm start -- --final` (1080p, 24 fps, 15–22 hours,
-      resumable). It writes `out/film/film.mp4` and `out/film/youtube.md`.
+- [ ] The final render: a candidate started 2026-09-29, before the notes were signed off (`npm run rebuild -- --final`;
+      1080p, 24 fps, 15–22 hours, resumable). It writes `out/chNN.mp4`, `out/film/film.mp4` and `out/film/youtube.md`.
+      Each chapter's frames are deleted once its video is made (the disk can't hold the film's 77 GB), so a chapter a
+      note changes is repainted whole (up to about 2 hours).
 
 ## After the final render
 - [ ] Curt: a full watch-through of the final cut.
