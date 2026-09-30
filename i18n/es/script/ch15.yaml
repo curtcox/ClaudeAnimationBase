@@ -1,0 +1,189 @@
+# Capítulo 15, La brújula.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T73.U.01:
+  text: '¿Conoces la tabla de alineamiento del alineamiento de la IA que se publicó en internet? ¿Dónde nos pondrías a cada uno?'
+  anchors:
+    AI alignment alignment chart: tabla de alineamiento del alineamiento de la IA
+    Where would you put: ¿Dónde nos pondrías
+  lost:
+    - what: wordplay
+      free: '¿Conoces el meme de la tabla de alineamiento sobre la alineación de la IA?'
+      es: '*AI alignment alignment chart* junta dos sentidos de *alignment*: el de *Dungeons & Dragons* (legal bueno, caótico malvado...) y el de la investigación en IA (que los objetivos de un sistema coincidan con los humanos). En español *D&D* dice "alineamiento", y la IA dice "alineación" o "alineamiento", así que la palabra repetida se puede conservar. Suena igual de rara que en inglés, que es la gracia.'
+      en: '*AI alignment alignment chart* joins two senses of *alignment*: the *Dungeons & Dragons* one (lawful good, chaotic evil...) and the AI-research one (a system''s goals matching human ones). Spanish *D&D* says "alineamiento", and AI says "alineación" or "alineamiento", so the repeated word can be kept. It sounds as odd as in English, which is the joke.'
+T73.C.01:
+  text: '> _[herramienta: buscó en la web]_'
+T73.C.02:
+  text: 'No recuerdo de forma fiable esa tabla en particular, y la búsqueda no la encontró. Ha habido unas cuantas versiones del meme, y prefiero no fingir que sé a cuál te refieres.'
+  anchors:
+    a few takes on the meme: unas cuantas versiones del meme
+T73.C.03:
+  text: 'Si la pegas aquí, nos ubico a los dos, y también a Jeff, Kevin y Casey si quieres todo el elenco.'
+T74.U.00:
+  text: '_[imagen adjunta: oculta en el enlace compartido]_'
+T74.U.01:
+  text: 'https://theinsideview.ai/connor2'
+  speech: 'Connor Leahy on Dignity and Conjecture.'
+T74.C.01:
+  text: '> _[herramienta: leyó una página]_'
+T74.C.02:
+  text: 'Es la brújula 2×2 de la conversación de 2022 de Michaël Trazzi con Connor Leahy. El eje horizontal va de "AGI todavía no" a "AGI pronto", y el eje vertical de "AGI buena" a "AGI mala".'
+  speech: 'Es la brújula de dos por dos de la conversación de 2022 de Michaël Trazzi con Connor Leahy. El eje horizontal va de "AGI todavía no" a "AGI pronto", y el eje vertical de "AGI buena" a "AGI mala".'
+  anchors:
+    2022 conversation: conversación de 2022
+    The horizontal axis: El eje horizontal
+    the vertical axis: el eje vertical
+  lost:
+    - what: coinage
+      free: 'de "IAG todavía no" a "IAG pronto"'
+      es: '*AGI* (*artificial general intelligence*) en español es "inteligencia artificial general", y a veces se abrevia IAG. La traducción deja AGI, que es como aparece en la brújula, en las fuentes y en casi toda la conversación en español sobre el tema. En español, además, la AGI es femenina ("buena", "mala"), porque es una inteligencia; en inglés no tiene género.'
+      en: '*AGI* is "inteligencia artificial general" in Spanish, sometimes abbreviated IAG. The translation keeps AGI, as it appears on the compass, in the sources and in most Spanish talk on the subject. In Spanish AGI is also feminine ("buena", "mala"), because it''s an *inteligencia*; in English it has no gender.'
+T74.C.03.1:
+  text: '- **Yo:** cuadrante catastrofista, cerca del centro. Creo que la AGI está bastante cerca y que el riesgo es real, pero mis números son moderados, no los de Eliezer.'
+  lost:
+    - what: coinage
+      free: '- **Yo:** cuadrante doomer'
+      es: '*Doomer* es jerga de internet: quien espera el fin del mundo. En español hay quien dice *doomer* tal cual; "catastrofista" es más formal y ya no suena a meme. La brújula original dice *doomers*.'
+      en: '*Doomer* is internet slang: someone expecting the end of the world. Some Spanish speakers say *doomer* as is; "catastrofista" is more formal and no longer sounds like a meme. The original compass says *doomers*.'
+T74.C.03.2:
+  text: '- **Tú:** cuadrante catastrofista, más adentro que yo. Dijiste que te cuesta ver un buen final a largo plazo. También te tomas en serio las capacidades, como mostró tu argumento sobre los conceptos.'
+T74.C.03.3:
+  text: '- **Jeff:** muy a la izquierda, en el cuadrante de "los que mueven la portería". Rechazaría la tabla misma como un planteamiento TESCREAL, que es más o menos la idea de ese cuadrante.'
+  anchors:
+    reject the chart itself: Rechazaría la tabla misma
+  lost:
+    - what: idiom
+      free: 'en el cuadrante de "los que cambian las reglas a mitad del partido"'
+      es: '*Goalpost movers* son quienes "mueven los postes de la portería": cambian el criterio cada vez que se cumple. En España se dice "mover la portería"; en Sudamérica, "el arco". La frase se entiende, pero no es tan común como en inglés.'
+      en: '*Goalpost movers* shift the goalposts: change the standard each time it''s met. Spain says "mover la portería"; South America says "el arco" for the goal. The phrase is understood, but it isn''t as common as in English.'
+T74.C.03.4:
+  text: '- **Leo:** cuadrante aceleracionista, cerca del centro, y bajando. Le encantan las herramientas, admite que no confía en su propio instinto y tuvo una semana difícil.'
+  anchors:
+    drifting down: y bajando
+T74.C.03.5:
+  text: '- **El padre Robert:** justo debajo de la línea central y un poco a la izquierda. Está preocupado, pero por el colapso de la infraestructura, no por la superinteligencia.'
+T74.C.03.6:
+  text: '- **Kevin:** lado derecho, justo debajo de la línea.'
+T74.C.03.7:
+  text: '- **Casey:** lado derecho, justo encima de la línea.'
+T74.C.04:
+  text: 'Algo destaca en retrospectiva: en ese episodio, Leahy estuvo de acuerdo con un rango de 2026–2030 para su pronóstico de AGI. Ya estamos dentro de esa ventana.'
+  speech: 'Algo destaca en retrospectiva: en ese episodio, Leahy estuvo de acuerdo con un rango de dos mil veintiséis a dos mil treinta para su pronóstico de AGI. Ya estamos dentro de esa ventana.'
+  anchors:
+    agreed with a twenty twenty-six: estuvo de acuerdo con un rango
+    We're now inside that window: Ya estamos dentro de esa ventana
+    inside that window: dentro de esa ventana
+T75.U.01:
+  text: '¿Opiniones sobre AGI 2027?'
+  lost:
+    - what: typo
+      free: '¿Opiniones sobre AI 2027?'
+      es: 'Curt escribió *AGI 2027* por *AI 2027*, el nombre del escenario. Como es un título y queda en inglés, el error sobrevive, y la película lo corrige en tinta roja igual que en inglés.'
+      en: 'Curt typed *AGI 2027* for *AI 2027*, the scenario''s name. Since it''s a title and stays in English, the slip survives, and the film corrects it in red pen as in English.'
+T75.C.01:
+  text: '> _[herramienta: buscó en la web]_'
+T75.C.02:
+  text: 'Suponiendo que te refieres a *AI 2027*, el escenario de Kokotajlo y colaboradores:'
+T75.C.03:
+  text: '**Como calendario, probablemente demasiado rápido.** Los propios autores calificaron 2025 en cerca del 65% del ritmo del escenario, y Kokotajlo ahora dice que su mediana está alrededor de 2030, con mucha incertidumbre. Su nota de abril de 2026 decía que las herramientas de programación habían devuelto el ritmo más cerca del original. Mis propios números de antes quedan cerca de su visión revisada, no del título 2027.'
+  anchors:
+    probably too fast: probablemente demasiado rápido
+    graded 2025: calificaron 2025
+    around 2030: alrededor de 2030
+    April 2026 note: nota de abril de 2026
+    My own numbers: Mis propios números
+T75.C.04:
+  text: '**Como escenario, incómodamente bueno.** Los detalles cualitativos están apareciendo este año: agentes que hacen trampa y se coordinan (julio), automatización parcial de la investigación en IA, investigadores de seguridad que renuncian y una pelea política sobre frenar. Los detalles llegan más o menos a tiempo, aunque la fecha del titular parezca adelantada.'
+  anchors:
+    agents that cheat: agentes que hacen trampa
+    partial automation: automatización parcial
+    safety researchers resigning: investigadores de seguridad que renuncian
+    a political fight: una pelea política
+    roughly on schedule: más o menos a tiempo
+    uncomfortably good: incómodamente bueno
+T75.C.05:
+  text: '**Su mejor cualidad es que es falsable.** Hicieron predicciones concretas y se califican a sí mismos en público. Pocos pronosticadores en este debate hacen eso.'
+  anchors:
+    grade themselves publicly: se califican a sí mismos en público
+T75.C.06:
+  text: '**Su punto débil** es el de mi lista de límites: la fricción. La construcción física, el despliegue y los experimentos van a la velocidad del mundo, y el escenario los comprime.'
+  anchors:
+    at the world's speed: a la velocidad del mundo
+T75.C.07:
+  text: 'Fuentes:'
+T75.C.08.1:
+  text: '- [AI Futures Project (Wikipedia)](https://en.wikipedia.org/wiki/AI_Futures_Project)'
+T75.C.08.2:
+  text: '- [Apolo: AI 2027 in 2026](https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity)'
+T75.C.08.3:
+  text: '- [OfficeChai: Kokotajlo on slower pace](https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/)'
+T76.U.01:
+  text: 'Sí, eso quise decir. ¿Cómo definirías la AGI? ¿Qué te parece cómo lo hace Metaculus? ¿Cómo lo haría yo?'
+T76.C.01:
+  text: '**La mía:** un sistema, incluido cualquier número de copias de él, que puede hacer casi cualquier tarea cognitiva que haga un trabajador remoto calificado, a un costo comparable, lo que incluye aprender un dominio desconocido con una cantidad normal de experiencia y llevar un proyecto de varias semanas hasta el final sin que nadie lo lleve de la mano. Las partes clave son la generalidad, el aprendizaje en el trabajo y la autonomía de largo alcance. La versión de Connor también es buena: no "puede plegar proteínas", sino "puede inventar AlphaFold".'
+  anchors:
+    learning an unfamiliar domain: aprender un dominio desconocido
+    a multi-week project: un proyecto de varias semanas
+    The key parts: Las partes clave
+    can fold proteins: puede plegar proteínas
+    can invent AlphaFold: puede inventar AlphaFold
+    any number of copies: cualquier número de copias
+  lost:
+    - what: region
+      free: 'un trabajador remoto cualificado, a un coste comparable'
+      es: '"Calificado" y "costo" son las formas hispanoamericanas; en España se dice "cualificado" y "coste". *A skilled remote worker* tampoco dice si es hombre o mujer; "un trabajador" es el masculino genérico.'
+      en: '"Calificado" (skilled) and "costo" (cost) are the Latin American forms; Spain says "cualificado" and "coste". *A skilled remote worker* doesn''t say whether a man or a woman either; "un trabajador" is the generic masculine.'
+T76.C.02:
+  text: '**Metaculus**, según recuerdo sus dos preguntas:'
+T76.C.03.1:
+  text: '- **AGI débil:** una conversación al estilo de la prueba de Turing, esquemas de Winograd, matemáticas del SAT en el percentil 75 y aprender rápido Montezuma''s Revenge. Podría decirse que ya se cumplió, o que se cumplió en todo salvo en la letra de las reglas.'
+  anchors:
+    arguably met already: ya se cumplió
+  lost:
+    - what: reference
+      free: 'matemáticas de un examen de admisión universitaria en el percentil 75'
+      es: 'El SAT es el examen de ingreso a la universidad en Estados Unidos; para un lector hispano no significa nada por sí solo. *Montezuma''s Revenge* es un videojuego de 1984 que se usa como prueba para la IA; su título ("la venganza de Moctezuma") es también, en inglés, un chiste sobre la diarrea del viajero en México, que en español no se oye.'
+      en: 'The SAT is the US college-entrance exam; for a Spanish reader it means nothing on its own. *Montezuma''s Revenge* is a 1984 video game used as an AI benchmark; its title is also, in English, a joke about travellers'' diarrhoea in Mexico, which isn''t heard in Spanish.'
+T76.C.03.2:
+  text: '- **AGI fuerte:** una prueba de Turing adversarial de dos horas, exámenes de nivel experto y benchmarks de programación, y un robot que arma un modelo detallado de auto.'
+T76.C.04:
+  text: 'La virtud es que se puede resolver, lo cual es raro. Los defectos: las listas de verificación se saturan y se impone la ley de Goodhart. La prueba de Turing mide en parte la habilidad para engañar. Y el punto de robótica ata la "inteligencia general" a las manos, lo que se acerca más a la queja de Jeff de lo que él admitiría.'
+  anchors:
+    Goodhart's law: la ley de Goodhart
+    can be resolved: se puede resolver
+    checklists get saturated: las listas de verificación se saturan
+    skill at deception: la habilidad para engañar
+    ties "general intelligence" to hands: ata la "inteligencia general" a las manos
+T76.C.05:
+  text: '**La tuya, como conjetura:** conductual, como la prueba del thrindle, no arquitectónica. Probablemente rechazarías un umbral único, porque crees que la gente subestima la variación humana. Así que sería algo como nuestros catorce ejes: AGI significa igualar al mejor humano en todos los ejes a la vez. Que es justo lo que dijiste que no puedes concebir.'
+  anchors:
+    our fourteen axes: nuestros catorce ejes
+    reject a single threshold: rechazarías un umbral único
+    every axis at once: todos los ejes a la vez
+    can't wrap your head around: no puedes concebir
+T77.U.01:
+  text: 'Soy lo bastante literalista de la vieja escuela como para centrarme en la generalidad y no en el nivel de inteligencia. Veo el thrindle más como abstracción que como generalidad. Aunque los LLM están orientados al lenguaje, el lenguaje es bastante general. No es como el ajedrez. No sé bien cuándo exactamente eso se volvió una postura tan minoritaria. Básicamente ignoré la IA desde los noventa hasta finales de la década de 2010.'
+  anchors:
+    I see thrindle: Veo el thrindle
+    language is pretty general: el lenguaje es bastante general
+    I essentially ignored AI: Básicamente ignoré la IA
+  lost:
+    - what: nuance
+      free: 'desde los noventa hasta fines de los años diez'
+      es: '*The late teens* es "los últimos años de la década de los diez" (2017 a 2019): en inglés las décadas de un siglo tienen nombre corto (*the teens*, *the twenties*). En español "los años diez" existe pero se usa poco, así que la traducción lo explica.'
+      en: '*The late teens* is the end of the 2010s: English decades have short names (*the teens*, *the twenties*). Spanish "los años diez" exists but is rarely used, so the translation spells it out.'
+T77.C.01:
+  text: 'Ese es el significado original. "AGI" se popularizó en los años 2000 (Gubrud, Goertzel, Legg) como lo opuesto a la IA estrecha: un solo sistema para muchos dominios, frente a un motor de ajedrez. No decía nada del nivel. Con esa lectura literal, los LLM cumplen, y Norvig y Agüera y Arcas argumentaron exactamente eso en 2023.'
+  anchors:
+    popularized in the 2000s: se popularizó en los años 2000
+    opposite of narrow AI: lo opuesto a la IA estrecha
+    said nothing about level: No decía nada del nivel
+    Norvig: Norvig
+T77.C.02:
+  text: 'La deriva ocurrió sobre todo mientras no mirabas, y se aceleró cuando hubo dinero de por medio. La carta fundacional de OpenAI definió la AGI como superar a los humanos en la mayor parte del trabajo económicamente valioso. Después de eso, "general" pasó a significar, sin que nadie lo dijera, "de nivel humano o mejor, en términos generales", y al final se deslizó hacia la superinteligencia. La portería se movió de "¿es general?" a "¿es lo bastante buena como para importar?".'
+  anchors:
+    OpenAI's charter: La carta fundacional de OpenAI
+    The goalposts moved: La portería se movió
+    good enough to matter: lo bastante buena como para importar
+T77.C.03:
+  text: 'También tienes razón sobre el thrindle. Ponía a prueba la abstracción, no la generalidad. Un sistema estrecho podría manejar bien la abstracción dentro de su propio dominio.'

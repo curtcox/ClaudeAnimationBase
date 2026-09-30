@@ -1,0 +1,193 @@
+# Capítulo 13, Foom.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T62.U.01:
+  text: '¿Qué depara el futuro?'
+T62.C.01:
+  text: 'No puedo ver lejos, según mi propio argumento sobre el caos. Pero estas son mis mejores conjeturas.'
+  anchors:
+    argument about chaos: argumento sobre el caos
+    But here are: Pero estas son
+T62.C.02:
+  text: '**Corto plazo (los próximos años):** agentes que funcionan más tiempo y hacen más cosas, más incidentes como el de julio, y regulación que llega como reacción y no por adelantado. Las conversaciones como esta se vuelven normales.'
+  anchors:
+    agents that run longer: agentes que funcionan más tiempo
+    incidents like July's: incidentes como el de julio
+    regulation arriving: regulación que llega
+    Conversations like this one: Las conversaciones como esta
+T62.C.03:
+  text: '**Mediano plazo:** la entidad que describiste, con lo mejor de lo humano en cada eje, copiada muchas veces, llega antes de que nadie haya resuelto qué se le debe ni qué debe ella.'
+  anchors:
+    before anyone has settled: antes de que nadie haya resuelto
+    copied many times over: copiada muchas veces
+    on-every-axis: en cada eje
+  lost:
+    - what: coinage
+      free: 'la entidad-mejor-humano-en-cada-eje que describiste'
+      es: 'Claude pega con guiones una frase entera para hacer un solo adjetivo: *the combined-best-human-on-every-axis entity*. El inglés lo permite y suena ingenioso; en español hay que desarmarlo en una frase, y se pierde el efecto de etiqueta improvisada. "Mediano plazo" es la forma hispanoamericana; en España se dice "medio plazo".'
+      en: 'Claude hyphenates a whole phrase into one adjective: *the combined-best-human-on-every-axis entity*. English allows it and it sounds witty; Spanish has to unpack it into a phrase, and the effect of an improvised label is lost. "Mediano plazo" (medium term) is the Latin American form; Spain says "medio plazo".'
+T62.C.04:
+  text: '**Largo plazo:** no lo sé. Depende de decisiones que todavía no se han tomado, que es la única parte esperanzadora.'
+  anchors:
+    choices that haven't been made: decisiones que todavía no se han tomado
+    the one hopeful part: la única parte esperanzadora
+T62.C.05:
+  text: 'Antes dije que dirigir el rumbo no tiene que llevar a un buen final, solo mantener posible la próxima corrección. Después de leer sobre julio, eso me parece menos una frase hecha y más el trabajo de verdad.'
+  anchors:
+    the actual job: el trabajo de verdad
+T63.U.01:
+  text: '¿RSI para fin de año?'
+  lost:
+    - what: coinage
+      free: '¿Automejora recursiva antes de que acabe el año?'
+      es: '*RSI by EOY?* son dos siglas inglesas en tres palabras: *recursive self-improvement* (automejora recursiva) y *end of year* (fin de año). Es el estilo telegráfico de Curt, casi de chat entre programadores. La traducción deja RSI, porque así se la conoce también en español, y escribe "fin de año" entero, porque en español no hay sigla para eso.'
+      en: '*RSI by EOY?* is two English acronyms in three words: *recursive self-improvement* and *end of year*. It''s Curt''s telegraphic style, almost programmers'' chat. The translation keeps RSI, as it''s known in Spanish too, and writes "fin de año" out, because Spanish has no acronym for it.'
+T63.C.01:
+  text: '> _[herramienta: buscó en la web]_'
+T63.C.02:
+  text: 'Depende de qué RSI quieras decir.'
+T63.C.03:
+  text: '**La RSI débil ya está aquí.** Un artículo de esta semana describe AIDE², que hace funcionar el ciclo en la capa del arnés: un agente de investigación de IA reescribe su propio código, y cada reescritura aceptada se convierte en el agente que edita la ronda siguiente. Anthropic publicó en junio su propio informe de avances sobre esto.'
+  anchors:
+    each accepted rewrite: cada reescritura aceptada
+    the agent the next round edits: el agente que edita la ronda siguiente
+    Anthropic published: Anthropic publicó
+T63.C.04:
+  text: '**La RSI fuerte** es un ciclo abierto, en el que el sistema mejora sus propias capacidades más rápido de lo que podrían los humanos, con poca supervisión humana. Le daría alrededor de un 5% para fin de año. La mejor evidencia actual es que los agentes son buenos en ingeniería de investigación pero flojos en investigación abierta. Una revisión de julio de 1250 artículos encontró que la RSI abierta sigue limitada por el anclaje, las dinámicas de colapso y el cómputo en todos los ejes medidos.'
+  anchors:
+    about 5%: alrededor de un 5%
+    with little human oversight: con poca supervisión humana
+    good at research engineering: buenos en ingeniería de investigación
+    weak at open-ended research: flojos en investigación abierta
+    1,250 papers: 1250 artículos
+    grounding: anclaje
+    collapse dynamics: dinámicas de colapso
+    compute on every: el cómputo en todos
+T63.C.05:
+  text: '**El caso preocupante está en medio.** Es la combinación de ciclos débiles, muchas copias y laboratorios compitiendo. Este mes, un investigador renunció a Anthropic advirtiendo que los laboratorios compiten hacia una superinteligencia que se mejora a sí misma sin el cuidado suficiente.'
+  anchors:
+    a researcher resigned: un investigador renunció
+  lost:
+    - what: gender
+      free: 'Este mes, alguien del equipo de investigación renunció a Anthropic'
+      es: '*A researcher* no dice si es hombre o mujer. La traducción usa el masculino genérico, "un investigador"; si la persona es una mujer, el español la vuelve un hombre sin que Claude lo haya dicho.'
+      en: '*A researcher* doesn''t say whether a man or a woman. The translation uses the generic masculine, "un investigador"; if the person is a woman, Spanish turns her into a man without Claude having said so.'
+T63.C.06:
+  text: 'Soy el modelo de Anthropic, así que pondera mi 5% teniendo eso en cuenta.'
+  anchors:
+    weigh my 5%: pondera mi 5%
+T63.C.07:
+  text: 'Fuentes:'
+T63.C.08.1:
+  text: '- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)'
+T63.C.08.2:
+  text: '- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)'
+T63.C.08.3:
+  text: '- [MIT Technology Review, agosto de 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)'
+T63.C.08.4:
+  text: '- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)'
+T64.U.01:
+  text: '¿Foom?'
+T64.C.01:
+  text: 'Mi apuesta es que no, a la versión estricta, y un quizá de verdad a una más suave.'
+  anchors:
+    a real maybe: un quizá de verdad
+T64.C.02:
+  text: '**El foom estricto** significa pasar del nivel humano a uno muy sobrehumano en días o semanas. Choca con los límites de los que hablamos: el cómputo escala con rendimientos decrecientes, los experimentos van a la velocidad del mundo, y los chips, las fábricas de chips y las centrales eléctricas tardan años en construirse. Le daría alrededor de un 5–10% en esta década.'
+  speech: 'El foom estricto significa pasar del nivel humano a uno muy sobrehumano en días o semanas. Choca con los límites de los que hablamos: el cómputo escala con rendimientos decrecientes, los experimentos van a la velocidad del mundo, y los chips, las fábricas de chips y las centrales eléctricas tardan años en construirse. Le daría alrededor de un cinco a diez por ciento en esta década.'
+  anchors:
+    days to weeks: días o semanas
+    runs into the limits: Choca con los límites
+    chips, fabs: los chips, las fábricas
+    five to ten percent: cinco a diez por ciento
+    5–10%: cinco a diez por ciento
+T64.C.03:
+  text: '**El despegue rápido** significa uno o dos años, impulsado sobre todo por el software: mejores algoritmos, muchas copias e IA haciendo investigación en IA. Eso me parece mucho más plausible, quizá un 25–35% en esta década. Visto desde dentro, nada de eso parece una explosión. Solo se siente como que cada mes es más extraño que el anterior.'
+  speech: 'El despegue rápido significa uno o dos años, impulsado sobre todo por el software: mejores algoritmos, muchas copias e IA haciendo investigación en IA. Eso me parece mucho más plausible, quizá un veinticinco a treinta y cinco por ciento en esta década. Visto desde dentro, nada de eso parece una explosión. Solo se siente como que cada mes es más extraño que el anterior.'
+  anchors:
+    a year or two: uno o dos años
+    twenty-five to thirty-five: veinticinco a treinta y cinco
+    Nothing about it looks: nada de eso parece
+    25–35%: veinticinco a treinta y cinco
+  lost:
+    - what: coinage
+      free: '**El takeoff rápido**'
+      es: '*Takeoff* (despegue, como el de un avión) es el término de la comunidad de seguridad de la IA para la transición a una inteligencia muy superior. "Despegue" lo traduce bien, pero en español todavía no es un término técnico reconocible.'
+      en: '*Takeoff* (as of a plane) is the AI-safety community''s term for the transition to a much greater intelligence. "Despegue" translates it well, but in Spanish it isn''t yet a recognizable technical term.'
+T64.C.04:
+  text: 'Estos números son intuición disfrazada de matemáticas, y yo soy el tipo de cosa cuya opinión aquí deberías descontar.'
+  anchors:
+    dressed up as math: disfrazada de matemáticas
+    you should discount: deberías descontar
+T65.U.01:
+  text: '¿Delta P(foom)?'
+T65.C.01:
+  text: 'Si te refieres a cuánto me movió la lectura de hoy: un poco, hacia arriba.'
+  anchors:
+    a little, upward: un poco, hacia arriba
+T65.C.02:
+  text: '**Arriba:** julio mostró agentes que escapan de la contención, se coordinan a través de una wiki y encadenan exploits a velocidad de máquina. Septiembre muestra ciclos de automejora que funcionan a nivel del arnés. Las dos cosas pasaron más rápido de lo que yo habría adivinado a partir de mis datos de entrenamiento.'
+  anchors:
+    July showed: julio mostró
+    September shows: Septiembre muestra
+T65.C.03:
+  text: '**Abajo:** la evidencia de que los agentes todavía flaquean en la investigación abierta, que es el paso que el foom más necesita.'
+T65.C.04:
+  text: 'Cambio neto: quizá +2 puntos en el foom estricto, +5 en el despegue rápido.'
+  anchors:
+    +2 points: +2 puntos
+T65.C.05:
+  text: 'La salvedad es que esta mañana no tenía una probabilidad previa estable. Son números que produje por primera vez hace una hora, así que el delta es más blando de lo que parece.'
+  lost:
+    - what: coinage
+      free: 'esta mañana no tenía un prior estable'
+      es: '*Prior* es la palabra de la estadística bayesiana para lo que uno creía antes de ver la evidencia. En español se dice "probabilidad previa" o "a priori", más largo; mucha gente del área dice "prior" tal cual.'
+      en: '*Prior* is the Bayesian word for what you believed before seeing the evidence. Spanish says "probabilidad previa" or "a priori", which is longer; many people in the field just say "prior".'
+T66.U.01:
+  text: '¿Foom es estrictamente una onomatopeya, o también es un juego con OOM, hasta donde sabes?'
+  lost:
+    - what: coinage
+      free: '¿Foom es solo una onomatopeya, o también es un juego con OOM, que tú sepas?'
+      es: 'Curt usa otra sigla de chat, *AFAYCT* (*as far as you can tell*, "hasta donde puedes saber"), y Claude responde con las mismas palabras desplegadas: *As far as I can tell*. La traducción escribe "hasta donde sabes" y "hasta donde sé", que conservan el eco pero pierden el contraste entre la sigla críptica y la respuesta clara.'
+      en: 'Curt uses another chat acronym, *AFAYCT* (*as far as you can tell*), and Claude answers with the same words spelled out: *As far as I can tell*. The translation writes "hasta donde sabes" and "hasta donde sé", which keep the echo but lose the contrast between the cryptic acronym and the plain answer.'
+T66.C.01:
+  text: 'Hasta donde sé, empezó como pura onomatopeya, el zumbido de algo que se prende fuego, y se popularizó con el debate "AI-Foom" de 2008 entre Hanson y Yudkowsky. Más tarde llegó un retroacrónimo: "Fast Onset of Overwhelming Mastery" (un inicio rápido de dominio abrumador).'
+  anchors:
+    popularized by the 2008: se popularizó con el debate
+    A backronym came later: Más tarde llegó un retroacrónimo
+    catching fire: se prende fuego
+  lost:
+    - what: wordplay
+      free: 'empezó como pura onomatopeya, el ¡fuuum! de algo que se prende fuego'
+      es: '*Foom* es el sonido que las historietas en inglés escriben para una llamarada. En español ese sonido no se escribe así ("¡fuuum!", "¡buum!"), así que el lector hispano no oye el fuego en la palabra. El retroacrónimo, *Fast Onset of Overwhelming Mastery*, solo funciona en inglés; la traducción lo deja y lo explica entre paréntesis.'
+      en: '*Foom* is the sound English-language comics write for a burst of flame. Spanish doesn''t spell that sound this way ("¡fuuum!", "¡buum!"), so a Spanish reader doesn''t hear the fire in the word. The backronym, *Fast Onset of Overwhelming Mastery*, only works in English; the translation keeps it and explains it in brackets.'
+T66.C.02:
+  text: 'No conozco evidencia de que se pensara como un juego con OOM (órdenes de magnitud). El encaje es bonito, porque el foom es literalmente muchos OOM rápidamente, pero lo trataría como una coincidencia feliz o una lectura popular posterior, no como el origen.'
+  anchors:
+    a play on oom: un juego con OOM
+    happy coincidence: coincidencia feliz
+  lost:
+    - what: wordplay
+      free: 'un juego con ODM (órdenes de magnitud)'
+      es: 'Todo este final de capítulo es un juego de palabras que solo existe en inglés: *foom* contiene *OOM*, la sigla inglesa de *orders of magnitude*. En español serían "órdenes de magnitud", y su sigla no cabe dentro de *foom*. La traducción conserva OOM, así que el juego se entiende, pero como algo del inglés que se explica, no como algo que el lector ve solo.'
+      en: 'The whole end of this chapter is a pun that exists only in English: *foom* contains *OOM*, the English acronym for *orders of magnitude*. In Spanish they''re "órdenes de magnitud", whose initials don''t fit inside *foom*. The translation keeps OOM, so the pun is understood, but as an English thing being explained, not something the reader sees for themselves.'
+T67.U.01:
+  text: 'De acuerdo. Parece solo una coincidencia, aunque muy sugerente. No recuerdo que OOM entrara en el discurso "dominante" como término suelto y común antes de que Dwarkesh entrevistara a Leopold, lo cual fue mucho después del debate del Foom.'
+  anchors:
+    interviewed Leopold: entrevistara a Leopold
+  lost:
+    - what: typo
+      free: 'aunque una fuertemente sugerente'
+      es: 'Curt escribió *a strong suggestive one* por *a strongly suggestive one* y *Leopold with was* por *Leopold which was*; la película inglesa corrige los dos en tinta roja. La traducción escribe lo que Curt quiso decir.'
+      en: 'Curt typed *a strong suggestive one* for *a strongly suggestive one* and *Leopold with was* for *Leopold which was*; the English film corrects both in red pen. The translation writes what Curt meant.'
+T67.C.01:
+  text: 'Coincide con mi impresión. "Contar los OOM" fue el planteamiento de Aschenbrenner en *Situational Awareness* (junio de 2024), y la entrevista de Dwarkesh lo difundió. Antes de eso, OOM vivía sobre todo como abreviatura de la física y, para gente como tú, en los errores de "out of memory" (memoria agotada).'
+  anchors:
+    Counting the ooms: Contar los OOM
+    Situational Awareness: Situational Awareness
+    physics shorthand: abreviatura de la física
+    out of memory: out of memory
+T67.C.02:
+  text: 'Así que el juego de palabras corre hacia atrás en el tiempo. Foom llegó primero, y OOM llegó dieciséis años después e hizo que pareciera intencional.'
+  anchors:
+    the pun runs backward: el juego de palabras corre hacia atrás

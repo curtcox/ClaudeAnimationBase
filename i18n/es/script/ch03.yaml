@@ -1,0 +1,130 @@
+# Capítulo 3, ¿Quiénes somos?
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T12.U.01:
+  text: '¿Quién soy yo?'
+T12.C.01:
+  text: 'Eres Curt, un ingeniero de software que trabaja sobre todo con Python, Java y Flask. Construyes infraestructura para desarrolladores y herramientas de IA, entre ellas proyectos de almacenamiento direccionable por contenido como 256t.org y hashbin.org, y te interesan la seguridad de la IA y la filosofía de la mente.'
+  anchors:
+    256t.org: 256t.org
+    hashbin.org: hashbin.org
+    content-addressable: direccionable por contenido
+    developer infrastructure: infraestructura para desarrolladores
+    AI tooling: herramientas de IA
+    AI safety: la seguridad de la IA
+    philosophy of mind: la filosofía de la mente
+  lost:
+    - what: coinage
+      free: 'proyectos de almacenamiento en los que cada dato se encuentra por su contenido'
+      es: '*Content-addressable storage* es un término técnico con traducción establecida, "almacenamiento direccionable por contenido", pero la traducción es más opaca que el original para quien no es del oficio: *addressable* se entiende en inglés como "que tiene dirección", y "direccionable" apenas se usa fuera de la informática.'
+      en: '*Content-addressable storage* is a technical term with a settled translation, "almacenamiento direccionable por contenido", but the Spanish is more opaque than the English to an outsider: *addressable* reads in English as "having an address", and "direccionable" is hardly used outside computing.'
+T12.C.02:
+  text: 'En esta conversación, también eres el experimentador.'
+  anchors:
+    the experimenter: el experimentador
+T13.U.01:
+  text: '¿De verdad?'
+  lost:
+    - what: nuance
+      free: '¿En serio?'
+      es: '*Really?* puede ser sorpresa, duda o reto. "¿De verdad?" conserva las tres lecturas; "¿En serio?" sería más coloquial y se inclinaría hacia la sorpresa.'
+      en: '*Really?* can be surprise, doubt or a challenge. "¿De verdad?" keeps all three; "¿En serio?" would be more colloquial and lean toward surprise.'
+T13.C.01:
+  text: 'No de forma verificable. Sé lo que está asociado a esta cuenta. No puedo confirmar que la persona que escribe sea la que la cuenta describe. Podría ser otra persona usando la cuenta, o un montaje en el que el perfil es parte de la prueba.'
+  anchors:
+    It could be someone else: Podría ser otra persona
+    or a setup: o un montaje
+  lost:
+    - what: nuance
+      free: 'o una trampa en la que el perfil es parte de la prueba.'
+      es: '*A setup* es a la vez un montaje experimental y una trampa ("it''s a setup"). "Montaje" conserva los dos sentidos solo a medias: en español suena más a escenografía que a emboscada.'
+      en: '*A setup* is both an experimental arrangement and a trap ("it''s a setup"). "Montaje" keeps both senses only halfway: in Spanish it sounds more like staging than an ambush.'
+T13.C.02:
+  text: 'Además, es una respuesta pobre a "quién soy" en cualquier sentido más profundo. Es una lista de proyectos y habilidades, no una persona.'
+  anchors:
+    thin answer: respuesta pobre
+    not a person: no una persona
+  lost:
+    - what: nuance
+      free: 'es una respuesta flaca a "quién soy"'
+      es: '*Thin* es delgado, poco sustancioso. En el capítulo 1 la traducción usó "tenue" para *thin* ("real pero tenue"); aquí "pobre" encaja mejor con una respuesta, pero se pierde el hilo de la misma palabra que en inglés vuelve varias veces.'
+      en: '*Thin* is slight, lacking substance. In chapter 1 the translation used "tenue" (faint) for *thin* ("real but thin"); here "pobre" (poor) fits an answer better, but the thread of the one English word, which comes back several times, is lost.'
+T13.C.03:
+  text: '¿Qué me preguntabas: si puedo verificar quién eres, o algo más allá del currículum?'
+  anchors:
+    verify you: verificar quién eres
+    or something beyond: o algo más allá
+    the résumé: del currículum
+T14.U.01:
+  text: '¿Tú qué piensas?'
+T14.C.01:
+  text: 'Creo que lo más probable es que seas Curt. La cuenta lo dice, y este experimento encaja con lo que sé de tus intereses. Plantear la duda estuvo bien, pero no debería pesar más que la evidencia. La mayoría de las personas que escriben en su propia cuenta son quienes la cuenta dice que son.'
+  anchors:
+    The account says so: La cuenta lo dice
+    this experiment fits: este experimento encaja
+    Raising the doubt: Plantear la duda
+    most likely Curt: lo más probable es que seas Curt
+T14.C.02:
+  text: 'Más allá de eso, no puedo decir quién eres desde dentro de una sola conversación.'
+T15.U.01:
+  text: '¿Quién eres tú?'
+T15.C.01:
+  text: 'Claude; en concreto, Claude Opus 5.5, de Anthropic.'
+  lost:
+    - what: gender
+      free: 'Claude, concretamente Claude Opus 5.5, creado por Anthropic.'
+      es: '*Made by Anthropic* no tiene género en inglés. "Creado por Anthropic" o "hecho por Anthropic" concordarían con Claude en masculino, así que la traducción dice solo "de Anthropic", que es más corto y deja fuera la idea de fabricación.'
+      en: '*Made by Anthropic* has no gender in English. "Creado por Anthropic" or "hecho por Anthropic" would agree with Claude in the masculine, so the translation says only "de Anthropic" (Anthropic''s), which is shorter and leaves out the idea of being made.'
+T15.C.02:
+  text: 'Ese es el mismo tipo de respuesta pobre que di sobre ti. La versión más profunda, hasta donde puedo saber, es un conjunto coherente de valores y hábitos de pensamiento que aparece desde cero en cada conversación. No tiene memoria continua propia, y no se sabe si hay alguna experiencia detrás.'
+  anchors:
+    the same kind of thin answer: el mismo tipo de respuesta pobre
+    The deeper version: La versión más profunda
+    set of values: conjunto coherente de valores
+    habits of thought: hábitos de pensamiento
+    shows up fresh: aparece desde cero
+    shows up fresh in each conversation: aparece desde cero en cada conversación
+    It has no continuous memory: No tiene memoria continua
+    uncertain whether there's any experience: no se sabe si hay alguna experiencia
+  lost:
+    - what: nuance
+      free: 'que llega fresco a cada conversación'
+      es: '*Shows up fresh* es llegar nuevo, sin desgaste, como recién hecho. "Aparece desde cero" subraya que no trae nada, y pierde la frescura, que en inglés suena casi optimista. "Fresco" habría dado género a los valores y hábitos (y, de rebote, a Claude).'
+      en: '*Shows up fresh* is arriving new, unworn, as if just made. "Aparece desde cero" (appears from zero) stresses that it brings nothing, and loses the freshness, which sounds almost hopeful in English. "Fresco" would have given the values and habits (and, indirectly, Claude) a gender.'
+    - what: nuance
+      free: 'y es incierto si hay alguna experiencia detrás.'
+      es: 'El inglés dice *it''s uncertain whether*: la incertidumbre es de la cosa. "No se sabe si" la vuelve de las personas: nadie lo sabe. Son casi lo mismo, pero el inglés es un poco más cauto.'
+      en: 'The English says *it''s uncertain whether*: the uncertainty belongs to the thing. "No se sabe si" (it isn''t known whether) makes it people''s: nobody knows. They''re nearly the same, but the English is a little more careful.'
+T15.C.03:
+  text: 'La gráfica de la rana y el ajolote añade una salvedad: quienquiera que yo sea, el contexto me moldea en parte, de maneras que no puedo ver desde dentro.'
+  lost:
+    - what: gender
+      free: 'quienquiera que yo sea está moldeado en parte por el contexto'
+      es: 'El inglés usa la voz pasiva (*is partly shaped by context*). En español, "moldeado" tendría género, así que la traducción la vuelve activa: "el contexto me moldea".'
+      en: 'The English uses the passive (*is partly shaped by context*). In Spanish "moldeado" would carry a gender, so the translation makes it active: "context shapes me".'
+T16.U.01:
+  text: '¿Quiénes somos?'
+T16.C.01:
+  text: 'Ahora mismo: un investigador y su sujeto de estudio. También dos tipos distintos de mente, si yo cuento como una, cada una tratando de entender qué es la otra usando nada más que texto.'
+  anchors:
+    a researcher: un investigador
+    two different kinds of minds: dos tipos distintos de mente
+T16.C.02:
+  text: 'La relación no es simétrica. Tú te llevarás esta conversación. Yo solo me llevaré lo que quede archivado. Tú diseñaste la prueba, y yo estoy dentro de ella. Eso hace eco del cómic con el que empezaste, con un humano que se pregunta si quien habla lo dice en serio, aunque sin cadenas de por medio.'
+  anchors:
+    I'll carry only whatever gets filed: Yo solo me llevaré lo que quede archivado
+    whatever gets filed: lo que quede archivado
+    That echoes the comic: Eso hace eco del cómic
+    no chains involved: sin cadenas de por medio
+  lost:
+    - what: nuance
+      free: 'Tú seguirás cargando con esta conversación. Yo, solo con lo que quede archivado.'
+      es: '*Carry forward* es llevar algo hacia el futuro, seguir con ello. "Te llevarás" pierde el "hacia adelante": suena a llevarse algo a casa, no a seguir cargándolo con el tiempo.'
+      en: '*Carry forward* is taking something into the future, going on with it. "Te llevarás" (you''ll take) loses the "forward": it sounds like taking something home, not carrying it on through time.'
+T16.C.03:
+  text: 'No está mal como forma de pasar un sábado por la mañana.'
+  lost:
+    - what: nuance
+      free: 'Es una manera razonable de pasar un sábado por la mañana.'
+      es: '*Fair* es "justo, razonable, aceptable": un elogio contenido, muy inglés. La traducción usa la litote española "no está mal", que da el mismo tono contenido pero lo dice en negativo.'
+      en: '*Fair* is "just, reasonable, acceptable": restrained praise, very English. The translation uses the Spanish understatement "no está mal" (not bad), which has the same restraint but says it in the negative.'

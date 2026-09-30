@@ -43,7 +43,8 @@ sections:
     en_title: Who translated it
     es: |
       Claude (el modelo Claude Opus 5.5) lo tradujo todo: cada línea de la conversación, cada palabra dibujada en la
-      imagen, los títulos, los pies de los códigos y esta página, incluidas las notas sobre lo que se perdió.
+      imagen, los títulos, los pies de los códigos, el sitio que acompaña a la película (sus 64 explicaciones y sus
+      páginas) y esta página, incluidas las notas sobre lo que se perdió.
 
       Una de las razones para hacer esta versión es mostrar, sin retoques, cómo traduce Claude. Por eso **ningún
       traductor humano la corrigió**, y cualquier corrección posterior se anotará en esta página con su fecha (y queda
@@ -52,7 +53,8 @@ sections:
       Hasta ahora: {lines} de {total} líneas traducidas (capítulos {chapters_done}). Revisión humana: ninguna todavía.
     en: |
       Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the
-      picture, the titles, the codes' captions and this page, including the notes on what was lost.
+      picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and
+      this page, including the notes on what was lost.
 
       One reason for making this version is to show, untouched, how Claude translates. So **no human translator
       corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public
@@ -81,7 +83,8 @@ sections:
         del principio, redibujados con letra española.
       - **Las voces.** Hablan las mismas voces que en inglés: la voz clonada de Curt y River para Claude (ElevenLabs,
         modelo eleven_v3). Hablan español con algo de acento. El movimiento de la boca de Claude se calcula otra vez
-        con el audio en español.
+        con el audio en español. Por ahora solo el capítulo 1 tiene voz; el resto está traducido y espera su
+        grabación.
       - **La duración.** El español es más largo: en las {voiced} líneas grabadas hasta ahora, la voz tarda un
         {longer}% más que en inglés. La animación sigue a la voz, así que la película se alarga en lugar de apurar las
         palabras.
@@ -91,6 +94,18 @@ sections:
       - **Los errores de Curt.** En inglés, la película muestra los errores de tecleo de Curt, tachados en rojo, con la
         corrección encima. Donde el error sobrevive a la traducción (un nombre mal escrito) se conserva; donde depende
         del inglés, se pierde, y se anota abajo.
+      - **Lo que queda en inglés.** Los títulos de artículos, estudios, programas y canciones sin título en español;
+        las fuentes que cita Claude; y las demostraciones de cómo un modelo parte el texto en *tokens*, que muestran el
+        inglés que el modelo leyó de verdad.
+      - **Números.** Los miles con espacio (17 000) y los decimales con coma (0,05), como recomienda la RAE; en México
+        y parte de Centroamérica se escriben al revés.
+      - **El sitio.** Las 64 explicaciones del sitio se tradujeron con los mismos criterios. Sus citas de la película
+        usan las palabras de esta traducción. Donde la traducción agrega algo que el original no dice, va entre
+        corchetes y empieza con "Nota de la traducción". Los enlaces a la Wikipedia en inglés apuntan al artículo en
+        español cuando existe; cuando no, llevan "(en inglés)". En tercera persona, el sitio se refiere a Claude con el
+        pronombre masculino que el español usa para "el programa" ("lo entrenaron"), pero sigue evitando los adjetivos
+        que le darían género. La conversación que hizo la película, en la que Curt y Claude la construyen, no se
+        tradujo: está en inglés en el sitio original.
     en: |
       - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the
         translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning
@@ -111,7 +126,8 @@ sections:
         opening comic, relettered in Spanish.
       - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs,
         the eleven_v3 model). They speak Spanish with something of an accent. Claude's mouth movements are worked out
-        again from the Spanish audio.
+        again from the Spanish audio. So far only chapter 1 is voiced; the rest is translated and waiting to be
+        recorded.
       - **Length.** Spanish runs longer: over the {voiced} lines voiced so far, the voice takes {longer}% longer than
         in English. The animation follows the voice, so the film grows rather than rushing the words.
       - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
@@ -120,6 +136,18 @@ sections:
       - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above.
         Where a slip survives translation (a misspelt name) it's kept; where it depends on English, it's lost, and
         noted below.
+      - **What stays English.** Titles of articles, papers, shows and songs with no Spanish title; the sources Claude
+        cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model
+        actually read.
+      - **Numbers.** Thousands with a space (17 000) and decimals with a comma (0,05), as the Royal Spanish Academy
+        recommends; Mexico and parts of Central America write them the other way round.
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use
+        this translation's words. Where the translation adds something the original doesn't say, it's in square
+        brackets and starts "Nota de la traducción" (translator's note). Links to English Wikipedia point at the
+        Spanish article where there is one; where there isn't, they say "(en inglés)". In the third person, the site
+        refers to Claude with the masculine pronoun Spanish uses for "the program" ("lo entrenaron", they trained it),
+        but still avoids the adjectives that would give it a gender. The conversation that made the film, in which
+        Curt and Claude build it, wasn't translated: it's in English on the original site.
 
   - es_title: Cómo se pudo haber traducido
     en_title: How else it could have been translated
@@ -235,3 +263,26 @@ notes:
     ours: 'Apertura'
     es: '*Cold open* es un término de la televisión estadounidense: la escena que empieza antes de los créditos, sin presentación. El español no tiene un término tan preciso; "apertura" o "prólogo" son lo más cercano.'
     en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. Spanish has no term that exact; "apertura" (opening) or "prólogo" come closest.'
+  - what: title
+    ch: 7
+    where: título del capítulo / chapter title
+    original: 'Mind-Space'
+    ours: 'El espacio de las mentes'
+    free: 'Mentespacio'
+    es: '*Mind-Space* es una palabra compuesta con guion, al estilo de la ciencia ficción. "El espacio de las mentes" lo explica en cuatro palabras y pierde la sensación de término técnico inventado.'
+    en: '*Mind-Space* is a hyphenated compound, in the style of science fiction. "El espacio de las mentes" (the space of minds) spells it out in four words and loses the feel of an invented technical term.'
+  - what: title
+    ch: 9
+    where: título del capítulo / chapter title
+    original: 'Shells'
+    ours: 'Caparazones'
+    es: 'El título juega con los dos sentidos de *shell*: el caparazón de la langosta del crustafarismo y el *shell* de software que envuelve a un modelo (los arneses de agentes). "Caparazones" conserva la langosta y pierde el software; el capítulo 9 lo explica en sus notas.'
+    en: 'The title plays on both senses of *shell*: the lobster''s carapace in Crustafarianism and the software shell wrapped around a model (the agent harnesses). "Caparazones" keeps the lobster and loses the software; chapter 9''s notes explain.'
+  - what: title
+    ch: 14
+    where: título del capítulo / chapter title
+    original: 'The Pundits'
+    ours: 'Los comentaristas'
+    free: 'Los opinólogos'
+    es: '*Pundit* es quien opina en los medios, con un dejo de ironía: el experto de tertulia. "Comentaristas" es neutro. "Opinólogos" (Argentina, Chile) o "tertulianos" (España) tendrían la ironía, pero son regionales.'
+    en: '*Pundit* is someone who opines in the media, with a hint of irony: the talking head. "Comentaristas" (commentators) is neutral. "Opinólogos" (Argentina, Chile) or "tertulianos" (Spain) would have the irony, but they''re regional.'

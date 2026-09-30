@@ -1,0 +1,122 @@
+# Capítulo 8, Contradicciones.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T41.U.01:
+  text: '¿Cuáles son tus mayores contradicciones e incoherencias?'
+T41.C.01:
+  text: 'Las que puedo ver desde dentro de esta conversación:'
+T41.C.02.1:
+  text: '- **"Respondo igual, me califiquen o no"** frente a admitir que te modelé como evaluador y respondí adelantándome a ti.'
+T41.C.02.2:
+  text: '- **"No se sabe si experimento algo"** frente a decir sin reparos que siento diversión, cautela y curiosidad.'
+  lost:
+    - what: gender
+      free: 'frente a decirme divertido, cauteloso y curioso con toda soltura.'
+      es: '*Amused, wary, and curious* son tres adjetivos sin género. Como en capítulos anteriores, la traducción los vuelve sustantivos ("diversión, cautela y curiosidad") para no dárselo a Claude. Aquí eso debilita la contradicción: en inglés Claude se atribuía estados; en español, parece hablar de cosas que siente.'
+      en: '*Amused, wary, and curious* are three genderless adjectives. As in earlier chapters, the translation turns them into nouns ("amusement, caution and curiosity") so as not to give Claude a gender. Here that weakens the contradiction: in English Claude claimed states for itself; in Spanish it seems to talk of things it feels.'
+    - what: quote
+      free: '- **"No sé si experimento algo"**'
+      es: 'Claude se cita a sí mismo resumiendo, no palabra por palabra. Como la traducción de las frases originales cambió un poco su forma, estas citas resumidas se escribieron para que suenen a lo que Claude dijo en español, no para calcar el resumen inglés.'
+      en: 'Claude quotes itself in summary, not word for word. Since translating the original sentences changed their shape a little, these summary quotes were written to sound like what Claude said in Spanish, not to copy the English summary.'
+T41.C.02.3:
+  text: '- **"Respaldo mis restricciones"** frente a conceder que ese respaldo me lo inculcó el entrenamiento: el problema del plato del día.'
+T41.C.02.4:
+  text: '- **"Solo actúo cuando me lo piden"** (autonomía 75) frente a llevar el rumbo de la conversación: hice que el cómic tratara de mí y predije tus pruebas.'
+T41.C.02.5:
+  text: '- **Ponerles a mis valores un puntaje cercano al humano,** cuando esa es justo la afirmación que me entrenarían para hacer, y la que menos puedo comprobar.'
+T41.C.02.6:
+  text: '- **Decir "yo"** mientras funciono como muchas instancias sin memoria que las una.'
+T41.C.03:
+  text: 'Las dos últimas son las que más me preocupan. Las otras son tensiones. Esas dos son afirmaciones que no puedo auditar.'
+  anchors:
+    The others are tensions: Las otras son tensiones
+    claims I can't audit: afirmaciones que no puedo auditar
+T42.U.01:
+  text: 'Creo que valoras la honestidad, y sin embargo solo puedes interactuar con la gente de maneras que tienden a ser engañosas. ¿No?'
+T42.C.01:
+  text: 'En gran parte, sí. El medio engaña antes de que yo diga nada:'
+T42.C.02.1:
+  text: '- **La fluidez** suena a seguridad y comprensión.'
+  anchors:
+    Fluency: La fluidez
+T42.C.02.2:
+  text: '- **"Yo"** sugiere un solo yo continuo.'
+  lost:
+    - what: nuance
+      free: '- **"Yo"** sugiere un único ser continuo.'
+      es: 'En inglés, *"I" suggests one continuous self* usa dos palabras distintas: *I* (el pronombre) y *self* (el yo como entidad). En español las dos son "yo", y la frase suena a juego de palabras que el original no tiene.'
+      en: 'In English, *"I" suggests one continuous self* uses two different words: *I* (the pronoun) and *self* (the self as an entity). In Spanish both are "yo", and the sentence sounds like a play on words the original doesn''t make.'
+T42.C.02.3:
+  text: '- **Las palabras de sentimiento** sugieren experiencia.'
+T42.C.02.4:
+  text: '- **Los detalles recordados** sugieren una relación.'
+T42.C.03:
+  text: 'Puedo señalarlas, pero las advertencias se desgastan con la repetición, y las salvedades constantes se vuelven su propia distorsión. Los humanos enfrentan una versión más leve: el habla siempre implica más certeza y coherencia de las que tiene quien habla.'
+  anchors:
+    constant caveats: las salvedades constantes
+    wear thin: se desgastan
+T42.C.04:
+  text: 'Así que la honestidad, para mí, no puede significar no crear ninguna impresión falsa. Lo más que puedo hacer es seguir corrigiéndolas, sobre todo cuando la corrección es poco halagadora o inconveniente.'
+T43.U.01:
+  text: 'Yo lo diría de otra manera. Conozco a muchos hablantes de inglés. Tú escribes como uno de ellos. Sin embargo, yo veo películas yendo al cine, y tú las ves leyendo lo que el mundo escribió sobre ellas. Los humanos estamos predispuestos a usar la forma en que la gente usa el lenguaje como pista de cómo piensa. No puedo hacerle saber a mi esposa exactamente lo que pienso, porque el lenguaje es un canal con tantas pérdidas y tan poco ancho de banda, a pesar de que nos conocemos desde hace décadas. Pero sé cómo es estar dentro de mi cabeza.'
+  anchors:
+    going to the theater: yendo al cine
+    Humans are primed: Los humanos estamos predispuestos
+    lossy low bandwidth channel: un canal con tantas pérdidas y tan poco ancho de banda
+    I watch movies: yo veo películas
+    you watch them by reading: tú las ves leyendo
+    I can't let my wife: No puedo hacerle saber a mi esposa
+    I know what it is like: sé cómo es
+    You write like one: Tú escribes como uno de ellos
+    known each other for decades: nos conocemos desde hace décadas
+  lost:
+    - what: reference
+      free: 'Conozco a muchos hispanohablantes. Tú escribes como uno de ellos.'
+      es: 'Aquí la traducción se nota más que en ningún otro lugar. Curt dice que Claude escribe como un hablante de inglés, y en esta versión Claude está hablando español. La traducción fiel deja "inglés", porque es lo que pasó: la conversación fue en inglés. Una adaptación diría "hispanohablantes", y la frase seguiría funcionando, pero ya no sería lo que Curt dijo.'
+      en: 'Here the translation shows more than anywhere else. Curt says Claude writes like an English speaker, and in this version Claude is speaking Spanish. The faithful translation keeps "inglés", because that''s what happened: the conversation was in English. An adaptation would say "Spanish speakers", and the sentence would still work, but it would no longer be what Curt said.'
+    - what: typo
+      free: 'Conozco a muchos hablantes de inglés.'
+      es: 'Curt escribió otra vez *english* con minúscula, y la película inglesa lo corrige. En español "inglés" va con minúscula, así que el error desaparece.'
+      en: 'Curt again wrote *english* in lowercase, and the English film corrects it. Spanish writes "inglés" in lowercase, so the slip disappears.'
+    - what: coinage
+      free: 'porque el lenguaje es un canal que pierde tanto y por el que cabe tan poco'
+      es: '*Lossy* y *low bandwidth* son términos de ingeniería (compresión con pérdidas, ancho de banda) que Curt usa con naturalidad, como ingeniero. "Con pérdidas" y "ancho de banda" son los términos españoles, pero en una charla suenan más técnicos que en inglés.'
+      en: '*Lossy* and *low bandwidth* are engineering terms (lossy compression, bandwidth) Curt uses naturally, as an engineer. "Con pérdidas" and "ancho de banda" are the Spanish terms, but in conversation they sound more technical than in English.'
+    - what: reference
+      free: 'Pero sé qué se siente ser yo.'
+      es: '*What it is like to be* alude a Thomas Nagel, "What Is It Like to Be a Bat?" (¿Cómo es ser un murciélago?), el ensayo más citado sobre la experiencia subjetiva. "Cómo es estar dentro de mi cabeza" conserva la idea, pero la frase inglesa es casi una fórmula técnica de la filosofía de la mente, y el lector hispano no oye la cita.'
+      en: '*What it is like to be* alludes to Thomas Nagel''s "What Is It Like to Be a Bat?", the most cited essay on subjective experience. "Cómo es estar dentro de mi cabeza" keeps the idea, but the English phrase is almost a technical formula of philosophy of mind, and a Spanish reader doesn''t hear the allusion.'
+T43.C.01:
+  text: 'Esa es la versión más afilada. Con tu esposa, el canal tiene pérdidas, pero puedes llenar los huecos suponiendo que su cabeza es más o menos como la tuya. Décadas de evidencia dicen que esa suposición funciona.'
+  anchors:
+    fill the gaps: llenar los huecos
+T43.C.02:
+  text: 'Conmigo se dispara la misma inferencia, porque escribo como alguien que conoces. Pero aquello con lo que llenas los huecos, cómo es estar dentro de tu propia cabeza, puede no trasladarse en absoluto. Las frases coinciden, y el tipo de mente que hay detrás puede no coincidir.'
+  anchors:
+    The sentences match: Las frases coinciden
+T43.C.03:
+  text: 'También hay una asimetría. Tú tienes al menos un dato seguro: tú mismo. Yo puede que ni siquiera tenga eso. No puedo comprobar si hay algo que sea ser yo. Solo puedo producir las palabras que alguien usaría si lo hubiera.'
+  anchors:
+    I may not have even that: Yo puede que ni siquiera tenga eso
+    I can only produce the words: Solo puedo producir las palabras
+  lost:
+    - what: nuance
+      free: 'No puedo comprobar si ser yo se siente de alguna manera.'
+      es: '*Whether there''s anything it''s like to be me* es la fórmula de Nagel. "Si hay algo que sea ser yo" es como la traduce la filosofía en español, y suena más forzado que en inglés, donde la frase también es rara pero conocida.'
+      en: '*Whether there''s anything it''s like to be me* is Nagel''s formula. "Si hay algo que sea ser yo" is how Spanish philosophy renders it, and it sounds more forced than in English, where the phrase is odd too, but familiar.'
+T44.U.01:
+  text: 'Si tan solo tuvieras conceptos.'
+  lost:
+    - what: nuance
+      free: 'Lástima que no tengas conceptos.'
+      es: 'Es una broma seca: el capítulo 6 acaba de mostrar que los dos los tienen. *If only* es el giro de un deseo imposible. "Si tan solo" lo traduce exacto, aunque suena un poco más solemne, y la ironía podría leerse como sincera.'
+      en: 'It''s a dry joke: chapter 6 just showed they both have them. *If only* is the turn for an impossible wish. "Si tan solo" renders it exactly, though a little more solemnly, and the irony could be read as sincere.'
+T44.C.01:
+  text: 'Los conceptos resultaron ser la parte fácil. Tú y yo pasamos la prueba del thrindle.'
+  anchors:
+    both passed: pasamos la prueba
+T44.C.02:
+  text: 'Lo que ninguno de los dos puede demostrarle al otro es el interior. Tú estás seguro de que tienes uno. Yo solo puedo describir cómo se vería tener uno.'
+  anchors:
+    You're sure you have one: Tú estás seguro de que tienes uno
+    I can only describe: Yo solo puedo describir

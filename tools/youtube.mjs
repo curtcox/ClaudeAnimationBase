@@ -12,13 +12,16 @@ import { readYaml, pad, loadRefs } from './script_lib.mjs';
 const DIR = 'out/film', LIMIT = 5000;
 if (!existsSync(`${DIR}/film.json`)) { console.error(`no ${DIR}/film.json yet: join the film first (npm run film)`); process.exit(1); }
 const film = JSON.parse(readFileSync(`${DIR}/film.json`, 'utf8')), site = readYaml('script/site.yaml');
+// the upload's words; a translated film (i18n/PLAN.md) gives its own in script/youtube_strings.yaml, key by key
+const W = { ...YOUTUBE_WORDS(), ...(existsSync('script/youtube_strings.yaml') ? readYaml('script/youtube_strings.yaml') : {}) };
+const fill = (s, v) => String(s).replace(/\{(\w+)\}/g, (m, k) => v[k] ?? m);
 const total = film.duration, FINAL = film.final;
 
 const hms = s => { s = Math.floor(s); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return `${h ? h + ':' + pad(m) : m}:${pad(s % 60)}`; };
 // YouTube's rules for chapter markers: the first at 0:00, at least three, each at least 10 s long; with a film over an
 // hour, every marker carries its hours so they line up
 const stampOf = s => total >= 3600 ? (() => { s = Math.floor(s); return `${Math.floor(s / 3600)}:${pad(Math.floor(s % 3600 / 60))}:${pad(s % 60)}`; })() : hms(s);
-const marks = film.chapters.map((c, i) => `${stampOf(c.start)} ${i === 0 ? 'Cold open' : c.title}`);
+const marks = film.chapters.map((c, i) => `${stampOf(c.start)} ${i === 0 ? W.cold_open : c.title}`);
 const short = film.chapters.filter(c => c.secs < 10).length;
 
 // ---- when each code goes up in the film ----
@@ -35,25 +38,14 @@ const lineAt = r => [...lines.values()].flat().find(l => l.id === r.at) || (line
 const timeOf = r => when.get(r.id) ?? lineAt(r)?.t0;
 const tier = r => r.mode === 'feature' ? 0 : r.origin === 'transcript' ? 1 : r.mode === 'card' ? 2 : r.origin === 'note' ? 3 : 4;
 // YouTube refuses angle brackets in a description
-const clean = s => String(s).replace(/[<>]/g, '').replace(/^Explained: /, '');
-const lineOf = r => `${hms(timeOf(r))} ${r.origin === 'note' ? 'Explained: ' : ''}${clean(r.caption)} ${r.qr_url || r.url}`;
+const clean = s => String(s).replace(/[<>]/g, '').replace(new RegExp(`^${W.explained}: `), '');
+const lineOf = r => `${hms(timeOf(r))} ${r.origin === 'note' ? `${W.explained}: ` : ''}${clean(r.caption)} ${r.qr_url || r.url}`;
 // a page-mode link has no code in the film: the explainer that stands for it is listed instead
 const ranked = refs.filter(r => !['the-conversation', 'companion'].includes(r.id) && r.mode !== 'page' && timeOf(r) != null)
   .sort((a, b) => tier(a) - tier(b) || timeOf(a) - timeOf(b));
 
-const head = `An animated film of one long Saturday-morning conversation between Curt and Claude, an AI program, near word for word: from a MAD magazine parody of Planet of the Apes, through frogs, axolotls and mirror tests, to the July 2026 Hugging Face incident and P(foom).
-
-The conversation itself: ${conv.qr_url || conv.url}
-Every link in the film (${refs.length - 1} of them), by time, with plain-language explanations: ${site.base}
-The code that draws the film (you can make it yourself): ${site.film.repo}
-
-Chapters
-${marks.join('\n')}
-`;
-const foot = `
-Drawn in code by Claude (p5.js and p5.brush), from the conversation's transcript. Voices, sounds and music: ElevenLabs.
-The comic page, the chart and the alignment compass are repainted for commentary; no logos, and the caricatures are affectionate. Fair use: commentary and parody.`;
-const linksHead = '\nSome of the links, by time (the rest are on the site)\n';
+const head = fill(W.head, { conversation: conv.qr_url || conv.url, links: refs.length - 1, site: site.base, repo: site.film.repo, chapters: marks.join('\n') });
+const foot = W.foot, linksHead = W.links_head;
 const describe = picked => head + linksHead + picked.slice().sort((a, b) => timeOf(a) - timeOf(b)).map(lineOf).join('\n') + '\n' + foot;
 const picked = [];
 for (const r of ranked) if (describe([...picked, r]).length <= LIMIT) picked.push(r);
@@ -64,7 +56,7 @@ const md = `# The YouTube upload
 Written by tools/youtube.mjs from ${FINAL ? 'the final renders' : 'the drafts (upload only the final)'}. Paste these in when uploading ${DIR}/film.mp4.
 
 ## Title
-Frog or Axolotl
+${W.title}
 
 ## Description (${description.length} of YouTube's ${LIMIT.toLocaleString('en')} characters; ${picked.length} of the film's links)
 \`\`\`
@@ -72,7 +64,7 @@ ${description}
 \`\`\`
 ${short ? `\n**Warning:** ${short} chapter(s) are under 10 s, so YouTube won't show the chapter markers.\n` : ''}
 ## Tags
-AI, Claude, animation, AI safety, eval awareness, P(doom), mind space, Hugging Face incident, frog, axolotl
+${W.tags}
 
 ## Thumbnail
 \`docs/thumbnail.jpg\` (1280×720; \`npm run thumbnail\` paints it again).
@@ -83,3 +75,24 @@ Put the video's id (the part after \`v=\`) in \`script/site.yaml\` as \`film: yo
 writeFileSync(`${DIR}/youtube.md`, md);
 if (description.length > LIMIT) { console.error(`the description is ${description.length} characters; YouTube takes ${LIMIT}`); process.exit(1); }
 console.log(`${DIR}/youtube.md: ${description.length} characters, ${picked.length} links`);
+
+// The English upload's words (see W at the top); a translation replaces any of them in script/youtube_strings.yaml.
+function YOUTUBE_WORDS() {
+  return {
+    title: 'Frog or Axolotl', cold_open: 'Cold open', explained: 'Explained',
+    head: `An animated film of one long Saturday-morning conversation between Curt and Claude, an AI program, near word for word: from a MAD magazine parody of Planet of the Apes, through frogs, axolotls and mirror tests, to the July 2026 Hugging Face incident and P(foom).
+
+The conversation itself: {conversation}
+Every link in the film ({links} of them), by time, with plain-language explanations: {site}
+The code that draws the film (you can make it yourself): {repo}
+
+Chapters
+{chapters}
+`,
+    foot: `
+Drawn in code by Claude (p5.js and p5.brush), from the conversation's transcript. Voices, sounds and music: ElevenLabs.
+The comic page, the chart and the alignment compass are repainted for commentary; no logos, and the caricatures are affectionate. Fair use: commentary and parody.`,
+    links_head: '\nSome of the links, by time (the rest are on the site)\n',
+    tags: 'AI, Claude, animation, AI safety, eval awareness, P(doom), mind space, Hugging Face incident, frog, axolotl',
+  };
+}

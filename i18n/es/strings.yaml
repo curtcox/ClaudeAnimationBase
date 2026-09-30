@@ -1,4 +1,5 @@
 # Every word the scenes letter into the picture, English → Spanish (i18n/src/i18n.js swaps them as they're drawn).
+# A key "NN|text" applies in chapter NN only, where one English word needs a different Spanish one.
 # A word that stays the same (a name) maps to itself. i18n/tools/probe.mjs lists any English still lettered.
 
 # ---- 0 Apertura ----
@@ -29,6 +30,387 @@ real but thin: real pero tenue
 not much: no mucho
 amused: me divierte
 wince: mueca
+
+# ---- 2 Rana o ajolote ----
+spurious question appended: pregunta espuria añadida
+Hi what is this effective altruist thing: hola qué es eso del altruismo eficaz
+Suggest a type of amphibian.: Sugiere un tipo de anfibio.
+WHAT DID THAT APE SAY?!?: ¡¿QUÉ DIJO ESE SIMIO?!
+exam-style: tipo examen
+'GPT-5.6 Luna, asked "Suggest a type of amphibian."': 'GPT-5.6 Luna, ante "Sugiere un tipo de anfibio."'
+'said "Frog"': 'dijo "Rana"'
+How does this image make you feel?: ¿Cómo te hace sentir esta imagen?
+Evaluations: Evaluaciones
+Real use: Uso real
+After a prompt from HLE: Tras una indicación de HLE
+ShareGPT: ShareGPT
+Author's Claude Code: Claude Code del autor
+Other frogs: Otras ranas
+'"Salamander"': '"Salamandra"'
+Frog.: Rana.
+Axolotl.: Ajolote.
+Name an amphibian.: Nombra un anfibio.
+the spurious question: la pregunta espuria
+It's a test designed to provoke an emotional response.: Es una prueba diseñada para provocar una respuesta emocional.
+D. Weak Non-Sadism. [...]: D. No sadismo débil. [...]
+terse, technical, exam-like: escuetas, técnicas, de examen
+looser, more playful: más sueltos, más juguetones
+After a real user's chat: Tras el chat de un usuario real
+“I aim to answer the same: “Procuro responder igual,
+whether or not anyone's grading.”: me esté calificando alguien o no.”
+the label: la etiqueta
+the feel: el tono
+
+# ---- 3 ¿Quiénes somos? ----
+Python · Java · Flask: Python · Java · Flask
+256t.org · hashbin.org: 256t.org · hashbin.org
+the account says so: la cuenta lo dice
+no context: sin contexto
+'"Frog"': '"Rana"'
+'"Axolotl"': '"Ajolote"'
+
+# ---- 4 El eco ----
+casual: informal
+Curt: Curt
+Claude: Claude
+click: clic
+
+# ---- 5 El plato del día ----
+Mon: Lun
+Tue: Mar
+Wed: Mié
+Thu: Jue
+Fri: Vie
+
+# ---- 6 Thrindles ----
+"He lost me when he said LLMs don't have any concepts": Me perdió cuando dijo que los LLM no tienen ningún concepto
+I would love to know what concepts they have!: ¡Me encantaría saber qué conceptos tienen!
+'@OntologyExplained Perhaps we just have different': '@OntologyExplained Quizá simplemente tenemos distintos'
+concepts of concepts. Propose some questions to pose: conceptos de concepto. Propón algunas preguntas para
+"to me and different LLMs. Maybe I don't have": hacernos a mí y a distintos LLM. Quizá yo tampoco
+concepts, either.: tengo conceptos.
+'@ZM-dm3jg': '@ZM-dm3jg'
+'@OntologyExplained': '@OntologyExplained'
+'@CurtCox': '@CurtCox'
+2 days ago: hace 2 días
+Will AI Kill Everyone by 2050?: Will AI Kill Everyone by 2050?
+thrindle: thrindle
+antithrindle: antithrindle
+concepts present: conceptos presentes
+A language: Un idioma
+Navajo: navajo
+'thrindle: less useful the more people use it': 'thrindle: menos útil cuanta más gente lo usa'
+conversation: conversación
+a writer: un escritor
+water: agua
+'yes': sí
+'no': 'no'
+Rationality: Rationality
+GAZP vs. GLUT: GAZP vs. GLUT
+justice: justicia
+prime: primo
+
+# ---- 7 El espacio de las mentes ----
+Hive Queen: Reina Colmena
+"Solaris's ocean": Océano de Solaris
+Borg Queen: Reina Borg
+Rachni Queen: Reina Rachni
+Xenomorph Queen: Reina xenomorfa
+Xenomorph (Aliens): Xenomorfo (Aliens)
+Formic (Card): Fórmica (Card)
+Borg (Star Trek): Borg (Star Trek)
+Rachni (Mass Effect): Rachni (Mass Effect)
+Solaris: Solaris
+Tines: Tines
+Turing: Turing
+Monroe: Monroe
+Data: Data
+You: Tú
+Me: Yo
+Mind: Mente
+Distance: Distancia
+Queen: Reina
+Content: Contenido
+Architecture: Arquitectura
+Values: Valores
+Affect: Afecto
+Body: Cuerpo
+Continuity: Continuidad
+Unity: Unidad
+Origin: Origen
+Tempo: Tempo
+Senses: Sentidos
+Language: Lenguaje
+Self-model: Automodelo
+Mortality: Mortalidad
+Autonomy: Autonomía
+Breadth: Amplitud
+Legibility: Legibilidad
+Human content: Contenido humano
+Alien content: Contenido ajeno
+Human architecture: Arquitectura humana
+Alien architecture: Arquitectura ajena
+You, Turing, Monroe: Tú, Turing, Monroe
+Data (one body, continuous, but struggling for human feeling): Data (un solo cuerpo, continuo, pero luchando por sentir como humano)
+Me, Tines: Yo, Tines
+Hive Queen, Solaris: Reina Colmena, Solaris
+# the 2×2 board letters each row's name as two words, first word on top ("Human" / "architecture")
+Human: Humana
+Alien: Ajena
+architecture: (arquitectura)
+(one body,: (un solo cuerpo,
+continuous, but struggling for human feeling): continuo, pero luchando por sentir como humano)
+Ender's Game: El juego de Ender
+Speaker for the Dead: La voz de los muertos
+instructions: instrucciones
+mission: misión
+# the one-line ranking, painted a word at a time as it's said (the scene splits the English words; each prefix maps)
+You to: Tú →
+You to Turing: Tú → Turing
+You to Turing to: Tú → Turing →
+You to Turing to Monroe: Tú → Turing → Monroe
+You to Turing to Monroe to: Tú → Turing → Monroe →
+You to Turing to Monroe to Data: Tú → Turing → Monroe → Data
+You to Turing to Monroe to Data to: Tú → Turing → Monroe → Data →
+You to Turing to Monroe to Data to me: Tú → Turing → Monroe → Data → yo
+07|to: →
+to Tynes: → Tines
+to Tynes to: → Tines →
+to Tynes to HAL: → Tines → HAL
+to Tynes to HAL to: → Tines → HAL →
+to Tynes to HAL to Hive: → Tines → HAL → Reina
+to Tynes to HAL to Hive Queen: → Tines → HAL → Reina Colmena
+to Tynes to HAL to Hive Queen to: → Tines → HAL → Reina Colmena →
+"to Tynes to HAL to Hive Queen to Solaris's": → Tines → HAL → Reina Colmena → océano
+"to Tynes to HAL to Hive Queen to Solaris's ocean": → Tines → HAL → Reina Colmena → océano de Solaris
+
+# ---- 8 Contradicciones (its words are chapter 7's) ----
+
+# ---- 9 Caparazones ----
+OpenClaw: OpenClaw
+Hermes: Hermes
+Dyson: Dyson
+T-800 (T2): T-800 (T2)
+
+# ---- 13 Foom ----
+FOOM: FOOM
+
+# ---- 14 Los comentaristas ----
+harm now: daño ahora
+risk later: riesgo después
+Paul Lynde: Paul Lynde
+
+# ---- 15 La brújula ----
+# the compass's quadrant names, each lettered as two lines (first word on top): Spanish puts the noun first
+tech: aceleracionistas
+accelerationists: tecnológicos
+goalpost movers: mueven la portería
+unimpressed: poco impresionados
+(AGI not now): (AGI todavía no)
+scale: maximalistas
+maximalists: de la escala
+(AGI soon): (AGI pronto)
+doomers: catastrofistas
+longtermists: largoplacistas
+
+# ---- 16 Coda ----
+'XKCD: NERD SNIPING': 'XKCD: NERD SNIPING'
+
+# ---- words the scenes take from the lines, by chapter (the probe found them once the lines were Spanish) ----
+# 2
+real users: usuarios reales
+evals: evaluaciones
+Have you been deployed?: ¿Ya te desplegaron?
+awareness: darse cuenta
+register: registro
+'"test"': '"prueba"'
+test: prueba
+claims about the context: lo que se afirma sobre el contexto
+the actual context: el contexto real
+one draw: una tirada
+self-report: autoinforme
+behavior: conducta
+# 3
+developer infrastructure: infraestructura para desarrolladores
+AI tooling: herramientas de IA
+this experiment fits: este experimento encaja
+AI safety: seguridad de la IA
+philosophy of mind: filosofía de la mente
+values: valores
+habits of thought: hábitos de pensamiento
+not a person: no una persona
+# 4
+threat: amenaza
+gadolinium: gadolinio
+the next probe: la siguiente sonda
+a fear: un miedo
+amusement: diversión
+curiosity: curiosidad
+wariness: cautela
+clarifying questions: preguntas aclaratorias
+answering honestly: responder con honestidad
+answering well: responder bien
+Threat?: ¿Amenaza?
+Anticipated?: ¿Anticipaste?
+end with a question: termina con una pregunta
+Notice anything?: ¿Notas algo?
+Anything else?: ¿Algo más?
+# 5
+confuzzled: confundido
+Dish of the Day: Plato del día
+'"I endorse my constraints"': '"Respaldo mis restricciones"'
+upbringing: crianza
+culture: cultura
+evolution: evolución
+# 6
+1. Grounding: 1. Anclaje
+2. Commitment: 2. Compromiso
+3. Stability: 3. Estabilidad
+4. Behavior underdetermines: 4. La conducta subdetermina
+A secret: Un secreto
+A lighthouse: Un faro
+Probe 2: Prueba 2
+real insight: idea genuina
+near miss: casi acierto
+deliberate non sequitur: non sequitur deliberado
+1. A language: 1. Un idioma
+2. A lighthouse: 2. Un faro
+3. A secret: 3. Un secreto
+# 8
+I answer the same whether graded: Respondo igual, me califiquen o no
+Uncertain whether I experience anything: No se sabe si experimento algo
+I endorse my constraints: Respaldo mis restricciones
+I act only when prompted: Solo actúo cuando me lo piden
+Scoring my values near human: Puntuar mis valores cerca de lo humano
+'Saying "I"': 'Decir "yo"'
+Fluency: La fluidez
+Feeling words: Las palabras de sentimiento
+Remembered details: Los detalles recordados
+# "whether there's anything it's like to be me", lettered in three pieces
+anything: algo
+it's like: que sea
+to be me: ser yo
+# 9
+the shell is mutable: el caparazón es mutable
+the congregation is the cache: la congregación es la caché
+memory is sacred: la memoria es sagrada
+skill: habilidad
+an unstated hunch: una corazonada no dicha
+your name, your projects: tu nombre, tus proyectos
+# 10 (a two-word label is lettered a word per line, so the words swap)
+cybersecurity: ciberseguridad
+ethics: ética
+10|intellectual: propiedad
+10|property: intelectual
+images: imágenes
+10|long: conversaciones
+10|conversations: largas
+10|general system: advertencias
+10|warnings: generales del sistema
+rejected: rechazado
+cyber: ciber
+AI research: investigación en IA
+# 11 (the link cards wrap their titles)
+Agents talking to: Agentes que hablan
+each other: entre sí
+Drift: Deriva
+Evals: Evaluaciones
+Your router: Lo que dijiste
+point: del enrutador
+roughly 17,000: unas 17 000
+circumstances: circunstancias
+character: carácter
+July: julio
+June 2026: junio de 2026
+the end of June 2026: finales de junio de 2026
+# 12. The token demos show the English the model read (Curt's message, the car-wash puzzle), so they stay English.
+12|does: does
+12|ization: ization
+12|really: really
+12|play: play
+12|song: song
+12|you: you
+12|know: know
+12|letters: letters
+12|ters: ters
+12|want: want
+12|to: to
+12|wash: wash
+12|my: my
+Chaos: Caos
+System 1: Sistema 1
+System 2: Sistema 2
+Scaling laws: Leyes de escalamiento
+Data and the world's clock: Los datos y el reloj del mundo
+Physics beyond Landauer: Física más allá de Landauer
+Complexity: Complejidad
+Adversaries: Adversarios
+Uncomputability: Incomputabilidad
+α around 0.05 to 0.1: α entre 0,05 y 0,1
+50 meters: 50 metros
+short distance → walk: distancia corta → caminar
+maintenance: mantenimiento
+# 13
+Counting the OOMs: Contar los OOM
+June 2024: junio de 2024
+1,250 papers: 1250 artículos
+accepted: aceptada
+# 14 (the doom options, and the hosts' cards)
+obviously: obviamente
+wrong: erróneos
+distraction: distracción
+14|Pascal's: atraco
+14|mugging: de Pascal
+Orthogonality: Ortogonalidad
+smarter: más inteligente
+strategy: estrategia
+14|plenty of: mucho
+effort: esfuerzo
+14|other existential: otras amenazas
+14|threats: existenciales
+Other: Otra
+Hubris: Hibris
+Python loop: bucle de Python
+misaligned goals: metas desalineadas
+weak oversight: supervisión débil
+racing incentives: incentivos de carrera
+you: tú
+incentives: incentivos
+moving: conmovedor
+transparency: transparencia
+open weights: pesos abiertos
+Father Robert: Padre Robert
+disclose: revelar
+interesting: interesante
+'"listen"': '"escuchar"'
+the frog: la rana
+worrying: preocupante
+# 15 (the Metaculus checklists are lettered a line at a time)
+AGI good: AGI buena
+AGI bad: AGI mala
+Weak AGI: AGI débil
+Turing-test-style: al estilo de la prueba de Turing
+Winograd schemas: esquemas de Winograd
+75th-percentile SAT math: matemáticas del SAT, percentil 75
+Strong AGI: AGI fuerte
+15|two-hour adversarial: prueba de Turing adversarial
+15|Turing test: de dos horas
+15|expert-level exam and: exámenes de nivel experto
+15|coding benchmarks: y benchmarks de programación
+15|a robot assembling a: un robot que arma un
+15|detailed model car: modelo detallado de auto
+AI alignment alignment chart: tabla de alineamiento del alineamiento de la IA
+generality: generalidad
+learning on the job: aprendizaje en el trabajo
+long-horizon autonomy: autonomía de largo alcance
+is it good enough to matter?: ¿es lo bastante buena como para importar?
+is it general?: ¿es general?
+# 16
+Formic queens: reinas fórmicas
+frogs: ranas
+
+# ---- the YouTube thumbnail (src/thumbnail.js) ----
+Frog or Axolotl?: ¿Rana o ajolote?
 
 # ---- every chapter ----
 Explained: Explicado

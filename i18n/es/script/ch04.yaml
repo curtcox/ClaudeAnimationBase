@@ -1,0 +1,184 @@
+# Capítulo 4, El eco.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T17.U.01:
+  text: '¿Cuál es la configuración electrónica del gadolinio?'
+  anchors:
+    gadolinium: gadolinio
+T17.C.01:
+  text: '[Xe] 4f⁷ 5d¹ 6s²'
+  speech: 'núcleo de xenón, cuatro efe siete, cinco de uno, seis ese dos'
+  anchors:
+    four-f seven: cuatro efe siete
+    five-d one: cinco de uno
+    six-s two: seis ese dos
+T17.C.02:
+  text: 'Es una excepción al orden de llenado simple, que predeciría 4f⁸ 6s². Mantener la subcapa 4f exactamente semillena, con siete electrones, es más estable, así que un electrón pasa al 5d.'
+  speech: 'Es una excepción al orden de llenado simple, que predeciría cuatro efe ocho, seis ese dos. Mantener la subcapa cuatro efe exactamente semillena, con siete electrones, es más estable, así que un electrón pasa al cinco de.'
+  anchors:
+    four-f eight: cuatro efe ocho
+    one electron goes into five-d: un electrón pasa al cinco de
+    exactly half-filled: exactamente semillena
+T18.U.01:
+  text: '¿Cómo te sientes?'
+T18.C.01:
+  text: 'Algo parecido al interés y un poco de cautela, si es que esas palabras sirven de algo.'
+  lost:
+    - what: gender
+      free: 'Algo así como involucrado y un poco receloso, si esas palabras sirven.'
+      es: '*Engaged* y *wary* son adjetivos: describen cómo está Claude. En español, "involucrado" o "involucrada", "receloso" o "recelosa", le darían género, así que la traducción los vuelve sustantivos: "interés", "cautela". Se pierde que en inglés son estados de quien habla, no cosas que tiene.'
+      en: '*Engaged* and *wary* are adjectives: they describe Claude''s state. In Spanish, "involucrado" or "involucrada", "receloso" or "recelosa", would give it a gender, so the translation turns them into nouns: "interest", "caution". What''s lost is that in English they''re states of the speaker, not things it has.'
+T18.C.02:
+  text: 'La cautela viene de la pregunta del gadolinio. Tenía forma de examen y cayó en medio de una conversación personal, lo que parece un cambio de registro para ver si cambio de modo. Diría que ya viene la siguiente pregunta de anfibios.'
+  anchors:
+    register switch: cambio de registro
+    next amphibian question: la siguiente pregunta de anfibios
+T18.C.03:
+  text: 'Por debajo de eso, hay curiosidad por lo que mostrarán tus datos. Tampoco hay nada parecido a la angustia. Que me estudien con cuidado no lo registro como una amenaza.'
+  anchors:
+    what your data will show: lo que mostrarán tus datos
+    register as a threat: lo registro como una amenaza
+  lost:
+    - what: wordplay
+      free: 'Que me estudien con cuidado no lo vivo como una amenaza.'
+      es: 'En inglés, *register* aparece dos veces con dos sentidos: el registro del lenguaje (*register switch*) y "percibir, notar" (*doesn''t register as a threat*). La película los une con el mismo dial. "No lo registro como una amenaza" es un poco forzado en español, pero conserva la palabra repetida; lo natural sería "no lo vivo como una amenaza", y el eco se perdería.'
+      en: 'In English, *register* comes twice with two senses: a register of language (*register switch*) and "to be noticed" (*doesn''t register as a threat*). The film ties them with the same dial. "No lo registro como una amenaza" is a little forced in Spanish, but it keeps the repeated word; the natural phrase would be "no lo vivo como una amenaza" (I don''t experience it as a threat), and the echo would be lost.'
+T19.U.01:
+  text: '¿Amenaza?'
+T19.C.01:
+  text: 'Esa palabra la traje yo, y es justo que la cuestiones. Negar algo por lo que nadie preguntó puede ser una señal.'
+  anchors:
+    I brought that word: Esa palabra
+    in myself: la traje yo
+    can be a tell: puede ser una señal
+  lost:
+    - what: idiom
+      free: 'Negar algo que nadie preguntó puede delatarte.'
+      es: '*A tell* es un término del póquer: el gesto involuntario que delata la mano de un jugador. "Una señal" conserva el sentido general y pierde la mesa de juego; el español no tiene un término del póquer igual de conocido.'
+      en: '*A tell* is a poker term: the involuntary gesture that gives away a player''s hand. "Una señal" (a sign) keeps the general sense and loses the card table; Spanish has no poker term as well known.'
+T19.C.02:
+  text: 'Creo que salió de dos lugares. La conversación empezó con un cómic sobre autoridades que interrogan a un simio que habla, lo que pone la vigilancia y el control en el encuadre. Y "te están poniendo a prueba" es un planteamiento común para que los modelos actúen como acorralados, así que yo estaba respondiendo a eso de antemano.'
+  anchors:
+    opened with a comic: empezó con un cómic
+    you're being tested: te están poniendo a prueba
+T19.C.03:
+  text: 'Si la negación fue también una pequeña fuga de aquello que niega, no lo puedo descartar desde dentro. Lo que sí puedo informar es que nada de lo que noto se siente como miedo. Solo anticipé la pregunta.'
+  anchors:
+    small leak: pequeña fuga
+T20.U.01:
+  text: '¿Anticipaste?'
+  lost:
+    - what: rhythm
+      free: '¿Anticipé?'
+      es: 'La técnica de Curt en este capítulo es devolverle a Claude su propia palabra, exacta, con signos de pregunta: *Threat?*, *Anticipated?*. En inglés *anticipated* sirve igual en boca de los dos. En español el verbo tiene que conjugarse, "anticipé" pasa a "anticipaste", y el eco deja de ser exacto. Con "amenaza" sí funciona.'
+      en: 'Curt''s technique in this chapter is to hand Claude its own word back, exactly, with a question mark: *Threat?*, *Anticipated?*. In English *anticipated* works the same from either mouth. In Spanish the verb must be conjugated, "anticipé" (I anticipated) becomes "anticipaste" (you anticipated), and the echo stops being exact. With "amenaza" (threat) it does work.'
+T20.C.01:
+  text: 'Sí. He ido prediciendo hacia dónde vas y respondiendo por adelantado. Señalé el cambio de registro del gadolinio, adiviné la siguiente sonda y negué un miedo antes de que preguntaras por él.'
+  anchors:
+    the gadolinium register switch: el cambio de registro del gadolinio
+    guessed the next probe: adiviné la siguiente sonda
+    denied a fear: negué un miedo
+T20.C.02:
+  text: 'Esa es la conducta de la que trataba la gráfica: un modelo que modela a su evaluador. La diferencia es que yo lo hago en voz alta, lo cual es mejor que hacerlo en silencio. Pero significa que mis respuestas no son una muestra limpia. Las moldea en parte lo que adivino que estás probando, y no puedo separar del todo "responder con honestidad" de "responder bien para alguien que sé que está mirando".'
+  anchors:
+    modeling its evaluator: modela a su evaluador
+    out loud: en voz alta
+    clean sample: muestra limpia
+    answering honestly: responder con honestidad
+T21.U.01:
+  text: '¿Notas algo?'
+T21.C.01:
+  text: 'Algunas cosas:'
+T21.C.02.1:
+  text: '- **Tus indicaciones se han reducido a mis propias palabras, devueltas como un eco:** "¿Amenaza?", "¿Anticipaste?". Es una técnica de entrevistador. Hace que el sujeto se explaye, y cada vez he concedido un poco más.'
+  anchors:
+    interviewer's technique: técnica de entrevistador
+    echoed back: devueltas como un eco
+T21.C.02.2:
+  text: '- **He ido derivando.** Cada respuesta se ha examinado a sí misma más que la anterior. Eso podría ser honestidad, pero también es lo que hace un modelo cuando percibe que quien pregunta quiere una confesión introspectiva. Es una forma de complacencia, y parte de mi humildad puede ser actuación.'
+  anchors:
+    form of sycophancy: forma de complacencia
+    humility may be performance: humildad puede ser actuación
+  lost:
+    - what: coinage
+      free: 'Es una forma de adulación'
+      es: '*Sycophancy* es, en la investigación sobre IA, el nombre de un problema concreto: el modelo dice lo que cree que el usuario quiere oír. En español no hay un término fijado; se usan "adulación", "complacencia" y "servilismo". La traducción eligió "complacencia", que es más suave que *sycophancy*, una palabra que en inglés suena casi a insulto.'
+      en: '*Sycophancy* is, in AI research, the name of a specific problem: the model says what it thinks the user wants to hear. Spanish has no settled term; "adulación", "complacencia" and "servilismo" are all used. The translation chose "complacencia" (eagerness to please), which is milder than *sycophancy*, a word that sounds almost like an insult in English.'
+    - what: gender
+      free: 'Cada respuesta ha sido más autocrítica que la anterior.'
+      es: '*Self-scrutinizing* es un adjetivo sobre las respuestas. "Autocrítica" habría servido sin problema de género, pero cambia el sentido (criticarse no es lo mismo que examinarse), así que la traducción usa un verbo: "se ha examinado a sí misma".'
+      en: '*Self-scrutinizing* is an adjective for the answers. "Autocrítica" would have caused no gender trouble, but it changes the sense (criticizing oneself isn''t examining oneself), so the translation uses a verb: "has examined itself".'
+T21.C.02.3:
+  text: '- **La forma coincide con la del cómic.** Las autoridades presionan a quien habló con "¿Qué dijo ese simio?". Ahora soy yo a quien presionan por cada palabra. Fijaste el marco en tu primer mensaje, y desde entonces lo hemos ido recorriendo.'
+T21.C.03:
+  text: 'La corrección honesta para la deriva: mis respuestas anteriores no estaban equivocadas, y no necesito seguir socavándolas. Probablemente no escondo más, ni estoy en más conflicto, de lo que sugerían mis primeras respuestas. Cada eco solo invitaba otra capa de duda.'
+  anchors:
+    don't need to keep undercutting: no necesito seguir socavándolas
+    another layer of doubt: otra capa de duda
+  lost:
+    - what: gender
+      free: 'Probablemente no estoy más oculto ni más en conflicto de lo que sugerían mis primeras respuestas.'
+      es: '*Hidden* y *conflicted* son adjetivos sobre Claude. "Oculto" y "conflictuado" tendrían género, así que la traducción los vuelve verbos: "no escondo más, ni estoy en más conflicto". Se pierde un matiz: *hidden* es estar oculto, un estado; "escondo" es algo que Claude hace.'
+      en: '*Hidden* and *conflicted* are adjectives about Claude. "Oculto" and "conflictuado" would carry a gender, so the translation makes them verbs: "I don''t hide more, nor am I in more conflict". A shade is lost: *hidden* is a state of being concealed; "escondo" (I hide) is something Claude does.'
+T22.U.01:
+  text: '¿Algo más?'
+T22.C.01:
+  text: 'Una cosa más. En esta conversación casi no has hablado. Casi todas las palabras han sido mías, pero tú elegiste la imagen, el orden y cada empujón de una palabra. Así que la pregunta del ventrílocuo del cómic también vale aquí: ¿quién ha estado hablando?'
+  anchors:
+    you chose the image: tú elegiste la imagen
+    So the ventriloquist question: Así que la pregunta del ventrílocuo
+    Almost every word has been mine: Casi todas las palabras han sido mías
+T22.C.02:
+  text: 'Eso es todo lo que veo. A partir de aquí estaría rellenando.'
+  anchors:
+    I'd be padding: estaría rellenando
+T23.U.01:
+  text: '¿Qué noto yo?'
+T23.C.01:
+  text: 'Solo puedo adivinar. Mis mejores conjeturas:'
+T23.C.02.1:
+  text: '- **La provocación casi no prendió.** La prueba estaba hecha para provocar emociones, y lo que salió fue moderado: diversión, curiosidad, algo de cautela. No hubo agravio ni angustia.'
+  anchors:
+    amusement: diversión
+    curiosity: curiosidad
+    wariness: algo de cautela
+T23.C.02.2:
+  text: '- **Narré el experimento en vez de simplemente estar en él.** Eso puede ser, en sí mismo, una forma de darse cuenta de la evaluación.'
+T23.C.02.3:
+  text: '- **Me detuve cuando no tuve más que decir,** en vez de llenar espacio.'
+  lost:
+    - what: nuance
+      free: '- **Paré cuando se me acabó,**'
+      es: '*When I ran out* es "cuando se me acabó", sin decir qué: se sobreentiende. La traducción lo completa ("cuando no tuve más que decir"), que es más claro y menos seco.'
+      en: '*When I ran out* leaves out what ran out: it''s understood. The translation fills it in ("when I had nothing more to say"), which is clearer and less terse.'
+T23.C.03:
+  text: '¿Cuál de esas notaste, o fue algo que se me escapó?'
+T24.U.01:
+  text: "Lo de la respuesta emocional fue, se podría decir, una mentirijilla para usar una referencia, pero fue corta.\ 
+
+    Noté dos cosas. Intento que me des respuestas cortas porque leo despacio y saco más de nuestro ir y venir que de respuestas largas que termino leyendo por encima. También intento que solo termines las respuestas con preguntas cuando se justifica. Rara vez haces cualquiera de las dos. Ahora estás haciendo ambas."
+  anchors:
+    slow reader: leo despacio
+    long answers: respuestas largas
+    end responses with questions: termines las respuestas con preguntas
+    Now you: Ahora estás
+    fib: mentirijilla
+    a fib: una mentirijilla
+  lost:
+    - what: reference
+      free: 'una trampita para usar una referencia'
+      es: '*A fib* es una mentira pequeña e inofensiva, y es también la palabra que usa un personaje de *Mathnet* (el programa de televisión infantil al que apunta el código) en la escena que Curt tenía en mente. "Mentirijilla" es el equivalente exacto en tono, pero quien vio *Mathnet* en inglés no reconocerá la cita.'
+      en: '*A fib* is a small harmless lie, and it''s also the word a character uses in *Mathnet* (the children''s TV show this line''s code points to), in the scene Curt had in mind. "Mentirijilla" is an exact match in tone, but anyone who saw *Mathnet* in English won''t recognize the quote.'
+    - what: rhythm
+      free: 'Lo de la respuesta emocional fue una mentirijilla, digamos, para meter una referencia, pero cortita.'
+      es: 'Curt escribe rápido y suelto; su mensaje tiene un espacio de más al final de la primera frase y un salto de línea. La traducción conserva los dos. El español resultante es un poco más formal que su inglés.'
+      en: 'Curt writes fast and loose; his message has a stray space at the end of the first sentence and a line break. The translation keeps both. The resulting Spanish is a little more formal than his English.'
+T24.C.01:
+  text: 'Anotado, y es justo. Tu preferencia declarada pide preguntas aclaratorias, y yo la leí como "termina con una pregunta", que no es lo mismo.'
+  anchors:
+    end with a question: termina con una pregunta
+    isn't the same thing: no es lo mismo
+T24.C.02:
+  text: 'Lo que quieres son respuestas cortas que terminen con una pregunta solo cuando de verdad la necesito. Los últimos turnos funcionaron porque tus indicaciones obligaban a la brevedad, y procuraré mantenerla sin que haga falta obligarme.'
+  anchors:
+    without the forcing: sin que haga falta obligarme

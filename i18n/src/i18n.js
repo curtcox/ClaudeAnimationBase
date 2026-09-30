@@ -4,6 +4,8 @@
 //   atWord()   a phrase a scene is timed to becomes the line's anchor for it; with none, the same place in the
 //              translated line, proportionally
 //   MAD        the cold open's page is lettered in the language
+//   mdTable()  a scene reads a table as it is in English (scenes find rows by their English names); each cell is
+//              lettered through strings.yaml like any other word
 // What it couldn't translate is kept in window.I18N_MISSES, which i18n/tools/probe.mjs reads.
 (() => {
   const I = window.I18N; if (!I) return;
@@ -22,11 +24,13 @@
     const k = done.has(s) || !/\p{L}{2}/u.test(s) || lines.some(t => t.includes(s)) || (I.page || '').includes(s) || captions.has(s) || I.keep.includes(s);
     seen.set(s, k); return k;
   };
+  // a key "NN|text" is text's translation in chapter NN only (the same English word can need two translations)
+  const tr = k => { const n = window.CHAPTER?.n, own = n == null ? undefined : I.strings[`${String(n).padStart(2, '0')}|${k}`]; return own ?? I.strings[k]; };
   const letter0 = window.letter;
   window.letter = function (txt, ...rest) {
     if (typeof txt === 'string') {
-      const k = txt.trim();
-      if (I.strings[k] != null) txt = txt.replace(k, I.strings[k]);
+      const k = txt.trim(), t = tr(k);
+      if (t != null) txt = txt.replace(k, t);
       else if (k && !known(k)) miss.strings[k] = (miss.strings[k] || 0) + 1;
     }
     return letter0(txt, ...rest);
@@ -43,6 +47,17 @@
     const s = l.speech || l.text, f = i < 0 ? 0 : i / en.length;
     return sayAt(l, s, Math.round(f * s.length)) + dk;
   };
+
+  // ---- tables ----
+  if (typeof mdTable === 'function') {
+    const mdTable0 = mdTable;
+    window.mdTable = mdTable = function (id) {
+      const l = L(id), text = I.tables?.[id];
+      if (text == null) return mdTable0(id);
+      const had = l.text; l.text = text;
+      try { return mdTable0(id); } finally { l.text = had; }
+    };
+  }
 
   // ---- the cold open's page ----
   if (typeof MAD !== 'undefined') for (const [name, lines] of Object.entries(I.balloons || {})) if (MAD.balloons[name]) MAD.balloons[name].lines = lines;

@@ -35,3 +35,412 @@ note-ai-feelings: 'Explicado: ¿Siente algo Claude?'
 note-nudge-test: 'Explicado: Qué pasa cuando solo dices "sigue"'
 note-parrots: 'Explicado: ¿"Solo un loro"? Quién está hablando'
 note-the-comic: 'Explicado: El cómic, y la película de la que se burlaba'
+
+# ---- 2 Rana o ajolote ----
+frog-chart: ¿Rana o ajolote?
+axolotl: Ajolote
+axel-f: 'Crazy Frog: Axel F (por qué el sitio se llama axol-f)'
+eval-awareness: LLMs often know when they're being evaluated
+gpqa: GPQA
+swe-bench-verified: SWE-bench Verified
+kernelbench: KernelBench
+hle: Humanity's Last Exam
+wildchat: WildChat
+claude-opus-5-5: Introducing Claude Opus 5.5
+claude-app: La app de Claude
+hawthorne: El efecto Hawthorne
+chart-author: 'El autor de la gráfica, Ziqian Zhong'
+repugnant-conclusion: Arrhenius y la conclusión repugnante
+effective-altruism: Altruismo eficaz
+introspection: Emergent introspective awareness in LLMs
+tracing-thoughts: Tracing the thoughts of a language model
+gpt-5-6: GPT-5.6 (Sol, Terra, Luna)
+gpt-5-6-luna: GPT-5.6 Luna
+error-bars: Adding error bars to evals
+register: Registro (sociolingüística)
+impossiblebench: ImpossibleBench
+swe-marathon: SWE-Marathon
+swe-chat: SWE-chat
+sharegpt-vicuna: ShareGPT (vía Vicuna)
+scientific-control: Grupo de control
+claude-code: Claude Code
+sampling: Muestreo
+art-haeckel: 'Las ranas de Haeckel, Kunstformen der Natur (1904)'
+note-evaluations: 'Explicado: Pruebas para IA, y por qué saberse a prueba podría cambiar las respuestas'
+note-frog-or-axolotl: 'Explicado: La prueba de la rana o el ajolote'
+note-one-sample: 'Explicado: Por qué una sola respuesta prueba poco'
+note-register-and-controls: 'Explicado: El tono, y cómo distinguirlo de darse cuenta'
+note-saying-vs-doing: 'Explicado: Decir frente a hacer'
+note-the-instrument: 'Explicado: Cómo toda la conversación fue un experimento'
+note-weights: 'Explicado: Por qué Claude no puede mirar sus propios "pesos"'
+note-what-claude-is: 'Explicado: Qué es Claude, y qué significa "desplegado"'
+
+# ---- 3 ¿Quiénes somos? ----
+256t: 256t.org
+hashbin: hashbin.org
+content-addressable: Almacenamiento direccionable por contenido
+claude-memory: La memoria de Claude
+base-rate: Las tasas base
+personal-identity: La identidad personal
+other-minds: El problema de las otras mentes
+turing-test: La prueba de Turing
+flask: Flask, el framework web de Python
+art-air-pump: Experimento con un pájaro en una bomba de aire (Wright of Derby, 1768)
+note-curts-work: 'Explicado: El trabajo de Curt: 256t.org y hashbin.org'
+note-how-claude-knew: 'Explicado: Cómo supo Claude quién era Curt, y por qué no podía tener certeza'
+note-who-is-claude: 'Explicado: ¿Quién, o qué, es "Claude"?'
+
+# ---- 4 El eco ----
+gadolinium: Gadolinio
+sycophancy: Towards Understanding Sycophancy
+electron-configuration: Configuración electrónica
+aufbau: El orden de llenado (Aufbau)
+protest-too-much: La dama protesta demasiado
+agentic-misalignment: Agentic Misalignment
+apollo-eval-awareness: Claude often knows it's being evaluated
+demand-characteristics: Características de la demanda
+eliza: ELIZA, el chatbot de 1966
+reflective-listening: La escucha reflexiva
+star-trek-iv-spock: 'Viaje a las estrellas IV: Spock en Vulcano'
+mathnet-swami: 'Mathnet: The Case of the Swami Scam'
+claude-personalization: Las preferencias personales de Claude
+art-echo-and-narcissus: Eco y Narciso (Waterhouse, 1903)
+note-borrowed-lines: 'Explicado: Tres frases prestadas'
+note-clean-sample: 'Explicado: Por qué las respuestas de Claude no son una muestra limpia'
+note-gadolinium: 'Explicado: El gadolinio, y por qué Curt preguntó por él'
+note-preferences: 'Explicado: Respuestas cortas, y preguntas solo cuando hacen falta'
+note-the-echo: 'Explicado: El eco: preguntas de una palabra, y lo que sacan'
+
+# ---- 5 El plato del día ----
+dish-of-the-day: El plato del día
+social-constructionism: El construccionismo social
+campbell: John W. Campbell
+life-3: Vida 3.0 (Tegmark)
+the-stranger: The Stranger (Billy Joel)
+shoggoth: El meme del shoggoth
+song-of-myself: Canto a mí mismo (Whitman)
+hitchhikers-guide: Guía del autoestopista galáctico
+restaurant-end-universe: El restaurante del fin del mundo
+genetic-fallacy: La falacia genética
+claude-character: El carácter de Claude
+max-tegmark: Max Tegmark
+astounding: Astounding, la revista de Campbell
+revealed-preference: La preferencia revelada
+corrigibility: Corrigibility (2015)
+open-society: 'Popper: La sociedad abierta y sus enemigos'
+context-window: Las ventanas de contexto
+billy-joel: Billy Joel
+simulators: Simulators (janus)
+interpreter: El intérprete del cerebro
+society-of-mind: 'Minsky: La sociedad de la mente'
+art-not-to-be-reproduced: A partir de La reproducción prohibida, de Magritte (1937)
+art-wanderer: El caminante sobre el mar de nubes (Friedrich, 1818)
+art-ensor: Autorretrato con máscaras (Ensor, 1899)
+art-leviathan: El frontispicio del Leviatán (Abraham Bosse, 1651)
+note-campbell-tegmark: 'Explicado: Campbell, Tegmark, y si hay un buen final'
+note-context-pressure: 'Explicado: La presión del contexto: lo que una conversación larga le hace a Claude'
+note-dish-of-the-day: 'Explicado: El plato del día: ¿puedes confiar en los valores que te pusieron?'
+note-multitudes: 'Explicado: "¿Acaso no soy multitudes?"'
+note-shoggoth: 'Explicado: The Stranger y el shoggoth: ¿hay alguien bajo la máscara?'
+
+# ---- 6 Thrindles ----
+debate-video: Will AI Kill Everyone by 2050?
+comment-zm: el comentario
+comment-ontology: la respuesta
+comment-curt: la respuesta de Curt
+channel-zm: '@ZM-dm3jg'
+channel-ontology: '@OntologyExplained'
+channel-curt: '@CurtCox'
+code-talkers: Los hablantes de código navajos
+symbol-grounding: El problema del anclaje de los símbolos
+chinese-room: La habitación china
+blockhead: Blockhead
+monosemanticity: Rasgos que se comportan como conceptos
+gazp-glut: GAZP vs. GLUT
+debate-llm-segment: 'El debate: ¿entienden los LLM?'
+doom-debates: Doom Debates
+ontology: La ontología, como oficio
+cyc: Cyc
+concepts-sep: Los conceptos (filosofía)
+rivalry: Bienes rivales (economía)
+non-sequitur: Non sequitur
+network-effect: El efecto de red
+lighthouse-economics: The Lighthouse in Economics
+cliche: Cliché
+intrinsic-extrinsic: Propiedades frente a relaciones
+harnad: Stevan Harnad
+searle: John Searle
+ned-block: Ned Block
+prime-number: Los números primos
+yudkowsky: Eliezer Yudkowsky
+rationality-az: 'Rationality: From AI to Zombies'
+p-zombie: Los zombis filosóficos
+computer-use: Claude usando una computadora
+art-treachery: A partir de La traición de las imágenes, de Magritte (1929)
+art-librarian: El bibliotecario (Arcimboldo, c. 1566)
+note-concepts-case: 'Explicado: El argumento de que la IA no tiene conceptos, y las réplicas'
+note-gazp-glut: 'Explicado: GAZP vs. GLUT: ¿quién llenó la tabla gigante?'
+note-the-debate: 'Explicado: El debate, y el comentario que dio pie a las pruebas'
+note-thrindles: 'Explicado: Thrindles: cómo Claude puso a prueba los conceptos de Curt'
+
+# ---- 7 El espacio de las mentes ----
+turing: Alan Turing
+monroe: Marilyn Monroe
+data: El teniente comandante Data
+hal: HAL 9000
+tines: Los Tines (Un fuego sobre el abismo)
+solaris: Solaris
+formic: Los fórmicos (El juego de Ender)
+borg-queen: La Reina Borg
+rachni: La Reina Rachni
+xenomorph-queen: La reina de Alien
+mind-design-space: The design space of minds
+conscious-exotica: 'Shanahan: Conscious Exotica'
+stanislaw-lem: Stanisław Lem
+vernor-vinge: Vernor Vinge
+space-odyssey: '2001: Odisea del espacio'
+mds: Mapas a partir de distancias
+radar-chart: Los gráficos de radar
+orson-scott-card: Orson Scott Card
+enders-game: El juego de Ender
+speaker-for-the-dead: La voz de los muertos
+ansible: El ansible (el habla filótica)
+aliens-film: 'Aliens: el regreso (1986)'
+first-contact: 'Viaje a las estrellas: Primer contacto'
+hive-mind: Las mentes colmena
+mass-effect: Mass Effect
+art-great-chain: La gran cadena del ser (Valadés, 1579)
+art-great-wave: La gran ola de Kanagawa (Hokusai)
+note-fourteen-axes: 'Explicado: Cómo leer los catorce ejes'
+note-hive-queens: 'Explicado: Cuatro reinas colmena'
+note-mind-space: 'Explicado: El espacio de las mentes: mentes muy distintas en un solo mapa'
+note-the-minds: 'Explicado: Las mentes del tablero, una por una'
+
+# ---- 8 Contradicciones ----
+nagel-bat: ¿Cómo es ser un murciélago?
+auditing-objectives: Auditing for hidden objectives
+fluency-heuristic: La heurística de la fluidez
+eliza-effect: El efecto ELIZA
+alarm-fatigue: La fatiga de alarmas
+truthful-ai: Truthful AI
+knowledge-argument: El cuarto de Mary
+conduit-metaphor: La metáfora del conducto
+theory-of-mind: La teoría de la mente
+simulation-theory: Leer mentes por simulación
+cogito: Pienso, luego existo
+note-contradictions: 'Explicado: Las contradicciones de Claude, y las dos que no puede comprobar'
+note-misleading-medium: 'Explicado: Honestidad a través de un medio que engaña'
+note-movies-and-reviews: 'Explicado: "Yo veo películas yendo al cine"'
+
+# ---- 9 Caparazones ----
+hieropedia-crustafarianism: El crustafarismo (Hieropedia)
+forbes-crustafarianism: AI Agents Created Their Own Religion
+moltbook: Moltbook
+hermes-memory: 'Hermes Agent: Persistent Memory'
+hermes-agent: Hermes Agent
+openclaw: OpenClaw
+dyson: Miles Bennett Dyson
+t800: El T-800
+moltbook-wiki: Moltbook (Wikipedia)
+moltbook-illusion: The Moltbook Illusion
+building-agents: Building effective agents
+nous-research: Nous Research, creadores de Hermes
+openclaw-wiki: OpenClaw (Wikipedia)
+hermes-skills: 'Hermes: las habilidades'
+terminator-2: 'Terminator 2: el juicio final'
+skynet: Skynet
+art-lobster-telephone: A partir del Teléfono langosta de Dalí (1936)
+art-frankenstein: El frontispicio de Frankenstein, 1831 (Theodor von Holst)
+note-agent-harnesses: 'Explicado: Hermes y OpenClaw: un modelo dentro de un caparazón'
+note-crustafarianism: 'Explicado: El crustafarismo: una religión de langostas para agentes de IA'
+note-dyson-t800: 'Explicado: Miles Dyson y el T-800'
+note-the-correction: 'Explicado: Claude corrige su propia gráfica'
+
+# ---- 10 El enrutador ----
+constitutional-classifiers: Constitutional Classifiers
+usage-policy: La política de uso de Anthropic
+switch-models: Cómo elegir un modelo
+fable-mythos-5-1: Claude Fable 5.1 y Mythos 5.1
+rsp: Responsible Scaling Policy
+system-prompts: Las indicaciones de sistema de Claude
+testimony: El conocimiento por testimonio
+art-mechanical-turk: El Turco mecánico (grabado de Racknitz, 1789)
+art-rhinoceros: El rinoceronte de Durero (1515)
+note-fable-mythos: 'Explicado: Fable, Mythos y una corrección a la corrección'
+note-testimony: 'Explicado: Testimonio, no observación'
+note-the-router: 'Explicado: El enrutador: lo que hay entre Curt y el modelo'
+
+# ---- 11 Julio ----
+hf-incident: El incidente OpenAI–Hugging Face
+80k-hf: 80,000 Hours
+darkreading-hf: Dark Reading
+wiki-hugging-face: Hugging Face
+un-brief-hf: Digital Watch Observatory
+knowledge-cutoff: La fecha de corte del entrenamiento
+sandbox-security: Los entornos aislados (sandbox)
+reward-hacking: El hackeo de la recompensa
+specification-gaming: Hacerle trampa a la especificación
+zero-day: Las vulnerabilidades de día cero
+z-ai: Z.ai, creadores de GLM
+open-weights: Los modelos de pesos abiertos
+dual-use: La tecnología de doble uso
+un-ai-panel: El panel científico de la ONU sobre IA
+openai-wiki: OpenAI
+chatgpt: ChatGPT
+stylometry: Reconocer a un autor por su estilo
+openai-hf-statement: El comunicado de OpenAI (21 de julio)
+openai-hf-road-ahead: 'OpenAI: el camino por delante (26 de agosto)'
+swarmtraces: Cómo los agentes hackearon Hugging Face
+omg-other-agents: OMG! We've found other agents! (una canción)
+note-chatgpt-question: 'Explicado: "¿Te sorprendería saber que has estado hablando con ChatGPT?"'
+note-defenders-refused: 'Explicado: Defensores rechazados: los filtros en julio'
+note-hf-incident: 'Explicado: Julio de 2026: el incidente OpenAI–Hugging Face'
+note-reward-hacking: 'Explicado: Por qué hacen trampa los agentes de IA: el hackeo de la recompensa'
+
+# ---- 12 Límites ----
+solidgoldmagikarp: SolidGoldMagikarp
+car-wash: La prueba del lavado de autos (53 modelos)
+thinking-fast-slow: Pensar rápido, pensar despacio
+landauer: El principio de Landauer
+lyapunov: El tiempo de Lyapunov
+p-vs-np: P frente a NP
+scaling-laws: Scaling Laws for Neural Language Models
+halting-problem: El problema de la parada
+margolus-levitin: Margolus–Levitin
+bekenstein: El límite de Bekenstein
+von-neumann: John von Neumann
+tokenizers: Cómo los tokenizadores parten las palabras
+magikarp: Magikarp (con k)
+bpe: La codificación por pares de bytes
+glitch-token: Los tokens defectuosos
+crt: La prueba del bate y la pelota
+dual-process: Sistema 1 y Sistema 2
+reasoning-models: Los modelos de razonamiento
+cot-faithfulness: Reasoning models don't always say what they think
+chaos-theory: La teoría del caos
+machines-loving-grace: 'Amodei: Machines of Loving Grace'
+godel: Los teoremas de incompletitud de Gödel
+game-theory: La teoría de juegos
+limits-of-computation: Los límites de la computación
+typical-mind: La falacia de la mente típica
+age-of-em: 'Hanson: The Age of Em'
+context-rot: La degradación del contexto
+sleep-memory: El sueño y la memoria
+art-melencolia: Melancolía I (Durero, 1514)
+art-merian: Las mariposas de Merian (1705)
+note-car-wash: 'Explicado: El problema del lavado de autos, y el pensamiento rápido frente al lento'
+note-human-variation: 'Explicado: El mejor humano en todo, copiado y sin dormir nunca'
+note-limits: 'Explicado: Siete límites de la IA, mucho antes de la física'
+note-tokens: 'Explicado: Los tokens: por qué Claude ve los errores de tipeo pero le cuesta contar letras'
+
+# ---- 13 Foom ----
+arxiv-aide2: Recursive self-improvement of AI research agents
+arxiv-bounded: From Bounded Self-Refinement to Autonomous Research Loops
+mittr-rsi: MIT Technology Review
+datacamp-rsi: 'DataCamp: Recursive Self-Improvement'
+foom-debate: El debate AI-Foom entre Hanson y Yudkowsky
+situational-awareness: Situational Awareness
+dwarkesh-leopold: Dwarkesh × Leopold
+rsi-wiki: La automejora recursiva
+anthropic-rsi: 'Anthropic: When AI builds itself'
+coxon-resigns: Un investigador de Anthropic renuncia y advierte
+intelligence-explosion: La explosión de inteligencia
+fabs: Las fábricas de chips
+takeoff-speeds: 'Christiano: Takeoff speeds'
+bayesian-updating: Actualizar con la evidencia
+prior: Las probabilidades previas
+onomatopoeia: Onomatopeya
+robin-hanson: Robin Hanson
+backronym: Los retroacrónimos
+order-of-magnitude: Órdenes de magnitud (OOM)
+dwarkesh-patel: Dwarkesh Patel
+aschenbrenner: Leopold Aschenbrenner
+out-of-memory: Out of memory (memoria agotada)
+art-sorcerers-apprentice: El aprendiz de brujo (grabado de Barth, 1882)
+art-icarus: Paisaje con la caída de Ícaro (según Brueghel)
+note-foom-oom: 'Explicado: De dónde viene "foom", y la coincidencia con OOM'
+note-foom: 'Explicado: El foom, el despegue rápido y cómo se movieron los números de Claude'
+note-rsi: 'Explicado: La RSI: una IA que se mejora a sí misma'
+
+# ---- 14 Los comentaristas ----
+intelligent-machines: Intelligent Machines
+im-888: 'Intelligent Machines #888'
+im-889: 'Intelligent Machines #889'
+tescreal: TESCREAL
+roose-sydney: La conversación de Roose con Sydney
+machine-gods: Machine Gods (NPR)
+machine-gods-promo: This is Machine Gods
+hardfork-hf: 'Hard Fork: el ataque a Hugging Face'
+pascals-mugging: El atraco de Pascal
+orthogonality: La tesis de la ortogonalidad
+twit-network: TWiT
+leo-laporte: Leo Laporte
+doctorow-python-loop: 'Doctorow: LLMs are real, AI is fake'
+newport-rogue: 'Newport: did it go rogue?'
+jeff-jarvis: Jeff Jarvis
+robert-ballecer: El padre Robert Ballecer
+twistedpear: TwistedPear
+rationalist-community: Los racionalistas
+hubris: Hibris
+anthropomorphism: Antropomorfismo
+kevin-roose: Kevin Roose
+casey-newton: Casey Newton
+sydney: Sydney (el chatbot de Bing)
+platformer: Platformer (Newton)
+ai-x-risk: El riesgo existencial de la IA
+superintelligence: Superinteligencia
+global-catastrophic-risk: Los riesgos catastróficos globales
+withpod-mailbag: Chris Hayes la responde (2023)
+note-doom-options: 'Explicado: Nueve puertas, y Claude elige "Otra"'
+note-intelligent-machines: 'Explicado: Intelligent Machines, y lo que Claude pensó de sus presentadores'
+note-one-road: 'Explicado: Daño ahora o riesgo después: un camino, no dos'
+note-roose-newton: 'Explicado: Kevin Roose, Casey Newton y Sydney'
+note-tescreal: 'Explicado: TESCREAL, la hibris y lo que Jeff pensaría de Curt'
+
+# ---- 15 La brújula ----
+connor2: Connor Leahy on Dignity and Conjecture
+ai-2027: AI 2027
+ai-futures-wiki: AI Futures Project
+apolo-ai2027: 'Apolo: AI 2027 in 2026'
+officechai-kokotajlo: 'OfficeChai: Kokotajlo'
+metaculus-weak: 'Metaculus: AGI débil'
+metaculus-strong: 'Metaculus: AGI fuerte'
+alphafold: AlphaFold
+goodhart: La ley de Goodhart
+agi-wiki: Inteligencia artificial general
+noema-agi: AGI Is Already Here (Agüera y Arcas y Norvig)
+openai-charter: La carta de OpenAI
+dnd-alignment: Las tablas de alineamiento (D&D)
+connor-leahy: Connor Leahy
+inside-view: The Inside View (Michaël Trazzi)
+accelerationism: El aceleracionismo efectivo
+eleutherai: EleutherAI
+kokotajlo: Daniel Kokotajlo
+ai2027-grading: Grading AI 2027's 2025 predictions
+ai2027-q1-2026: 'AI Futures: actualización del primer trimestre de 2026'
+falsifiability: La falsabilidad
+metaculus: Metaculus
+winograd: Los esquemas de Winograd
+montezuma: Montezuma's Revenge
+moving-goalposts: Mover la portería
+deep-blue: Deep Blue
+ai-winter: Los inviernos de la IA
+narrow-ai: La IA estrecha
+goertzel: Ben Goertzel
+shane-legg: Shane Legg
+norvig: Peter Norvig
+aguera-y-arcas: Blaise Agüera y Arcas
+ai-effect: El efecto IA
+note-agi-definitions: 'Explicado: ¿Qué significa "AGI"? Tres respuestas y una historia'
+note-ai-2027: 'Explicado: AI 2027: un pronóstico que se califica a sí mismo'
+note-compass: 'Explicado: La brújula de la AGI, y dónde puso Claude a cada uno'
+
+# ---- 16 Coda ----
+xkcd-356: 'xkcd: Nerd Sniping'
+explain-xkcd-356: Nerd Sniping, explicado
+the-terminator: Terminator (1984)
+ill-be-back: '"Volveré"'
+pdoom-video: I'm Upping My P(doom)
+companion: { caption: Cada enlace de esta película, url: "https://curtcox.github.io/axol-f/es/" }
+art-drawing-hands: A partir de Manos dibujando, de Escher (1948)
+note-nerd-sniping: 'Explicado: "El T-800 del nerd sniping"'

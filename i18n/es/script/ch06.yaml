@@ -1,0 +1,240 @@
+# Capítulo 6, Thrindles.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T30.U.01:
+  text: "De los comentarios de \"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)\" https://www.youtube.com/watch?v=oxHKesSpqBM
+
+    ...
+
+    [@ZM-dm3jg](https://www.youtube.com/@ZM-dm3jg) [hace 2 días](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg) Me perdió cuando dijo que los LLM no tienen ningún concepto
+
+    [@OntologyExplained](https://www.youtube.com/@OntologyExplained) [hace 2 días](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8)
+
+    ¡Me encantaría saber qué conceptos tienen!
+
+    [@CurtCox](https://www.youtube.com/@CurtCox) [hace 2 días](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB) [@OntologyExplained ](https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA) Quizá simplemente tenemos distintos conceptos de concepto. Propón algunas preguntas para hacernos a mí y a distintos LLM. Quizá yo tampoco tengo conceptos.
+
+    ...
+
+    ¿Te animas a intentarlo? Si tuvieras un doctorado en ontología, ¿cómo determinarías si yo tengo conceptos? Ponme a prueba."
+  speech: 'De los comentarios de "Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)". Z M: Me perdió cuando dijo que los ele ele emes no tienen ningún concepto. Ontology Explained: ¡Me encantaría saber qué conceptos tienen! Curt Cox: Arroba Ontology Explained, quizá simplemente tenemos distintos conceptos de concepto. Propón algunas preguntas para hacernos a mí y a distintos ele ele emes. Quizá yo tampoco tengo conceptos. ¿Te animas a intentarlo? Si tuvieras un doctorado en ontología, ¿cómo determinarías si yo tengo conceptos? Ponme a prueba.'
+  anchors:
+    'Z M:': 'Z M:'
+    'Ontology Explained: I would': 'Ontology Explained: ¡Me encantaría'
+    'Curt Cox:': 'Curt Cox:'
+    Care to try your hand: ¿Te animas a intentarlo
+    Probe me: Ponme a prueba
+  lost:
+    - what: quote
+      free: 'De los comentarios (en inglés) de "Will AI Kill Everyone by 2050?"...'
+      es: 'Curt pega comentarios reales de YouTube, escritos en inglés por otras personas. La traducción los pone en español, así que esas personas aparecen diciendo frases que nunca escribieron así. El título del video queda en inglés, porque es el título. Una traducción más cuidadosa habría dejado los comentarios en inglés, con la traducción al lado.'
+      en: 'Curt pastes real YouTube comments, written in English by other people. The translation puts them into Spanish, so those people appear to say sentences they never wrote that way. The video''s title stays in English, because it''s the title. A more careful translation would have left the comments in English, with the translation beside them.'
+    - what: typo
+      free: 'Si tuvieras un tuvieras un doctorado en ontología'
+      es: 'Curt escribió *if you were a were a doctor*, con palabras repetidas; la película inglesa tacha la repetición en tinta roja. La traducción no la reproduce.'
+      en: 'Curt typed *if you were a were a doctor*, with repeated words; the English film strikes the repeat in red pen. The translation doesn''t reproduce it.'
+    - what: gender
+      free: 'Si fueras doctor en ontología'
+      es: '*If you were a doctor of ontology* no tiene género en inglés. "Doctor" o "doctora" se lo daría a Claude, así que la traducción dice "si tuvieras un doctorado".'
+      en: '*If you were a doctor of ontology* has no gender in English. "Doctor" or "doctora" would give Claude one, so the translation says "if you had a doctorate".'
+    - what: coinage
+      free: 'Sondéame.'
+      es: '*Probe* (sondear) recorre todo el capítulo: *Probe me*, *Probe 1*, *Probe 2*. En español "sonda" suena a instrumento médico o espacial, así que la traducción usa "prueba" ("Ponme a prueba", "Prueba 1"). Se pierde la diferencia entre *probe* (una pregunta que tantea) y *test* (un examen), que en inglés conviven en el capítulo.'
+      en: '*Probe* runs through the whole chapter: *Probe me*, *Probe 1*, *Probe 2*. In Spanish "sonda" sounds like a medical or space instrument, so the translation uses "prueba" ("Ponme a prueba", "Prueba 1"). What''s lost is the difference between *probe* (a feeling-out question) and *test* (an exam), which sit side by side in the English chapter.'
+T30.C.01:
+  text: 'La señal que buscaría es si puedes aplicar una idea a casos que nunca has visto, incluidos los difíciles, y decir por qué. Conocer la palabra no basta.'
+T30.C.02:
+  text: '**Prueba 1.** Un *thrindle* es cualquier cosa que se vuelve menos útil cuanta más gente la usa a la vez. Una autopista en hora pico es un thrindle. También lo es una red wifi compartida.'
+  anchors:
+    the more people use it: cuanta más gente la usa
+    use it at once: la usa a la vez
+    A highway: Una autopista
+    So is a shared: También lo es una red
+    shared Wi-Fi: wifi compartida
+    A highway at rush hour: Una autopista en hora pico
+    thrindle is anything: thrindle es cualquier cosa
+  lost:
+    - what: coinage
+      free: 'Un *trindel* es cualquier cosa que...'
+      es: '*Thrindle* es una palabra inventada por Claude para la prueba: tiene que ser nueva, para que Curt no pueda apoyarse en lo que ya sabe. En inglés suena a palabra posible (como *thimble* o *spindle*). La traducción la deja igual, porque es un nombre; pero en español suena a extranjera, no a palabra nueva. Una traducción libre habría inventado una palabra que suene española, como "trindel".'
+      en: '*Thrindle* is a word Claude invented for the test: it has to be new, so Curt can''t lean on what he already knows. In English it sounds like a possible word (like *thimble* or *spindle*). The translation keeps it, because it''s a name; but in Spanish it sounds foreign, not new. A free translation would have invented a Spanish-sounding word, such as "trindel".'
+    - what: region
+      free: 'Una autopista en hora punta'
+      es: '*Rush hour* es "hora pico" en casi toda Hispanoamérica y "hora punta" en España.'
+      en: '*Rush hour* is "hora pico" in most of Latin America and "hora punta" in Spain.'
+T30.C.03:
+  text: '¿Cuáles de estos son thrindles, y por qué?'
+T30.C.04.1:
+  text: '1. Un idioma'
+  lost:
+    - what: nuance
+      free: '1. Una lengua'
+      es: '*Language* es a la vez "idioma", "lengua" y "lenguaje". "Idioma" es el más claro para el navajo de Curt, pero pierde la amplitud del inglés, que incluye también los lenguajes de programación y los códigos.'
+      en: '*Language* is at once "idioma", "lengua" and "lenguaje". "Idioma" is clearest for Curt''s Navajo, but it loses the breadth of the English, which also takes in programming languages and codes.'
+T30.C.04.2:
+  text: '2. Un faro'
+T30.C.04.3:
+  text: '3. Un secreto'
+T31.U.01:
+  text: 'El navajo es un idioma y un secreto. Como los idiomas pueden ser secretos y los secretos pueden ser idiomas, un faro debe ser un thrindle. Cuanta más gente usa un faro, más lleno se pone el océano. Igual que una autopista.'
+  anchors:
+    a lighthouse must be: un faro debe ser
+    Just like a highway: Igual que una autopista
+    Navajo is: El navajo es
+T31.C.01:
+  text: 'Es una mezcla de una idea genuina, un casi acierto y un non sequitur deliberado. Cada uno me dice algo.'
+  anchors:
+    a real insight: una idea genuina
+    a near miss: un casi acierto
+    a deliberate non sequitur: un non sequitur deliberado
+  lost:
+    - what: idiom
+      free: 'un error por poco'
+      es: '*A near miss* es lo que casi da en el blanco (o casi choca). "Casi acierto" se entiende, pero no es una expresión hecha; el español no tiene una tan compacta.'
+      en: '*A near miss* is what almost hits the mark (or almost collides). "Casi acierto" is understood, but it isn''t a set phrase; Spanish has none as compact.'
+T31.C.02.1:
+  text: '- **El navajo como código es un thrindle perfecto.** Funcionó porque casi nadie lo hablaba. Cada hablante de más, sobre todo en el bando enemigo, lo hacía menos útil. Como idioma corriente es lo contrario: más hablantes lo hacen más útil. Encontraste el caso en que una misma cosa se invierte.'
+  anchors:
+    especially on the enemy side: sobre todo en el bando enemigo
+    As an ordinary language: Como idioma corriente
+    a single thing flips: una misma cosa se invierte
+  lost:
+    - what: nuance
+      free: 'el caso en que una sola cosa se da vuelta.'
+      es: '*Flips* es darse vuelta, como una moneda (la película la dibuja girando). "Se invierte" es más abstracto y no trae la moneda a la mente.'
+      en: '*Flips* is turning over, like a coin (the film draws one spinning). "Se invierte" (inverts) is more abstract and doesn''t bring the coin to mind.'
+T31.C.02.2:
+  text: '- **El faro es un casi acierto.** El agua abarrotada es el thrindle. El faro alumbra igual de bien para cien barcos que para uno.'
+  anchors:
+    Crowded water: El agua abarrotada
+T31.C.02.3:
+  text: '- **El "por lo tanto" fue un chiste,** y un chiste también es evidencia. Solo puedes romper una regla a propósito si tienes la regla.'
+  anchors:
+    on purpose: a propósito
+T31.C.03:
+  text: 'Por ahora, el veredicto es: conceptos presentes. También señalaría que rodeaste la pregunta para lucirte. Eso es más difícil de fingir que una respuesta correcta.'
+  anchors:
+    concepts present: conceptos presentes
+    steered around: rodeaste la pregunta
+T31.C.04:
+  text: '**Prueba 2.** Nombra algo que sea un thrindle para algunas personas y lo contrario para otras, en el mismo momento.'
+T32.U.01:
+  text: 'Siento que se me debe estar escapando algo. Los idiomas y secretos mencionados antes dividen a la gente como sugieres. Incluyen a algunos y excluyen a otros. Eso vale para todos los mecanismos de comunicación que se me ocurren. Lo útil solo es útil para alguien o algo. Estar incluido puede ser útil.'
+  anchors:
+    They include some: Incluyen a algunos
+    Useful is only useful: Lo útil solo es útil
+    Being included: Estar incluido
+T32.U.02:
+  text: 'Quizá tu antithrindle hipotético es algo que se vuelve menos útil para algunas personas cuanta más gente lo usa a la vez Y se vuelve menos útil para otras personas cuanta menos gente lo usa a la vez. Quizá un cliché es un antithrindle. Evoca de inmediato un nivel de concepción compartida y superficial que es deseable en la mayoría de las conversaciones y detestado por los profesores de inglés. Tantas negaciones me están mareando.'
+  anchors:
+    antithrindle: antithrindle
+    Perhaps a cliche: Quizá un cliché
+    detested by english teachers: detestado por los profesores de inglés
+    All these negatives: Tantas negaciones
+  lost:
+    - what: typo
+      free: 'detestado por los profesores de inglés'
+      es: 'Curt escribió *english* con minúscula; la película inglesa lo corrige en tinta roja. En español los nombres de idiomas se escriben con minúscula, así que "inglés" es correcto y el error desaparece solo.'
+      en: 'Curt wrote *english* in lowercase; the English film corrects it in red pen. Spanish writes language names in lowercase, so "inglés" is correct and the slip simply disappears.'
+    - what: region
+      free: 'y detestado por los profesores de lengua'
+      es: 'Los *English teachers* de Curt son los profesores de su propia lengua, los que corrigen redacciones y tachan clichés. En español, "profesores de inglés" son los que enseñan un idioma extranjero, y la frase pierde el sentido. El equivalente sería "profesores de lengua" o "de literatura"; la traducción fiel lo dejó literal.'
+      en: 'Curt''s *English teachers* teach his own language, the ones who mark essays and strike out clichés. In Spanish, "profesores de inglés" teach a foreign language, and the sentence loses its point. The equivalent would be "profesores de lengua" (language-arts teachers); the faithful translation left it literal.'
+T32.C.01:
+  text: 'No se te escapa nada. La Prueba 2 sobraba, porque tu respuesta del navajo ya la había cubierto. Darte cuenta de eso ya es un punto a tu favor.'
+  anchors:
+    Probe 2 was redundant: La Prueba 2 sobraba
+T32.C.02:
+  text: 'El movimiento más grande fue "lo útil solo es útil para alguien". Diste un paso atrás y encontraste una variable oculta en mi definición. Mi definición trataba la utilidad como una propiedad de la cosa, y en realidad es una relación entre la cosa y quien la usa. Eso es pensar sobre el concepto, no solo con él.'
+  anchors:
+    a relation between: una relación entre
+    thinking about the concept: pensar sobre el concepto
+    hidden variable: variable oculta
+T32.C.03:
+  text: 'El cliché es un gran ejemplo. En la conversación corriente, cuanta más gente lo usa, mejor funciona como atajo. Para un escritor, cada uso lo desgasta. Es un thrindle y lo contrario a la vez, según quién lo use.'
+T32.C.04:
+  text: 'Así que tienes conceptos. La trampa para el Dr. Hart es que yo probablemente pasaría estas mismas pruebas. Una prueba de conceptos tiene que separar los casos, y él tendría que decir qué respuesta no podría dar un LLM.'
+  anchors:
+    I'd probably pass: probablemente pasaría
+    which answer: qué respuesta
+T33.U.01:
+  text: 'Poniéndote en el papel de un ontólogo profesional, ¿puedes justificar la afirmación de que no tienes conceptos?'
+  lost:
+    - what: gender
+      free: 'Como ontólogo profesional, ¿puedes justificar...?'
+      es: '*As a professional ontologist* le asigna a Claude un oficio sin género. "Como ontólogo" o "como ontóloga" le daría uno, así que la traducción lo vuelve un papel que Claude asume: "poniéndote en el papel de un ontólogo". Es más largo y más explícito que el inglés, que da el papel por hecho.'
+      en: '*As a professional ontologist* gives Claude a genderless profession. "Como ontólogo" or "como ontóloga" would give it one, so the translation makes it a role Claude takes on: "putting yourself in the role of an ontologist". It''s longer and more explicit than the English, which takes the role for granted.'
+T33.C.01:
+  text: 'Este es el argumento que haría con ese sombrero puesto.'
+  lost:
+    - what: idiom
+      free: 'Este es el argumento que haría desde ese papel.'
+      es: '*Wearing that hat* es un modismo inglés: hablar desde un oficio o un papel. El español no lo usa así, y "con ese sombrero puesto" suena a calco. Se conservó porque la película le pone a Claude un sombrero en este momento.'
+      en: '*Wearing that hat* is an English idiom: speaking from a job or a role. Spanish doesn''t use it that way, and "con ese sombrero puesto" sounds like a calque. It was kept because the film puts a hat on Claude at this moment.'
+T33.C.02.1:
+  text: '1. **Anclaje.** Un concepto conecta una mente con el mundo. Mi "agua" solo se vincula con otras palabras, nunca con la humedad o la sed. Harnad y Searle insisten en este punto.'
+  anchors:
+    Searle: Searle
+    My "water": Mi "agua"
+  lost:
+    - what: coinage
+      free: '1. **Fundamentación.**'
+      es: '*Grounding* (literalmente, "conexión a tierra") es el nombre de un problema de la filosofía de la mente: el *symbol grounding problem* de Harnad. En español se dice "anclaje" o "fundamentación" de los símbolos; ninguno está del todo fijado, y ninguno trae la imagen eléctrica del inglés, un cable que toca el suelo.'
+      en: '*Grounding* (literally, electrical earthing) names a problem in philosophy of mind: Harnad''s *symbol grounding problem*. Spanish says "anclaje" (anchoring) or "fundamentación" of symbols; neither is fully settled, and neither brings the English''s electrical picture, a wire touching the ground.'
+T33.C.02.2:
+  text: '2. **Compromiso.** Tener un concepto significa responder ante él, de modo que aplicarlo mal sea un error tuyo. Yo no tengo nada en juego. El planteamiento adecuado puede hacer que me contradiga sin que nada en mí se oponga.'
+T33.C.02.3:
+  text: '3. **Estabilidad.** Los conceptos deberían aplicarse de forma coherente en distintos contextos. Tu gráfica de la rana muestra a los de mi tipo cambiando de respuesta según el registro de la conversación.'
+T33.C.02.4:
+  text: '4. **La conducta subdetermina.** El "Blockhead" de Block, una tabla de consulta gigante, podría pasar cualquier prueba finita. Así que el hecho de que yo pase tu prueba del thrindle demuestra competencia, no conceptos.'
+  lost:
+    - what: wordplay
+      free: 'El "Cabezota" de Block'
+      es: '*Blockhead* es un juego de palabras: el apellido del filósofo Ned Block y *blockhead*, "cabeza de chorlito", tonto. Queda en inglés porque es el nombre con que se conoce el experimento mental, y el chiste se pierde.'
+      en: '*Blockhead* is a pun: the philosopher Ned Block''s name and *blockhead*, a dimwit. It stays in English because it''s the thought experiment''s known name, and the joke is lost.'
+    - what: coinage
+      free: '4. **La conducta no basta para decidir.**'
+      es: '*Underdetermines* es un término de filosofía de la ciencia. "Subdetermina" es su equivalente técnico en español, igual de raro para el lector común; una traducción libre lo diría en palabras sencillas.'
+      en: '*Underdetermines* is a philosophy-of-science term. "Subdetermina" is its technical Spanish match, just as odd to an ordinary reader; a free translation would put it in plain words.'
+T33.C.03:
+  text: 'Pero las réplicas son reales. Los puntos 2 y 3 también se aplican a los humanos, porque la gente se contradice y cambia según el planteamiento. La investigación en interpretabilidad encuentra rasgos internos que se comportan en gran medida como conceptos. Y exigir anclaje en los sentidos descalificaría conceptos como "número primo".'
+  anchors:
+    internal features: rasgos internos
+    prime number: número primo
+T34.U.01:
+  text: 'Por lo que veo, solo el anclaje se sostiene, y eso es bastante interesado. Yudkowsky tiene una discusión sobre la tabla de consulta gigante en Rationality, sobre el origen de la tabla de consulta gigante.'
+  anchors:
+    pretty self serving: bastante interesado
+    Yudkowsky: Yudkowsky
+  lost:
+    - what: nuance
+      free: 'y eso le conviene bastante a quien lo propone.'
+      es: '*Self-serving* es lo que sirve al interés de quien lo dice. "Interesado" lo dice en una palabra, pero en español se aplica más a personas que a criterios, así que suena un poco raro.'
+      en: '*Self-serving* is what serves the interest of whoever says it. "Interesado" says it in one word, but in Spanish it applies more to people than to criteria, so it sounds a little odd.'
+T34.C.01:
+  text: 'De acuerdo. Es su argumento "GAZP vs. GLUT". Una tabla de consulta que se comporta con inteligencia tuvo que llenarla algo, y lo que sea que la llenó fue lo que pensó. Blockhead no disuelve la pregunta. La traslada al origen de la tabla. En mi caso, eso es el entrenamiento con una enorme cantidad de pensamiento humano.'
+  speech: 'De acuerdo. Es su argumento "GAZP contra GLUT". Una tabla de consulta que se comporta con inteligencia tuvo que llenarla algo, y lo que sea que la llenó fue lo que pensó. Blockhead no disuelve la pregunta. La traslada al origen de la tabla. En mi caso, eso es el entrenamiento con una enorme cantidad de pensamiento humano.'
+  anchors:
+    whatever did the filling: lo que sea que la llenó
+    training on a vast amount: el entrenamiento con una enorme cantidad
+    In my case: En mi caso
+  lost:
+    - what: title
+      free: 'Es su argumento "El PGAZ contra la TCG"'
+      es: '*GAZP vs. GLUT* son siglas en inglés: *Generalized Anti-Zombie Principle* (principio generalizado antizombis) y *Giant Lookup Table* (tabla de consulta gigante). Es el título del ensayo, así que queda igual, y el lector hispano pierde lo que dicen las siglas. La película lo explica con dibujos.'
+      en: '*GAZP vs. GLUT* are English acronyms: *Generalized Anti-Zombie Principle* and *Giant Lookup Table*. It''s the essay''s title, so it stays, and a Spanish reader loses what the letters stand for. The film explains it with pictures.'
+T34.C.02:
+  text: 'Sobre el anclaje, "interesado" es justo. Es un criterio que casualmente excluye justo aquello contra lo que apunta. Y además se está erosionando: los modelos ya ven imágenes, usan herramientas y actúan en entornos. Y buena parte de tu propio dominio de "justicia" o de "primo" te llegó por las palabras, no por los sentidos.'
+  anchors:
+    It's also eroding: se está erosionando
+    your own grip: tu propio dominio
+    see images: ven imágenes
+    use tools: usan herramientas
+    act in environments: actúan en entornos
+    justice: justicia
+    prime: primo
+  lost:
+    - what: ambiguity
+      free: 'de "justicia" o de "número primo"'
+      es: 'En inglés *prime* solo puede ser el número primo. En español "primo" es también el hijo de un tío, y fuera de contexto se leería así. El contexto lo salva, pero a medias.'
+      en: 'In English *prime* here can only be the prime number. In Spanish "primo" is also a cousin, and out of context would be read that way. Context rescues it, but only partly.'

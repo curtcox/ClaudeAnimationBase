@@ -1,0 +1,79 @@
+# The Spanish site's own words (tools/build_site.mjs's SITE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/site_strings.yaml). {name} is filled in by the builder. Some values are HTML.
+lang: es
+film_title: Rana o ajolote
+index_title: 'Rana o ajolote: los enlaces'
+explained: Explicado
+index_intro: >-
+  <p>Una película animada de una larga conversación de un sábado por la mañana entre Curt y Claude, un programa de IA.
+  La conversación pasea por la ciencia ficción, la filosofía y muchas noticias recientes sobre IA, así que está llena de
+  referencias que la mayoría de la gente no conoce.</p><p>Aquí están todas, en orden, capítulo por capítulo, con
+  explicaciones breves en lenguaje sencillo donde un enlace solo no alcanza. <strong>Las amarillas son las
+  explicaciones.</strong> Empieza por ahí si un momento de la película te dejó sin entender.</p>
+  <p class="note">Esta es la versión en español. La película y este sitio los tradujo Claude, sin revisión humana, a
+  propósito: <a href="traduccion/">cómo se tradujo, y qué se perdió</a>. El sitio original, en inglés, está en
+  <a href="../">curtcox.github.io/axol-f</a>.</p>
+watch_film: ▶ Ver la película
+watch_film_after: ', con cada enlace al lado a medida que aparece.'
+on_its_way: >-
+  La película está en camino. Sus enlaces y explicaciones ya están todos aquí. ¿No puedes esperar? La película está hecha
+  enteramente con código, así que puedes hacerla tú: <a href="{repo}">consigue el código</a> y ejecuta
+  <code>npm start</code>.
+two_conversations: Las dos conversaciones
+conversation_shown: La conversación que muestra la película
+conversation_shown_after: ', palabra por palabra, traducida (<a href="conversation.txt">texto simple</a>).'
+# the making-of is in English only, on the English site
+making_of_href: ../making-of/
+conversation_made: La conversación que hizo la película
+conversation_made_after: ': Curt pidiéndole a Claude que la hiciera, y todo lo que Claude hizo (en inglés; <a href="{href}making-of.txt">texto simple</a>).'
+chapters: Capítulos
+index_notes: >-
+  <p class="note">Las explicaciones las escribió Claude, la IA de la película, para este sitio, y las comprobó con las
+  fuentes enlazadas. Muchas de esas fuentes están en inglés. Los tiempos todavía pueden moverse un poco antes de que la
+  película esté terminada.</p>
+  <p class="note">La película está dibujada con código, por Claude. Curt encontró el código en que se basa a través de
+  una película anterior hecha de la misma manera, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My
+  P(doom)</a> (ese es su sitio de explicaciones, en inglés).</p>
+  <p class="note">¿Por qué este sitio se llama <em>axol-f</em>? Axolotl, "ajolote" en inglés, a una letra de
+  <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">"Axel F", de Crazy Frog</a>, la rana loca: una rana, o un
+  ajolote.</p>
+going_to: Yendo a
+conversation_title: La conversación
+conversation_crumb: la conversación
+conversation_intro: >-
+  <p>Toda la conversación entre Curt y Claude de la que sale la película, palabra por palabra, capítulo por capítulo, en
+  la traducción de la película. La original, en inglés, está <a href="{orig}">en claude.ai</a>. También está aquí como
+  <a href="../conversation.txt">texto simple</a>, y se puede leer al lado del inglés en
+  <a href="../traduccion/texto/">el texto completo, en los dos idiomas</a>. Y está
+  <a href="{making_of}">la conversación que hizo la película</a> (en inglés).</p>
+the_original: el original
+watch_chapter: ▶ Ver este capítulo con sus enlaces al lado
+chapter: capítulo
+no_links: Todavía no hay enlaces en este capítulo.
+in_the_film: En la película, hacia el
+read_more: Para leer más
+play_from_here: Ver la película desde aquí
+film_local_final: el montaje final, hecho en esta computadora
+film_local_draft: el último borrador, hecho en esta computadora
+film_preview: un montaje de avance; la película terminada va a YouTube
+this_is: 'Esto es {what}.'
+on_its_way_film: >-
+  La película está en camino. Todos sus enlaces ya están aquí, por tiempo. ¿No puedes esperar? La película está hecha
+  enteramente con código, así que puedes hacerla tú: <a href="{repo}">consigue el código</a> y ejecuta
+  <code>npm start</code>.
+watch: Ver
+the_film: la película
+watch_crumb: ver
+chapter_links: enlaces del capítulo {n}
+highlighted: Los enlaces resaltados están en pantalla ahora. Haz clic en un tiempo para saltar ahí; los enlaces se abren en una pestaña nueva.
+follow_film: que la lista siga a la película
+follow_video: que la lista siga al video
+badge_explained: explicado
+badge_chat: en el chat
+badge_source: fuente
+# the head of the transcript the site serves as plain text (conversation.txt), which i18n/tools/stage.mjs writes
+transcript_head: |-
+  # Transcripción de la conversación, traducida al español
+
+  Original (en inglés): https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
+  Traducción: Claude, sin revisión humana. Cómo se tradujo: https://curtcox.github.io/axol-f/es/traduccion/

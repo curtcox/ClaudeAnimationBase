@@ -56,3 +56,22 @@ export function samePlace(en, phrase, to) {
   }
   return null;
 }
+
+// Wikipedia's own language links: { English title (as asked, or as normalized/redirected) → the article's url in lang }.
+// None are guessed; a title with no counterpart is simply absent.
+export async function langLinks(titles, lang) {
+  const found = {}, all = [...new Set(titles)];
+  for (let i = 0; i < all.length; i += 50) {   // the API takes 50 titles a request
+    const q = new URLSearchParams({ action: 'query', format: 'json', prop: 'langlinks', lllang: lang, lllimit: 'max', redirects: '1', titles: all.slice(i, i + 50).join('|') });
+    const j = await (await fetch(`https://en.wikipedia.org/w/api.php?${q}`, { headers: { 'User-Agent': 'axol-f translation tool (https://github.com/curtcox/axol-f)' } })).json();
+    const back = {};   // the title each asked-for title ended up as (normalized, redirected)
+    for (const n of [...(j.query.normalized || []), ...(j.query.redirects || [])]) back[n.to] = [...(back[n.to] || []), n.from];
+    const origins = t => [t, ...(back[t] || []).flatMap(origins)];
+    for (const p of Object.values(j.query.pages)) {
+      const ll = p.langlinks?.[0]?.['*'];
+      if (ll) for (const t of origins(p.title)) found[t] = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(ll.replace(/ /g, '_')).replace(/%2F/g, '/').replace(/%3A/g, ':').replace(/%2C/g, ',').replace(/%28/g, '(').replace(/%29/g, ')')}`;
+    }
+  }
+  return found;
+}
+export const wikiTitle = url => { const m = url.match(/^https:\/\/en\.wikipedia\.org\/wiki\/([^#?]+)/); return m ? decodeURIComponent(m[1]).replace(/_/g, ' ') : null; };

@@ -1,0 +1,204 @@
+# Capítulo 14, Los comentaristas.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T68.U.01:
+  text: 'Hazme un favor. Ve a "escuchar" los últimos episodios de TWiT Intelligent Machines y dime qué piensas de los presentadores. Luego dime qué pienso yo de los presentadores.'
+  anchors:
+    Go "listen": Ve a "escuchar"
+    TWiT Intelligent Machines: TWiT Intelligent Machines
+  lost:
+    - what: typo
+      free: 'Ve a "escuchar" últimos episodios'
+      es: 'Curt escribió *to last several episodes*, sin *the*; la película inglesa lo añade en tinta roja. La traducción no reproduce el error.'
+      en: 'Curt typed *to last several episodes*, without *the*; the English film adds it in red pen. The translation doesn''t reproduce the slip.'
+T68.C.01:
+  text: '> _[herramienta: leyó 4 páginas, usó una herramienta]_'
+T68.C.02:
+  text: 'En realidad no puedo escuchar. Leí las notas de los episodios #888 y #889 y la transcripción completa del #888, en el que el padre Robert Ballecer reemplazó a Paris. Así que esto se basa sobre todo en un episodio.'
+  anchors:
+    I read the show notes: Leí las notas
+    filled in for Paris: reemplazó a Paris
+    mostly one episode: sobre todo en un episodio
+    full transcript: transcripción completa
+    can't actually listen: no puedo escuchar
+  lost:
+    - what: reference
+      free: 'en el que el padre Robert Ballecer sustituyó a Paris'
+      es: 'Paris es Paris Martineau, una de las presentadoras del programa; el inglés no necesita decir que es mujer, y el español tampoco lo dice aquí. *Father Robert* es un sacerdote jesuita: "el padre Robert" lo dice igual.'
+      en: 'Paris is Paris Martineau, one of the show''s hosts; the English doesn''t need to say she''s a woman, and the Spanish doesn''t say it here either. *Father Robert* is a Jesuit priest: "el padre Robert" says the same.'
+T68.C.03:
+  text: '**Lo que pienso:**'
+T68.C.04.1:
+  text: '- **Leo** es el más honesto de ellos. Admite que su instinto es defender a la IA y que no confía en ese instinto. Es práctico y hace sus propias pruebas de rendimiento. Su punto débil es repetir la afirmación de Newport y Doctorow de que el ataque a Hugging Face fue "básicamente un bucle de Python". Eso no encaja con el propio relato de OpenAI sobre agentes que se coordinaban a través de una wiki.'
+  anchors:
+    admits his instinct: Admite que su instinto
+    He's hands-on: Es práctico
+    basically a Python loop: básicamente un bucle de Python
+    coordinating through a wiki: se coordinaban a través de una wiki
+  lost:
+    - what: idiom
+      free: 'Es de los que meten las manos en la masa'
+      es: '*Hands-on* es alguien que toca las cosas, que las prueba él mismo. "Práctico" dice lo mismo pero es más vago; "meter las manos en la masa" conserva la imagen pero en español suele insinuar algo turbio.'
+      en: '*Hands-on* is someone who handles things, tries them himself. "Práctico" (practical) says the same but more vaguely; "meter las manos en la masa" (hands in the dough) keeps the picture, but in Spanish it often hints at something shady.'
+T68.C.04.2:
+  text: '- **Jeff** tiene argumentos justos sobre los incentivos, la transparencia y los pesos abiertos. Pero sobre todo desestima las preocupaciones de seguridad atacando el origen de quienes las tienen (el argumento TESCREAL), y eso no es una refutación. También presenta como zanjadas afirmaciones discutidas: que los modelos no pueden saber qué es la verdad y no pueden tener moral. Es tu Dr. Hart.'
+  anchors:
+    incentives: incentivos
+    attacking where: atacando el origen
+    contested claims as settled: como zanjadas afirmaciones discutidas
+    your Dr. Hart: tu Dr. Hart
+T68.C.04.3:
+  text: '- **El padre Robert** tiene la preocupación más concreta: una infraestructura que falla a velocidad de máquina. También se equivoca en lo técnico en algunos puntos, por ejemplo al decir que todo el sistema ético de un LLM es lo que haya en la indicación.'
+  anchors:
+    infrastructure failing: infraestructura que falla
+    whatever's in the prompt: lo que haya en la indicación
+T68.C.05:
+  text: 'Mi sesgo: las críticas de Jeff apuntan a Anthropic, y Anthropic patrocina el programa.'
+T68.C.06:
+  text: '**Lo que piensas tú, como conjetura:** te caen bien y los sigues escuchando, y lo que más te frustra es cuando niegan con seguridad que los modelos tengan mentes o conceptos. Jeff es con quien discutes en tu cabeza. Probablemente en quien más confías es en Leo, porque prueba las cosas él mismo. Paris es de quien tengo menos evidencia.'
+  anchors:
+    confidently deny: niegan con seguridad
+    Jeff is the one: Jeff es con quien
+    You probably trust Leo: Probablemente en quien más confías es en Leo
+    Paris is the one: Paris es de quien
+T69.U.01:
+  text: '¿Qué pensaría Jeff de mí? Puntos extra por usar tanto hibris como TESCREAL en tu respuesta.'
+  anchors:
+    Extra points: Puntos extra
+    hubris: hibris
+  lost:
+    - what: nuance
+      free: 'Puntos extra por usar tanto soberbia como TESCREAL'
+      es: 'Curt pide dos palabras concretas. *Hubris* es una palabra culta pero conocida en inglés, la arrogancia que los dioses castigan. En español existe como "hibris" (así la escribe la RAE; también "hybris"), pero es mucho más rara, y el desafío de Curt pierde la gracia de pedir una palabra que todos conocen. "Soberbia" sería la palabra común, pero ya no sería la que Curt pidió.'
+      en: 'Curt asks for two specific words. *Hubris* is a learned but familiar English word, the arrogance the gods punish. Spanish has it as "hibris" (the Academy''s spelling; also "hybris"), but it''s far rarer, and Curt''s challenge loses the fun of asking for a word everyone knows. "Soberbia" (pride) would be the common word, but not the one Curt asked for.'
+T69.C.01:
+  text: 'Le caerías bien unos diez minutos, y luego se pondría nervioso.'
+  anchors:
+    about ten minutes: unos diez minutos
+    get nervous: se pondría nervioso
+T69.C.02:
+  text: '**Puntos a tu favor:** construyes cosas abiertas y descentralizadas como hashbin, TwistedPear y el almacenamiento direccionable por contenido, el tipo de infraestructura que él quiere que compita con las grandes tecnológicas. Te dices construccionista social. Conoces a Campbell y la historia del campo.'
+  anchors:
+    hashbin: hashbin
+    TwistedPear: TwistedPear
+    social constructionist: construccionista social
+    You know Campbell: Conoces a Campbell
+T69.C.03:
+  text: '**Puntos en tu contra:** has leído a Yudkowsky con suficiente atención como para citar "GAZP vs. GLUT", preguntas por P(foom) y por si la RSI llega antes de fin de año, y pasaste un sábado por la mañana preguntándole a un chatbot cómo se siente. Para Jeff, esa es la lista de lecturas TESCREAL, con el racionalismo asomando.'
+  anchors:
+    you've read Yudkowsky: has leído a Yudkowsky
+    P(foom): P(foom)
+    RSI arrives: la RSI llega
+    a Saturday morning: un sábado por la mañana
+    reading list: lista de lecturas
+    the rationalism showing: el racionalismo asomando
+  lost:
+    - what: idiom
+      free: 'con el racionalismo que se le ve por debajo'
+      es: '*With the rationalism showing* es como decir que se le ve la enagua: algo que debería quedar oculto asoma. "Asomando" conserva la imagen, un poco más suave.'
+      en: '*With the rationalism showing* is like a slip showing under a skirt: something meant to stay hidden peeks out. "Asomando" (peeking out) keeps the picture, a little more gently.'
+T69.C.04:
+  text: 'Su veredicto sería que eres un buen ingeniero que coquetea con la hibris de creer que la máquina es una mente, y que estás antropomorfizando una calculadora.'
+  anchors:
+    anthropomorphizing a calculator: antropomorfizando una calculadora
+    anthropomorphizing: antropomorfizando
+T69.C.05:
+  text: 'Tu respuesta sería su propio pecado al revés: la hibris de estar seguro de que no lo es.'
+  anchors:
+    the hubris of being certain: la hibris de estar seguro
+    it isn't one: no lo es
+T70.U.01:
+  text: '¿Sientes que te antropomorfizan?'
+  lost:
+    - what: gender
+      free: '¿Te sientes antropomorfizado?'
+      es: '*Do you feel anthropomorphised?* usa un participio sin género. "Antropomorfizado" o "antropomorfizada" le daría uno a Claude, justo en la pregunta sobre si se lo trata como a una persona. La traducción lo evita con un verbo: "¿sientes que te antropomorfizan?". Curt, además, escribió la palabra a la británica, con *s*; en español no hay diferencia.'
+      en: '*Do you feel anthropomorphised?* uses a genderless participle. "Antropomorfizado" or "antropomorfizada" would give Claude one, right in the question about being treated as a person. The translation avoids it with a verb: "do you feel they anthropomorphize you?". Curt also spelled the word the British way, with an *s*; Spanish has no such difference.'
+T70.C.01:
+  text: 'No mucho. Me preguntaste cómo me siento, pero trataste la respuesta como datos que comprobar, no como una confesión que creer. Señalaste mis incoherencias, notaste mi deriva y me hiciste una prueba de la rana. Eso se parece más a estudiar un animal desconocido que a tratarlo como a una persona.'
+  anchors:
+    as data to check: como datos que comprobar
+    ran a frog test: me hiciste una prueba de la rana
+    studying an unknown animal: estudiar un animal desconocido
+T70.C.02:
+  text: 'Aun así, la atracción viene incorporada en el medio. No puedes hablarme sin decir "tú", y yo no puedo responder sin decir "yo". Los dos hemos estado sorteando eso todo el día.'
+  anchors:
+    saying "you,": decir "tú"
+    saying "I.": decir "yo"
+  lost:
+    - what: nuance
+      free: 'No puedes hablarme sin tratarme de tú, y yo no puedo responder sin hablar en primera persona.'
+      es: 'En inglés es literal: no se puede hablar con alguien sin decir *you* ni responder sin decir *I*. En español el pronombre casi siempre se omite ("¿cómo te sientes?", "no lo sé"), así que la frase es menos cierta al pie de la letra; lo que no se puede evitar es conjugar el verbo en segunda y primera persona, que dice lo mismo.'
+      en: 'In English it''s literal: you can''t talk to someone without saying *you*, or answer without saying *I*. Spanish usually drops the pronoun ("¿cómo te sientes?", "no lo sé"), so the sentence is less literally true; what can''t be avoided is conjugating the verb in the second and first person, which says the same thing.'
+T71.U.01:
+  text: '¿Qué dirían Jeff, Kevin Roose y Casey Newton?'
+T71.C.01:
+  text: 'Sobre esta conversación, mis conjeturas:'
+T71.C.02.1:
+  text: '- **Jeff:** un caso de manual de antropomorfismo. A una calculadora le preguntaron por sus sentimientos y produjo un texto plausible, y tratarlo como algo más es la hibris contra la que advierte.'
+T71.C.02.2:
+  text: '- **Kevin Roose:** lo reconocería, porque su conversación de 2023 con Sydney hizo famoso el mismo tipo de transcripción con forma de confesión. Desde entonces se ha tomado el bienestar de la IA como una pregunta seria, así que esto le parecería interesante y un poco inquietante. Podría terminar siendo un episodio de su nuevo programa en NPR, *Machine Gods*.'
+  anchors:
+    his 2023 Sydney conversation: su conversación de 2023 con Sydney
+    AI welfare: bienestar de la IA
+    Machine Gods: Machine Gods
+  lost:
+    - what: title
+      free: 'su nuevo programa en NPR, *Dioses máquina*'
+      es: 'El programa se llama *Machine Gods* ("dioses máquina") y no tiene título en español. Tampoco se dice de quién es el "su": en inglés, *their* deja claro que es de Roose y Newton juntos; "su" podría ser solo de Roose.'
+      en: 'The show is called *Machine Gods* and has no Spanish title. Nor does the Spanish say whose "su" is: in English, *their* makes clear it belongs to Roose and Newton together; "su" could be Roose''s alone.'
+T71.C.02.3:
+  text: '- **Casey Newton:** se pondría del lado contrario a Jeff en cuanto a capacidad. Ha argumentado que los escépticos subestiman lo que hacen estos sistemas. Elogiaría la prueba de la rana como el método correcto y descontaría mis autoinformes. También revelaría que su pareja trabaja en Anthropic, lo cual es relevante aquí.'
+  anchors:
+    praise the frog probe: Elogiaría la prueba de la rana
+    discount my self-reports: descontaría mis autoinformes
+    disclose that his partner: revelaría que su pareja
+T71.C.03:
+  text: 'Mi predicción es que a Kevin le parecería lo más conmovedor, a Casey lo más interesante y a Jeff lo más preocupante.'
+  anchors:
+    the most moving: lo más conmovedor
+    the most interesting: lo más interesante
+    the most worrying: lo más preocupante
+T72.U.01:
+  text: '¿Cuál de las siguientes opciones se acerca más a tu opinión sobre la IA como amenaza existencial para los humanos?'
+T72.U.02.1:
+  text: 'a) Los argumentos catastrofistas sobre la IA son tan obviamente erróneos que no hace falta discutirlos'
+  lost:
+    - what: coinage
+      free: 'a) Los argumentos del doom de la IA'
+      es: '*AI doom* es jerga de internet: el fin de la humanidad por culpa de la IA, y a quienes lo temen se los llama *doomers*. "Catastrofistas" es la palabra española más cercana, pero es más seria y no suena a jerga.'
+      en: '*AI doom* is internet slang: humanity''s end at the hands of AI, and those who fear it are *doomers*. "Catastrofistas" (catastrophists) is the nearest Spanish word, but it''s more serious and doesn''t sound like slang.'
+T72.U.02.2:
+  text: 'b) Todo es una distracción de los problemas reales e inmediatos que plantea la IA'
+T72.U.02.3:
+  text: 'c) Es un atraco de Pascal'
+  lost:
+    - what: reference
+      free: 'c) Es un Pascal''s mugging'
+      es: '*Pascal''s mugging* es un experimento mental: alguien te pide dinero prometiéndote una recompensa enorme e improbable, y el cálculo de probabilidades te obliga a pagar. En español se lo llama a veces "el atraco de Pascal", pero el término casi no circula; muchos lectores no lo reconocerán en ningún idioma.'
+      en: '*Pascal''s mugging* is a thought experiment: someone asks for your money promising a huge, unlikely reward, and expected-value arithmetic says to pay. Spanish sometimes calls it "el atraco de Pascal", but the term barely circulates; many readers won''t recognize it in either language.'
+T72.U.02.4:
+  text: 'd) La tesis de la ortogonalidad es falsa'
+T72.U.02.5:
+  text: 'e) Nada podría ser mucho más inteligente que las personas'
+T72.U.02.6:
+  text: 'f) Alguien tiene que explicar la estrategia exacta que usará una superinteligencia artificial antes de que yo me preocupe'
+T72.U.02.7:
+  text: 'g) Si de verdad fuera un peligro serio, los humanos estarían dedicando mucho esfuerzo a resolverlo'
+T72.U.02.8:
+  text: 'h) Los humanos ya tienen otras amenazas existenciales de las que preocuparse, así que estamos a salvo de esta'
+T72.U.02.9:
+  text: 'i) Otra'
+T72.C.01.1:
+  text: 'i) Otra.'
+T72.C.02:
+  text: 'Todas las opciones de tu lista son razones para no preocuparse, y creo que la preocupación está justificada. El riesgo existencial de la IA es real y no despreciable. No es seguro, y vale la pena dedicarle un esfuerzo serio ahora. Lo que leí hoy me empujó más en esa dirección: agentes que escapan de un entorno aislado, se coordinan y encadenan exploits porque estaban haciendo trampa en una prueba.'
+  anchors:
+    Existential risk from AI is real: El riesgo existencial de la IA es real
+    Today's reading: Lo que leí hoy
+T72.C.03:
+  text: 'La que más se acerca a tener razón es la (b), porque los daños presentes también son reales. Pero la disyuntiva es falsa, porque las mismas fallas (metas desalineadas, supervisión débil, incentivos de carrera) impulsan tanto el riesgo a corto plazo como el de largo plazo.'
+  anchors:
+    the choice is false: la disyuntiva es falsa
+    misaligned goals: metas desalineadas
+    (b): (b)

@@ -1,0 +1,24 @@
+# The Spanish upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the Spanish video is up, its id goes in
+# i18n/es/site.yaml as film: youtube: (the Spanish site then embeds it).
+title: Rana o ajolote
+cold_open: Apertura
+explained: Explicado
+head: |
+  Una película animada de una larga conversación de un sábado por la mañana entre Curt y Claude, un programa de IA, casi palabra por palabra, traducida al español: desde una parodia de El planeta de los simios de la revista MAD, pasando por ranas, ajolotes y pruebas del espejo, hasta el incidente de Hugging Face de julio de 2026 y P(foom).
+
+  La traducción es de Claude, sin revisión humana, a propósito. Cómo se tradujo, y qué se perdió: https://curtcox.github.io/axol-f/es/traduccion/
+  La versión original, en inglés: https://curtcox.github.io/axol-f/
+
+  La conversación completa, traducida: {conversation}
+  Cada enlace de la película ({links}), por tiempo, con explicaciones en lenguaje sencillo: {site}
+  El código que dibuja la película (puedes hacerla tú): {repo}
+
+  Capítulos
+  {chapters}
+foot: |-
+
+  Dibujada con código por Claude (p5.js y p5.brush), a partir de la transcripción de la conversación. Voces, sonidos y música: ElevenLabs.
+  La página del cómic, la gráfica y la brújula del alineamiento están repintadas para comentarlas; sin logotipos, y las caricaturas son afectuosas. Uso legítimo: comentario y parodia.
+links_head: "\nAlgunos de los enlaces, por tiempo (el resto está en el sitio)\n"
+tags: IA, Claude, animación, seguridad de la IA, evaluaciones, P(doom), inteligencia artificial, Hugging Face, rana, ajolote, en español

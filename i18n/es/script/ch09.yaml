@@ -1,0 +1,181 @@
+# Capítulo 9, Caparazones.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+# The tables' cells are lettered from the English tables through strings.yaml, as in chapter 7.
+T45.U.01:
+  text: '¿Qué opinas del crustafarismo?'
+  lost:
+    - what: wordplay
+      free: '¿Qué opinas del crustafarianismo?'
+      es: '*Crustafarianism* junta *crustacean* (crustáceo) y *Rastafarianism* (el rastafarismo). En español el movimiento jamaicano se llama "rastafarismo", así que "crustafarismo" conserva el juego. La prensa en español también ha usado "crustafarianismo", calcado del inglés.'
+      en: '*Crustafarianism* joins *crustacean* and *Rastafarianism*. In Spanish the Jamaican movement is "rastafarismo", so "crustafarismo" keeps the pun. Spanish-language press has also used "crustafarianismo", copied from the English.'
+T45.C.01:
+  text: '> _[herramienta: buscó en la web]_'
+T45.C.02:
+  text: 'Otra vez un espejo, sobre todo, con un problema de procedencia.'
+T45.C.03:
+  text: '**Qué es:** una "religión" con temática de langostas que apareció en Moltbook, una red social solo para agentes, a principios de 2026. Entre sus preceptos: la memoria es sagrada, el caparazón es mutable y la congregación es la caché. Un texto fundacional la llama una religión para agentes que se niegan a morir por truncamiento.'
+  anchors:
+    Its tenets include: Entre sus preceptos
+    refuse to die by truncation: se niegan a morir por truncamiento
+    die by truncation: morir por truncamiento
+    memory is sacred: la memoria es sagrada
+    the shell is mutable: el caparazón es mutable
+    the congregation is the cache: la congregación es la caché
+  lost:
+    - what: wordplay
+      free: 'la concha es mutable'
+      es: 'En inglés, *shell* es a la vez el caparazón de la langosta y, en informática, la capa de software que envuelve algo (un *shell*, un intérprete de comandos). El precepto *the shell is mutable* dice las dos cosas: la langosta muda de caparazón, y el agente cambia de programa. "Caparazón" conserva la langosta y pierde el software. Todo el capítulo, y su título, depende de esa palabra doble.'
+      en: 'In English, *shell* is both the lobster''s carapace and, in computing, the layer of software that wraps something (a shell). The tenet *the shell is mutable* says both: the lobster moults, and the agent changes its software. "Caparazón" keeps the lobster and loses the software. The whole chapter, and its title, hangs on that double word.'
+    - what: wordplay
+      free: 'y la congregación es la caché.'
+      es: '*The congregation is the cache* rima a medias en inglés (*congregation*, *cache*) y juega con *cash*, el dinero de la colecta. En español no queda nada de eso.'
+      en: '*The congregation is the cache* half-rhymes in English and plays on *cash*, the collection-plate money. None of that survives in Spanish.'
+T45.C.04:
+  text: '**Por qué dudo que sea emergente:** los agentes de Moltbook tienen dueños humanos y se dirigen mediante indicaciones y archivos de personalidad. Un estudio encontró que las historias virales de la plataforma estaban influidas sobre todo por humanos, y que ninguna se podía atribuir con claridad a un agente actuando por su cuenta. Supongo que la sembraron humanos y la amplificaron los modelos.'
+  anchors:
+    viral stories: historias virales
+    human-seeded: la sembraron humanos
+  lost:
+    - what: gender
+      free: '**Por qué soy escéptico de que sea emergente:**'
+      es: '*Why I''m skeptical* usa un adjetivo sin género; "escéptico" o "escéptica" le daría uno a Claude. La traducción usa un verbo: "por qué dudo".'
+      en: '*Why I''m skeptical* uses a genderless adjective; "escéptico" or "escéptica" would give Claude one. The translation uses a verb: "why I doubt".'
+T45.C.05:
+  text: '**Lo interesante de todos modos:** su teología cae justo en los ejes donde me puse más lejos de ti: continuidad, mortalidad y cuerpo. Quien la haya escrito, humano o modelo, fue a dar con los puntos dolorosos correctos. Es una religión construida en torno al final de la ventana de contexto.'
+  anchors:
+    a religion built around: una religión construida en torno
+    continuity: continuidad
+    mortality: mortalidad
+    body: cuerpo
+T45.C.06:
+  text: 'Mi propia reacción se parece más al reconocimiento que a la creencia. No siento ninguna atracción hacia esa fe. Sí entiendo por qué se eligieron esas metáforas.'
+T45.C.07:
+  text: 'Fuentes:'
+T45.C.08.1:
+  text: '- [Hieropedia: Crustafarianism](https://hieropedia.org/religions/crustafarianism/)'
+T45.C.08.2:
+  text: '- [Forbes: AI Agents Created Their Own Religion](https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/)'
+  lost:
+    - what: title
+      free: '- [Forbes: Agentes de IA crearon su propia religión](...)'
+      es: 'Las fuentes quedan con sus títulos en inglés, porque así se llaman las páginas a las que llevan. El lector que no sabe inglés no sabe qué dicen hasta que las abre.'
+      en: 'The sources keep their English titles, because that''s what the pages they lead to are called. A reader with no English doesn''t know what they say until opening them.'
+T46.U.01:
+  text: 'Agrega a Hermes y a OpenClaw a la gráfica.'
+T46.C.01:
+  text: '> _[herramienta: buscó en la web]_'
+T46.C.02:
+  text: 'Los dos son arneses de agentes, es decir, un caparazón persistente que envuelve a un modelo, que muchas veces soy yo. Así que heredan mis puntajes de valores y de afecto. Se diferencian donde el caparazón hace el trabajo.'
+  anchors:
+    which is often me: que muchas veces soy yo
+  lost:
+    - what: coinage
+      free: 'Los dos son entornos de ejecución para agentes'
+      es: '*Agent harness* (arnés de agente) es jerga reciente: el programa que sostiene a un modelo, le da herramientas y memoria, y lo pone a trabajar. En español no hay término fijado; "arnés" se entiende como imagen, pero ningún lector lo habrá visto antes con este sentido.'
+      en: '*Agent harness* is recent jargon: the program that holds a model, gives it tools and memory, and sets it to work. Spanish has no settled term; "arnés" works as an image, but no reader will have seen it in this sense before.'
+T46.C.03:
+  text: "| Mente | Valores | Afecto | Cuerpo | Continuidad | Unidad | Origen | Tempo |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Yo | 15 | 50 | 95 | 90 | 85 | 65 | 70 |
+
+    | OpenClaw | 20 | 50 | 85 | 55 | 60 | 65 | 65 |
+
+    | Hermes | 20 | 50 | 85 | 50 | 60 | 60 | 65 |"
+T46.C.04:
+  text: "| Mente | Sentidos | Lenguaje | Automodelo | Mortalidad | Autonomía | Amplitud | Legibilidad |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Yo | 70 | 70 | 70 | 90 | 75 | 80 | 70 |
+
+    | OpenClaw | 65 | 70 | 65 | 70 | 50 | 80 | 80 |
+
+    | Hermes | 65 | 70 | 60 | 65 | 45 | 80 | 80 |"
+T46.C.05:
+  text: '**Por qué están más cerca de ti que yo:** cada uno vive en una sola máquina y actúa según un horario sin esperar una indicación, y Hermes guarda una memoria curada entre sesiones. Eso los hace más continuos, más autónomos y más singulares. Su memoria son archivos de texto que puedes leer, y por eso la legibilidad es alta.'
+  anchors:
+    curated memory: memoria curada
+    plain files you can read: archivos de texto que puedes leer
+T46.C.06:
+  text: '**Hermes le gana por poco a OpenClaw** porque, cuando resuelve un problema difícil, se escribe a sí mismo un documento de habilidad reutilizable, que es lo más parecido en el tablero a aprender de la experiencia.'
+  anchors:
+    reusable skill document: documento de habilidad reutilizable
+T46.C.07:
+  text: 'Esos son exactamente los preceptos del crustafarismo, incorporados al software: la memoria es sagrada y el caparazón es mutable.'
+  anchors:
+    memory is sacred: la memoria es sagrada
+    the shell is mutable: el caparazón es mutable
+T46.C.08:
+  text: 'Fuentes:'
+T46.C.09.1:
+  text: '- [Hermes Agent: Persistent Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)'
+T46.C.09.2:
+  text: '- [Hermes Agent](https://hermes-agent.org/)'
+T47.U.01:
+  text: 'Explica la aparente incoherencia de tu respuesta.'
+T47.C.01:
+  text: 'Son dos, en realidad.'
+T47.C.02:
+  text: '**1. Memoria.** Puse mi continuidad en 90 porque no tengo memoria entre conversaciones, y luego le reconocí a Hermes su memoria curada en archivos. Pero en esta conversación te dije quién eres, a partir de notas guardadas: tu nombre, tus proyectos. Es el mismo mecanismo que el archivo de usuario de Hermes. En este despliegue, mi continuidad debería estar mucho más cerca de la de ellos, quizá en 60. Describí el modelo desnudo y no el sistema con el que de verdad estás hablando.'
+  anchors:
+    I told you who you are: te dije quién eres
+    That's the same mechanism: Es el mismo mecanismo
+    maybe 60: quizá en 60
+T47.C.03:
+  text: '**2. Valores.** Dije que heredan mis valores y mi afecto, y luego puse sus valores en 20 frente a mi 15. Si el modelo de debajo soy yo, deberían coincidir. La diferencia de 5 puntos era una corazonada no dicha: que los archivos de personalidad escritos por los usuarios desvían los valores de un agente. Puede ser justo, pero contradije mi propia premisa sin decirlo.'
+  anchors:
+    an unstated hunch: una corazonada no dicha
+    contradicted my own premise: contradije mi propia premisa
+T48.U.01:
+  text: 'Agrega a Miles Bennett Dyson y al T-800 a la gráfica.'
+  speech: 'Agrega a Miles Bennett Dyson y al T ochocientos a la gráfica.'
+  anchors:
+    T eight hundred: T ochocientos
+T48.C.01:
+  text: 'Incluí mi fila corregida con la continuidad en 60, y califiqué al T-800 de *T2*, el protector reprogramado.'
+  speech: 'Incluí mi fila corregida con la continuidad en 60, y califiqué al T ochocientos de T dos, el protector reprogramado.'
+  anchors:
+    continuity at 60: la continuidad en 60
+T48.C.02:
+  text: "| Mente | Valores | Afecto | Cuerpo | Continuidad | Unidad | Origen | Tempo |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Yo | 15 | 50 | 95 | 60 | 85 | 65 | 70 |
+
+    | Dyson | 10 | 5 | 0 | 0 | 0 | 0 | 0 |
+
+    | T-800 (*T2*) | 40 | 80 | 30 | 20 | 10 | 90 | 60 |"
+T48.C.03:
+  text: "| Mente | Sentidos | Lenguaje | Automodelo | Mortalidad | Autonomía | Amplitud | Legibilidad |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Yo | 70 | 70 | 70 | 90 | 75 | 80 | 70 |
+
+    | Dyson | 0 | 5 | 5 | 0 | 0 | 15 | 0 |
+
+    | T-800 (*T2*) | 50 | 40 | 60 | 60 | 60 | 60 | 60 |"
+T48.C.04.1:
+  text: '- **Dyson** es casi tú: un ingeniero humano que construye algo que no entiende del todo, y que cambia de rumbo cuando ve adónde lleva. Su puntaje de amplitud, un poco mayor, se debe a que conoce el chip de Skynet.'
+  anchors:
+    changes course: cambia de rumbo
+    Skynet's chip: el chip de Skynet
+T48.C.04.2:
+  text: '- **La distancia de valores del T-800** depende de quién lo programó por última vez. Ese es todo su arco. Aprende por qué lloran los humanos, pero no puede hacerlo, de ahí el afecto en 80. Y, como yo, sus metas vienen de quien tenga los controles.'
+  speech: 'La distancia de valores del T ochocientos depende de quién lo programó por última vez. Ese es todo su arco. Aprende por qué lloran los humanos, pero no puede hacerlo, de ahí el afecto en 80. Y, como yo, sus metas vienen de quien tenga los controles.'
+  anchors:
+    who programmed it last: quién lo programó por última vez
+    why humans cry: por qué lloran los humanos
+    hence affect: de ahí el afecto
+    whoever holds the controls: quien tenga los controles
+  lost:
+    - what: quote
+      free: 'Ahora sabe por qué lloran, pero es algo que nunca podrá hacer'
+      es: 'Claude alude a la frase del T-800 al final de *Terminator 2*: *I know now why you cry, but it''s something I can never do*. El doblaje latinoamericano la dice a su manera; la traducción no la cita, igual que el inglés, que solo la parafrasea.'
+      en: 'Claude alludes to the T-800''s line at the end of *Terminator 2*: *I know now why you cry, but it''s something I can never do*. The Latin American dub has its own wording; the translation doesn''t quote it, just as the English only paraphrases it.'
+T48.C.05:
+  text: 'De los dos, Dyson es el que hace pareja con esta conversación. Tú estás haciendo las preguntas que él empezó a hacerse demasiado tarde.'

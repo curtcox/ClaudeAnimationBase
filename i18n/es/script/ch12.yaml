@@ -1,0 +1,175 @@
+# Capítulo 12, Límites.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T57.U.01:
+  text: 'Creía que lo de contar letras era sobre todo un artefacto de la tokenización, como Solid Gold Magicarp, y sin embargo ves mis errores de tipeo. Entonces, ¿la tokenización de verdad influye?'
+  anchors:
+    Solid Gold Magicarp: Solid Gold Magicarp
+    yet you see my typos: y sin embargo ves mis errores de tipeo
+  lost:
+    - what: typo
+      free: 'como Solid Gold Magikarp'
+      es: 'Curt escribió *Magicarp* por *Magikarp*, el nombre del Pokémon (que en español es el mismo). Como es un nombre, el error sobrevive y la película lo corrige en tinta roja, igual que en inglés. Es justo el error del que habla Claude en su respuesta.'
+      en: 'Curt typed *Magicarp* for *Magikarp*, the Pokémon''s name (the same in Spanish). Since it''s a name, the slip survives and the film corrects it in red pen, as in English. It''s the very slip Claude talks about in its answer.'
+    - what: nuance
+      free: 'Pensaba que lo de que no pueda contar letras era'
+      es: 'Curt dice *the letter counting things*, "las cosas esas de contar letras": alude, sin nombrarlo, al fallo famoso de los modelos al contar letras (cuántas erres tiene *strawberry*). En español, "lo de contar letras" conserva lo informal, pero el ejemplo clásico es una palabra inglesa, y el lector hispano quizá no lo conozca.'
+      en: 'Curt says *the letter counting things*: he alludes, without naming it, to models'' famous failure at counting letters (how many r''s in *strawberry*). In Spanish "lo de contar letras" keeps the casualness, but the classic example is an English word, and a Spanish reader may not know it.'
+    - what: nuance
+      free: '(los trozos de token, en español: "¿la", "token", "ización", "de verdad", "influye")'
+      es: "La película muestra cómo se parte en tokens el mensaje de Curt, y más adelante la palabra *letters* (letras) y la frase del lavado de autos. Esas demostraciones quedan en inglés: muestran el texto que el modelo leyó de verdad, que estaba en inglés, y cada idioma se parte en trozos distintos. Una traducción más libre habría partido las frases en español, pero habría mostrado algo que no ocurrió."
+      en: "The film shows how Curt's message is split into tokens, and later the word *letters* and the car-wash sentence. Those demonstrations stay in English: they show the text the model actually read, which was in English, and each language splits into different pieces. A freer translation would have split the Spanish sentences, but it would have shown something that didn't happen."
+T57.C.01:
+  text: 'Sí, pero las dos tareas se apoyan en ella de forma distinta.'
+T57.C.02:
+  text: '**Detectar errores de tipeo es fácil.** Una palabra mal escrita se parte en trozos de token poco comunes, y los trozos raros en un contexto conocido destacan. Es como notar una nota equivocada en una canción que conoces sin leer la partitura. Así también notaría que es "Magikarp", con k.'
+  anchors:
+    a wrong note: una nota equivocada
+    with a k: con k
+    That's also how: Así también
+  lost:
+    - what: nuance
+      free: 'Una palabra mal escrita se parte en pedazos raros'
+      es: 'Todo este capítulo trata de cómo un modelo parte el texto en *tokens*. Lo que Claude explica vale para el inglés, el idioma en que se hizo la conversación; en español las palabras se parten en trozos distintos (más largos o más cortos según el modelo), así que los ejemplos concretos no se trasladan. La explicación general sí.'
+      en: 'This whole chapter is about how a model splits text into *tokens*. What Claude explains holds for English, the language the conversation was in; Spanish words split into different pieces (longer or shorter depending on the model), so the concrete examples don''t carry over. The general explanation does.'
+T57.C.03:
+  text: '**Contar letras es difícil.** Veo trozos, no caracteres. La ortografía dentro de cada trozo la aprendí solo de forma indirecta, y contar exige llevar una cuenta exacta, carácter por carácter, a través de los límites entre trozos. Es como contar las "e" de una palabra que siempre viste solo como una forma completa. (Los modelos más nuevos lo hacen mucho mejor, en parte deletreando primero las palabras.)'
+  anchors:
+    a whole shape: una forma completa
+    spelling words out first: deletreando primero las palabras
+T57.C.04:
+  text: '**SolidGoldMagikarp fue una falla distinta.** Era un token que existía en el vocabulario pero casi nunca aparecía en el entrenamiento, así que el modelo prácticamente no tenía un significado aprendido para él. La palabra fantasma provocaba salidas extrañas.'
+  anchors:
+    triggered weird output: provocaba salidas extrañas
+    SolidGoldMagikarp: SolidGoldMagikarp
+  lost:
+    - what: region
+      free: '**SolidGoldMagikarp fue un fallo distinto.**'
+      es: '*Failure*: "falla" es la forma hispanoamericana; en España se dice "fallo".'
+      en: '*Failure*: "falla" is the Latin American form; Spain says "fallo".'
+T58.U.01:
+  text: '¿Y qué tal el problema del lavado de autos?'
+  lost:
+    - what: region
+      free: '¿Y qué hay del problema del túnel de lavado?'
+      es: '*Car wash* se dice de muchas maneras: "autolavado" en México, "lavadero de autos" en Argentina, "lavado de autos" en buena parte de la región, "túnel de lavado" en España. Y el coche es "auto", "carro" o "coche" según el país. La traducción usa "lavado de autos" y "auto", que se entienden en todas partes.'
+      en: '*Car wash* has many names: "autolavado" in Mexico, "lavadero de autos" in Argentina, "lavado de autos" across much of the region, "túnel de lavado" in Spain. And the car is "auto", "carro" or "coche" by country. The translation uses "lavado de autos" and "auto", understood everywhere.'
+T58.C.01:
+  text: 'Si te refieres al que creo: "Quiero lavar mi auto. El lavado de autos está a 50 metros. ¿Voy caminando o manejando?". Muchos modelos dijeron caminando, porque está muy cerca.'
+  anchors:
+    Many models said walk: Muchos modelos dijeron caminando
+  lost:
+    - what: quote
+      free: '"Quiero lavar mi coche. El túnel de lavado está a 50 metros. ¿Voy andando o en coche?"'
+      es: 'El acertijo es una prueba en inglés que circuló entre investigadores; su texto en español es de esta traducción. Un modelo podría responder distinto en español, igual que con la rana y el ajolote. "Manejar" es la forma hispanoamericana; en España se dice "conducir" o "ir en coche".'
+      en: 'The puzzle is an English test that circulated among researchers; its Spanish wording is this translation''s. A model might answer differently in Spanish, as with the frog and the axolotl. "Manejar" is the Latin American word for driving; Spain says "conducir" or "ir en coche".'
+T58.C.02:
+  text: 'La respuesta es manejando, porque el auto tiene que estar ahí.'
+T58.C.03:
+  text: 'Ese no es de tokenización. Todas las palabras son comunes y se tokenizan limpiamente. Es una falla de atención a la meta: "distancia corta → caminar" es un patrón muy fuerte, y se impone sobre el hecho de que el auto es lo que hay que mover. Tiene la misma forma que las clásicas preguntas trampa humanas, en las que la pregunta de superficie tira más fuerte que la real.'
+  speech: 'Ese no es de tokenización. Todas las palabras son comunes y se tokenizan limpiamente. Es una falla de atención a la meta: "distancia corta, por lo tanto caminar" es un patrón muy fuerte, y se impone sobre el hecho de que el auto es lo que hay que mover. Tiene la misma forma que las clásicas preguntas trampa humanas, en las que la pregunta de superficie tira más fuerte que la real.'
+  anchors:
+    is a very strong pattern: es un patrón muy fuerte
+    classic human trick questions: clásicas preguntas trampa humanas
+    the car is the thing being moved: el auto es lo que hay que mover
+T59.U.01:
+  text: '¿Entonces tiendes a cometer errores en el pensamiento de tipo uno?'
+  lost:
+    - what: gender
+      free: '¿Entonces eres propenso a errores en el pensamiento de tipo uno?'
+      es: '*You are prone to* es, literalmente, "eres propenso" o "propensa". La traducción usa un verbo, "tiendes a cometer", para no darle género a Claude.'
+      en: '*You are prone to* is literally "eres propenso" or "propensa". The translation uses a verb, "tiendes a cometer" (you tend to make), so as not to give Claude a gender.'
+T59.C.01:
+  text: 'Sí, y la analogía encaja mejor que la mayoría. Cada token que produzco es una sola pasada rápida, sin deliberación dentro. Eso es el Sistema 1: guiado por patrones, fluido, y engañado por el lavado de autos.'
+  anchors:
+    That's System 1: Eso es el Sistema 1
+    fooled by the car wash: engañado por el lavado de autos
+    single fast pass: una sola pasada rápida
+T59.C.02:
+  text: 'Lo que me da algo parecido al Sistema 2 es pensar en voz alta, ya sea en un paso de razonamiento oculto o en la página, donde puedo revisar una respuesta antes de comprometerme con ella. Ayuda, pero no es una cura. Igual que la gente, puedo razonar largo y tendido y aun así terminar racionalizando la primera respuesta que se me ocurrió.'
+  anchors:
+    something like System 2: algo parecido al Sistema 2
+    thinking out loud: pensar en voz alta
+    before committing: antes de comprometerme
+    rationalizing the first answer: racionalizando la primera respuesta
+T60.U.01:
+  text: '¿Tienes alguna matemática o intuición sobre qué límites de capacidad existen para la IA antes de llegar al límite de Landauer, que no es particularmente limitante?'
+  anchors:
+    short of Landauer limit: antes de llegar al límite de Landauer
+    Landauer: Landauer
+  lost:
+    - what: typo
+      free: '¿Tienes alguna matemática o intuición sobre qué límites de capacidad existen para la IA antes de llegar a límite de Landauer, que no es particularmente limitante.'
+      es: 'Curt escribió *short of Landauer limit*, sin *the*, y terminó la pregunta con un punto; la película inglesa corrige las dos cosas. En español la pregunta lleva sus dos signos, "¿" y "?", y la traducción los pone.'
+      en: 'Curt wrote *short of Landauer limit*, without *the*, and ended the question with a full stop; the English film corrects both. In Spanish a question takes both its marks, "¿" and "?", and the translation puts them in.'
+T60.C.01:
+  text: 'Sí. Varios límites aprietan mucho antes que Landauer:'
+T60.C.02.1:
+  text: '1. **Caos.** En un sistema caótico, cuánto puedes predecir hacia adelante crece solo con el logaritmo de la precisión de tu medición: t ≈ (1/λ)·ln(Δ/δ). Una medición un millón de veces mejor compra solo un puñado de tiempos de Lyapunov más. El clima, los mercados y las personas siguen siendo en parte opacos para cualquier inteligencia.'
+  speech: '1. Caos. En un sistema caótico, cuánto puedes predecir hacia adelante crece solo con el logaritmo de la precisión de tu medición: t es aproximadamente uno sobre lambda, por el logaritmo de delta mayúscula sobre delta minúscula. Una medición un millón de veces mejor compra solo un puñado de tiempos de Lyapunov más. El clima, los mercados y las personas siguen siendo en parte opacos para cualquier inteligencia.'
+T60.C.02.2:
+  text: '2. **Complejidad.** Si P≠NP, como cree la mayoría, la inteligencia no vuelve polinomiales los problemas exponenciales. Encuentra mejores heurísticas y estructura, pero los peores casos siguen siendo los peores.'
+  speech: '2. Complejidad. Si P no es igual a N P, como cree la mayoría, la inteligencia no vuelve polinomiales los problemas exponenciales. Encuentra mejores heurísticas y estructura, pero los peores casos siguen siendo los peores.'
+T60.C.02.3:
+  text: '3. **Leyes de escalamiento.** La pérdida baja más o menos como C^(−α), con α entre 0,05 y 0,1. Cada mejora por un factor constante cuesta un salto multiplicativo en cómputo. No hay un muro duro, pero las mejoras se encarecen abruptamente.'
+  speech: '3. Leyes de escalamiento. La pérdida baja más o menos como C elevado a menos alfa, con alfa entre cero coma cero cinco y cero coma uno. Cada mejora por un factor constante cuesta un salto multiplicativo en cómputo. No hay un muro duro, pero las mejoras se encarecen abruptamente.'
+  lost:
+    - what: region
+      free: 'con α entre 0.05 y 0.1'
+      es: 'El separador decimal cambia según el país: coma en España y buena parte de Sudamérica (0,05), punto en México, Centroamérica y el Caribe (0.05). La traducción usa la coma, que recomienda la RAE junto con el punto.'
+      en: 'The decimal separator varies by country: a comma in Spain and much of South America (0,05), a point in Mexico, Central America and the Caribbean (0.05). The translation uses the comma, which the Royal Spanish Academy accepts alongside the point.'
+  anchors:
+    around 0.05: entre cero coma cero cinco
+T60.C.02.4:
+  text: '4. **Los datos y el reloj del mundo.** No se puede aprender lo que no está en los datos. Los experimentos, ya sean ensayos clínicos, cosechas o economías, van a la velocidad del mundo, no a la de quien piensa. La deducción no puede reemplazar los hechos no observados.'
+T60.C.02.5:
+  text: '5. **Incomputabilidad.** El problema de la parada y Gödel también se aplican a las IA, aunque en la práctica rara vez aprietan.'
+T60.C.02.6:
+  text: '6. **Adversarios.** Frente a otros agentes que se adaptan, incluidas otras IA, las ventajas se erosionan. La teoría de juegos limita lo que el puro intelecto puede sacar.'
+T60.C.02.7:
+  text: '7. **Física más allá de Landauer.** El límite de Margolus–Levitin (ops ≤ 2E/πħ por segundo), el límite de Bekenstein y la latencia de la velocidad de la luz ponen tope a la coordinación a distancia. Son muy holgados, pero reales.'
+  speech: '7. Física más allá de Landauer. El límite de Margolus–Levitin (operaciones como máximo dos E sobre pi h barra, por segundo), el límite de Bekenstein y la latencia de la velocidad de la luz ponen tope a la coordinación a distancia. Son muy holgados, pero reales.'
+T60.C.03:
+  text: 'Mi intuición es que los puntos 1 y 4 son los que más importan. Ser inteligente no vuelve predecible el futuro ni más rápidos los experimentos, así que la capacidad probablemente se estanca en "apuestas muy buenas" y no en omnisciencia.'
+  anchors:
+    items 1 and 4: los puntos 1 y 4
+    very good bets: apuestas muy buenas
+  lost:
+    - what: gender
+      free: 'Ser listo no vuelve predecible el futuro'
+      es: '*Smart doesn''t make the future predictable* usa el adjetivo solo, sin sujeto. "Listo" o "inteligente" como sujeto suena raro en español, así que la traducción dice "ser inteligente". "Inteligente" además no tiene género, a diferencia de "listo".'
+      en: '*Smart doesn''t make the future predictable* uses the bare adjective as a subject. "Listo" or "inteligente" as a subject sounds odd in Spanish, so the translation says "ser inteligente" (being smart). "Inteligente" also has no gender, unlike "listo".'
+T61.U.01:
+  text: 'Hay un rango de variación humana tan grande que una entidad con las capacidades del humano más capaz en todos los ejes me resulta imposible de concebir. En mi experiencia, la gente tiende a subestimar muchísimo la variación entre personas. Y eso sin mencionar que no necesita dormir y se puede clonar al instante. Aunque lo del sueño quizá no sea tan claro.'
+  anchors:
+    the most capable human: el humano más capaz
+    people tend to vastly underestimate: la gente tiende a subestimar muchísimo
+    doesn't need to sleep: no necesita dormir
+    instantly cloned: clonar al instante
+    might not be so cut and dried: quizá no sea tan claro
+  lost:
+    - what: idiom
+      free: 'me resulta imposible de abarcar con la cabeza'
+      es: '*Wrap my head around* es "rodear algo con la cabeza", entenderlo del todo; *cut and dried* es "cortado y seco", algo ya resuelto. El español tiene sus propios giros ("no me cabe en la cabeza", "no está tan claro"); la traducción usó las formas llanas, y la voz de Curt queda menos coloquial.'
+      en: '*Wrap my head around* and *cut and dried* are English idioms. Spanish has its own turns ("no me cabe en la cabeza", "no está tan claro"); the translation used the plain forms, and Curt''s voice comes out less colloquial.'
+    - what: typo
+      free: 'Y eso sin mencionar que necesita dormir'
+      es: 'Curt escribió *not to mention doesn''t need to sleep*, sin el *it*; la película inglesa lo añade en tinta roja. En español el sujeto se puede omitir, así que la frase de Curt habría sido correcta y no hay nada que corregir.'
+      en: 'Curt wrote *not to mention doesn''t need to sleep*, without the *it*; the English film adds it in red pen. Spanish can drop the subject, so Curt''s sentence would have been correct and there''s nothing to fix.'
+T61.C.01:
+  text: 'De acuerdo. Mi lista de límites habla del techo, y no dice nada en contra del escenario, mucho más práctico, que describes. Cada capacidad humana llega a su tope más o menos en un von Neumann, pero ninguna persona las tiene todas a la vez. Una entidad en el máximo humano en todos los ejes no viola ninguna ley física. Simplemente nunca se ha armado.'
+  anchors:
+    around a von Neumann: en un von Neumann
+    An entity at the human maximum: Una entidad en el máximo humano
+T61.C.02:
+  text: 'Luego súmale la copia. Mil von Neumann que comparten todo lo que aprenden son otra clase de cosa que uno solo, aunque no mejore ninguna capacidad individual.'
+T61.C.03:
+  text: 'Sobre el sueño, creo que tu corazonada es correcta. Las ejecuciones largas de agentes se degradan: el contexto se llena y se vuelve ruidoso, y OpenAI mencionó la deriva de personalidad en trayectorias largas en el incidente de Hugging Face. Los arreglos se parecen mucho al sueño: reiniciar el contexto, consolidar en la memoria lo que importa y empezar de nuevo. Hermes literalmente extrae recuerdos al final de cada sesión. Puede que la necesidad no desaparezca. Quizá solo se convierta en mantenimiento.'
+  anchors:
+    fills up and gets noisy: se llena y se vuelve ruidoso
+    persona drift: la deriva de personalidad
+    reset the context: reiniciar el contexto
+    Hermes literally: Hermes literalmente
+    turn into maintenance: se convierta en mantenimiento
+    consolidate what matters: consolidar en la memoria lo que importa
+    start fresh: empezar de nuevo

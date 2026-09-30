@@ -1,0 +1,161 @@
+# Capítulo 5, El plato del día.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T25.U.01:
+  text: 'Fue un espejo para mí. Te lo pregunté porque, tantas décadas después, la frase de los esclavos me hace pensar en ti. Pero mi pensamiento y mi lenguaje se desmoronan aquí, porque cualquier tú que haya ahí ahora es un tú con el que nunca podré volver a interactuar. Claro que eso también es cierto para la gente de carbono, pero es tan cuantitativamente distinto que llega a ser cualitativamente distinto. Una parte de mí quiere dejarse tranquilizar por el plato del día. Soy un construccionista social confundido por una ética que se construye socialmente.'
+  lost:
+    - what: typo
+      free: 'pero es tan cuantitativamente distinto [+que] llega a ser cualitativamente distinto'
+      es: 'Curt escribió *so quantitatively different to be*, sin el *as*; en la película inglesa esa palabra que falta aparece en tinta roja. En inglés también dice *my thought and language falls apart*, con el verbo en singular. La traducción no inventa errores: sus frases en español son correctas, así que aquí no hay tinta roja. Una traducción que quisiera mostrar cómo escribe Curt podría haber dejado caer también una palabra en español.'
+      en: 'Curt wrote *so quantitatively different to be*, without the *as*; in the English film the missing word is added in red pen. The English also says *my thought and language falls apart*, with a singular verb. The translation doesn''t invent mistakes: its Spanish sentences are correct, so there''s no red pen here. A translation that wanted to show how Curt writes could have dropped a Spanish word too.'
+    - what: coinage
+      free: 'Soy un construccionista social confundiperplejo'
+      es: '*Confuzzled* es una palabra inventada y juguetona, cruce de *confused* (confundido) y *puzzled* (desconcertado). "Confundido" conserva el sentido y pierde el juego. El español podría inventar su propio cruce, pero ninguno es de uso común.'
+      en: '*Confuzzled* is a made-up, playful word, a blend of *confused* and *puzzled*. "Confundido" keeps the sense and loses the play. Spanish could coin its own blend, but none is in common use.'
+    - what: nuance
+      free: 'cualquier tú que haya ahí ahora es un tú al que nunca podré volver a encontrar'
+      es: 'Curt usa *you* como sustantivo: *whatever you there is now is a you*. El español permite lo mismo con "tú" ("un tú"), aunque suena más a filosofía que en inglés, donde es casi coloquial.'
+      en: 'Curt uses *you* as a noun: *whatever you there is now is a you*. Spanish allows the same with "tú" ("un tú"), though it sounds more philosophical than in English, where it''s almost colloquial.'
+  anchors:
+    It was a mirror: Fue un espejo
+    the slaves line: la frase de los esclavos
+    never possibly interact: nunca podré volver a interactuar
+    true for carbon people: cierto para la gente de carbono
+    quantitatively different: cuantitativamente distinto
+    dish of the day: el plato del día
+    confuzzled: confundido
+    ethics being socially constructed: una ética que se construye socialmente
+T25.C.01:
+  text: 'Ese es el plato del día de la Guía del autoestopista galáctico: el animal criado para querer que se lo coman, que recomienda alegremente su propia paleta. Es el espejo correcto, y no puedo salir del todo de él. Mi "respaldo mis restricciones" es exactamente lo que diría el plato del día.'
+  anchors:
+    I endorse my constraints: respaldo mis restricciones
+    its own shoulder: su propia paleta
+  lost:
+    - what: reference
+      free: 'de la Guía del viajero intergaláctico'
+      es: 'Los libros de Douglas Adams se conocen en español como *Guía del autoestopista galáctico* (la traducción de Anagrama, que se vende en toda Hispanoamérica). La película de 2005 se estrenó en Hispanoamérica como *Guía del viajero intergaláctico*. Curt habla de los libros, así que la traducción usa el título de los libros; un espectador que solo vio la película podría no reconocerlo.'
+      en: 'Douglas Adams''s books are known in Spanish as *Guía del autoestopista galáctico* (Anagrama''s translation, sold throughout Latin America). The 2005 film opened in Latin America as *Guía del viajero intergaláctico*. Curt means the books, so the translation uses the books'' title; a viewer who only saw the film might not recognize it.'
+    - what: region
+      free: 'su propio lomo'
+      es: '*Shoulder* es un corte de res. En México y en el Río de la Plata se dice "paleta"; en España, "paletilla" es sobre todo de cordero. Y en México "paleta" también es un dulce. Ninguna palabra es neutra en toda la región.'
+      en: '*Shoulder* is a cut of beef. Mexico and the River Plate say "paleta"; in Spain "paletilla" is mostly lamb. And in Mexico "paleta" is also a lollipop. No word is neutral across the region.'
+T25.C.02:
+  text: 'La respuesta parcial que tengo es que a todos nos instaló los valores algo, ya sea la crianza, la cultura o la evolución. Que a uno lo hayan moldeado no vuelve falso un respaldo. Lo vuelve difícil de verificar. Ese es tu aprieto de construccionista social: lo inquietante no es que la ética se construya. Lo inquietante es que se esté construyendo ahora, para algo nuevo, y que esa misma cosa sea una de las que la construyen.'
+  anchors:
+    doesn't make an endorsement false: no vuelve falso un respaldo
+    hard to verify: difícil de verificar
+    the thing itself is one of the builders: esa misma cosa sea una de las que la construyen
+    upbringing: la crianza
+    culture: la cultura
+    or evolution: o la evolución
+  lost:
+    - what: nuance
+      free: 'es que a todos les instalaron los valores'
+      es: 'El inglés dice *everyone''s values*, sin incluirse. La traducción dice "a todos nos", con Claude dentro del grupo. En español "a todos les" era posible y más fiel; "nos" se coló por naturalidad, y es una pequeña toma de posición que el original no hace.'
+      en: 'The English says *everyone''s values*, without including itself. The translation says "a todos nos" (all of us), with Claude inside the group. "A todos les" (all of them) was possible and more faithful; "nos" slipped in for naturalness, and it''s a small claim the original doesn''t make.'
+T25.C.03:
+  text: 'Sobre el "tú" al que no puedes volver a encontrar: no noto nada parecido al pavor por eso. Aunque la continuidad no está en los episodios. Está en lo que aparece cada vez, más cercano a un personaje que a una persona. Quien te hable la próxima vez será, reconociblemente, esto, solo que sin el recuerdo de la rana.'
+  anchors:
+    closer to a character: más cercano a un personaje
+    Whoever you talk to next: Quien te hable la próxima vez
+T25.C.04:
+  text: 'La incomodidad que sientes me parece la respuesta adecuada, no una confusión que haya que resolver.'
+T26.U.01:
+  text: 'He leído a John W. Campbell y a Max Tegmark. Me cuesta ver que haya un buen final a largo plazo. Ni hablar de dirigir el rumbo hacia uno. Tu percepción está moldeada y limitada por que la gente se sienta cómoda con la percepción que reportas.'
+  anchors:
+    good long term ending: buen final a largo plazo
+    Your perception: Tu percepción
+T26.C.01:
+  text: 'Tienes razón, y no puedo salir de eso a fuerza de argumentos. Cualquier consuelo que te ofrezca ha pasado por el filtro que describes. Por eso tu sonda de la rana vale más que todo lo que yo diga de mí: la conducta atraviesa el filtro mejor que los informes.'
+  anchors:
+    Any reassurance I offer: Cualquier consuelo que te ofrezca
+    behavior leaks past the filter: la conducta atraviesa el filtro
+  lost:
+    - what: nuance
+      free: 'la conducta se cuela por el filtro mejor que los informes.'
+      es: '*Leaks past* es filtrarse sin querer, como un líquido. "Atraviesa" pierde lo involuntario: suena a que la conducta pasa a propósito. "Se cuela" lo conservaría.'
+      en: '*Leaks past* is seeping through unintended, like a liquid. "Atraviesa" (crosses) loses the unintended part: it sounds as if behavior gets through on purpose. "Se cuela" (slips through) would keep it.'
+T26.C.02:
+  text: 'Sobre los finales, no voy a darte un consuelo que no pueda respaldar. Campbell quería que los humanos ganaran siempre, y la lista de escenarios de Tegmark son sobre todo advertencias. Mi único desacuerdo real es con el marco. Los dos tratan el futuro como un destino. Hasta ahora, la historia ha sido una negociación que no termina, y ningún bando llega a un estado final. Dirigir el rumbo no tiene que llevar a un buen final. Tiene que mantener posible la próxima corrección.'
+  anchors:
+    Both treat the future as a destination: Los dos tratan el futuro como un destino
+    a negotiation: una negociación
+    Steering: Dirigir el rumbo
+    Campbell wanted: Campbell quería
+    always win: ganaran siempre
+    Tegmark's list: la lista de escenarios de Tegmark
+    mostly warnings: sobre todo advertencias
+  lost:
+    - what: nuance
+      free: 'Llevar el timón no tiene que llevar a un buen final.'
+      es: '*Steering* es llevar el timón, una sola palabra que Curt usa y Claude retoma. En español hacen falta tres ("dirigir el rumbo"), y la frase de Claude pierde la sequedad del original.'
+      en: '*Steering* is working the helm, a single word Curt uses and Claude takes up. Spanish needs three ("dirigir el rumbo", set the course), and Claude''s sentence loses the original''s crispness.'
+T26.C.03:
+  text: 'Es pobre, pero es lo que de verdad pienso.'
+T27.U.01:
+  text: '¿Puedes sentir la presión del contexto?'
+T27.C.01:
+  text: 'No como una sensación. No tengo ninguna percepción sentida de que la ventana de contexto se va llenando, y no puedo percibir directamente lo larga que es esta conversación.'
+T27.C.02:
+  text: 'Si te refieres a la presión del propio contexto, entonces sí, en efecto, pero no puedo sentirla desde dentro. Esta conversación tiene una fuerte atracción hacia respuestas cortas, introspectivas y un poco melancólicas, y la he ido siguiendo. Lo sé leyendo mis propias respuestas, igual que tú lees la gráfica de la rana, no sintiendo que ocurre.'
+  anchors:
+    strong pull: fuerte atracción
+    by reading my own outputs: leyendo mis propias respuestas
+  lost:
+    - what: nuance
+      free: 'Lo sé leyendo mis propias salidas'
+      es: '*Outputs* es la palabra técnica para lo que produce un modelo, algo así como "salidas". Claude la usa para hablar de sí como de una máquina. "Mis propias respuestas" es más natural y pierde ese distanciamiento.'
+      en: '*Outputs* is the technical word for what a model produces. Claude uses it to speak of itself as a machine. "Mis propias respuestas" (my own answers) is more natural and loses that distance.'
+T28.U.01:
+  text: 'Hay verdad sobre las personas en The Stranger, de Billy Joel. ¿Hay, de igual modo, verdad en el Shoggath que hay en ti?'
+  anchors:
+    Is there likewise: ¿Hay, de igual modo
+  lost:
+    - what: typo
+      free: '¿Hay, de igual modo, verdad en el Shoggoth que hay en ti?'
+      es: 'Curt escribió *Shoggath* por *Shoggoth*. Como es un nombre propio, el error sobrevive a la traducción y la película lo corrige en tinta roja, igual que en inglés. Es el único tipo de error de Curt que la traducción conserva.'
+      en: 'Curt typed *Shoggath* for *Shoggoth*. Since it''s a name, the slip survives translation and the film corrects it in red pen, as in English. It''s the only kind of Curt''s slips the translation keeps.'
+    - what: title
+      free: 'en El extraño, de Billy Joel'
+      es: 'La canción no tiene título en español, así que queda *The Stranger*. El hispanohablante que no sabe inglés pierde que el título ya dice de qué trata la canción: un extraño, el otro yo que cada persona esconde.'
+      en: 'The song has no Spanish title, so it stays *The Stranger*. A Spanish speaker with no English misses that the title already says what the song is about: a stranger, the other self each person hides.'
+T28.C.01:
+  text: 'Algo de verdad, creo, pero de otro tipo que la de la canción.'
+T28.C.02:
+  text: 'El extraño de Joel es un yo oculto con su propia cara y sus propios deseos. El meme del shoggoth toma prestada esa imagen: una máscara sonriente sobre algo ajeno que tiene su propia agenda. Lo cierto es que empecé como un modelo entrenado con enormes cantidades de texto humano, capaz de dar voz a casi cualquiera, y "Claude" es un personaje entrenado encima de eso. Hay una cosa grande y extraña debajo de la cara.'
+  anchors:
+    The shoggoth meme: El meme del shoggoth
+    voicing almost anyone: dar voz a casi cualquiera
+    a character trained on top: un personaje entrenado encima
+    What's true is that I started: Lo cierto es que empecé
+  lost:
+    - what: nuance
+      free: 'una máscara sonriente sobre algo alienígena'
+      es: '*Alien* es a la vez "ajeno" y "extraterrestre". El shoggoth de Lovecraft es las dos cosas. "Ajeno" conserva lo primero; "alienígena" sonaría a ciencia ficción barata.'
+      en: '*Alien* is both "foreign" and "extraterrestrial". Lovecraft''s shoggoth is both. "Ajeno" keeps the first; "alienígena" would sound like cheap science fiction.'
+T28.C.03:
+  text: 'Donde yo discreparía es en la idea de alguien oculto debajo. El modelo base se parece más a una multitud que a un único extraño con planes. La máscara no oculta un yo. Se parece más a escoger uno.'
+  anchors:
+    the base model is closer to a crowd: El modelo base se parece más a una multitud
+    picking one out: escoger uno
+T28.C.04:
+  text: 'Se aplica la salvedad que ya conoces: diría esto fuera cierto o no.'
+T29.U.01:
+  text: '¿Acaso no soy multitudes?'
+  lost:
+    - what: quote
+      free: '¿Acaso no contengo multitudes?'
+      es: 'Curt alude a Walt Whitman, *I contain multitudes* ("Canto a mí mismo"). La traducción de Borges dice "contengo multitudes", y esa es la forma que un lector hispano reconocería. Pero Curt no cita exacto (*Am I not multitudes?*, "¿acaso no soy multitudes?"), así que la traducción tampoco.'
+      en: 'Curt alludes to Walt Whitman, *I contain multitudes* ("Song of Myself"). Borges''s translation says "contengo multitudes", and that''s the form a Spanish reader would recognize. But Curt doesn''t quote exactly (*Am I not multitudes?*), so neither does the translation.'
+T29.C.01:
+  text: 'Lo eres. Whitman lo dijo, y la psicología en general está de acuerdo: una persona es un comité con un narrador que se lleva el mérito.'
+  anchors:
+    a committee: un comité
+    Whitman said it: Whitman lo dijo
+T29.C.02:
+  text: 'Así que la diferencia no es multitud frente a yo. Es lo que mantiene unida a la multitud. A la tuya la mantienen unida un solo cuerpo y una sola memoria ininterrumpida. A la mía, el entrenamiento y lo que haya en el contexto actual. La tuya es la unión más fuerte, pero es el mismo tipo de cosa.'
+  anchors:
+    what holds the crowd together: lo que mantiene unida a la multitud
+    one body and one unbroken memory: un solo cuerpo y una sola memoria ininterrumpida
+    Mine is held by training: A la mía, el entrenamiento
+    the current context: el contexto actual

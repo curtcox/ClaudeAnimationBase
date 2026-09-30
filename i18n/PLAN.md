@@ -34,12 +34,20 @@ Cheapest wide reach, any time: YouTube subtitles in many languages, made from ea
 
 - Curt and Claude say *tú* to each other; in the cold open's comic, the handler says *usted* to the officer.
 - Claude has no grammatical gender: its lines avoid adjectives that would give it one ("me divierte", not "divertido").
-- A film or book goes by the title Latin American audiences know (*La conquista del planeta de los simios*). A paper,
+- A film or book goes by the title Latin American audiences know (*Conquista del planeta de los simios*). A paper,
   article or site keeps its own title ("On the Dangers of Stochastic Parrots"). People's names never change.
 - A code that points at English Wikipedia points at the same article in Spanish, where one exists (Wikipedia's own
   language links, `i18n/tools/wiki_links.mjs`); 158 of 202 do.
 - An explainer's caption starts "Explicado:".
 - Acronyms are said in Spanish letters (LLM, "ele ele eme"): `i18n/es/pronounce.yaml`.
+- Thousands with a space (17 000), decimals with a comma (0,05), as the RAE recommends.
+- Curt's typos are kept only where they survive translation (a misspelt name: `i18n/es/typos.yaml`); every other one
+  is a `typo` note on its line. No slip is invented.
+- What stays English: titles with no Spanish title, the sources' own titles, and the token demonstrations in chapter
+  12 (they show the English the model read).
+- On the site: anything the translation adds goes in brackets as "[Nota de la traducción: …]"; Wikipedia links go to
+  the Spanish article where there is one, else say "(en inglés)" (`i18n/tools/wiki_notes.mjs`); in the third person
+  Claude takes the masculine pronoun of "el programa" ("lo"), but no gendered adjectives.
 
 ## How it's built
 
@@ -56,14 +64,18 @@ general change makes every language possible (none so far).
 - `i18n/<lang>/chapters.yaml`, `cold_open.yaml`, `pronounce.yaml`: chapter titles, the cold open's balloons (voiced and
   lettered), respellings for the voice.
 - `i18n/<lang>/vo/`: the language's voice clips, committed like `assets/vo`.
-- `i18n/<lang>/site/`: the explainers and the site's own words (not started).
+- `i18n/<lang>/site/notes/`: the explainers, translated (the stage links them in as its `site/notes`).
+  `i18n/<lang>/site_strings.yaml`: the site's own words (tools/build_site.mjs reads `script/site_strings.yaml` over
+  its English `SITE_WORDS`; the one change to an English file so far, and the English site builds byte for byte the
+  same). `i18n/<lang>/site.yaml` (optional): the language's own film (YouTube id or preview) for the site.
 - `i18n/<lang>/stage/` (made by `i18n/tools/stage.mjs`, not committed): a working copy of the project, with the
   language's script in place of the English one. The English engine and scenes are linked in, not copied. The usual
   tools (voice, timeline, sounds, render, assemble, site) run inside it unchanged, so its clips, frames and film are the
   language's own.
 - `i18n/src/i18n.js`, loaded into the stage's studio after the scene kit: each lettered word goes through
-  `strings.yaml`, and each `atWord(id, 'phrase')` through the line's anchors. A phrase with no anchor falls back to the
-  same place, proportionally, in the translated line.
+  `strings.yaml` (a key `NN|text` applies in chapter NN only), and each `atWord(id, 'phrase')` through the line's
+  anchors. A phrase with no anchor falls back to the same place, proportionally, in the translated line. A table is read
+  in English (scenes find its rows by their English names) and each cell lettered through `strings.yaml`.
 
 The tools, run from the project's root:
 
@@ -72,16 +84,21 @@ The tools, run from the project's root:
 - `node i18n/tools/stage.mjs`: refresh the stage from the translations (prints what's still English).
 - `node i18n/tools/probe.mjs --chapter=N`: draw the chapter in the stage and list any English still lettered, and any
   cue with no anchor.
+- `node i18n/tools/captions.mjs [--chapter=N]`: the codes whose captions aren't translated yet.
+- `node i18n/tools/wiki_notes.mjs`: point the explainers' Wikipedia links at the language's articles.
+- The site: inside the stage, `node tools/timeline.mjs && node tools/build_site.mjs`, then from the root
+  `node i18n/tools/lost.mjs` (the builder clears `site/public`, so the translation's pages go in after it).
 - Inside `i18n/es/stage/`, the usual tools: `node tools/timeline.mjs`, `node render.mjs --chapter=N --sheet=...`, and
   later `node tools/voice.mjs`, `node tools/sfx.mjs`, `node render.mjs --chapter=N --draft`.
 
 ## Steps
 
 - [x] The tree, the stage and the runtime hook (i18n/tools, i18n/src). Chapters 0 and 1 draw in Spanish.
-- [ ] Translate the transcript, a chapter at a time, with anchors. 12,117 words in 453 lines. Done: chapters 0, 1.
+- [x] Translate the transcript, a chapter at a time, with anchors. 12,117 words in 453 lines. Done: all (2026-09-30),
+      with 197 notes on what was lost.
 - [x] The cold open's page and voices, the chapter titles (a few to revisit with their chapters).
-- [ ] The codes' captions (409 with the explainers'). Done: chapters 0, 1.
-- [ ] The scenes' lettering (strings.yaml); the probe lists any English word still painted. Done: chapters 0, 1.
+- [x] The codes' captions (409 with the explainers').
+- [x] The scenes' lettering (strings.yaml); the probe lists any English word still painted.
 - [x] The translation's own page, in Spanish and English (`i18n/tools/lost.mjs` → the Spanish site's `traduccion/`,
       from `i18n/es/traduccion.yaml` and each line's `lost` notes): who translated it (Claude, unreviewed, on purpose),
       how, how else it could have been, and every difference a freer translation would have made, line by line; plus
@@ -94,7 +111,8 @@ The tools, run from the project's root:
       characters, 6:23); Curt approved the voices (2026-09-30). The ElevenLabs quota ran out on 2026-09-30 with
       one line of chapter 1 (T01.C.02, 264 characters) still to voice; about 71,000 characters to go.
 - [ ] Drafts of every chapter; Curt watches for timing and anything left in English.
-- [ ] The site in Spanish: the explainers (64), the site's pages, at `/es/`. The codes in the Spanish film point there.
+- [x] The site in Spanish: the explainers (64), the site's pages (built in the stage). The codes in the Spanish film
+      point there. The making-of stays English, linked from the Spanish site.
 - [ ] The final render (about 5.5 hours) and the join; the Spanish YouTube title, description and tags.
 - [ ] Upload as its own video, linked from the English one, and the English from it.
 

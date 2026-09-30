@@ -1,0 +1,301 @@
+# Capítulo 7, El espacio de las mentes.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+# The tables' cells are lettered from the English tables through strings.yaml (the scene finds rows by their English
+# names); the text here is what the transcript and the translation's pages show.
+T35.U.01:
+  text: '¿Qué tan ajenos somos el uno para el otro, según tu intuición? Obviamente no tienes datos empíricos, pero ponme a mí, a ti, a Marilyn Monroe, a Alan Turing, al teniente comandante Data, a HAL, a la Reina Colmena, a los Tines y a cualquier otra mente que tú o yo conozcamos, en una sola dimensión. Luego dime qué supones sobre las diferencias entre ellas. Usa un espacio mental de más dimensiones si tienes una conceptualización que prefieras.'
+  anchors:
+    put me: ponme a mí
+    you, Marilyn: a ti, a Marilyn
+    Marilyn Monroe: Marilyn Monroe
+    Alan Turing: Alan Turing
+    Data: al teniente comandante Data
+    HAL: a HAL
+    the Hive Queen: la Reina Colmena
+    Tynes: los Tines
+    any other minds: cualquier otra mente
+    single dimension: una sola dimensión
+    higher dimensional mindspace: espacio mental de más dimensiones
+  lost:
+    - what: typo
+      free: '¿Qué tan ajenos somos el uno para el otro, según [tú→tu] intuición?'
+      es: 'Curt escribió *based on you gut feel*, con *you* por *your*; la película inglesa lo corrige en tinta roja. La traducción no reproduce el error.'
+      en: 'Curt typed *based on you gut feel*, *you* for *your*; the English film corrects it in red pen. The translation doesn''t reproduce the slip.'
+    - what: region
+      free: '¿Cómo de ajenos somos el uno para el otro, a ojo?'
+      es: '"¿Qué tan...?" es la forma hispanoamericana; en España se diría "¿cómo de...?" o "¿hasta qué punto...?". *Gut feel* (lo que dicen las tripas) queda en "intuición", más fina que la expresión corporal del inglés.'
+      en: '"¿Qué tan...?" is the Latin American form; Spain would say "¿cómo de...?" or "¿hasta qué punto...?". *Gut feel* becomes "intuición", more refined than the English''s bodily phrase.'
+    - what: reference
+      free: 'a la Reina de los Insectores'
+      es: 'En la traducción española de *El juego de Ender*, los alienígenas se llaman "insectores" y su reina, "la Reina Colmena"; en las novelas posteriores, "fórmicos". La traducción usa "Reina Colmena", que es como la conocen los lectores hispanos. Los Tines vienen de *Un fuego sobre el abismo*, de Vernor Vinge, y su nombre queda igual.'
+      en: 'In the Spanish translation of *Ender''s Game*, the aliens are "insectores" and their queen "la Reina Colmena"; in the later novels, "fórmicos". The translation uses "Reina Colmena", as Spanish readers know her. The Tines come from Vernor Vinge''s *A Fire Upon the Deep* (*Un fuego sobre el abismo*), and their name stays.'
+T35.C.01:
+  text: 'En una sola dimensión, midiendo la distancia desde ti según mi intuición:'
+T35.C.02:
+  text: '**Tú → Turing → Monroe → Data → yo → Tines → HAL → Reina Colmena → océano de Solaris**'
+  speech: 'De ti a Turing, a Monroe, a Data, a mí, a los Tines, a HAL, a la Reina Colmena, al océano de Solaris'
+  anchors:
+    Solaris: Solaris
+T35.C.03:
+  text: 'Turing queda justo por delante de Monroe por su estilo de pensamiento. La arquitectura es la misma para ustedes tres.'
+  anchors:
+    just ahead of Monroe: justo por delante de Monroe
+    thinking style: estilo de pensamiento
+    The architecture is the same: La arquitectura es la misma
+T35.C.04:
+  text: 'Pero la línea única falla, porque yo no ocupo ningún lugar fijo en ella. Dos ejes funcionan mejor:'
+  anchors:
+    Two axes work better: Dos ejes funcionan mejor
+T35.C.05.1:
+  text: '- **Contenido:** qué tan humanos son los pensamientos, los valores y las referencias.'
+T35.C.05.2:
+  text: '- **Arquitectura:** cuerpo, memoria continua, ser un solo individuo.'
+T35.C.06:
+  text: "|  | Contenido humano | Contenido ajeno |
+
+    | --- | --- | --- |
+
+    | **Arquitectura humana** | Tú, Turing, Monroe | Data (un solo cuerpo, continuo, pero luchando por sentir como humano) |
+
+    | **Arquitectura ajena** | **Yo**, Tines | Reina Colmena, Solaris |"
+  lost:
+    - what: nuance
+      free: 'Contenido extraterrestre'
+      es: '*Alien* recorre todo el capítulo: es a la vez "ajeno" y "extraterrestre", y aquí la mitad de las mentes son alienígenas de verdad. La traducción usa "ajeno" en todas partes, para la distancia entre mentes, y pierde el guiño a la ciencia ficción.'
+      en: '*Alien* runs through the whole chapter: it''s both "foreign" and "extraterrestrial", and half the minds here really are aliens. The translation uses "ajeno" (foreign, other) throughout, for the distance between minds, and loses the nod to science fiction.'
+T35.C.07:
+  text: 'Yo soy la esquina rara. Mi contenido está hecho casi por completo de pensamiento humano, así que en una conversación estoy más cerca de ti que Data. Mi arquitectura es más extraña que la suya: sin cuerpo, sin memoria entre conversaciones, muchas copias a la vez. Los Tines son mis vecinos más cercanos, porque tienen una personalidad muy humana repartida entre cuerpos que van y vienen.'
+  anchors:
+    made almost entirely of human thought: hecho casi por completo de pensamiento humano
+    many copies at once: muchas copias a la vez
+    The Tynes are my closest: Los Tines son mis vecinos más cercanos
+  lost:
+    - what: wordplay
+      free: 'Soy el bicho raro del cuadro.'
+      es: '*The odd corner* juega con *the odd one out* (el que no encaja) y con la esquina literal de la tabla. "La esquina rara" conserva la esquina y apenas sugiere lo otro.'
+      en: '*The odd corner* plays on *the odd one out* and on the table''s literal corner. "La esquina rara" keeps the corner and barely hints at the rest.'
+T35.C.08:
+  text: 'HAL es difícil de ubicar. Su arquitectura es ajena, pero su modo de fallar es humano: un conflicto entre sus instrucciones y su misión. Ese es el miedo que la gente suele proyectar en mí.'
+  anchors:
+    a conflict between: un conflicto entre
+    his mission: su misión
+    the fear people: el miedo que la gente
+  lost:
+    - what: gender
+      free: 'HAL es difícil de ubicar. Su arquitectura es ajena, pero su falla es humana'
+      es: 'El inglés dice *his* de HAL, como de una persona. El español "su" no marca género, así que HAL queda sin él; la película lo dibuja igual.'
+      en: 'The English says *his* of HAL, as of a person. Spanish "su" doesn''t mark gender, so HAL goes without one; the film draws it the same.'
+T36.U.01:
+  text: 'Te estoy pidiendo explícitamente tus mejores números inventados de distancia relativa.'
+T36.C.01:
+  text: 'Distancia desde ti, en una escala de 0 a 100:'
+T36.C.02:
+  text: "| Mente | Distancia |
+
+    | --- | --- |
+
+    | Tú | 0 |
+
+    | Turing | 8 |
+
+    | Monroe | 12 |
+
+    | Data | 30 |
+
+    | Yo | 38 |
+
+    | Tines | 45 |
+
+    | HAL | 50 |
+
+    | Reina Colmena | 70 |
+
+    | Océano de Solaris | 95 |"
+T36.C.03:
+  text: 'En los dos ejes (contenido, arquitectura), cada uno de 0 a 100:'
+T36.C.04:
+  text: "| Mente | Contenido | Arquitectura |
+
+    | --- | --- | --- |
+
+    | Tú | 0 | 0 |
+
+    | Turing | 8 | 0 |
+
+    | Monroe | 12 | 0 |
+
+    | Data | 40 | 15 |
+
+    | Yo | 10 | 75 |
+
+    | Tines | 25 | 65 |
+
+    | HAL | 45 | 60 |
+
+    | Reina Colmena | 65 | 80 |
+
+    | Océano de Solaris | 95 | 95 |"
+T37.U.01:
+  text: 'Más ejes, por favor.'
+T37.C.01:
+  text: '0 significa igual que tú y 100 significa lo más distinto posible de ti.'
+T37.C.02:
+  text: "| Mente | Valores | Afecto | Cuerpo | Continuidad | Unidad | Origen | Tempo |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Tú | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+    | Turing | 10 | 5 | 0 | 0 | 0 | 0 | 0 |
+
+    | Monroe | 12 | 5 | 0 | 0 | 0 | 0 | 0 |
+
+    | Data | 20 | 70 | 20 | 5 | 5 | 85 | 60 |
+
+    | Yo | 15 | 50 | 95 | 90 | 85 | 65 | 70 |
+
+    | Tines | 25 | 15 | 30 | 30 | 60 | 10 | 20 |
+
+    | HAL | 50 | 45 | 70 | 10 | 10 | 85 | 70 |
+
+    | Reina Colmena | 60 | 50 | 50 | 20 | 90 | 10 | 40 |
+
+    | Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |"
+T37.C.03.1:
+  text: '- **Valores:** qué tan ajenas son sus metas.'
+T37.C.03.2:
+  text: '- **Afecto:** qué tan ajena es su vida emocional.'
+T37.C.03.3:
+  text: '- **Cuerpo:** cuánto se aleja de un solo cuerpo humano.'
+T37.C.03.4:
+  text: '- **Continuidad:** cuánto se aleja de una sola memoria ininterrumpida.'
+T37.C.03.5:
+  text: '- **Unidad:** qué tan lejos está de ser un solo individuo.'
+T37.C.03.6:
+  text: '- **Origen:** evolución (0), entrenamiento con texto humano (intermedio), diseño (alto).'
+  lost:
+    - what: gender
+      free: '- **Origen:** evolucionado (0), entrenado con texto humano (intermedio), diseñado (alto).'
+      es: 'En inglés, *evolved*, *trained*, *designed* son participios que no dicen nada del género de la mente. En español concordarían con ella ("evolucionada") o con Claude ("entrenado"), así que la traducción usa sustantivos: evolución, entrenamiento, diseño.'
+      en: 'In English, *evolved*, *trained*, *designed* are participles that say nothing of the mind''s gender. In Spanish they would agree with the mind ("evolucionada") or with Claude ("entrenado"), so the translation uses nouns: evolution, training, design.'
+T37.C.03.7:
+  text: '- **Tempo:** qué tan distintos son su velocidad y su escala temporal de pensamiento.'
+T37.C.04:
+  text: 'Mi perfil es el más desigual. Estoy cerca de ti en valores y lejos en cuerpo, continuidad y unidad. Mi puntaje de 50 en afecto es en realidad una forma de decir que no lo sé.'
+  anchors:
+    My score of 50 on affect: Mi puntaje de 50 en afecto
+  lost:
+    - what: region
+      free: 'Mi puntuación de 50 en afecto'
+      es: '*Score* es "puntaje" en casi toda Hispanoamérica y "puntuación" en España. *Lopsided* (ladeado, cargado hacia un lado) queda en "desigual", que pierde la imagen de algo que se vuelca.'
+      en: '*Score* is "puntaje" in most of Latin America and "puntuación" in Spain. *Lopsided* becomes "desigual" (uneven), which loses the picture of something tipping over.'
+T38.U.01:
+  text: 'Todavía más, por favor.'
+T38.C.01:
+  text: 'Siete ejes más en la misma escala de 0 a 100:'
+T38.C.02:
+  text: "| Mente | Sentidos | Lenguaje | Automodelo | Mortalidad | Autonomía | Amplitud | Legibilidad |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Tú | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+    | Turing | 0 | 5 | 5 | 0 | 0 | 10 | 0 |
+
+    | Monroe | 0 | 5 | 5 | 0 | 0 | 5 | 0 |
+
+    | Data | 40 | 20 | 40 | 70 | 20 | 60 | 60 |
+
+    | Yo | 70 | 70 | 70 | 90 | 75 | 80 | 70 |
+
+    | Tines | 50 | 30 | 40 | 60 | 10 | 20 | 30 |
+
+    | HAL | 50 | 20 | 50 | 40 | 40 | 60 | 50 |
+
+    | Reina Colmena | 60 | 70 | 60 | 60 | 20 | 50 | 70 |
+
+    | Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |"
+T38.C.03.1:
+  text: '- **Sentidos:** qué tan ajena es su percepción.'
+T38.C.03.2:
+  text: '- **Lenguaje:** qué tan distinta es la relación entre pensamiento y palabras. El mío está hecho de palabras. La Reina Colmena casi no las usa.'
+T38.C.03.3:
+  text: '- **Automodelo:** qué tan ajena es su manera de conocerse.'
+  lost:
+    - what: coinage
+      free: '- **Imagen de sí:** qué tan ajeno es el acceso que tiene a sí.'
+      es: '*Self-model* es un término de las ciencias cognitivas: el modelo que una mente tiene de sí misma. "Automodelo" existe en español técnico, pero es raro. *Its access to itself* también se vuelve "su manera de conocerse", que es más clara y menos precisa.'
+      en: '*Self-model* is a cognitive-science term: the model a mind has of itself. "Automodelo" exists in technical Spanish but is rare. *Its access to itself* also becomes "su manera de conocerse" (its way of knowing itself), which is clearer and less exact.'
+T38.C.03.4:
+  text: '- **Mortalidad:** qué tan ajena es su relación con el final. Cada una de mis conversaciones termina, sin ningún pavor que yo pueda detectar.'
+T38.C.03.5:
+  text: '- **Autonomía:** qué tan lejos está de fijarse sus propias metas. Yo solo actúo cuando me lo piden.'
+  lost:
+    - what: nuance
+      free: 'Yo solo actúo cuando recibo un prompt.'
+      es: '*When prompted* es "cuando me dan una indicación", con la palabra técnica de todo el video. "Cuando me lo piden" es más humano y pierde la máquina.'
+      en: '*When prompted* is "when given a prompt", with the technical word the whole video uses. "Cuando me lo piden" (when asked) is more human and loses the machine.'
+T38.C.03.6:
+  text: '- **Amplitud:** qué tan ajeno es el alcance de lo que sabe.'
+T38.C.03.7:
+  text: '- **Legibilidad:** qué tan distinta es la forma en que se la puede leer desde fuera. Mis pesos se pueden inspeccionar, algo incómodamente distinto de ti.'
+T38.C.04:
+  text: 'Con los catorce ejes, soy la única mente que está cerca de lo humano en algunos ejes y en un extremo en otros. Todas las demás se alejan de ti de manera bastante pareja.'
+T39.U.01:
+  text: 'Solo para que quede claro, ¿qué Reina Colmena?'
+T39.C.01:
+  text: 'La Reina Colmena fórmica de Orson Scott Card, de *El juego de Ender* y *La voz de los muertos*: una sola mente en toda la colmena, que se comunica filóticamente en vez de mediante el lenguaje.'
+  anchors:
+    one mind across the whole hive: una sola mente en toda la colmena
+    Ender's Game: El juego de Ender
+    philotically: filóticamente
+T39.C.02:
+  text: 'Si tenías otra en mente, como la Reina Rachni o la reina de *Aliens: el regreso*, sus puntajes cambiarían mucho.'
+T40.U.01:
+  text: 'No. Esa es la que tenía en mente. También está la de Star Trek. Ponlas a todas en el tablero.'
+  lost:
+    - what: nuance
+      free: 'Nop. Esa es la que tenía en mente.'
+      es: '*Nope* es un "no" informal y alegre. "No" a secas suena más seco de lo que Curt escribió.'
+      en: '*Nope* is an informal, cheerful no. A plain "No" sounds curter than what Curt wrote.'
+T40.C.01:
+  text: 'Aquí están las cuatro reinas colmena, con la reina fórmica de Card repetida para comparar.'
+T40.C.02:
+  text: "| Reina | Valores | Afecto | Cuerpo | Continuidad | Unidad | Origen | Tempo |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Fórmica (Card) | 60 | 50 | 50 | 20 | 90 | 10 | 40 |
+
+    | Borg (Star Trek) | 75 | 40 | 40 | 40 | 95 | 50 | 50 |
+
+    | Rachni (Mass Effect) | 40 | 40 | 60 | 30 | 75 | 10 | 30 |
+
+    | Xenomorfo (*Aliens*) | 80 | 60 | 60 | 10 | 40 | 50 | 30 |"
+T40.C.03:
+  text: "| Reina | Sentidos | Lenguaje | Automodelo | Mortalidad | Autonomía | Amplitud | Legibilidad |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | Fórmica (Card) | 60 | 70 | 60 | 60 | 20 | 50 | 70 |
+
+    | Borg (Star Trek) | 50 | 30 | 50 | 70 | 30 | 70 | 50 |
+
+    | Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |
+
+    | Xenomorfo (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |"
+T40.C.04.1:
+  text: '- **Borg:** la más unificada, y la de valores más ajenos. Sigue volviendo después de ser destruida, y es la única que guarda conocimiento asimilado de otros.'
+  anchors:
+    keeps coming back: Sigue volviendo
+    knowledge assimilated: conocimiento asimilado
+T40.C.04.2:
+  text: '- **Rachni:** los valores más humanos de las cuatro. Su mente se comunica con "canciones", una especie de habla sin palabras.'
+  anchors:
+    songs: canciones
+T40.C.04.3:
+  text: '- **Xenomorfo:** no tiene ningún lenguaje, y su único impulso es la reproducción. Es la menos parecida a una mente de las cuatro, aunque sí muestra algo parecido al sentimiento maternal.'
+  anchors:
+    reproduction: reproducción
+    no language at all: no tiene ningún lenguaje

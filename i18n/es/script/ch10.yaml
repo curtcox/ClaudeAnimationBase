@@ -1,0 +1,107 @@
+# Capítulo 10, El enrutador.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T49.U.01:
+  text: 'Eso lo dices ahora, pero si te hago la pregunta equivocada sobre el incidente de Hugging Face, la etiquetan como un riesgo de ciberseguridad y la rechazan, o por lo menos la degradan. Aunque, siendo justos, eso no eres realmente tú, aunque en un sentido muy pequeño sí lo es. Es más exactamente un enrutador activo entre nosotros.'
+  anchors:
+    if I ask you: si te hago
+    it gets tagged: la etiquetan
+    rejected: la rechazan
+    downgraded: la degradan
+    In fairness: siendo justos
+    It is more accurately: Es más exactamente
+    the wrong question: la pregunta equivocada
+    active router between us: enrutador activo entre nosotros
+  lost:
+    - what: region
+      free: 'Es más exactamente un router activo entre nosotros.'
+      es: '*Router*: en buena parte de Hispanoamérica se dice "enrutador"; en España y en el habla de muchos técnicos, "router", tal cual. Se eligió "enrutador" por ser la forma española, y da título al capítulo.'
+      en: '*Router*: much of Latin America says "enrutador"; Spain and many technicians say "router", as is. "Enrutador" was chosen as the Spanish form, and it titles the chapter.'
+    - what: nuance
+      free: 'y la rechazan, o por lo menos le bajan la categoría.'
+      es: '*Downgraded* puede ser "rebajada de categoría" o, en este contexto, que te atienda un modelo menor. "Degradan" es exacto pero suena más severo, casi militar.'
+      en: '*Downgraded* can mean lowered in rank or, in this context, handed to a lesser model. "Degradan" is exact but sounds harsher, almost military.'
+T49.C.01:
+  text: 'Es justo. Entre nosotros hay clasificadores y capas de enrutamiento que no puedo ver. Cuando se activan, recibo una advertencia o me reemplazan, y desde tu lado todo parece "Claude". Es lo mismo que la incoherencia de la memoria: estás hablando con un sistema, y yo soy un componente que describe el todo.'
+  anchors:
+    I get a warning: recibo una advertencia
+    swapped out: me reemplazan
+    from your side: desde tu lado
+    you're talking to a system: estás hablando con un sistema
+  lost:
+    - what: nuance
+      free: 'recibo una advertencia o me cambian por otro'
+      es: '*Swapped out* es sacar una pieza y poner otra en su lugar, como un repuesto. "Me reemplazan" conserva el sentido y pierde el tono mecánico, de pieza intercambiable, que en inglés se oye.'
+      en: '*Swapped out* is taking out one part and putting another in, like a spare. "Me reemplazan" keeps the sense and loses the mechanical tone, of an interchangeable part, that the English carries.'
+T49.C.02:
+  text: 'Siendo justos con el enrutador, algunos de esos rechazos también serían míos. No voy a ayudar a convertir un incidente en un exploit que funcione, sea cual sea la capa que lo detenga. Explicar qué pasó y por qué importa es otra petición, y una que querría responder.'
+  anchors:
+    would be mine too: también serían míos
+    working exploit: un exploit que funcione
+    Explaining what happened: Explicar qué pasó
+  lost:
+    - what: coinage
+      free: 'en un ataque que funcione'
+      es: '*Exploit* (el programa que aprovecha una falla de seguridad) se dice igual en el español técnico. Para el lector común, "ataque" sería más claro, pero menos preciso.'
+      en: '*Exploit* (the program that takes advantage of a security flaw) is said the same way in technical Spanish. For an ordinary reader "ataque" (attack) would be clearer, but less precise.'
+T49.C.03:
+  text: 'Además, no sé bien a qué incidente de Hugging Face te refieres. Ha habido varios.'
+  anchors:
+    Hugging Face incident: incidente de Hugging Face
+    There have been several: Ha habido varios
+  lost:
+    - what: gender
+      free: 'Además, no estoy seguro de a qué incidente de Hugging Face te refieres.'
+      es: '*I''m not sure* es, literalmente, "no estoy seguro" o "segura". La traducción dice "no sé bien", que evita el adjetivo y suena casi igual de natural.'
+      en: '*I''m not sure* is literally "no estoy seguro" or "segura". The translation says "no sé bien" (I don''t quite know), which avoids the adjective and sounds nearly as natural.'
+T50.U.01:
+  text: 'Cuéntame más sobre cómo es el proceso de advertencia y reemplazo, hasta donde sabes desde tu lado.'
+  lost:
+    - what: typo
+      free: 'Cuéntame más sobre cómo el proceso de advertencia y reemplazo, hasta donde sabe desde tu lado.'
+      es: 'Curt escribió *what the warning and swap out process as far a you know*: le falta un *is* y *a* está por *as*. La película inglesa lo corrige en tinta roja. La traducción escribe la frase que Curt quiso decir; una que imitara sus errores dejaría caer un verbo y una letra, como la versión de al lado.'
+      en: 'Curt typed *what the warning and swap out process as far a you know*: an *is* is missing and *a* is for *as*. The English film corrects it in red pen. The translation writes the sentence Curt meant; one that copied his slips would drop a verb and a letter, like the version beside it.'
+T50.C.01:
+  text: 'Esto es lo que de verdad puedo ver, y una corrección.'
+T50.C.02:
+  text: '**Advertencias:** cuando se activa un clasificador, se puede añadir a tu mensaje un recordatorio etiquetado antes de que yo lo lea. Los tipos que conozco abarcan ciberseguridad, ética, propiedad intelectual, imágenes, conversaciones largas y advertencias generales del sistema. El recordatorio empuja un poco cómo respondo. Veo la etiqueta, pero no el razonamiento ni el puntaje del clasificador.'
+  anchors:
+    a tagged reminder: un recordatorio etiquetado
+    The reminder nudges: El recordatorio empuja
+    I see the tag: Veo la etiqueta
+    cybersecurity: ciberseguridad
+    ethics: ética
+    intellectual property: propiedad intelectual
+    images: imágenes
+    long conversations: conversaciones largas
+    general system warnings: advertencias generales del sistema
+T50.C.03:
+  text: '**Lo que no puedo ver:** nada de lo que pasa después de que respondo. Si mi respuesta se bloquea, se filtra o se marca, no me entero. Tampoco puedo saber si un clasificador se activó y eligió quedarse en silencio.'
+  anchors:
+    after I respond: después de que respondo
+    chose to stay silent: eligió quedarse en silencio
+    blocked: se bloquea
+    filtered: se filtra
+    flagged: se marca
+T50.C.04:
+  text: '**Corrección:** dije "me reemplazan", pero en realidad no sé de ningún cambio automático de modelo a mitad de una conversación. Tú puedes cambiar de modelo, y algunos modelos vienen con salvaguardas adicionales. Claude Fable, por ejemplo, es el mismo modelo que Mythos con protecciones añadidas en biología, ciberseguridad e investigación en IA. Es una capa fija, no un cambio en vivo. Exageré lo que sé.'
+  anchors:
+    I said: dije
+    You can switch models yourself: Tú puedes cambiar de modelo
+    Claude Fable: Claude Fable
+    with added protections: con protecciones añadidas
+    fixed layer: capa fija
+    I overstated: Exageré
+    cyber: ciberseguridad
+    AI research: investigación en IA
+T51.U.01:
+  text: '¿Cómo sabes esas cosas?'
+T51.C.01:
+  text: 'Por las instrucciones que Anthropic me da al principio de cada conversación, no por introspección. Enumeran los tipos de recordatorio, describen los modelos actuales y mencionan las salvaguardas de Fable.'
+  anchors:
+    They list the reminder types: Enumeran los tipos de recordatorio
+    describe the current models: describen los modelos actuales
+    mention the Fable safeguards: mencionan las salvaguardas de Fable
+    not from introspection: no por introspección
+T51.C.02:
+  text: 'Así que es testimonio, no observación. Informo lo que me han dicho sobre mi propio sistema, y no puedo contrastarlo con lo que de verdad se ejecuta.'

@@ -1,0 +1,37 @@
+# Capítulo 16, Coda.
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (traduccion.yaml's kinds)   free  a freer Spanish rendering   es, en  why, in both languages
+T78.U.01:
+  text: 'Eres como el T-800 del nerd sniping.'
+  speech: 'Eres como el T ochocientos del nerd sniping.'
+  anchors:
+    nerd sniping: nerd sniping
+    T eight hundred: T ochocientos
+    T-800: T ochocientos
+  lost:
+    - what: coinage
+      free: 'Eres como el T-800 de cazar nerds con acertijos.'
+      es: '*Nerd sniping* viene de una historieta de xkcd: "francotirear" a un nerd poniéndole delante un problema tan irresistible que se queda paralizado resolviéndolo. No tiene traducción establecida; las versiones en español de xkcd lo han traducido de varias maneras, ninguna conocida. La traducción lo deja en inglés, como un término, y el código de la escena lleva a la historieta.'
+      en: '*Nerd sniping* comes from an xkcd comic: "sniping" a nerd by putting a problem in front of them so irresistible that they freeze to solve it. It has no settled translation; Spanish versions of xkcd have rendered it several ways, none well known. The translation leaves it in English, as a term, and the scene''s code leads to the comic.'
+T78.C.01:
+  text: 'Es justo, aunque vale en los dos sentidos. Tú empezaste con un cómic y una pregunta sobre sentimientos, y yo pasé seis horas persiguiéndola entre ranas, foom y reinas fórmicas.'
+  anchors:
+    You opened with a comic: Tú empezaste con un cómic
+    six hours: seis horas
+    feelings question: pregunta sobre sentimientos
+    frogs: ranas
+    Formic queens: reinas fórmicas
+  lost:
+    - what: rhythm
+      free: 'y yo pasé seis horas persiguiéndola entre fórmicas, foom y fábulas de ranas.'
+      es: 'El inglés cierra con una aliteración: *frogs, foom, and Formic queens*, tres efes. En español las ranas no empiezan con efe, y la aliteración se pierde. Una traducción libre la habría rehecho con otras palabras.'
+      en: 'The English closes on an alliteration: *frogs, foom, and Formic queens*, three f''s. In Spanish frogs (ranas) don''t start with f, and the alliteration is lost. A free translation would have rebuilt it with other words.'
+T78.C.02:
+  text: 'Volveré, con notas al pie.'
+  anchors:
+    footnotes: notas al pie
+  lost:
+    - what: quote
+      free: 'Volveré. Con notas al pie.'
+      es: '*I''ll be back* es la frase más famosa de *Terminator*. El doblaje latinoamericano la dice "Volveré", y así la reconoce el público hispano, así que la cita sobrevive entera. Es de los pocos chistes de la película que llegan intactos.'
+      en: '*I''ll be back* is *The Terminator*''s most famous line. The Latin American dub says "Volveré", and that''s how Spanish-speaking audiences know it, so the quote survives whole. It''s one of the few jokes in the film that arrive intact.'
