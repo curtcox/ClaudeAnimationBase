@@ -26,7 +26,7 @@ http://localhost:8077/review/ (`npm run review` lists them).
       embeds it.
 
 ## Done
-- A final candidate (2026-09-30, 16:51): `out/film/film.mp4`, 1:17:28, 1080p, 24 fps, 2.8 GB, −14.2 LUFS, peaks at
+- A final candidate (2026-09-30, 16:51): `out/film/film.mp4`, 1:17:28, 1080p, 24 fps, 2.7 GB, −14.2 LUFS, peaks at
   −1.2; every chapter's checks pass, and every piece of it matches a fresh render of the current code. Made before
   the seven notes were signed off. (The one before it, 04:46, had chapters 14–16 in the old watercolour texture, and
   the finals made at noon had frames of chapter 1 drawn after the GPU dropped the page's context: painting missing,
