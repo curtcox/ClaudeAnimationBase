@@ -70,7 +70,7 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.561
  },
- "hashchain|M|f|https://en.wikipedia.org/wiki/Content-addressable_storage": {
+ "hashchain|M|f|https://curtcox.github.io/axol-f/r/content-addressable/": {
   "file": "assets/qr/f/content-addressable.png",
   "box": [
    64,
@@ -112,21 +112,21 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.549
  },
- "electron-shells|M|f|https://en.wikipedia.org/wiki/Aufbau_principle": {
+ "electron-shells|M|f|https://curtcox.github.io/axol-f/r/aufbau/": {
   "file": "assets/qr/f/aufbau.png",
   "box": [
    64,
    112,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.549
+  "n": 29,
+  "reach": 0.554
  },
- "pulp|M|f|https://en.wikipedia.org/wiki/John_W._Campbell": {
+ "pulp|M|f|https://curtcox.github.io/axol-f/r/campbell/": {
   "file": "assets/qr/f/campbell.png",
   "box": [
    64,
@@ -154,7 +154,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.716
  },
- "mask|M|f|https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song)": {
+ "mask|M|f|https://curtcox.github.io/axol-f/r/the-stranger/": {
   "file": "assets/qr/f/the-stranger.png",
   "box": [
    64,
@@ -196,7 +196,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.695
  },
- "pulp|M|f|https://en.wikipedia.org/wiki/Astounding_Science_Fiction": {
+ "pulp|M|f|https://curtcox.github.io/axol-f/r/astounding/": {
   "file": "assets/qr/f/astounding.png",
   "box": [
    64,
@@ -238,7 +238,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.841
  },
- "filing-drawers|M|f|https://en.wikipedia.org/wiki/Blockhead_(thought_experiment)": {
+ "filing-drawers|M|f|https://curtcox.github.io/axol-f/r/blockhead/": {
   "file": "assets/qr/f/blockhead.png",
   "box": [
    112,
@@ -252,19 +252,19 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.841
  },
- "filing-drawers|H|f|https://www.lesswrong.com/posts/k6EPphHiBH4WWYFCj/gazp-vs-glut": {
+ "filing-drawers|H|f|https://curtcox.github.io/axol-f/r/gazp-glut/": {
   "file": "assets/qr/f/gazp-glut.png",
   "box": [
    112,
    112,
-   424
+   392
   ],
   "img": [
-   648,
-   648
+   616,
+   616
   ],
-  "n": 45,
-  "reach": 0.764
+  "n": 41,
+  "reach": 0.786
  },
  "tv|M|f|https://youtu.be/oxHKesSpqBM?t=1154": {
   "file": "assets/qr/f/debate-llm-segment.png",
@@ -308,21 +308,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.554
  },
- "beauty-mark|M|f|https://en.wikipedia.org/wiki/Marilyn_Monroe": {
+ "beauty-mark|M|f|https://curtcox.github.io/axol-f/r/monroe/": {
   "file": "assets/qr/f/monroe.png",
   "box": [
    16,
    64,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.695
+  "n": 29,
+  "reach": 0.716
  },
- "gold-android|M|f|https://memory-alpha.fandom.com/wiki/Data": {
+ "gold-android|M|f|https://curtcox.github.io/axol-f/r/data/": {
   "file": "assets/qr/f/data.png",
   "box": [
    16,
@@ -336,21 +336,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.716
  },
- "paw-prints|M|f|https://en.wikipedia.org/wiki/A_Fire_Upon_the_Deep": {
+ "paw-prints|M|f|https://curtcox.github.io/axol-f/r/tines/": {
   "file": "assets/qr/f/tines.png",
   "box": [
    64,
    112,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.549
+  "n": 29,
+  "reach": 0.554
  },
- "ocean|M|f|https://en.wikipedia.org/wiki/Solaris_(novel)": {
+ "ocean|M|f|https://curtcox.github.io/axol-f/r/solaris/": {
   "file": "assets/qr/f/solaris.png",
   "box": [
    64,
@@ -378,7 +378,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.554
  },
- "cube-lattice|M|f|https://memory-alpha.fandom.com/wiki/Borg_Queen": {
+ "cube-lattice|M|f|https://curtcox.github.io/axol-f/r/borg-queen/": {
   "file": "assets/qr/f/borg-queen.png",
   "box": [
    64,
@@ -406,19 +406,19 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.554
  },
- "egg|M|f|https://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)": {
+ "egg|M|f|https://curtcox.github.io/axol-f/r/xenomorph-queen/": {
   "file": "assets/qr/f/xenomorph-queen.png",
   "box": [
    112,
    112,
-   360
+   328
   ],
   "img": [
-   584,
-   584
+   552,
+   552
   ],
-  "n": 37,
-  "reach": 0.811
+  "n": 33,
+  "reach": 0.841
  },
  "ocean|M|f|https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem": {
   "file": "assets/qr/f/stanislaw-lem.png",
@@ -504,7 +504,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.841
  },
- "cube-lattice|M|f|https://en.wikipedia.org/wiki/Star_Trek:_First_Contact": {
+ "cube-lattice|M|f|https://curtcox.github.io/axol-f/r/first-contact/": {
   "file": "assets/qr/f/first-contact.png",
   "box": [
    64,
@@ -546,7 +546,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.554
  },
- "bat|M|f|https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F": {
+ "bat|M|f|https://curtcox.github.io/axol-f/r/nagel-bat/": {
   "file": "assets/qr/f/nagel-bat.png",
   "box": [
    64,
@@ -602,19 +602,19 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.742
  },
- "winged-sandal|H|f|https://hermes-agent.nousresearch.com/docs/user-guide/features/memory": {
+ "winged-sandal|H|f|https://curtcox.github.io/axol-f/r/hermes-memory/": {
   "file": "assets/qr/f/hermes-memory.png",
   "box": [
    16,
    64,
-   456
+   392
   ],
   "img": [
-   584,
-   584
+   520,
+   520
   ],
-  "n": 49,
-  "reach": 0.64
+  "n": 41,
+  "reach": 0.663
  },
  "winged-sandal|M|f|https://hermes-agent.org/": {
   "file": "assets/qr/f/hermes-agent.png",
@@ -644,33 +644,33 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.742
  },
- "circuit|M|f|https://terminator.fandom.com/wiki/Miles_Dyson": {
+ "circuit|M|f|https://curtcox.github.io/axol-f/r/dyson/": {
   "file": "assets/qr/f/dyson.png",
   "box": [
    64,
    112,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.549
+  "n": 29,
+  "reach": 0.554
  },
- "chrome-red-eye|M|f|https://en.wikipedia.org/wiki/Terminator_(character)": {
+ "chrome-red-eye|M|f|https://curtcox.github.io/axol-f/r/t800/": {
   "file": "assets/qr/f/t800.png",
   "box": [
    16,
    64,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.695
+  "n": 29,
+  "reach": 0.716
  },
  "lobster-shell|M|f|https://en.wikipedia.org/wiki/Moltbook": {
   "file": "assets/qr/f/moltbook-wiki.png",
@@ -728,21 +728,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.716
  },
- "winged-sandal|M|f|https://hermes-agent.nousresearch.com/docs/user-guide/features/skills": {
+ "winged-sandal|M|f|https://curtcox.github.io/axol-f/r/hermes-skills/": {
   "file": "assets/qr/f/hermes-skills.png",
   "box": [
    16,
    64,
-   360
+   328
   ],
   "img": [
-   488,
-   488
+   456,
+   456
   ],
-  "n": 37,
-  "reach": 0.678
+  "n": 33,
+  "reach": 0.695
  },
- "chrome-red-eye|M|f|https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day": {
+ "chrome-red-eye|M|f|https://curtcox.github.io/axol-f/r/terminator-2/": {
   "file": "assets/qr/f/terminator-2.png",
   "box": [
    16,
@@ -756,19 +756,19 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.695
  },
- "circuit|M|f|https://en.wikipedia.org/wiki/Skynet_(Terminator)": {
+ "circuit|M|f|https://curtcox.github.io/axol-f/r/skynet/": {
   "file": "assets/qr/f/skynet.png",
   "box": [
    64,
    112,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.549
+  "n": 29,
+  "reach": 0.554
  },
  "switchboard|M|f|https://www.anthropic.com/research/constitutional-classifiers": {
   "file": "assets/qr/f/constitutional-classifiers.png",
@@ -784,7 +784,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.695
  },
- "switchboard|M|f|https://www.anthropic.com/claude-fable-and-mythos-5-1": {
+ "switchboard|M|f|https://curtcox.github.io/axol-f/r/fable-mythos-5-1/": {
   "file": "assets/qr/f/fable-mythos-5-1.png",
   "box": [
    16,
@@ -826,7 +826,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.716
  },
- "thermometer|M|f|https://en.wikipedia.org/wiki/Landauer%27s_principle": {
+ "thermometer|M|f|https://curtcox.github.io/axol-f/r/landauer/": {
   "file": "assets/qr/f/landauer.png",
   "box": [
    16,
@@ -854,7 +854,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.549
  },
- "maze|M|f|https://en.wikipedia.org/wiki/P_versus_NP_problem": {
+ "maze|M|f|https://curtcox.github.io/axol-f/r/p-vs-np/": {
   "file": "assets/qr/f/p-vs-np.png",
   "box": [
    112,
@@ -966,21 +966,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.878
  },
- "blueprint|M|f|https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/": {
+ "blueprint|M|f|https://curtcox.github.io/axol-f/r/mittr-rsi/": {
   "file": "assets/qr/f/mittr-rsi.png",
   "box": [
    112,
    112,
-   360
+   328
   ],
   "img": [
-   584,
-   584
+   552,
+   552
   ],
-  "n": 37,
-  "reach": 0.811
+  "n": 33,
+  "reach": 0.841
  },
- "blueprint|M|f|https://www.datacamp.com/tutorial/recursive-self-improvement": {
+ "blueprint|M|f|https://curtcox.github.io/axol-f/r/datacamp-rsi/": {
   "file": "assets/qr/f/datacamp-rsi.png",
   "box": [
    112,
@@ -1036,7 +1036,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.695
  },
- "blueprint|M|f|https://en.wikipedia.org/wiki/Recursive_self-improvement": {
+ "blueprint|M|f|https://curtcox.github.io/axol-f/r/rsi-wiki/": {
   "file": "assets/qr/f/rsi-wiki.png",
   "box": [
    112,
@@ -1050,7 +1050,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.841
  },
- "blueprint|M|f|https://www.anthropic.com/institute/recursive-self-improvement": {
+ "blueprint|M|f|https://curtcox.github.io/axol-f/r/anthropic-rsi/": {
   "file": "assets/qr/f/anthropic-rsi.png",
   "box": [
    112,
@@ -1078,7 +1078,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.549
  },
- "flame|M|f|https://sideways-view.com/2018/02/24/takeoff-speeds/": {
+ "flame|M|f|https://curtcox.github.io/axol-f/r/takeoff-speeds/": {
   "file": "assets/qr/f/takeoff-speeds.png",
   "box": [
    64,
@@ -1120,7 +1120,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.695
  },
- "oom-bars|M|f|https://en.wikipedia.org/wiki/Leopold_Aschenbrenner": {
+ "oom-bars|M|f|https://curtcox.github.io/axol-f/r/aschenbrenner/": {
   "file": "assets/qr/f/aschenbrenner.png",
   "box": [
    16,
@@ -1148,33 +1148,33 @@ window.QR_IMAGES = {
   "n": 37,
   "reach": 0.678
  },
- "mic|M|f|https://twit.tv/shows/intelligent-machines/episodes/888": {
+ "mic|M|f|https://curtcox.github.io/axol-f/r/im-888/": {
   "file": "assets/qr/f/im-888.png",
   "box": [
    16,
    64,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.695
+  "n": 29,
+  "reach": 0.716
  },
- "mic|M|f|https://twit.tv/shows/intelligent-machines/episodes/889": {
+ "mic|M|f|https://curtcox.github.io/axol-f/r/im-889/": {
   "file": "assets/qr/f/im-889.png",
   "box": [
    16,
    64,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.695
+  "n": 29,
+  "reach": 0.716
  },
  "boxing-ring|M|f|https://en.wikipedia.org/wiki/TESCREAL": {
   "file": "assets/qr/f/tescreal.png",
@@ -1190,19 +1190,19 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.878
  },
- "two-mics|M|f|https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html": {
+ "two-mics|M|f|https://curtcox.github.io/axol-f/r/roose-sydney/": {
   "file": "assets/qr/f/roose-sydney.png",
   "box": [
    16,
    64,
-   360
+   328
   ],
   "img": [
-   488,
-   488
+   456,
+   456
   ],
-  "n": 37,
-  "reach": 0.678
+  "n": 33,
+  "reach": 0.695
  },
  "two-mics|M|f|https://youtu.be/1T-WWVZHj0g": {
   "file": "assets/qr/f/machine-gods-promo.png",
@@ -1358,19 +1358,19 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.716
  },
- "two-mics|M|f|https://en.wikipedia.org/wiki/Sydney_(Microsoft)": {
+ "two-mics|M|f|https://curtcox.github.io/axol-f/r/sydney/": {
   "file": "assets/qr/f/sydney.png",
   "box": [
    16,
    64,
-   328
+   296
   ],
   "img": [
-   456,
-   456
+   424,
+   424
   ],
-  "n": 33,
-  "reach": 0.695
+  "n": 29,
+  "reach": 0.716
  },
  "two-mics|M|f|https://www.platformer.news/": {
   "file": "assets/qr/f/platformer.png",
@@ -1386,19 +1386,19 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.716
  },
- "door|M|f|https://en.wikipedia.org/wiki/Existential_risk_from_artificial_intelligence": {
+ "door|M|f|https://curtcox.github.io/axol-f/r/ai-x-risk/": {
   "file": "assets/qr/f/ai-x-risk.png",
   "box": [
    16,
    64,
-   360
+   328
   ],
   "img": [
-   488,
-   488
+   456,
+   456
   ],
-  "n": 37,
-  "reach": 0.678
+  "n": 33,
+  "reach": 0.695
  },
  "door|M|f|https://en.wikipedia.org/wiki/Superintelligence": {
   "file": "assets/qr/f/superintelligence.png",
@@ -1470,19 +1470,19 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.841
  },
- "calendar|M|f|https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity": {
+ "calendar|M|f|https://curtcox.github.io/axol-f/r/apolo-ai2027/": {
   "file": "assets/qr/f/apolo-ai2027.png",
   "box": [
    112,
    112,
-   360
+   328
   ],
   "img": [
-   584,
-   584
+   552,
+   552
   ],
-  "n": 37,
-  "reach": 0.811
+  "n": 33,
+  "reach": 0.841
  },
  "calendar|M|f|https://curtcox.github.io/axol-f/r/officechai/": {
   "file": "assets/qr/f/officechai-kokotajlo.png",
@@ -1498,33 +1498,33 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.841
  },
- "dial|M|f|https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/": {
+ "dial|M|f|https://curtcox.github.io/axol-f/r/metaculus-weak/": {
   "file": "assets/qr/f/metaculus-weak.png",
   "box": [
    64,
    112,
-   360
+   328
   ],
   "img": [
-   488,
-   488
+   456,
+   456
   ],
-  "n": 37,
-  "reach": 0.544
+  "n": 33,
+  "reach": 0.549
  },
- "dial|M|f|https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/": {
+ "dial|M|f|https://curtcox.github.io/axol-f/r/metaculus-strong/": {
   "file": "assets/qr/f/metaculus-strong.png",
   "box": [
    64,
    112,
-   360
+   328
   ],
   "img": [
-   488,
-   488
+   456,
+   456
   ],
-  "n": 37,
-  "reach": 0.544
+  "n": 33,
+  "reach": 0.549
  },
  "goalposts|M|f|https://openai.com/charter/": {
   "file": "assets/qr/f/openai-charter.png",
@@ -1540,7 +1540,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.878
  },
- "compass|M|f|https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)": {
+ "compass|M|f|https://curtcox.github.io/axol-f/r/dnd-alignment/": {
   "file": "assets/qr/f/dnd-alignment.png",
   "box": [
    64,
@@ -1582,7 +1582,7 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.561
  },
- "compass|M|f|https://en.wikipedia.org/wiki/Effective_accelerationism": {
+ "compass|M|f|https://curtcox.github.io/axol-f/r/accelerationism/": {
   "file": "assets/qr/f/accelerationism.png",
   "box": [
    64,
@@ -1596,7 +1596,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.549
  },
- "calendar|M|f|https://en.wikipedia.org/wiki/Daniel_Kokotajlo_(researcher)": {
+ "calendar|M|f|https://curtcox.github.io/axol-f/r/kokotajlo/": {
   "file": "assets/qr/f/kokotajlo.png",
   "box": [
    112,
@@ -1722,7 +1722,7 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.5
  },
- "hashchain|M|n|https://en.wikipedia.org/wiki/Content-addressable_storage": {
+ "hashchain|M|n|https://curtcox.github.io/axol-f/r/content-addressable/": {
   "file": "assets/qr/n/content-addressable.png",
   "box": [
    0,
@@ -1764,21 +1764,21 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "electron-shells|M|n|https://en.wikipedia.org/wiki/Aufbau_principle": {
+ "electron-shells|M|n|https://curtcox.github.io/axol-f/r/aufbau/": {
   "file": "assets/qr/n/aufbau.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
- "pulp|M|n|https://en.wikipedia.org/wiki/John_W._Campbell": {
+ "pulp|M|n|https://curtcox.github.io/axol-f/r/campbell/": {
   "file": "assets/qr/n/campbell.png",
   "box": [
    0,
@@ -1806,7 +1806,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "mask|M|n|https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song)": {
+ "mask|M|n|https://curtcox.github.io/axol-f/r/the-stranger/": {
   "file": "assets/qr/n/the-stranger.png",
   "box": [
    0,
@@ -1848,7 +1848,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "pulp|M|n|https://en.wikipedia.org/wiki/Astounding_Science_Fiction": {
+ "pulp|M|n|https://curtcox.github.io/axol-f/r/astounding/": {
   "file": "assets/qr/n/astounding.png",
   "box": [
    0,
@@ -1890,7 +1890,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "filing-drawers|M|n|https://en.wikipedia.org/wiki/Blockhead_(thought_experiment)": {
+ "filing-drawers|M|n|https://curtcox.github.io/axol-f/r/blockhead/": {
   "file": "assets/qr/n/blockhead.png",
   "box": [
    0,
@@ -1904,18 +1904,18 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "filing-drawers|H|n|https://www.lesswrong.com/posts/k6EPphHiBH4WWYFCj/gazp-vs-glut": {
+ "filing-drawers|H|n|https://curtcox.github.io/axol-f/r/gazp-glut/": {
   "file": "assets/qr/n/gazp-glut.png",
   "box": [
    0,
    0,
-   424
+   392
   ],
   "img": [
-   424,
-   424
+   392,
+   392
   ],
-  "n": 45,
+  "n": 41,
   "reach": 0.5
  },
  "tv|M|n|https://youtu.be/oxHKesSpqBM?t=1154": {
@@ -1960,21 +1960,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "beauty-mark|M|n|https://en.wikipedia.org/wiki/Marilyn_Monroe": {
+ "beauty-mark|M|n|https://curtcox.github.io/axol-f/r/monroe/": {
   "file": "assets/qr/n/monroe.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
- "gold-android|M|n|https://memory-alpha.fandom.com/wiki/Data": {
+ "gold-android|M|n|https://curtcox.github.io/axol-f/r/data/": {
   "file": "assets/qr/n/data.png",
   "box": [
    0,
@@ -1988,21 +1988,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "paw-prints|M|n|https://en.wikipedia.org/wiki/A_Fire_Upon_the_Deep": {
+ "paw-prints|M|n|https://curtcox.github.io/axol-f/r/tines/": {
   "file": "assets/qr/n/tines.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
- "ocean|M|n|https://en.wikipedia.org/wiki/Solaris_(novel)": {
+ "ocean|M|n|https://curtcox.github.io/axol-f/r/solaris/": {
   "file": "assets/qr/n/solaris.png",
   "box": [
    0,
@@ -2030,7 +2030,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "cube-lattice|M|n|https://memory-alpha.fandom.com/wiki/Borg_Queen": {
+ "cube-lattice|M|n|https://curtcox.github.io/axol-f/r/borg-queen/": {
   "file": "assets/qr/n/borg-queen.png",
   "box": [
    0,
@@ -2058,18 +2058,18 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "egg|M|n|https://en.wikipedia.org/wiki/Alien_(creature_in_Alien_franchise)": {
+ "egg|M|n|https://curtcox.github.io/axol-f/r/xenomorph-queen/": {
   "file": "assets/qr/n/xenomorph-queen.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
  "ocean|M|n|https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem": {
@@ -2156,7 +2156,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "cube-lattice|M|n|https://en.wikipedia.org/wiki/Star_Trek:_First_Contact": {
+ "cube-lattice|M|n|https://curtcox.github.io/axol-f/r/first-contact/": {
   "file": "assets/qr/n/first-contact.png",
   "box": [
    0,
@@ -2198,7 +2198,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "bat|M|n|https://en.wikipedia.org/wiki/What_Is_It_Like_to_Be_a_Bat%3F": {
+ "bat|M|n|https://curtcox.github.io/axol-f/r/nagel-bat/": {
   "file": "assets/qr/n/nagel-bat.png",
   "box": [
    0,
@@ -2254,18 +2254,18 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.5
  },
- "winged-sandal|H|n|https://hermes-agent.nousresearch.com/docs/user-guide/features/memory": {
+ "winged-sandal|H|n|https://curtcox.github.io/axol-f/r/hermes-memory/": {
   "file": "assets/qr/n/hermes-memory.png",
   "box": [
    0,
    0,
-   456
+   392
   ],
   "img": [
-   456,
-   456
+   392,
+   392
   ],
-  "n": 49,
+  "n": 41,
   "reach": 0.5
  },
  "winged-sandal|M|n|https://hermes-agent.org/": {
@@ -2296,32 +2296,32 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.5
  },
- "circuit|M|n|https://terminator.fandom.com/wiki/Miles_Dyson": {
+ "circuit|M|n|https://curtcox.github.io/axol-f/r/dyson/": {
   "file": "assets/qr/n/dyson.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
- "chrome-red-eye|M|n|https://en.wikipedia.org/wiki/Terminator_(character)": {
+ "chrome-red-eye|M|n|https://curtcox.github.io/axol-f/r/t800/": {
   "file": "assets/qr/n/t800.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
  "lobster-shell|M|n|https://en.wikipedia.org/wiki/Moltbook": {
@@ -2380,21 +2380,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "winged-sandal|M|n|https://hermes-agent.nousresearch.com/docs/user-guide/features/skills": {
+ "winged-sandal|M|n|https://curtcox.github.io/axol-f/r/hermes-skills/": {
   "file": "assets/qr/n/hermes-skills.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
- "chrome-red-eye|M|n|https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day": {
+ "chrome-red-eye|M|n|https://curtcox.github.io/axol-f/r/terminator-2/": {
   "file": "assets/qr/n/terminator-2.png",
   "box": [
    0,
@@ -2408,18 +2408,18 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "circuit|M|n|https://en.wikipedia.org/wiki/Skynet_(Terminator)": {
+ "circuit|M|n|https://curtcox.github.io/axol-f/r/skynet/": {
   "file": "assets/qr/n/skynet.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
  "switchboard|M|n|https://www.anthropic.com/research/constitutional-classifiers": {
@@ -2436,7 +2436,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "switchboard|M|n|https://www.anthropic.com/claude-fable-and-mythos-5-1": {
+ "switchboard|M|n|https://curtcox.github.io/axol-f/r/fable-mythos-5-1/": {
   "file": "assets/qr/n/fable-mythos-5-1.png",
   "box": [
    0,
@@ -2478,7 +2478,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "thermometer|M|n|https://en.wikipedia.org/wiki/Landauer%27s_principle": {
+ "thermometer|M|n|https://curtcox.github.io/axol-f/r/landauer/": {
   "file": "assets/qr/n/landauer.png",
   "box": [
    0,
@@ -2506,7 +2506,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "maze|M|n|https://en.wikipedia.org/wiki/P_versus_NP_problem": {
+ "maze|M|n|https://curtcox.github.io/axol-f/r/p-vs-np/": {
   "file": "assets/qr/n/p-vs-np.png",
   "box": [
    0,
@@ -2618,21 +2618,21 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "blueprint|M|n|https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/": {
+ "blueprint|M|n|https://curtcox.github.io/axol-f/r/mittr-rsi/": {
   "file": "assets/qr/n/mittr-rsi.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
- "blueprint|M|n|https://www.datacamp.com/tutorial/recursive-self-improvement": {
+ "blueprint|M|n|https://curtcox.github.io/axol-f/r/datacamp-rsi/": {
   "file": "assets/qr/n/datacamp-rsi.png",
   "box": [
    0,
@@ -2688,7 +2688,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "blueprint|M|n|https://en.wikipedia.org/wiki/Recursive_self-improvement": {
+ "blueprint|M|n|https://curtcox.github.io/axol-f/r/rsi-wiki/": {
   "file": "assets/qr/n/rsi-wiki.png",
   "box": [
    0,
@@ -2702,7 +2702,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "blueprint|M|n|https://www.anthropic.com/institute/recursive-self-improvement": {
+ "blueprint|M|n|https://curtcox.github.io/axol-f/r/anthropic-rsi/": {
   "file": "assets/qr/n/anthropic-rsi.png",
   "box": [
    0,
@@ -2730,7 +2730,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "flame|M|n|https://sideways-view.com/2018/02/24/takeoff-speeds/": {
+ "flame|M|n|https://curtcox.github.io/axol-f/r/takeoff-speeds/": {
   "file": "assets/qr/n/takeoff-speeds.png",
   "box": [
    0,
@@ -2772,7 +2772,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "oom-bars|M|n|https://en.wikipedia.org/wiki/Leopold_Aschenbrenner": {
+ "oom-bars|M|n|https://curtcox.github.io/axol-f/r/aschenbrenner/": {
   "file": "assets/qr/n/aschenbrenner.png",
   "box": [
    0,
@@ -2800,32 +2800,32 @@ window.QR_IMAGES = {
   "n": 37,
   "reach": 0.5
  },
- "mic|M|n|https://twit.tv/shows/intelligent-machines/episodes/888": {
+ "mic|M|n|https://curtcox.github.io/axol-f/r/im-888/": {
   "file": "assets/qr/n/im-888.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
- "mic|M|n|https://twit.tv/shows/intelligent-machines/episodes/889": {
+ "mic|M|n|https://curtcox.github.io/axol-f/r/im-889/": {
   "file": "assets/qr/n/im-889.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
  "boxing-ring|M|n|https://en.wikipedia.org/wiki/TESCREAL": {
@@ -2842,18 +2842,18 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "two-mics|M|n|https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html": {
+ "two-mics|M|n|https://curtcox.github.io/axol-f/r/roose-sydney/": {
   "file": "assets/qr/n/roose-sydney.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
  "two-mics|M|n|https://youtu.be/1T-WWVZHj0g": {
@@ -3010,18 +3010,18 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "two-mics|M|n|https://en.wikipedia.org/wiki/Sydney_(Microsoft)": {
+ "two-mics|M|n|https://curtcox.github.io/axol-f/r/sydney/": {
   "file": "assets/qr/n/sydney.png",
   "box": [
    0,
    0,
-   328
+   296
   ],
   "img": [
-   328,
-   328
+   296,
+   296
   ],
-  "n": 33,
+  "n": 29,
   "reach": 0.5
  },
  "two-mics|M|n|https://www.platformer.news/": {
@@ -3038,18 +3038,18 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "door|M|n|https://en.wikipedia.org/wiki/Existential_risk_from_artificial_intelligence": {
+ "door|M|n|https://curtcox.github.io/axol-f/r/ai-x-risk/": {
   "file": "assets/qr/n/ai-x-risk.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
  "door|M|n|https://en.wikipedia.org/wiki/Superintelligence": {
@@ -3122,18 +3122,18 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "calendar|M|n|https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity": {
+ "calendar|M|n|https://curtcox.github.io/axol-f/r/apolo-ai2027/": {
   "file": "assets/qr/n/apolo-ai2027.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
  "calendar|M|n|https://curtcox.github.io/axol-f/r/officechai/": {
@@ -3150,32 +3150,32 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "dial|M|n|https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/": {
+ "dial|M|n|https://curtcox.github.io/axol-f/r/metaculus-weak/": {
   "file": "assets/qr/n/metaculus-weak.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
- "dial|M|n|https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/": {
+ "dial|M|n|https://curtcox.github.io/axol-f/r/metaculus-strong/": {
   "file": "assets/qr/n/metaculus-strong.png",
   "box": [
    0,
    0,
-   360
+   328
   ],
   "img": [
-   360,
-   360
+   328,
+   328
   ],
-  "n": 37,
+  "n": 33,
   "reach": 0.5
  },
  "goalposts|M|n|https://openai.com/charter/": {
@@ -3192,7 +3192,7 @@ window.QR_IMAGES = {
   "n": 29,
   "reach": 0.5
  },
- "compass|M|n|https://en.wikipedia.org/wiki/Alignment_(Dungeons_%26_Dragons)": {
+ "compass|M|n|https://curtcox.github.io/axol-f/r/dnd-alignment/": {
   "file": "assets/qr/n/dnd-alignment.png",
   "box": [
    0,
@@ -3234,7 +3234,7 @@ window.QR_IMAGES = {
   "n": 25,
   "reach": 0.5
  },
- "compass|M|n|https://en.wikipedia.org/wiki/Effective_accelerationism": {
+ "compass|M|n|https://curtcox.github.io/axol-f/r/accelerationism/": {
   "file": "assets/qr/n/accelerationism.png",
   "box": [
    0,
@@ -3248,7 +3248,7 @@ window.QR_IMAGES = {
   "n": 33,
   "reach": 0.5
  },
- "calendar|M|n|https://en.wikipedia.org/wiki/Daniel_Kokotajlo_(researcher)": {
+ "calendar|M|n|https://curtcox.github.io/axol-f/r/kokotajlo/": {
   "file": "assets/qr/n/kokotajlo.png",
   "box": [
    0,
@@ -3319,7 +3319,7 @@ window.QR_IMAGE_STYLES = {
   "extent": 0.924
  },
  "electron-shells": {
-  "extent": 0.841
+  "extent": 0.878
  },
  "pulp": {
   "extent": 0.841
@@ -3352,7 +3352,7 @@ window.QR_IMAGE_STYLES = {
   "extent": 0.878
  },
  "beauty-mark": {
-  "extent": 0.841
+  "extent": 0.878
  },
  "gold-android": {
   "extent": 0.878
@@ -3388,10 +3388,10 @@ window.QR_IMAGE_STYLES = {
   "extent": 0.924
  },
  "circuit": {
-  "extent": 0.841
+  "extent": 0.878
  },
  "chrome-red-eye": {
-  "extent": 0.841
+  "extent": 0.878
  },
  "switchboard": {
   "extent": 0.841

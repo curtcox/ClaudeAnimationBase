@@ -10,7 +10,13 @@
    "text": "The audio has axes being pronounced as the plural of ax rather than the plural or axis.",
    "status": "open",
    "created": "2026-09-29T22:09:00.520Z",
-   "replies": [],
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Now said 'axeez', the plural of axis, in all nine lines with 'axes'.",
+     "at": "2026-09-30T01:55:57.307Z"
+    }
+   ],
    "frame": "frames/ch07-nmun8aqugs4.jpg"
   }
  ]

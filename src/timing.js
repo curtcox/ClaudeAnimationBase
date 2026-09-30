@@ -70,7 +70,7 @@ function darkUnder(x, y, w, h) {
 }
 
 // The caption at t, laid out but not painted (the chapter check uses it too): the sentence being said, wrapped by its
-// measured width into rows as wide as the frame allows (the whole width, less any code standing in the bottom band), then
+// measured width into rows as wide as the frame allows (the whole width, less any code reaching down into its rows), then
 // evened out so the last row isn't a stray word. right: where the caption must stop, instead of asking the codes (the
 // lift is decided before the codes are placed, so it tries both a full-width caption and one a code squeezes to the
 // band's reserved part, LAYOUT_RESERVED). Returns null when nobody is speaking.
@@ -97,8 +97,19 @@ function captionAt(t, right = null) {
   const sentences = txt.split(/(?<=[.!?]["”)]*)\s+(?=["“(]?[A-Z0-9])/).map(x => x.replace(/\u2024/g, '.'));
   const total = sentences.reduce((a, s) => a + s.length, 0); let acc = 0, cur = sentences[0];
   for (const s of sentences) { if ((t - l.t0) / Math.max(.01, l.t1 - l.t0) * total >= acc) cur = s; acc += s.length; }
-  // as wide as the frame allows: to its right margin, or to the first code standing in the band
-  right ??= Math.min(W - CAP.x, ...codesInBand(t).map(r => r[0] - 16));
+  // as wide as the frame allows: to its right margin, or to the first code reaching down into the caption's rows (a code
+  // standing higher in the band leaves the caption the full width, and fewer rows)
+  if (right != null) return captionLaid(l, cur, right);
+  const codes = codesInBand(t);
+  let cap = captionLaid(l, cur, W - CAP.x);
+  for (let i = 0; i < 4; i++) {
+    const r = Math.min(W - CAP.x, ...codes.filter(c => c[3] > cap.box[1] - 8).map(c => c[0] - 16));
+    if (r >= cap.right) break;
+    cap = captionLaid(l, cur, r);
+  }
+  return cap;
+}
+function captionLaid(l, cur, right) {
   const maxW = Math.max(600, right - CAP.x - 2 * CAP.pad);
   const words = cur.split(' '), n = wrapRows(words, maxW).length;
   // evened out: the narrowest width that still takes n rows
@@ -110,7 +121,7 @@ function captionAt(t, right = null) {
   for (const r of rows) r.proof = marks.filter(m => m.at >= r.at && m.at <= r.at + r.txt.length).map(m => ({ ...m, at: m.at - r.at }));
   const gap = marks.length ? 60 : 46, top = marks.length ? 18 : 0, y0 = H - CAP.bottom - 20 - rows.length * gap - top;
   const w = Math.max(...rows.map(r => capWidth(r.txt)), capWidth('CLAUDE')) + 2 * CAP.pad;
-  return { l, rows, gap, top, y0, maxW, box: [CAP.x, y0 - 44, CAP.x + w, H - CAP.bottom] };
+  return { l, rows, gap, top, y0, maxW, right, box: [CAP.x, y0 - 44, CAP.x + w, H - CAP.bottom] };
 }
 function reviewCaption(t) {
   const c = captionAt(t); if (!c) return;

@@ -87,18 +87,23 @@
   function corkboard(t, end) {
     boilSeed('cork'); paint(rectPts(-40, -40, W + 80, H + 80), { wash: '#B98A5E', fill: '#9A6E48', fillOp: 110, tex: .9, bleed: .2, ink: null });
     for (let i = 0; i < 90; i++) paint(ellPts(hash(i) * W, hash(i + 90) * H, 4, 3, 6), { wash: '#7A5238', washOp: 120, ink: null });
-    qrFeature('note-the-debate', t, say('T30.U.01', 'Z M:', .6), { hold: end - say('T30.U.01', 'Z M:', .6) - .5 });
+    // the code sits high, clear of the caption band, so the caption can run the frame's width (Curt, ch 6 review)
+    qrFeature('note-the-debate', t, say('T30.U.01', 'Z M:', .6), { hold: end - say('T30.U.01', 'Z M:', .6) - .5, y: 380 });
+    // tiled: each card overlaps only the blank lower part of the one before, so every word stays readable and the
+    // three end well above the caption
+    let top = 40;
     COMMENTS.forEach((c, i) => {
-      const t0 = say('T30.U.01', c.cue, -.3), k = seg(t, t0, t0 + .5), y = 190 + i * 350;
+      const t0 = say('T30.U.01', c.cue, -.3), k = seg(t, t0, t0 + .5), y = top + 150, x = 60 + i * 50;
+      top += 120 + c.body.length * 44;
       if (k <= 0) return;
-      boilSeed('comment ' + i); occupy(60, y - 150, 900, y + 150, 1, 'comment card');
+      boilSeed('comment ' + i); occupy(x, y - 150, x + 840, y + 150, 1, 'comment card');
       const dy = (1 - easeOut(k)) * -60;
-      paint(rrPts(60, y - 150 + dy, 840, 300, 10), { wash: '#FBF6E6', ink: PAL.ink, sw: 1.2 });
-      paint(ellPts(480, y - 138 + dy, 12, 12, 10), { wash: '#C9302C', ink: PAL.ink, sw: .8 });   // the pin
-      paint(ellPts(120, y - 90 + dy, 30, 30, 14), { wash: ['#8C8894', '#3A6F8A', '#3A6FC9'][i], ink: null });
-      lab(c.handle, 170, y - 92 + dy, 34, PAL.ink, { align: 'left', font: 'bold 34px "Patrick Hand", sans-serif' });
-      lab('2 days ago', 170 + c.handle.length * 17 + 30, y - 90 + dy, 26, '#8C8894', { align: 'left' });
-      c.body.forEach((ln, j) => lab(ln, 100, y - 30 + j * 44 + dy, 32, '#26222A', { align: 'left' }));
+      paint(rrPts(x, y - 150 + dy, 840, 300, 10), { wash: '#FBF6E6', ink: PAL.ink, sw: 1.2 });
+      paint(ellPts(x + 420, y - 138 + dy, 12, 12, 10), { wash: '#C9302C', ink: PAL.ink, sw: .8 });   // the pin
+      paint(ellPts(x + 60, y - 90 + dy, 30, 30, 14), { wash: ['#8C8894', '#3A6F8A', '#3A6FC9'][i], ink: null });
+      lab(c.handle, x + 110, y - 92 + dy, 34, PAL.ink, { align: 'left', font: 'bold 34px "Patrick Hand", sans-serif' });
+      lab('2 days ago', x + 110 + c.handle.length * 17 + 30, y - 90 + dy, 26, '#8C8894', { align: 'left' });
+      c.body.forEach((ln, j) => lab(ln, x + 40, y - 30 + j * 44 + dy, 32, '#26222A', { align: 'left' }));
     });
   }
 

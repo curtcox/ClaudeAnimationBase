@@ -12,13 +12,13 @@ Spoken lines are estimated at 160 wpm until audio/durations.json has real voice 
 | 4 | The Echo | 32 | 4:57 | voiced |
 | 5 | The Dish of the Day | 20 | 4:48 | voiced |
 | 6 | Thrindles | 30 | 6:32 | voiced |
-| 7 | Mind-Space | 47 | 5:21 | voiced |
+| 7 | Mind-Space | 47 | 5:23 | voiced |
 | 8 | Contradictions | 24 | 3:27 | voiced |
-| 9 | Shells | 32 | 4:32 | voiced |
+| 9 | Shells | 32 | 4:31 | voiced |
 | 10 | The Router | 12 | 2:33 | voiced |
-| 11 | July | 27 | 5:30 | voiced |
+| 11 | July | 27 | 5:32 | voiced |
 | 12 | Limits | 26 | 6:10 | voiced |
-| 13 | Foom | 35 | 5:34 | voiced |
-| 14 | The Pundits | 37 | 6:08 | voiced |
-| 15 | The Compass | 38 | 6:56 | voiced |
+| 13 | Foom | 35 | 5:32 | voiced |
+| 14 | The Pundits | 37 | 6:07 | voiced |
+| 15 | The Compass | 38 | 6:54 | voiced |
 | 16 | Coda | 3 | 0:51 | voiced |

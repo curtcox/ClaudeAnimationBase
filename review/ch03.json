@@ -10,7 +10,13 @@
    "text": "Fade the background sound in and out rather than starting and stopping abruptly here.",
    "status": "open",
    "created": "2026-09-29T21:36:31.317Z",
-   "replies": [],
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Now every music cue eases in over about a second and out over two, so the pianos no longer start and stop abruptly.",
+     "at": "2026-09-30T01:55:56.318Z"
+    }
+   ],
    "frame": "frames/ch03-nmun74ytx26.jpg"
   }
  ]

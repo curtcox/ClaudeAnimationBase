@@ -320,6 +320,15 @@
   at: T04.C.01
   mode: shelf
   style: note
+- id: note-one-road
+  url: https://curtcox.github.io/axol-f/n/one-road/
+  caption: "Explained: Harm now or risk later: one road, not two"
+  origin: note
+  ch: 14
+  at: T72.C.03
+  cue: the choice is false
+  mode: shelf
+  style: note
 - id: note-one-sample
   url: https://curtcox.github.io/axol-f/n/one-sample/
   caption: "Explained: Why one answer proves little"

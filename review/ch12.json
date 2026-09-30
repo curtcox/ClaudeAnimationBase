@@ -32,7 +32,13 @@
    "text": "AIs is mispronounced here.",
    "status": "open",
    "created": "2026-09-29T22:37:45.819Z",
-   "replies": [],
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Now sent as 'A.I.s'. Speech-to-text hears 'AIs' both times.",
+     "at": "2026-09-30T01:55:57.633Z"
+    }
+   ],
    "frame": "frames/ch12-nmun9bq3ftc.jpg"
   }
  ]

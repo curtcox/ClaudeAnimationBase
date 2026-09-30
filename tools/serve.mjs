@@ -16,7 +16,7 @@ import { extname, join, normalize } from 'node:path';
 import { load, save, newId, markSeen, overview, DIR } from './review_lib.mjs';
 import { reviewPage } from './review_page.mjs';
 const ROOT = 'site/public', PORT = +(process.env.PORT || 8077);
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.mp4': 'video/mp4', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp3': 'audio/mpeg' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.mp4': 'video/mp4', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp3': 'audio/mpeg', '.txt': 'text/plain; charset=utf-8' };
 const json = (res, code, body) => { res.writeHead(code, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(body)); };
 const chOf = v => { const n = parseInt(v, 10); return Number.isInteger(n) && n >= 0 && n < 100 ? n : null; };
 

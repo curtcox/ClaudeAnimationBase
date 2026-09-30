@@ -8,14 +8,14 @@ Decisions made so far:
 
 | topic | decision |
 |---|---|
-| voices | ElevenLabs, two voices: Curt (his own clone, "Curt Cox 2") and Claude (River, provisional); `script/voices.yaml` |
+| voices | ElevenLabs, two voices: Curt (his own clone, "Curt Cox 2") and Claude (River); `script/voices.yaml` |
 | length | **near-verbatim and accurate is the priority.** Measured in Phase 1: about 75 min (see §1) |
 | sound | voice first. Sound effects and music stings where they earn it (a "dun-dun-DUN"), but no continuous music bed |
 | on-screen text | painted labels on charts and cast, plus QR codes with short painted captions. No subtitles |
 | personal details | everything stays in: name, projects, YouTube comment, wife, cousin |
 | the 3 hidden images | in `assets/ref/`: `mad157_apes.png` (*MAD* #157, 1973), `frog_axolotl_chart.png`, `connor2_compass.png`. Used only as reference and repainted in the kit's style |
 | frog/axolotl chart source | https://x.com/fjzzq2002/status/2103556166903038213/photo/1 |
-| QR targets | encode the URL directly. Use a short redirect (256t-based, domain to be decided) only when a direct URL is too long to scan reliably |
+| QR targets | the shorter of the direct URL and the companion site's own address for it (`r/NAME/`, a forwarding page); no short-link domain (Curt, 2026-09-29; §4) |
 | Curt | a minimal stick figure in CGP Grey's manner, look H (ponytail, hoodie, circle beard), greying (`LOOK.curt`); his own voice clone |
 | figures | loose caricatures of real and fictional people, each in clothes of their own, not hoodies (Curt, 2026-09-29): one look per person wherever they appear (`PEOPLE` in `src/cast.js`: the hosts as their shows' thumbnails dress them, Miles Dyson's lab coat); crowds from a wardrobe (`CROWD`: tees, dresses, a sweater, shirts, a Breton, a jacket, a polo, a suit). Only Curt wears a hoodie. The sheet: `node render.mjs --loop=wardrobe --stills=1 --out=out/style` |
 | classic art | 21 works Curt picked (2026-09-28), hung in their shots from public-domain scans, plus our own evocations of four still under copyright (`docs/ART.md` says where each hangs; `src/gallery.js`). No QR code on them: the companion site links each, and the watch pages list it while it's on screen |
@@ -124,8 +124,8 @@ to spend a Saturday morning.")
   said. They aren't the transcript's lines, so they're never in `script.yaml`. When Claude later quotes them ("That ape is a ventriloquist!"), it's Claude's line in Claude's voice, over the
   repainted panel.
 - **The voices** (`script/voices.yaml`, chosen 2026-09-28 from the casting sampler): Curt is his own cloned voice,
-  "Curt Cox 2" (his pick; no one else's voice is cloned). Claude is the stock voice River, relaxed and neutral,
-  provisionally, until Curt confirms it by ear.
+  "Curt Cox 2" (his pick; no one else's voice is cloned). Claude is the stock voice River, relaxed and neutral.
+  Curt confirmed River and the cold open's six voices by ear (2026-09-29).
 
 ### Sound design
 The track is voice first, with no continuous music. Effects and stings land a joke or a turn, and since 2026-09-28
@@ -253,17 +253,20 @@ These counts are checked against the original a second time during the review lo
   still, and leaves on an arc.
 - **At most 3 on screen at once**, and only in "constellation" moments.
 
-### Direct by default, short links only when needed
-Each QR encodes its **target URL directly**. `qr.js` computes the QR version each URL needs at error correction
-H. A URL is sent through a **256t-based short redirect** (domain to be decided) only if its code would have fewer
-than 7 px per module at its display size.
+### No short-link domain: the site's own addresses
+Curt's rule (2026-09-29): every code points at the companion site, https://curtcox.github.io/axol-f/, unless the
+direct link is shorter. What a code encodes is the shortest of three (`withQrTargets` in `tools/script_lib.mjs`):
+- the page's own `url`;
+- a shorter form of the same page (`qr_url`: youtu.be, doi.org);
+- the site's address for it, `r/NAME/`: a page that forwards to `url` (NAME is the ref's `short`, else its id;
+  `tools/build_site.mjs` writes them).
 
-The first candidates are the YouTube comment links (`lc=` IDs), the Forbes article, the Hieropedia and Apolo URLs,
-and the Hermes docs path. Short or bare-domain targets stay direct: xkcd.com/356, ai-2027.com, 256t.org,
-hashbin.org, theinsideview.ai/connor2.
+A page the site can keep its own copy of (`host`) is served from the site instead. Only the conversation itself
+qualifies so far (`conversation/`): it's Curt's. Every other linked page is someone else's work, so the site
+forwards to it rather than copying it.
 
-`refs.yaml` records `url`, and adds `short_url` only when one is used. The **companion page**, the one extra QR at
-the end, lists every link by timestamp, and the YouTube description carries the same list.
+The **companion page**, the one extra QR at the end, lists every link by timestamp, and the YouTube description
+carries the same list.
 
 ### Styling: each code dresses as what it points to
 | target | style |
@@ -417,7 +420,7 @@ script/
   conversation.md     verbatim transcript (the source of truth)
   script.yaml         one entry per spoken line: id, chapter, speaker, text, speech_text
                       (pronunciation-normalised), v3 style tags, refs[], visual cue, pause_after
-  refs.yaml           every reference: id, url, short_url, caption, qr_style, mode (feature|shelf), chapter
+  refs.yaml           every reference: id, url, qr_url, host, short, caption, qr_style, mode (feature|shelf), chapter
   sfx.yaml            sound-effect cues: a moment (line id, phrase, offset), kind, gain, prompt
   pronounce.yaml      axolotl, gadolinium ("xenon core, four-f seven, five-d one, six-s two"),
                       TESCREAL, Kokotajlo, Aschenbrenner, Agüera y Arcas, Ballecer, Lyapunov,
@@ -431,8 +434,13 @@ tools/
                       (line start and end, word times, per-frame loudness envelope)
   qr_check.mjs        decode test described above
   mix.mjs             per-chapter voice + effects (effects ducked under speech), loudnorm to −14 LUFS
-  assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), plus youtube.md: the
-                      description with chapter markers and the site's address (a thumbnail still: to do)
+  assemble.mjs        ✅ joins the chapters → out/film/film.mp4 (drafts, or --final), then runs youtube.mjs
+  youtube.mjs         ✅ out/film/youtube.md: the upload's title, tags and description (the conversation, the site,
+                      the repo, chapter markers, then the most important links by time, up to YouTube's 5,000
+                      characters) (a thumbnail still: to do)
+  making_of.mjs       ✅ npm run making-of: this project's Claude Code session → making-of/ (Curt's messages, Claude's
+                      replies and visible reasoning, one line per action, the helpers; email and home folder
+                      removed). The site shows each part formatted and as plain text (making-of/, conversation.txt)
   start.mjs           ✅ npm start: a fresh clone to the site in the browser, then the whole film (docs/RELEASE.md)
 src/
   qr.js               vendored qrcode-generator (MIT) → matrix; qrPaint(matrix, style) with the rules above
@@ -501,8 +509,8 @@ ElevenLabs needs about 60k characters per full voice pass, plus a few dozen effe
 
 ## 8. Open questions
 
-1. **Short-link domain.** It's needed only for the handful of URLs that are too long to scan. The QR tooling
-   reports which ones.
+1. **Short-link domain.** Settled: none. Links go through the companion site (§4), which GitHub Pages now
+   serves (2026-09-29).
 2. **Your real look and voice.** Settled: look H, greying, and your own voice clone. The stick figure can still be
    swapped for a caricature later (`LOOK.curt`).
 3. **`ELEVENLABS_API_KEY`.** Only needed for Phase 3, after the visual and reference rounds.

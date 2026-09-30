@@ -78,7 +78,7 @@ cues:
 - { id: stamp-non-sequitur, ch: 6, at: [T31.C.01, "a deliberate non sequitur"], len: .5, kind: effect, gain: -10, prompt: "a rubber stamp thumped onto paper on a wooden desk", why: "…" }
 - { id: coin-flip, ch: 6, at: [T31.C.02.1, "a single thing flips"], len: 1.2, kind: effect, gain: -12, prompt: "a coin flipped with a thumb: a bright ting, then it lands", why: "a single thing flips" }
 - { id: thrindle-chirp, ch: 6, at: [T30.C.02, "thrindle is anything"], len: 1, kind: effect, gain: -10, prompt: "a small round creature's cheerful chirp, one squeaky little trill", why: "the thrindle appears: its own sound, like the frog's croak, and it comes back in ch 8" }
-- { id: juggler-drop, ch: 6, at: [T31.C.02.3, "was a joke"], len: 1.5, kind: effect, gain: -12, prompt: "a juggling ball dropped on purpose: a soft thud and a small bounce, then a short playful slide-whistle down", why: "the joke as a ball dropped on purpose: you can only break a rule you have" }
+- { id: juggler-drop, ch: 6, at: [T31.C.02.3, "on purpose"], len: 1.5, kind: effect, gain: -12, prompt: "a juggling ball dropped on purpose: a soft thud and a small bounce, then a short playful slide-whistle down", why: "the joke as a ball dropped on purpose: you can only break a rule you have" }
 
 # ---- 7 Mind Space ----
 - { id: solaris-swell, ch: 7, at: [T35.C.02, "Solaris"], len: 3, kind: effect, gain: -12, prompt: "one slow, deep ocean swell, rising and falling away", why: "Solaris's ocean, the far end of the line" }

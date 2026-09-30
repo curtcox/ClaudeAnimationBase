@@ -7,12 +7,12 @@
 // The published site is built by .github/workflows/pages.yml on every push to main, from a clean checkout (so no out/).
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync, copyFileSync, constants } from 'node:fs';
 import YAML from 'yaml';
-import { marked } from 'marked';
-import { PATHS, readYaml, pad } from './script_lib.mjs';
+import { marked, Marked } from 'marked';
+import { PATHS, readYaml, pad, withQrTargets } from './script_lib.mjs';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 const site = readYaml('script/site.yaml'), OUT = 'site/public';
-const chapters = readYaml(PATHS.chapters), script = readYaml(PATHS.script), refs = readYaml('script/refs.yaml');
+const chapters = readYaml(PATHS.chapters), script = readYaml(PATHS.script), refs = withQrTargets(readYaml('script/refs.yaml'));
 const byRef = new Map(refs.map(r => [r.id, r]));
 
 // ---- the explainers ----
@@ -54,7 +54,12 @@ h2{font-size:1.35rem;margin:2.2rem 0 .6rem;border-top:1px solid #D9D2C4;padding-
 .crumbs{font-size:.85rem;color:#6A6470}.moment{margin:1.6rem 0}.when{font:600 .85rem/1 system-ui,sans-serif;color:#6A6470}
 blockquote{margin:.4rem 0 .6rem;padding:.2rem 0 .2rem 1rem;border-left:4px solid #E3C9B4;color:#3E3845;font-style:italic}
 .explainer{background:#FFF1CE;border-radius:10px;padding:.2rem .6rem}ul{padding-left:1.2rem}li{margin:.3rem 0}
-.note{background:#F4EEDF;border-radius:12px;padding:.6rem 1rem;font-size:.95rem}`;
+.note{background:#F4EEDF;border-radius:12px;padding:.6rem 1rem;font-size:.95rem}
+.msg{margin:1.2rem 0;padding:.4rem 1rem;border-radius:12px;overflow-wrap:anywhere}.msg.curt{background:#EAF1F7}.msg.claude{background:#FFF}
+.msg pre,details pre{overflow-x:auto;font-size:.8rem;background:#F4EEDF;padding:.5rem}.msg code,details code{font-size:.85em}
+details{margin:.5rem 0;font-size:.85rem;color:#4A4450;overflow-wrap:anywhere}details summary{cursor:pointer;font:600 .8rem system-ui,sans-serif;color:#6A6470}
+details.think{border-left:3px solid #D9D2C4;padding-left:.8rem}.mnote{font:italic .8rem system-ui,sans-serif;color:#8A8490;text-align:center;margin:1rem 0}
+table{border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1px solid #D9D2C4;padding:.3rem .5rem;text-align:left;vertical-align:top}`;
 const page = (title, body, depth) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><link rel="stylesheet" href="${'../'.repeat(depth)}style.css"></head><body><main>${body}</main></body></html>\n`;
 const write = (path, html) => { mkdirSync(path.replace(/\/[^/]*$/, ''), { recursive: true }); writeFileSync(path, html); };
@@ -70,6 +75,9 @@ alone isn't enough. <strong>The yellow ones are the explanations.</strong> Start
 ${FILM ? `<p class="explainer" style="padding:.6rem 1rem"><a href="film/"><strong>▶ Watch the film</strong></a>, with every link beside it as it comes up.</p>`
   : `<p class="note">The film is on its way. Its links and explanations are all here already. Can't wait? The film is made
 entirely by code, so you can make it yourself: <a href="${esc(filmCfg.repo || '')}">get the code</a> and run <code>npm start</code>.</p>`}
+<h2>The two conversations</h2><ul>
+<li><a href="conversation/"><strong>The conversation the film shows</strong></a>, word for word (<a href="conversation.txt">plain text</a>).</li>
+<li><a href="making-of/"><strong>The conversation that made the film</strong></a>: Curt asking Claude to make it, and everything Claude did (<a href="making-of/making-of.txt">plain text</a>).</li></ul>
 <h2>Chapters</h2><ul>${chapters.map((c, i) => `<li><a href="ch${pad(c.n)}/">${c.n}. ${esc(c.title)}</a> <span class="when">${when(startOf(i), 0)}</span></li>`).join('')}</ul>
 <p class="note">The explanations were written by Claude, the AI in the film, for this site, and checked against the linked
 sources. Times may still shift a little before the film is finished.</p>
@@ -77,11 +85,74 @@ sources. Times may still shift a little before the film is finished.</p>
 the same way, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (that's its explainer site).</p>
 <p class="note">Why is this site called <em>axol-f</em>? An axolotl, one letter away from
 <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Crazy Frog's "Axel F"</a>: a frog, or an axolotl.</p>`, 0));
-// short links: a ref whose code is one of this site's short addresses (base + r/NAME/) gets a page that forwards to its url
+// the site's own addresses for other pages (base + r/NAME/, see script_lib's withQrTargets): each forwards to its url
 for (const r of refs.filter(r => r.qr_url && r.qr_url.startsWith(site.base + site.short))) {
   const name = r.qr_url.slice((site.base + site.short).length).replace(/\/$/, '');
   write(`${OUT}/${site.short}${name}/index.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${esc(r.url)}">
 <link rel="canonical" href="${esc(r.url)}"><title>${esc(r.caption)}</title></head><body><p>Going to <a href="${esc(r.url)}">${esc(r.caption)}</a>…</p></body></html>\n`);
+}
+// the conversation itself, the site's own copy (refs.yaml the-conversation, host: conversation/): every turn, word for
+// word as the transcript has it, under the chapter it falls in
+{
+  const turns = [];
+  for (const l of script.lines) {
+    const turn = l.id.split('.').slice(0, 2).join('.'), t = turns.at(-1);
+    if (t && t.turn === turn) t.md += (l.kind === 'item' && t.last === 'item' ? '\n' : '\n\n') + l.text, t.last = l.kind;
+    else turns.push({ turn, ch: l.ch, speaker: l.speaker, md: l.text, last: l.kind });
+  }
+  let ch = null; const body = [];
+  for (const t of turns) {
+    if (t.ch !== ch) { ch = t.ch; const c = chapters.find(c => c.n === ch); body.push(`<h2><a href="../ch${pad(ch)}/">${ch}. ${esc(c.title)}</a></h2>`); }
+    body.push(`<div class="moment"><div class="when">${t.speaker === 'curt' ? 'Curt' : 'Claude'}</div>${marked.parse(t.md)}</div>`);
+  }
+  const orig = byRef.get('the-conversation');
+  write(`${OUT}/conversation/index.html`, page('The conversation', `<p class="crumbs"><a href="../">Frog or Axolotl</a> · the conversation</p>
+<h1>The conversation</h1><p>The whole conversation between Curt and Claude that the film is made from, word for word, a chapter at a
+time. The original is <a href="${esc(orig.url)}">on claude.ai</a>. Also here as <a href="../conversation.txt">plain text</a>, and
+there's <a href="../making-of/">the conversation that made the film</a>.</p>
+${body.join('\n')}`, 1));
+  copyFileSync(PATHS.conversation, `${OUT}/conversation.txt`);
+}
+// ---- the making-of: the conversation in which Claude made the film (making-of/, from tools/making_of.mjs) ----
+// Each part is formatted here, and served beside it as plain text (.txt, which every browser shows as it is). The
+// export marks each event with an `#### Who · time` line; reasoning and runs of actions fold away.
+if (existsSync('making-of/README.md')) {
+  // the transcript quotes code and HTML: show any raw HTML in it as text, never as markup
+  const safe = new Marked({ renderer: { html: t => esc(typeof t === 'string' ? t : t.text) } });
+  const md = f => readFileSync(f, 'utf8');
+  const links = (html, map) => map.reduce((h, [re, to]) => h.replace(re, to), html);
+  const EV = /^#### (.+?) · (\d\d:\d\d)$/m;
+  const formatted = (src, map) => {
+    const [head, ...rest] = src.split(/^(?=#### .+? · \d\d:\d\d$)/m);
+    const out = [safe.parse(head)];
+    for (const chunk of rest) {
+      const [, who, t] = chunk.match(EV), text = chunk.replace(EV, '').trim();
+      if (/reasoning$/.test(who)) out.push(`<details class="think"><summary>${esc(who)} · ${t}</summary>${safe.parse(text)}</details>`);
+      else if (/did$/.test(who)) { const n = (text.match(/^- /gm) || []).length; out.push(`<details class="did"><summary>${esc(who)} ${n} thing${n > 1 ? 's' : ''} · ${t}</summary>${safe.parse(text)}</details>`); }
+      else if (who === 'Note') out.push(`<p class="mnote">${t} · ${esc(text)}</p>`);
+      else out.push(`<div class="msg ${/^Curt/.test(who) ? 'curt' : 'claude'}"><div class="when">${esc(who)} · ${t}</div>${safe.parse(text)}</div>`);
+    }
+    return links(out.join('\n'), map);
+  };
+  const MO = `${OUT}/making-of`, all = [md('making-of/README.md')];
+  const parts = readdirSync('making-of/parts').filter(f => f.endsWith('.md')).sort(), helpers = readdirSync('making-of/helpers').filter(f => f.endsWith('.md'));
+  const title = src => src.match(/^# (.+)$/m)[1];
+  write(`${MO}/index.html`, page('Making the film', `<p class="crumbs"><a href="../">Frog or Axolotl</a> · the making-of</p>
+${links(safe.parse(md('making-of/README.md').replace(/^Made by .*$/m, '')), [[/href="parts\/([\w-]+)\.md"/g, 'href="$1/"'], [/href="helpers\/([\w-]+)\.md"/g, 'href="helpers/$1/"'], [/href="\.\.\/script\/conversation\.md"/g, 'href="../conversation/"']])}
+<p class="note">Plain text: <a href="making-of.txt">the whole conversation in one file</a>, or each part's own, linked at its top.</p>`, 1));
+  for (const f of parts) {
+    const n = f.slice(0, -3), src = md(`making-of/parts/${f}`); all.push(src);
+    write(`${MO}/${n}.txt`, src);
+    write(`${MO}/${n}/index.html`, page(title(src), `<p class="crumbs"><a href="../../">Frog or Axolotl</a> · <a href="../">the making-of</a> · <a href="../${n}.txt">plain text</a></p>
+${formatted(src, [[/href="([\w-]+)\.md"/g, 'href="../$1/"'], [/href="\.\.\/README\.md"/g, 'href="../"'], [/href="\.\.\/helpers\/([\w-]+)\.md"/g, 'href="../helpers/$1/"']])}`, 2));
+  }
+  for (const f of helpers) {
+    const n = f.slice(0, -3), src = md(`making-of/helpers/${f}`); all.push(src);
+    write(`${MO}/helpers/${n}.txt`, src);
+    write(`${MO}/helpers/${n}/index.html`, page(title(src), `<p class="crumbs"><a href="../../../">Frog or Axolotl</a> · <a href="../../">the making-of</a> · <a href="../${n}.txt">plain text</a></p>
+${formatted(src, [[/href="\.\.\/parts\/([\w-]+)\.md"/g, 'href="../../$1/"'], [/href="\.\.\/README\.md"/g, 'href="../../"']])}`, 3));
+  }
+  writeFileSync(`${MO}/making-of.txt`, all.join('\n\n' + '='.repeat(100) + '\n\n'));
 }
 // each script line of a chapter with the references anchored on it
 const momentsOf = c => { const lines = script.lines.filter(l => l.ch === c.n);
@@ -94,7 +165,7 @@ chapters.forEach((c, i) => {
   for (const { l, here } of momentsOf(c)) {
     const quote = plain(l.text).slice(0, 220) + (plain(l.text).length > 220 ? '…' : '');
     items.push(`<div class="moment"><div class="when">${when(inFilm(i, l.id), 1)} · ${l.speaker === 'curt' ? 'Curt' : 'Claude'}</div>
-<blockquote>${esc(quote)}</blockquote><ul>${here.map(r => r.explains ? `<li class="explainer"><a href="../${site.notes}${r.explains.id}/">Explained: ${esc(r.explains.title)}</a></li>` : `<li><a href="${esc(r.url)}">${esc(r.caption)}</a></li>`).join('')}</ul></div>`);
+<blockquote>${esc(quote)}</blockquote><ul>${here.map(r => r.explains ? `<li class="explainer"><a href="../${site.notes}${r.explains.id}/">Explained: ${esc(r.explains.title)}</a></li>` : r.host ? `<li><a href="../${r.host}">${esc(r.caption)}</a> (<a href="${esc(r.url)}">the original</a>)</li>` : `<li><a href="${esc(r.url)}">${esc(r.caption)}</a></li>`).join('')}</ul></div>`);
   }
   const watch = existsSync(`out/watch/ch${pad(c.n)}.json`) ? `<p><a href="../watch/ch${pad(c.n)}.html">▶ Watch this chapter with its links alongside</a></p>` : '';
   write(`${OUT}/ch${pad(c.n)}/index.html`, page(`${c.n}. ${c.title}`, `<p class="crumbs"><a href="../">Frog or Axolotl</a> · chapter ${c.n}</p><h1>${c.n}. ${esc(c.title)}</h1>${watch}

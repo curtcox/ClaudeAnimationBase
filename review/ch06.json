@@ -37,7 +37,13 @@
    "text": "The bottom card contents and captions are shown at the same spot making both unreadable. Adjust the layout. There is room to the right to expand the captions and thus make them shorter. The comments could also be tiled so that each one overlaps with the one placed before it, but only covers whitespace on the comment card.",
    "status": "open",
    "created": "2026-09-29T21:53:42.883Z",
-   "replies": [],
+   "replies": [
+    {
+     "by": "claude",
+     "text": "The code card now sits higher, clear of the captions, so they run the full width (4 rows here, not 6). The three comment cards are tiled: each overlaps only the blank bottom of the one before, and all end well above the caption. Captions everywhere now get the full width when a code sits above them.",
+     "at": "2026-09-30T01:55:56.648Z"
+    }
+   ],
    "frame": "frames/ch06-nmun7r2sjtp.jpg"
   },
   {
@@ -49,7 +55,13 @@
    "text": "The sound of the ball dropping doesn't match the time when the ball hits.",
    "status": "open",
    "created": "2026-09-29T21:58:00.069Z",
-   "replies": [],
+   "replies": [
+    {
+     "by": "claude",
+     "text": "Moved: the thud now plays as the ball lands, on 'on purpose'. It was a second early.",
+     "at": "2026-09-30T01:55:56.981Z"
+    }
+   ],
    "frame": "frames/ch06-nmun7wl8mzd.jpg"
   }
  ]

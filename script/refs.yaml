@@ -1,7 +1,7 @@
 # Every link the film shows as a QR code. Hand-edited; checked by tools/check_refs.mjs (→ script/refs_report.md).
 #
 #   id      stable key (QR styles, scenes and the companion page refer to it)
-#   url     what the code encodes: direct, unless check_refs says it's too dense to scan at its size
+#   url     the page itself (what the companion site lists)
 #   caption the short painted label under the code (1–5 words)
 #   origin  transcript  the link is in the conversation: the voice says its title while the code is up
 #           attachment  the source of an image Curt attached: code only, never voiced
@@ -13,8 +13,10 @@
 #           once, a link board; >= 6 s) | card (on a card the scene shows about the same thing, cardCode(); >= 5 s) | page (no code in the film: listed on the companion site, and on the explainer
 #           that stands for it, e.g. ch 6's thread, where the film shows one code for the-debate)
 #   style   QR dressing, see VIDEO_PLAN.md §4 (implemented in src/qr.js)
-#   qr_url  what the code encodes when it differs from url: a shorter form of the same page, or one of the companion
-#           site's short links (base + r/NAME/, script/site.yaml), a page that forwards to url; build_site writes it
+#   qr_url  a shorter form of the same page (youtu.be, doi.org). What a code encodes is the shortest of url, qr_url and
+#           the site's own address for it, base + r/NAME/ (a page forwarding to url): script_lib.mjs withQrTargets
+#   host    the path of the companion site's own copy of the page (e.g. conversation/): its code points there
+#   short   the NAME in the site's address for a page it forwards to (base + r/NAME/); the id when not given
 #   also    other transcript URLs this code stands for (the same page linked twice)
 #   ecc     error-correction level, when the mode's default (feature H, shelf M) doesn't scan reliably for this URL
 #   verified how a bot-walled page was confirmed by hand (the checker can't fetch it)
@@ -22,7 +24,7 @@
 
 # ---- 0 Cold open -------------------------------------------------------------------------------------------------
 - { id: mad157, url: "https://www.madcoversite.com/mad157.html", caption: "MAD #157: Conquering The Planet That Went Ape", origin: attachment, at: T01.U.00, mode: feature, style: mad, note: "March 1973; written by Arnie Kogen, art by Mort Drucker (confirmed on the cover site)" }
-- { id: the-conversation, url: "https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296", caption: "The conversation this film is made from", origin: added, at: T01.U.00, mode: page, style: plain, verified: "Curt's own share link, given by him 2026-09-27" }
+- { id: the-conversation, url: "https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296", host: conversation/, caption: "The conversation this film is made from", origin: added, at: T01.U.00, mode: page, style: plain, verified: "Curt's own share link, given by him 2026-09-27" }
 - { id: conquest-apes, url: "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes", caption: "Conquest of the Planet of the Apes", origin: added, ch: 1, at: "Conquest of the Planet of the Apes", mode: shelf, style: newsprint }
 
 # ---- 1 The Wrong Movie -------------------------------------------------------------------------------------------

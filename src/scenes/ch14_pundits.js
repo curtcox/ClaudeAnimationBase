@@ -463,16 +463,26 @@
     const merge = say('T72.C.03', 'the choice is false', -.3), signs = say('T72.C.03', 'misaligned goals', -.4);
     if (t < merge) { corridor(t, [0, .2 * seg(t, say('T72.C.03', '(b)', -.3), say('T72.C.03', '(b)', .6)), 0, 0, 0, 0, 0, 0, .7], { lit: [0, 1, 0, 0, 0, 0, 0, 0, .5] }); return; }
     paperWorld(t); boilSeed('merge fields'); paint(rectPts(-40, 520, W + 80, 600), { wash: '#A9B88A', fill: '#8FA070', fillOp: 70, tex: .6, ink: null });
-    const k = seg(t, merge, merge + 2); occupy(100, 150, 1200, 1000, 1, 'roads');
-    for (const d of [-1, 1]) { boilSeed('road ' + d); paint([[645 + d * 560, 1090], [645 + d * 340, 1090], [645 + d * 40 * (1 - k) + d * 30, 700], [645 + d * 40 * (1 - k) + d * 90, 700]], { wash: '#8C8478', ink: PAL.ink, sw: .8 }); }
-    boilSeed('one road'); paint([[585, 710], [705, 710], [665, 460], [625, 460]], { wash: '#8C8478', ink: PAL.ink, sw: .8 });
+    // a fork in the road, run backwards (Curt, ch 14 review: the first drawing read as a tower): two roads from the near
+    // corners slide together into one, which narrows to the horizon; dashed centre lines and a row of trees say "road"
+    const k = seg(t, merge, merge + 2), gap = 70 * (1 - ease(k)), HZ = 522; occupy(0, 300, 1290, 1000, 1, 'roads');
+    for (let i = 0; i < 9; i++) { boilSeed('horizon tree ' + i); const x = 60 + i * 140 + hash(i) * 40; if (Math.abs(x - 645) < 70) continue; paint(ellPts(x, HZ - 22, 26, 30, 12), { wash: '#6E8A58', ink: PAL.ink, sw: .6 }); }
+    const road = { wash: '#8C8478', ink: PAL.ink, sw: .8 }, dash = (a, b, n) => { for (let i = 0; i < n; i++) { const p0 = (i + .2) / n, p1 = (i + .65) / n; inkLine([[lerp(a[0], b[0], p0), lerp(a[1], b[1], p0)], [lerp(a[0], b[0], p1), lerp(a[1], b[1], p1)]], 3.5 * (1 - .6 * p0), '#F2D23A', 'ink', 0); } };
+    boilSeed('one road'); paint([[555, 702], [735, 702], [650, HZ], [640, HZ]], road); dash([645, 700], [645, HZ + 4], 5);
+    for (const d of [-1, 1]) {
+      const top0 = 645 + d * gap, top1 = 645 + d * (90 + gap), bot0 = 645 + d * 265, bot1 = 645 + d * 625;
+      boilSeed('road ' + d); paint([[bot0, 1090], [bot1, 1090], [top1, 700], [top0, 700]], road);
+      dash([(bot0 + bot1) / 2, 1090], [(top0 + top1) / 2, 704], 5);
+    }
     // where the two roads lead: a sign at each near end, harm now and risk later (Curt, ch 14 review: the picture didn't say)
     const ends = seg(t, merge + .6, merge + 1.4);
-    if (ends > 0) [['harm now', 290], ['risk later', 1000]].forEach(([s, x], j) => { boilSeed('road sign ' + j); inkLine([[x, 790], [x, 930]], 6, '#6B4A32', 'ink', 0); paint(rrPts(x - 130, 740, 260, 76, 8), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); lab(s, x, 780, 38, CHAR, { alpha: ends }); });
+    if (ends > 0) [['harm now', 250], ['risk later', 1040]].forEach(([s, x], j) => { boilSeed('road sign ' + j); inkLine([[x, 790], [x, 930]], 6, '#6B4A32', 'ink', 0); paint(rrPts(x - 130, 740, 260, 76, 8), { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); lab(s, x, 780, 38, CHAR, { alpha: ends }); });
     // and where they come from: one road, and one post by it carrying all three failures, the same for both
     if (t > signs) { boilSeed('failure post'); inkLine([[860, 330], [860, 700]], 7, '#6B4A32', 'ink', 0); }
     ['misaligned goals', 'weak oversight', 'racing incentives'].forEach((s, i) => { const a = seg(t, signs + i * .8, signs + i * .8 + .5); if (a <= 0) return; boilSeed('sign ' + i); const x = 860, y = 370 + i * 90; paint([[x - 170, y], [x - 130, y - 38], [x + 170, y - 38], [x + 170, y + 38], [x - 130, y + 38]], { wash: '#FBF6E6', ink: PAL.ink, sw: 1 }); lab(s, x + 12, y + 2, 34, CHAR, { alpha: a }); });
-    if (t > DUR - .6) { flushLetters(); brushWipe((t - (DUR - .6)) / 1.2); }
+    // the closing wipe starts as the voice stops, so the last silent moment isn't a still (it reaches halfway at the end, as before)
+    const w0 = Math.min(DUR - .6, c3.end);
+    if (t > w0) { flushLetters(); brushWipe(.5 * (t - w0) / (DUR - w0)); }
   }
 
   shots([

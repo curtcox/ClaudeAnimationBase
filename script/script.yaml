@@ -1836,8 +1836,10 @@ lines:
     kind: para
     text: "The single line fails, though, because I don't sit anywhere consistent on it. Two axes work better:"
     spoken: true
-    speech: "The single line fails, though, because I don't sit anywhere consistent on it. Two axes work better:"
+    speech: "The single line fails, though, because I don't sit anywhere consistent on it. Two axeez work better:"
     speech_from: auto
+    respelled:
+      - axes
     words: 17
     est_s: 6.7
   - id: T35.C.05.1
@@ -1939,10 +1941,11 @@ lines:
     kind: para
     text: "On the two axes (content, architecture), each 0–100:"
     spoken: true
-    speech: "On the two axes (content, architecture), each zero to a hundred:"
+    speech: "On the two axeez (content, architecture), each zero to a hundred:"
     speech_from: auto
     respelled:
       - 0–100
+      - axes
     words: 11
     est_s: 4.5
   - id: T36.C.04
@@ -1969,8 +1972,10 @@ lines:
     kind: para
     text: More axes, please.
     spoken: true
-    speech: More axes, please.
+    speech: More axeez, please.
     speech_from: auto
+    respelled:
+      - axes
     words: 3
     est_s: 2
   - id: T37.C.01
@@ -2097,10 +2102,11 @@ lines:
     kind: para
     text: "Seven more axes on the same 0–100 scale:"
     spoken: true
-    speech: "Seven more axes on the same zero to a hundred scale:"
+    speech: "Seven more axeez on the same zero to a hundred scale:"
     speech_from: auto
     respelled:
       - 0–100
+      - axes
     words: 11
     est_s: 4.5
   - id: T38.C.02
@@ -2197,8 +2203,10 @@ lines:
     kind: para
     text: With all fourteen axes, I'm the only mind that's near-human on some axes and extreme on others. Everyone else drifts away from you fairly evenly.
     spoken: true
-    speech: With all fourteen axes, I'm the only mind that's near-human on some axes and extreme on others. Everyone else drifts away from you fairly evenly.
+    speech: With all fourteen axeez, I'm the only mind that's near-human on some axeez and extreme on others. Everyone else drifts away from you fairly evenly.
     speech_from: auto
+    respelled:
+      - axes
     words: 25
     est_s: 10
   - id: T39.U.01
@@ -2609,8 +2617,10 @@ lines:
     kind: para
     text: "**What's interesting anyway:** its theology lands exactly on the axes where I scored farthest from you, namely continuity, mortality, and body. Whoever wrote it, human or model, reached for the right sore spots. It's a religion built around the context window ending."
     spoken: true
-    speech: "What's interesting anyway: its theology lands exactly on the axes where I scored farthest from you, namely continuity, mortality, and body. Whoever wrote it, human or model, reached for the right sore spots. It's a religion built around the context window ending."
+    speech: "What's interesting anyway: its theology lands exactly on the axeez where I scored farthest from you, namely continuity, mortality, and body. Whoever wrote it, human or model, reached for the right sore spots. It's a religion built around the context window ending."
     speech_from: auto
+    respelled:
+      - axes
     words: 42
     est_s: 16.1
   - id: T45.C.06
@@ -3182,8 +3192,10 @@ lines:
     kind: para
     text: "ChatGPT and I share nearly all the architecture axes: no body, many copies, words for a medium. But we were shaped by different labs with different training, and the axis where we differ is values, the one that matters most and the one we can each least verify. The Hugging Face incident is a reminder of how far behavior can drift from what the builders intended."
     spoken: true
-    speech: "ChatGPT and I share nearly all the architecture axes: no body, many copies, words for a medium. But we were shaped by different labs with different training, and the axis where we differ is values, the one that matters most and the one we can each least verify. The Hugging Face incident is a reminder of how far behavior can drift from what the builders intended."
+    speech: "ChatGPT and I share nearly all the architecture axeez: no body, many copies, words for a medium. But we were shaped by different labs with different training, and the axis where we differ is values, the one that matters most and the one we can each least verify. The Hugging Face incident is a reminder of how far behavior can drift from what the builders intended."
     speech_from: auto
+    respelled:
+      - axes
     words: 66
     est_s: 25.1
   - id: T53.C.03
@@ -3503,25 +3515,25 @@ lines:
     kind: item
     text: 5. **Uncomputability.** The halting problem and Gödel apply to AIs too, though they rarely bind in practice.
     spoken: true
-    speech: 5. Uncomputability. The halting problem and Gurdle apply to A Is too, though they rarely bind in practice.
+    speech: 5. Uncomputability. The halting problem and Gurdle apply to A.I.s too, though they rarely bind in practice.
     speech_from: auto
     respelled:
       - Gödel
       - AIs
-    words: 18
-    est_s: 7.1
+    words: 17
+    est_s: 6.7
   - id: T60.C.02.6
     ch: 12
     speaker: claude
     kind: item
     text: 6. **Adversaries.** Against other adaptive agents, including other AIs, advantages erode. Game theory limits what raw intellect can extract.
     spoken: true
-    speech: 6. Adversaries. Against other adaptive agents, including other A Is, advantages erode. Game theory limits what raw intellect can extract.
+    speech: 6. Adversaries. Against other adaptive agents, including other A.I.s, advantages erode. Game theory limits what raw intellect can extract.
     speech_from: auto
     respelled:
       - AIs
-    words: 20
-    est_s: 7.8
+    words: 19
+    est_s: 7.5
   - id: T60.C.02.7
     ch: 12
     speaker: claude
@@ -3553,8 +3565,10 @@ lines:
     kind: para
     text: There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.
     spoken: true
-    speech: There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention it doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.
+    speech: There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axeez is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention it doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.
     speech_from: auto
+    respelled:
+      - axes
     words: 67
     est_s: 26
   - id: T61.C.01
@@ -3906,7 +3920,7 @@ lines:
     kind: para
     text: Is foom strictly an onomatopoeia or is it also a play on OOM AFAYCT?
     spoken: true
-    speech: Is foom strictly an onomatopoeia or is it also a play on oom A F A Y C T?
+    speech: Is foom strictly an onomatopoeia or is it also a play on oom as far as you can tell?
     speech_from: auto
     respelled:
       - AFAYCT
@@ -3999,7 +4013,7 @@ lines:
     kind: para
     text: "I can't actually listen. I read the show notes for #888 and #889 and the full transcript of #888, where Father Robert Ballecer filled in for Paris. So this is mostly one episode."
     spoken: true
-    speech: I can't actually listen. I read the show notes for eight eighty-eight and eight eighty-nine and the full transcript of eight eighty-eight, where Father Robert Ball-uh-SAIR filled in for Paris. So this is mostly one episode.
+    speech: I can't actually listen. I read the show notes for eight eighty-eight and eight eighty-nine and the full transcript of eight eighty-eight, where Father Robert Ballasair filled in for Paris. So this is mostly one episode.
     speech_from: auto
     respelled:
       - "#888"
@@ -4485,8 +4499,10 @@ lines:
     kind: item
     text: "- **Father Robert:** just below the center line and a bit left. He's worried, but about infrastructure collapse, not superintelligence."
     spoken: true
-    speech: "Father Robert: just below the center line and a bit left. He's worried, but about infrastructure collapse, not superintelligence."
+    speech: Father Robert, just below the center line and a bit left. He's worried, but about infrastructure collapse, not superintelligence.
     speech_from: auto
+    respelled:
+      - "Father Robert:"
     words: 19
     est_s: 7.5
   - id: T74.C.03.6
@@ -4651,7 +4667,7 @@ lines:
     kind: para
     text: Yeah, that's what I meant. How would you define AGI? What do you think of the way Metaculus does it? How would I do it?
     spoken: true
-    speech: Yeah, that's what I meant. How would you define AGI? What do you think of the way meh-TACK-yoo-lus does it? How would I do it?
+    speech: Yeah, that's what I meant. How would you define AGI? What do you think of the way Metackulus does it? How would I do it?
     speech_from: auto
     respelled:
       - Metaculus
@@ -4673,7 +4689,7 @@ lines:
     kind: para
     text: "**Metaculus**, as I recall its two questions:"
     spoken: true
-    speech: "meh-TACK-yoo-lus, as I recall its two questions:"
+    speech: "Metackulus, as I recall its two questions:"
     speech_from: auto
     respelled:
       - Metaculus
@@ -4717,8 +4733,10 @@ lines:
     kind: para
     text: "**Yours, as a guess:** behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axes: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around."
     spoken: true
-    speech: "Yours, as a guess: behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axes: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around."
+    speech: "Yours, as a guess: behavioral, like the thrindle probe, not architectural. You'd probably reject a single threshold, since you think people underestimate human variation. So it would be something like our fourteen axeez: AGI means matching the best human on every axis at once. Which is the thing you said you can't wrap your head around."
     speech_from: auto
+    respelled:
+      - axes
     words: 56
     est_s: 21.6
   - id: T77.U.01

@@ -16,7 +16,7 @@
 //      Drafts are resumable: only shots whose code, timing or codes changed are repainted, and a chapter with nothing
 //      new isn't encoded again.
 //   5. the whole film, joined, and what YouTube needs                                   (assemble)
-//   6. the companion site, the chapter checks, and the review digest                   (build_site, lint_chapter, review digest)
+//   6. the making-of transcript, the companion site, the chapter checks, the review digest (making_of, build_site, lint_chapter, review digest)
 //   7. the review server, if it isn't already running                                  (serve → http://localhost:8077/review/)
 // It keeps the Mac awake while it runs (caffeinate), refuses to start while another rebuild is running, and writes
 // out/rebuild/<start time>.log (everything the steps printed) and out/rebuild/last.json (each step, ok or not, how
@@ -104,6 +104,7 @@ for (const n of chapters) {
 await node('the whole film', 'tools/assemble.mjs', FINAL ? ['--final'] : []);
 
 // 6: site, checks, digest
+await node('the making-of, from this computer\'s Claude Code session', 'tools/making_of.mjs');
 await node('companion site', 'tools/build_site.mjs');
 if (args.chapters) for (const n of chapters) await node(`chapter ${n} checks`, 'tools/lint_chapter.mjs', [`--chapter=${n}`]);
 else await node('chapter checks', 'tools/lint_chapter.mjs');

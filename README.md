@@ -21,6 +21,8 @@ You need Node.js 20 or newer, Google Chrome and ffmpeg; `npm start` says how to 
 |---|---|
 | [VIDEO_PLAN.md](VIDEO_PLAN.md) | The film: what's settled, and why |
 | [docs/storyboards/](docs/storyboards/) | A storyboard per chapter |
+| [script/conversation.md](script/conversation.md) | The conversation the film shows, word for word ([formatted, on the site](https://curtcox.github.io/axol-f/conversation/)) |
+| [making-of/](making-of/README.md) | The conversation that made the film: Curt asking Claude for it, and everything Claude did ([on the site](https://curtcox.github.io/axol-f/making-of/)) |
 | [script/](script/) | The conversation, split into lines and checked word for word; the voices, the references and their codes |
 | [src/scenes/](src/scenes/) | A scene file per chapter |
 | [src/look.js](src/look.js) | Every swappable look: how Curt and Claude appear, the home set, the code styles |

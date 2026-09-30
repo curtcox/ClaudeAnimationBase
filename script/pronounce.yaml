@@ -32,7 +32,7 @@
 - { match: "Kokotajlo", say: "Koh-koh-TIE-lo", verify: true }
 - { match: "Aschenbrenner", say: "ASH-en-brenner" }
 - { match: "Agüera y Arcas", say: "ah-GWAIR-ah ee AR-kas", verify: true }
-- { match: "Ballecer", say: "Ball-uh-SAIR", verify: true }
+- { match: "Ballecer", say: "Ballasair" }   # as Leo says it: "Ballas Air" run into one word (Curt, 2026-09-29)
 - { match: "Michaël Trazzi", say: "Mee-ka-EL TRAHT-see", verify: true }
 - { match: "Leahy", say: "LAY-hee" }
 - { match: "Gödel", say: "Gurdle" }   # not "GUR-dl": capitals got spelled out, "G U R dl"
@@ -43,12 +43,14 @@
 - { match: "Margolus–Levitin", say: "mar-GO-lus LEV-ih-tin" }
 - { match: "Bekenstein", say: "BECK-en-stine" }
 - { match: "Landauer", say: "LAN-dow-er" }
-- { match: "Metaculus", say: "meh-TACK-yoo-lus" }
+- { match: "Metaculus", say: "Metackulus" }   # one word, the meter of "miraculous"; the hyphens made separate words (Curt)
 - { match: "Dwarkesh", say: "DWAR-kesh" }
 - { match: "philotically", say: "fih-LOT-ik-lee" }
 - { match: "Rachni", say: "RACK-nee" }
 - { match: "Tines", say: "Tynes" }
 - { match: "Formic", say: "FOR-mik" }
+- { match: "Father Robert:", say: "Father Robert," }   # the colon made the voice skip the name (ch 15 1:40)
+- { match: "axes", say: "axeez" }   # the plural of axis, not of axe (Curt, ch 7 review)
 - { match: "Hieropedia", say: "high-ero-PEE-dee-ah", verify: true }
 
 # --- link titles (a link is voiced as its title while its QR code is up) ---------------------------
@@ -61,7 +63,7 @@
 # --- acronyms said as letters or as words -----------------------------------------------------------
 - { match: "TESCREAL", say: "Tess Kree-el" }   # the one of seven tried that both voices said alike, every take
 - { match: "GAZP vs. GLUT", say: "GAZP versus GLUT" }
-- { match: "AFAYCT", say: "A F A Y C T" }
+- { match: "AFAYCT", say: "as far as you can tell" }   # how it's said (Curt, ch 13 review)
 - { match: "EOY", say: "E O Y" }
 - { match: "RLHF", say: "R L H F" }
 - { match: "OOMs", say: "ooms", verify: true }  # Aschenbrenner says "ooms"; letters would be "O O Ms"
@@ -69,7 +71,7 @@
 - { match: "LLMs", say: "L L Ms" }
 - { match: "LLM's", say: "L L M's" }
 - { match: "LLM", say: "L L M" }
-- { match: "AIs", say: "A Is" }
+- { match: "AIs", say: "A.I.s" }   # "A Is" came out as "A is" (Curt, ch 12 review)
 - { match: "i) Other", say: "Eye. Other" }   # the list's ninth option: the letter i, not the numeral "one" (Curt, ch 14 review)
 - { match: "NPR", say: "N P R" }
 - { match: "SAT", say: "S A T" }

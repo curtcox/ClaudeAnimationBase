@@ -8,24 +8,24 @@ by at least one decoder, and at least two decoders each read 13 or more of the 1
 each has blind spots: ZXing-js fails some perfect, computer-generated codes outright, and jsQR misses sporadically at
 particular scales.
 
-**339 of 339 pass.** (339 unchanged since their last check, so their results are reused.)
+**343 of 343 pass.** (232 unchanged since their last check, so their results are reused.)
 
 | code | style | mode | trials read | jsQR | ZXing | ZBar | youtube (jsQR ZXing ZBar) | phone | pixel 1:1 (info) |
 |---|---|---|---|---|---|---|---|---|---|
 | mad157 | mad → foldin | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| conquest-apes | newsprint | shelf | 15/15 | 15 | 15 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| conquest-apes | newsprint | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | stochastic-parrots | feathers *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| rlhf | plain | shelf | 15/15 | 14 | 11 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| rlhf | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | mirror-test | mirror *(Still QR)* | shelf | 15/15 | 14 | 5 | 15 | ✓ ✗ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
 | mad-magazine | foldin | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | mort-drucker | newsprint | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | fourth-wall | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | watts-riots | newsprint | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | philosophy-of-mind | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| llm | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| llm | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | multimodal | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | algorithmic-bias | plain | shelf | 15/15 | 14 | 6 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| emotion-concepts | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| emotion-concepts | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | ai-control | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | ai-welfare | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | anthropic-wiki | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
@@ -33,28 +33,28 @@ particular scales.
 | constitution | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | assistant-axis | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | moral-status | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| model-welfare | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| model-welfare | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | blade-runner-vk | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| frog-chart | lilypad | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| frog-chart | lilypad | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | axolotl | gills *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | eval-awareness | lilypad | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | claude-opus-5-5 | plain | shelf | 15/15 | 13 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | claude-app | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| hawthorne | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| hawthorne | plain | shelf | 15/15 | 14 | 12 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | chart-author | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | repugnant-conclusion | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | effective-altruism | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| introspection | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| tracing-thoughts | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| introspection | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| tracing-thoughts | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | gpt-5-6 | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | gpt-5-6-luna | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | claude-code | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| sampling | plain | shelf | 15/15 | 14 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| sampling | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | 256t | hashchain *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | hashbin | hashchain *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | content-addressable | hashchain *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | claude-memory | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| base-rate | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| base-rate | plain | shelf | 15/15 | 14 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | personal-identity | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | other-minds | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | turing-test | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
@@ -64,7 +64,7 @@ particular scales.
 | aufbau | electron-shells *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | protest-too-much | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | agentic-misalignment | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| apollo-eval-awareness | lilypad | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| apollo-eval-awareness | lilypad | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | demand-characteristics | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | eliza | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | reflective-listening | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -73,7 +73,7 @@ particular scales.
 | social-constructionism | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | campbell | pulp *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | life-3 | signpost *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| the-stranger | mask *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| the-stranger | mask *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | shoggoth | tentacles *(Still QR)* | feature | 15/15 | 15 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | song-of-myself | grass *(Still QR)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | genetic-fallacy | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -83,38 +83,38 @@ particular scales.
 | revealed-preference | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | corrigibility | plain | shelf | 15/15 | 14 | 6 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | open-society | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| context-window | plain | shelf | 15/15 | 14 | 15 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| context-window | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | billy-joel | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| simulators | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| interpreter | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| simulators | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| interpreter | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | society-of-mind | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | code-talkers | field-radio *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| symbol-grounding | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| symbol-grounding | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | chinese-room | rulebook *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| blockhead | filing-drawers *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| blockhead | filing-drawers *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | monosemanticity | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| gazp-glut | filing-drawers *(Still QR)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| gazp-glut | filing-drawers *(Still QR)* | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | debate-llm-segment | tv *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | doom-debates | tv *(Still QR)* | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| ontology | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| ontology | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | cyc | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | concepts-sep | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| rivalry | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
-| non-sequitur | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| rivalry | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| non-sequitur | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | network-effect | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| lighthouse-economics | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| lighthouse-economics | plain | shelf | 15/15 | 14 | 11 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | cliche | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | intrinsic-extrinsic | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| harnad | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| harnad | plain | shelf | 15/15 | 13 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | searle | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | ned-block | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | prime-number | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| yudkowsky | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| yudkowsky | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | rationality-az | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | p-zombie | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| computer-use | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| computer-use | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | turing | enigma *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| monroe | beauty-mark *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| monroe | beauty-mark *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | data | gold-android *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | hal | red-lens | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | tines | paw-prints *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -123,12 +123,12 @@ particular scales.
 | borg-queen | cube-lattice *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | rachni | song-waves *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | xenomorph-queen | egg *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| mind-design-space | plain | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| mind-design-space | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | conscious-exotica | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | stanislaw-lem | ocean *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | vernor-vinge | paw-prints *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| space-odyssey | red-lens | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| mds | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| space-odyssey | red-lens | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| mds | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | radar-chart | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | orson-scott-card | honeycomb *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
 | enders-game | honeycomb *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
@@ -147,19 +147,19 @@ particular scales.
 | knowledge-argument | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | conduit-metaphor | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | theory-of-mind | plain | shelf | 15/15 | 14 | 6 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| simulation-theory | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| cogito | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| simulation-theory | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| cogito | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | hieropedia-crustafarianism | lobster-shell *(Still QR)* | feature | 15/15 | 15 | 14 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | forbes-crustafarianism | lobster-shell *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | moltbook | lobster-shell *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| hermes-memory | winged-sandal *(Still QR)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| hermes-memory | winged-sandal *(Still QR)* | feature | 15/15 | 15 | 15 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | hermes-agent | winged-sandal *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | openclaw | claw *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | dyson | circuit *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| t800 | chrome-red-eye *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| t800 | chrome-red-eye *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | moltbook-wiki | lobster-shell *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | moltbook-illusion | lobster-shell *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| building-agents | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| building-agents | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | nous-research | winged-sandal *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | openclaw-wiki | claw *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | hermes-skills | winged-sandal *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -167,16 +167,16 @@ particular scales.
 | skynet | circuit *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | constitutional-classifiers | switchboard *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | usage-policy | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| switch-models | plain | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| switch-models | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | fable-mythos-5-1 | switchboard *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| rsp | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| system-prompts | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| testimony | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
-| hf-incident | sandbox | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| rsp | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| system-prompts | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| testimony | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| hf-incident | sandbox | feature | 15/15 | 14 | 15 | 14 | ✓ ✓ ✗ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | 80k-hf | sandbox | shelf | 15/15 | 12 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| darkreading-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| darkreading-hf | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | wiki-hugging-face | sandbox | shelf | 15/15 | 12 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| un-brief-hf | sandbox | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| un-brief-hf | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | knowledge-cutoff | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | sandbox-security | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | reward-hacking | sandbox | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -184,19 +184,21 @@ particular scales.
 | zero-day | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | z-ai | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | open-weights | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| dual-use | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| un-ai-panel | plain | shelf | 15/15 | 14 | 5 | 15 | ✓ ✗ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
+| dual-use | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| un-ai-panel | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | openai-wiki | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | chatgpt | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | stylometry | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| openai-hf-statement | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| openai-hf-road-ahead | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| openai-hf-statement | sandbox | shelf | 15/15 | 12 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| openai-hf-road-ahead | sandbox | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| swarmtraces | sandbox | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| omg-other-agents | sandbox | shelf | 15/15 | 10 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | solidgoldmagikarp | gold-scales *(Still QR)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | car-wash | car-wash *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | thinking-fast-slow | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| landauer | thermometer *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| landauer | thermometer *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | lyapunov | butterfly *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| p-vs-np | maze *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| p-vs-np | maze *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | scaling-laws | staircase *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | halting-problem | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | margolus-levitin | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -204,15 +206,15 @@ particular scales.
 | von-neumann | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | tokenizers | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | magikarp | gold-scales *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| bpe | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| bpe | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | glitch-token | gold-scales *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| crt | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| dual-process | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| reasoning-models | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| cot-faithfulness | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| crt | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| dual-process | plain | shelf | 15/15 | 14 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| reasoning-models | plain | shelf | 15/15 | 14 | 6 | 15 | ✓ ✗ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
+| cot-faithfulness | plain | shelf | 15/15 | 14 | 10 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | chaos-theory | butterfly *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | machines-loving-grace | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| godel | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| godel | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | game-theory | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | limits-of-computation | thermometer *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | typical-mind | plain | shelf | 15/15 | 14 | 6 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -221,19 +223,19 @@ particular scales.
 | sleep-memory | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | arxiv-aide2 | blueprint *(Still QR)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | arxiv-bounded | blueprint *(Still QR)* | shelf | 15/15 | 14 | 10 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| mittr-rsi | blueprint *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| mittr-rsi | blueprint *(Still QR)* | shelf | 15/15 | 15 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | datacamp-rsi | blueprint *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | foom-debate | flame *(Still QR)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | situational-awareness | oom-bars *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | dwarkesh-leopold | mic *(Still QR)* | shelf | 15/15 | 15 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| rsi-wiki | blueprint *(Still QR)* | shelf | 15/15 | 15 | 3 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| anthropic-rsi | blueprint *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| coxon-resigns | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| rsi-wiki | blueprint *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| anthropic-rsi | blueprint *(Still QR)* | shelf | 15/15 | 15 | 10 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
+| coxon-resigns | plain | shelf | 15/15 | 14 | 11 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
 | intelligence-explosion | flame *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| fabs | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| fabs | plain | shelf | 15/15 | 13 | 14 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
 | takeoff-speeds | flame *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | bayesian-updating | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| prior | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| prior | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | robin-hanson | plain | shelf | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | backronym | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | order-of-magnitude | oom-bars *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -241,10 +243,10 @@ particular scales.
 | aschenbrenner | oom-bars *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | out-of-memory | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | intelligent-machines | mic *(Still QR)* | feature | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
-| im-888 | mic *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| im-889 | mic *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| im-888 | mic *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| im-889 | mic *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | tescreal | boxing-ring *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| roose-sydney | two-mics *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| roose-sydney | two-mics *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | machine-gods-promo | two-mics *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | pascals-mugging | door *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | orthogonality | door *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -260,21 +262,22 @@ particular scales.
 | anthropomorphism | plain | shelf | 15/15 | 14 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | kevin-roose | two-mics *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | casey-newton | two-mics *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| sydney | two-mics *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| sydney | two-mics *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | platformer | two-mics *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| ai-x-risk | door *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| ai-x-risk | door *(Still QR)* | shelf | 15/15 | 15 | 11 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | superintelligence | door *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | global-catastrophic-risk | door *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| withpod-mailbag | mic *(Still QR)* | shelf | 15/15 | 15 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | connor2 | compass *(Still QR)* | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | ai-futures-wiki | calendar *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| apolo-ai2027 | calendar *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| apolo-ai2027 | calendar *(Still QR)* | shelf | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | officechai-kokotajlo | calendar *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| metaculus-weak | dial *(Still QR)* | card | 15/15 | 15 | 11 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| metaculus-strong | dial *(Still QR)* | card | 15/15 | 15 | 14 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| metaculus-weak | dial *(Still QR)* | card | 15/15 | 15 | 13 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
+| metaculus-strong | dial *(Still QR)* | card | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | alphafold | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | goodhart | plain | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | openai-charter | goalposts *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
-| dnd-alignment | compass *(Still QR)* | card | 15/15 | 15 | 13 | 15 | ✓ ✓ ✓ | ✓ ✗ ✓ | ✓ ✓ ✓ |
+| dnd-alignment | compass *(Still QR)* | card | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | connor-leahy | compass *(Still QR)* | shelf | 15/15 | 15 | 2 | 15 | ✓ ✗ ✓ | ✓ ✗ ✓ | ✓ ✗ ✓ |
 | inside-view | compass *(Still QR)* | shelf | 15/15 | 15 | 12 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | accelerationism | compass *(Still QR)* | shelf | 15/15 | 15 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
@@ -287,6 +290,7 @@ particular scales.
 | ai-winter | plain | shelf | 15/15 | 13 | 8 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | ai-effect | goalposts *(Still QR)* | shelf | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | xkcd-356 | xkcd | feature | 15/15 | 13 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✗ ✓ ✓ |
+| pdoom-video | plain | shelf | 15/15 | 13 | 7 | 15 | ✓ ✗ ✓ | ✓ ✓ ✓ | ✓ ✗ ✓ |
 | companion | note | feature | 15/15 | 14 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✗ ✓ ✓ |
 | note-agent-harnesses | note | shelf | 15/15 | 8 | 15 | 15 | ✗ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |
 | note-agi-definitions | note | shelf | 15/15 | 11 | 15 | 15 | ✓ ✓ ✓ | ✓ ✓ ✓ | ✓ ✓ ✓ |

@@ -8,25 +8,24 @@ one, run `npm run serve` and open http://localhost:8077/names/.
 A name is fixed with a respelling in `script/pronounce.yaml` (the voice only; the screen keeps the real spelling),
 then `node tools/voice.mjs` re-voices just the lines that changed.
 
-180 names, 315 times said. 14 heard differently at least once.
+180 names, 315 times said. 13 heard differently at least once.
 
 ## Heard differently
 
 | name | sent to the voice as | times | heard as | where (chapter time) |
 |---|---|---|---|---|
-| Agüera y Arcas | ah-GWAIR-ah ee AR-kas | 1 | Guerra Iarcas | ch 15 6:14 |
+| Agüera y Arcas | ah-GWAIR-ah ee AR-kas | 1 | Guerra Iarcas | ch 15 6:12 |
 | AIDE |  | 1 | Aid | ch 13 1:05 |
-| Aschenbrenner's | ASH-en-brenner's | 1 | Ash and Brenner's | ch 13 5:10 |
-| Father Robert |  | 2 | Father Robert; (not heard) | ch 15 1:40 |
-| Father Robert Ballecer | Father Robert Ball-uh-SAIR | 1 | Father Robert Ball | ch 14 0:23 |
+| Aschenbrenner's | ASH-en-brenner's | 1 | Ash and Brenner's | ch 13 5:08 |
 | GAZP |  | 2 | gasp; GASB | ch 6 5:51, ch 14 2:26 |
-| Gubrud | GOO-brud | 1 | (not heard) | ch 15 5:59 |
-| Kokotajlo | Koh-koh-TIE-lo | 2 | Coco Tai Lo; Coco Tylo | ch 15 2:14, ch 15 2:25 |
-| Leahy | LAY-hee | 1 | Lehi | ch 15 1:56 |
+| Gubrud | GOO-brud | 1 | (not heard) | ch 15 5:57 |
+| Kokotajlo | Koh-koh-TIE-lo | 2 | Coco Tai Lo; Coco Tylo | ch 15 2:14, ch 15 2:26 |
+| Leahy | LAY-hee | 1 | Lehi | ch 15 1:57 |
 | Michaël Trazzi's | Mee-ka-EL TRAHT-see's | 1 | Mikael Tratsy's | ch 15 0:44 |
 | Moltbook |  | 3 | Moltbook ×2; Maltbook | ch 9 0:35 |
-| OOM | oom | 4 | oom; OOM ×2; Foom | ch 13 5:26 |
-| Shoggath |  | 1 | shoggoth | ch 11 3:36 |
+| OOM | oom | 4 | oom; OOM ×2; Foom | ch 13 5:24 |
+| OOM AFAYCT | oom as far as you can tell | 1 | oom as far | ch 13 4:12 |
+| Shoggath |  | 1 | shoggoth | ch 11 3:39 |
 | TESCREAL | Tess Kree-el | 4 | Tess Creel ×3; Tess Kriel | ch 14 1:03, ch 14 1:59, ch 14 2:38 |
 
 ## Heard as written
@@ -39,7 +38,7 @@ then `node tools/voice.mjs` re-voices just the lines that changed.
 | AI Futures Project |  | 1 | AI Futures Project |  |
 | AI-Foom |  | 1 | AI foom |  |
 | AI-safety |  | 1 | AI safety |  |
-| AIs | A Is | 2 | AIs ×2 |  |
+| AIs | A.I.s | 2 | AIs ×2 |  |
 | Alan Turing |  | 1 | Alan Turing |  |
 | AlphaFold |  | 1 | AlphaFold |  |
 | Anthropic |  | 8 | Anthropic ×8 |  |
@@ -88,6 +87,8 @@ then `node tools/voice.mjs` re-voices just the lines that changed.
 | EOY | E O Y | 1 | EOY |  |
 | Fable |  | 1 | fable |  |
 | Fast Onset of Overwhelming Mastery |  | 1 | fast onset of overwhelming mastery |  |
+| Father Robert |  | 2 | Father Robert ×2 |  |
+| Father Robert Ballecer | Father Robert Ballasair | 1 | Father Robert Ballecer |  |
 | Flask |  | 1 | Flask |  |
 | Foom Debate |  | 1 | FOOM debate |  |
 | Formic | FOR-mik | 1 | formic |  |
@@ -132,7 +133,7 @@ then `node tools/voice.mjs` re-voices just the lines that changed.
 | Margolus–Levitin | mar-GO-lus LEV-ih-tin | 1 | Margolus-Levitin |  |
 | Marilyn Monroe |  | 1 | Marilyn Monroe |  |
 | Max Tegmark |  | 1 | Max Tegmark |  |
-| Metaculus | meh-TACK-yoo-lus | 2 | Metaculus ×2 |  |
+| Metaculus | Metackulus | 2 | Metaculus ×2 |  |
 | Miles |  | 3 | Miles ×3 |  |
 | Miles Bennett Dyson |  | 1 | Miles Bennett Dyson |  |
 | MIT Technology Review |  | 1 | MIT Technology Review |  |
@@ -146,7 +147,6 @@ then `node tools/voice.mjs` re-voices just the lines that changed.
 | Norvig |  | 1 | Norvig |  |
 | NPR | N P R | 1 | NPR |  |
 | Ontology Explained |  | 1 | Ontology Explained |  |
-| OOM AFAYCT | oom A F A Y C T | 1 | oom, A-F-A-Y-C-T |  |
 | OOMs | ooms | 1 | ooms |  |
 | OpenAI |  | 2 | OpenAI ×2 |  |
 | OpenAI–HuggingFace | OpenAI–Hugging Face | 1 | OpenAI Hugging Face |  |

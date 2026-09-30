@@ -19,12 +19,12 @@ prompts, 0.35 s between Claude's lines, 0.6 s between exchanges; painted tables 
 | 9 | Shells | T45–T48 | 32 | 606 | 4:00 | 0:15 | 0:00 | **4:15** |
 | 10 | The Router | T49–T51 | 12 | 398 | 2:36 | 0:00 | 0:00 | **2:36** |
 | 11 | July | T52–T56 | 27 | 800 | 5:13 | 0:03 | 0:00 | **5:16** |
-| 12 | Limits | T57–T61 | 26 | 896 | 5:49 | 0:00 | 0:00 | **5:49** |
+| 12 | Limits | T57–T61 | 26 | 894 | 5:48 | 0:00 | 0:00 | **5:48** |
 | 13 | Foom | T62–T67 | 35 | 775 | 5:07 | 0:03 | 0:00 | **5:10** |
 | 14 | The Pundits | T68–T72 | 37 | 910 | 5:58 | 0:03 | 0:00 | **6:01** |
 | 15 | The Compass | T73–T77 | 38 | 920 | 6:01 | 0:15 | 0:00 | **6:16** |
 | 16 | Coda | T78–T78 | 3 | 42 | 0:18 | 0:00 | 0:32 | **0:50** |
-| | **total** | | 453 | 10,977 | 72:08 | 1:15 | 0:42 | **74:05** |
+| | **total** | | 453 | 10,975 | 72:07 | 1:15 | 0:42 | **74:04** |
 
 Line kinds: image 3, para 315, item 101, table 11, tool 8, sources 4, source 11.
-Speakers: Curt 1,575 words, Claude 9,402 words.
+Speakers: Curt 1,575 words, Claude 9,400 words.

@@ -5,7 +5,7 @@ window.CHAPTER = {
  "title": "Limits",
  "scene": "ch12_limits.js",
  "lead": 1.2,
- "duration": 370.04,
+ "duration": 369.72,
  "hold": 0,
  "lines": [
   {
@@ -325,43 +325,43 @@ window.CHAPTER = {
    "kind": "item",
    "spoken": true,
    "t0": 235.41,
-   "t1": 243.65,
-   "end": 244,
+   "t1": 243.33,
+   "end": 243.68,
    "text": "5. **Uncomputability.** The halting problem and Gödel apply to AIs too, though they rarely bind in practice.",
-   "speech": "5. Uncomputability. The halting problem and Gurdle apply to A Is too, though they rarely bind in practice.",
+   "speech": "5. Uncomputability. The halting problem and Gurdle apply to A.I.s too, though they rarely bind in practice.",
    "refs": [
     "halting-problem",
     "godel"
    ],
    "estimated": false,
-   "mouth": "0399876300000000000006999825992246590676552654000000000000000000009643996058740399647754365520578678874540007998503424665655433303424785543000000004994999736899985577529998755433440059700044333332",
-   "words": [0,0,3,0.8,20,2.12,24,2.78,32,3.17,40,3.58,44,3.8,51,4.23,57,4.61,60,4.84,62,5.04,65,5.32,70,6.02,77,6.19,82,6.39,89,6.9,94,7.31,97,7.44]
+   "mouth": "0049999874000000000009999922993255682787664554400000000000000000088438994057630089905675455534887687746300599743554566897643304356755430000000005867995278887566634987764433440038730035433333",
+   "words": [0,0,3,0.67,20,2.42,24,2.76,32,3.18,40,3.64,44,3.8,51,4.21,57,4.53,60,4.72,66,5.22,71,5.93,78,6.05,83,6.29,90,6.66,95,7.09,98,7.27]
   },
   {
    "id": "T60.C.02.6",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 244,
-   "t1": 254.08,
-   "end": 254.43,
+   "t0": 243.68,
+   "t1": 254.48,
+   "end": 254.83,
    "text": "6. **Adversaries.** Against other adaptive agents, including other AIs, advantages erode. Game theory limits what raw intellect can extract.",
-   "speech": "6. Adversaries. Against other adaptive agents, including other A Is, advantages erode. Game theory limits what raw intellect can extract.",
+   "speech": "6. Adversaries. Against other adaptive agents, including other A.I.s, advantages erode. Game theory limits what raw intellect can extract.",
    "refs": [
     "game-theory"
    ],
    "estimated": false,
-   "mouth": "5898203332000000699935745466555533300000000000000005969987432099477868559940452466335433234006752378688737946644665699996543300000057359983643774435535688643000000000000399999504788776468896530033006722059999735753457840000003455033068842",
-   "words": [0,0,3,0.64,16,1.98,24,2.45,30,2.77,39,3.27,47,3.82,57,4.35,63,4.6,65,4.85,69,5.2,80,6.08,87,6.75,92,7.25,99,7.6,106,8.13,111,8.4,115,8.7,125,9.24,129,9.44]
+   "mouth": "3389730233200000006998236443665433333000000000000000000089469898420699388887379920463346742666634300056500477678646966775666799995443430000000673289978734799844006535778754000000000000000039999960578888569888844207950236999973674344797300200455403304886300002",
+   "words": [0,0,3,0.72,16,2.15,24,2.69,30,3.01,39,3.52,47,4.14,57,4.68,63,4.96,70,5.91,81,6.67,88,7.42,93,8.05,100,8.38,107,8.77,112,9.04,116,9.34,126,9.9,130,10.16]
   },
   {
    "id": "T60.C.02.7",
    "speaker": "claude",
    "kind": "item",
    "spoken": true,
-   "t0": 254.43,
-   "t1": 270.27,
-   "end": 270.62,
+   "t0": 254.83,
+   "t1": 270.67,
+   "end": 271.02,
    "text": "7. **Physics beyond Landauer.** The Margolus–Levitin bound (ops ≤ 2E/πħ per second), the Bekenstein bound, and light-speed latency cap coordination across distance. They're very loose but real.",
    "speech": "7. Physics beyond LAN-dow-er. The mar-GO-lus LEV-ih-tin bound (operations at most two E over pi h-bar, per second), the BECK-en-stine bound, and light-speed latency cap coordination across distance. They're very loose but real.",
    "refs": [
@@ -377,9 +377,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 270.62,
-   "t1": 283.98,
-   "end": 284.58,
+   "t0": 271.02,
+   "t1": 284.38,
+   "end": 284.98,
    "text": "My intuition is that items 1 and 4 matter most. Smart doesn't make the future predictable or experiments faster, so capability probably plateaus into \"very good bets\" rather than omniscience.",
    "speech": "My intuition is that items 1 and 4 matter most. Smart doesn't make the future predictable or experiments faster, so capability probably plateaus into \"very good bets\" rather than omniscience.",
    "refs": [
@@ -395,11 +395,11 @@ window.CHAPTER = {
    "speaker": "curt",
    "kind": "para",
    "spoken": true,
-   "t0": 284.58,
-   "t1": 308.9,
-   "end": 309.8,
+   "t0": 284.98,
+   "t1": 308.58,
+   "end": 309.48,
    "text": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
-   "speech": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axes is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention it doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
+   "speech": "There is a large enough range in human variation that an entity with the capabilities of the most capable human across all axeez is impossible to wrap my head around. In my experience, people tend to vastly underestimate the variation between people. That's not to mention it doesn't need to sleep and can be instantly cloned. Although the sleep bit might not be so cut and dried.",
    "refs": [
     "typical-mind"
    ],
@@ -407,17 +407,17 @@ window.CHAPTER = {
     "not to mention [+it] doesn't"
    ],
    "estimated": false,
-   "mouth": "0039996787788998836999526899998876567434399999868866566764523200003557760099936034300000545343992596997878885344335776799983030409950756886233999643234300309777432026799986466733335444330000000000000996996335999434442000023888940268677454443333300000000000000000000000059799999935409866654320002890793388869664368878744044530000688787776504544430465865555557544434054443359604400000000000000022000000994589943999995577840797874676454554799464020000069998877500038758523783306400650303986432000200000000000000020000008869966566499962004765000058886006873006764466433770255566654333303",
-   "words": [0,0,6,0.13,9,0.28,11,0.37,17,0.69,24,1.03,30,1.41,33,1.57,39,1.9,49,2.54,54,2.85,57,3.03,64,3.49,69,3.7,73,3.81,86,4.53,89,4.66,93,4.8,98,5.19,106,5.76,112,6.23,119,6.74,123,7.17,128,7.89,131,8.38,142,9.04,145,9.25,150,9.49,153,9.63,158,9.82,166,10.59,169,11.33,172,11.49,184,12.19,191,12.45,196,12.67,199,12.82,206,13.5,220,14.34,224,14.45,234,14.93,242,15.34,250,15.95,257,16.82,261,16.93,264,17.07,272,17.33,275,17.47,283,17.71,288,17.89,291,18.07,297,18.54,301,19.02,305,19.25,308,19.42,318,20,326,20.76,335,21.7,339,21.81,345,22.18,349,22.53,355,22.84,359,23.01,362,23.2,365,23.42,369,23.62,373,23.76]
+   "mouth": "0599996887799996439980067999988756653444998975767667886740000000000078578600499336026554552405377267599887466522542578873203336940774788200897654500023368776420078999960348740534544333300330002999996034329993354663466777367665596644330220000000000000000000089999992330566443000000000029299423799966554288889730089403977407873005443004557787767779554240440887654326400500000000000002200000795238987328888665550070079837677645543099754000000000006975985860009984236346624278753200000000000000000000487899586443099520077532000000667972099740087644665045950465555322003",
+   "words": [0,0,6,0.13,9,0.28,11,0.37,17,0.67,24,0.95,30,1.31,33,1.43,39,1.82,49,2.5,54,2.93,57,3.11,64,3.55,69,3.7,73,3.82,86,4.59,89,4.66,93,4.77,98,5.03,106,5.6,112,6.08,119,6.64,123,7.04,129,7.76,132,8.14,143,8.83,146,8.93,151,9.17,154,9.31,159,9.5,167,10.24,170,10.77,173,10.93,185,11.73,192,12.05,197,12.32,200,12.55,207,13.02,221,13.78,225,13.9,235,14.46,243,14.95,251,15.6,258,16.36,262,16.51,265,16.6,273,16.96,276,17.15,284,17.39,289,17.57,292,17.73,298,18.12,302,18.52,306,18.72,309,18.93,319,19.43,327,20.09,336,20.84,340,21.01,346,21.36,350,21.68,356,22.12,360,22.32,363,22.56,366,22.78,370,22.98,374,23.11]
   },
   {
    "id": "T61.C.01",
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 309.8,
-   "t1": 330.36,
-   "end": 330.71,
+   "t0": 309.48,
+   "t1": 330.04,
+   "end": 330.39,
    "text": "Agreed. My limits list is about the ceiling, and it says nothing against the far more practical scenario you're describing. Each human capability tops out around a von Neumann, but no single person gets all of them at once. An entity at the human maximum on every axis breaks no physical law. It's just never been assembled.",
    "speech": "Agreed. My limits list is about the ceiling, and it says nothing against the far more practical scenario you're describing. Each human capability tops out around a von Neumann, but no single person gets all of them at once. An entity at the human maximum on every axis breaks no physical law. It's just never been assembled.",
    "refs": [
@@ -432,9 +432,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 330.71,
-   "t1": 341.03,
-   "end": 341.38,
+   "t0": 330.39,
+   "t1": 340.71,
+   "end": 341.06,
    "text": "Then add copying. A thousand von Neumanns who share everything they learn is a different kind of thing from one, even with no gain in any single capability.",
    "speech": "Then add copying. A thousand von Neumanns who share everything they learn is a different kind of thing from one, even with no gain in any single capability.",
    "refs": [
@@ -450,9 +450,9 @@ window.CHAPTER = {
    "speaker": "claude",
    "kind": "para",
    "spoken": true,
-   "t0": 341.38,
-   "t1": 367.94,
-   "end": 368.54,
+   "t0": 341.06,
+   "t1": 367.62,
+   "end": 368.22,
    "text": "On sleep, I think your hunch is right. Long agent runs degrade: context fills up and gets noisy, and OpenAI cited persona drift over long trajectories in the Hugging Face incident. The fixes look a lot like sleep: reset the context, consolidate what matters into memory, and start fresh. Hermes literally extracts memories at session end. The need may not go away. It may just turn into maintenance.",
    "speech": "On sleep, I think your hunch is right. Long agent runs degrade: context fills up and gets noisy, and OpenAI cited persona drift over long trajectories in the Hugging Face incident. The fixes look a lot like sleep: reset the context, consolidate what matters into memory, and start fresh. Hermes literally extracts memories at session end. The need may not go away. It may just turn into maintenance.",
    "refs": [

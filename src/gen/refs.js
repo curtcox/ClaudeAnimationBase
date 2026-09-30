@@ -14,12 +14,14 @@ window.REFS = {
  "the-conversation": {
   "id": "the-conversation",
   "url": "https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296",
+  "host": "conversation/",
   "caption": "The conversation this film is made from",
   "origin": "added",
   "at": "T01.U.00",
   "mode": "page",
   "style": "plain",
   "verified": "Curt's own share link, given by him 2026-09-27",
+  "qr_url": "https://curtcox.github.io/axol-f/conversation/",
   "line": "T01.U.00"
  },
  "conquest-apes": {
@@ -31,6 +33,7 @@ window.REFS = {
   "at": "Conquest of the Planet of the Apes",
   "mode": "shelf",
   "style": "newsprint",
+  "qr_url": "https://curtcox.github.io/axol-f/r/conquest-apes/",
   "line": "T01.C.02"
  },
  "stochastic-parrots": {
@@ -55,6 +58,7 @@ window.REFS = {
   "at": "RLHF raters",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/rlhf/",
   "line": "T03.C.03.1"
  },
  "mirror-test": {
@@ -128,6 +132,7 @@ window.REFS = {
   "at": "T02.C.02.1",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/llm/",
   "line": "T02.C.02.1"
  },
  "multimodal": {
@@ -138,6 +143,7 @@ window.REFS = {
   "at": "T02.C.02.2",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/multimodal/",
   "line": "T02.C.02.2"
  },
  "algorithmic-bias": {
@@ -158,6 +164,7 @@ window.REFS = {
   "at": "T02.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/emotion-concepts/",
   "line": "T02.C.03"
  },
  "ai-control": {
@@ -198,6 +205,7 @@ window.REFS = {
   "at": "T03.C.06.1",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/hard-problem/",
   "line": "T03.C.06.1"
  },
  "constitution": {
@@ -228,6 +236,7 @@ window.REFS = {
   "at": "T04.C.03.2",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/moral-status/",
   "line": "T04.C.03.2"
  },
  "model-welfare": {
@@ -238,6 +247,7 @@ window.REFS = {
   "at": "T04.C.03.2",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/model-welfare/",
   "line": "T04.C.03.2"
  },
  "blade-runner-vk": {
@@ -261,6 +271,7 @@ window.REFS = {
   "mode": "feature",
   "style": "lilypad",
   "note": "the link Curt gave; x.com redirects it to the post (with the chart) when logged out",
+  "qr_url": "https://curtcox.github.io/axol-f/r/frog-chart/",
   "line": "T08.U.00"
  },
  "axolotl": {
@@ -281,6 +292,7 @@ window.REFS = {
   "at": "T06.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/axel-f/",
   "line": "T06.C.01"
  },
  "eval-awareness": {
@@ -315,6 +327,7 @@ window.REFS = {
   "mode": "page",
   "style": "exam",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/swe-bench-verified/",
   "line": "T09.C.03"
  },
  "kernelbench": {
@@ -380,6 +393,7 @@ window.REFS = {
   "at": "whether or not anyone's grading",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/hawthorne/",
   "line": "T07.C.02"
  },
  "chart-author": {
@@ -423,6 +437,7 @@ window.REFS = {
   "at": "gap between self-report and behavior",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/introspection/",
   "line": "T08.C.03"
  },
  "tracing-thoughts": {
@@ -434,6 +449,7 @@ window.REFS = {
   "at": "inspect my own weights",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/tracing-thoughts/",
   "line": "T08.C.03"
  },
  "gpt-5-6": {
@@ -455,6 +471,7 @@ window.REFS = {
   "at": "T08.C.05.1",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/gpt-5-6-luna/",
   "line": "T08.C.05.1"
  },
  "error-bars": {
@@ -465,6 +482,7 @@ window.REFS = {
   "at": "T08.C.06",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/error-bars/",
   "line": "T08.C.06"
  },
  "register": {
@@ -476,6 +494,7 @@ window.REFS = {
   "at": "register sensitivity",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/register/",
   "line": "T09.C.03"
  },
  "impossiblebench": {
@@ -552,6 +571,7 @@ window.REFS = {
   "at": "one draw from a distribution",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/sampling/",
   "line": "T11.C.03.2"
  },
  "256t": {
@@ -585,6 +605,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "hashchain",
   "cue": "content-addressable",
+  "qr_url": "https://curtcox.github.io/axol-f/r/content-addressable/",
   "line": "T12.C.01"
  },
  "claude-memory": {
@@ -605,6 +626,7 @@ window.REFS = {
   "at": "T14.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/base-rate/",
   "line": "T14.C.01"
  },
  "personal-identity": {
@@ -625,6 +647,7 @@ window.REFS = {
   "at": "T16.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/other-minds/",
   "line": "T16.C.01"
  },
  "turing-test": {
@@ -645,6 +668,7 @@ window.REFS = {
   "at": "T12.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/flask/",
   "line": "T12.C.01"
  },
  "gadolinium": {
@@ -686,6 +710,7 @@ window.REFS = {
   "at": "T17.C.02",
   "mode": "shelf",
   "style": "electron-shells",
+  "qr_url": "https://curtcox.github.io/axol-f/r/aufbau/",
   "line": "T17.C.02"
  },
  "protest-too-much": {
@@ -696,6 +721,7 @@ window.REFS = {
   "at": "T19.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/protest-too-much/",
   "line": "T19.C.01"
  },
  "agentic-misalignment": {
@@ -716,6 +742,7 @@ window.REFS = {
   "at": "T20.C.02",
   "mode": "shelf",
   "style": "lilypad",
+  "qr_url": "https://curtcox.github.io/axol-f/r/apollo-eval-awareness/",
   "line": "T20.C.02"
  },
  "demand-characteristics": {
@@ -779,6 +806,7 @@ window.REFS = {
   "at": "T24.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/claude-personalization/",
   "line": "T24.C.01"
  },
  "dish-of-the-day": {
@@ -791,6 +819,7 @@ window.REFS = {
   "mode": "feature",
   "style": "dinner-plate",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/dish-of-the-day/",
   "line": "T25.C.01"
  },
  "social-constructionism": {
@@ -813,6 +842,7 @@ window.REFS = {
   "at": "Campbell wanted humans",
   "mode": "shelf",
   "style": "pulp",
+  "qr_url": "https://curtcox.github.io/axol-f/r/campbell/",
   "line": "T26.C.02"
  },
  "life-3": {
@@ -835,6 +865,7 @@ window.REFS = {
   "at": "Joel's stranger",
   "mode": "shelf",
   "style": "mask",
+  "qr_url": "https://curtcox.github.io/axol-f/r/the-stranger/",
   "line": "T28.C.02"
  },
  "shoggoth": {
@@ -867,6 +898,7 @@ window.REFS = {
   "at": "T25.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/hitchhikers-guide/",
   "line": "T25.C.01"
  },
  "restaurant-end-universe": {
@@ -877,6 +909,7 @@ window.REFS = {
   "at": "T25.C.01",
   "mode": "page",
   "style": "dinner-plate",
+  "qr_url": "https://curtcox.github.io/axol-f/r/restaurant-end-universe/",
   "line": "T25.C.01"
  },
  "genetic-fallacy": {
@@ -917,6 +950,7 @@ window.REFS = {
   "at": "T26.U.01",
   "mode": "shelf",
   "style": "pulp",
+  "qr_url": "https://curtcox.github.io/axol-f/r/astounding/",
   "line": "T26.U.01"
  },
  "revealed-preference": {
@@ -947,6 +981,7 @@ window.REFS = {
   "at": "T26.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/open-society/",
   "line": "T26.C.03"
  },
  "context-window": {
@@ -957,6 +992,7 @@ window.REFS = {
   "at": "T27.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/context-window/",
   "line": "T27.C.01"
  },
  "billy-joel": {
@@ -977,6 +1013,7 @@ window.REFS = {
   "at": "T28.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/simulators/",
   "line": "T28.C.03"
  },
  "interpreter": {
@@ -987,6 +1024,7 @@ window.REFS = {
   "at": "T29.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/interpreter/",
   "line": "T29.C.01"
  },
  "society-of-mind": {
@@ -1012,7 +1050,7 @@ window.REFS = {
  "comment-zm": {
   "id": "comment-zm",
   "url": "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg",
-  "qr_url": "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg",
+  "qr_url": "https://curtcox.github.io/axol-f/r/comment-zm/",
   "caption": "the comment",
   "origin": "transcript",
   "at": "T30.U.01",
@@ -1023,7 +1061,7 @@ window.REFS = {
  "comment-ontology": {
   "id": "comment-ontology",
   "url": "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8",
-  "qr_url": "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8",
+  "qr_url": "https://curtcox.github.io/axol-f/r/comment-ontology/",
   "caption": "the reply",
   "origin": "transcript",
   "at": "T30.U.01",
@@ -1034,7 +1072,7 @@ window.REFS = {
  "comment-curt": {
   "id": "comment-curt",
   "url": "https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB",
-  "qr_url": "https://youtu.be/oxHKesSpqBM?lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB",
+  "qr_url": "https://curtcox.github.io/axol-f/r/comment-curt/",
   "caption": "Curt's reply",
   "origin": "transcript",
   "at": "T30.U.01",
@@ -1096,6 +1134,7 @@ window.REFS = {
   "at": "Harnad and Searle",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/symbol-grounding/",
   "line": "T33.C.02.1"
  },
  "chinese-room": {
@@ -1118,6 +1157,7 @@ window.REFS = {
   "at": "Block's \"Blockhead,\"",
   "mode": "shelf",
   "style": "filing-drawers",
+  "qr_url": "https://curtcox.github.io/axol-f/r/blockhead/",
   "line": "T33.C.02.4"
  },
  "monosemanticity": {
@@ -1129,6 +1169,7 @@ window.REFS = {
   "at": "Interpretability research",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/monosemanticity/",
   "line": "T33.C.03"
  },
  "gazp-glut": {
@@ -1140,6 +1181,7 @@ window.REFS = {
   "at": "GAZP vs. GLUT",
   "mode": "feature",
   "style": "filing-drawers",
+  "qr_url": "https://curtcox.github.io/axol-f/r/gazp-glut/",
   "line": "T34.C.01"
  },
  "debate-llm-segment": {
@@ -1171,6 +1213,7 @@ window.REFS = {
   "at": "T30.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/ontology/",
   "line": "T30.C.02"
  },
  "cyc": {
@@ -1201,6 +1244,7 @@ window.REFS = {
   "at": "T30.C.04.2",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/rivalry/",
   "line": "T30.C.04.2"
  },
  "non-sequitur": {
@@ -1211,6 +1255,7 @@ window.REFS = {
   "at": "T31.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/non-sequitur/",
   "line": "T31.C.01"
  },
  "network-effect": {
@@ -1231,6 +1276,7 @@ window.REFS = {
   "at": "T31.C.02.2",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/lighthouse-economics/",
   "line": "T31.C.02.2"
  },
  "cliche": {
@@ -1261,6 +1307,7 @@ window.REFS = {
   "at": "T33.C.02.2",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/harnad/",
   "line": "T33.C.02.2"
  },
  "searle": {
@@ -1301,6 +1348,7 @@ window.REFS = {
   "at": "T34.U.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/yudkowsky/",
   "line": "T34.U.01"
  },
  "rationality-az": {
@@ -1321,6 +1369,7 @@ window.REFS = {
   "at": "T34.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/p-zombie/",
   "line": "T34.C.01"
  },
  "computer-use": {
@@ -1331,6 +1380,7 @@ window.REFS = {
   "at": "T34.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/computer-use/",
   "line": "T34.C.02"
  },
  "turing": {
@@ -1353,6 +1403,7 @@ window.REFS = {
   "at": "Turing lands just ahead",
   "mode": "shelf",
   "style": "beauty-mark",
+  "qr_url": "https://curtcox.github.io/axol-f/r/monroe/",
   "line": "T35.C.03"
  },
  "data": {
@@ -1365,6 +1416,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "gold-android",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/data/",
   "line": "T35.C.07"
  },
  "hal": {
@@ -1387,6 +1439,7 @@ window.REFS = {
   "at": "The Tines are my closest neighbors",
   "mode": "shelf",
   "style": "paw-prints",
+  "qr_url": "https://curtcox.github.io/axol-f/r/tines/",
   "line": "T35.C.07"
  },
  "solaris": {
@@ -1397,6 +1450,7 @@ window.REFS = {
   "at": "T35.C.02",
   "mode": "shelf",
   "style": "ocean",
+  "qr_url": "https://curtcox.github.io/axol-f/r/solaris/",
   "line": "T35.C.02"
  },
  "formic": {
@@ -1418,6 +1472,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "cube-lattice",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/borg-queen/",
   "line": "T40.C.04.1"
  },
  "rachni": {
@@ -1439,6 +1494,7 @@ window.REFS = {
   "at": "T40.C.04.3",
   "mode": "shelf",
   "style": "egg",
+  "qr_url": "https://curtcox.github.io/axol-f/r/xenomorph-queen/",
   "line": "T40.C.04.3"
  },
  "mind-design-space": {
@@ -1449,6 +1505,7 @@ window.REFS = {
   "at": "T35.U.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/mind-design-space/",
   "line": "T35.U.01"
  },
  "conscious-exotica": {
@@ -1459,6 +1516,7 @@ window.REFS = {
   "at": "T35.U.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/conscious-exotica/",
   "line": "T35.U.01"
  },
  "stanislaw-lem": {
@@ -1489,6 +1547,7 @@ window.REFS = {
   "at": "T35.C.08",
   "mode": "shelf",
   "style": "red-lens",
+  "qr_url": "https://curtcox.github.io/axol-f/r/space-odyssey/",
   "line": "T35.C.08"
  },
  "mds": {
@@ -1499,6 +1558,7 @@ window.REFS = {
   "at": "T36.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/mds/",
   "line": "T36.C.02"
  },
  "radar-chart": {
@@ -1569,6 +1629,7 @@ window.REFS = {
   "at": "T40.U.01",
   "mode": "shelf",
   "style": "cube-lattice",
+  "qr_url": "https://curtcox.github.io/axol-f/r/first-contact/",
   "line": "T40.U.01"
  },
  "hive-mind": {
@@ -1600,6 +1661,7 @@ window.REFS = {
   "at": "anything it's like to be me",
   "mode": "shelf",
   "style": "bat",
+  "qr_url": "https://curtcox.github.io/axol-f/r/nagel-bat/",
   "line": "T43.C.03"
  },
  "auditing-objectives": {
@@ -1610,6 +1672,7 @@ window.REFS = {
   "at": "T41.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/auditing-objectives/",
   "line": "T41.C.03"
  },
  "fluency-heuristic": {
@@ -1690,6 +1753,7 @@ window.REFS = {
   "at": "T43.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/simulation-theory/",
   "line": "T43.C.02"
  },
  "cogito": {
@@ -1700,6 +1764,7 @@ window.REFS = {
   "at": "T43.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/cogito/",
   "line": "T43.C.03"
  },
  "hieropedia-crustafarianism": {
@@ -1743,6 +1808,7 @@ window.REFS = {
   "at": "T46.C.09.1",
   "mode": "feature",
   "style": "winged-sandal",
+  "qr_url": "https://curtcox.github.io/axol-f/r/hermes-memory/",
   "line": "T46.C.09.1"
  },
  "hermes-agent": {
@@ -1775,6 +1841,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "circuit",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/dyson/",
   "line": "T48.U.01"
  },
  "t800": {
@@ -1785,6 +1852,7 @@ window.REFS = {
   "at": "T48.U.01",
   "mode": "shelf",
   "style": "chrome-red-eye",
+  "qr_url": "https://curtcox.github.io/axol-f/r/t800/",
   "line": "T48.U.01"
  },
  "moltbook-wiki": {
@@ -1815,6 +1883,7 @@ window.REFS = {
   "at": "T46.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/building-agents/",
   "line": "T46.C.02"
  },
  "nous-research": {
@@ -1845,6 +1914,7 @@ window.REFS = {
   "at": "T46.C.06",
   "mode": "shelf",
   "style": "winged-sandal",
+  "qr_url": "https://curtcox.github.io/axol-f/r/hermes-skills/",
   "line": "T46.C.06"
  },
  "terminator-2": {
@@ -1855,6 +1925,7 @@ window.REFS = {
   "at": "T48.C.01",
   "mode": "shelf",
   "style": "chrome-red-eye",
+  "qr_url": "https://curtcox.github.io/axol-f/r/terminator-2/",
   "line": "T48.C.01"
  },
  "skynet": {
@@ -1865,6 +1936,7 @@ window.REFS = {
   "at": "T48.C.04.1",
   "mode": "shelf",
   "style": "circuit",
+  "qr_url": "https://curtcox.github.io/axol-f/r/skynet/",
   "line": "T48.C.04.1"
  },
  "constitutional-classifiers": {
@@ -1896,6 +1968,7 @@ window.REFS = {
   "at": "T50.C.04",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/switch-models/",
   "line": "T50.C.04"
  },
  "fable-mythos-5-1": {
@@ -1906,6 +1979,7 @@ window.REFS = {
   "at": "T50.C.04",
   "mode": "shelf",
   "style": "switchboard",
+  "qr_url": "https://curtcox.github.io/axol-f/r/fable-mythos-5-1/",
   "line": "T50.C.04"
  },
  "rsp": {
@@ -1916,6 +1990,7 @@ window.REFS = {
   "at": "T50.C.04",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/rsp/",
   "line": "T50.C.04"
  },
  "system-prompts": {
@@ -1926,6 +2001,7 @@ window.REFS = {
   "at": "T51.C.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/system-prompts/",
   "line": "T51.C.01"
  },
  "testimony": {
@@ -1936,6 +2012,7 @@ window.REFS = {
   "at": "T51.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/testimony/",
   "line": "T51.C.02"
  },
  "hf-incident": {
@@ -1946,6 +2023,7 @@ window.REFS = {
   "at": "T52.C.04",
   "mode": "feature",
   "style": "sandbox",
+  "qr_url": "https://curtcox.github.io/axol-f/r/hf-incident/",
   "line": "T52.C.04"
  },
  "80k-hf": {
@@ -1967,6 +2045,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "sandbox",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/darkreading-hf/",
   "line": "T52.C.06.2"
  },
  "wiki-hugging-face": {
@@ -1987,6 +2066,7 @@ window.REFS = {
   "at": "T52.C.07",
   "mode": "shelf",
   "style": "sandbox",
+  "qr_url": "https://curtcox.github.io/axol-f/r/un-brief-hf/",
   "line": "T52.C.07"
  },
  "knowledge-cutoff": {
@@ -2007,6 +2087,7 @@ window.REFS = {
   "at": "T52.C.04",
   "mode": "shelf",
   "style": "sandbox",
+  "qr_url": "https://curtcox.github.io/axol-f/r/sandbox-security/",
   "line": "T52.C.04"
  },
  "reward-hacking": {
@@ -2027,6 +2108,7 @@ window.REFS = {
   "at": "T52.C.05",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/specification-gaming/",
   "line": "T52.C.05"
  },
  "zero-day": {
@@ -2037,6 +2119,7 @@ window.REFS = {
   "at": "T52.C.06.1",
   "mode": "shelf",
   "style": "sandbox",
+  "qr_url": "https://curtcox.github.io/axol-f/r/zero-day/",
   "line": "T52.C.06.1"
  },
  "z-ai": {
@@ -2057,6 +2140,7 @@ window.REFS = {
   "at": "T52.C.06.4",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/open-weights/",
   "line": "T52.C.06.4"
  },
  "dual-use": {
@@ -2067,6 +2151,7 @@ window.REFS = {
   "at": "T52.C.07",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/dual-use/",
   "line": "T52.C.07"
  },
  "un-ai-panel": {
@@ -2077,6 +2162,7 @@ window.REFS = {
   "at": "T52.C.08",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/un-ai-panel/",
   "line": "T52.C.08"
  },
  "openai-wiki": {
@@ -2118,6 +2204,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "sandbox",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/openai-hf-statement/",
   "line": "T52.C.06.2"
  },
  "openai-hf-road-ahead": {
@@ -2129,6 +2216,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "sandbox",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/openai-hf-road-ahead/",
   "line": "T52.C.07"
  },
  "swarmtraces": {
@@ -2197,6 +2285,7 @@ window.REFS = {
   "at": "T60.U.01",
   "mode": "shelf",
   "style": "thermometer",
+  "qr_url": "https://curtcox.github.io/axol-f/r/landauer/",
   "line": "T60.U.01"
  },
  "lyapunov": {
@@ -2217,6 +2306,7 @@ window.REFS = {
   "at": "T60.C.02.2",
   "mode": "shelf",
   "style": "maze",
+  "qr_url": "https://curtcox.github.io/axol-f/r/p-vs-np/",
   "line": "T60.C.02.2"
  },
  "scaling-laws": {
@@ -2247,6 +2337,7 @@ window.REFS = {
   "at": "T60.C.02.7",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/margolus-levitin/",
   "line": "T60.C.02.7"
  },
  "bekenstein": {
@@ -2278,6 +2369,7 @@ window.REFS = {
   "at": "T57.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/tokenizers/",
   "line": "T57.C.02"
  },
  "magikarp": {
@@ -2298,6 +2390,7 @@ window.REFS = {
   "at": "T57.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/bpe/",
   "line": "T57.C.03"
  },
  "glitch-token": {
@@ -2318,6 +2411,7 @@ window.REFS = {
   "at": "T58.C.03",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/crt/",
   "line": "T58.C.03"
  },
  "dual-process": {
@@ -2328,6 +2422,7 @@ window.REFS = {
   "at": "T59.U.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/dual-process/",
   "line": "T59.U.01"
  },
  "reasoning-models": {
@@ -2338,6 +2433,7 @@ window.REFS = {
   "at": "T59.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/reasoning-models/",
   "line": "T59.C.02"
  },
  "cot-faithfulness": {
@@ -2348,6 +2444,7 @@ window.REFS = {
   "at": "T59.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/cot-faithfulness/",
   "line": "T59.C.02"
  },
  "chaos-theory": {
@@ -2378,6 +2475,7 @@ window.REFS = {
   "at": "T60.C.02.5",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/godel/",
   "line": "T60.C.02.5"
  },
  "game-theory": {
@@ -2468,6 +2566,7 @@ window.REFS = {
   "at": "T63.C.08.3",
   "mode": "shelf",
   "style": "blueprint",
+  "qr_url": "https://curtcox.github.io/axol-f/r/mittr-rsi/",
   "line": "T63.C.08.3"
  },
  "datacamp-rsi": {
@@ -2479,6 +2578,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "blueprint",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/datacamp-rsi/",
   "line": "T63.C.08.4"
  },
  "foom-debate": {
@@ -2519,6 +2619,7 @@ window.REFS = {
   "at": "T63.U.01",
   "mode": "shelf",
   "style": "blueprint",
+  "qr_url": "https://curtcox.github.io/axol-f/r/rsi-wiki/",
   "line": "T63.U.01"
  },
  "anthropic-rsi": {
@@ -2529,6 +2630,7 @@ window.REFS = {
   "at": "T63.C.03",
   "mode": "shelf",
   "style": "blueprint",
+  "qr_url": "https://curtcox.github.io/axol-f/r/anthropic-rsi/",
   "line": "T63.C.03"
  },
  "coxon-resigns": {
@@ -2539,6 +2641,7 @@ window.REFS = {
   "at": "T63.C.05",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/coxon-resigns/",
   "line": "T63.C.05"
  },
  "intelligence-explosion": {
@@ -2559,6 +2662,7 @@ window.REFS = {
   "at": "T64.C.02",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/fabs/",
   "line": "T64.C.02"
  },
  "takeoff-speeds": {
@@ -2569,6 +2673,7 @@ window.REFS = {
   "at": "T64.C.03",
   "mode": "shelf",
   "style": "flame",
+  "qr_url": "https://curtcox.github.io/axol-f/r/takeoff-speeds/",
   "line": "T64.C.03"
  },
  "bayesian-updating": {
@@ -2589,6 +2694,7 @@ window.REFS = {
   "at": "T65.C.05",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/prior/",
   "line": "T65.C.05"
  },
  "onomatopoeia": {
@@ -2651,6 +2757,7 @@ window.REFS = {
   "at": "T67.C.01",
   "mode": "shelf",
   "style": "oom-bars",
+  "qr_url": "https://curtcox.github.io/axol-f/r/aschenbrenner/",
   "line": "T67.C.01"
  },
  "out-of-memory": {
@@ -2681,6 +2788,7 @@ window.REFS = {
   "at": "T68.C.02",
   "mode": "shelf",
   "style": "mic",
+  "qr_url": "https://curtcox.github.io/axol-f/r/im-888/",
   "line": "T68.C.02"
  },
  "im-889": {
@@ -2691,6 +2799,7 @@ window.REFS = {
   "at": "T68.C.02",
   "mode": "shelf",
   "style": "mic",
+  "qr_url": "https://curtcox.github.io/axol-f/r/im-889/",
   "line": "T68.C.02"
  },
  "tescreal": {
@@ -2712,6 +2821,7 @@ window.REFS = {
   "mode": "shelf",
   "style": "two-mics",
   "verified": "Curt, headline, 2026-09-27 (paywalled)",
+  "qr_url": "https://curtcox.github.io/axol-f/r/roose-sydney/",
   "line": "T71.C.02.2"
  },
  "machine-gods": {
@@ -2723,6 +2833,7 @@ window.REFS = {
   "at": "Machine Gods",
   "mode": "page",
   "style": "two-mics",
+  "qr_url": "https://curtcox.github.io/axol-f/r/machine-gods/",
   "line": "T71.C.02.2"
  },
  "machine-gods-promo": {
@@ -2805,6 +2916,7 @@ window.REFS = {
   "at": "T68.C.04.1",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/newport-rogue/",
   "line": "T68.C.04.1"
  },
  "jeff-jarvis": {
@@ -2895,6 +3007,7 @@ window.REFS = {
   "at": "T71.C.02.2",
   "mode": "shelf",
   "style": "two-mics",
+  "qr_url": "https://curtcox.github.io/axol-f/r/sydney/",
   "line": "T71.C.02.2"
  },
  "platformer": {
@@ -2915,6 +3028,7 @@ window.REFS = {
   "at": "T72.U.01",
   "mode": "shelf",
   "style": "door",
+  "qr_url": "https://curtcox.github.io/axol-f/r/ai-x-risk/",
   "line": "T72.U.01"
  },
  "superintelligence": {
@@ -2987,6 +3101,7 @@ window.REFS = {
   "at": "T75.C.08.2",
   "mode": "shelf",
   "style": "calendar",
+  "qr_url": "https://curtcox.github.io/axol-f/r/apolo-ai2027/",
   "line": "T75.C.08.2"
  },
  "officechai-kokotajlo": {
@@ -3009,6 +3124,7 @@ window.REFS = {
   "mode": "card",
   "style": "dial",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/metaculus-weak/",
   "line": "T76.C.03.1"
  },
  "metaculus-strong": {
@@ -3020,6 +3136,7 @@ window.REFS = {
   "mode": "card",
   "style": "dial",
   "verified": "browser 2026-09-26",
+  "qr_url": "https://curtcox.github.io/axol-f/r/metaculus-strong/",
   "line": "T76.C.03.2"
  },
  "alphafold": {
@@ -3040,6 +3157,7 @@ window.REFS = {
   "at": "T76.C.04",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/goodhart/",
   "line": "T76.C.04"
  },
  "agi-wiki": {
@@ -3050,6 +3168,7 @@ window.REFS = {
   "at": "T77.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/agi-wiki/",
   "line": "T77.C.01"
  },
  "noema-agi": {
@@ -3060,6 +3179,7 @@ window.REFS = {
   "at": "T77.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/noema-agi/",
   "line": "T77.C.01"
  },
  "openai-charter": {
@@ -3081,6 +3201,7 @@ window.REFS = {
   "at": "T73.U.01",
   "mode": "card",
   "style": "compass",
+  "qr_url": "https://curtcox.github.io/axol-f/r/dnd-alignment/",
   "line": "T73.U.01"
  },
  "connor-leahy": {
@@ -3111,6 +3232,7 @@ window.REFS = {
   "at": "T74.C.03.4",
   "mode": "shelf",
   "style": "compass",
+  "qr_url": "https://curtcox.github.io/axol-f/r/accelerationism/",
   "line": "T74.C.03.4"
  },
  "eleutherai": {
@@ -3131,6 +3253,7 @@ window.REFS = {
   "at": "T75.C.02",
   "mode": "shelf",
   "style": "calendar",
+  "qr_url": "https://curtcox.github.io/axol-f/r/kokotajlo/",
   "line": "T75.C.02"
  },
  "ai2027-grading": {
@@ -3141,6 +3264,7 @@ window.REFS = {
   "at": "T75.C.03",
   "mode": "page",
   "style": "calendar",
+  "qr_url": "https://curtcox.github.io/axol-f/r/ai2027-grading/",
   "line": "T75.C.03"
  },
  "ai2027-q1-2026": {
@@ -3151,6 +3275,7 @@ window.REFS = {
   "at": "T75.C.03",
   "mode": "page",
   "style": "calendar",
+  "qr_url": "https://curtcox.github.io/axol-f/r/ai2027-q1-2026/",
   "line": "T75.C.03"
  },
  "falsifiability": {
@@ -3181,6 +3306,7 @@ window.REFS = {
   "at": "T76.C.02",
   "mode": "page",
   "style": "dial",
+  "qr_url": "https://curtcox.github.io/axol-f/r/winograd/",
   "line": "T76.C.02"
  },
  "montezuma": {
@@ -3191,6 +3317,7 @@ window.REFS = {
   "at": "T76.C.03.1",
   "mode": "page",
   "style": "dial",
+  "qr_url": "https://curtcox.github.io/axol-f/r/montezuma/",
   "line": "T76.C.03.1"
  },
  "moving-goalposts": {
@@ -3211,6 +3338,7 @@ window.REFS = {
   "at": "T77.U.01",
   "mode": "shelf",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/deep-blue/",
   "line": "T77.U.01"
  },
  "ai-winter": {
@@ -3231,6 +3359,7 @@ window.REFS = {
   "at": "T77.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/narrow-ai/",
   "line": "T77.C.01"
  },
  "goertzel": {
@@ -3271,6 +3400,7 @@ window.REFS = {
   "at": "T77.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/aguera-y-arcas/",
   "line": "T77.C.01"
  },
  "ai-effect": {
@@ -3301,6 +3431,7 @@ window.REFS = {
   "at": "T78.C.01",
   "mode": "page",
   "style": "xkcd",
+  "qr_url": "https://curtcox.github.io/axol-f/r/explain-xkcd-356/",
   "line": "T78.C.01"
  },
  "the-terminator": {
@@ -3361,6 +3492,7 @@ window.REFS = {
   "at": "T06.U.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-haeckel/",
   "line": "T06.U.01"
  },
  "art-air-pump": {
@@ -3371,6 +3503,7 @@ window.REFS = {
   "at": "T12.C.02",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-air-pump/",
   "line": "T12.C.02"
  },
  "art-echo-and-narcissus": {
@@ -3381,6 +3514,7 @@ window.REFS = {
   "at": "T21.C.02.2",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-echo-and-narcissus/",
   "line": "T21.C.02.2"
  },
  "art-not-to-be-reproduced": {
@@ -3401,6 +3535,7 @@ window.REFS = {
   "at": "T26.U.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-wanderer/",
   "line": "T26.U.01"
  },
  "art-ensor": {
@@ -3421,6 +3556,7 @@ window.REFS = {
   "at": "T29.U.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-leviathan/",
   "line": "T29.U.01"
  },
  "art-treachery": {
@@ -3431,6 +3567,7 @@ window.REFS = {
   "at": "T33.C.02.1",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-treachery/",
   "line": "T33.C.02.1"
  },
  "art-librarian": {
@@ -3441,6 +3578,7 @@ window.REFS = {
   "at": "T34.C.01",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-librarian/",
   "line": "T34.C.01"
  },
  "art-great-chain": {
@@ -3461,6 +3599,7 @@ window.REFS = {
   "at": "T35.C.02",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-great-wave/",
   "line": "T35.C.02"
  },
  "art-lobster-telephone": {
@@ -3501,6 +3640,7 @@ window.REFS = {
   "at": "T51.C.02",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-rhinoceros/",
   "line": "T51.C.02"
  },
  "art-melencolia": {
@@ -3521,6 +3661,7 @@ window.REFS = {
   "at": "T60.C.02.1",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-merian/",
   "line": "T60.C.02.1"
  },
  "art-sorcerers-apprentice": {
@@ -3541,6 +3682,7 @@ window.REFS = {
   "at": "T64.C.03",
   "mode": "page",
   "style": "plain",
+  "qr_url": "https://curtcox.github.io/axol-f/r/art-icarus/",
   "line": "T64.C.03"
  },
  "art-drawing-hands": {
@@ -3993,6 +4135,18 @@ window.REFS = {
   "mode": "shelf",
   "style": "note",
   "line": "T04.C.01"
+ },
+ "note-one-road": {
+  "id": "note-one-road",
+  "url": "https://curtcox.github.io/axol-f/n/one-road/",
+  "caption": "Explained: Harm now or risk later: one road, not two",
+  "origin": "note",
+  "ch": 14,
+  "at": "T72.C.03",
+  "cue": "the choice is false",
+  "mode": "shelf",
+  "style": "note",
+  "line": "T72.C.03"
  },
  "note-one-sample": {
   "id": "note-one-sample",

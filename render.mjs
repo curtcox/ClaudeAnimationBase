@@ -120,7 +120,10 @@ async function openPage(tag = '') {
 }
 const frameOf = async (page, t, type, q, w = 1920) => {
   const url = await page.evaluate((t, type, q, w) => window.renderAt(t, type, q, w), t, type, q, w);
-  return Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
+  const buf = Buffer.from(url.slice(url.indexOf(',') + 1), 'base64');
+  // a page whose WebGL context was lost hands back an empty image ("data:,"): a failure to retry, never a frame to keep
+  if (buf.length < 1000) throw new Error(`an empty frame (${buf.length} bytes)`);
+  return buf;
 };
 // the length of whatever is being rendered: a loop's .len, or the video's duration
 const lengthOf = page => page.evaluate(() => window.LOOP ? window.LOOP.len : DUR);

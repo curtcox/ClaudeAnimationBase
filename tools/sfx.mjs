@@ -10,7 +10,7 @@
 // The mix: audio/chNN_full.wav, the chapter's voice (audio/chNN.wav) with its sounds, which render.mjs encodes with. Each
 // sound starts where it's heard (its leading silence trimmed, so it lands on its word), at its gain: dB against the
 // voice, which the voice tools mix at LEVEL LUFS. The same sound twice at one moment (three codes arriving together)
-// plays once. Ambience fades in and out.
+// plays once. Ambience and music fade in and out.
 // The levels: script/sfx_levels.md, every cue as mixed, against the voice at that moment, loudest 0.4 s against loudest
 // 0.4 s. It flags a sound that competes with the words (within 3 dB of speech under it; 12 for a bed under speech), one
 // likely lost (over 20 dB under the voice, where speech masks it; 26 for a bed), and any stretch of the mix that would clip.
@@ -155,6 +155,10 @@ for (let ch = 0; ch <= 16; ch++) {
     const long = sustained(c), g = 10 ** (((long ? VINT : VPEAK) + c.gain - (long ? s.int : s.max)) / 20), a = Math.round(c.t * SR);
     const b = Math.min(n, c.kind === 'ambience' ? Math.round(c.end * SR) : a + s.x.length), part = new Float32Array(Math.max(0, b - a));
     if (c.kind === 'ambience') { const fi = 1.5 * SR, fo = 2 * SR; for (let j = 0; j < part.length; j++) part[j] = s.x[j % s.x.length] * g * Math.min(1, j / fi, (part.length - j) / fo); }
+    else if (c.kind === 'music') {   // music eases in and out (Curt, ch 3 review: the pianos started and stopped abruptly)
+      const fi = Math.min(.8 * SR, part.length / 4), fo = Math.min(2 * SR, part.length / 3);
+      for (let j = 0; j < part.length; j++) part[j] = s.x[j] * g * Math.min(1, j / fi, (part.length - j) / fo);
+    }
     else for (let j = 0; j < part.length; j++) part[j] = s.x[j] * g;
     for (let j = 0; j < part.length; j++) mix[a + j] += part[j];
     // how it sits against the voice at that moment: a one-shot's loudest moment against the voice's loudest there; a

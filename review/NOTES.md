@@ -65,11 +65,6 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 1. The Wrong Movie
 
-- **3:44.9** · T04.C.01 · shot G · Curt `nmumq4qz1wx`
-  It would be better if the marble sound effect matched the movement of the marble.
-  [the frame](frames/ch01-nmumq4qz1wx.jpg)
-  - Claude: Now four sounds, one per movement: a short roll as each of the three prompts taps the marble, then a longer roll as it drifts to the label.
-
 - **1:47.4** · T02.C.02.3 · shot D · Curt · ✓ resolved `nmulf3fgmk0`
   What is checking for bias or evasion supposed to be showing?
   [the frame](frames/ch01-nmulf3fgmk0.jpg)
@@ -80,6 +75,11 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   [the frame](frames/ch01-nmulr81ysc2.jpg)
   - Claude: Agreed. Any picture a caption would cover now rises clear of it when it has room above, so here the floor moves up and Clawd walks above the caption. Captions are also wider now, so they take fewer rows. Chapter 1's next draft has it.
 
+- **3:44.9** · T04.C.01 · shot G · Curt · ✓ resolved `nmumq4qz1wx`
+  It would be better if the marble sound effect matched the movement of the marble.
+  [the frame](frames/ch01-nmumq4qz1wx.jpg)
+  - Claude: Now four sounds, one per movement: a short roll as each of the three prompts taps the marble, then a longer roll as it drifts to the label.
+
 - **4:17.0** · T04.C.03.1 · shot H · Claude asks · ✓ resolved `nmujh32wrvg`
   The chapter check finds 10 places here where the picture holds still for over 8 seconds (this one is 12.8 s). Are held shots like this fine, or should every long line get more movement?
   Options: “Held shots are fine” · “Add movement”
@@ -87,7 +87,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 
 ## 2. Frog or Axolotl
 
-- **2:11.6** · T09.C.01 · shot H · Curt `nmumrjicgnk`
+- **2:11.6** · T09.C.01 · shot H · Curt · ✓ resolved `nmumrjicgnk`
   There is a distracting extra inhale after "What do you think?" in the audio here and elsewhere.
   [the frame](frames/ch02-nmumrjicgnk.jpg)
   - Claude: Found it: the voice inhales after the last word of some clips. Here it's your 'What do you think?' (the same clip plays four times in the film). Now any breath after a line's last word or before its first is silenced; 17 lines had one. No timing changes.
@@ -104,6 +104,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **1:31.9** · T15.C.02 · shot D · Curt `nmun74ytx26`
   Fade the background sound in and out rather than starting and stopping abruptly here.
   [the frame](frames/ch03-nmun74ytx26.jpg)
+  - Claude: Now every music cue eases in over about a second and out over two, so the pianos no longer start and stop abruptly.
 
 ## 4. The Echo
 
@@ -117,10 +118,12 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **0:25.2** · T30.U.01 · shot A · Curt `nmun7r2sjtp`
   The bottom card contents and captions are shown at the same spot making both unreadable. Adjust the layout. There is room to the right to expand the captions and thus make them shorter. The comments could also be tiled so that each one overlaps with the one placed before it, but only covers whitespace on the comment card.
   [the frame](frames/ch06-nmun7r2sjtp.jpg)
+  - Claude: The code card now sits higher, clear of the captions, so they run the full width (4 rows here, not 6). The three comment cards are tiled: each overlaps only the blank bottom of the one before, and all end well above the caption. Captions everywhere now get the full width when a code sits above them.
 
 - **2:09.3** · T31.C.02.3 · shot D · Curt `nmun7wl8mzd`
   The sound of the ball dropping doesn't match the time when the ball hits.
   [the frame](frames/ch06-nmun7wl8mzd.jpg)
+  - Claude: Moved: the thud now plays as the ball lands, on 'on purpose'. It was a second early.
 
 - **0:24.0** · T30.U.01 · shot A · Claude asks · ✓ resolved `nmujl1brxks`
   The pasted thread is a corkboard: the three comments, each with its own code and its author's channel code, six codes at once (the storyboard's exception to two at a time). Does it read, and do the codes scan from your phone?
@@ -133,6 +136,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **2:10.6** · T37.U.01 · shot F · Curt `nmun8aqugs4`
   The audio has axes being pronounced as the plural of ax rather than the plural or axis.
   [the frame](frames/ch07-nmun8aqugs4.jpg)
+  - Claude: Now said 'axeez', the plural of axis, in all nine lines with 'axes'.
 
 ## 11. July
 
@@ -158,6 +162,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **4:00.8** · T60.C.02.5 · shot E · Curt `nmun9bq3ftc`
   AIs is mispronounced here.
   [the frame](frames/ch12-nmun9bq3ftc.jpg)
+  - Claude: Now sent as 'A.I.s'. Speech-to-text hears 'AIs' both times.
 
 - **2:47.1** · T60.C.02.1 · Claude asks · ✓ resolved `nmujvc8pbuk`
   The storyboard built the seven limits side by side on one board. I show each limit big, one at a time (its name and formula readable), then the whole board of seven when Claude says items 1 and 4 matter most. OK?
@@ -169,6 +174,7 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
 - **4:14.7** · T66.U.01 · shot E · Curt `nmun9mpzw2`
   AFAYCT is generally pronounced "as far as you can tell"
   [the frame](frames/ch13-nmun9mpzw2.jpg)
+  - Claude: Now said 'as far as you can tell'.
 
 ## 14. The Pundits
 
@@ -176,6 +182,8 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   I can't tell what the image is supposed to be.
   [the frame](frames/ch14-nmumrc24h2g.jpg)
   - Claude: It's meant to be two roads (harm now, risk later) that turn out to be one road, driven by the same three failures. The roads were unlabelled and the signs floated on the horizon. Now each road has a sign, and the three failures are on one signpost where the roads join.
+  - Curt: I take this to be the proverbial fork in the road only in reverse with both roads merging. The problem is that the fork doesn't look much like a fork in a road. Also, a huge number of people (like me) make this argument. Add a link to a page with some of them.
+  - Claude: Redrawn as a real road merge: two roads with dashed centre lines join into one that narrows to the horizon, with trees along it. And a new explainer, 'Harm now or risk later: one road, not two', has its code in this shot. It lists six people and papers making the same argument (Baum, Krakovna, Cave and Ó hÉigeartaigh, Prunkl and Whittlestone, Bristow et al., and a 2025 study by Hoes and Gilardi).
 
 - **0:31.8** · T68.C.03 · Claude asks · ✓ resolved `nmujx0v7ki`
   The hosts are stick figures like you, told apart by hair, glasses and hoodie colour (Father Robert has a white collar). No faces copied. Is that enough, or should they look more different?
@@ -194,4 +202,4 @@ Written by the watch page's notes panel (`npm run serve`) and `npm run review`; 
   - Claude: Fixed: the voice is now sent "Eye. Other" for both your "i) Other" and my answer, and speech-to-text hears both as "I, Other". The next draft of chapter 14 has it.
 
 ---
-9 open, 23 resolved.
+7 open, 25 resolved.

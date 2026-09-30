@@ -149,7 +149,21 @@ export function resolveAnchor(r, lines, byId = new Map(lines.map(l => [l.id, l])
 // tools/build_site.mjs), which point at the companion site.
 export function loadRefs() {
   const refs = readYaml('script/refs.yaml');
-  try { return refs.concat(readYaml('script/notes_refs.yaml') || []); } catch { return refs; }
+  try { return withQrTargets(refs.concat(readYaml('script/notes_refs.yaml') || [])); } catch { return withQrTargets(refs); }
+}
+
+// What each reference's code encodes (Curt, 2026-09-29: no short-link domain, everything on the companion site unless
+// the direct link is shorter). A page the site keeps its own copy of (`host`, a path on the site) is always that copy.
+// Otherwise the shortest of: its url, a shorter form of the same page (qr_url), or the site's address for it,
+// base + r/NAME/ (NAME is `short`, else the id), a page that forwards to url (tools/build_site.mjs writes them).
+export function withQrTargets(refs, site = readYaml('script/site.yaml')) {
+  return refs.map(r => {
+    if (r.host) return { ...r, qr_url: site.base + r.host };
+    const own = r.qr_url && r.qr_url !== 'SHORT' ? r.qr_url : r.url;
+    if (own.startsWith(site.base)) return r;
+    const fwd = site.base + site.short + (r.short || r.id) + '/';
+    return fwd.length < own.length || r.qr_url === 'SHORT' ? { ...r, qr_url: fwd } : r;
+  });
 }
 
 // when character i of s (a timeline line's speech or text) is said, as src/scene_kit.js's sayAt: the voice's own word

@@ -5,10 +5,10 @@ curt:
   voice: qCYgSspmts8E3GyY0tyz   # "Curt Cox 2": Curt's own cloned voice (his pick, 2026-09-28)
 claude:
   voice: SAz9YHcvj6GT2YYXdXww   # "River", stock: relaxed, neutral, informative. Claude's pick on paper (it can't listen):
-                                 # the one ungendered candidate, calm and even. Provisional until Curt confirms by ear.
+                                 # the one ungendered candidate, calm and even. Curt confirmed it by ear (2026-09-29).
 
 # The cold open's comic page (script/cold_open.yaml): six stock voices, one per person on the page, none of them the
-# film's two. Picked from the account's stock voices by their descriptions; provisional until heard.
+# film's two. Picked from the account's stock voices by their descriptions; Curt confirmed them by ear (2026-09-29).
 officer: { voice: SOYHLrjzK2X1ezoPC6cr }   # "Harry", fierce, rough: the shouting officer
 handler: { voice: N2lVS1w4EtoT3dr4eOWO }   # "Callum", husky trickster: the ape's handler, covering fast
 blond:   { voice: cjVigY5qzO86Huf0OWal }   # "Eric", smooth: the blond man, the cool accusation

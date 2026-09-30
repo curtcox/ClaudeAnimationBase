@@ -24,6 +24,7 @@
     "lint:chapter": "node tools/lint_chapter.mjs",
     "draft": "node render.mjs --draft",
     "site": "node tools/build_site.mjs",
+    "making-of": "node tools/making_of.mjs",
     "serve": "node tools/serve.mjs",
     "watch": "node tools/watch.mjs",
     "review": "node tools/review.mjs",
