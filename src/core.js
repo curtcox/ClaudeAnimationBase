@@ -194,7 +194,7 @@ function ribbon(P, w0, w1 = w0) {
 }
 
 // ---------- paint wrapper ----------
-// One call = one painted shape: optional flat wash, optional watercolor fill, optional hatch, optional ink outline.
+// One call = one painted shape: optional flat wash, optional fill (drawn flat: flatFill), optional hatch, optional ink outline.
 // p5.brush 2.2.3 loses strokes drawn far from the origin under a zoomed camera (from zoom ~2, an outline or a line
 // leaves only a dot at its first vertex), so every shape and line is drawn around its own centre.
 function centred(pts, draw) {
@@ -204,16 +204,19 @@ function centred(pts, draw) {
   const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
   push(); translate(cx, cy); draw(pts.map(([x, y]) => [x - cx, y - cy])); pop();
 }
-// DRAFT (studio.html?draft=1, render.mjs --draft): a quick look for review cuts. Watercolor fills, about 60% of a frame's
-// cost, become flat washes of the same colour; everything else (timing, layout, strokes, lettering) is the final's.
+// DRAFT (studio.html?draft=1, render.mjs --draft): a quick look for review cuts (render.mjs: fewer frames, smaller, with
+// captions); the drawing is the final's.
 const DRAFT = /[?&]draft=1/.test(location.search);
+// Fills are flat washes, in the drafts and the final alike: p5.brush's watercolor fill textures itself afresh every
+// frame, a shimmer over every filled shape that read as noise in the final (Curt, 2026-09-30). It was also about 60% of
+// a frame's cost. A shape's fill colour, opacity and wash still set the flat colour it gets.
 const isHex = c => typeof c === 'string' && /^#[0-9a-f]{6}$/i.test(c);
-function draftFill(o) {
+function flatFill(o) {
   const k = clamp((o.fillOp ?? 170) / 255);
   if (!o.wash) return { ...o, wash: o.fill, washOp: 255 * k * .8, fill: null };
   return { ...o, wash: isHex(o.wash) && isHex(o.fill) ? mixCol(o.wash, o.fill, k * .7) : o.wash, fill: null };
 }
-function paint(pts, o = {}) { if (DRY && INK && pts.length) inkOf(pts, (o.washOp ?? 255) / 255 + (o.fillOp ?? 170) / 170); if (!DRY) centred(LIFT ? reachDown(pts) : pts, (P) => paintAt(P, DRAFT && o.fill ? draftFill(o) : o)); }
+function paint(pts, o = {}) { if (DRY && INK && pts.length) inkOf(pts, (o.washOp ?? 255) / 255 + (o.fillOp ?? 170) / 170); if (!DRY) centred(LIFT ? reachDown(pts) : pts, (P) => paintAt(P, o.fill ? flatFill(o) : o)); }
 // In a lifted shot, whatever reached the bottom of its frame (a ground, a floor, a desk, a body cut off by the edge) is
 // carried on down by the lift, so the raised picture never shows a gap below it.
 function reachDown(pts) {
@@ -387,12 +390,63 @@ function draw() {
   pop();
 }
 function composite(t) {
-  const c = outX;
+  const c = outX, film = window.FILM_LOOK ? clamp(window.FILM_LOOK(t)) : 0, rnd = lcg(Math.round(t * 24) * 7919 + 101);
   c.globalCompositeOperation = 'source-over'; c.globalAlpha = 1;
+  // on film, the picture weaves a pixel or two in the projector's gate (scaled up a touch, so no edge shows)
+  if (film) { const s = 1 + .006 * film; c.setTransform(s, 0, 0, s, -W * (s - 1) / 2 + (rnd() - .5) * 2.4 * film, -H * (s - 1) / 2 + (rnd() - .5) * 3.2 * film); }
   c.drawImage(drawingContext.canvas, 0, 0, W, H);
   drawLetters(c);
+  c.setTransform(1, 0, 0, 1, 0, 0);
   c.globalCompositeOperation = 'multiply'; c.drawImage(grainC, 0, 0);
   c.globalCompositeOperation = 'source-over';
+  if (film) filmLook(c, t, film, rnd);
+}
+// A film projector's look over the frame, k 0..1 (a scene asks for it with window.FILM_LOOK = t => k; the cold open
+// does, for the comic page): the light flickers, the grain crawls, a scratch or two runs down the picture, and dust and
+// the odd hair flash past for a frame. Seeded by the frame, so a frame always renders the same.
+let filmGrainC = null;
+function filmLook(c, t, k, rnd) {
+  if (!filmGrainC) {
+    filmGrainC = document.createElement('canvas'); filmGrainC.width = filmGrainC.height = 512;
+    const g = filmGrainC.getContext('2d'), id = g.createImageData(512, 512), d = id.data, r = lcg(29);
+    for (let i = 0; i < d.length; i += 4) { const v = 128 + (r() + r() + r() - 1.5) * 90; d[i] = d[i + 1] = d[i + 2] = v; d[i + 3] = 255; }
+    g.putImageData(id, 0, 0);
+  }
+  // the grain, a fresh patch of it every frame
+  c.save(); c.globalCompositeOperation = 'overlay'; c.globalAlpha = .22 * k;
+  const ox = Math.floor(rnd() * 512), oy = Math.floor(rnd() * 512);
+  for (let x = -ox; x < W; x += 512) for (let y = -oy; y < H; y += 512) c.drawImage(filmGrainC, x, y);
+  c.restore();
+  // the lamp's flicker, and a vignette that breathes with it
+  const f = (rnd() - .5) * .07 + .025 * Math.sin(t * 17.3) * Math.sin(t * 5.1);
+  c.save(); c.globalAlpha = Math.abs(f) * k; c.fillStyle = f > 0 ? '#FFF6E0' : '#000'; c.fillRect(0, 0, W, H);
+  const v = c.createRadialGradient(W / 2, H / 2, H * .4, W / 2, H / 2, H * 1.02);
+  v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, `rgba(20,12,4,${(.3 - f) * k})`);
+  c.globalAlpha = 1; c.fillStyle = v; c.fillRect(0, 0, W, H); c.restore();
+  // scratches: each lives a few seconds at a drifting x, flickering; about half the windows have one
+  c.save();
+  for (let s = 0; s < 2; s++) {
+    const win = Math.floor(t / 2.7 + s * .5), wr = lcg(win * 131 + s * 17 + 3);
+    if (wr() < .45) continue;
+    const x = 120 + wr() * (W - 240) + 14 * Math.sin(t * (.7 + wr())) + (rnd() - .5) * 1.5;
+    c.globalAlpha = (.12 + rnd() * .22) * k; c.strokeStyle = wr() < .7 ? '#FFFDF4' : '#1A140E'; c.lineWidth = .8 + wr() * .9;
+    const y0 = wr() < .6 ? 0 : wr() * H * .6, y1 = y0 + H * (.4 + wr() * .6);
+    c.beginPath(); c.moveTo(x, y0); c.lineTo(x + (wr() - .5) * 6, y1); c.stroke();
+  }
+  // dust (mostly dark: dirt on the print), and now and then a hair
+  const dust = Math.floor(rnd() * rnd() * 7);
+  for (let i = 0; i < dust; i++) {
+    const x = rnd() * W, y = rnd() * H, r = 1.2 + rnd() * rnd() * 5, dark = rnd() < .8;
+    c.globalAlpha = (.45 + rnd() * .4) * k; c.fillStyle = dark ? '#16110B' : '#FFFBEF';
+    c.beginPath(); for (let j = 0; j < 7; j++) { const a = j / 7 * TAU, q = r * (.6 + rnd() * .6); c.lineTo(x + Math.cos(a) * q, y + Math.sin(a) * q * (.7 + rnd() * .5)); } c.fill();
+  }
+  if (rnd() < .1) {
+    let x = rnd() * W, y = rnd() * H, a = rnd() * TAU; const n = 12 + Math.floor(rnd() * 16);
+    c.globalAlpha = .55 * k; c.strokeStyle = '#16110B'; c.lineWidth = .9 + rnd() * .6; c.beginPath(); c.moveTo(x, y);
+    for (let j = 0; j < n; j++) { a += (rnd() - .5) * .9; x += Math.cos(a) * 5; y += Math.sin(a) * 5; c.lineTo(x, y); }
+    c.stroke();
+  }
+  c.restore();
 }
 // w (optional): return the frame scaled to w px wide (drafts go out at 1280, a third of the pixels to encode and send)
 let smallC = null;

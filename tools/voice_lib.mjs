@@ -18,23 +18,46 @@ export function lufs(f) {
   return +JSON.parse(out.match(/\{[^{}]*"input_i"[^{}]*\}/)[0]).input_i;
 }
 // A clip's lip sync: { mouth, words }.
-//   mouth  one digit per 1/MOUTH_HZ s from the clip's start, 0 (shut) to 9 (wide): the voice's own loudness, frame by
-//          frame, against the clip's loud frames, so the mouth opens on stressed vowels and shuts on the pauses
+//   mouth  one digit per 1/MOUTH_HZ s from the clip's start, 0 (shut) to 9 (wide), read LEAD s ahead of the sound (a
+//          mouth that moves a frame early looks in time; one a frame late looks dubbed). The voice's own loudness, in
+//          the band where speech lives: against the clip's loud moments (so quiet words open less) and against the
+//          loudest moment within 0.12 s (so the mouth closes between syllables, not only at pauses). And the lips
+//          shut on an m, b or p as spelled (not ph, a word-initial ps or pn, or a final mb's b), at the quietest
+//          moment near where ElevenLabs' timings put it.
 //   words  [charIndex, seconds, …]: when each word of the line's speech starts, from ElevenLabs' character timings
 //          (scene_kit.js's atWord); none if the timings don't spell out the speech exactly
 export const MOUTH_HZ = 24;
+const LEAD = .04;
 export function syncOf(file, text, alignment) {
-  const RATE = 24000, per = RATE / MOUTH_HZ;
-  const pcm = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-f', 's16le', '-ac', '1', '-ar', String(RATE), '-'], { maxBuffer: 1 << 26 });
-  const rms = [];
-  for (let k = 0; (k + 1) * per * 2 <= pcm.length; k++) {
-    let e = 0; for (let i = k * per; i < (k + 1) * per; i++) e += (pcm.readInt16LE(i * 2) / 32768) ** 2;
-    rms.push(Math.sqrt(e / per));
+  const RATE = 16000, HOP = 80, WIN = 320;   // loudness every 5 ms, over 20 ms
+  const pcm = execFileSync('ffmpeg', ['-v', 'error', '-i', file, '-af', 'highpass=f=200,lowpass=f=4000', '-f', 'f32le', '-ac', '1', '-ar', String(RATE), '-'], { maxBuffer: 1 << 27 });
+  const a = new Float32Array(pcm.buffer, pcm.byteOffset, pcm.length / 4), env = [];
+  for (let s = 0; s + WIN <= a.length; s += HOP) { let e = 0; for (let i = s; i < s + WIN; i++) e += a[i] * a[i]; env.push(10 * Math.log10(e / WIN + 1e-12)); }
+  const at = t => Math.round((t - WIN / RATE / 2) * RATE / HOP), timeOf = i => i * HOP / RATE + WIN / RATE / 2;
+  const maxIn = (t0, t1) => { let m = -120; for (let i = Math.max(0, at(t0)); i <= Math.min(env.length - 1, at(t1)); i++) m = Math.max(m, env[i]); return m; };
+  const speech = [...env].sort((x, y) => x - y)[Math.floor(env.length * .9)], clamp = x => Math.max(0, Math.min(1, x));
+  const n = Math.ceil(a.length / RATE * MOUTH_HZ), open = [];
+  for (let k = 0; k < n; k++) {
+    const t = k / MOUTH_HZ + LEAD, L = maxIn(t - .02, t + .02);
+    if (L < speech - 30) { open.push(0); continue; }
+    open.push(Math.min(clamp((L - (speech - 24)) / 20) ** .7, clamp((L - (maxIn(t - .12, t + .12) - 12)) / 12)));
   }
-  const loud = [...rms].sort((x, y) => x - y)[Math.floor(rms.length * .9)] || 1;
-  const mouth = rms.map(r => r < loud * .12 ? 0 : Math.min(9, Math.round(9 * Math.min(1, r / loud) ** .7))).join('');
-  const { characters: C = [], character_start_times_seconds: S = [] } = alignment || {}, words = [];
-  if (C.join('') === text) C.forEach((c, j) => { if (/\S/.test(c) && (j === 0 || /\s/.test(C[j - 1]))) words.push(j, +S[j].toFixed(2)); });
+  const { characters: C = [], character_start_times_seconds: S = [], character_end_times_seconds: E = [] } = alignment || {}, words = [];
+  if (C.join('') === text) {
+    C.forEach((c, j) => { if (/\S/.test(c) && (j === 0 || /\s/.test(C[j - 1]))) words.push(j, +S[j].toFixed(2)); });
+    const low = C.map(c => c.toLowerCase()), letter = c => /[a-z]/.test(c || ' ');
+    low.forEach((c, j) => {
+      if (!'mbp'.includes(c) || low[j - 1] === c) return;
+      const nx = low[j + 1], pv = low[j - 1];
+      if (c === 'p' && (nx === 'h' || (!letter(pv) && /[sn]/.test(nx || '')))) return;
+      if (c === 'b' && pv === 'm' && !letter(nx)) return;
+      let best = -1;
+      for (let i = Math.max(0, at(S[j] - .05)); i <= Math.min(env.length - 1, at(E[j] + .05)); i++) if (best < 0 || env[i] < env[best]) best = i;
+      const k = best < 0 ? -1 : Math.round((timeOf(best) - LEAD) * MOUTH_HZ);
+      if (k >= 0 && k < n) open[k] = 0;
+    });
+  }
+  const mouth = open.map(v => v < .12 ? 0 : Math.min(9, Math.max(1, Math.round(9 * v)))).join('');
   return { mouth: mouth.replace(/0+$/, ''), words };
 }
 // A clip's stray breaths: the voices often inhale after a line's last word (or before its first), which plays as an

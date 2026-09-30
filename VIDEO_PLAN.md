@@ -405,8 +405,15 @@ The kit has only Clawd. The film needs a **human rig** and a set of **non-human 
   - frog and axolotl
   - a golden carp
   - Hermes and OpenClaw as shelled agents
+- **The cold open is projected** ✅ (Curt, 2026-09-30). Over the comic page the picture weaves in the gate, the lamp
+  flickers, the grain crawls, and scratches, dust and the odd hair pass through (core.js's `filmLook`; a scene asks for
+  it with `window.FILM_LOOK`). It fades as the page flies into Claude's monitor. Its code scans as well as without it.
+- **Fills are flat** (Curt, 2026-09-30): p5.brush's watercolor fill re-textures itself every frame, which read as noise
+  over the final, so the final paints the drafts' flat washes too.
 - **Clawd talks** ✅. The mouth follows the voice's own loudness, frame by frame (`audio/sync.json`, made by
-  `tools/voice.mjs`), so it opens on stressed vowels and shuts on pauses. The rest of the time Clawd keeps the guide's
+  `tools/voice.mjs`), so it opens on stressed vowels and shuts on pauses. Since 2026-09-30 it's closer (Curt asked):
+  it closes between syllables (loudness against the loudest moment within 0.12 s), the lips shut on each m, b and p,
+  and it runs 40 ms ahead of the sound, as animators time mouths. The rest of the time Clawd keeps the guide's
   mouthless resting face. Curt's avatar lip-syncs the same way. The same timings put word cues (`atWord`) on the word.
 - **Caricature guardrails.** They're affectionate, not mocking, including for people Claude critiques (Jarvis). No
   franchise logos or insignia, and no copying of specific film stills. The legal footing is commentary and parody;
@@ -464,8 +471,7 @@ src/
 ### Changes to the existing kit
 - **`render.mjs`**:
   - `--chapter=N` loads `studio.html?chapter=N` and uses per-chapter frame dirs (`out/frames/chNN`) and audio;
-  - `--draft` makes a review cut about 7× faster than a final: flat washes stand in for watercolor fills (about 60% of a
-    frame's cost), 12 fps, 1280 wide, review captions on, the chapter's voice track muxed in → `out/chNN_draft.mp4`.
+  - `--draft` makes a review cut: 12 fps, 1280 wide, review captions on, the chapter's voice track muxed in → `out/chNN_draft.mp4`.
     Chapter 2 takes about 6 minutes.
   - Each chapter's frames dir keeps a manifest of what drew each shot, so a re-render (draft or final) repaints only the
     shots whose code, timing or codes changed, and everything if the engine changed. `--shots=D,E` forces those shots.

@@ -18,8 +18,8 @@
 //   --chrome=<path to Chrome/Chromium>.
 //   Frog or Axolotl: add --chapter=N to any of the above to render that chapter (tools/timeline.mjs generates its timing);
 //   --review burns in captions of the words (a review aid, never in the film).
-//     node render.mjs --chapter=2 --draft               a review cut, about 6× faster than a final: flat washes for watercolor
-//                                                       fills, 12 fps, 1280 wide, captions on (--no-review drops them), the
+//     node render.mjs --chapter=2 --draft               a review cut, several times faster than a final: 12 fps,
+//                                                       1280 wide, captions on (--no-review drops them), the
 //                                                       chapter's voice track muxed in → out/ch02_draft.mp4. Resumable; re-renders only what changed.
 //   A chapter's frames dir keeps a manifest of what drew each shot, so --frames (and --draft) re-render only the shots whose
 //   code, timing or codes changed, and everything when the engine did. --shots=D,E re-renders just those shots regardless.
