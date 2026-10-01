@@ -16,7 +16,8 @@ In order:
 Later, if the first three find viewers:
 
 - **German, French**: strong interest in AI policy, but many of these viewers manage English already. Subtitles may do.
-- **Hindi**: YouTube's biggest market, but Indian tech viewers mostly watch in English. Subtitles first.
+- **Hindi**: YouTube's biggest market, but Indian tech viewers mostly watch in English. Subtitles first. (Begun in
+  full on 2026-10-01, at Curt's word: see *Conventions (Hindi)* and the steps below.)
 - **Chinese, Korean, Arabic**: large, but YouTube is blocked in mainland China, Korean needs another script, and
   Arabic runs right to left (the site would need it).
 
@@ -92,9 +93,43 @@ the same voices.
 - **On the site:** "［訳注：…］" for what the translation adds, and "（英語）" after a link with no Japanese article.
 - **The picture:** Japanese lettering in the system's Hiragino Maru Gothic (its own `@font-face` for the hand-lettering
   fonts' CJK range, so every Mac renders it the same, with nothing downloaded). Captions break a sentence at 。！？ and
-  wrap between phrases (`Intl.Segmenter`, with each word's kana kept on it), never mid-word; a label wider than the
+  wrap between phrases (`Intl.Segmenter`, with each word's kana kept on it up to a particle), never mid-word; a label wider than the
   English it replaces is squeezed to that width. Until it's voiced, a line's length is estimated at 6 characters a
   second (Japanese has no words to count).
+
+## Conventions (Hindi, `i18n/hi`, site at `/hi/`)
+
+Claude's choices (2026-10-01, for Curt to confirm), carrying over the Spanish decisions: a full, faithful translation,
+the same voices.
+
+- **The title** is *मेंढक या एक्सोलोटल* (*Frog or Axolotl*). *Axolotl* has no everyday Hindi name, so it's spelled as
+  it sounds, एक्सोलोटल; *frog* is मेंढक.
+- **Register:** the Hindi educated Indians speak, not the Sanskritized Hindi of official notices: English words where
+  Indian speakers use them (मॉडल, टेस्ट, प्रॉम्प्ट, डेटा), Devanagari for them, nukta where it's heard (ज़, फ़).
+  Claude says आप to Curt; Curt says तुम to Claude, as a friend would. In the cold open's comic the officer says तुम
+  and barks; the handler says आप to him.
+- **Claude has no gender.** Hindi verbs agree with their subject's gender (मैं सोचता हूँ, he; सोचती हूँ, she), so a
+  Claude that speaks in the first person must pick one at nearly every verb. It doesn't: its lines are built so the
+  verb never shows a gender (मुझे लगता है, मेरा जवाब है, मैंने कहा, the subjunctive करूँ). Curt's lines to Claude
+  (तुम करते/करती हो) and the site's sentences about Claude are built the same way (Claude ने कहा, Claude के
+  मुताबिक). It costs some naturalness, noted on the translation's page.
+- **Names:** people's in Devanagari (कर्ट कॉक्स, जेफ़ जार्विस); companies, products and models in Latin letters, as
+  Hindi tech writing leaves them (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna, Hugging Face).
+- **Works:** Hollywood films and English books are known in India by their English titles, so they're spelled as they
+  sound, in Devanagari (*प्लैनेट ऑफ़ द एप्स*), with a Hindi gloss where one helps. Papers, articles and sites keep
+  their own titles.
+- **Punctuation and numbers:** the danda (।) ends a sentence; commas, ? and ! as in English; “ ” for quotations.
+  Numbers in international digits, as Hindi newspapers print them, in Indian grouping where it's natural (17 हज़ार,
+  12.5 लाख).
+- **Apes:** *ape* is बंदर throughout, the everyday word (वानर is literary; वनमानुष is a zoologist's), as Japanese
+  says 猿.
+- **What stays in English:** the sources' titles, code names, the token demonstrations in chapter 12. Curt's surviving
+  typos are the Latin-letter names (Solid Gold Magicarp, Shoggath, AGI 2027).
+- **On the site:** "[अनुवादक की टिप्पणी: …]" for what the translation adds, and "(अंग्रेज़ी में)" after a link with
+  no Hindi article.
+- **The picture:** Hindi lettering in the Mac's own Kohinoor Devanagari (its own `@font-face` for the hand-lettering
+  fonts' Devanagari range, as for Japanese). Captions end a sentence at the danda; labels wider than the English they
+  replace are fitted to it, as Japanese labels are.
 
 ## How it's built
 
@@ -198,6 +233,11 @@ The tools, run from the project's root:
       lettered in English, every cue anchored, no errors. Built by the same Pages workflow, at `/ja/`.
 - [x] The site reads as Japanese: no hard line breaks inside Japanese paragraphs (a browser shows one as a space), and
       no italics (quotations upright, emphasis bold), added to the Japanese site's stylesheet by `i18n/tools/lost.mjs`.
+- [x] Checked again (2026-10-01): every line's figures against the English, every explainer's paragraphs, the built
+      site for stray spaces; Curt's typed line break in chapter 4 restored (Portuguese had lost it too). Subtitles
+      (`tools/subtitles.mjs`, English byte for byte the same): 16 characters a row, at most 26 a cue, broken between
+      phrases. A run of kana now breaks after a particle (を は が に…), a figure keeps its counter (20年), and この・
+      その・あの・どの the word they point at, in the subtitles and the captions alike.
 - [ ] Curt confirms the conventions above (or changes them); a Japanese-reading reviewer, if one turns up.
 - [ ] Voice it: ElevenLabs' eleven_v3 speaks Japanese; names and acronyms are respelled in katakana
       (`i18n/ja/pronounce.yaml`). Then drafts, then the final on the faster Mac.

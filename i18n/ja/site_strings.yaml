@@ -55,7 +55,8 @@ badge_source: 出典
 transcript_head: |-
   # 会話の書き起こし（日本語訳）
 
-  原文（英語）：https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296翻訳：Claude、人の校閲なし。どう翻訳したか：https://curtcox.github.io/axol-f/ja/honyaku/
+  原文（英語）：https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
+  翻訳：Claude、人の校閲なし。どう翻訳したか：https://curtcox.github.io/axol-f/ja/honyaku/
 on_youtube: YouTubeで観る
 on_youtube_after: '（同じ映画に、YouTubeのコメントと章がついています）。'
 home_alt: '{title}：トップページに戻る'

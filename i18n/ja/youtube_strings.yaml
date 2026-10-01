@@ -22,3 +22,5 @@ foot: |-
   マンガのページ、グラフ、アライメントのコンパスは、論評のために描き直したものです。ロゴはなく、似顔絵は愛情をこめたものです。フェアユース：論評とパロディ。
 links_head: "\nリンクの一部を時刻順に（残りはサイトに）\n"
 tags: AI, Claude, アニメーション, AI安全性, 評価, P(doom), 人工知能, Hugging Face, カエル, ウーパールーパー, 日本語
+# the subtitles' speaker names (tools/subtitles.mjs); Claude stays in Latin letters
+subtitle_names: { curt: カート }

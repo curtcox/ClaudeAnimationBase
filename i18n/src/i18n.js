@@ -13,9 +13,10 @@
 
   // ---- the language's own glyphs ----
   // i18n/<lang>/studio.css gives the hand-lettering fonts a range of the language's glyphs (Japanese: the Mac's own
-  // Hiragino); they're loaded before the first frame, as core.js loads Permanent Marker, so no frame draws a fallback
-  if (I.cjk && typeof loadQRImages === 'function') {
-    const q0 = loadQRImages, sample = 'あア漢、。「」';
+  // Hiragino; Hindi: its Kohinoor Devanagari); they're loaded before the first frame, as core.js loads Permanent
+  // Marker, so no frame draws a fallback
+  if (I.glyphs && typeof loadQRImages === 'function') {
+    const q0 = loadQRImages, sample = I.glyphs;
     window.loadQRImages = loadQRImages = async (...a) => {
       await Promise.all(['"Patrick Hand"', '"Permanent Marker"', 'bold 40px "Patrick Hand"'].map(f => document.fonts.load(/px/.test(f) ? f : `40px ${f}`, sample)));
       return q0(...a);
@@ -41,7 +42,8 @@
   };
   // a key "NN|text" is text's translation in chapter NN only (the same English word can need two translations)
   const tr = k => { const n = window.CHAPTER?.n, own = n == null ? undefined : I.strings[`${String(n).padStart(2, '0')}|${k}`]; return own ?? I.strings[k]; };
-  // Japanese glyphs run wider than the English letters a scene was laid out for: a translation wider than its English
+  // Japanese glyphs (and Hindi's words) run wider than the English letters a scene was laid out for (I.fit): a
+  // translation wider than its English
   // (by a tenth), or than the width the scene allows it (o.maxW), is fitted to that width half by a smaller size and
   // half by condensing (each the square root of the whole), since Japanese reads well a little condensed but not
   // squashed flat
@@ -52,7 +54,7 @@
     if (typeof txt === 'string') {
       const k = txt.trim(), t = tr(k);
       if (t != null) {
-        if (I.cjk && t !== k) {
+        if (I.fit && t !== k) {
           const font = o.font || `${size}px "Permanent Marker", "Comic Sans MS", cursive`, en = widthIn(k, font), w = widthIn(t, font);
           const auto = Math.max(en * 1.1, size * 2.5), limit = o.maxW ?? (w > auto ? auto : null);   // a short English word ("a") still leaves room for two or three Japanese characters
           if (limit && w > limit) {
@@ -82,24 +84,31 @@
 
   // ---- captions ----
   // A caption is a sentence at a time. The English engine finds a sentence by its capital A–Z; here any capital starts
-  // one ("É", "Às", "¿Qué", "«Sim»"). The rest is captionAt() in src/timing.js as it is (kept out of the English file so
+  // one ("É", "Às", "¿Qué", "«Sim»"), and Hindi, which has no capitals, ends one at its danda (।) or at a ? or ! before
+  // a Devanagari word. The rest is captionAt() in src/timing.js as it is (kept out of the English file so
   // its frames' print stays the same); keep the two in step.
   // A language written without spaces (Japanese, I.cjk) ends a sentence at 。！？ with no space after it (and a Latin
   // one, a title or a quotation, as English does: a ? in a URL ends nothing), and wraps a
   // caption between words (Intl.Segmenter), never inside one: a mark that can't start a row (、。」) stays with the
   // word before it, one that can't end a row (「『（) with the word after.
   const SEG = I.cjk && new Intl.Segmenter(I.lang, { granularity: 'word' });
-  const NO_START = /^[、。，．！？!?…‥・：；:;）」』】〕)\]’”ーぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ%％]/u, NO_END = /[「『（【〔(\[‘“]$/u;
+  const PARTICLE = /^(を|は|が|に|で|と|も|へ|や|の|か|には|では|とは|から|まで|より|ので|けど|って)$/u, NO_START = /^[、。，．！？!?…‥・：；:;）」』】〕)\]’”ーぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ%％]/u, NO_END = /[「『（【〔(\[‘“]$/u;
   const cjkWords = s => {
-    const out = [];
+    const out = []; let prev = '';
     for (const { segment: g } of SEG.segment(s)) {
       const last = out.length - 1;
       // kana after a word stays with it (猿|たち|を → 猿たちを, 導|き → 導き): rows break between phrases, as Japanese
-      // subtitles do, not wherever the dictionary splits a word
+      // subtitles do, not wherever the dictionary splits a word; a row may break after a particle (を は が に で と も へ
+      // や の か…, a segment of its own), so a long run of kana still breaks between phrases (満足しているふりを|して
+      // いるわけでも|ありません); a particle itself never starts a row
       // and a run of Latin letters and figures stays whole (GPT-5.6)
-      const kana = /^[\p{Script=Hiragana}ー]/u.test(g) && !/[、。！？!?…\s]$/u.test(out[last] || '');
+      const kana = /^[\p{Script=Hiragana}ー]/u.test(g) && (PARTICLE.test(g) || !/[、。！？!?…：:\s]$/u.test(out[last] || '') && !PARTICLE.test(prev));
       const latin = /[\x21-\x7e]$/.test(out[last] || '') && /^[\x21-\x7e]/.test(g);
-      if (last >= 0 && (/^\s+$/.test(g) || kana || latin || NO_START.test(g) || NO_END.test(out[last]))) out[last] += g; else out.push(g);
+      // a figure keeps its counter (20|年 → 20年), and この・その・あの・どの the word they point at
+      const counted = /[0-9０-９]$/.test(out[last] || '') && /^[\p{Script=Han}\p{Script=Katakana}]/u.test(g);
+      const pointer = /^(この|その|あの|どの)$/.test(out[last] || '');
+      if (last >= 0 && (counted || pointer || /^\s+$/.test(g) || kana || latin || NO_START.test(g) || NO_END.test(out[last]))) out[last] += g; else out.push(g);
+      prev = g;
     }
     return out;
   };
@@ -124,7 +133,7 @@
   if (typeof captionAt === 'function') window.captionAt = captionAt = function (t, right = null) {
     const l = lineAt(t); if (!l || !l.spoken || t > l.end) return null;
     const txt = plainText(l.text).replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․');
-    const sentences = (I.cjk ? txt.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean) : txt.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])/u))
+    const sentences = (I.cjk ? txt.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean) : txt.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u))
       .map(x => x.replace(/․/g, '.'));
     const total = sentences.reduce((a, s) => a + s.length, 0); let acc = 0, cur = sentences[0];
     for (const s of sentences) { if ((t - l.t0) / Math.max(.01, l.t1 - l.t0) * total >= acc) cur = s; acc += s.length; }
