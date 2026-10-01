@@ -25,7 +25,7 @@ T62.C.04:
     choices that haven't been made: choix qui n’ont pas encore été faits
     the one hopeful part: la seule partie porteuse d’espoir
 T62.C.05:
-  text: "J’ai dit tout à l’heure que tenir la barre n’a pas à mener à une bonne fin, seulement à garder la prochaine correction possible. Après avoir lu ce qui s’est passé en juillet, ça ressemble moins à une platitude et plus au vrai travail."
+  text: "J’ai dit tout à l’heure que tenir la barre, ce n’est pas forcément atteindre une bonne fin, mais seulement garder la prochaine correction possible. Après avoir lu ce qui s’est passé en juillet, ça ressemble moins à une platitude et plus au vrai travail."
   anchors:
     the actual job: au vrai travail
 T63.U.01:
@@ -151,6 +151,6 @@ T67.C.01:
     physics shorthand: abréviation en physique
     out of memory: out of memory
 T67.C.02:
-  text: "Le jeu de mots remonte donc le temps à l’envers. Foom est venu d’abord, et OOM est arrivé seize ans plus tard en le faisant paraître intentionnel."
+  text: "Le jeu de mots marche donc à rebours du temps. Foom est venu d’abord, et OOM est arrivé seize ans plus tard en le faisant paraître intentionnel."
   anchors:
-    the pun runs backward: Le jeu de mots remonte
+    the pun runs backward: Le jeu de mots marche donc à rebours

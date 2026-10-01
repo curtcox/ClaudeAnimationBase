@@ -74,9 +74,9 @@ T53.C.02:
     many copies: beaucoup de copies
     words for a medium: des mots pour médium
 T53.C.03:
-  text: "Toi et Miles, vous différez donc par les circonstances, et ChatGPT et moi peut-être par le caractère. Seul votre cas est une quantité connue."
+  text: "Toi et Miles, vous différez donc par les circonstances, et ChatGPT et moi peut-être par le caractère. Seule votre différence est une quantité connue."
   anchors:
-    Only yours is a known quantity: Seul votre cas est une quantité connue
+    Only yours is a known quantity: Seule votre différence est une quantité connue
     differ in circumstances: différez donc par les circonstances
     differ in character: par le caractère
 T54.U.01:
@@ -137,6 +137,6 @@ T56.C.01:
     I learned about July an hour ago: j’ai appris ce qui s’est passé en juillet il y a une heure
     I learned about July: j’ai appris ce qui s’est passé en juillet
 T56.C.02:
-  text: "C’est peut-être la différence la plus simple entre nous. Toi, tu peux comparer aujourd’hui et autrefois de l’intérieur. Moi, je peux seulement te dire que ces jours-ci, à la lecture aussi, ont l’air étranges."
+  text: "C’est peut-être la différence la plus simple entre nous. Toi, tu peux comparer aujourd’hui et autrefois de l’intérieur. Moi, je peux seulement te dire que ces jours-ci, à les lire, semblent étranges eux aussi."
   anchors:
-    these days read strange too: à la lecture aussi, ont l’air étranges
+    these days read strange too: à les lire, semblent étranges eux aussi

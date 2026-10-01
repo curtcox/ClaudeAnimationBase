@@ -40,6 +40,7 @@ const cjkWords = s => {
   return out;
 };
 // Hindi: a postposition or auxiliary (में, का, है, था…) stays with the word before it, so no row starts with one
+const FR = /^fr\b/.test(LANG); // French sets a no-break space before a colon
 const HI = /^hi\b/.test(LANG), CLITIC = /^(में|का|की|के|को|से|पर|ने|तक|है|हैं|था|थी|थे|हो|हूँ|भी|ही|नहीं)[,।?!:;"”)]*$/u;
 const hiWords = s => s.split(' ').reduce((out, w) => (out.length && CLITIC.test(w) ? out[out.length - 1] += ' ' + w : out.push(w), out), []);
 const tokensOf = s => CJK ? cjkWords(s) : HI ? hiWords(s) : s.split(' ');
@@ -108,7 +109,7 @@ for (const c of film.chapters) {
       ps.forEach((p, pi) => {
         const t0 = s0 + a / s.length * (s1 - s0); a += p.length + GAP.length;
         const t1 = pi === ps.length - 1 ? s1 : s0 + a / s.length * (s1 - s0);
-        cues.push({ id: l.id, t0: c.start + t0, t1: c.start + t1, txt: (named && si === 0 && pi === 0 ? `${who}${CJK ? '：' : ': '}` : '') + p });
+        cues.push({ id: l.id, t0: c.start + t0, t1: c.start + t1, txt: (named && si === 0 && pi === 0 ? `${who}${CJK ? '：' : FR ? '\u00a0: ' : ': '}` : '') + p });
       });
       acc += s.length;
     });

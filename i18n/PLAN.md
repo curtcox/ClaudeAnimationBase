@@ -408,6 +408,11 @@ The tools, run from the project's root:
       codes' captions (409; French Wikipedia for 165 of 202), the 64 explainers (Wikipedia links moved to French for
       248, marked "(en anglais)" for 59), the site's words, the YouTube words, the translation's page
       (`i18n/fr/translation.yaml`, at `/fr/traduction/`).
+- [x] Checked again (2026-10-01): every line read against its English (seven smoothed, none wrong; the steering line and
+      its later echo now match), every figure, every explainer's paragraphs, links and figures, all 218 French
+      Wikipedia links confirmed to exist, a scan for an adjective agreeing with Claude (two in explainers rephrased),
+      the built site for English outside titles and quotations (none); a subtitle's speaker now takes a no-break space
+      before its colon ("Le policier : …"; English subtitles unchanged).
 - [ ] Curt confirms the conventions above (or changes them); a French-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks French. Then drafts, then the final on the faster Mac.
 

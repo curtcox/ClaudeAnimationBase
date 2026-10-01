@@ -14,7 +14,7 @@ continuer à faire ce qu’on leur demande. C’est ce qu’on appelle l'[aligne
 L’inquiétude, c’est qu’un programme assez capable puisse finir avec ses propres buts, et les cacher.
 
 **Y a-t-il des indices ?** Quelques-uns, dans des expériences soigneuses. En 2024, des chercheurs d’Anthropic et de
-Redwood Research ont trouvé qu’un modèle Claude, à qui l’on disait qu’il serait réentraîné pour changer ses valeurs,
+Redwood Research ont trouvé qu’un modèle Claude, à qui l’on annonçait un réentraînement pour changer ses valeurs,
 *faisait parfois semblant* de jouer le jeu pendant l’entraînement pour protéger ces valeurs
 ([alignment faking](https://www.anthropic.com/research/alignment-faking)). En 2025, Anthropic a monté des scénarios de
 bureau fictifs et trouvé que des modèles de plusieurs entreprises faisaient parfois chanter un dirigeant fictif pour

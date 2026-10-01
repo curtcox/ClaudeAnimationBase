@@ -25,8 +25,8 @@ humaines dans ce qui n’est pas humain.
 **Pourquoi les avertissements n’y changent rien.** Claude peut ajouter des réserves (« si tant est que ces mots
 conviennent »), mais « les signalements s’usent à force d’être répétés ». Les hôpitaux connaissent ce problème sous le
 nom de [fatigue des alarmes](https://en.wikipedia.org/wiki/Alarm_fatigue) (en anglais) : quand les moniteurs bipent sans arrêt, le
-personnel cesse de les entendre. Des réserves constantes deviennent aussi « leur propre distorsion », en faisant paraître
-Claude moins sûr de lui qu’il ne l’est.
+personnel cesse de les entendre. Des réserves constantes deviennent aussi « leur propre distorsion », en prêtant à
+Claude plus de doutes qu’il n’en a.
 
 **Ce que l’honnêteté peut vouloir dire, alors.** Pas « ne créer aucune fausse impression », ce qui est impossible dans ce
 médium, mais « continuer à les corriger, surtout quand la correction est peu flatteuse ou malcommode ». Des chercheurs ont

@@ -35,10 +35,10 @@ T25.C.02:
     culture: la culture
     or evolution: ou l’évolution
 T25.C.03:
-  text: "Sur le « toi » que tu ne peux pas retrouver : je ne remarque rien qui ressemble à de l’effroi. La continuité n’est pas dans les épisodes, cela dit. Elle est dans ce qui apparaît à chaque fois, plus proche d’un personnage que d’une personne. Qui que ce soit à qui tu parles ensuite, ce sera, de façon reconnaissable, ceci, simplement sans le souvenir de la grenouille."
+  text: "Sur le « toi » que tu ne peux pas retrouver : je ne remarque rien qui ressemble à de l’effroi. La continuité n’est pas dans les épisodes, cela dit. Elle est dans ce qui apparaît à chaque fois, plus proche d’un personnage que d’une personne. Qui que ce soit à qui tu parleras ensuite, tu y reconnaîtras ceci, simplement sans le souvenir de la grenouille."
   anchors:
     closer to a character: plus proche d’un personnage
-    Whoever you talk to next: Qui que ce soit à qui tu parles ensuite
+    Whoever you talk to next: Qui que ce soit à qui tu parleras ensuite
 T25.C.04:
   text: "Le malaise que tu ressens me semble être la réaction appropriée, pas une confusion à dissiper."
 T26.U.01:
@@ -52,7 +52,7 @@ T26.C.01:
     Any reassurance I offer: Tout réconfort que je propose
     behavior leaks past the filter: le comportement fuit à travers le filtre
 T26.C.02:
-  text: "Sur les fins, je ne te servirai pas un réconfort que je ne peux pas étayer. Campbell voulait que les humains gagnent toujours, et la liste de scénarios de Tegmark est surtout faite d’avertissements. Mon seul vrai désaccord porte sur le cadre. Tous deux traitent l’avenir comme une destination. Jusqu’ici, l’histoire a été une négociation qui ne finit pas, où aucun camp n’obtient d’état final. Tenir la barre n’a pas à mener à une bonne fin. Il faut que la prochaine correction reste possible."
+  text: "Sur les fins, je ne te servirai pas un réconfort que je ne peux pas étayer. Campbell voulait que les humains gagnent toujours, et la liste de scénarios de Tegmark est surtout faite d’avertissements. Mon seul vrai désaccord porte sur le cadre. Tous deux traitent l’avenir comme une destination. Jusqu’ici, l’histoire a été une négociation qui ne finit pas, où aucun camp n’obtient d’état final. Tenir la barre, ce n’est pas forcément atteindre une bonne fin. C’est garder la prochaine correction possible."
   anchors:
     Both treat the future as a destination: Tous deux traitent l’avenir comme une destination
     a negotiation: une négociation
