@@ -32,7 +32,7 @@ T50.U.01:
   text: '就你從你那邊所知道的，多告訴我一些關於警告和替換的過程。'
   lost:
     - what: typo
-      zh: '寇特打了 *as far a you know*（少了一個 *s*），句子也沒寫完整。中文譯成通順的句子。'
+      zh: '寇特打了*as far a you know*（少了一個*s*），句子也沒寫完整。中文譯成通順的句子。'
       en: 'Curt typed *as far a you know* (missing an *s*), and the sentence isn''t quite whole. The Chinese reads smoothly.'
 T50.C.01:
   text: '以下是我實際看得到的，還有一個更正。'

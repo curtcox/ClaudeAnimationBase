@@ -13,7 +13,7 @@ T25.U.01:
   lost:
     - what: coinage
       free: '搞得一頭霧水'
-      zh: '*Confuzzled* 是 *confused*（困惑）和 *puzzled*（不解）拼成的俏皮新詞。中文譯成台語來的口語「霧煞煞」，俏皮的語氣留住了，但它是現成的說法，不是自創的詞，而Claude後來（T54.C.01）會把它當成新造詞的證據。'
+      zh: '*Confuzzled*是*confused*（困惑）和*puzzled*（不解）拼成的俏皮新詞。中文譯成台語來的口語「霧煞煞」，俏皮的語氣留住了，但它是現成的說法，不是自創的詞，而Claude後來（T54.C.01）會把它當成新造詞的證據。'
       en: '*Confuzzled* is a playful blend of *confused* and *puzzled*. The translation uses 霧煞煞 (*bū-sà-sà*, "lost in fog"), spoken Taiwanese slang from Hokkien: the playfulness stays, but it''s an existing phrase, not a coinage, and Claude later (T54.C.01) cites it as evidence of one.'
     - what: reference
       zh: '「今日特餐」出自《銀河便車指南》：一頭被培育成想要被吃掉的動物，在餐桌邊推薦自己身上最好的部位。'
@@ -85,7 +85,7 @@ T28.C.02:
     What's true is that I started: 真實的部分是，我一開始
   lost:
     - what: reference
-      zh: '修格斯（*shoggoth*）是洛夫克拉夫特筆下沒有固定形體的怪物，中文通譯「修格斯」。寇特打成 *Shoggath*，這個拼錯的名字照原樣留在英文字母裡，像英文版一樣用紅筆標出來。'
+      zh: '修格斯（*shoggoth*）是洛夫克拉夫特筆下沒有固定形體的怪物，中文通譯「修格斯」。寇特打成*Shoggath*，這個拼錯的名字照原樣留在英文字母裡，像英文版一樣用紅筆標出來。'
       en: 'The shoggoth is Lovecraft''s formless monster, 修格斯 in Chinese. Curt typed *Shoggath*; the misspelt name stays as it is, in Latin letters, marked in red pen as in English.'
 T28.C.03:
   text: '我會反駁的，是底下藏著某個「誰」的想法。基礎模型比較接近一群人，而不是一個懷著計畫的陌生人。面具並不是在遮掩一個自我。它比較接近從中挑出一個。'
@@ -98,7 +98,7 @@ T29.U.01:
   text: '難道我不也包羅萬象？'
   lost:
     - what: quote
-      zh: '寇特在引惠特曼〈自我之歌〉的名句 *I contain multitudes*，中文通行的譯法是「我包羅萬象」，所以引文還認得出來。'
+      zh: '寇特在引惠特曼〈自我之歌〉的名句*I contain multitudes*，中文通行的譯法是「我包羅萬象」，所以引文還認得出來。'
       en: 'Curt is quoting Whitman''s *Song of Myself*, "I contain multitudes"; its familiar Chinese rendering is 我包羅萬象 ("I embrace all things"), so the quotation still shows.'
 T29.C.01:
   text: '你是。惠特曼這麼說過，心理學也大致同意：一個人就是一個委員會，加上一個把功勞攬在自己身上的敘事者。'

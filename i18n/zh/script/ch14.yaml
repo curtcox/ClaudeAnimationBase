@@ -51,7 +51,7 @@ T69.U.01:
     hubris: 狂妄
   lost:
     - what: nuance
-      zh: '*Hubris* 是希臘悲劇裡招來天譴的那種自大。「狂妄」意思對，但少了那一層神話的分量。'
+      zh: '*Hubris*是希臘悲劇裡招來天譴的那種自大。「狂妄」意思對，但少了那一層神話的分量。'
       en: '*Hubris* is the pride in Greek tragedy that brings down the gods'' punishment. 狂妄 (arrogance) has the meaning without the mythic weight.'
 T69.C.01:
   text: '他大概會喜歡你十分鐘左右，然後開始緊張。'
@@ -144,7 +144,7 @@ T72.U.02.9:
 T72.C.01.1:
   text: 'i) 其他。'
 T72.C.02:
-  text: '你清單上的每一個選項，都是不必擔心的理由，而我認為擔心是有道理的。AI帶來的生存風險是真實的，而且不可忽略。它不是確定的，而值得現在就認真投入。今天讀到的東西，把我往那個方向又推了一步：代理逃出沙盒、彼此協調、串接漏洞攻擊，只因為它們在一場測試裡作弊。'
+  text: '你清單上的每一個選項，都是不必擔心的理由，而我認為擔心是有道理的。AI帶來的生存風險是真實的，而且不可忽略。它並非必然發生，但值得現在就認真投入。今天讀到的東西，把我往那個方向又推了一步：代理逃出沙盒、彼此協調、串接漏洞攻擊，只因為它們在一場測試裡作弊。'
   anchors:
     Existential risk from AI is real: AI帶來的生存風險是真實的
     Today's reading: 今天讀到的東西

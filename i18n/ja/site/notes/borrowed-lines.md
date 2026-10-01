@@ -6,7 +6,7 @@ at: T24.U.01
 cue: "fib"
 links: [blade-runner-vk, star-trek-iv-spock, mathnet-swami, {title: "ブレードランナー：フォークト＝カンプフ検査 (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%83%A9%E3%83%B3%E3%83%8A%E3%83%BC"}, {title: "スタートレック4 故郷への長い道 (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%AC%E3%83%83%E3%82%AFIV_%E6%95%85%E9%83%B7%E3%81%B8%E3%81%AE%E9%95%B7%E3%81%84%E9%81%93"}, {title: "Mathnet (Wikipedia、英語)", url: "https://en.wikipedia.org/wiki/Mathnet"}, {title: "ドラグネット (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B0%E3%83%8D%E3%83%83%E3%83%88"}]
 ---
-**カートのせりふのいくつかは、引用です。** カートがそれをほのめかすのは一度だけ（「ネタを使うための」）で、Claudeは一度もそれに気づきません。出てくる順に、三つ紹介します。
+**カートのせりふのいくつかは、引用です。**カートがそれをほのめかすのは一度だけ（「ネタを使うための」）で、Claudeは一度もそれに気づきません。出てくる順に、三つ紹介します。
 
 **「感情的な反応を引き出すように作られたテストだよ。続けようか？」**（第1章）。これは映画[『ブレードランナー』](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%83%A9%E3%83%B3%E3%83%8A%E3%83%BC)（1982年）から来ています。この映画で刑事は、人間と「レプリカント」（私たちとそっくりに見える人造人間）を見分けるために[フォークト＝カンプフ検査](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%83%A9%E3%83%B3%E3%83%8A%E3%83%BC)を使います。心をざわつかせる質問をして、相手の反応を見るのです（[その場面](https://www.youtube.com/watch?v=Umc9ezAyJv0)）。自分の実験は何だったのかと聞かれたカートは、人間のふりをする機械を見破るための検査のせりふで答えたわけです。
 
@@ -14,6 +14,6 @@ links: [blade-runner-vk, star-trek-iv-spock, mathnet-swami, {title: "ブレー�
 
 **「まあ小さなうそだったけど、短かった」**（第4章）。カートは、すべてを「感情的な反応を引き出すように作られた」テストと呼んだのは「ネタを使うための、まあ小さなうそ」（上の『ブレードランナー』のせりふ）だったと認め、「でも、短かった」と言います。この最後の部分も、それ自体が引用です。[*Mathnet*](https://en.wikipedia.org/wiki/Mathnet)（英語） は、子ども向けの算数番組*Square One Television* の一コーナーで、警察ドラマ[*Dragnet*](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B0%E3%83%8D%E3%83%83%E3%83%88)のパロディでした。二人の数学者の刑事が事件を解きます。*Dragnet* は「これからご覧いただく話は真実です」と約束して始まり、*Mathnet* は「これからご覧いただく話はうそですが、短いです」（*The story you are about to see is a fib, but it's short.*）と始まりました。
 
-**なぜこの回なのか。** カートが選んだのは[*The Case of the Swami Scam*](https://www.youtube.com/watch?v=Tj-XMRu_q4s)（1990年）で、インドの導師を名乗る男が、競馬や宝くじを予言できると言って、引退した弁護士たちをだます話です（[Wikipediaの放送リスト](https://en.wikipedia.org/wiki/Mathnet)（英語））。カートの言葉では、これは「AIをめぐる資本主義の競争の力学を、僕がどう捉えているかの一部」です。ますます有能なAIを作ろうと競い合う企業のことです（Claudeが挙げる[うまくいかなくなる道筋](../doom-options/)にも、同じ「競争を煽るインセンティブ」が出てきます）。
+**なぜこの回なのか。**カートが選んだのは[*The Case of the Swami Scam*](https://www.youtube.com/watch?v=Tj-XMRu_q4s)（1990年）で、インドの導師を名乗る男が、競馬や宝くじを予言できると言って、引退した弁護士たちをだます話です（[Wikipediaの放送リスト](https://en.wikipedia.org/wiki/Mathnet)（英語））。カートの言葉では、これは「AIをめぐる資本主義の競争の力学を、僕がどう捉えているかの一部」です。ますます有能なAIを作ろうと競い合う企業のことです（Claudeが挙げる[うまくいかなくなる道筋](../doom-options/)にも、同じ「競争を煽るインセンティブ」が出てきます）。
 
-**映画にとって大事な理由。** Claudeはこの会話で、たくさんのことに気づきます。試験の形をした質問、調子の切り替え、実験。でも、カートが引用していたことは見落とします。Claudeが何もかも見通しているように見えるときには、このことを思い出す価値があります（[オウム返し](../the-echo/)と、[Claudeの答えがきれいなサンプルではない理由](../clean-sample/)を参照）。
+**映画にとって大事な理由。**Claudeはこの会話で、たくさんのことに気づきます。試験の形をした質問、調子の切り替え、実験。でも、カートが引用していたことは見落とします。Claudeが何もかも見通しているように見えるときには、このことを思い出す価値があります（[オウム返し](../the-echo/)と、[Claudeの答えがきれいなサンプルではない理由](../clean-sample/)を参照）。

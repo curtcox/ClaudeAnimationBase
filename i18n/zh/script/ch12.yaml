@@ -14,7 +14,7 @@ T57.C.02:
     That's also how: 我也是這樣
   lost:
     - what: reference
-      zh: '*Magikarp* 是寶可夢的「鯉魚王」。拼法的玩笑（c還是k）只存在於英文名字裡，所以英文名字留著，中文名字放在括號裡。'
+      zh: '*Magikarp*是寶可夢的「鯉魚王」。拼法的玩笑（c還是k）只存在於英文名字裡，所以英文名字留著，中文名字放在括號裡。'
       en: '*Magikarp* is the Pokémon called 鯉魚王 ("carp king") in Chinese. The spelling joke (c or k) exists only in the English name, so the English stays, with the Chinese in brackets.'
 T57.C.03:
   text: '**數字母很難。**我看到的是一塊一塊的碎片，不是一個一個的字母。每塊碎片裡面的拼法，我只是間接學到的，而數字母需要跨越碎片邊界、逐字精確地記帳。就像要你數一個英文單字裡有幾個e，而你從來只把那個字當成一整個形狀來看。（比較新的模型在這方面好很多，部分是因為它們會先把字拼出來。）'
@@ -50,7 +50,7 @@ T59.C.01:
     single fast pass: 一次快速的單趟運算
   lost:
     - what: reference
-      zh: '「系統一」和「系統二」出自康納曼的《快思慢想》：快速、自動的直覺，和緩慢、費力的推理。寇特說的 *type one thinking* 就是指前者。'
+      zh: '「系統一」和「系統二」出自康納曼的《快思慢想》：快速、自動的直覺，和緩慢、費力的推理。寇特說的*type one thinking*就是指前者。'
       en: 'System 1 and System 2 are from Kahneman''s *Thinking, Fast and Slow* (Chinese title 《快思慢想》): quick automatic intuition and slow effortful reasoning. Curt''s *type one thinking* means the first.'
 T59.C.02:
   text: '讓我擁有類似系統二的東西，是把思考說出來，不管是在隱藏的推理步驟裡，還是在頁面上，這樣我就能在拍板之前先檢查答案。這有幫助，但不是解藥。就像人一樣，我可以推理很久，最後卻還是在替第一個冒出來的答案找理由。'

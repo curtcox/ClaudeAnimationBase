@@ -7,7 +7,7 @@ T73.U.01:
   lost:
     - what: wordplay
       free: '「AI對齊的對齊圖」'
-      zh: '*Alignment chart*（陣營九宮格）是龍與地下城裡「守序善良、混亂邪惡」那種網格，網路迷因常用它來分類東西；*AI alignment*（AI對齊）則是讓AI的目標和人類一致的研究。英文的 *alignment alignment* 是同一個字的雙關，中文只能分成「對齊」和「陣營」兩個詞。'
+      zh: '*Alignment chart*（陣營九宮格）是龍與地下城裡「守序善良、混亂邪惡」那種網格，網路迷因常用它來分類東西；*AI alignment*（AI對齊）則是讓AI的目標和人類一致的研究。英文的*alignment alignment*是同一個字的雙關，中文只能分成「對齊」和「陣營」兩個詞。'
       en: 'An *alignment chart* is the Dungeons & Dragons grid (lawful good, chaotic evil) that memes use to sort things; *AI alignment* is the work of making AI''s goals match ours. *Alignment alignment* is one word twice; Chinese has to split it into 對齊 (aligning) and 陣營 (camp).'
 T73.C.01:
   text: '> _[工具：搜尋網路]_'

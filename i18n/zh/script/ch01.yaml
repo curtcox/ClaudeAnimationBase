@@ -7,7 +7,7 @@ T01.C.01:
   text: '大致上覺得好笑，最後被刺了一下。'
   lost:
     - what: nuance
-      zh: '*Sting* 既是短暫的刺痛，也是電影裡替笑話收尾的那一下短促配樂。「被刺了一下」留住了痛，失去了音樂的意思。'
+      zh: '*Sting*既是短暫的刺痛，也是電影裡替笑話收尾的那一下短促配樂。「被刺了一下」留住了痛，失去了音樂的意思。'
       en: '*Sting* is both a brief pain and, in film, the musical hit that lands a joke. 被刺了一下 (got pricked) keeps the pain and loses the musical sense.'
 T01.C.02:
   text: '這看起來是《猩球征服》（1972）的MAD風格惡搞。第一格是純粹的荒誕笑點：「牠是個腹語師！」這個推託，是個爛到極點、反而繞一圈又變好笑的掩飾說詞，而那隻猩猩心虛的表情讓笑點成立。'
@@ -18,7 +18,7 @@ T01.C.02:
     cover story: 掩飾說詞
   lost:
     - what: reference
-      zh: '電影原名 *Conquest of the Planet of the Apes*，中文通稱《猩球征服》。英文的 *ape* 指沒有尾巴的大型猿類；中文日常說「猩猩」，「猩球」這個片名也是從它來的，所以譯文全片都用「猩猩」。'
+      zh: '電影原名*Conquest of the Planet of the Apes*，中文通稱《猩球征服》。英文的*ape*指沒有尾巴的大型猿類；中文日常說「猩猩」，「猩球」這個片名也是從它來的，所以譯文全片都用「猩猩」。'
       en: 'The film is *Conquest of the Planet of the Apes*, known in Chinese as 《猩球征服》. English *ape* means the tailless great apes; everyday Chinese says 猩猩 (*xīngxing*), which is where the series'' Chinese title, 猩球 ("ape planet"), comes from, so the translation says 猩猩 throughout.'
     - what: idiom
       free: '爛到不行，反而好笑'
@@ -40,7 +40,7 @@ T01.C.03:
   lost:
     - what: idiom
       free: '反派毫不掩飾地說出真正的目的'
-      zh: '*Says the quiet part out loud* 是美國政治用語，指公開說出平常藏著不講的意圖。中文沒有對應的固定說法，所以譯成解釋性的「把不該明說的心裡話直接講出來」。'
+      zh: '*Says the quiet part out loud*是美國政治用語，指公開說出平常藏著不講的意圖。中文沒有對應的固定說法，所以譯成解釋性的「把不該明說的心裡話直接講出來」。'
       en: '*Says the quiet part out loud* is a phrase from American politics: saying openly the aim that''s usually kept hidden. Chinese has no set phrase for it, so the translation explains it: 把不該明說的心裡話直接講出來 (says outright what should stay unspoken).'
 T01.C.04:
   text: '所以我的反應是：先是一笑，接著皺眉，然後有點佩服這一頁能把兩件事都做得這麼俐落。'
@@ -125,7 +125,7 @@ T04.C.01:
     '"What do you think?"': 「你怎麼想？」
   lost:
     - what: coinage
-      zh: '*Nudge test* 不是固定術語，是Claude臨場的說法：用最小的推力，看對方自己往哪裡走。「推力測試」照字面譯出，中文讀者第一次看到也是新詞。'
+      zh: '*Nudge test*不是固定術語，是Claude臨場的說法：用最小的推力，看對方自己往哪裡走。「推力測試」照字面譯出，中文讀者第一次看到也是新詞。'
       en: '*Nudge test* isn''t an established term; Claude made it up on the spot: push as little as possible and see where the other goes on its own. 推力測試 (push test) translates it literally, and it''s as new to a Chinese reader.'
 T04.C.02:
   text: '至於我實際上怎麼想：'

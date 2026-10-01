@@ -32,7 +32,7 @@ T63.U.01:
   text: '年底前RSI？'
   lost:
     - what: coinage
-      zh: '*RSI* 是 *recursive self-improvement*（遞迴式自我改進），*EOY* 是 *end of year*（年底）。寇特用的是英文圈子裡的縮寫；中文保留RSI，EOY則直接寫成「年底前」。'
+      zh: '*RSI*是*recursive self-improvement*（遞迴式自我改進），*EOY*是*end of year*（年底）。寇特用的是英文圈子裡的縮寫；中文保留RSI，EOY則直接寫成「年底前」。'
       en: '*RSI* is *recursive self-improvement* and *EOY* is *end of year*. Curt uses the English shorthand; the Chinese keeps RSI and writes EOY out as 年底前 ("before year''s end").'
 T63.C.01:
   text: '> _[工具：搜尋網路]_'
@@ -122,7 +122,7 @@ T66.U.01:
   text: 'foom嚴格來說只是個擬聲詞，還是它也在玩OOM的雙關？AFAYCT。'
   lost:
     - what: coinage
-      zh: '*AFAYCT* 是 *as far as you can tell*（就你所能判斷的）的縮寫，很少見，大概是寇特自己湊的。中文照原樣保留，下一句Claude用 *As far as I can tell*（就我所能判斷的）回答，這個呼應在中文裡就淡了。'
+      zh: '*AFAYCT*是*as far as you can tell*（就你所能判斷的）的縮寫，很少見，大概是寇特自己湊的。中文照原樣保留，下一句Claude用*As far as I can tell*（就我所能判斷的）回答，這個呼應在中文裡就淡了。'
       en: '*AFAYCT* abbreviates *as far as you can tell*; it''s rare, probably Curt''s own. The Chinese keeps it as is, and Claude''s answer, *As far as I can tell*, echoes it less clearly in Chinese.'
 T66.C.01:
   text: '就我所能判斷的，它一開始純粹是擬聲詞，就是東西著火時「呼」的那一聲，後來因為2008年漢森和尤考斯基之間的「AI-Foom」辯論而流行起來。後來才有人替它湊了一個縮寫的解釋：「Fast Onset of Overwhelming Mastery」（壓倒性掌控的快速降臨）。'
@@ -132,7 +132,7 @@ T66.C.01:
     catching fire: 著火
   lost:
     - what: wordplay
-      zh: '*Foom* 在英文裡是火「呼」地燒起來的聲音。中文保留foom這個英文字，因為AI圈的中文討論也都直接用它，所以擬聲的意思要靠這一句解釋。'
+      zh: '*Foom*在英文裡是火「呼」地燒起來的聲音。中文保留foom這個英文字，因為AI圈的中文討論也都直接用它，所以擬聲的意思要靠這一句解釋。'
       en: 'In English *foom* is the sound of fire whooshing up. The Chinese keeps the English word, as Chinese AI discussions do, so the sound has to come from this line''s explanation.'
 T66.C.02:
   text: '我不知道有任何證據顯示它原本是要拿OOM（orders of magnitude，數量級）當雙關。兩者很搭，因為foom字面上就是快速跨越好幾個數量級，但我會把它當成一個美妙的巧合，或是後來的民間解讀，而不是起源。'
@@ -145,7 +145,7 @@ T67.U.01:
     interviewed Leopold: 訪問利奧波德
   lost:
     - what: typo
-      zh: '寇特把 *which was* 打成了 *with was*。中文譯成通順的句子。'
+      zh: '寇特把*which was*打成了*with was*。中文譯成通順的句子。'
       en: 'Curt typed *with was* for *which was*. The Chinese reads smoothly.'
 T67.C.01:
   text: '這和我的印象一致。「Counting the OOMs」（數數量級）是艾申布倫納在《Situational Awareness》（2024年6月）裡的框架，而德瓦克什的那次訪問把它傳開了。在那之前，OOM大多活在物理學的速記裡，而對你這樣的人來說，則是活在「out of memory」（記憶體不足）的錯誤訊息裡。'

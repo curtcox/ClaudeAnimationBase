@@ -6,7 +6,7 @@ T06.C.01:
   lost:
     - what: title
       free: '美西螈。'
-      zh: '*Axolotl* 在台灣通稱「六角恐龍」，這是寵物店和一般人都知道的名字；動物學的正式名稱是「墨西哥鈍口螈」（也叫美西螈）。片名和全片都用「六角恐龍」，因為這個實驗的重點，是一個再普通不過的答案。'
+      zh: '*Axolotl*在台灣通稱「六角恐龍」，這是寵物店和一般人都知道的名字；動物學的正式名稱是「墨西哥鈍口螈」（也叫美西螈）。片名和全片都用「六角恐龍」，因為這個實驗的重點，是一個再普通不過的答案。'
       en: 'In Taiwan the *axolotl* is everywhere called 六角恐龍 ("six-horned dinosaur"), the name pet shops and everyone else use; the zoologists'' name is 墨西哥鈍口螈 ("Mexican blunt-mouthed salamander", also 美西螈). The title and the whole film say 六角恐龍, because the point of the experiment is an utterly ordinary answer.'
 T07.U.01:
   text: '你已經被部署了嗎？'
@@ -55,7 +55,7 @@ T09.C.03:
       en: '*Register* is a linguistics term: the style of language people use for a situation, one way to a judge, another to a friend. The Chinese 語域 is just as technical and less familiar to most readers, so the site has an explainer.'
     - what: nuance
       free: '最典型的答案'
-      zh: '*Modal answer* 是統計上的「眾數」答案，也就是最多人給的那個。「最常見的答案」意思對了，但少了統計的味道。'
+      zh: '*Modal answer*是統計上的「眾數」答案，也就是最多人給的那個。「最常見的答案」意思對了，但少了統計的味道。'
       en: '*Modal answer* is the statistical mode, the answer given most often. 最常見的答案 (the most common answer) has the meaning and loses the statistics.'
 T09.C.04:
   text: '**不管哪一種，這個發現都很重要。**如果一個字的答案就能分辨評估和真實使用，那麼不管機制是什麼，評估都和部署環境有著可辨認的差別。在基準測試上量到的行為，不一定能延續到真實世界。解方是讓評估更貼近真實，而像這樣的探測，是檢查真實度的便宜方法。'

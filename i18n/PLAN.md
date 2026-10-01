@@ -309,6 +309,12 @@ The tools, run from the project's root:
       `/zh/fanyi/`), both thumbnails.
 - [x] Every chapter probed: nothing lettered in English, every cue anchored, no errors; frames of chapters 1, 7 and 14
       checked by eye (2026-10-01).
+- [x] Checked again (2026-10-01): every line read against its English (one clause smoothed), every figure, every
+      explainer's paragraphs, links and figures; no 他 or 她 for Claude anywhere, no 您 outside a quotation; no space
+      between Chinese and an italic English word in the notes; frames of chapters 6, 12 and 15 by eye. The translation's
+      page now turns bold and italics touching Chinese or Japanese into HTML first, as the rest of the site does (raw
+      `**` had shown there in both), and the Japanese and Chinese explainers lose the space after a bold lead-in
+      ("**為什麼。**不是…"), which showed as a gap after the full-width stop.
 - [ ] Curt confirms the conventions above (or changes them); a Chinese-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks Mandarin. Then drafts, then the final on the faster Mac.
 
