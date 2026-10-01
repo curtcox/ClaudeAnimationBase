@@ -5,18 +5,12 @@ film_title: カエルか、ウーパールーパーか
 index_title: 'カエルか、ウーパールーパーか：リンク集'
 explained: 解説
 index_intro: >-
-  <p>カートと、AIプログラムのClaudeとが交わした、土曜の朝の長い会話をもとにしたアニメーション映画です。会話はSF、哲学、
-  そして最近のAIのニュースをあちこち巡るので、ほとんどの人が知らない話題でいっぱいです。</p><p>そのすべてを、ここに
-  章ごと、順番に並べました。リンクだけでは足りないところには、わかりやすい短い解説をつけています。
-  <strong>黄色いものが解説です。</strong>映画のどこかでわからなくなったら、そこから始めてください。</p>
-  <p class="note">これは日本語版です。映画とこのサイトは、Claudeが人の校閲なしに、わざとそのまま翻訳しました：
-  <a href="honyaku/">どう翻訳したか、何が失われたか</a>。英語の元のサイトは
-  <a href="../">curtcox.github.io/axol-f</a> にあります。</p>
+  <p>カートと、AIプログラムのClaudeとが交わした、土曜の朝の長い会話をもとにしたアニメーション映画です。会話はSF、哲学、そして最近のAIのニュースをあちこち巡るので、ほとんどの人が知らない話題でいっぱいです。</p><p>そのすべてを、ここに章ごと、順番に並べました。リンクだけでは足りないところには、わかりやすい短い解説をつけています。<strong>黄色いものが解説です。</strong>映画のどこかでわからなくなったら、そこから始めてください。</p>
+  <p class="note">これは日本語版です。映画とこのサイトは、Claudeが人の校閲なしに、わざとそのまま翻訳しました：<a href="honyaku/">どう翻訳したか、何が失われたか</a>。英語の元のサイトは<a href="../">curtcox.github.io/axol-f</a> にあります。</p>
 watch_film: ▶ 映画を観る
 watch_film_after: '（出てくるリンクを、そのつど横に並べて）。'
 on_its_way: >-
-  映画は準備中です。リンクと解説は、もう全部ここにあります。待ちきれませんか？ この映画はすべてコードで作られているので、
-  自分で作ることもできます：<a href="{repo}">コードを入手して</a>、<code>npm start</code> を実行してください。
+  映画は準備中です。リンクと解説は、もう全部ここにあります。待ちきれませんか？ この映画はすべてコードで作られているので、自分で作ることもできます：<a href="{repo}">コードを入手して</a>、<code>npm start</code> を実行してください。
 two_conversations: 二つの会話
 conversation_shown: 映画が見せる会話
 conversation_shown_after: '、一字一句の翻訳（<a href="conversation.txt">テキスト</a>）。'
@@ -26,22 +20,14 @@ conversation_made: 映画を作った会話
 conversation_made_after: '：カートがClaudeに映画作りを頼み、Claudeがしたことのすべて（英語。<a href="{href}making-of.txt">テキスト</a>）。'
 chapters: 章
 index_notes: >-
-  <p class="note">解説は、映画の中のAIであるClaudeがこのサイトのために書き、リンク先の出典と照らし合わせたものです。
-  出典の多くは英語です。映画が完成するまでに、時刻は少し変わるかもしれません。</p>
-  <p class="note">この映画は、Claudeがコードで描いています。カートは、同じやり方で作られた以前の映画
-  <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a>（その解説サイト、英語）を通して、
-  土台になるコードに出会いました。</p>
-  <p class="note">このサイトの名前が <em>axol-f</em> なのはなぜ？ ウーパールーパーの英語名 axolotl は、
-  <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">クレイジー・フロッグの「Axel F」</a>と一文字違いだからです：
-  カエルか、ウーパールーパーか。</p>
+  <p class="note">解説は、映画の中のAIであるClaudeがこのサイトのために書き、リンク先の出典と照らし合わせたものです。出典の多くは英語です。映画が完成するまでに、時刻は少し変わるかもしれません。</p>
+  <p class="note">この映画は、Claudeがコードで描いています。カートは、同じやり方で作られた以前の映画<a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a>（その解説サイト、英語）を通して、土台になるコードに出会いました。</p>
+  <p class="note">このサイトの名前が <em>axol-f</em> なのはなぜ？ ウーパールーパーの英語名 axolotl は、<a href="https://www.youtube.com/watch?v=k85mRPqvMbE">クレイジー・フロッグの「Axel F」</a>と一文字違いだからです：カエルか、ウーパールーパーか。</p>
 going_to: 移動先
 conversation_title: 会話
 conversation_crumb: 会話
 conversation_intro: >-
-  <p>映画のもとになった、カートとClaudeの会話の全文です。一字一句、章ごとに、映画の翻訳で載せています。英語の原文は
-  <a href="{orig}">claude.ai</a> にあります。<a href="../conversation.txt">テキスト</a>もあり、
-  <a href="../honyaku/zenbun/">英語と日本語を並べた全文</a>で読み比べることもできます。それに、
-  <a href="{making_of}">映画を作った会話</a>（英語）もあります。</p>
+  <p>映画のもとになった、カートとClaudeの会話の全文です。一字一句、章ごとに、映画の翻訳で載せています。英語の原文は<a href="{orig}">claude.ai</a> にあります。<a href="../conversation.txt">テキスト</a>もあり、<a href="../honyaku/zenbun/">英語と日本語を並べた全文</a>で読み比べることもできます。それに、<a href="{making_of}">映画を作った会話</a>（英語）もあります。</p>
 the_original: 原文
 watch_chapter: ▶ この章を、リンクを横に並べて観る
 chapter: 章
@@ -54,8 +40,7 @@ film_local_draft: このコンピューターで作った最新の下書き
 film_preview: 試写版です。完成した映画はYouTubeに上がります
 this_is: 'これは{what}です。'
 on_its_way_film: >-
-  映画は準備中です。リンクは、もう全部ここに、時刻順にあります。待ちきれませんか？ この映画はすべてコードで作られて
-  いるので、自分で作ることもできます：<a href="{repo}">コードを入手して</a>、<code>npm start</code> を実行してください。
+  映画は準備中です。リンクは、もう全部ここに、時刻順にあります。待ちきれませんか？ この映画はすべてコードで作られているので、自分で作ることもできます：<a href="{repo}">コードを入手して</a>、<code>npm start</code> を実行してください。
 watch: 観る
 the_film: 映画
 watch_crumb: 観る
@@ -70,8 +55,7 @@ badge_source: 出典
 transcript_head: |-
   # 会話の書き起こし（日本語訳）
 
-  原文（英語）：https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
-  翻訳：Claude、人の校閲なし。どう翻訳したか：https://curtcox.github.io/axol-f/ja/honyaku/
+  原文（英語）：https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296翻訳：Claude、人の校閲なし。どう翻訳したか：https://curtcox.github.io/axol-f/ja/honyaku/
 on_youtube: YouTubeで観る
 on_youtube_after: '（同じ映画に、YouTubeのコメントと章がついています）。'
 home_alt: '{title}：トップページに戻る'

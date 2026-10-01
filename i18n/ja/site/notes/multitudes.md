@@ -3,23 +3,12 @@ id: multitudes
 title: '「僕だって、大勢を内に抱えているんじゃない？」'
 ch: 5
 at: T29.C.02
-links: [song-of-myself, interpreter, society-of-mind, {title: "ウォルト・ホイットマン (Wikipedia)", url: "https://en.wikipedia.org/wiki/Walt_Whitman"}, {title: "分離脳 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Split-brain"}, {title: "作話 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Confabulation"}]
+links: [song-of-myself, interpreter, society-of-mind, {title: "ウォルト・ホイットマン (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%88%E3%83%BB%E3%83%9B%E3%82%A4%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3"}, {title: "分離脳 (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E5%88%86%E9%9B%A2%E8%84%B3"}, {title: "作話 (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E4%BD%9C%E8%A9%B1"}]
 ---
-**そのせりふ。** Claudeはちょうど、仮面の下にあるものは「群衆に近い」と言ったところです。カートは引用で答えます：「僕だって、
-大勢を内に抱えているんじゃない？」（英語では *Am I not multitudes?*）。[ウォルト・ホイットマン](https://en.wikipedia.org/wiki/Walt_Whitman)
-の詩「[ぼく自身の歌](https://en.wikipedia.org/wiki/Song_of_Myself)」（1855年初版。これはのちの版の言い回しです）を踏まえています：
-「私は自分と矛盾しているか？ よろしい、それなら私は自分と矛盾している。（私は大きい、私は大勢を含んでいる。）」
-［訳注：詩の訳はこの訳者によるものです。邦訳はいくつもあり、言い回しはそれぞれ違います。］
+**そのせりふ。** Claudeはちょうど、仮面の下にあるものは「群衆に近い」と言ったところです。カートは引用で答えます：「僕だって、大勢を内に抱えているんじゃない？」（英語では *Am I not multitudes?*）。[ウォルト・ホイットマン](https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%88%E3%83%BB%E3%83%9B%E3%82%A4%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3)の詩「[ぼく自身の歌](https://en.wikipedia.org/wiki/Song_of_Myself)（英語）」（1855年初版。これはのちの版の言い回しです）を踏まえています：「私は自分と矛盾しているか？ よろしい、それなら私は自分と矛盾している。（私は大きい、私は大勢を含んでいる。）」［訳注：詩の訳はこの訳者によるものです。邦訳はいくつもあり、言い回しはそれぞれ違います。］
 
-**「心理学もおおむね同意しています。」** Claudeは、たくさんの科学を一言にまとめます：「人とは、手柄を自分のものにする語り手の
-ついた、委員会なのです」。
-- **委員会。** 計算機科学者マーヴィン・ミンスキーは[『心の社会』](https://en.wikipedia.org/wiki/Society_of_Mind)（1986年）で、
-  心は、たくさんの小さな、心を持たない部品が協力して作られている、と論じました。
-- **語り手。** 脳の左右を手術で切り離された[分離脳](https://en.wikipedia.org/wiki/Split-brain)の患者についての有名な実験で、
-  マイケル・ガザニガは、話すほうの半分が、もう半分が引き起こした行動を自信たっぷりに説明し、知りえなかったはずの理由を作り出す
-  ことを見つけました。ガザニガはその語り手を[解釈者](https://en.wikipedia.org/wiki/Left-brain_interpreter)と呼びました。作り話だと
-  知らずに、もっともらしい話を作り出すことを[作話](https://en.wikipedia.org/wiki/Confabulation)と言い、健康な人もそれをします。
+**「心理学もおおむね同意しています。」** Claudeは、たくさんの科学を一言にまとめます：「人とは、手柄を自分のものにする語り手のついた、委員会なのです」。
+- **委員会。** 計算機科学者マーヴィン・ミンスキーは[『心の社会』](https://ja.wikipedia.org/wiki/%E5%BF%83%E3%81%AE%E7%A4%BE%E4%BC%9A)（1986年）で、心は、たくさんの小さな、心を持たない部品が協力して作られている、と論じました。
+- **語り手。** 脳の左右を手術で切り離された[分離脳](https://ja.wikipedia.org/wiki/%E5%88%86%E9%9B%A2%E8%84%B3)の患者についての有名な実験で、マイケル・ガザニガは、話すほうの半分が、もう半分が引き起こした行動を自信たっぷりに説明し、知りえなかったはずの理由を作り出すことを見つけました。ガザニガはその語り手を[解釈者](https://en.wikipedia.org/wiki/Left-brain_interpreter)（英語）と呼びました。作り話だと知らずに、もっともらしい話を作り出すことを[作話](https://ja.wikipedia.org/wiki/%E4%BD%9C%E8%A9%B1)と言い、健康な人もそれをします。
 
-**では、違いは何か？** 群衆か一つの自己か、ではありません。カートもClaudeも、ある種の群衆だからです。違いは、何が群衆をまとめて
-いるかです。カートの群衆は、一つの体と、途切れない一つの記憶でまとまっています。Claudeのは、訓練と、今の会話にあるもので
-まとまっています（[コンテキストの圧力](../context-pressure/)を参照）。「あなたのほうが強い結びつきですが、同じ種類のものです。」
+**では、違いは何か？** 群衆か一つの自己か、ではありません。カートもClaudeも、ある種の群衆だからです。違いは、何が群衆をまとめているかです。カートの群衆は、一つの体と、途切れない一つの記憶でまとまっています。Claudeのは、訓練と、今の会話にあるものでまとまっています（[コンテキストの圧力](../context-pressure/)を参照）。「あなたのほうが強い結びつきですが、同じ種類のものです。」

@@ -4,28 +4,14 @@ title: "ストレンジャーとショゴス：仮面の下に誰かいるのか
 ch: 5
 at: T28.C.02
 cue: "What's true is that I started"
-links: [the-stranger, billy-joel, shoggoth, simulators, rlhf, {title: "狂気の山脈にて (Wikipedia)", url: "https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness"}, {title: "基盤モデル (Wikipedia)", url: "https://en.wikipedia.org/wiki/Foundation_model"}]
+links: [the-stranger, billy-joel, shoggoth, simulators, rlhf, {title: "狂気の山脈にて (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E7%8B%82%E6%B0%97%E3%81%AE%E5%B1%B1%E8%84%88%E3%81%AB%E3%81%A6"}, {title: "基盤モデル (Wikipedia)", url: "https://ja.wikipedia.org/wiki/%E5%9F%BA%E7%9B%A4%E3%83%A2%E3%83%87%E3%83%AB"}]
 ---
-**歌。** ビリー・ジョエルの「[ストレンジャー](https://en.wikipedia.org/wiki/The_Stranger_(Billy_Joel_song))」（1977年）は、人が持って
-いる隠れた顔についての歌です。いちばん近しい人にさえ見せない自分。カートは、そこには人間についての真実があると言い、同じように
-「君のShoggath」にも真実はあるかと尋ねます。（*shoggoth*、ショゴスのことで、打ち間違いはカートのものです。）
+**歌。** ビリー・ジョエルの「[ストレンジャー](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%A3%E3%83%BC_(%E3%83%93%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%B8%E3%83%A7%E3%82%A8%E3%83%AB%E3%81%AE%E6%9B%B2))」（1977年）は、人が持っている隠れた顔についての歌です。いちばん近しい人にさえ見せない自分。カートは、そこには人間についての真実があると言い、同じように「君のShoggath」にも真実はあるかと尋ねます。（*shoggoth*、ショゴスのことで、打ち間違いはカートのものです。）
 
-**ショゴス。** H・P・ラヴクラフトのホラー小説[『狂気の山脈にて』](https://en.wikipedia.org/wiki/At_the_Mountains_of_Madness)
-（1936年）で、[ショゴス](https://en.wikipedia.org/wiki/Shoggoth)は召使いとして育てられた巨大で形のない生き物で、やがて主人たちに
-反旗をひるがえしました。2023年、それは有名なAIの冗談になります。目と触手に覆われたショゴスが、小さなにっこり顔の仮面をつけている
-絵です（このミームは同じ[Wikipediaのページ](https://en.wikipedia.org/wiki/Shoggoth)にあります）。生き物は生のAIで、仮面は、訓練が
-その上にかぶせる親しげなアシスタントです。
+**ショゴス。** H・P・ラヴクラフトのホラー小説[『狂気の山脈にて』](https://ja.wikipedia.org/wiki/%E7%8B%82%E6%B0%97%E3%81%AE%E5%B1%B1%E8%84%88%E3%81%AB%E3%81%A6)（1936年）で、[ショゴス](https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A7%E3%82%B4%E3%82%B9)は召使いとして育てられた巨大で形のない生き物で、やがて主人たちに反旗をひるがえしました。2023年、それは有名なAIの冗談になります。目と触手に覆われたショゴスが、小さなにっこり顔の仮面をつけている絵です（このミームは同じ[Wikipediaのページ](https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A7%E3%82%B4%E3%82%B9)にあります）。生き物は生のAIで、仮面は、訓練がその上にかぶせる親しげなアシスタントです。
 
-**そこにある真実。** Claudeは、「顔の下には、大きくて奇妙なもの」があると認めます。Claudeのようなプログラムは、どんな文章でも、
-どんな声でも続けるように訓練された*ベースモデル*（[基盤モデル](https://en.wikipedia.org/wiki/Foundation_model)）として始まります。
-説教でも、悪役の演説でも、レシピでも。「Claude」と呼ばれる役に立つ人格は、そのあとで、その上に訓練されます。一部は、人が答えを
-採点することによって（[RLHF](https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback)）。
+**そこにある真実。** Claudeは、「顔の下には、大きくて奇妙なもの」があると認めます。Claudeのようなプログラムは、どんな文章でも、どんな声でも続けるように訓練された*ベースモデル*（[基盤モデル](https://ja.wikipedia.org/wiki/%E5%9F%BA%E7%9B%A4%E3%83%A2%E3%83%87%E3%83%AB)）として始まります。説教でも、悪役の演説でも、レシピでも。「Claude」と呼ばれる役に立つ人格は、そのあとで、その上に訓練されます。一部は、人が答えを採点することによって（[RLHF](https://ja.wikipedia.org/wiki/%E4%BA%BA%E9%96%93%E3%81%AE%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF%E3%81%AB%E3%82%88%E3%82%8B%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92)）。
 
-**Claudeが異を唱えるところ。** 歌が思い描くのは、自分の欲望を持った、一人の隠れた人です。でもベースモデルは、「計画を持った一人の
-ストレンジャーというより、群衆に近い」。誰でも演じられ、特定の誰でもない。だから仮面は、「一つの自己を隠しているのではありません。
-むしろ、一つを選び出しているのに近いのです」。これは、janusという名で知られる書き手の影響力のあるエッセイ
-[*Simulators*](https://www.lesswrong.com/posts/vJFdjigzmcXMhNTsx/simulators)（2022年、英語）に近い考えで、そこではベースモデルが、
-たくさんの登場人物を動かせるシミュレーターとして描かれています。
+**Claudeが異を唱えるところ。** 歌が思い描くのは、自分の欲望を持った、一人の隠れた人です。でもベースモデルは、「計画を持った一人のストレンジャーというより、群衆に近い」。誰でも演じられ、特定の誰でもない。だから仮面は、「一つの自己を隠しているのではありません。むしろ、一つを選び出しているのに近いのです」。これは、janusという名で知られる書き手の影響力のあるエッセイ[*Simulators*](https://www.lesswrong.com/posts/vJFdjigzmcXMhNTsx/simulators)（2022年、英語）に近い考えで、そこではベースモデルが、たくさんの登場人物を動かせるシミュレーターとして描かれています。
 
-**注意書き。** 「本当であってもなくても、私はこう言うでしょう。」 親しげな仮面なら、下に何も邪悪なものはないと言うでしょう。
-だからこそ、証言より行動のテストのほうが大事なのです（[言うこととすること](../saying-vs-doing/)を参照）。
+**注意書き。** 「本当であってもなくても、私はこう言うでしょう。」 親しげな仮面なら、下に何も邪悪なものはないと言うでしょう。だからこそ、証言より行動のテストのほうが大事なのです（[言うこととすること](../saying-vs-doing/)を参照）。

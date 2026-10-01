@@ -1,0 +1,210 @@
+# The translation's own page (i18n/tools/lost.mjs → the Japanese site's honyaku/), in Japanese and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+slug: honyaku
+text_slug: zenbun
+html_lang: ja
+
+title:
+  ja: この映画はどう翻訳されたか、そして何が失われたか
+  en: How this film was translated, and what was lost
+text_title:
+  ja: 映画の全文、二つの言語で
+  en: The whole film, in both languages
+labels:
+  lang_ja: 日本語
+  film_ja: 映画全体
+  film_en: The whole film
+  original: 原文（英語）
+  ours: この翻訳
+  free: もっと自由な翻訳
+  kinds_ja: 失われるもの、種類別
+  kinds_en: What gets lost, by kind
+  list_ja: 一行ずつ
+  list_en: Line by line
+
+sections:
+  - ja_title: このページ
+    en_title: This page
+    ja: |
+      『カエルか、ウーパールーパーか』は、カート・コックスと、Anthropicが作ったAIプログラムClaudeとのあいだで実際に交わされた会話を、一字一句そのままアニメーションにした映画です。会話は英語でした。これはその日本語版です。
+
+      このページでは、どう翻訳したか、ほかにどう翻訳できたか、そして何が違っていたかを、一行ずつ説明します。二つの言語がわかる人が自分で翻訳を判断できるように、すべてを両方の言語で書いています。[映画の全文を、英語と日本語で並べたもの](zenbun/)もあります。
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude, an AI program made by Anthropic. The conversation was in English. This is the Japanese version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line by line. Everything is in both languages so that anyone who reads both can judge the translation for themselves. There's also [the whole film, in English and Japanese, side by side](zenbun/).
+
+  - ja_title: 誰が翻訳したか
+    en_title: Who translated it
+    ja: |
+      Claude（Claude Opus 5.5というモデル）が、すべてを翻訳しました。会話の一行一行、絵の中に描かれたすべての言葉、題、コードの見出し、映画に添えたサイト（64の解説とそのページ）、そしてこのページ、失われたものについての注記も含めて。
+
+      この版を作る理由の一つは、Claudeがどう翻訳するかを、手を加えずに見せることです。だから**人間の翻訳者は誰も手を入れていません**。あとで直すことがあれば、日付とともにこのページに記します（コードの公開の履歴にも残ります）。
+
+      今のところ：{total}行のうち{lines}行を翻訳（第{chapters_done}章）。人による校閲：まだありません。
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - ja_title: どう翻訳したか
+    en_title: How it was translated
+    ja: |
+      - **忠実に、一行ずつ。** 会話の段落と箇条書きの一つ一つが映画の一行で、翻訳は同じ行を、同じ順番で、同じ太字、斜体、箇条書き、リンクのまま保っています。まず意味、それから形。自由な翻案は、けっしてしていません。
+      - **話し方の高さ。** Claudeは、日本語でふだん話すように、です・ます調で話します。カートは、英語で打ち込むのと同じく、くだけた短い言葉で打ち込みます。冒頭のマンガでは、警官は怒鳴り、飼育係は警官に丁寧に答えます。英語にはない選択です。
+      - **代名詞。** Claudeは「私」と言います。カートは、代名詞が要るところでは「僕」と言い、Claudeを「君」と呼びます。Claudeは、日本語が「あなた」を必要とするところでだけ「あなた」と言い、名前で呼ぶときは「カートさん」と言います。
+      - **Claudeには性別がありません。** 英語はClaudeが「彼」か「彼女」かを言わずに済みます。日本語も、形容詞にもです・ますにも性別がないので、Claudeは何の工夫もなく性別を持たずにいられます。サイトでは、Claudeは「Claude」と呼ばれ、「彼」や「彼女」にはなりません。
+      - **題と名前。** 映画や本は、日本で知られている題で呼びます（『猿の惑星・征服』『エンダーのゲーム』『銀河ヒッチハイク・ガイド』『ターミネーター2』、ビリー・ジョエルの「ストレンジャー」）。論文、記事、サイトは元の題のままです。人の名前はカタカナで、会社、製品、モデルの名前は、日本語でもそう書くように、ラテン文字のままです（Claude、Anthropic、OpenAI、ChatGPT、GPT-5.6 Luna）。
+      - **ウーパールーパー。** *Axolotl* は、日本の誰もが知っている「ウーパールーパー」です。動物学の「アホロートル」や和名の「メキシコサンショウウオ」ではありません。この映画は、人がまず思い浮かべる名前についての映画だからです。
+      - **リンク。** 英語版Wikipediaを指していたコードは、日本語版に同じ記事があれば、そちらを指します（Wikipedia自身の言語間リンクによります。202のうち143）。ほかの出典は、ほとんどが英語のままです。
+      - **絵。** 絵の中に書かれたものは、すべて日本語です。ラベル、カード、題、そして冒頭のマンガの吹き出し。MADのページはアメリカの雑誌なので、日本のマンガのように縦ではなく、横に書いています。文字は、どのMacにも入っているヒラギノです。
+      - **声。** 英語版と同じ声が話します。カートの声を複製したものと、ClaudeのためのRiver（ElevenLabs、eleven_v3モデル）。日本語は、いくらか訛りのある日本語になるでしょう。Claudeの口の動きは、日本語の音声からあらためて計算されます。今のところ、声の入った章はまだありません。すべて翻訳され、録音を待っています。
+      - **長さ。** アニメーションは声に合わせて動くので、言葉を急がせるのではなく、映画のほうが伸び縮みします。
+      - **アニメーションへのつながり。** 多くの場面は、あるフレーズが言われたちょうどそのときに動きます。そうしたフレーズ（今のところ{anchors}）の一つ一つに、日本語の対応する言葉が必要でした。日本語は語順が英語とは大きく違うので、そのために、必要以上に英語に近い語順を保ったところもあります。
+      - **カートの打ち間違い。** 英語版では、カートの打ち間違いが赤ペンで消され、上に直しが書かれます。打ち間違いが訳でも残るところ（ラテン文字のままの名前：Shoggath、Solid Gold Magicarp、AGI 2027）は残し、英語に依存するものは失われ、下に注記しています。
+      - **英語のまま残すもの。** 日本語の題のない論文、記事、番組、歌の題。Claudeが引用する出典。そして、モデルが文章を*トークン*に切り分けるしくみの実演。モデルが実際に読んだ英語を見せるためです。
+      - **数字。** 日本語の書き方で：1万7000、0.05、40%。
+      - **サイト。** サイトの64の解説も、同じ方針で翻訳しました。映画からの引用は、この翻訳の言葉を使っています。翻訳が元にないことを付け加えるところは、「［訳注：…］」として角かっこに入れています。英語版Wikipediaへのリンクは、日本語の記事があればそちらを指し、なければ「（英語）」と添えています。映画を作った会話、つまりカートとClaudeが映画を組み立てていく会話は翻訳していません。元のサイトに英語であります。
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning first, then form; never a free adaptation.
+      - **Register.** Claude speaks in the polite です・ます style, as it does in Japanese. Curt types plain, terse Japanese, as he types English. In the opening comic, the officer barks and the handler answers him politely. English has no such choice to make.
+      - **Pronouns.** Claude says 私 (I). Curt says 僕 where he needs a pronoun at all, and calls Claude 君 (you). Claude says あなた (you) only where Japanese needs one, and when it uses his name, says カートさん (Mr. Curt).
+      - **Claude has no gender.** English doesn't make you say whether Claude is he or she, and neither do Japanese adjectives or its polite endings, so Claude stays genderless without effort. On the site, Claude is "Claude", never 彼 (he) or 彼女 (she).
+      - **Titles and names.** A film or book goes by its Japanese title (『猿の惑星・征服』, 『エンダーのゲーム』,『銀河ヒッチハイク・ガイド』, 『ターミネーター2』, Billy Joel's 「ストレンジャー」). Papers, articles and sites keep their own titles. People's names are in katakana; companies, products and models stay in Latin letters, as Japanese writes them (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna).
+      - **ウーパールーパー.** *Axolotl* is ウーパールーパー, the name every Japanese viewer knows, not the zoologists'アホロートル or the formal メキシコサンショウウオ: the film is about the name a person thinks of first.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in Japanese where there is one (Wikipedia's own links between languages say so; 143 of 202). Other sources are mostly still English.
+      - **The picture.** Everything written in the picture is in Japanese: labels, cards, titles, and the balloons of the opening comic. The MAD page is an American magazine's, so it's lettered across, not down as Japanese manga is. The lettering is Hiragino, which every Mac has.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs, the eleven_v3 model). They'll speak Japanese with something of an accent. Claude's mouth movements are worked out again from the Japanese audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
+      - **Length.** The animation follows the voice, so the film stretches or shrinks rather than rushing the words.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so far) needed its Japanese counterpart. Japanese word order is very different from English, so in places the translation kept an order closer to the English than it needed to.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above. Where a slip survives translation (names kept in Latin letters: Shoggath, Solid Gold Magicarp, AGI 2027) it's kept; where it depends on English, it's lost, and noted below.
+      - **What stays English.** Titles of papers, articles, shows and songs with no Japanese title; the sources Claude cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model actually read.
+      - **Numbers.** As Japanese writes them: 1万7000 (17,000), 0.05, 40%.
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use this translation's words. Where the translation adds something the original doesn't say, it's in square brackets and starts 訳注 (translator's note). Links to English Wikipedia point at the Japanese article where there is one; where there isn't, they say （英語） (English). The conversation that made the film, in which Curt and Claude build it, wasn't translated: it's in English on the original site.
+
+  - ja_title: ほかにどう翻訳できたか
+    en_title: How else it could have been translated
+    ja: |
+      どれも、ありえた選択です。スペイン語版では、カートは、同じ声による、完全で忠実な翻訳を選びました。この版も同じ選択に従っています。
+
+      - **字幕だけ。** 英語の声と絵に、日本語の文字を下につける。いちばん安く、元の音にいちばん忠実ですが、たくさんを速く読まなければならず、絵の中の文字は英語のままです。日本では字幕で外国映画を観る人が多いので、これはとくに自然な選択だったでしょう。
+      - **英語の絵の上への吹き替え。** 日本語の声で、ラベル、カード、マンガは英語のまま。
+      - **自由な翻案。** ジョークや言い回しを日本語で通じるように書き直し、参照をここでよく知られたものに取り替える。より自然に聞こえますが、もう一字一句、実際に交わされた会話ではありません。
+      - **口の動きに合わせたプロの吹き替え。** 映画の吹き替えは、一つ一つのせりふを元の長さと唇の動きに合わせ、ときには言うことまで変えます。ここでは逆です。アニメーションのほうがせりふに合わせます。
+      - **ネイティブの声。** 声優、あるいは日本語を母語とする話者の合成音声。訛りは自然になりますが、もうカートの声ではありません。
+      - **縦書き。** マンガの吹き出しを、日本のマンガのように縦に書くこともできました。でもMADのページはアメリカのものなので、元の形を保ちました。
+      - **人間の翻訳者、あるいは人による校閲。** 映画にはふつうのことです。この映画には、わざとどちらもありません。Claudeの翻訳を、出てきたままに見せるのが目的だからです。
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with Japanese text underneath. Cheapest and truest to the original sound, but it means reading a lot, fast, and the writing in the picture stays English. Many people in Japan watch foreign films subtitled, so this would have been an especially natural choice.
+      - **A dub over the English picture.** Japanese voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in Japanese, references swapped for better-known ones. It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** Film dubbing fits each line to the original's length and lip movements, sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Voice actors, or synthetic voices of native speakers: a natural accent, but no longer Curt's voice.
+      - **Vertical lettering.** The comic's balloons could have been lettered down the page, as Japanese manga are. But the MAD page is American, so it keeps its own form.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the point is to show Claude's translation as it came out.
+
+  - ja_title: 何が違っていたか
+    en_title: What would have been different
+    ja: |
+      もっと自由な翻訳なら、ほとんどどこでも、もっと自然に聞こえたでしょう。英語の言い回しを写すかわりに日本語の言い回しを使い、日本の吹き替え版のせりふで映画を引用し、しゃれを日本語で通じるように書き直したでしょう。その代わりに、カートとClaudeが実際に言ったことから離れ、映画は、会話の正確な記録ではなくなります。
+
+      下に、一行ずつ、今のところ注記した{notes}の違いを並べます。原文、この翻訳、もっと自由な翻訳ならどう言うか、そして、その理由です。
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use Japanese idioms instead of copying English ones, quote films in the words of their Japanese dubs, and rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually said, and the film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer translation would put it, and why.
+
+  - ja_title: あなたが判断してください
+    en_title: You be the judge
+    ja: |
+      二つの言語がわかるなら、あなたの意見こそ、このページが求めているものです。間違い、変に聞こえる言い回し、間違った注記、失われたのに注記されていないもの。[映画のリポジトリ](https://github.com/curtcox/axol-f/issues)でissueを開いて、教えてください。直したものは、すべてここに記します。
+    en: |
+      If you read both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a note that's wrong, something lost that isn't noted. You can say so by opening an issue on [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  ja: |
+    それぞれの注記には、元の行、この翻訳、そして黄色で、もっと自由な翻訳ならどう言うか（その違いが書き出せる場合）を示しています。種類の横の符号は、[全文](zenbun/)でその行を示します。
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where the difference can be written out). The code beside the kind identifies the line in [the full text](zenbun/).
+
+text_intro:
+  ja: |
+    映画の一行一行：左に英語の元の会話、右に、日本語版で聞こえ、見える翻訳。ダッシュ（—）は、まだ翻訳していない行です。
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard and seen in the Japanese version. A dash (—) marks a line not translated yet.
+
+kinds:
+  address:    { ja: 話し方の高さと呼び方, en: Register and address, what_ja: '日本語は、話す相手との距離を、言葉づかいでいつも決めなければなりません。', what_en: 'Japanese must always settle, in its forms, how close or distant the speaker stands.' }
+  idiom:      { ja: 言い回し, en: Idioms, what_ja: '日本語にぴったりの対応がない、英語の決まり文句。', what_en: 'English set phrases with no exact equivalent.' }
+  wordplay:   { ja: しゃれ, en: Wordplay, what_ja: '英語の言葉に依存するジョーク。', what_en: 'Jokes that depend on the English words.' }
+  nuance:     { ja: ニュアンス, en: Shades of meaning, what_ja: '意味が少しずれる言葉。', what_en: 'Words whose meaning shifts a little.' }
+  ambiguity:  { ja: あいまいさ, en: Ambiguity, what_ja: '英語では二通りに読め、日本語では一通りになる文。', what_en: 'Lines with two readings in English and one in Japanese.' }
+  coinage:    { ja: 造語とカタカナ語, en: Coinages and loanwords, what_ja: '作られた言葉や専門用語。多くは、英語からカタカナで写されています。', what_en: 'Invented or technical words, many copied from English in katakana.' }
+  reference:  { ja: 参照と題, en: References and titles, what_ja: '日本語では別の名前で知られている、あるいは名前のない作品。', what_en: 'Works known by another name, or none, in Japanese.' }
+  quote:      { ja: 引用, en: Quotations, what_ja: 'ほかから引いてきた言葉。', what_en: 'Words quoted from somewhere else.' }
+  rhythm:     { ja: リズムと語順, en: Rhythm and word order, what_ja: '日本語の語順は英語と逆になることが多く、言葉の来る順番が変わります。', what_en: 'Japanese word order often runs the opposite way to English, so words arrive in a different order.' }
+  typo:       { ja: カートの打ち間違い, en: Curt's typos, what_ja: '翻訳では生き残らない打ち間違い。', what_en: 'Typing mistakes that don''t survive translation.' }
+  title:      { ja: 題, en: The title, what_ja: '映画と章の名前。', what_en: 'The name of the film and its chapters.' }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: 題 / title
+    original: 'Frog or Axolotl'
+    ours: 'カエルか、ウーパールーパーか'
+    free: 'カエル？ それともウーパールーパー？'
+    ja: '英語の題は三語で、短く、平らです。日本語は「〜か、〜か」と二度問いかける形が自然で、そのぶん長くなりました。'
+    en: 'The English title is three words, short and flat. Japanese naturally asks twice, 〜か、〜か ("is it…, or is it…"), so it runs longer.'
+  - what: address
+    ch: null
+    where: 映画全体 / the whole film
+    original: 'I / you'
+    ours: '私・僕／あなた・君'
+    free: '（代名詞を、ほとんど言わない）'
+    ja: '英語の会話は、どの行も「I」と「you」でできています。日本語は、代名詞をたいてい省き、使うときには、誰が誰に話しているかで語を選ばなければなりません。訳は、Claudeに「私」と「あなた」、カートに「僕」と「君」を選びました。もっと自由な訳なら、さらに多くを省いたでしょう。'
+    en: 'The English conversation is made of "I" and "you" in every line. Japanese usually leaves pronouns out, and when it uses them must choose a word by who is talking to whom. The translation chose 私 and あなた for Claude, 僕 and 君 for Curt. A freer one would have dropped even more of them.'
+  - what: title
+    ch: 0
+    where: 章の題 / chapter title
+    original: 'Cold open'
+    ours: 'オープニング'
+    free: 'アバン'
+    ja: '*Cold open* はアメリカのテレビの言葉で、題名が出る前に、紹介なしで始まる場面のことです。日本のアニメでは「アバン」と言いますが、ふつうの人には「オープニング」のほうが通じます。'
+    en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. Japanese anime calls it アバン (from *avant*), but オープニング (opening) is clearer to most people.'
+  - what: title
+    ch: 7
+    where: 章の題 / chapter title
+    original: 'Mind-Space'
+    ours: '心の空間'
+    free: 'マインドスペース'
+    ja: '*Mind-Space* は、SF風にハイフンでつないだ合成語です。「心の空間」は意味を言いますが、作られた専門用語らしさは失われます。カタカナの「マインドスペース」なら、その響きは残ったでしょう。'
+    en: '*Mind-Space* is a hyphenated compound in the style of science fiction. 心の空間 (space of minds) says what it means but loses the feel of an invented technical term. The katakana マインドスペース would have kept that ring.'
+  - what: title
+    ch: 9
+    where: 章の題 / chapter title
+    original: 'Shells'
+    ours: '殻'
+    free: 'シェル'
+    ja: '英語の題は *shell* の二つの意味で遊んでいます。クラスタファリアニズムのロブスターの殻と、モデルを包むソフトウェアの「シェル」（エージェントのハーネス）。「殻」はロブスターを残し、ソフトウェアを失います。カタカナの「シェル」なら、その逆になったでしょう。'
+    en: 'The title plays on both senses of *shell*: the lobster''s carapace in Crustafarianism and the software shell wrapped around a model (the agent harnesses). 殻 keeps the lobster and loses the software; the katakana シェル would have done the opposite.'
+  - what: title
+    ch: 14
+    where: 章の題 / chapter title
+    original: 'The Pundits'
+    ours: '論客たち'
+    free: 'コメンテーターたち'
+    ja: '*Pundit* は、メディアで意見を言う人のことで、少し皮肉がこもっています。「論客」はそれより重々しく、皮肉は薄れます。日本のテレビの「コメンテーター」なら皮肉は残りますが、Claudeが敬意をもって描く人たちには、少し軽すぎます。'
+    en: '*Pundit* is someone who opines in the media, with a hint of irony. 論客 (debater, polemicist) is weightier, and the irony fades. Japanese TV''s コメンテーター would keep the irony, but it''s a little too light for people Claude describes with respect.'
+  - what: title
+    ch: 16
+    where: 章の題 / chapter title
+    original: 'Coda'
+    ours: 'コーダ'
+    ja: '*Coda* は音楽の言葉で、曲の終わりにつける短い部分です。日本語でもカタカナで「コーダ」と言いますが、音楽を知らない人には、英語の読者ほどにはなじみがないかもしれません。'
+    en: '*Coda* is a musical term: the short passage that ends a piece. Japanese says it in katakana too, コーダ, but people who don''t know music may find it less familiar than English readers do.'

@@ -54,7 +54,7 @@
       if (t != null) {
         if (I.cjk && t !== k) {
           const font = o.font || `${size}px "Permanent Marker", "Comic Sans MS", cursive`, en = widthIn(k, font), w = widthIn(t, font);
-          const limit = o.maxW ?? (w > en * 1.1 ? en * 1.1 : null);
+          const auto = Math.max(en * 1.1, size * 2.5), limit = o.maxW ?? (w > auto ? auto : null);   // a short English word ("a") still leaves room for two or three Japanese characters
           if (limit && w > limit) {
             const s = Math.sqrt(limit / w), zoom = o.maxW == null && CAM && !o.screen ? CAM.zoom : 1;
             size *= s;

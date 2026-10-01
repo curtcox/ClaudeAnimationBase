@@ -1,0 +1,7 @@
+# Codes only the Japanese film has, in script/refs.yaml's form (i18n/tools/stage.mjs adds them to the stage's).
+#
+# The translation's own page (i18n/tools/lost.mjs → the Japanese site's honyaku/): how the film was translated, how
+# else it could have been, and what a freer translation would have said, in Japanese and English. Its code goes up on
+# the ventriloquist line, as in the Spanish and Portuguese films: in a dubbed film someone else really is doing the
+# talking.
+- { id: honyaku, url: "https://curtcox.github.io/axol-f/ja/honyaku/", host: honyaku/, caption: "どう翻訳したか、何が失われたか", origin: added, at: T03.C.03.1, cue: "本当にしゃべっているのは別の誰か", mode: shelf, style: note }

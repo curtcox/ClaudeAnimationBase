@@ -1,6 +1,6 @@
 # The companion site, published to GitHub Pages on every push to main (docs/RELEASE.md, stage 2).
 # It builds from the committed script, timings and explainers only: no Chrome, no ffmpeg, no voices, about a minute.
-# The translations' sites (i18n/<lang>) go under their language: /es/, /pt/.
+# The translations' sites (i18n/<lang>) go under their language: /es/, /pt/, /ja/.
 # The film page plays script/site.yaml's film.youtube, else film.preview, else says the film is on its way.
 # One-time setup: the repo's Settings → Pages → Source: "GitHub Actions".
 name: Companion site

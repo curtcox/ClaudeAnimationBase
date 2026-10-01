@@ -10,7 +10,8 @@ In order:
    fast spoken English. Latin letters, so every painted word fits without new fonts. ElevenLabs speaks it well.
 2. **Brazilian Portuguese**. The next largest, for the same reasons. Latin letters.
 3. **Japanese**. Strong interest in AI, little English, and a habit of watching dubbed and subtitled video. It costs
-   more: a Japanese font, and every painted label's size and line breaks checked again.
+   more: a Japanese font, and every painted label's size and line breaks checked again. (Begun 2026-09-30: see
+   *Conventions (Japanese)* and the steps below.)
 
 Later, if the first three find viewers:
 
@@ -183,6 +184,23 @@ The tools, run from the project's root:
       English subtitles come out byte for byte the same).
 - [ ] Curt confirms the Spanish decisions apply (or changes them).
 - [ ] Voice it (ElevenLabs quota permitting), then drafts, then the final on the faster Mac.
+
+### Japanese
+
+- [x] The engine's hooks, all in the translation's own files so the English renders stay current: Hiragino for the
+      hand-lettering fonts (`i18n/ja/studio.css`), captions broken at 。！？ and wrapped between phrases, labels wider
+      than their English fitted half by size and half by condensing, the comic's balloons revealed run by run, lengths
+      estimated from characters (6 a second), a balloon's word count given by the stage (2026-10-01).
+- [x] The transcript (453 lines, every anchor), the lettering (402 strings), the codes' captions (409; Japanese
+      Wikipedia for 143 of 202), the cold open, the chapter titles, both thumbnails, the 64 explainers (their
+      Wikipedia links moved to Japanese for 227, marked （英語） for 80), the site's words, the YouTube words, the
+      translation's page (`i18n/ja/translation.yaml`, at `/ja/honyaku/`, 69 notes). Every chapter probed: nothing
+      lettered in English, every cue anchored, no errors. Built by the same Pages workflow, at `/ja/`.
+- [x] The site reads as Japanese: no hard line breaks inside Japanese paragraphs (a browser shows one as a space), and
+      no italics (quotations upright, emphasis bold), added to the Japanese site's stylesheet by `i18n/tools/lost.mjs`.
+- [ ] Curt confirms the conventions above (or changes them); a Japanese-reading reviewer, if one turns up.
+- [ ] Voice it: ElevenLabs' eleven_v3 speaks Japanese; names and acronyms are respelled in katakana
+      (`i18n/ja/pronounce.yaml`). Then drafts, then the final on the faster Mac.
 
 ## Costs
 

@@ -88,4 +88,10 @@ ${(c.n === 0 ? balloonsEn.map(b => row(`MAD.${b.balloon}`, b.say.replace(/^\[[^\
 ${en.filter(l => l.ch === c.n).map(l => row(l.id, l.text, tr[l.id]?.text)).join('')}</table>`).join('');
 writeFileSync(`${OUT}/${TEXT}/index.html`, html(`${P.text_title[lang]} / ${P.text_title.en}`, `<p><a href="../">← ${esc(P.title[lang])}</a></p>
 <h1 lang="${HL}">${esc(P.text_title[lang])}</h1><p class="lang" style="font-size:1rem;text-transform:none;letter-spacing:0">${esc(P.text_title.en)}</p>${pair(P.text_intro[lang], P.text_intro.en)}${text}`, 2));
+// Japanese uses no italics (a browser can only slant the glyphs): on the Japanese site, quotations stand upright and
+// emphasis is bold (sesame dots, 傍点, would land on the English titles and terms set in italics too), in the site's
+// stylesheet, which the builder wrote just before
+if (/^(ja|zh|ko)\b/.test(lang) && existsSync(`${S}/site/public/style.css`))
+  writeFileSync(`${S}/site/public/style.css`, readFileSync(`${S}/site/public/style.css`, 'utf8').replace(/\n?\/\* cjk \*\/.*$/s, '') +
+    '\n/* cjk */ blockquote,.mnote,i,em{font-style:normal} em{font-weight:600}\n');
 console.log(`${OUT}/: ${notes.length} notes; ${done.length}/${en.length} lines translated; the voice ${longer ?? '?'}% longer over ${both.length} lines`);
