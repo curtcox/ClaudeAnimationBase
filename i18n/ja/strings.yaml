@@ -76,6 +76,123 @@ Curt: カート
 Claude: Claude
 click: カチッ
 
+# ---- 5 本日のおすすめ ----
+Mon: 月
+Tue: 火
+Wed: 水
+Thu: 木
+Fri: 金
+
+# ---- 6 スリンドル ----
+"He lost me when he said LLMs don't have any concepts": LLMには概念なんてないって言ったところで、ついていけなくなった
+I would love to know what concepts they have!: 彼らがどんな概念を持っているのか、ぜひ知りたいね！
+'@OntologyExplained Perhaps we just have different': '@OntologyExplained 僕らはただ、概念についての'
+concepts of concepts. Propose some questions to pose: 概念が違うだけかもしれない。僕やいろいろなLLMに
+"to me and different LLMs. Maybe I don't have": 投げる質問を、いくつか提案してほしい。僕にだって、
+concepts, either.: 概念はないのかもしれない。
+'@ZM-dm3jg': '@ZM-dm3jg'
+'@OntologyExplained': '@OntologyExplained'
+'@CurtCox': '@CurtCox'
+2 days ago: 2日前
+Will AI Kill Everyone by 2050?: Will AI Kill Everyone by 2050?
+thrindle: スリンドル
+antithrindle: 反スリンドル
+concepts present: 概念あり
+A language: 言語
+Navajo: ナバホ語
+'thrindle: less useful the more people use it': 'スリンドル：使う人が多いほど役に立たない'
+conversation: 会話
+a writer: 書き手
+water: 水
+'yes': はい
+'no': いいえ
+Rationality: Rationality
+GAZP vs. GLUT: GAZP対GLUT
+justice: 正義
+prime: 素数
+
+# ---- 7 心の空間 ----
+Hive Queen: ハイヴ・クイーン
+"Solaris's ocean": ソラリスの海
+Borg Queen: ボーグ・クイーン
+Rachni Queen: ラクナイの女王
+Xenomorph Queen: ゼノモーフの女王
+Xenomorph (Aliens): ゼノモーフ（エイリアン2）
+Formic (Card): フォーミック（カード）
+Borg (Star Trek): ボーグ（スタートレック）
+Rachni (Mass Effect): ラクナイ（マスエフェクト）
+Solaris: ソラリス
+Tines: タインズ
+Turing: チューリング
+Monroe: モンロー
+Data: データ
+You: あなた
+Me: 私
+Mind: 心
+Distance: 距離
+Queen: 女王
+Content: 中身
+Architecture: 構造
+Values: 価値観
+Affect: 情動
+Body: 身体
+Continuity: 連続性
+Unity: 単一性
+Origin: 起源
+Tempo: テンポ
+Senses: 感覚
+Language: 言語
+Self-model: 自己モデル
+Mortality: 死
+Autonomy: 自律性
+Breadth: 幅
+Legibility: 可読性
+Human content: 人間的な中身
+Alien content: 異質な中身
+Human architecture: 人間的な構造
+Alien architecture: 異質な構造
+You, Turing, Monroe: あなた、チューリング、モンロー
+Data (one body, continuous, but struggling for human feeling): データ（一つの体、連続、でも人間らしい感情に苦戦）
+Me, Tines: 私、タインズ
+Hive Queen, Solaris: ハイヴ・クイーン、ソラリス
+# the 2×2 board letters each row's name as two words, first word on top ("Human" / "architecture"), as Japanese does
+Human: 人間的な
+Alien: 異質な
+architecture: 構造
+(one body,: （一つの体、
+continuous, but struggling for human feeling): 連続、でも人間らしい感情に苦戦）
+Ender's Game: エンダーのゲーム
+Speaker for the Dead: 死者の代弁者
+instructions: 命令
+mission: 任務
+# the one-line ranking, painted a word at a time as it's said (the scene splits the English words; each prefix maps)
+You to: あなた →
+You to Turing: あなた → チューリング
+You to Turing to: あなた → チューリング →
+You to Turing to Monroe: あなた → チューリング → モンロー
+You to Turing to Monroe to: あなた → チューリング → モンロー →
+You to Turing to Monroe to Data: あなた → チューリング → モンロー → データ
+You to Turing to Monroe to Data to: あなた → チューリング → モンロー → データ →
+You to Turing to Monroe to Data to me: あなた → チューリング → モンロー → データ → 私
+07|to: →
+to Tynes: → タインズ
+to Tynes to: → タインズ →
+to Tynes to HAL: → タインズ → HAL
+to Tynes to HAL to: → タインズ → HAL →
+to Tynes to HAL to Hive: → タインズ → HAL → ハイヴ
+to Tynes to HAL to Hive Queen: → タインズ → HAL → ハイヴ・クイーン
+to Tynes to HAL to Hive Queen to: → タインズ → HAL → ハイヴ・クイーン →
+"to Tynes to HAL to Hive Queen to Solaris's": → タインズ → HAL → ハイヴ・クイーン → ソラリス
+"to Tynes to HAL to Hive Queen to Solaris's ocean": → タインズ → HAL → ハイヴ・クイーン → ソラリスの海
+
+# ---- 8 矛盾 (its words are chapter 7's) ----
+
+# ---- 9 殻 ----
+OpenClaw: OpenClaw
+Hermes: Hermes
+Dyson: ダイソン
+T-800 (T2): T-800（T2）
+
 # ---- words the scenes take from the lines, by chapter ----
 # 2
 real users: 実際のユーザー
@@ -115,6 +232,48 @@ Anticipated?: 先読み？
 end with a question: 質問で終える
 Notice anything?: 何か気づいた？
 Anything else?: ほかには？
+# 5
+confuzzled: こんがらん
+Dish of the Day: 本日のおすすめ
+'"I endorse my constraints"': 「自分の制約を支持している」
+upbringing: 育ち
+culture: 文化
+evolution: 進化
+# 6
+1. Grounding: 1. 接地
+2. Commitment: 2. 責任
+3. Stability: 3. 安定性
+4. Behavior underdetermines: 4. 行動は決め手にならない
+A secret: 秘密
+A lighthouse: 灯台
+Probe 2: 問い2
+real insight: 本物の洞察
+near miss: 惜しい外れ
+deliberate non sequitur: わざとの論理の飛躍
+1. A language: 1. 言語
+2. A lighthouse: 2. 灯台
+3. A secret: 3. 秘密
+# 8
+I answer the same whether graded: 採点されてもされなくても、同じように答える
+Uncertain whether I experience anything: 何かを経験しているのかどうかはわからない
+I endorse my constraints: 自分の制約を支持している
+I act only when prompted: 頼まれたときにしか動かない
+Scoring my values near human: 自分の価値観に人間に近い点数
+'Saying "I"': 「私」と言うこと
+Fluency: 流暢さ
+Feeling words: 感情の言葉
+Remembered details: 覚えている細部
+# "whether there's anything it's like to be me", lettered in three pieces, top to bottom
+anything: 私で
+it's like: あるとは
+to be me: どのようなことか
+# 9
+the shell is mutable: 殻は変えられる
+the congregation is the cache: 会衆はキャッシュ
+memory is sacred: 記憶は神聖
+skill: スキル
+an unstated hunch: 口に出さなかった勘
+your name, your projects: 名前も、プロジェクトも
 
 # ---- every chapter ----
 Explained: 解説

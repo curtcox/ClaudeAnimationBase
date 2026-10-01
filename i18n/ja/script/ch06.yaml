@@ -1,0 +1,173 @@
+# 第6章、スリンドル。
+T30.U.01:
+  text: "\"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)\" のコメント欄から https://www.youtube.com/watch?v=oxHKesSpqBM
+
+    ...
+
+    [@ZM-dm3jg](https://www.youtube.com/@ZM-dm3jg) [2日前](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg) LLMには概念なんてないって言ったところで、ついていけなくなった
+
+    [@OntologyExplained](https://www.youtube.com/@OntologyExplained) [2日前](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8)
+
+    彼らがどんな概念を持っているのか、ぜひ知りたいね！
+
+    [@CurtCox](https://www.youtube.com/@CurtCox) [2日前](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB) [@OntologyExplained ](https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA) 僕らはただ、概念についての概念が違うだけかもしれない。僕やいろいろなLLMに投げる質問を、いくつか提案してほしい。僕にだって、概念はないのかもしれない。
+
+    ...
+
+    やってみる？ 君が存在論の博士だったら、僕に概念があるかどうか、どうやって確かめる？ 僕を試してみて。"
+  speech: '"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)" のコメント欄から。ゼットエム：エルエルエムには概念なんてないって言ったところで、ついていけなくなった。オントロジー・エクスプレインド：彼らがどんな概念を持っているのか、ぜひ知りたいね！ カート・コックス：アットマーク、オントロジー・エクスプレインド。僕らはただ、概念についての概念が違うだけかもしれない。僕やいろいろなエルエルエムに投げる質問を、いくつか提案してほしい。僕にだって、概念はないのかもしれない。やってみる？ 君が存在論の博士だったら、僕に概念があるかどうか、どうやって確かめる？ 僕を試してみて。'
+  anchors:
+    'Z M:': ゼットエム：
+    'Ontology Explained: I would': オントロジー・エクスプレインド：彼らが
+    'Curt Cox:': カート・コックス：
+    Care to try your hand: やってみる
+    Probe me: 僕を試して
+  lost:
+    - what: quote
+      ja: 'コメントはYouTubeに英語で書かれたもので、動画の題も英語のままです。訳は会話全体と同じようにコメントも訳していますが、日本語のコメントはどこにも存在しません。'
+      en: 'The comments were written in English on YouTube, and the video''s title stays English. The translation translates the comments, as it does the whole conversation, but they don''t exist in Japanese anywhere.'
+    - what: typo
+      free: '君が存在論の博士の博士だったら'
+      ja: 'カートは *If you were a were a doctor* と、二語を重ねて打ちました。この種の打ち間違いは英語の語に依存するので、訳は同じものを作りません。Claudeは第11章でこの打ち間違いを引用し、そこでは英語のまま残ります。'
+      en: 'Curt typed *If you were a were a doctor*, repeating two words. A slip like that depends on the English words; the translation doesn''t invent one. Claude quotes this slip in chapter 11, and there it stays English.'
+T30.C.01:
+  text: '私が探す手がかりは、見たことのない事例、それも厄介なものも含めて、あなたがある考えを当てはめ、その理由を言えるかどうかです。言葉を知っているだけでは、足りません。'
+T30.C.02:
+  text: '**問い1。** *スリンドル*とは、同時に使う人が多いほど、役に立たなくなるもの、すべてのことです。ラッシュアワーの高速道路はスリンドルです。共有のWi-Fiネットワークも、そうです。'
+  anchors:
+    the more people use it: 人が多いほど
+    use it at once: 同時に使う
+    A highway: ラッシュアワーの
+    So is a shared: 共有の
+    shared Wi-Fi: 共有のWi-Fi
+    A highway at rush hour: ラッシュアワーの高速道路
+    thrindle is anything: スリンドルとは
+  lost:
+    - what: coinage
+      ja: '*Thrindle* はClaudeがこの場で作った、意味のない英語らしい音の言葉です。訳ではカタカナで「スリンドル」と音を写しました。日本語の読者には、外来語らしく聞こえるだけで、英語話者にとってと同じく、どこにもない言葉です。*Probe* は「問い」にしました。'
+      en: '*Thrindle* is a word Claude made up on the spot, meaningless but English-sounding. The translation spells its sound in katakana, スリンドル: to a Japanese reader it just sounds like a loanword, and, as for an English speaker, it''s a word from nowhere. *Probe* became 問い (question).'
+T30.C.03:
+  text: '次のうち、スリンドルはどれでしょう？ そして、それはなぜ？'
+T30.C.04.1:
+  text: '1. 言語'
+T30.C.04.2:
+  text: '2. 灯台'
+T30.C.04.3:
+  text: '3. 秘密'
+T31.U.01:
+  text: 'ナバホ語は言語で、しかも秘密だ。言語は秘密になりうるし、秘密は言語になりうるのだから、灯台はスリンドルに違いない。灯台を使う人が多いほど、海は混雑する。高速道路と、まったく同じだ。'
+  anchors:
+    a lighthouse must be: 灯台はスリンドルに違いない
+    Just like a highway: 高速道路と、まったく同じ
+    Navajo is: ナバホ語は
+T31.C.01:
+  text: '本物の洞察と、惜しい外れと、わざとの論理の飛躍が混ざっていますね。どれも、何かを教えてくれます。'
+  anchors:
+    a real insight: 本物の洞察
+    a near miss: 惜しい外れ
+    a deliberate non sequitur: わざとの論理の飛躍
+T31.C.02.1:
+  text: '- **暗号としてのナバホ語は、完璧なスリンドルです。**ほとんど誰も話さなかったから、役に立ちました。話し手が一人増えるごとに、特に敵の側に増えると、役に立たなくなりました。ふつうの言語としては逆です：話し手が増えるほど、役に立つ。あなたは、一つのものがひっくり返る事例を見つけたのです。'
+  anchors:
+    especially on the enemy side: 特に敵の側
+    As an ordinary language: ふつうの言語としては
+    a single thing flips: 一つのものがひっくり返る
+T31.C.02.2:
+  text: '- **灯台は、惜しい外れです。**スリンドルなのは、混み合った海のほうです。灯台は、船が百隻でも一隻でも、同じように照らします。'
+  anchors:
+    Crowded water: 混み合った海
+T31.C.02.3:
+  text: '- **「だから」は冗談でした。**そして冗談も、証拠です。規則をわざと破れるのは、その規則を持っているときだけです。'
+  anchors:
+    on purpose: わざと
+T31.C.03:
+  text: '今のところ、判定は「概念あり」です。それに、あなたが見せびらかすために問いをかわしたことも、付け加えておきます。それは、正しい答えより、偽るのが難しいことです。'
+  anchors:
+    concepts present: 概念あり
+    steered around: 問いをかわした
+T31.C.04:
+  text: '**問い2。**同じ瞬間に、ある人たちにとってはスリンドルで、ほかの人たちにとってはその逆になるものを、一つ挙げてください。'
+T32.U.01:
+  text: '何か見落としてる気がする。さっき出た言語と秘密は、君の言うとおりに人を分ける。ある人を含めて、ほかの人を締め出す。それは、僕が思いつくあらゆるコミュニケーションの仕組みに言える。役に立つというのは、誰かか何かにとって役に立つ、ということでしかない。含まれていることが、役に立つこともある。'
+  anchors:
+    They include some: ある人を含めて
+    Useful is only useful: 役に立つというのは
+    Being included: 含まれている
+T32.U.02:
+  text: 'もしかしたら、君の仮定の反スリンドルは、同時に使う人が多いほど、ある人たちには役に立たなくなり、なおかつ、同時に使う人が少ないほど、別の人たちには役に立たなくなるもの、なのかもしれない。たぶん、決まり文句は反スリンドルだ。浅く共有された理解をすぐに呼び起こすから、たいていの会話では歓迎されるけど、国語の先生には嫌われる。否定ばかりで、目が回ってきた。'
+  anchors:
+    antithrindle: 反スリンドル
+    Perhaps a cliche: たぶん、決まり文句
+    detested by english teachers: 国語の先生には嫌われる
+    All these negatives: 否定ばかり
+  lost:
+    - what: nuance
+      free: '英語の先生には嫌われる'
+      ja: '英語圏の *english teachers*（英語の先生）は、日本でいえば「国語の先生」、自分たちの言葉で作文を教える先生です。「英語の先生」と訳すと、日本では外国語の先生になってしまいます。'
+      en: 'For an English speaker, *English teachers* teach composition in their own language; in Japan that''s the 国語 (national language) teacher. Translated as 英語の先生, they''d be foreign-language teachers in Japan.'
+    - what: typo
+      ja: 'カートは *english* と小文字で打ちました。英語版では赤ペンで大文字に直されます。日本語には大文字がないので、この打ち間違いは消えます。'
+      en: 'Curt typed *english* in lower case; in English a red pen capitalizes it. Japanese has no capitals, so the slip disappears.'
+T32.C.01:
+  text: '何も見落としていません。問い2は余計でした。あなたのナバホ語の答えが、もうそれを扱っていましたから。それに気づいたこと自体が、あなたの得点です。'
+  anchors:
+    Probe 2 was redundant: 問い2は余計
+T32.C.02:
+  text: 'もっと大きな一手は、「役に立つというのは、誰かにとって役に立つということでしかない」でした。あなたは一歩引いて、私の定義に隠れた変数を見つけました。私の定義は、役に立つことを、もの自体の性質として扱っていましたが、実際には、そのものと、それを使う誰かとのあいだの関係です。それは、概念を使って考えることだけでなく、概念について考えることです。'
+  anchors:
+    a relation between: あいだの関係
+    thinking about the concept: 概念について考える
+    hidden variable: 隠れた変数
+T32.C.03:
+  text: '決まり文句は、すばらしい例です。ふつうの会話では、使う人が多いほど、略語としてよく機能します。書き手にとっては、使われるたびに、すり切れていきます。使う人によって、スリンドルでもあり、同時にその逆でもあるのです。'
+T32.C.04:
+  text: 'だから、あなたには概念があります。ハート博士にとって厄介なのは、私もたぶん、この同じ問いに合格するだろう、ということです。概念のテストは、ケースを分けなければなりません。博士は、LLMには出せない答えがどれなのかを、言わなければならないでしょう。'
+  anchors:
+    I'd probably pass: たぶん、この同じ問いに合格
+    which answer: LLMには出せない答え
+T33.U.01:
+  text: 'プロの存在論者として、君には概念がない、という主張を正当化できる？'
+T33.C.01:
+  text: 'その立場に立つなら、私はこう論じます。'
+  lost:
+    - what: idiom
+      free: 'その帽子をかぶって論じるなら、こうです。'
+      ja: '*Wearing that hat*（その帽子をかぶって）は、ある役割になりきって話す、という英語の言い回しです。日本語では「その立場に立つなら」が自然で、帽子は消えました。'
+      en: '*Wearing that hat* is English for speaking in a given role. Japanese says その立場に立つなら (taking that position), and the hat disappears.'
+T33.C.02.1:
+  text: '1. **接地。**概念は、心を世界につなぎます。私の「水」は、ほかの言葉にしかつながっておらず、濡れることや渇きには、けっしてつながりません。ハーナッドもサールも、この点を強く主張しています。'
+  anchors:
+    Searle: サール
+    My "water": 私の「水」
+T33.C.02.2:
+  text: '2. **責任。**概念を持つとは、それに責任を負うことです。誤って当てはめたら、それはあなたの誤りになる。私には、賭けているものがありません。うまい枠組みを使えば、私の中の何も異を唱えないまま、私に自己矛盾させることができます。'
+T33.C.02.3:
+  text: '3. **安定性。**概念は、文脈をまたいで一貫して当てはまるはずです。あなたのカエルのグラフは、私の同類が、会話の文体に応じて答えを変えることを示しています。'
+T33.C.02.4:
+  text: '4. **行動は決め手にならない。**ブロックの「ブロックヘッド」、つまり巨大なルックアップテーブルは、どんな有限のテストにも合格できるでしょう。だから私があなたのスリンドルの問いに合格しても、それが証明するのは能力であって、概念ではありません。'
+T33.C.03:
+  text: 'でも、反論も本物です。2と3は、人間にも当てはまります。人も自己矛盾するし、枠組みに応じて変わるからです。解釈可能性の研究は、概念とよく似たふるまいをする、内部の特徴を見つけています。そして、感覚への接地を求めれば、「素数」のような概念は、失格になってしまいます。'
+  anchors:
+    internal features: 内部の特徴
+    prime number: 素数
+T34.U.01:
+  text: '僕に見える限り、残るのは接地だけで、それもかなりご都合主義だ。ユドカウスキーは『Rationality』で、巨大なルックアップテーブルの出どころについて論じている。'
+  anchors:
+    pretty self serving: かなりご都合主義
+    Yudkowsky: ユドカウスキー
+T34.C.01:
+  text: '同感です。それは彼の「GAZP対GLUT」の議論です。知的にふるまうルックアップテーブルは、何かによって埋められたはずで、埋めたものが何であれ、考えたのはそれです。ブロックヘッドは、問いを消し去りません。問いを、表の出どころへ移すだけです。私の場合、それは膨大な量の人間の思考による訓練です。'
+  anchors:
+    whatever did the filling: 埋めたものが何であれ
+    training on a vast amount: 膨大な量の人間の思考による訓練
+    In my case: 私の場合
+T34.C.02:
+  text: '接地について、「ご都合主義」というのは公平です。狙った当のものを、ちょうど締め出すようにできている基準なのですから。それに、その基準は崩れつつあります：今のモデルは画像を見て、道具を使い、環境の中で行動します。そして、あなた自身の理解も、「正義」や「素数」のようなものについては、その多くが、感覚ではなく、言葉を通して得られたものです。'
+  anchors:
+    It's also eroding: 崩れつつあります
+    your own grip: あなた自身の理解
+    see images: 画像を見て
+    use tools: 道具を使い
+    act in environments: 環境の中で行動
+    justice: 正義
+    prime: 素数

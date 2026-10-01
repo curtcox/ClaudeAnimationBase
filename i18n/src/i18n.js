@@ -77,7 +77,8 @@
   // A caption is a sentence at a time. The English engine finds a sentence by its capital A–Z; here any capital starts
   // one ("É", "Às", "¿Qué", "«Sim»"). The rest is captionAt() in src/timing.js as it is (kept out of the English file so
   // its frames' print stays the same); keep the two in step.
-  // A language written without spaces (Japanese, I.cjk) ends a sentence at 。！？ with no space after it, and wraps a
+  // A language written without spaces (Japanese, I.cjk) ends a sentence at 。！？ with no space after it (and a Latin
+  // one, a title or a quotation, as English does: a ? in a URL ends nothing), and wraps a
   // caption between words (Intl.Segmenter), never inside one: a mark that can't start a row (、。」) stays with the
   // word before it, one that can't end a row (「『（) with the word after.
   const SEG = I.cjk && new Intl.Segmenter(I.lang, { granularity: 'word' });
@@ -116,7 +117,7 @@
   if (typeof captionAt === 'function') window.captionAt = captionAt = function (t, right = null) {
     const l = lineAt(t); if (!l || !l.spoken || t > l.end) return null;
     const txt = plainText(l.text).replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․');
-    const sentences = (I.cjk ? txt.split(/(?<=[。！？!?])(?![」』）)"”。！？!?])\s*/u).filter(Boolean) : txt.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])/u))
+    const sentences = (I.cjk ? txt.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean) : txt.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])/u))
       .map(x => x.replace(/․/g, '.'));
     const total = sentences.reduce((a, s) => a + s.length, 0); let acc = 0, cur = sentences[0];
     for (const s of sentences) { if ((t - l.t0) / Math.max(.01, l.t1 - l.t0) * total >= acc) cur = s; acc += s.length; }

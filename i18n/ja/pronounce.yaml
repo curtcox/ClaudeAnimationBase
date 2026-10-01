@@ -10,3 +10,12 @@
 - { match: "ChatGPT", say: "チャットジーピーティー" }
 - { match: "MAD", say: "マッド" }
 - { match: "AI", say: "エーアイ" }
+- { match: "Shoggoth", say: "ショゴス" }
+- { match: "GAZP", say: "ガズプ" }
+- { match: "GLUT", say: "グラット" }
+- { match: "Wi-Fi", say: "ワイファイ" }
+- { match: "HAL", say: "ハル" }
+- { match: "T-800", say: "ティー・ハッピャク" }
+- { match: "Hermes", say: "ヘルメス" }
+- { match: "OpenClaw", say: "オープンクロー" }
+- { match: "Moltbook", say: "モルトブック" }
