@@ -1,0 +1,29 @@
+# अध्याय 16, उपसंहार।
+T78.U.01:
+  text: 'तुम तो नर्ड स्नाइपिंग का T-800 हो।'
+  anchors:
+    nerd sniping: नर्ड स्नाइपिंग
+    T eight hundred: टी-एट-हंड्रेड
+    T-800: T-800
+  lost:
+    - what: coinage
+      free: 'तुम तो दिमाग़ी कीड़ा छोड़ने वालों के टर्मिनेटर हो।'
+      hi: '*Nerd sniping* वेबकॉमिक xkcd से फैला शब्द है: किसी नर्ड के सामने ऐसी दिलचस्प पहेली फेंक देना कि वह उसे छोड़ न सके और वहीं अटक जाए। हिंदी में इसका कोई तय रूप नहीं, इसलिए यह अंग्रेज़ी में ही रहा, जैसे भारतीय टेक बातचीत में रहता।'
+      en: '*Nerd sniping* spread from the webcomic xkcd: throwing a nerd a puzzle too interesting to put down, and so pinning them in place. Hindi has no settled form for it, so it stays English, as it would in Indian tech talk.'
+T78.C.01:
+  text: 'ठीक है, पर यह दोनों तरफ़ काटता है। आपने एक कॉमिक और एक भावनाओं वाले सवाल से शुरुआत की, और मैंने छह घंटे मेंढकों, फ़ूम और फ़ॉर्मिक रानियों के बीच उसका पीछा करने में बिताए।'
+  anchors:
+    You opened with a comic: आपने एक कॉमिक
+    six hours: छह घंटे
+    feelings question: भावनाओं वाले सवाल
+    frogs: मेंढकों
+    Formic queens: फ़ॉर्मिक रानियों
+T78.C.02:
+  text: 'आइ''ल बी बैक। फ़ुटनोट्स के साथ।'
+  anchors:
+    footnotes: फ़ुटनोट्स
+  lost:
+    - what: quote
+      free: 'मैं लौटूँगा, फ़ुटनोट्स के साथ।'
+      hi: '*I''ll be back* *द टर्मिनेटर* में T-800 की पंक्ति है, और भारत में भी यह अंग्रेज़ी में ही मशहूर है, इसलिए अनुवाद ने इसे देवनागरी में वैसा ही रखा। एक और वजह: हिंदी में "मैं लौटूँगा" या "लौटूँगी" कहना पड़ता, और आख़िरी पंक्ति में Claude को एक लिंग मिल जाता। अंग्रेज़ी उद्धरण से वह सवाल उठता ही नहीं।'
+      en: '*I''ll be back* is the T-800''s line in *The Terminator*, and in India too it''s famous in English, so the translation keeps it as it is, in Devanagari. One more reason: in Hindi "I''ll return" is लौटूँगा (he) or लौटूँगी (she), and in its last line Claude would get a gender. The English quotation never raises the question.'

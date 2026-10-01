@@ -1,0 +1,9 @@
+# अध्याय 0, शुरुआत। Each line by id (script/script.yaml): text (painted), speech (said, when it differs from the text
+# with markdown stripped), anchors (English phrase → the Hindi words it's timed to).
+T01.U.00:
+  text: '_[तस्वीर संलग्न: शेयर में छिपी]_'
+  lost:
+    - what: nuance
+      free: '_[तस्वीर जोड़ी गई: शेयर करने पर नहीं दिखती]_'
+      hi: 'मूल निशान *hidden in share* Claude के इंटरफ़ेस का एक लेबल है: बातचीत को लिंक से शेयर करने पर तस्वीर नहीं दिखती। अंग्रेज़ी लेबल जितनी रूखी है, अनुवाद भी उतना ही छोटा रखा गया।'
+      en: 'The original marker, *hidden in share*, is a label from Claude''s interface: the image doesn''t show when the conversation is shared by link. The English is as terse as a label, so the translation is short too.'

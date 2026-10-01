@@ -1,0 +1,60 @@
+# Speech-only respellings for the Hindi voice, applied in order to every spoken line after markdown is stripped
+# (tools/script_lib.mjs's autoSpeech; format as script/pronounce.yaml). They change what's said, never what's painted.
+# Names and acronyms written in Latin letters are said the way Hindi speakers in tech say them. verify: true = a guess
+# to check by ear.
+# Longer matches first, so a name inside a longer one (foom in P(foom)) is left to the longer rule.
+- { match: "Intelligent Machines", say: "इंटेलिजेंट मशीन्स" }
+- { match: "Solid Gold Magicarp", say: "सॉलिड गोल्ड मैजिकार्प" }
+- { match: "Solid Gold Magikarp", say: "सॉलिड गोल्ड मैजिकार्प" }
+- { match: "SolidGoldMagikarp", say: "सॉलिड गोल्ड मैजिकार्प" }
+- { match: "Crustafarianism", say: "क्रस्टाफ़ेरियनिज़्म" }
+- { match: "Hugging Face", say: "हगिंग फ़ेस" }
+- { match: "Machine Gods", say: "मशीन गॉड्स" }
+- { match: "Claude Code", say: "क्लॉड कोड" }
+- { match: "Rationality", say: "रैशनैलिटी" }
+- { match: "TwistedPear", say: "ट्विस्टेड पेयर" }
+- { match: "Hieropedia", say: "हायरोपीडिया" }
+- { match: "Anthropic", say: "एंथ्रॉपिक" }
+- { match: "Opus 5.5", say: "ओपस फ़ाइव पॉइंट फ़ाइव" }
+- { match: "OpenClaw", say: "ओपनक्लॉ" }
+- { match: "Moltbook", say: "मोल्टबुक" }
+- { match: "Magikarp", say: "मैजिकार्प" }
+- { match: "TESCREAL", say: "टेस्क्रियल" }
+- { match: "ChatGPT", say: "चैटजीपीटी" }
+- { match: "GPT-5.6", say: "जीपीटी फ़ाइव पॉइंट सिक्स" }
+- { match: "YouTube", say: "यूट्यूब" }
+- { match: "hashbin", say: "हैशबिन" }
+- { match: "P(foom)", say: "पी-फ़ूम" }
+- { match: "Claude", say: "क्लॉड" }
+- { match: "OpenAI", say: "ओपनएआई" }
+- { match: "Hermes", say: "हर्मीज़" }
+- { match: "Forbes", say: "फ़ोर्ब्स" }
+- { match: "Mythos", say: "मिथोस" }
+- { match: "Python", say: "पायथन" }
+- { match: "Sydney", say: "सिडनी" }
+- { match: "Wi-Fi", say: "वाई-फ़ाई" }
+- { match: "T-800", say: "टी-एट-हंड्रेड" }
+- { match: "Fable", say: "फ़ेबल" }
+- { match: "AIDE²", say: "एड स्क्वेयर्ड" }
+- { match: "LLMs", say: "एलएलएम्स" }
+- { match: "RLHF", say: "आरएलएचएफ़" }
+- { match: "Luna", say: "लूना" }
+- { match: "GAZP", say: "गैज़्प" }
+- { match: "GLUT", say: "ग्लट" }
+- { match: "OOMs", say: "ऊम्स" }
+- { match: "foom", say: "फ़ूम" }
+- { match: "Foom", say: "फ़ूम" }
+- { match: "TWiT", say: "ट्विट" }
+- { match: "LLM", say: "एलएलएम" }
+- { match: "MAD", say: "मैड" }
+- { match: "HAL", say: "हैल" }
+- { match: "Sol", say: "सोल" }
+- { match: "RSI", say: "आरएसआई" }
+- { match: "OOM", say: "ऊम" }
+- { match: "NPR", say: "एनपीआर" }
+- { match: "AI", say: "एआई" }
+- { match: "T2", say: "टी-टू" }
+- { match: "AGI", say: "एजीआई" }
+- { match: "Metaculus", say: "मेटैक्युलस" }
+- { match: "AlphaFold", say: "अल्फ़ाफ़ोल्ड" }
+- { match: "SAT", say: "एसएटी" }

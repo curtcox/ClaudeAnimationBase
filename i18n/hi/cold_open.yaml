@@ -1,0 +1,68 @@
+# The cold open's page in Hindi, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+officer:
+  say: "[shouting] रुको! उस बंदर ने अभी क्या कहा?!"
+  who: पुलिस अफ़सर
+  lines: ['*रुको!*', '*उस बंदर*', '*ने अभी*', '*क्या*', '*कहा?!*']
+  lost:
+    - what: reference
+      free: 'रुको! उस वनमानुष ने अभी क्या कहा?!'
+      hi: 'फ़िल्म और कॉमिक दोनों *apes* के बारे में हैं, यानी बिना पूँछ वाले बड़े वनमानुष। हिंदी में रोज़ की बोली का शब्द "बंदर" है, इसलिए अनुवाद पूरी फ़िल्म में "बंदर" कहता है। "वनमानुष" ज़्यादा सटीक है, पर संवाद के लिए बहुत किताबी।'
+      en: 'The film and the comic are about *apes*, the great apes, without tails. The everyday Hindi word is बंदर (monkey), so the translation says बंदर throughout. वनमानुष (great ape) is more exact, but too bookish for dialogue.'
+silly:
+  say: "[nervously] अ... अरे, क्या बात कर रहे हैं आप! बंदर बोल नहीं सकते!"
+  who: रखवाला
+  lines: ['अ... अरे,', '*क्या बात*', 'कर रहे हैं *आप!*', '*बंदर*', 'बोल नहीं', '*सकते!*']
+  lost:
+    - what: address
+      free: 'अ... अरे, क्या बकवास है! बंदर बोल नहीं सकते!'
+      hi: 'रखवाला एक पुलिस अफ़सर से बात कर रहा है, इसलिए अनुवाद में वह "आप" कहता है, और अफ़सर उसे "तुम"। अंग्रेज़ी के *you* में यह फ़र्क़ नहीं होता; हिंदी में बोलने से पहले तय करना पड़ता है कि कौन किससे ऊपर है। *Don''t be silly* ("बेवक़ूफ़ी मत करो") अफ़सर से कहना हिंदी में बदतमीज़ी लगता, इसलिए वह "क्या बात कर रहे हैं आप!" बन गया।'
+      en: 'The handler is talking to a police officer, so in the translation he says आप (the respectful "you") and the officer says तुम (the familiar one). English *you* makes no such difference; Hindi has to settle who stands above whom before it speaks. *Don''t be silly*, said to an officer, would sound rude in Hindi, so it became क्या बात कर रहे हैं आप! (what are you saying, sir!).'
+positive:
+  say: "मैंने पक्का उस बंदर को बोलते सुना है!"
+  who: पुलिस अफ़सर
+  lines: ['मैंने', '*पक्का*', 'उस बंदर को', 'बोलते', '*सुना है!*']
+impossible:
+  say: "नामुमकिन! बंदरों में बोलने की ताक़त ही नहीं होती!"
+  who: रखवाला
+  lines: ['*नामुमकिन!*', 'बंदरों में', 'बोलने की', '*ताक़त* ही', 'नहीं होती!']
+sound:
+  say: "तो फिर मुझे उसके मुँह से आवाज़ आती क्यों सुनाई दी?!"
+  who: पुलिस अफ़सर
+  lines: ['तो फिर मुझे', 'उसके *मुँह* से *आवाज़*', 'आती क्यों सुनाई दी*?!*']
+handler:
+  say: "क्योंकि वह बंदर तो पेट से बोलने वाला है!"
+  who: रखवाला
+  lines: ['क्योंकि *वह* बंदर तो', '*पेट से बोलने वाला* है!']
+  lost:
+    - what: idiom
+      hi: '*Ventriloquist* के लिए हिंदी में बोलचाल का नाम है "पेट से बोलने वाला"। यह लैटिन *ventriloquus* (पेट से बोलने वाला) का ही अर्थ है, इसलिए यहाँ अनुवाद में कुछ नहीं खोया: हिंदी और लैटिन एक ही तस्वीर देखती हैं। अंग्रेज़ी में यह अर्थ शब्द के अंदर छिपा है; हिंदी में यह सामने है, और मज़ाक़ थोड़ा और बेतुका हो जाता है।'
+      en: 'The everyday Hindi name for a *ventriloquist* is पेट से बोलने वाला, "one who speaks from the belly", which is just what Latin *ventriloquus* means, so nothing is lost here: Hindi and Latin see the same picture. In English that meaning is hidden inside the word; in Hindi it''s in plain sight, and the joke gets a little more absurd.'
+suspect:
+  say: "हमें शक है कि तुम लोग एक होशियार बंदर को छिपा रहे हो, जो बीस साल पहले बचपन में ही भाग निकला था!"
+  who: सुनहरे बालों वाला आदमी
+  lines: ['हमें *शक* है', 'कि तुम लोग', 'एक *होशियार*', '*बंदर* को', 'छिपा रहे हो,', 'जो 20 साल', 'पहले *बचपन* में', 'ही भाग निकला!']
+fuss:
+  say: "यह सच नहीं है! और वैसे भी, एक बोलने वाले बंदर पर इतना हंगामा क्यों?"
+  who: दाढ़ी वाला आदमी
+  lines: ['यह *सच*', '*नहीं* है!', 'और वैसे भी,', 'एक *बोलने*', '*वाले* बंदर', 'पर इतना', '*हंगामा*', 'क्यों?']
+villain:
+  say: "क्योंकि एक होशियार, बोलने वाला बंदर बाक़ी बंदरों को ग़ुलामी से निकाल ले जा सकता है... और हमें ग़ुलामी को हमेशा क़ायम रखना है! हमें ग़ुलामों की हमेशा ज़रूरत रही है, और हमेशा रहेगी!"
+  who: खलनायक
+  lines: ['क्योंकि एक *होशियार*,', '*बोलने वाला* बंदर *बाक़ी*', 'बंदरों को *ग़ुलामी* से', 'निकाल ले जा सकता है . . .', 'और हमें ग़ुलामी को', 'हमेशा *क़ायम* रखना है!', 'हमें ग़ुलामों की हमेशा', '*ज़रूरत* रही है, और रहेगी!']
+  lost:
+    - what: rhythm
+      free: '...इसलिए ग़ुलामी बनी रहनी चाहिए! ग़ुलाम हमेशा चाहिए थे, हमेशा चाहिए होंगे!'
+      hi: 'MAD का खलनायक जान-बूझकर वह कहता है जो कहा नहीं जाना चाहिए, भाषण की तरह, ठसक से। अनुवाद "ग़ुलामी", "क़ायम", "ज़रूरत" जैसे उर्दू से आए भारी शब्दों से वही नाटकीय लहजा पकड़ता है, जैसे पुरानी हिंदी फ़िल्मों के खलनायक बोलते थे।'
+      en: 'MAD''s villain says the unsayable on purpose, pompously, like a speech. The translation catches that theatrical tone with heavy words that came into Hindi from Urdu (ग़ुलामी, slavery; क़ायम, maintained; ज़रूरत, need), the way villains talk in old Hindi films.'
+turtle:
+  say: "कभी ऐसा लगा है कि तुम ग़लत फ़िल्म में हो?"
+  who: टर्टलनेक वाला आदमी
+  lines: ['कभी', 'ऐसा *लगा*', 'है कि तुम', '*ग़लत*', '*फ़िल्म*', 'में हो?']
+  lost:
+    - what: idiom
+      free: 'कभी लगा है कि तुम किसी और की कहानी में फँस गए हो?'
+      hi: '"ग़लत फ़िल्म में होना" हिंदी का कोई मुहावरा नहीं है; यह शब्दशः अनुवाद है। इसे इसलिए रखा कि कॉमिक का गुब्बारा, Claude का उद्धरण (T01.C.03) और अध्याय का शीर्षक, तीनों शब्द-दर-शब्द मेल खाएँ। ज़्यादा खुला अनुवाद "किसी और की कहानी में फँस जाना" कहता।'
+      en: '"To be in the wrong film" isn''t a Hindi idiom; it''s literal. It was kept so the balloon, Claude''s quotation (T01.C.03) and the chapter title match word for word. A freer translation would have said "stuck in someone else''s story".'

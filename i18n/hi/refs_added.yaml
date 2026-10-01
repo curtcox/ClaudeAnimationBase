@@ -1,0 +1,6 @@
+# Codes only the Hindi film has, in script/refs.yaml's form (i18n/tools/stage.mjs adds them to the stage's).
+#
+# The translation's own page (i18n/tools/lost.mjs → the Hindi site's anuvad/): how the film was translated, how else
+# it could have been, and what a freer translation would have said, in Hindi and English. Its code goes up on the
+# ventriloquist line, as in the other translations: in a dubbed film someone else really is doing the talking.
+- { id: anuvad, url: "https://curtcox.github.io/axol-f/hi/anuvad/", host: anuvad/, caption: "अनुवाद कैसे हुआ, और क्या छूट गया", origin: added, at: T03.C.03.1, cue: "असल में बोल कोई और रहा है", mode: shelf, style: note }

@@ -1,0 +1,15 @@
+/* Hindi lettering (i18n/PLAN.md): the film's hand-lettering fonts have no Devanagari, so each gets that range from the
+   Mac's own Kohinoor Devanagari: Medium for Patrick Hand (labels, boards, the comic), Bold for Permanent Marker
+   (headlines, sound effects). Nothing is downloaded, and every Mac draws them the same. As for Japanese, each is
+   declared as the family's regular face, so bold Latin stays Patrick Hand's (bold is synthesized).
+   i18n/tools/stage.mjs links this into the stage's studio; i18n/src/i18n.js loads them before the first frame. */
+@font-face {
+  font-family: "Patrick Hand";
+  src: local("KohinoorDevanagari-Medium"), local("Kohinoor Devanagari Medium");
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+A8E0-A8FF, U+200C-200D, U+20B9;
+}
+@font-face {
+  font-family: "Permanent Marker";
+  src: local("KohinoorDevanagari-Bold"), local("Kohinoor Devanagari Bold");
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+A8E0-A8FF, U+200C-200D, U+20B9;
+}

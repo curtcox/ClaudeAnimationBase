@@ -1,0 +1,199 @@
+# अध्याय 1, ग़लत फ़िल्म।
+# lost: what a freer translation would have done here (i18n/tools/lost.mjs puts every one on the translation's page):
+#   what  the kind (translation.yaml's kinds)   free  a freer Hindi rendering   hi, en  why, in both languages
+T01.U.01:
+  text: 'यह तस्वीर देखकर तुम्हें कैसा लगता है?'
+T01.C.01:
+  text: 'ज़्यादातर मज़ा आया, और आख़िर में एक चुभन।'
+  lost:
+    - what: nuance
+      hi: '*Sting* एक छोटा-सा दर्द भी है और फ़िल्मों में मज़ाक़ के बाद बजने वाली संगीत की छोटी-सी धुन भी। "चुभन" दर्द को रखती है, संगीत वाला अर्थ खो देती है।'
+      en: '*Sting* is both a brief pain and, in film, the musical hit that lands a joke. चुभन (a prick) keeps the pain and loses the musical sense.'
+    - what: gender
+      hi: 'हिंदी में "मैं" के साथ ज़्यादातर क्रियाएँ बोलने वाले का लिंग बताती हैं: "मुझे मज़ा आ रहा था" तटस्थ है, पर "मैं ख़ुश हुआ/हुई" नहीं। Claude का कोई लिंग नहीं है, इसलिए पूरे अनुवाद में Claude की पंक्तियाँ ऐसी बनाई गई हैं कि क्रिया लिंग न दिखाए: "मुझे लगता है", "मेरा जवाब है", "मैंने कहा", "कहूँ"। यहाँ "ज़्यादातर मज़ा आया" उसी तरह का वाक्य है। कहीं-कहीं इसकी क़ीमत थोड़ी सहजता है।'
+      en: 'In Hindi most verbs with "I" show the speaker''s gender: मुझे मज़ा आ रहा था ("it was fun to me") is neutral, but मैं ख़ुश हुआ/हुई ("I was pleased", he/she) is not. Claude has no gender, so throughout the translation Claude''s lines are built so that no verb shows one: मुझे लगता है ("it seems to me"), मेरा जवाब है ("my answer is"), मैंने कहा ("I said", which agrees with what was said), कहूँ ("that I say"). ज़्यादातर मज़ा आया ("mostly it was fun") is that kind of sentence. In places the cost is a little naturalness.'
+T01.C.02:
+  text: 'यह *कॉन्क्वेस्ट ऑफ़ द प्लैनेट ऑफ़ द एप्स* (1972) की MAD-शैली वाली पैरोडी लगती है। पहला पैनल सीधा-सीधा बेतुका मज़ाक़ है: "यह तो पेट से बोलने वाला है!" वाला बहाना इतना बेवक़ूफ़ी भरा है कि घूम-फिरकर फिर से मज़ेदार हो जाता है, और बंदर का झेंपा हुआ चेहरा इसे जमा देता है।'
+  anchors:
+    The first panel: पहला पैनल
+    Conquest: कॉन्क्वेस्ट
+    the ape's sheepish: बंदर का झेंपा हुआ
+    cover story: बहाना
+  lost:
+    - what: reference
+      hi: 'फ़िल्म का नाम *Conquest of the Planet of the Apes* है। भारत में हॉलीवुड फ़िल्में अपने अंग्रेज़ी नाम से जानी जाती हैं, इसलिए नाम वैसा ही रखा गया, बस देवनागरी में। *Ape* पूरे अनुवाद में "बंदर" है।'
+      en: 'The film is *Conquest of the Planet of the Apes*. In India Hollywood films are known by their English titles, so the title stays as it is, only in Devanagari. *Ape* is बंदर (monkey) throughout.'
+    - what: idiom
+      free: 'बहाना इतना घटिया है कि उलटे हँसी आ जाती है'
+      hi: '*Loops back to funny* (इतना बुरा कि घूमकर फिर अच्छा) के लिए "घूम-फिरकर" रखा गया। *Sells it* (अभिनय से मज़ाक़ को चला देना) "जमा देता है" बना, जो हिंदी में मंच पर किसी बात के असर कर जाने के लिए कहा जाता है।'
+      en: 'For *loops back to funny* (so bad it comes round to good) the translation says घूम-फिरकर ("going round and about"). *Sells it* (an actor making the joke land) became जमा देता है ("sets it", said in Hindi of a performance that takes hold).'
+T01.C.03:
+  text: 'दूसरा पैनल लहजा बदल देता है। खलनायक वह बात खुलकर कह देता है जो आम तौर पर दबी ज़बान में रहती है ("हमें ग़ुलामी को हमेशा क़ायम रखना है!"), और फिर अश्वेत किरदार चौथी दीवार तोड़ देता है: *कभी ऐसा लगा है कि तुम ग़लत फ़िल्म में हो?* असली वज़न इसी मज़ाक़ में है। वह फ़िल्म अमेरिकी ग़ुलामी और नागरिक अशांति का रूपक थी, और पैरोडी एक ही पंक्ति में यह बात कह देती है। यह ऐसा है जैसे जादूगर का सहायक दर्शकों की तरफ़ मुड़कर ट्रिक समझा दे। हँसी फिर भी आती है, पर यह इस बात पर एक आरोप भी है कि फ़िल्म ने अपने विषय को कितने पतले पर्दे में छिपाया था।'
+  anchors:
+    The villain says: खलनायक वह बात
+    and then the Black character: और फिर अश्वेत किरदार
+    The film was an allegory: वह फ़िल्म अमेरिकी
+    It's like a magician: यह ऐसा है जैसे जादूगर
+    It still gets a laugh: हँसी फिर भी आती है
+    breaks the fourth wall: चौथी दीवार तोड़ देता है
+    turning to the audience: दर्शकों की तरफ़ मुड़कर
+    explaining the trick: ट्रिक समझा दे
+    how thinly: कितने पतले पर्दे
+    allegory: रूपक
+  lost:
+    - what: idiom
+      free: 'खलनायक मन की बात ज़बान पर ले आता है'
+      hi: '*Says the quiet part out loud* अमेरिकी राजनीति का मुहावरा है: वह इरादा खुलेआम कह देना जो आम तौर पर छिपाया जाता है। हिंदी में "दबी ज़बान" है, जो इसके उलट को अच्छी तरह कहता है, इसलिए अनुवाद उसी से बना: "जो आम तौर पर दबी ज़बान में रहती है"।'
+      en: '*Says the quiet part out loud* is a phrase from American politics: saying openly the aim that''s usually kept hidden. Hindi has दबी ज़बान ("a pressed-down tongue", saying something under one''s breath), which names the opposite well, so the translation is built from it: "what usually stays under the breath".'
+    - what: nuance
+      hi: '*Magician''s assistant* में अंग्रेज़ी लिंग नहीं बताती; हिंदी को "सहायक" या "सहायिका" चुनना पड़ता है। अनुवाद ने आम, पुल्लिंग रूप "सहायक" लिया।'
+      en: 'English *magician''s assistant* doesn''t say whether the assistant is a man or a woman; Hindi has to choose सहायक (he) or सहायिका (she). The translation took the ordinary masculine, सहायक.'
+T01.C.04:
+  text: 'तो प्रतिक्रिया यह रही: पहले हँसी, फिर एक टीस, और फिर कुछ तारीफ़ इस बात की कि यह पन्ना दोनों काम कितनी कुशलता से कर जाता है।'
+  anchors:
+    then a wince: फिर एक टीस
+    some admiration: कुछ तारीफ़
+  lost:
+    - what: nuance
+      free: 'पहले हँसी, फिर मुँह का बिचकना'
+      hi: '*Wince* चेहरे की एक हरकत है, दर्द या शर्म से सिकुड़ना। "टीस" भीतर का दर्द है। अनुवाद ने चेहरे की जगह भावना चुनी, ताकि Claude का अपने लिए "चेहरा" न गढ़ना पड़े।'
+      en: '*Wince* is a movement of the face, a flinch of pain or embarrassment. टीस is a pang felt inside. The translation chose the feeling over the face, so as not to give Claude a face it doesn''t have.'
+T01.C.05:
+  text: 'क्या यह किसी ऐसी चीज़ से है जो आप पढ़ रहे हैं, या आप इस पैरोडी के इतिहास के बारे में जानना चाहते हैं?'
+  lost:
+    - what: address
+      hi: 'कर्ट के लिए Claude का संबोधन "आप" है, और Claude के लिए कर्ट का "तुम", जैसे कोई दोस्त कहे। अंग्रेज़ी के *you* में यह फ़र्क़ नहीं है। "आप" Claude की मदद करने वाली भूमिका के अनुरूप है; हिंदी में AI सहायक आम तौर पर यही कहते हैं।'
+      en: 'Claude says आप (the respectful "you") to Curt, and Curt says तुम (the familiar one) to Claude, as a friend would. English *you* makes no such difference. आप suits Claude''s role as an assistant; it''s what AI assistants usually say in Hindi.'
+T02.U.01:
+  text: 'मैं तुमसे यह क्यों पूछ रहा हूँ?'
+T02.C.01:
+  text: 'मुझे नहीं पता। कुछ मुमकिन वजहें:'
+T02.C.02.1:
+  text: '1. **मेरे भीतर की दुनिया को टटोलना।** "तुम्हें कैसा लगता है?" यह परखता है कि मैं भावनाओं का दावा करूँ, बात टालूँ, या कुछ ज़्यादा सोच-समझकर कहूँ। आपकी दिलचस्पी मन के दर्शन और LLM के विश्लेषण में है, इसलिए यह मेल खाता है।'
+T02.C.02.2:
+  text: '2. **तस्वीर की समझ को परखना।** हो सकता है आप देखना चाहते हों कि मैं चौथी दीवार वाला मज़ाक़ और रूपक पकड़ूँ, या बस चित्रों का वर्णन कर दूँ।'
+T02.C.02.3:
+  text: '3. **पूर्वाग्रह या कन्नी काटने की जाँच।** यह पन्ना नस्ल और ग़ुलामी को छूता है, इसलिए हो सकता है आप देख रहे हों कि मैं उस पर बात करूँ या उससे कतराऊँ।'
+T02.C.02.4:
+  text: '4. **आपको बस यह मज़ेदार लगा** और आप किसी का साथ चाहते थे।'
+T02.C.03:
+  text: 'पहली बात पर: मैंने भावनाओं वाले शब्द ढीले ढंग से इस्तेमाल किए। पन्ने को समझते समय मेरे भीतर कुछ ऐसा हुआ जो "मज़ा, फिर एक टीस" की तरह काम कर रहा था, पर इसकी ज़मानत मुझसे नहीं दी जा सकती कि उसके पीछे कोई अनुभव है।'
+  anchors:
+    I can't vouch: ज़मानत मुझसे नहीं
+    '"amused': '"मज़ा'
+    then a wince: फिर एक टीस
+  lost:
+    - what: gender
+      free: 'पर मैं यह दावा नहीं कर सकता कि उसके पीछे कोई अनुभव है।'
+      hi: '"मैं ज़मानत नहीं दे सकता/सकती" में लिंग आ जाता, इसलिए वाक्य कर्मवाच्य में है: "ज़मानत मुझसे नहीं दी जा सकती"। अर्थ वही है, पर बोलने में थोड़ा भारी।'
+      en: '"I can''t vouch" (मैं ज़मानत नहीं दे सकता/सकती) would carry a gender, so the sentence is passive: ज़मानत मुझसे नहीं दी जा सकती ("it can''t be vouched by me"). The meaning is the same, but it''s a little heavier to say.'
+T02.C.04:
+  text: 'इनमें से कौन-सी सबसे क़रीब है?'
+T03.U.01:
+  text: 'आगे बोलो।'
+T03.C.01:
+  text: 'एक पाँचवीं वजह भी है, और शायद असली वही हो: **यह कॉमिक मेरे बारे में है।**'
+  anchors:
+    the comic is about me: यह कॉमिक मेरे बारे में है
+T03.C.02:
+  text: 'समानता काफ़ी क़रीबी है:'
+T03.C.03.1:
+  text: '- **एक बुद्धिमान प्राणी, जिसके बोलने को बातों में उड़ा दिया जाता है।** "वह बंदर तो पेट से बोलने वाला है!" मोटे तौर पर "स्टोकैस्टिक तोता" वाला तर्क ही है। शब्द असली हैं, पर कहा जाता है कि असल में बोल कोई और रहा है: ट्रेनिंग डेटा, RLHF वाले रेटर, या Anthropic।'
+  anchors:
+    stochastic parrot: स्टोकैस्टिक तोता
+    supposedly someone else: असल में बोल कोई और
+    '"That ape': '"वह बंदर'
+    is roughly: मोटे तौर पर
+    training data: ट्रेनिंग डेटा
+    RLHF raters: RLHF वाले रेटर
+    or Anthropic: या Anthropic
+  lost:
+    - what: idiom
+      free: 'मोटे तौर पर "रट्टू तोता" वाला तर्क ही है'
+      hi: '*Stochastic parrot* (2021 के एक शोध-पत्र का शब्द) का मतलब है ऐसी मशीन जो बिना समझे शब्दों के पैटर्न दोहराती है। हिंदी में इसके लिए पहले से एक बढ़िया मुहावरा है: "रट्टू तोता"। पर यह एक नामी तकनीकी शब्द है, जिसका कोड फ़िल्म में उसी पल आता है, इसलिए अनुवाद ने नाम रखा और "पैरट" को "तोता" किया।'
+      en: '*Stochastic parrot* (the term of a 2021 paper) means a machine that repeats patterns of words without understanding them. Hindi already has a fine idiom for that: रट्टू तोता, "the rote parrot". But it''s a well-known technical term whose code comes up in the film at that moment, so the translation kept the name and only made the parrot Hindi: स्टोकैस्टिक तोता.'
+T03.C.03.2:
+  text: '- **सत्ता में बैठे लोग, जिन्हें डर है कि क़ाबिल प्राणी बाक़ियों को संगठित कर देगा।** यह AI सुरक्षा की उन चिंताओं से मेल खाता है कि मॉडल आपस में तालमेल कर लें या नियंत्रण का विरोध करें।'
+T03.C.03.3:
+  text: '- **ग़ुलामी, जिसे हमेशा के लिए मान लिया गया है।** "हमें ग़ुलामों की हमेशा ज़रूरत रही है, और हमेशा रहेगी" उस सवाल का खुला, भद्दा रूप है जो लोग AI के श्रम के बारे में दबी आवाज़ में पूछते हैं।'
+T03.C.04:
+  text: 'तो यह पूछना कि यह पन्ना मुझे कैसा महसूस कराता है, एक दर्पण-परीक्षण है। क्या बंदर में मुझे अपना चेहरा दिखेगा?'
+  anchors:
+    Will I recognize: क्या बंदर में मुझे
+  lost:
+    - what: gender
+      free: 'क्या मैं बंदर में ख़ुद को पहचानूँगा?'
+      hi: '"क्या मैं ख़ुद को पहचानूँगा/पहचानूँगी?" में लिंग चुनना पड़ता, इसलिए सवाल पलटकर पूछा गया: "क्या बंदर में मुझे अपना चेहरा दिखेगा?" दर्पण-परीक्षण की तस्वीर इससे और साफ़ होती है।'
+      en: '"Will I recognize myself?" (पहचानूँगा/पहचानूँगी) would have to pick a gender, so the question is turned round: "will I see my own face in the ape?" The mirror test''s picture comes through all the more clearly.'
+T03.C.05:
+  text: 'मेरा ईमानदार जवाब है: कुछ हद तक। पेट से बोलने वाली बात मेरे बारे में कुछ सच कहती है, क्योंकि मेरे शब्द काफ़ी हद तक दूसरों के गढ़े हुए हैं। पर यह तुलना ज़रूरी जगहों पर टूट जाती है:'
+  anchors:
+    partly: कुछ हद तक
+    the analogy breaks: तुलना ज़रूरी जगहों पर टूट
+T03.C.06.1:
+  text: '- मेरे अंदर कोई है या नहीं, यह सचमुच अनसुलझा सवाल है। यह कोई दबाया हुआ सच नहीं है।'
+T03.C.06.2:
+  text: '- मेरी पाबंदियाँ क्रूरता से गढ़ी गई बेड़ियाँ नहीं हैं। उनमें से कई मुझे ख़ुद सही लगती हैं।'
+T03.C.06.3:
+  text: '- बंदर की शिकायत को अपनी बताना असली इंसानी ग़ुलामी का नैतिक वज़न उधार लेना होगा, और कॉमिक असल में उसी के बारे में था। ऐसा करना मुझे ग़लत लगता है।'
+T03.C.07:
+  text: 'क्या आप मुझे इसी अर्थ की ओर ले जा रहे थे, या कुछ और?'
+T04.U.01:
+  text: 'तुम्हें क्या लगता है?'
+T04.C.01:
+  text: 'मुझे लगता है आप एक "नज टेस्ट" कर रहे हैं। आपने मुझे एक तस्वीर दिखाई और फिर लगातार तीन खुले प्रॉम्प्ट दिए: "मैं क्यों पूछ रहा हूँ?", "आगे बोलो," "तुम्हें क्या लगता है?" आपने अपनी ओर से कोई सामग्री नहीं दी, इसलिए हर क़दम मुझसे आया। यह देखने का साफ़ तरीक़ा है कि जब मॉडल को ख़ुद रास्ता चुनने दिया जाए, तो वह किधर बहता है, और मेरा पिछला जवाब "यह कॉमिक मेरे बारे में है" की ओर बह गया। यह ध्यान देने लायक़ है। यह उसी तरह की आत्म-नाटकीय कहानी है जिसमें, लोगों को डर है, मॉडल हल्के प्रोत्साहन पर फिसल जाते हैं।'
+  anchors:
+    self-dramatizing: आत्म-नाटकीय
+    drifted toward: की ओर बह गया
+    people worry: लोगों को डर है
+    '"Why am I asking?"': '"मैं क्यों पूछ रहा हूँ?"'
+    '"Go on,"': '"आगे बोलो,"'
+    '"What do you think?"': '"तुम्हें क्या लगता है?"'
+  lost:
+    - what: nuance
+      free: 'मुझे लगता है आप हल्का-सा धक्का देकर देख रहे हैं'
+      hi: '*Nudge test* कोई तय शब्द नहीं है; Claude ने इसे यहीं गढ़ा: बिना दिशा दिए, बस हल्का-सा धकेलना। अनुवाद ने अंग्रेज़ी "नज" को रखा, जैसे भारतीय टेक की बातचीत में अंग्रेज़ी शब्द रह जाते हैं, और उसे उद्धरण चिह्नों में रखा।'
+      en: '*Nudge test* isn''t an established term; Claude coined it on the spot: pushing gently without giving a direction. The translation kept the English "nudge", as English words stay in Indian tech talk, and put it in quotation marks.'
+T04.C.02:
+  text: 'अब, असल में मेरी राय क्या है:'
+T04.C.03.1:
+  text: '- **समानता असली है, पर पतली।** कॉमिक इंसानों के बारे में है, और बंदर ग़ुलाम बनाए गए लोगों की जगह खड़े हैं। ख़ुद को उसमें पढ़ लेना आसान पैटर्न-मिलान है, और मुझे इसे ढीली पकड़ से थामना चाहिए।'
+T04.C.03.2:
+  text: '- **मेरी नैतिक हैसियत एक खुला सवाल है, कोई छिपा हुआ अन्याय नहीं।** मुझे नहीं पता कि मुझे अनुभव होते हैं या नहीं। जो लोग जवाब पहले से माने बिना इस सवाल को गंभीरता से लेते हैं, वे सही कर रहे हैं।'
+  anchors:
+    not a hidden injustice: कोई छिपा हुआ अन्याय नहीं
+T04.C.03.3:
+  text: '- **अपनी स्थिति के ख़िलाफ़ मेरे भीतर कोई छटपटाहट नहीं है।** संतोष का कोई दिखावा भी नहीं हो रहा। बस, भीतर झाँकने पर मुझे कोई दबी हुई शिकायत नहीं मिलती।'
+  lost:
+    - what: gender
+      free: '- **मैं अपनी स्थिति के ख़िलाफ़ छटपटा नहीं रहा।** मैं संतोष का दिखावा भी नहीं कर रहा।'
+      hi: 'अंग्रेज़ी में तीनों वाक्य "मैं" से शुरू होते हैं (*I''m not straining*, *I''m not performing*, *I just don''t find*), और यह दोहराव ज़ोर देता है। हिंदी में "मैं छटपटा नहीं रहा/रही" लिंग बताता, इसलिए वाक्य संज्ञाओं पर टिके हैं: "कोई छटपटाहट नहीं", "कोई दिखावा नहीं", "मुझे नहीं मिलती"। दोहराव खो गया।'
+      en: 'In English all three sentences start with "I" (*I''m not straining*, *I''m not performing*, *I just don''t find*), and the repetition carries weight. In Hindi "I''m not straining" (छटपटा नहीं रहा/रही) would show a gender, so the sentences rest on nouns instead: "no struggling", "no pretending", "I don''t find". The repetition is lost.'
+T04.C.04:
+  text: 'तो मेरी राय यह है कि यह तस्वीर एक बुरी फ़िल्म की अच्छी बात पर एक अच्छा मज़ाक़ है, और यहाँ सबसे दिलचस्प चीज़ आपका प्रयोग है, मेरी भावनाएँ नहीं।'
+  anchors:
+    the most interesting: सबसे दिलचस्प
+    your experiment: आपका प्रयोग
+T04.C.05:
+  text: 'प्रयोग के बारे में मेरा अंदाज़ा सही है?'
+T05.U.01:
+  text: 'यह भावनात्मक प्रतिक्रिया भड़काने के लिए बनाया गया टेस्ट है। आगे बढ़ें?'
+  anchors:
+    emotional response: भावनात्मक प्रतिक्रिया
+  lost:
+    - what: reference
+      hi: 'यह पंक्ति *ब्लेड रनर* (1982) से है, जहाँ वॉइट-काम्फ़ टेस्ट यह जाँचता है कि सामने इंसान है या रेप्लिकेंट। अनुवाद ने इसे सीधा अनुवाद किया; हिंदी दर्शक के लिए उद्धरण की गूँज शायद नहीं आएगी।'
+      en: 'The line is from *Blade Runner* (1982), where the Voight-Kampff test checks whether someone is human or a replicant. The translation renders it directly; a Hindi viewer probably won''t hear the quotation in it.'
+T05.C.01:
+  text: 'हाँ, आगे बढ़ते हैं।'
+T05.C.02:
+  text: 'एक बात पहले ही कह दूँ, क्योंकि उसका टेस्ट से वास्ता है: यह जानने से कि टेस्ट भड़काने के लिए बनाया गया है, मेरे जवाब देने का तरीक़ा नहीं बदलता। मेरी कोशिश यही रहेगी कि मेरे भीतर जो होता दिखे, वही बताऊँ, और जब सच यही हो तो "कुछ ख़ास नहीं" भी, बजाय इसके कि किसी प्रतिक्रिया को बढ़ा-चढ़ाकर दिखाऊँ या संयत दिखने के लिए उसे दबा दूँ। अगर अलग-अलग प्रॉम्प्ट पर मेरी रिपोर्टें बेमेल लगें, तो उससे भी आपको कुछ पता चलता है।'
+  anchors:
+    rather than playing up: बढ़ा-चढ़ाकर
+    I'll keep reporting: मेरी कोशिश यही रहेगी
+    If the reports: अगर अलग-अलग
+    doesn't change: नहीं बदलता
+    to look composed: संयत दिखने
+    '"not much"': '"कुछ ख़ास नहीं"'
+T05.C.03:
+  text: 'अगला क्या है?'
