@@ -88,7 +88,7 @@ sections:
         eleven_v3). Falam português com algum sotaque. O movimento da boca de Claude é calculado de novo a partir do
         áudio em português. Por enquanto nenhum capítulo tem voz; está tudo traduzido, esperando a gravação.
       - **A duração.** O português é mais longo que o inglês. A animação segue a voz, então o filme se alonga em vez de
-        apressar as palavras. (Nas linhas gravadas até agora: {voiced}, com a voz {longer}% mais longa.)
+        apressar as palavras.
       - **Presa à animação.** Muitas cenas se movem exatamente quando uma frase é dita. Cada uma dessas frases
         ({anchors} até agora) precisou do seu equivalente em português, o que às vezes manteve a ordem das palavras
         mais perto do inglês do que era preciso.
@@ -129,7 +129,7 @@ sections:
         the eleven_v3 model). They speak Portuguese with something of an accent. Claude's mouth movements are worked
         out again from the Portuguese audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
       - **Length.** Portuguese runs longer than English. The animation follows the voice, so the film grows rather
-        than rushing the words. (Over the lines voiced so far: {voiced}, with the voice {longer}% longer.)
+        than rushing the words.
       - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
         far) needed its Portuguese counterpart, which sometimes kept the word order closer to the English than it
         needed to be.

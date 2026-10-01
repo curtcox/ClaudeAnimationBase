@@ -49,6 +49,25 @@ Cheapest wide reach, any time: YouTube subtitles in many languages, made from ea
   the Spanish article where there is one, else say "(en inglés)" (`i18n/tools/wiki_notes.mjs`); in the third person
   Claude takes the masculine pronoun of "el programa" ("lo"), but no gendered adjectives.
 
+## Conventions (Brazilian Portuguese, `i18n/pt`, site at `/pt/`)
+
+Curt's Spanish decisions carry over (Claude's assumption, 2026-09-30, for Curt to confirm): a full, faithful
+translation, the same voices.
+
+- Brazilian Portuguese, not Portugal's. Curt and Claude say *você*; the cold open's handler keeps the distance of
+  *o senhor* without saying it.
+- Claude has no grammatical gender: no adjectives or participles that would give it one ("me diverte", "que me meçam",
+  "já te implantaram?"). On the site, the masculine pronoun of "o programa".
+- *Ape* is "macaco", as in the Brazilian title *A Conquista do Planeta dos Macacos*. *Frog* is "sapo", the word a
+  Brazilian says first (the title is *Sapo ou axolote*); a note says "rã" is often more exact.
+- *Alien* is "estranho" (strange), not "alienígena"; the axis *Tempo* is "Ritmo".
+- Films and books by their Brazilian titles (*O Jogo do Exterminador*, *O Exterminador do Futuro*, "Eu voltarei").
+- Thousands with a point (17.000), decimals with a comma (0,05).
+- "Prompt" stays English, as Brazilian tech Portuguese uses it.
+- On the site: "[Nota da tradução: …]", and "(em inglês)" after a link with no Portuguese article (137 of the film's
+  202 Wikipedia codes have one; 211 of the explainers' links moved to Portuguese Wikipedia).
+- The translation page is `i18n/pt/translation.yaml` (its texts keyed `pt` and `en`), at `/pt/traducao/`.
+
 ## How it's built
 
 Everything for a language lives under `i18n/<lang>/`. The English film's files are left alone, except where a small,
@@ -123,6 +142,14 @@ The tools, run from the project's root:
 - [ ] The final render (about 5.5 hours; on the faster Mac) and the join. The YouTube title, tags and description's
       words are translated (`youtube_strings.yaml`); the description itself is made at the join, from the film's times.
 - [ ] Upload as its own video, linked from the English one, and the English from it.
+
+### Brazilian Portuguese
+
+- [x] The transcript (453 lines, every anchor), the lettering (361), the codes' captions (409), the cold open, the
+      chapter titles, the 64 explainers, the site's words, the YouTube words, the translation's page (92 notes), the
+      thumbnail (`i18n/pt/thumbnail.jpg`). Built by the same Pages workflow, at `/pt/` (2026-09-30).
+- [ ] Curt confirms the Spanish decisions apply (or changes them).
+- [ ] Voice it (ElevenLabs quota permitting), then drafts, then the final on the faster Mac.
 
 ## Costs
 
