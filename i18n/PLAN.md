@@ -252,6 +252,7 @@ The tools, run from the project's root:
       codes' captions (409; Hindi Wikipedia for 39 of 202), both thumbnails, the 64 explainers (Wikipedia links moved
       to Hindi for 70, marked "(अंग्रेज़ी में)" for 237), the site's words, the YouTube words, the translation's page
       (`i18n/hi/translation.yaml`, at `/hi/anuvad/`). No italics on the Hindi site (Devanagari has none to borrow).
+- [x] Every chapter probed: nothing lettered in English, every cue anchored, no errors (2026-10-01).
 - [x] Claude never takes a gender: every line was built for it and checked by a scan for gendered verbs about Claude,
       in the transcript and the explainers; each place it cost something is a note on the translation's page.
 - [ ] Curt confirms the conventions above (or changes them); a Hindi-reading reviewer, if one turns up.
