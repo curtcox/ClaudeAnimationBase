@@ -48,7 +48,7 @@ const tidy = CJK ? s => s.trim() : s => s;
 
 // the same cleaning and sentence split as the captions
 const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/\s+/g, ' ').trim();
-const sentencesOf = s => { s = s.replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․');
+const sentencesOf = s => { s = s.replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․').replace(/(\d)\.(?= (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b)/g, '$1․');
   return (CJK ? s.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean)
     : s.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u)).map(x => x.replace(/․/g, '.')); };
 // a typo mark ("Solid Gold [Magicarp→Magikarp]", "[+as]", "[were a→]") as the text typed and the text shown

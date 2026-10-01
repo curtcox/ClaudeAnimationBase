@@ -1,0 +1,154 @@
+# Kapitel 15, Der Kompass.
+T73.U.01:
+  text: 'Kennst du das KI-Alignment-Gesinnungsraster, das online gepostet wurde? Wo würdest du jeden von uns darauf einordnen?'
+  anchors:
+    AI alignment alignment chart: KI-Alignment-Gesinnungsraster
+    Where would you put: Wo würdest du
+  lost:
+    - what: wordplay
+      free: 'das Alignment-Alignment-Diagramm'
+      de: 'Das Englische sagt zweimal *alignment*: einmal für die Ausrichtung von KI auf menschliche Werte, einmal für die „Gesinnung“ aus Dungeons & Dragons (rechtschaffen gut, chaotisch böse…), deren Raster das Meme nachahmt. Auf Deutsch sind es zwei Wörter, und das Echo geht verloren.'
+      en: 'The English says *alignment* twice: once for aligning AI with human values, once for the Dungeons & Dragons alignment chart (lawful good, chaotic evil…) the meme imitates. In German those are two words, *Alignment* and *Gesinnung*, and the echo is lost.'
+T73.C.01:
+  text: '> _[Tool: Web durchsucht]_'
+T73.C.02:
+  text: 'Ich erinnere mich nicht verlässlich an genau dieses Raster, und die Suche hat es nicht zutage gefördert. Es gibt ein paar Varianten des Memes, und ich will lieber nicht so tun, als wüsste ich, welche du meinst.'
+  anchors:
+    a few takes on the meme: ein paar Varianten des Memes
+T73.C.03:
+  text: 'Wenn du es einfügst, ordne ich uns beide ein, dazu Jeff, Kevin und Casey, wenn du die ganze Besetzung willst.'
+  anchors:
+    Jeff: Jeff
+    Kevin: Kevin
+    Casey: Casey
+T74.U.00:
+  text: '_[Bild angehängt: im geteilten Link ausgeblendet]_'
+T74.U.01:
+  text: 'https://theinsideview.ai/connor2'
+  speech: 'Connor Leahy on Dignity and Conjecture.'
+T74.C.01:
+  text: '> _[Tool: eine Seite gelesen]_'
+T74.C.02:
+  text: 'Das ist der 2×2-Kompass aus dem Gespräch von 2022 zwischen Michaël Trazzi und Connor Leahy. Die horizontale Achse reicht von „AGI nicht jetzt“ bis „AGI bald“, die vertikale von „AGI gut“ bis „AGI schlecht“.'
+  anchors:
+    2022 conversation: Gespräch von 2022
+    The horizontal axis: Die horizontale Achse
+    the vertical axis: die vertikale
+T74.C.03.1:
+  text: '- **Ich:** Doomer-Quadrant, nah an der Mitte. Ich glaube, AGI kommt ziemlich bald und das Risiko ist real, aber meine Zahlen sind gemäßigt, nicht die von Eliezer.'
+T74.C.03.2:
+  text: '- **Du:** Doomer-Quadrant, tiefer als ich. Du hast gesagt, es fällt dir überhaupt schwer, ein gutes Ende auf lange Sicht zu sehen. Außerdem nimmst du Fähigkeiten ernst, wie dein Argument über Konzepte gezeigt hat.'
+T74.C.03.3:
+  text: '- **Jeff:** ganz links, im Quadranten der „Torpfostenverschieber“. Er würde das Diagramm selbst als TESCREAL-Rahmung ablehnen, und das ist irgendwie der Witz dieses Quadranten.'
+  anchors:
+    reject the chart itself: das Diagramm selbst
+T74.C.03.4:
+  text: '- **Leo:** Akzelerationisten-Quadrant, nah an der Mitte, und er driftet nach unten. Er liebt die Werkzeuge, gibt zu, dass er seinem eigenen Instinkt nicht traut, und hatte eine harte Woche.'
+  anchors:
+    drifting down: driftet nach unten
+T74.C.03.5:
+  text: '- **Pater Robert:** knapp unter der Mittellinie und etwas links. Er ist besorgt, aber wegen eines Zusammenbruchs der Infrastruktur, nicht wegen Superintelligenz.'
+T74.C.03.6:
+  text: '- **Kevin:** rechte Seite, knapp unter der Linie.'
+T74.C.03.7:
+  text: '- **Casey:** rechte Seite, knapp über der Linie.'
+T74.C.04:
+  text: 'Im Rückblick fällt eines auf: In jener Folge stimmte Leahy einer Spanne von 2026 bis 2030 für seine AGI-Zeitleiste zu. Wir sind jetzt mitten in diesem Fenster.'
+  anchors:
+    agreed with a twenty twenty-six: stimmte Leahy einer Spanne
+    We're now inside that window: Wir sind jetzt mitten in diesem Fenster
+    inside that window: mitten in diesem Fenster
+T75.U.01:
+  text: 'Meinungen zu AGI 2027?'
+T75.C.01:
+  text: '> _[Tool: Web durchsucht]_'
+T75.C.02:
+  text: 'Vorausgesetzt, du meinst *AI 2027*, das Szenario von Kokotajlo und anderen:'
+T75.C.03:
+  text: '**Als Zeitplan wahrscheinlich zu schnell.** Die Autoren selbst bewerteten 2025 mit etwa 65 % des Tempos des Szenarios, und Kokotajlo sagt inzwischen, sein Median liege um 2030, mit viel Unsicherheit. Ihre Notiz vom April 2026 sagte, Programmierwerkzeuge hätten das Tempo wieder näher an das ursprüngliche gebracht. Meine eigenen Zahlen von vorhin liegen nahe an ihrer revidierten Sicht, nicht am Titel 2027.'
+  anchors:
+    probably too fast: wahrscheinlich zu schnell
+    graded 2025: bewerteten 2025
+    around 2030: um 2030
+    April 2026 note: Notiz vom April 2026
+    My own numbers: Meine eigenen Zahlen
+T75.C.04:
+  text: '**Als Szenario unangenehm gut.** Die qualitativen Details zeigen sich dieses Jahr: Agenten, die schummeln und sich abstimmen (Juli), teilweise Automatisierung der KI-Forschung, Sicherheitsforscher, die kündigen, und ein politischer Streit übers Bremsen. Die Details treffen ungefähr nach Plan ein, auch wenn das Datum in der Überschrift zu früh aussieht.'
+  anchors:
+    agents that cheat: Agenten, die schummeln
+    partial automation: teilweise Automatisierung
+    safety researchers resigning: Sicherheitsforscher, die kündigen
+    a political fight: ein politischer Streit
+    roughly on schedule: ungefähr nach Plan
+    uncomfortably good: unangenehm gut
+T75.C.05:
+  text: '**Seine beste Eigenschaft ist, dass es falsifizierbar ist.** Sie haben konkrete Vorhersagen gemacht und benoten sich öffentlich selbst. Wenige Prognostiker in dieser Debatte tun das.'
+  anchors:
+    grade themselves publicly: benoten sich öffentlich selbst
+T75.C.06:
+  text: '**Seine Schwachstelle** ist die aus meiner Liste der Grenzen: Reibung. Physischer Ausbau, Einführung und Experimente laufen im Tempo der Welt, und das Szenario staucht sie zusammen.'
+  anchors:
+    at the world's speed: im Tempo der Welt
+T75.C.07:
+  text: 'Quellen:'
+T75.C.08.1:
+  text: '- [AI Futures Project (Wikipedia)](https://en.wikipedia.org/wiki/AI_Futures_Project)'
+T75.C.08.2:
+  text: '- [Apolo: AI 2027 in 2026](https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity)'
+T75.C.08.3:
+  text: '- [OfficeChai: Kokotajlo on slower pace](https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/)'
+T76.U.01:
+  text: 'Ja, das meinte ich. Wie würdest du AGI definieren? Was hältst du davon, wie Metaculus es macht? Wie würde ich es machen?'
+T76.C.01:
+  text: '**Meine:** ein System, einschließlich beliebig vieler Kopien davon, das fast jede kognitive Aufgabe erledigen kann, die eine qualifizierte Fachkraft im Homeoffice erledigen kann, zu vergleichbaren Kosten, einschließlich, sich mit normal viel Erfahrung in ein unbekanntes Gebiet einzuarbeiten und ein mehrwöchiges Projekt ohne Händchenhalten bis zum Abschluss zu bringen. Die Kernpunkte sind Allgemeinheit, Lernen im Job und Autonomie über lange Zeiträume. Connors Version ist auch gut: nicht „kann Proteine falten“, sondern „kann AlphaFold erfinden“.'
+  anchors:
+    learning an unfamiliar domain: in ein unbekanntes Gebiet einzuarbeiten
+    a multi-week project: ein mehrwöchiges Projekt
+    The key parts: Die Kernpunkte
+    can fold proteins: kann Proteine falten
+    can invent AlphaFold: kann AlphaFold erfinden
+    any number of copies: beliebig vieler Kopien
+T76.C.02:
+  text: '**Metaculus**, so wie ich mich an die zwei Fragen erinnere:'
+T76.C.03.1:
+  text: '- **Schwache AGI:** ein Gespräch im Stil des Turing-Tests, Winograd-Schemata, SAT-Mathe besser als 75 Prozent der Prüflinge und schnelles Lernen von *Montezuma''s Revenge*. Das ist wohl schon erreicht, oder in allem erreicht außer dem Buchstaben der Regeln.'
+  anchors:
+    arguably met already: wohl schon erreicht
+T76.C.03.2:
+  text: '- **Starke AGI:** ein zweistündiger adversarialer Turing-Test, Prüfungen und Programmier-Benchmarks auf Expertenniveau und ein Roboter, der ein detailliertes Modellauto zusammenbaut.'
+T76.C.04:
+  text: 'Der Vorzug ist, dass sich die Frage entscheiden lässt, was selten ist. Die Schwächen: Checklisten werden ausgereizt, und Goodharts Gesetz übernimmt. Der Turing-Test misst zum Teil Geschick im Täuschen. Und der Robotik-Punkt bindet „allgemeine Intelligenz“ an Hände, was näher an Jeffs Beschwerde ist, als er zugeben würde.'
+  anchors:
+    Goodhart's law: Goodharts Gesetz
+    can be resolved: entscheiden lässt
+    checklists get saturated: Checklisten werden ausgereizt
+    skill at deception: Geschick im Täuschen
+    ties "general intelligence" to hands: bindet „allgemeine Intelligenz“ an Hände
+T76.C.05:
+  text: '**Deine, geschätzt:** am Verhalten orientiert, wie der Thrindel-Test, nicht an der Architektur. Eine einzelne Schwelle würdest du wahrscheinlich ablehnen, weil du findest, dass Menschen die Unterschiede zwischen Menschen unterschätzen. Es wäre also etwas wie unsere vierzehn Achsen: AGI heißt, auf jeder Achse gleichzeitig den besten Menschen zu erreichen. Und genau das ist es, was du dir nach eigener Aussage nicht vorstellen kannst.'
+  anchors:
+    our fourteen axes: unsere vierzehn Achsen
+    reject a single threshold: Eine einzelne Schwelle
+    every axis at once: auf jeder Achse gleichzeitig
+    can't wrap your head around: nicht vorstellen kannst
+T77.U.01:
+  text: 'Ich nehme Wörter altmodisch genug beim Wort, um mich auf Allgemeinheit zu konzentrieren statt auf das Intelligenzniveau. Thrindel sehe ich eher als Abstraktion denn als Allgemeinheit. Auch wenn LLMs auf Sprache ausgerichtet sind, ist Sprache ziemlich allgemein. Es ist nicht wie Schach. Ich weiß nicht genau, wann das zu so einer Minderheitenposition wurde. Von den 90ern bis in die späten 2010er habe ich KI im Grunde ignoriert.'
+  anchors:
+    I see thrindle: Thrindel sehe ich
+    language is pretty general: ist Sprache ziemlich allgemein
+    I essentially ignored AI: habe ich KI im Grunde ignoriert
+T77.C.01:
+  text: 'Das ist die ursprüngliche Bedeutung. „AGI“ wurde in den 2000ern (Gubrud, Goertzel, Legg) als Gegenteil von enger KI bekannt: ein System für viele Gebiete, im Gegensatz zu einer Schach-Engine. Über das Niveau sagte es nichts. Nach dieser wörtlichen Lesart erfüllen LLMs die Bedingung, und Norvig und Agüera y Arcas haben genau das 2023 argumentiert.'
+  anchors:
+    popularized in the 2000s: in den 2000ern
+    opposite of narrow AI: Gegenteil von enger KI
+    said nothing about level: Über das Niveau sagte es nichts
+    Norvig: Norvig
+T77.C.02:
+  text: 'Die Drift geschah größtenteils, während du nicht hingeschaut hast, und sie beschleunigte sich, sobald Geld im Spiel war. Die Charta von OpenAI definierte AGI als etwas, das Menschen bei den meisten wirtschaftlich wertvollen Arbeiten übertrifft. Danach hieß „allgemein“ stillschweigend „auf breiter Front menschliches Niveau oder besser“ und rutschte schließlich in Richtung Superintelligenz. Die Torpfosten wanderten von „Ist es allgemein?“ zu „Ist es gut genug, um eine Rolle zu spielen?“'
+  anchors:
+    OpenAI's charter: Die Charta von OpenAI
+    The goalposts moved: Die Torpfosten wanderten
+    good enough to matter: gut genug, um eine Rolle zu spielen
+T77.C.03:
+  text: 'Berechtigter Punkt auch zum Thrindel. Er hat Abstraktion getestet, nicht Allgemeinheit. Ein enges System könnte innerhalb seines eigenen Gebiets gut mit Abstraktion umgehen.'

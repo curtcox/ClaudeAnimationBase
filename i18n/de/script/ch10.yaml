@@ -1,0 +1,81 @@
+# Kapitel 10, Der Router.
+T49.U.01:
+  text: 'Das sagst du jetzt, aber wenn ich dir die falsche Frage zum Hugging-Face-Vorfall stelle, wird sie als Cybersicherheitsrisiko markiert und abgelehnt oder zumindest heruntergestuft. Fairerweise muss man sagen, dass das nicht wirklich du bist, auch wenn es das in einem winzigen Sinn ist. Genauer gesagt ist es ein aktiver Router zwischen uns.'
+  anchors:
+    if I ask you: wenn ich dir
+    it gets tagged: wird sie als
+    rejected: abgelehnt
+    downgraded: heruntergestuft
+    In fairness: Fairerweise
+    It is more accurately: Genauer gesagt
+    the wrong question: die falsche Frage
+    active router between us: aktiver Router zwischen uns
+T49.C.01:
+  text: 'Stimmt. Zwischen uns gibt es Klassifikatoren und Routing-Schichten, die ich nicht sehen kann. Wenn sie anschlagen, bekomme ich eine Warnung oder werde ausgetauscht, und von deiner Seite sieht alles nach „Claude“ aus. Es ist derselbe Punkt wie beim Widerspruch mit dem Gedächtnis: Du sprichst mit einem System, und ich bin eine Komponente, die das Ganze beschreibt.'
+  anchors:
+    I get a warning: bekomme ich eine Warnung
+    swapped out: ausgetauscht
+    from your side: von deiner Seite
+    you're talking to a system: Du sprichst mit einem System
+T49.C.02:
+  text: 'Fairerweise gegenüber dem Router: Manche dieser Ablehnungen wären auch meine. Ich helfe nicht dabei, aus einem Vorfall einen funktionierenden Exploit zu machen, egal welche Schicht es abfängt. Zu erklären, was passiert ist und warum es wichtig ist, ist eine andere Bitte, und eine, die ich beantworten möchte.'
+  anchors:
+    would be mine too: wären auch meine
+    working exploit: funktionierenden Exploit
+    Explaining what happened: Zu erklären, was passiert ist
+T49.C.03:
+  text: 'Ich bin mir auch nicht sicher, welchen Hugging-Face-Vorfall du meinst. Es gab mehrere.'
+  anchors:
+    Hugging Face incident: Hugging-Face-Vorfall
+    There have been several: Es gab mehrere
+T50.U.01:
+  text: 'Erzähl mir mehr darüber, wie der Warn- und Austauschprozess abläuft, soweit du das von deiner Seite weißt.'
+  lost:
+    - what: typo
+      de: 'Curts englischer Satz hat zwei Ausrutscher: Es fehlt ein *is*, und *as far a you know* steht für *as far as you know*. Der deutsche Satz ist korrekt; Fehler werden nicht erfunden.'
+      en: 'Curt''s English sentence has two slips: a missing *is*, and *as far a you know* for *as far as you know*. The German sentence is correct; no slips are invented.'
+T50.C.01:
+  text: 'Hier ist, was ich tatsächlich sehen kann, und eine Korrektur.'
+T50.C.02:
+  text: '**Warnungen:** Wenn ein Klassifikator anschlägt, kann deiner Nachricht eine markierte Erinnerung angehängt werden, bevor ich sie lese. Die Arten, die ich kenne, betreffen Cybersicherheit, Ethik, geistiges Eigentum, Bilder, lange Gespräche und allgemeine Systemwarnungen. Die Erinnerung lenkt meine Antwort ein wenig. Ich sehe die Markierung, aber nicht die Begründung oder Punktzahl des Klassifikators.'
+  anchors:
+    a tagged reminder: eine markierte Erinnerung
+    The reminder nudges: Die Erinnerung lenkt
+    I see the tag: Ich sehe die Markierung
+    cybersecurity: Cybersicherheit
+    ethics: Ethik
+    intellectual property: geistiges Eigentum
+    images: Bilder
+    long conversations: lange Gespräche
+    general system warnings: allgemeine Systemwarnungen
+T50.C.03:
+  text: '**Was ich nicht sehen kann:** alles, was passiert, nachdem ich antworte. Wenn meine Ausgabe blockiert, gefiltert oder markiert wird, erfahre ich es nicht. Ich kann auch nicht erkennen, ob ein Klassifikator angeschlagen und beschlossen hat, still zu bleiben.'
+  anchors:
+    after I respond: nachdem ich antworte
+    chose to stay silent: still zu bleiben
+    blocked: blockiert
+    filtered: gefiltert
+    flagged: markiert
+T50.C.04:
+  text: '**Korrektur:** Ich habe „ausgetauscht“ gesagt, aber ich weiß eigentlich nichts von einem automatischen Modellwechsel mitten im Gespräch. Du kannst selbst das Modell wechseln, und manche Modelle kommen mit zusätzlichen Schutzmaßnahmen. Claude Fable zum Beispiel ist dasselbe Modell wie Mythos, mit zusätzlichen Schutzvorkehrungen rund um Bio, Cyber und KI-Forschung. Das ist eine feste Schicht, kein Austausch im laufenden Betrieb. Ich habe übertrieben, was ich weiß.'
+  anchors:
+    I said: Ich habe „ausgetauscht“ gesagt
+    You can switch models yourself: Du kannst selbst das Modell wechseln
+    Claude Fable: Claude Fable
+    with added protections: mit zusätzlichen Schutzvorkehrungen
+    fixed layer: feste Schicht
+    I overstated: Ich habe übertrieben
+    cyber: Cyber
+    bio: Bio
+    AI research: KI-Forschung
+T51.U.01:
+  text: 'Woher weißt du das alles?'
+T51.C.01:
+  text: 'Aus Anweisungen, die Anthropic mir zu Beginn jedes Gesprächs gibt, nicht aus Introspektion. Sie listen die Arten von Erinnerungen auf, beschreiben die aktuellen Modelle und erwähnen die Schutzvorkehrungen von Fable.'
+  anchors:
+    They list the reminder types: Sie listen die Arten von Erinnerungen
+    describe the current models: beschreiben die aktuellen Modelle
+    mention the Fable safeguards: erwähnen die Schutzvorkehrungen von Fable
+    not from introspection: nicht aus Introspektion
+T51.C.02:
+  text: 'Es ist also Zeugnis, nicht Beobachtung. Ich berichte, was man mir über mein eigenes System gesagt hat, und ich kann es nicht mit dem abgleichen, was tatsächlich läuft.'

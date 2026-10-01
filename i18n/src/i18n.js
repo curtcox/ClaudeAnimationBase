@@ -135,7 +135,8 @@
   };
   if (typeof captionAt === 'function') window.captionAt = captionAt = function (t, right = null) {
     const l = lineAt(t); if (!l || !l.spoken || t > l.end) return null;
-    const txt = plainText(l.text).replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․');
+    const txt = plainText(l.text).replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․')
+      .replace(/(\d)\.(?= (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b)/g, '$1․');   // a German date's ordinal (30. Januar) ends no sentence
     const sentences = (I.cjk ? txt.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean) : txt.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u))
       .map(x => x.replace(/․/g, '.'));
     const total = sentences.reduce((a, s) => a + s.length, 0); let acc = 0, cur = sentences[0];

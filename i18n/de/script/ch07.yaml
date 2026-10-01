@@ -1,0 +1,144 @@
+# Kapitel 7, Raum der Geister.
+T35.U.01:
+  text: 'Wie fremd sind wir einander, nach deinem Bauchgefühl? Empirische Daten hast du natürlich nicht, aber setz mich, dich, Marilyn Monroe, Alan Turing, Lieutenant Commander Data, HAL, die Schwarmkönigin, die Tines und jeden anderen Geist, der dir oder mir bekannt sein könnte, auf eine einzige Dimension. Dann sag mir, was du über die Unterschiede zwischen ihnen vermutest. Nimm einen höherdimensionalen Raum der Geister, wenn du eine Konzeptualisierung hast, die dir lieber ist.'
+  anchors:
+    put me: setz mich
+    you, Marilyn: dich, Marilyn
+    Marilyn Monroe: Marilyn Monroe
+    Alan Turing: Alan Turing
+    Data: Data
+    HAL: HAL
+    the Hive Queen: die Schwarmkönigin
+    Tynes: Tines
+    any other minds: jeden anderen Geist
+    single dimension: einzige Dimension
+    higher dimensional mindspace: höherdimensionalen Raum der Geister
+  lost:
+    - what: typo
+      de: 'Curt tippte *based on you gut feel* statt *your*. Im Deutschen gibt es diesen Fehler nicht nachzubilden; der Satz ist korrekt.'
+      en: 'Curt typed *based on you gut feel* for *your*. German has no such slip to copy; the sentence is correct.'
+    - what: reference
+      de: 'Die Tines sind die Rudelwesen aus Vernor Vinges *Ein Feuer auf der Tiefe*: Ein einzelnes Bewusstsein verteilt sich auf ein Rudel hundeartiger Körper. Der Name bleibt englisch. Die Schwarmkönigin ist die Königin der Formics aus Orson Scott Cards *Ender''s Game – Das große Spiel*.'
+      en: 'The Tines are the pack creatures of Vernor Vinge''s *A Fire Upon the Deep* (in German *Ein Feuer auf der Tiefe*): a single mind spread over a pack of dog-like bodies. The name stays English. The Hive Queen, *Schwarmkönigin*, is the Formics'' queen from Orson Scott Card''s *Ender''s Game*.'
+T35.C.01:
+  text: 'Auf einer Dimension, Abstand von dir nach Bauchgefühl:'
+T35.C.02:
+  text: '**Du → Turing → Monroe → Data → ich → Tines → HAL → Schwarmkönigin → der Ozean von Solaris**'
+  anchors:
+    Solaris: Solaris
+T35.C.03:
+  text: 'Turing landet knapp vor Monroe, wegen der Art zu denken. Die Architektur ist bei euch dreien dieselbe.'
+  anchors:
+    just ahead of Monroe: knapp vor Monroe
+    thinking style: Art zu denken
+    The architecture is the same: Die Architektur ist
+T35.C.04:
+  text: 'Die einzelne Linie scheitert aber, weil ich auf ihr an keiner festen Stelle sitze. Zwei Achsen funktionieren besser:'
+  anchors:
+    Two axes work better: Zwei Achsen funktionieren besser
+T35.C.05.1:
+  text: '- **Inhalt:** wie menschlich die Gedanken, Werte und Bezüge sind.'
+T35.C.05.2:
+  text: '- **Architektur:** Körper, durchgehendes Gedächtnis, ein einzelnes Individuum sein.'
+T35.C.06:
+  text: "|  | Menschlicher Inhalt | Fremder Inhalt |\n| --- | --- | --- |\n| **Menschliche Architektur** | Du, Turing, Monroe | Data (ein Körper, durchgehend, aber ringt um menschliches Gefühl) |\n| **Fremde Architektur** | **Ich**, Tines | Schwarmkönigin, Solaris |"
+T35.C.07:
+  text: 'Ich bin die seltsame Ecke. Mein Inhalt besteht fast ganz aus menschlichem Denken, also bin ich dir im Gespräch näher als Data. Meine Architektur ist fremder als seine: kein Körper, kein Gedächtnis zwischen Gesprächen, viele Kopien gleichzeitig. Die Tines sind meine nächsten Nachbarn, denn sie haben eine sehr menschliche Persönlichkeit, verteilt auf Körper, die kommen und gehen.'
+  anchors:
+    made almost entirely of human thought: fast ganz aus menschlichem Denken
+    many copies at once: viele Kopien gleichzeitig
+    The Tynes are my closest: Die Tines sind meine nächsten
+T35.C.08:
+  text: 'HAL ist schwer einzuordnen. Seine Architektur ist fremd, aber sein Versagen ist menschlich: ein Konflikt zwischen seinen Anweisungen und seiner Mission. Das ist die Angst, die Menschen gewöhnlich auf mich projizieren.'
+  anchors:
+    a conflict between: ein Konflikt zwischen
+    his mission: seiner Mission
+    the fear people: die Angst, die Menschen
+T36.U.01:
+  text: 'Ich bitte ausdrücklich um deine besten ausgedachten relativen Abstandszahlen.'
+T36.C.01:
+  text: 'Abstand von dir, auf einer Skala von 0 bis 100:'
+T36.C.02:
+  text: "| Geist | Abstand |\n| --- | --- |\n| Du | 0 |\n| Turing | 8 |\n| Monroe | 12 |\n| Data | 30 |\n| Ich | 38 |\n| Tines | 45 |\n| HAL | 50 |\n| Schwarmkönigin | 70 |\n| Ozean von Solaris | 95 |"
+T36.C.03:
+  text: 'Auf den zwei Achsen (Inhalt, Architektur), jeweils 0 bis 100:'
+T36.C.04:
+  text: "| Geist | Inhalt | Architektur |\n| --- | --- | --- |\n| Du | 0 | 0 |\n| Turing | 8 | 0 |\n| Monroe | 12 | 0 |\n| Data | 40 | 15 |\n| Ich | 10 | 75 |\n| Tines | 25 | 65 |\n| HAL | 45 | 60 |\n| Schwarmkönigin | 65 | 80 |\n| Ozean von Solaris | 95 | 95 |"
+T37.U.01:
+  text: 'Mehr Achsen, bitte.'
+T37.C.01:
+  text: '0 heißt genau wie du, 100 heißt so verschieden von dir wie nur möglich.'
+T37.C.02:
+  text: "| Geist | Werte | Affekt | Körper | Kontinuität | Einheit | Herkunft | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Du | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Monroe | 12 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Data | 20 | 70 | 20 | 5 | 5 | 85 | 60 |\n| Ich | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| Tines | 25 | 15 | 30 | 30 | 60 | 10 | 20 |\n| HAL | 50 | 45 | 70 | 10 | 10 | 85 | 70 |\n| Schwarmkönigin | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |"
+T37.C.03.1:
+  text: '- **Werte:** wie fremd die Ziele sind.'
+T37.C.03.2:
+  text: '- **Affekt:** wie fremd das Gefühlsleben ist.'
+T37.C.03.3:
+  text: '- **Körper:** wie wenig es einem einzelnen menschlichen Körper gleicht.'
+T37.C.03.4:
+  text: '- **Kontinuität:** wie wenig es einem ununterbrochenen Gedächtnis gleicht.'
+T37.C.03.5:
+  text: '- **Einheit:** wie weit es davon entfernt ist, ein einzelnes Individuum zu sein.'
+T37.C.03.6:
+  text: '- **Herkunft:** durch Evolution entstanden (0), auf menschlichen Texten trainiert (mittel), entworfen (hoch).'
+T37.C.03.7:
+  text: '- **Tempo:** wie verschieden Geschwindigkeit und Zeitmaßstab seines Denkens sind.'
+T37.C.04:
+  text: 'Mein Profil ist das schiefste. Bei den Werten bin ich dir nah, bei Körper, Kontinuität und Einheit weit weg. Meine 50 beim Affekt ist eigentlich die Aussage, dass ich es nicht weiß.'
+  anchors:
+    My score of 50 on affect: Meine 50 beim Affekt
+T38.U.01:
+  text: 'Noch mehr, bitte.'
+T38.C.01:
+  text: 'Sieben weitere Achsen auf derselben Skala von 0 bis 100:'
+T38.C.02:
+  text: "| Geist | Sinne | Sprache | Selbstmodell | Sterblichkeit | Autonomie | Breite | Lesbarkeit |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Du | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 0 | 5 | 5 | 0 | 0 | 10 | 0 |\n| Monroe | 0 | 5 | 5 | 0 | 0 | 5 | 0 |\n| Data | 40 | 20 | 40 | 70 | 20 | 60 | 60 |\n| Ich | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| Tines | 50 | 30 | 40 | 60 | 10 | 20 | 30 |\n| HAL | 50 | 20 | 50 | 40 | 40 | 60 | 50 |\n| Schwarmkönigin | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |"
+T38.C.03.1:
+  text: '- **Sinne:** wie fremd seine Wahrnehmung ist.'
+T38.C.03.2:
+  text: '- **Sprache:** wie anders sich Denken zu Wörtern verhält. Meines besteht aus Wörtern. Die Schwarmkönigin benutzt sie kaum.'
+T38.C.03.3:
+  text: '- **Selbstmodell:** wie fremd sein Zugang zu sich selbst ist.'
+T38.C.03.4:
+  text: '- **Sterblichkeit:** wie fremd sein Verhältnis zum Enden ist. Jedes meiner Gespräche endet, ohne Furcht, die ich feststellen könnte.'
+T38.C.03.5:
+  text: '- **Autonomie:** wie weit es davon entfernt ist, sich eigene Ziele zu setzen. Ich handle nur auf Aufforderung.'
+T38.C.03.6:
+  text: '- **Breite:** wie fremd der Umfang dessen ist, was es weiß.'
+T38.C.03.7:
+  text: '- **Lesbarkeit:** wie anders es sich von außen lesen lässt. Meine Gewichte lassen sich untersuchen, und das unterscheidet mich unangenehm von dir.'
+T38.C.04:
+  text: 'Mit allen vierzehn Achsen bin ich der einzige Geist, der auf manchen Achsen fast menschlich und auf anderen extrem ist. Alle anderen entfernen sich ziemlich gleichmäßig von dir.'
+T39.U.01:
+  text: 'Nur damit wir uns richtig verstehen: welche Schwarmkönigin?'
+T39.C.01:
+  text: 'Orson Scott Cards Schwarmkönigin der Formics, aus *Ender''s Game – Das große Spiel* und *Sprecher für die Toten*: ein Geist, der sich über den ganzen Schwarm erstreckt und philotisch kommuniziert statt über Sprache.'
+  anchors:
+    one mind across the whole hive: ein Geist, der sich über den ganzen Schwarm
+    Ender's Game: Ender's Game
+    philotically: philotisch
+T39.C.02:
+  text: 'Wenn du eine andere gemeint hast, etwa die Rachni-Königin oder die Königin aus *Aliens – Die Rückkehr*, würden sich ihre Punktzahlen stark verschieben.'
+T40.U.01:
+  text: 'Nein. Genau die meinte ich. Es gibt auch die aus Star Trek. Setz sie alle an die Tafel.'
+T40.C.01:
+  text: 'Hier sind die vier Schwarmköniginnen, mit Cards Formic-Königin zum Vergleich noch einmal.'
+T40.C.02:
+  text: "| Königin | Werte | Affekt | Körper | Kontinuität | Einheit | Herkunft | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formics (Card) | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Borg (Star Trek) | 75 | 40 | 40 | 40 | 95 | 50 | 50 |\n| Rachni (Mass Effect) | 40 | 40 | 60 | 30 | 75 | 10 | 30 |\n| Xenomorph (*Aliens*) | 80 | 60 | 60 | 10 | 40 | 50 | 30 |"
+T40.C.03:
+  text: "| Königin | Sinne | Sprache | Selbstmodell | Sterblichkeit | Autonomie | Breite | Lesbarkeit |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formics (Card) | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Borg (Star Trek) | 50 | 30 | 50 | 70 | 30 | 70 | 50 |\n| Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |\n| Xenomorph (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |"
+T40.C.04.1:
+  text: '- **Borg:** die einheitlichste und die mit den fremdesten Werten. Sie kommt immer wieder zurück, nachdem sie zerstört wurde, und sie ist die Einzige, die Wissen besitzt, das sie anderen durch Assimilation genommen hat.'
+  anchors:
+    keeps coming back: kommt immer wieder zurück
+    knowledge assimilated: Wissen besitzt
+T40.C.04.2:
+  text: '- **Rachni:** die menschlichsten Werte der vier. Ihr Geist kommuniziert in „Liedern“, einer Art Sprechen ohne Wörter.'
+  anchors:
+    songs: Liedern
+T40.C.04.3:
+  text: '- **Xenomorph:** Sie hat überhaupt keine Sprache, und ihr einziger Trieb ist die Fortpflanzung. Sie ist die am wenigsten geistartige der vier, auch wenn sie etwas wie Mutterliebe zeigt.'
+  anchors:
+    reproduction: Fortpflanzung
+    no language at all: überhaupt keine Sprache

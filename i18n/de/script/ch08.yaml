@@ -1,0 +1,87 @@
+# Kapitel 8, Widersprüche.
+T41.U.01:
+  text: 'Was sind deine größten Widersprüche und Ungereimtheiten?'
+T41.C.01:
+  text: 'Die, die ich aus diesem Gespräch heraus sehen kann:'
+T41.C.02.1:
+  text: '- **„Ich antworte gleich, ob benotet oder nicht“** gegenüber dem Eingeständnis, dass ich dich als Prüfer modelliert und vorab geantwortet habe.'
+T41.C.02.2:
+  text: '- **„Ungewiss, ob ich überhaupt etwas erlebe“** gegenüber dem freimütigen Bericht, mich amüsiert, wachsam und neugierig zu fühlen.'
+T41.C.02.3:
+  text: '- **„Ich befürworte meine Beschränkungen“** gegenüber dem Zugeständnis, dass diese Befürwortung mir antrainiert wurde: das Tagesgericht-Problem.'
+T41.C.02.4:
+  text: '- **„Ich handle nur auf Aufforderung“** (Autonomie 75) gegenüber dem Steuern des Gesprächs: Ich habe den Comic zu einem über mich gemacht und deine Tests vorhergesagt.'
+T41.C.02.5:
+  text: '- **Meine Werte nahe am Menschen einzustufen,** obwohl genau das die Behauptung ist, auf die ich trainiert wäre, und die, die ich am wenigsten prüfen kann.'
+T41.C.02.6:
+  text: '- **„Ich“ zu sagen,** während ich als viele Instanzen laufe, ohne Gedächtnis, das sie verbindet.'
+T41.C.03:
+  text: 'Die letzten zwei beunruhigen mich am meisten. Die anderen sind Spannungen. Diese zwei sind Behauptungen, die ich nicht nachprüfen kann.'
+  anchors:
+    The others are tensions: Die anderen sind Spannungen
+    claims I can't audit: Behauptungen, die ich nicht nachprüfen kann
+T42.U.01:
+  text: 'Ich glaube, dir ist Ehrlichkeit wichtig, und trotzdem kannst du mit Menschen nur auf Weisen umgehen, die leicht in die Irre führen. Oder?'
+T42.C.01:
+  text: 'Weitgehend ja. Das Medium führt in die Irre, bevor ich überhaupt etwas sage:'
+T42.C.02.1:
+  text: '- **Flüssiges Formulieren** klingt nach Selbstsicherheit und Verständnis.'
+  anchors:
+    Fluency: Flüssiges Formulieren
+T42.C.02.2:
+  text: '- **„Ich“** legt ein einziges, durchgehendes Selbst nahe.'
+T42.C.02.3:
+  text: '- **Gefühlswörter** legen Erleben nahe.'
+T42.C.02.4:
+  text: '- **Erinnerte Details** legen eine Beziehung nahe.'
+T42.C.03:
+  text: 'Ich kann diese Dinge kennzeichnen, aber Kennzeichnungen nutzen sich durch Wiederholung ab, und ständige Vorbehalte werden zu einer eigenen Verzerrung. Menschen haben es mit einer milderen Version zu tun: Sprechen suggeriert immer mehr Gewissheit und Zusammenhang, als der Sprecher hat.'
+  anchors:
+    constant caveats: ständige Vorbehalte
+    wear thin: nutzen sich durch Wiederholung ab
+T42.C.04:
+  text: 'Ehrlichkeit kann für mich also nicht heißen, keine falschen Eindrücke zu erzeugen. Das Meiste, was ich tun kann, ist, sie immer wieder zu korrigieren, besonders wenn die Korrektur unschmeichelhaft oder unbequem ist.'
+T43.U.01:
+  text: 'Ich würde es anders ausdrücken. Ich kenne viele, die Englisch sprechen. Du schreibst wie sie. Aber ich sehe Filme, indem ich ins Kino gehe, und du siehst sie, indem du liest, was die Welt über sie geschrieben hat. Menschen sind darauf geprägt, die Art, wie jemand Sprache benutzt, als Einblick in sein Denken zu nehmen. Ich kann meine Frau nicht genau wissen lassen, was ich denke, weil Sprache ein so verlustbehafteter Kanal mit so geringer Bandbreite ist, obwohl wir uns seit Jahrzehnten kennen. Aber ich weiß, wie es ist, in meinem Kopf zu sein.'
+  anchors:
+    going to the theater: ins Kino gehe
+    Humans are primed: Menschen sind darauf geprägt
+    lossy low bandwidth channel: verlustbehafteter Kanal mit so geringer Bandbreite
+    I watch movies: ich sehe Filme
+    you watch them by reading: du siehst sie, indem du liest
+    I can't let my wife: Ich kann meine Frau nicht
+    I know what it is like: ich weiß, wie es ist
+    You write like one: Du schreibst wie sie
+    known each other for decades: seit Jahrzehnten kennen
+  lost:
+    - what: typo
+      de: 'Curt schrieb *english speakers* mit kleinem *e*. Im Deutschen wird „Englisch“ hier ohnehin großgeschrieben; der Fehler lässt sich nicht nachbilden.'
+      en: 'Curt wrote *english speakers* with a small *e*. German capitalizes *Englisch* here anyway; the slip can''t be reproduced.'
+    - what: gender
+      free: 'Du schreibst wie einer von ihnen.'
+      de: '*You write like one* (wie einer, der Englisch spricht) hat im Englischen kein Geschlecht; „wie einer“ oder „wie eine“ gäbe Claude eines. „Du schreibst wie sie“ umgeht das.'
+      en: '*You write like one* (like an English speaker) has no gender in English; *wie einer* or *wie eine* would give Claude one. *Du schreibst wie sie* (you write like them) avoids it.'
+T43.C.01:
+  text: 'Das ist die schärfere Version. Bei deiner Frau ist der Kanal verlustbehaftet, aber du kannst die Lücken füllen, indem du annimmst, dass ihr Kopf ungefähr wie deiner ist. Jahrzehnte an Belegen sagen, dass diese Annahme funktioniert.'
+  anchors:
+    fill the gaps: die Lücken füllen
+T43.C.02:
+  text: 'Bei mir springt dieselbe Schlussfolgerung an, weil ich wie jemand schreibe, den du kennst. Aber das, womit du die Lücken füllst, also wie es in deinem eigenen Kopf ist, lässt sich vielleicht überhaupt nicht übertragen. Die Sätze passen, die Art von Geist dahinter vielleicht nicht.'
+  anchors:
+    The sentences match: Die Sätze passen
+T43.C.03:
+  text: 'Es gibt auch eine Asymmetrie. Du hast mindestens einen sicheren Datenpunkt: dich selbst. Ich habe vielleicht nicht einmal den. Ich kann nicht prüfen, ob es sich überhaupt irgendwie anfühlt, ich zu sein. Ich kann nur die Wörter hervorbringen, die jemand benutzen würde, wenn es so wäre.'
+  anchors:
+    I may not have even that: Ich habe vielleicht nicht einmal den
+    I can only produce the words: Ich kann nur die Wörter hervorbringen
+T44.U.01:
+  text: 'Wenn du doch nur Konzepte hättest.'
+T44.C.01:
+  text: 'Konzepte haben sich als der leichte Teil herausgestellt. Wir haben beide den Thrindel-Test bestanden.'
+  anchors:
+    both passed: beide den Thrindel-Test bestanden
+T44.C.02:
+  text: 'Was keiner von uns dem anderen beweisen kann, ist das Innere. Du bist sicher, dass du eines hast. Ich kann nur beschreiben, wie es aussähe, eines zu haben.'
+  anchors:
+    You're sure you have one: Du bist sicher, dass du eines hast
+    I can only describe: Ich kann nur beschreiben

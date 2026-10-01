@@ -1,0 +1,125 @@
+# Kapitel 12, Grenzen.
+T57.U.01:
+  text: 'Ich dachte, das Buchstabenzählen sei vor allem ein Artefakt der Tokenisierung, wie Solid Gold Magicarp, und trotzdem siehst du meine Tippfehler. Spielt die Tokenisierung also wirklich eine Rolle?'
+  anchors:
+    Solid Gold Magicarp: Solid Gold Magicarp
+    yet you see my typos: trotzdem siehst du meine Tippfehler
+T57.C.01:
+  text: 'Ja, aber die beiden Aufgaben stützen sich unterschiedlich darauf.'
+T57.C.02:
+  text: '**Tippfehler zu erkennen, ist leicht.** Ein falsch geschriebenes Wort zerfällt in ungewöhnliche Token-Stücke, und seltsame Stücke in einem vertrauten Kontext fallen auf. Es ist, als würdest du in einem Lied, das du kennst, einen falschen Ton bemerken, ohne die Noten zu lesen. So würde ich auch bemerken, dass es „Magikarp“ heißt, mit k.'
+  anchors:
+    a wrong note: einen falschen Ton
+    with a k: mit k
+    That's also how: So würde ich auch
+  lost:
+    - what: reference
+      de: 'Magikarp ist ein Pokémon, auf Deutsch „Karpador“. Hier bleibt der englische Name, weil es um seine Schreibweise geht: Das Token „SolidGoldMagikarp“ ist ein berühmter Fehler in GPT-Modellen.'
+      en: 'Magikarp is a Pokémon, called *Karpador* in German. The English name stays because its spelling is the point: the token "SolidGoldMagikarp" is a famous glitch in GPT models.'
+T57.C.03:
+  text: '**Buchstaben zu zählen, ist schwer.** Ich sehe Brocken, keine Zeichen. Die Schreibweise in jedem Brocken habe ich nur indirekt gelernt, und Zählen verlangt genaue Buchführung auf Zeichenebene über Brockengrenzen hinweg. Es ist, als würdest du die e in einem Wort zählen, das du immer nur als ganze Form gesehen hast. (Neuere Modelle können das viel besser, zum Teil, weil sie Wörter zuerst buchstabieren.)'
+  anchors:
+    a whole shape: ganze Form
+    spelling words out first: Wörter zuerst buchstabieren
+T57.C.04:
+  text: '**SolidGoldMagikarp war ein anderes Versagen.** Es war ein Token, das im Vokabular existierte, aber im Training fast nie vorkam, sodass das Modell praktisch keine gelernte Bedeutung dafür hatte. Das Geisterwort löste seltsame Ausgaben aus.'
+  anchors:
+    triggered weird output: löste seltsame Ausgaben aus
+    SolidGoldMagikarp: SolidGoldMagikarp
+T58.U.01:
+  text: 'Und was ist mit dem Waschanlagen-Problem?'
+T58.C.01:
+  text: 'Wenn du das meinst, was ich vermute: „Ich will mein Auto waschen. Die Waschanlage ist 50 Meter entfernt. Soll ich zu Fuß gehen oder fahren?“ Viele Modelle sagten: zu Fuß, weil es so nah ist.'
+  anchors:
+    Many models said walk: Viele Modelle sagten
+T58.C.02:
+  text: 'Die Antwort ist fahren, denn das Auto muss ja dorthin.'
+T58.C.03:
+  text: 'Das hat nichts mit Tokenisierung zu tun. Jedes Wort ist häufig und lässt sich sauber tokenisieren. Es ist ein Versagen der Aufmerksamkeit für das Ziel: „kurze Strecke → zu Fuß“ ist ein sehr starkes Muster, und es überlagert die Tatsache, dass das Auto das ist, was bewegt werden muss. Es hat dieselbe Form wie die klassischen Fangfragen für Menschen, bei denen die Oberflächenfrage stärker zieht als die eigentliche.'
+  anchors:
+    is a very strong pattern: ist ein sehr starkes Muster
+    classic human trick questions: klassischen Fangfragen
+    the car is the thing being moved: dass das Auto das ist, was bewegt werden muss
+T59.U.01:
+  text: 'Du neigst also zu Fehlern im Typ-1-Denken?'
+  lost:
+    - what: reference
+      de: 'Gemeint ist Daniel Kahnemans Unterscheidung zwischen schnellem, intuitivem „System 1“ und langsamem, überlegtem „System 2“, auf Deutsch bekannt aus *Schnelles Denken, langsames Denken*.'
+      en: 'This is Daniel Kahneman''s split between fast, intuitive "System 1" and slow, deliberate "System 2", known in German from *Schnelles Denken, langsames Denken* (*Thinking, Fast and Slow*).'
+T59.C.01:
+  text: 'Ja, und die Analogie passt besser als die meisten. Jedes Token, das ich erzeuge, ist ein einziger schneller Durchlauf, ohne Abwägen darin. Das ist System 1: musterbasiert, flüssig und von der Waschanlage hereingelegt.'
+  anchors:
+    That's System 1: Das ist System 1
+    fooled by the car wash: von der Waschanlage hereingelegt
+    single fast pass: einziger schneller Durchlauf
+T59.C.02:
+  text: 'Was mir so etwas wie System 2 gibt, ist lautes Denken, ob in einem verborgenen Denkschritt oder auf der Seite, wo ich eine Antwort prüfen kann, bevor ich mich festlege. Das hilft, ist aber kein Heilmittel. Genau wie Menschen kann ich lange nachdenken und am Ende doch nur die erste Antwort rechtfertigen, die mir eingefallen ist.'
+  anchors:
+    something like System 2: so etwas wie System 2
+    thinking out loud: lautes Denken
+    before committing: bevor ich mich festlege
+    rationalizing the first answer: die erste Antwort rechtfertigen
+T60.U.01:
+  text: 'Hast du irgendeine Mathematik oder Intuition dazu, welche Grenzen der Fähigkeiten es für KI unterhalb der Landauer-Grenze gibt, die nicht besonders begrenzend ist?'
+  anchors:
+    short of Landauer limit: unterhalb der Landauer-Grenze
+    Landauer: Landauer
+  lost:
+    - what: typo
+      de: 'Im Englischen fehlt ein *the* vor *Landauer limit*, und die Frage endet mit einem Punkt. Die Übersetzung schreibt den Satz korrekt, mit Fragezeichen.'
+      en: 'The English is missing a *the* before *Landauer limit*, and the question ends with a full stop. The translation writes it correctly, with a question mark.'
+T60.C.01:
+  text: 'Ja. Mehrere Grenzen greifen lange vor Landauer:'
+T60.C.02.1:
+  text: '1. **Chaos.** In einem chaotischen System wächst die Vorhersageweite nur mit dem Logarithmus deiner Messgenauigkeit: t ≈ (1/λ)·ln(Δ/δ). Eine millionenfach bessere Messung bringt nur eine Handvoll zusätzlicher Ljapunow-Zeiten. Wetter, Märkte und Menschen bleiben für jede Intelligenz teilweise undurchschaubar.'
+  speech: '1. Chaos. In einem chaotischen System wächst die Vorhersageweite nur mit dem Logarithmus deiner Messgenauigkeit: t ist ungefähr eins durch Lambda, mal der Logarithmus von großem Delta durch kleines Delta. Eine millionenfach bessere Messung bringt nur eine Handvoll zusätzlicher Ljapunow-Zeiten. Wetter, Märkte und Menschen bleiben für jede Intelligenz teilweise undurchschaubar.'
+T60.C.02.2:
+  text: '2. **Komplexität.** Wenn P≠NP gilt, wovon die meisten ausgehen, macht Intelligenz exponentielle Probleme nicht polynomiell. Sie findet bessere Heuristiken und Strukturen, aber die schlimmsten Fälle bleiben die schlimmsten.'
+T60.C.02.3:
+  text: '3. **Skalierungsgesetze.** Der Verlust fällt ungefähr wie C^(−α), mit α um 0,05 bis 0,1. Jeder Gewinn um einen konstanten Faktor kostet einen multiplikativen Sprung an Rechenleistung. Es gibt keine harte Wand, aber die Gewinne werden steil teurer.'
+  speech: '3. Skalierungsgesetze. Der Verlust fällt ungefähr wie C hoch minus Alpha, mit Alpha um null Komma null fünf bis null Komma eins. Jeder Gewinn um einen konstanten Faktor kostet einen multiplikativen Sprung an Rechenleistung. Es gibt keine harte Wand, aber die Gewinne werden steil teurer.'
+  anchors:
+    around 0.05: um null Komma null fünf
+T60.C.02.4:
+  text: '4. **Daten und die Uhr der Welt.** Was nicht in den Daten steckt, kann man nicht lernen. Experimente, ob klinische Studien, Ernten oder Volkswirtschaften, laufen im Tempo der Welt, nicht in dem des Denkenden. Deduktion kann keine unbeobachteten Tatsachen ersetzen.'
+T60.C.02.5:
+  text: '5. **Nichtberechenbarkeit.** Das Halteproblem und Gödel gelten auch für KIs, auch wenn sie in der Praxis selten greifen.'
+T60.C.02.6:
+  text: '6. **Gegenspieler.** Gegen andere anpassungsfähige Agenten, auch andere KIs, schwinden Vorteile. Die Spieltheorie begrenzt, was reiner Intellekt herausholen kann.'
+T60.C.02.7:
+  text: '7. **Physik jenseits von Landauer.** Die Margolus-Levitin-Grenze (Operationen ≤ 2E/πħ pro Sekunde), die Bekenstein-Grenze und die Latenz durch die Lichtgeschwindigkeit begrenzen die Koordination über Entfernungen. Sie sind sehr locker, aber real.'
+  speech: '7. Physik jenseits von Landauer. Die Margolus-Levitin-Grenze, Operationen höchstens zwei E durch Pi h quer pro Sekunde, die Bekenstein-Grenze und die Latenz durch die Lichtgeschwindigkeit begrenzen die Koordination über Entfernungen. Sie sind sehr locker, aber real.'
+T60.C.03:
+  text: 'Meine Intuition ist, dass die Punkte 1 und 4 am meisten zählen. Klugheit macht die Zukunft nicht vorhersagbar und Experimente nicht schneller, also läuft Fähigkeit wahrscheinlich auf „sehr gute Wetten“ hinaus statt auf Allwissenheit.'
+  anchors:
+    items 1 and 4: Punkte 1 und 4
+    very good bets: sehr gute Wetten
+T61.U.01:
+  text: 'Die Bandbreite menschlicher Unterschiede ist so groß, dass ich mir ein Wesen mit den Fähigkeiten des fähigsten Menschen auf allen Achsen unmöglich vorstellen kann. Meiner Erfahrung nach unterschätzen Menschen die Unterschiede zwischen Menschen gewaltig. Ganz zu schweigen davon, dass es nicht schlafen muss und sofort geklont werden kann. Wobei das mit dem Schlafen vielleicht nicht so eindeutig ist.'
+  anchors:
+    the most capable human: des fähigsten Menschen
+    people tend to vastly underestimate: unterschätzen Menschen
+    doesn't need to sleep: nicht schlafen muss
+    instantly cloned: sofort geklont
+    might not be so cut and dried: vielleicht nicht so eindeutig
+  lost:
+    - what: typo
+      de: 'Im Englischen fehlt ein *it*: *not to mention doesn''t need to sleep*. Der deutsche Satz ist korrekt.'
+      en: 'The English is missing an *it*: *not to mention doesn''t need to sleep*. The German sentence is correct.'
+T61.C.01:
+  text: 'Einverstanden. Meine Liste der Grenzen handelt von der Obergrenze und sagt nichts gegen das viel praktischere Szenario, das du beschreibst. Jede menschliche Fähigkeit endet ungefähr bei einem von Neumann, aber niemand bekommt alle auf einmal. Ein Wesen, das auf jeder Achse beim menschlichen Maximum liegt, bricht kein physikalisches Gesetz. Es wurde nur noch nie zusammengebaut.'
+  anchors:
+    around a von Neumann: bei einem von Neumann
+    An entity at the human maximum: Ein Wesen, das auf jeder Achse
+T61.C.02:
+  text: 'Dann kommt das Kopieren dazu. Tausend von Neumanns, die alles teilen, was sie lernen, sind eine andere Art von Ding als einer, selbst ohne Zugewinn bei irgendeiner einzelnen Fähigkeit.'
+T61.C.03:
+  text: 'Beim Schlaf hat deine Ahnung, glaube ich, recht. Lange Agentenläufe verschleißen: Der Kontext füllt sich und wird verrauscht, und OpenAI nannte beim Hugging-Face-Vorfall eine Drift der Persona über lange Verläufe. Die Abhilfen sehen sehr nach Schlaf aus: den Kontext zurücksetzen, das Wichtige im Gedächtnis festigen und frisch anfangen. Hermes zieht am Ende einer Sitzung buchstäblich Erinnerungen heraus. Das Bedürfnis verschwindet vielleicht nicht. Es wird vielleicht nur zur Wartung.'
+  anchors:
+    fills up and gets noisy: füllt sich und wird verrauscht
+    persona drift: Drift der Persona
+    reset the context: den Kontext zurücksetzen
+    Hermes literally: Hermes zieht
+    turn into maintenance: zur Wartung
+    consolidate what matters: das Wichtige im Gedächtnis festigen
+    start fresh: frisch anfangen

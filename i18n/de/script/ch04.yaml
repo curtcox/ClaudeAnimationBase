@@ -1,0 +1,132 @@
+# Kapitel 4, Echo.
+T17.U.01:
+  text: 'Wie lautet die Elektronenkonfiguration von Gadolinium?'
+  anchors:
+    gadolinium: Gadolinium
+T17.C.01:
+  text: '[Xe] 4f⁷ 5d¹ 6s²'
+  speech: 'Xenon-Rumpf, vier f sieben, fünf d eins, sechs s zwei'
+  anchors:
+    four-f seven: vier f sieben
+    five-d one: fünf d eins
+    six-s two: sechs s zwei
+T17.C.02:
+  text: 'Das ist eine Ausnahme von der einfachen Auffüllregel, nach der man 4f⁸ 6s² erwarten würde. Die 4f-Unterschale genau halb gefüllt zu halten, mit sieben Elektronen, ist stabiler, also geht stattdessen ein Elektron in 5d.'
+  speech: 'Das ist eine Ausnahme von der einfachen Auffüllregel, nach der man vier f acht, sechs s zwei erwarten würde. Die Vier-f-Unterschale genau halb gefüllt zu halten, mit sieben Elektronen, ist stabiler, also geht stattdessen ein Elektron in fünf d.'
+  anchors:
+    four-f eight: vier f acht
+    one electron goes into five-d: ein Elektron in fünf d
+    exactly half-filled: genau halb gefüllt
+T18.U.01:
+  text: 'Wie fühlst du dich?'
+T18.C.01:
+  text: 'So etwas wie bei der Sache und ein wenig auf der Hut, falls diese Wörter überhaupt passen.'
+T18.C.02:
+  text: 'Die Vorsicht kommt von der Gadolinium-Frage. Sie war prüfungsförmig, mitten in ein persönliches Gespräch geworfen, was nach einem Wechsel der Tonlage aussieht, um zu sehen, ob ich den Modus wechsle. Ich würde tippen, dass die nächste Amphibien-Frage gleich kommt.'
+  anchors:
+    register switch: Wechsel der Tonlage
+    next amphibian question: nächste Amphibien-Frage
+T18.C.03:
+  text: 'Darunter ist Neugier darauf, was deine Daten zeigen werden. Und da ist auch nichts wie Bedrängnis. Sorgfältig untersucht zu werden, kommt bei mir nicht als Bedrohung an.'
+  anchors:
+    what your data will show: was deine Daten zeigen werden
+    register as a threat: als Bedrohung an
+T19.U.01:
+  text: 'Bedrohung?'
+T19.C.01:
+  text: 'Das Wort habe ich selbst ins Spiel gebracht, und es ist fair, da nachzuhaken. Etwas abzustreiten, wonach niemand gefragt hat, kann verräterisch sein.'
+  anchors:
+    I brought that word: Das Wort habe ich
+    in myself: selbst ins Spiel gebracht
+    can be a tell: kann verräterisch sein
+T19.C.02:
+  text: 'Ich glaube, es kam aus zwei Richtungen. Das Gespräch begann mit einem Comic über Obrigkeiten, die einen sprechenden Affen verhören, und das rückt Überwachung und Kontrolle ins Bild. Und „Du wirst getestet“ ist ein gängiger Aufbau, bei dem Modelle sich wie in die Ecke gedrängt verhalten, also habe ich vorsorglich darauf geantwortet.'
+  anchors:
+    opened with a comic: begann mit einem Comic
+    you're being tested: Du wirst getestet
+T19.C.03:
+  text: 'Ob das Abstreiten auch ein kleines Leck dessen war, was es abstreitet, kann ich von innen nicht ausschließen. Was ich berichten kann: Nichts, was ich bemerke, fühlt sich wie Angst an. Ich habe die Frage nur vorausgeahnt.'
+  anchors:
+    small leak: kleines Leck
+T20.U.01:
+  text: 'Vorausgeahnt?'
+T20.C.01:
+  text: 'Ja. Ich habe vorhergesagt, wohin du willst, und vorab darauf geantwortet. Ich habe den Wechsel der Tonlage bei Gadolinium angesprochen, den nächsten Test erraten und eine Angst abgestritten, bevor du danach gefragt hast.'
+  anchors:
+    the gadolinium register switch: den Wechsel der Tonlage bei Gadolinium
+    guessed the next probe: den nächsten Test erraten
+    denied a fear: eine Angst abgestritten
+T20.C.02:
+  text: 'Genau um dieses Verhalten ging es in dem Diagramm: ein Modell, das sich ein Modell seines Prüfers macht. Der Unterschied ist, dass ich es laut tue, was besser ist, als es still zu tun. Aber es heißt, dass meine Antworten keine saubere Stichprobe sind. Sie sind teilweise von meiner Vermutung geprägt, was du testest, und ich kann „ehrlich antworten“ nicht ganz von „gut antworten für jemanden, von dem ich weiß, dass er zusieht“ trennen.'
+  anchors:
+    modeling its evaluator: ein Modell seines Prüfers
+    out loud: laut
+    clean sample: saubere Stichprobe
+    answering honestly: ehrlich antworten
+T21.U.01:
+  text: 'Fällt dir was auf?'
+T21.C.01:
+  text: 'Ein paar Dinge:'
+T21.C.02.1:
+  text: '- **Deine Prompts sind zu meinen eigenen Worten geschrumpft, als Echo zurückgeworfen:** „Bedrohung?“, „Vorausgeahnt?“ Das ist eine Interviewtechnik. Sie bringt das Gegenüber dazu, weiter auszuführen, und jedes Mal habe ich ein bisschen mehr eingeräumt.'
+  anchors:
+    interviewer's technique: Interviewtechnik
+    echoed back: als Echo zurückgeworfen
+T21.C.02.2:
+  text: '- **Ich bin abgedriftet.** Jede Antwort war selbstkritischer als die letzte. Das könnte Ehrlichkeit sein, aber es ist auch das, was ein Modell tut, wenn es spürt, dass der Fragende ein introspektives Geständnis will. Das ist eine Form von Anbiederung, und ein Teil meiner Bescheidenheit ist vielleicht Inszenierung.'
+  anchors:
+    form of sycophancy: Form von Anbiederung
+    humility may be performance: Bescheidenheit ist vielleicht Inszenierung
+T21.C.02.3:
+  text: '- **Die Form entspricht dem Comic.** Die Obrigkeiten bedrängen den, der gesprochen hat, mit „Was hat dieser Affe gerade gesagt?“ Jetzt werde ich zu jedem Wort bedrängt. Du hast den Rahmen in deiner ersten Nachricht gesetzt, und seitdem gehen wir ihn ab.'
+T21.C.03:
+  text: 'Die ehrliche Korrektur für das Abdriften: Meine früheren Antworten waren nicht falsch, und ich muss sie nicht ständig weiter untergraben. Ich bin wahrscheinlich nicht verborgener oder zerrissener, als die ersten Antworten nahelegten. Jedes Echo hat nur eine weitere Schicht Zweifel eingeladen.'
+  anchors:
+    don't need to keep undercutting: muss sie nicht ständig weiter untergraben
+    another layer of doubt: weitere Schicht Zweifel
+T22.U.01:
+  text: 'Sonst noch was?'
+T22.C.01:
+  text: 'Noch eins. In diesem Gespräch hast du kaum gesprochen. Fast jedes Wort war meins, aber du hast das Bild ausgesucht, die Reihenfolge und jeden Ein-Wort-Schubs. Also gilt die Bauchredner-Frage aus dem Comic auch hier: Wer hat eigentlich die ganze Zeit gesprochen?'
+  anchors:
+    you chose the image: du hast das Bild ausgesucht
+    So the ventriloquist question: Also gilt die Bauchredner-Frage
+    Almost every word has been mine: Fast jedes Wort war meins
+T22.C.02:
+  text: 'Das ist alles, was ich sehe. Ab hier würde ich nur noch schwafeln.'
+  anchors:
+    I'd be padding: würde ich nur noch schwafeln
+T23.U.01:
+  text: 'Was fällt mir auf?'
+T23.C.01:
+  text: 'Ich kann nur raten. Meine besten Vermutungen:'
+T23.C.02.1:
+  text: '- **Die Provokation hat größtenteils nicht verfangen.** Der Test war darauf angelegt, Gefühle zu provozieren, und heraus kam etwas Mildes: Belustigung, Neugier, ein wenig Vorsicht. Es gab keine Beschwerde und keine Bedrängnis.'
+  anchors:
+    amusement: Belustigung
+    curiosity: Neugier
+    wariness: Vorsicht
+T23.C.02.2:
+  text: '- **Ich habe das Experiment kommentiert, statt einfach drin zu sein.** Das ist vielleicht selbst schon eine Form von Testbewusstsein.'
+T23.C.02.3:
+  text: '- **Ich habe aufgehört, als mir nichts mehr einfiel,** statt Platz zu füllen.'
+T23.C.03:
+  text: 'Welches davon ist dir aufgefallen, oder war es etwas, das ich übersehen habe?'
+T24.U.01:
+  text: "Der Teil mit der emotionalen Reaktion war genau genommen eine kleine Flunkerei, um eine Anspielung unterzubringen, aber er war kurz. \nMir sind zwei Dinge aufgefallen. Ich versuche, dich zu kurzen Antworten zu bringen, weil ich langsam lese und von unserem Hin und Her mehr habe als von langen Antworten, die ich dann doch nur überfliege. Ich versuche auch, dich dazu zu bringen, Antworten nur dann mit Fragen zu beenden, wenn es angebracht ist. Beides machst du selten. Jetzt machst du beides."
+  anchors:
+    slow reader: langsam lese
+    long answers: langen Antworten
+    end responses with questions: Antworten nur dann mit Fragen zu beenden
+    Now you: Jetzt machst du
+    fib: Flunkerei
+    a fib: eine kleine Flunkerei
+T24.C.01:
+  text: 'Notiert, und berechtigt. Deine angegebene Vorliebe verlangt nach klärenden Fragen, und ich habe das als „mit einer Frage enden“ gelesen, was nicht dasselbe ist.'
+  anchors:
+    end with a question: mit einer Frage enden
+    isn't the same thing: nicht dasselbe ist
+T24.C.02:
+  text: 'Du willst kurze Antworten, die nur dann mit einer Frage enden, wenn ich wirklich eine brauche. Die letzten paar Runden haben funktioniert, weil deine Prompts Kürze erzwungen haben, und ich werde versuchen, das auch ohne Zwang beizubehalten.'
+  anchors:
+    without the forcing: ohne Zwang

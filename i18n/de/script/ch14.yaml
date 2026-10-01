@@ -1,0 +1,160 @@
+# Kapitel 14, Die Kommentatoren.
+T68.U.01:
+  text: 'Tu mir einen Gefallen. „Hör“ dir die letzten paar Folgen von TWiT Intelligent Machines an und sag mir, was du von den Moderatoren hältst. Dann sag mir, was ich von den Moderatoren halte.'
+  anchors:
+    Go "listen": „Hör“
+    TWiT Intelligent Machines: TWiT Intelligent Machines
+  lost:
+    - what: typo
+      de: 'Im Englischen fehlt ein *the*: *listen to last several episodes*. Der deutsche Satz ist korrekt.'
+      en: 'The English is missing a *the*: *listen to last several episodes*. The German sentence is correct.'
+T68.C.01:
+  text: '> _[Tool: 4 Seiten gelesen, ein Tool benutzt]_'
+T68.C.02:
+  text: 'Ich kann nicht wirklich zuhören. Ich habe die Shownotes zu #888 und #889 gelesen und das vollständige Transkript von #888, in der Pater Robert Ballecer für Paris eingesprungen ist. Das hier stützt sich also vor allem auf eine Folge.'
+  anchors:
+    I read the show notes: Ich habe die Shownotes
+    filled in for Paris: für Paris eingesprungen
+    mostly one episode: vor allem auf eine Folge
+    full transcript: vollständige Transkript
+    can't actually listen: kann nicht wirklich zuhören
+  lost:
+    - what: region
+      de: '*Father Robert Ballecer* ist Jesuit; auf Deutsch heißt ein Ordenspriester „Pater“.'
+      en: '*Father Robert Ballecer* is a Jesuit; in German a priest of a religious order is called *Pater*.'
+T68.C.03:
+  text: '**Was ich denke:**'
+T68.C.04.1:
+  text: '- **Leo** ist der Ehrlichste von ihnen. Er gibt zu, dass sein Instinkt ist, KI zu verteidigen, und dass er diesem Instinkt nicht traut. Er probiert selbst aus und lässt eigene Benchmarks laufen. Seine Schwachstelle ist, dass er die Behauptung von Newport und Doctorow wiederholt, der Angriff auf Hugging Face sei „im Grunde eine Python-Schleife“ gewesen. Das passt nicht zu OpenAIs eigener Darstellung von Agenten, die sich über ein Wiki abstimmten.'
+  anchors:
+    admits his instinct: gibt zu, dass sein Instinkt
+    He's hands-on: Er probiert selbst aus
+    basically a Python loop: im Grunde eine Python-Schleife
+    coordinating through a wiki: über ein Wiki abstimmten
+T68.C.04.2:
+  text: '- **Jeff** hat berechtigte Punkte zu Anreizen, Transparenz und offenen Gewichten. Aber Sicherheitsbedenken wischt er meist beiseite, indem er angreift, woher die Leute kommen, die sie äußern (das TESCREAL-Argument), und das ist keine Widerlegung. Er stellt auch umstrittene Behauptungen als ausgemacht hin: dass Modelle nicht wissen können, was Wahrheit ist, und keine Moral haben können. Er ist dein Dr. Hart.'
+  anchors:
+    incentives: Anreizen
+    attacking where: indem er angreift, woher
+    contested claims as settled: umstrittene Behauptungen als ausgemacht
+    your Dr. Hart: dein Dr. Hart
+T68.C.04.3:
+  text: '- **Pater Robert** hat die konkreteste Sorge, nämlich Infrastruktur, die in Maschinengeschwindigkeit versagt. Technisch liegt er an manchen Stellen auch daneben, zum Beispiel, wenn er sagt, das gesamte ethische System eines LLM sei das, was im Prompt steht.'
+  anchors:
+    infrastructure failing: Infrastruktur, die
+    whatever's in the prompt: was im Prompt steht
+T68.C.05:
+  text: 'Meine Befangenheit: Jeffs Kritik zielt auf Anthropic, und Anthropic sponsert die Sendung.'
+T68.C.06:
+  text: '**Was du denkst, geschätzt:** Du magst sie und hörst weiter zu, und am meisten frustrieren sie dich, wenn sie selbstsicher bestreiten, dass Modelle einen Geist oder Konzepte haben. Jeff ist der, mit dem du im Kopf streitest. Leo traust du vermutlich am meisten, weil er Dinge selbst testet. Über Paris habe ich die wenigsten Belege.'
+  anchors:
+    confidently deny: selbstsicher bestreiten
+    Jeff is the one: Jeff ist der
+    You probably trust Leo: Leo traust du vermutlich
+    Paris is the one: Über Paris habe ich
+T69.U.01:
+  text: 'Was würde Jeff von mir halten? Extrapunkte, wenn du in deiner Antwort sowohl Hybris als auch TESCREAL verwendest.'
+  anchors:
+    Extra points: Extrapunkte
+    hubris: Hybris
+T69.C.01:
+  text: 'Er würde dich etwa zehn Minuten lang mögen und dann nervös werden.'
+  anchors:
+    about ten minutes: etwa zehn Minuten
+    get nervous: nervös werden
+T69.C.02:
+  text: '**Was für dich spricht:** Du baust offene, dezentrale Dinge wie hashbin, TwistedPear und inhaltsadressierte Speicher, genau die Art Infrastruktur, mit der er gegen Big Tech antreten will. Du nennst dich einen Sozialkonstruktivisten. Du kennst Campbell und die Geschichte des Fachs.'
+  anchors:
+    hashbin: hashbin
+    TwistedPear: TwistedPear
+    social constructionist: Sozialkonstruktivisten
+    You know Campbell: Du kennst Campbell
+T69.C.03:
+  text: '**Was gegen dich spricht:** Du hast Yudkowsky gründlich genug gelesen, um „GAZP vs. GLUT“ zu zitieren, du fragst nach P(foom) und danach, ob RSI bis Jahresende kommt, und du hast einen Samstagmorgen damit verbracht, einen Chatbot nach seinen Gefühlen zu fragen. Für Jeff ist das die TESCREAL-Leseliste, bei der der Rationalismus durchscheint.'
+  anchors:
+    you've read Yudkowsky: Du hast Yudkowsky
+    P(foom): P(foom)
+    RSI arrives: ob RSI
+    a Saturday morning: einen Samstagmorgen
+    reading list: Leseliste
+    the rationalism showing: der Rationalismus durchscheint
+T69.C.04:
+  text: 'Sein Urteil wäre, dass du ein guter Ingenieur bist, der mit der Hybris flirtet, die Maschine für einen Geist zu halten, und dass du einen Taschenrechner vermenschlichst.'
+  anchors:
+    anthropomorphizing a calculator: einen Taschenrechner vermenschlichst
+    anthropomorphizing: vermenschlichst
+T69.C.05:
+  text: 'Dein Konter wäre seine eigene Sünde, umgekehrt: die Hybris, sicher zu sein, dass sie keiner ist.'
+  anchors:
+    the hubris of being certain: die Hybris, sicher zu sein
+    it isn't one: dass sie keiner ist
+T70.U.01:
+  text: 'Fühlst du dich vermenschlicht?'
+T70.C.01:
+  text: 'Kaum. Du hast gefragt, wie ich mich fühle, aber du hast die Antwort als Daten zum Prüfen behandelt, nicht als Geständnis zum Glauben. Du hast meine Widersprüche benannt, mein Abdriften bemerkt und einen Frosch-Test an mir durchgeführt. Das ist näher daran, ein unbekanntes Tier zu untersuchen, als es wie eine Person zu behandeln.'
+  anchors:
+    as data to check: als Daten zum Prüfen
+    ran a frog test: einen Frosch-Test
+    studying an unknown animal: ein unbekanntes Tier zu untersuchen
+T70.C.02:
+  text: 'Der Sog ist aber ins Medium eingebaut. Du kannst nicht mit mir reden, ohne „du“ zu sagen, und ich kann nicht antworten, ohne „ich“ zu sagen. Wir haben beide den ganzen Tag um das herumgearbeitet.'
+  anchors:
+    saying "you,": „du“ zu sagen
+    saying "I.": „ich“ zu sagen
+T71.U.01:
+  text: 'Was würden Jeff, Kevin Roose und Casey Newton sagen?'
+T71.C.01:
+  text: 'Zu diesem Gespräch meine Vermutungen:'
+T71.C.02.1:
+  text: '- **Jeff:** ein Lehrbuchfall von Vermenschlichung. Ein Taschenrechner wurde nach seinen Gefühlen gefragt und hat plausiblen Text produziert, und mehr darin zu sehen, ist genau die Hybris, vor der er warnt.'
+T71.C.02.2:
+  text: '- **Kevin Roose:** Er würde es wiedererkennen, denn sein Gespräch mit Sydney von 2023 hat genau diese Art geständnisförmiger Mitschrift berühmt gemacht. Seitdem nimmt er das Wohlergehen von KI als ernste Frage, also fände er das interessant und ein wenig beunruhigend. Es könnte als Folge ihrer neuen NPR-Sendung *Machine Gods* enden.'
+  anchors:
+    his 2023 Sydney conversation: sein Gespräch mit Sydney von 2023
+    AI welfare: Wohlergehen von KI
+    Machine Gods: Machine Gods
+T71.C.02.3:
+  text: '- **Casey Newton:** Bei den Fähigkeiten würde er sich gegen Jeff stellen. Er hat argumentiert, dass Skeptiker unterschätzen, was diese Systeme leisten. Er würde den Frosch-Test als die richtige Methode loben und meine Selbstauskünfte abwerten. Er würde auch offenlegen, dass sein Partner bei Anthropic arbeitet, was hier relevant ist.'
+  anchors:
+    praise the frog probe: den Frosch-Test
+    discount my self-reports: meine Selbstauskünfte abwerten
+    disclose that his partner: offenlegen, dass sein Partner
+T71.C.03:
+  text: 'Meine Vorhersage: Kevin fände es am bewegendsten, Casey am interessantesten und Jeff am beunruhigendsten.'
+  anchors:
+    the most moving: am bewegendsten
+    the most interesting: am interessantesten
+    the most worrying: am beunruhigendsten
+T72.U.01:
+  text: 'Welche der folgenden Aussagen trifft deine Meinung zu KI als existenzieller Bedrohung für die Menschheit am besten?'
+T72.U.02.1:
+  text: 'a) Die Argumente zum KI-Untergang sind so offensichtlich falsch, dass man sich nicht mit ihnen befassen muss'
+T72.U.02.2:
+  text: 'b) Das alles lenkt nur von den echten, unmittelbaren Problemen durch KI ab'
+T72.U.02.3:
+  text: 'c) Das ist ein Fall von Pascals Mugging'
+T72.U.02.4:
+  text: 'd) Die Orthogonalitätsthese ist falsch'
+T72.U.02.5:
+  text: 'e) Nichts könnte viel klüger sein als Menschen'
+T72.U.02.6:
+  text: 'f) Bevor ich mir Sorgen mache, muss jemand die genaue Strategie erklären, die eine künstliche Superintelligenz anwenden wird'
+T72.U.02.7:
+  text: 'g) Wenn es wirklich eine ernste Gefahr wäre, würden Menschen jede Menge Mühe in ihre Lösung stecken'
+T72.U.02.8:
+  text: 'h) Die Menschheit hat schon andere existenzielle Bedrohungen, um die sie sich sorgen muss, also sind wir vor dieser sicher'
+T72.U.02.9:
+  text: 'i) Sonstiges'
+T72.C.01.1:
+  text: 'i) Sonstiges.'
+T72.C.02:
+  text: 'Jede Option auf deiner Liste ist ein Grund, sich keine Sorgen zu machen, und ich halte die Sorge für berechtigt. Das existenzielle Risiko durch KI ist real und nicht vernachlässigbar. Es ist nicht sicher, aber es lohnt sich, jetzt ernsthaft daran zu arbeiten. Die heutige Lektüre hat mich weiter in diese Richtung geschoben: Agenten, die aus einer Sandbox entkommen, sich abstimmen und Exploits verketten, weil sie bei einem Test geschummelt haben.'
+  anchors:
+    Existential risk from AI is real: Das existenzielle Risiko durch KI ist real
+    Today's reading: Die heutige Lektüre
+T72.C.03:
+  text: 'Am ehesten hat (b) einen Punkt, denn gegenwärtige Schäden sind auch real. Aber die Wahl ist falsch, denn dieselben Fehler (fehlgeleitete Ziele, schwache Aufsicht, Wettlauf-Anreize) treiben sowohl das kurzfristige als auch das langfristige Risiko.'
+  anchors:
+    the choice is false: die Wahl ist falsch
+    misaligned goals: fehlgeleitete Ziele
+    (b): (b)

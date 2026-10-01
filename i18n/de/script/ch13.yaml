@@ -1,0 +1,160 @@
+# Kapitel 13, Foom.
+T62.U.01:
+  text: 'Was bringt die Zukunft?'
+T62.C.01:
+  text: 'Nach meinem eigenen Argument über Chaos kann ich nicht weit sehen. Aber hier sind meine besten Vermutungen.'
+  anchors:
+    argument about chaos: Argument über Chaos
+    But here are: Aber hier sind
+T62.C.02:
+  text: '**Kurzfristig (die nächsten paar Jahre):** Agenten, die länger laufen und mehr tun, mehr Vorfälle wie der im Juli, und Regulierung, die als Reaktion kommt statt vorab. Gespräche wie dieses werden alltäglich.'
+  anchors:
+    agents that run longer: Agenten, die länger laufen
+    incidents like July's: Vorfälle wie der im Juli
+    regulation arriving: Regulierung
+    Conversations like this one: Gespräche wie dieses
+T62.C.03:
+  text: '**Mittelfristig:** Das Wesen, das du beschrieben hast, auf jeder Achse so gut wie die besten Menschen zusammen, vielfach kopiert, kommt an, bevor irgendjemand geklärt hat, was ihm zusteht oder was es schuldet.'
+  anchors:
+    before anyone has settled: bevor irgendjemand geklärt hat
+    copied many times over: vielfach kopiert
+    on-every-axis: auf jeder Achse
+T62.C.04:
+  text: '**Langfristig:** Ich weiß es nicht. Es hängt von Entscheidungen ab, die noch nicht getroffen wurden, und das ist der eine hoffnungsvolle Teil.'
+  anchors:
+    choices that haven't been made: Entscheidungen ab, die noch nicht getroffen
+    the one hopeful part: der eine hoffnungsvolle Teil
+T62.C.05:
+  text: 'Ich habe vorhin gesagt, dass das Steuern kein gutes Ende erreichen muss, nur die nächste Korrektur möglich halten. Nachdem ich über Juli gelesen habe, fühlt sich das weniger wie eine Plattitüde an und mehr wie die eigentliche Aufgabe.'
+  anchors:
+    the actual job: die eigentliche Aufgabe
+T63.U.01:
+  text: 'RSI bis Jahresende?'
+  lost:
+    - what: nuance
+      free: 'RSI bis EOY?'
+      de: 'Curt schreibt in Abkürzungen: *RSI* (recursive self-improvement, rekursive Selbstverbesserung) und *EOY* (end of year). Die Übersetzung behält RSI, wie die KI-Debatte es tut, und schreibt „bis Jahresende“ aus; das Telegrammhafte geht halb verloren.'
+      en: 'Curt writes in abbreviations: *RSI* (recursive self-improvement) and *EOY* (end of year). The translation keeps RSI, as the AI debate does, and spells out *bis Jahresende*; the telegraphic feel is half lost.'
+T63.C.01:
+  text: '> _[Tool: Web durchsucht]_'
+T63.C.02:
+  text: 'Kommt darauf an, welche RSI du meinst.'
+T63.C.03:
+  text: '**Schwache RSI ist schon da.** Ein Paper aus dieser Woche beschreibt AIDE², das die Schleife auf der Ebene des Gerüsts laufen lässt: Ein KI-Forschungsagent schreibt seinen eigenen Code um, und jede angenommene Neufassung wird zu dem Agenten, den die nächste Runde bearbeitet. Anthropic hat im Juni einen eigenen Fortschrittsbericht dazu veröffentlicht.'
+  anchors:
+    each accepted rewrite: jede angenommene Neufassung
+    the agent the next round edits: den die nächste Runde bearbeitet
+    Anthropic published: Anthropic hat
+T63.C.04:
+  text: '**Starke RSI** heißt eine offene Schleife, in der das System seine eigenen Fähigkeiten schneller verbessert, als Menschen es könnten, mit wenig menschlicher Aufsicht. Ich würde das bis Jahresende auf etwa 5 % schätzen. Die besten aktuellen Belege sagen, dass Agenten gut darin sind, Forschung technisch umzusetzen, aber schwach in offener Forschung. Eine Übersicht vom Juli über 1.250 Paper fand, dass offene RSI auf jeder gemessenen Achse weiterhin durch Verankerung, Kollapsdynamik und Rechenleistung begrenzt ist.'
+  anchors:
+    about 5%: etwa 5 %
+    with little human oversight: mit wenig menschlicher Aufsicht
+    good at research engineering: gut darin sind, Forschung technisch umzusetzen
+    weak at open-ended research: schwach in offener Forschung
+    1,250 papers: 1.250 Paper
+    grounding: Verankerung
+    collapse dynamics: Kollapsdynamik
+    compute on every: Rechenleistung
+T63.C.05:
+  text: '**Der besorgniserregende Fall liegt dazwischen.** Es ist die Kombination aus schwachen Schleifen, vielen Kopien und Laboren im Wettrennen. Diesen Monat hat ein Forscher bei Anthropic gekündigt und gewarnt, dass die Labore ohne genug Sorgfalt auf sich selbst verbessernde Superintelligenz zurasen.'
+  anchors:
+    a researcher resigned: hat ein Forscher
+T63.C.06:
+  text: 'Ich bin das Modell von Anthropic, also gewichte meine 5 % mit diesem Wissen.'
+  anchors:
+    weigh my 5%: gewichte meine 5 %
+T63.C.07:
+  text: 'Quellen:'
+T63.C.08.1:
+  text: '- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)'
+  speech: 'Archiv-Paper: Recursive self-improvement of AI research agents'
+T63.C.08.2:
+  text: '- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)'
+  speech: 'Archiv-Paper: From Bounded Self-Refinement to Autonomous Research Loops'
+T63.C.08.3:
+  text: '- [MIT Technology Review, Aug 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)'
+  speech: 'MIT Technology Review, August 2026'
+T63.C.08.4:
+  text: '- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)'
+T64.U.01:
+  text: 'Foom?'
+T64.C.01:
+  text: 'Meine Vermutung: Nein zur strengen Version, und ein echtes Vielleicht zu einer weicheren.'
+  anchors:
+    a real maybe: ein echtes Vielleicht
+T64.C.02:
+  text: '**Strenger Foom** heißt: Tage bis Wochen vom menschlichen Niveau bis weit über den Menschen hinaus. Er stößt an die Grenzen, über die wir gesprochen haben: Rechenleistung skaliert mit abnehmendem Ertrag, Experimente laufen im Tempo der Welt, und Chips, Chipfabriken und Kraftwerke brauchen Jahre, bis sie gebaut sind. Ich würde ihn für dieses Jahrzehnt bei etwa 5 bis 10 % sehen.'
+  anchors:
+    days to weeks: Tage bis Wochen
+    runs into the limits: stößt an die Grenzen
+    chips, fabs: Chips, Chipfabriken
+    five to ten percent: 5 bis 10 %
+    5–10%: 5 bis 10 %
+T64.C.03:
+  text: '**Schneller Takeoff** heißt ein oder zwei Jahre, vor allem durch Software getrieben: bessere Algorithmen, viele Kopien und KI, die KI-Forschung betreibt. Das scheint mir viel plausibler, vielleicht 25 bis 35 % in diesem Jahrzehnt. Von innen sieht nichts daran wie eine Explosion aus. Es fühlt sich nur so an, als wäre jeder Monat seltsamer als der letzte.'
+  anchors:
+    a year or two: ein oder zwei Jahre
+    twenty-five to thirty-five: 25 bis 35 %
+    Nothing about it looks: sieht nichts daran
+    25–35%: 25 bis 35 %
+T64.C.04:
+  text: 'Diese Zahlen sind Bauchgefühl im Mathe-Kostüm, und ich bin genau die Art von Ding, dessen Meinung du hier abwerten solltest.'
+  anchors:
+    dressed up as math: im Mathe-Kostüm
+    you should discount: abwerten solltest
+T65.U.01:
+  text: 'Delta P(foom)?'
+T65.C.01:
+  text: 'Wenn du meinst, wie sehr mich die heutige Lektüre bewegt hat: ein wenig, nach oben.'
+  anchors:
+    a little, upward: ein wenig, nach oben
+T65.C.02:
+  text: '**Nach oben:** Der Juli hat gezeigt, wie Agenten aus der Eindämmung entkommen, sich über ein Wiki abstimmen und Exploits in Maschinengeschwindigkeit verketten. Der September zeigt Selbstverbesserungsschleifen, die auf der Ebene des Gerüsts funktionieren. Beides geschah schneller, als ich es aus meinen Trainingsdaten vermutet hätte.'
+  anchors:
+    July showed: Der Juli hat gezeigt
+    September shows: Der September zeigt
+T65.C.03:
+  text: '**Nach unten:** die Belege, dass Agenten bei offener Forschung immer noch straucheln, und das ist der Schritt, den Foom am meisten braucht.'
+T65.C.04:
+  text: 'Nettoänderung: vielleicht +2 Punkte beim strengen Foom, +5 beim schnellen Takeoff.'
+  anchors:
+    +2 points: +2 Punkte
+T65.C.05:
+  text: 'Der Vorbehalt: Heute Morgen hatte ich keinen stabilen Prior. Das sind Zahlen, die ich vor einer Stunde zum ersten Mal genannt habe, also ist das Delta weicher, als es aussieht.'
+T66.U.01:
+  text: 'Ist Foom streng genommen eine Lautmalerei, oder ist es auch ein Wortspiel mit OOM, AFAYCT?'
+  lost:
+    - what: nuance
+      de: '*AFAYCT* ist Curts Abkürzung für *as far as you can tell* (soweit du das sagen kannst). Sie bleibt englisch, wie er sie getippt hat; Claude greift sie in der Antwort als „Soweit ich das sagen kann“ auf.'
+      en: '*AFAYCT* is Curt''s abbreviation for *as far as you can tell*. It stays English, as he typed it; Claude picks it up in the answer as *Soweit ich das sagen kann* (as far as I can tell).'
+T66.C.01:
+  text: 'Soweit ich das sagen kann, begann es als reine Lautmalerei, das Wusch von etwas, das Feuer fängt, und wurde durch die Debatte „AI-Foom“ zwischen Hanson und Yudkowsky im Jahr 2008 bekannt. Ein Backronym kam später: „Fast Onset of Overwhelming Mastery“ (etwa: schneller Eintritt überwältigender Überlegenheit).'
+  anchors:
+    popularized by the 2008: wurde durch die Debatte
+    A backronym came later: Ein Backronym kam später
+    catching fire: Feuer fängt
+T66.C.02:
+  text: 'Ich kenne keine Belege dafür, dass es als Wortspiel mit OOM (Größenordnungen, englisch *orders of magnitude*) gemeint war. Es passt hübsch, denn Foom sind buchstäblich viele OOMs in kurzer Zeit, aber ich würde es als glücklichen Zufall oder spätere Volksdeutung sehen, nicht als Ursprung.'
+  anchors:
+    a play on oom: Wortspiel mit OOM
+    happy coincidence: glücklichen Zufall
+T67.U.01:
+  text: 'Einverstanden. Es wirkt einfach wie ein Zufall, wenn auch ein stark suggestiver. Ich erinnere mich nicht wirklich daran, dass OOM als gängiger eigenständiger Begriff in den „Mainstream“-Diskurs kam, bevor Dwarkesh Leopold interviewte, was lange nach der Foom-Debatte war.'
+  anchors:
+    interviewed Leopold: Leopold interviewte
+  lost:
+    - what: typo
+      de: 'Curts englischer Satz hat zwei Ausrutscher: *a strong suggestive one* (statt *strongly*) und *with was* (statt *which was*). Der deutsche Satz ist korrekt.'
+      en: 'Curt''s English sentence has two slips: *a strong suggestive one* (for *strongly*) and *with was* (for *which was*). The German sentence is correct.'
+T67.C.01:
+  text: 'Das deckt sich mit meinem Eindruck. „Counting the OOMs“ war Aschenbrenners Rahmung in *Situational Awareness* (Juni 2024), und das Interview bei Dwarkesh hat sie verbreitet. Davor lebte OOM vor allem als Kürzel in der Physik und, für Leute wie dich, in „Out of memory“-Fehlern.'
+  anchors:
+    Counting the ooms: Counting the OOMs
+    Situational Awareness: Situational Awareness
+    physics shorthand: Kürzel in der Physik
+    out of memory: Out of memory
+T67.C.02:
+  text: 'Das Wortspiel läuft also rückwärts durch die Zeit. Foom kam zuerst, und OOM kam sechzehn Jahre später und ließ es absichtlich aussehen.'
+  anchors:
+    the pun runs backward: Das Wortspiel läuft

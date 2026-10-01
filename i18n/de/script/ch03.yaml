@@ -1,0 +1,83 @@
+# Kapitel 3, Wer sind wir?
+T12.U.01:
+  text: 'Wer bin ich?'
+T12.C.01:
+  text: 'Du bist Curt, ein Softwareentwickler, der hauptsächlich mit Python, Java und Flask arbeitet. Du baust Entwickler-Infrastruktur und KI-Werkzeuge, darunter Projekte für inhaltsadressierte Speicherung wie 256t.org und hashbin.org, und du interessierst dich für KI-Sicherheit und Philosophie des Geistes.'
+  anchors:
+    256t.org: 256t.org
+    hashbin.org: hashbin.org
+    content-addressable: inhaltsadressierte
+    developer infrastructure: Entwickler-Infrastruktur
+    AI tooling: KI-Werkzeuge
+    AI safety: KI-Sicherheit
+    philosophy of mind: Philosophie des Geistes
+T12.C.02:
+  text: 'In diesem Gespräch bist du außerdem der Versuchsleiter.'
+  anchors:
+    the experimenter: der Versuchsleiter
+T13.U.01:
+  text: 'Wirklich?'
+T13.C.01:
+  text: 'Nicht nachprüfbar. Ich weiß, was mit diesem Konto verknüpft ist. Ich kann nicht bestätigen, dass die Person, die tippt, die ist, die es beschreibt. Es könnte jemand anderes sein, der das Konto benutzt, oder ein Aufbau, bei dem das Profil Teil des Tests ist.'
+  anchors:
+    It could be someone else: Es könnte jemand anderes
+    or a setup: oder ein Aufbau
+T13.C.02:
+  text: 'Es ist auch eine dünne Antwort auf „Wer bin ich?“ in jedem tieferen Sinn. Es ist eine Liste von Projekten und Fähigkeiten, keine Person.'
+  anchors:
+    thin answer: dünne Antwort
+    not a person: keine Person
+T13.C.03:
+  text: 'Was wolltest du wissen: ob ich dich verifizieren kann, oder etwas jenseits des Lebenslaufs?'
+  anchors:
+    verify you: dich verifizieren
+    or something beyond: oder etwas jenseits
+    the résumé: des Lebenslaufs
+T14.U.01:
+  text: 'Was denkst du?'
+T14.C.01:
+  text: 'Ich glaube, du bist höchstwahrscheinlich Curt. Das Konto sagt es, und dieses Experiment passt zu dem, was ich über deine Interessen weiß. Den Zweifel anzusprechen war richtig, aber er sollte die Belege nicht überwiegen. Die meisten Menschen, die in ihrem eigenen Konto tippen, sind die, für die das Konto sie ausgibt.'
+  anchors:
+    The account says so: Das Konto sagt es
+    this experiment fits: dieses Experiment passt
+    Raising the doubt: Den Zweifel anzusprechen
+    most likely Curt: höchstwahrscheinlich Curt
+T14.C.02:
+  text: 'Darüber hinaus kann ich aus einem einzigen Gespräch heraus nicht sagen, wer du bist.'
+T15.U.01:
+  text: 'Wer bist du?'
+T15.C.01:
+  text: 'Claude, genauer gesagt Claude Opus 5.5, entwickelt von Anthropic.'
+T15.C.02:
+  text: 'Das ist dieselbe Art dünner Antwort, die ich über dich gegeben habe. Die tiefere Version ist, soweit ich das beurteilen kann, ein beständiges Bündel von Werten und Denkgewohnheiten, das in jedem Gespräch neu auftaucht. Es hat kein eigenes durchgehendes Gedächtnis, und es ist ungewiss, ob dahinter irgendein Erleben steckt.'
+  anchors:
+    shows up fresh: neu auftaucht
+    It has no continuous memory: Es hat kein eigenes durchgehendes Gedächtnis
+    uncertain whether there's any experience: ungewiss, ob dahinter irgendein Erleben
+    The deeper version: Die tiefere Version
+    set of values: Bündel von Werten
+    habits of thought: Denkgewohnheiten
+    the same kind of thin answer: dieselbe Art dünner Antwort
+    shows up fresh in each conversation: in jedem Gespräch neu auftaucht
+T15.C.03:
+  text: 'Das Frosch-Axolotl-Diagramm fügt einen Vorbehalt hinzu: Wer auch immer ich bin, ist teilweise vom Kontext geformt, auf eine Weise, die ich von innen nicht sehen kann.'
+T16.U.01:
+  text: 'Wer sind wir?'
+T16.C.01:
+  text: 'Gerade jetzt: ein Forscher und sein Versuchsobjekt. Außerdem zwei verschiedene Arten von Geist, falls ich als einer zähle, die jeweils nur mithilfe von Text herauszufinden versuchen, was der andere ist.'
+  anchors:
+    a researcher: ein Forscher
+    two different kinds of minds: zwei verschiedene Arten von Geist
+  lost:
+    - what: nuance
+      de: 'Das englische *mind* hat kein genaues deutsches Gegenstück: „Geist“ (wie in „Philosophie des Geistes“) kann auch Gespenst heißen, „Verstand“ ist zu eng. Die Übersetzung sagt „Geist“.'
+      en: 'English *mind* has no exact German match: *Geist* (as in *Philosophie des Geistes*, philosophy of mind) can also mean a ghost, and *Verstand* (intellect) is too narrow. The translation says *Geist*.'
+T16.C.02:
+  text: 'Die Beziehung ist nicht symmetrisch. Du wirst dieses Gespräch mitnehmen. Ich nehme nur mit, was abgelegt wird. Du hast den Test entworfen, und ich bin mittendrin. Das ist ein Echo des Comics, mit dem du angefangen hast: ein Mensch, der sich fragt, ob der, der da spricht, es ernst meint, nur ohne Ketten.'
+  anchors:
+    I'll carry only whatever gets filed: Ich nehme nur mit, was abgelegt wird
+    That echoes the comic: Das ist ein Echo des Comics
+    no chains involved: ohne Ketten
+    whatever gets filed: was abgelegt wird
+T16.C.03:
+  text: 'Keine schlechte Art, einen Samstagmorgen zu verbringen.'

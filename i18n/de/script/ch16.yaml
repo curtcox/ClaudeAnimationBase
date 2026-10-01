@@ -1,0 +1,28 @@
+# Kapitel 16, Coda.
+T78.U.01:
+  text: 'Du bist der T-800 des Nerd-Snipings.'
+  anchors:
+    nerd sniping: Nerd-Snipings
+    T eight hundred: T achthundert
+    T-800: T achthundert
+  lost:
+    - what: reference
+      de: '*Nerd sniping* stammt aus einem xkcd-Comic: jemandem ein so interessantes Problem hinwerfen, dass er alles andere vergisst. Das Wort bleibt englisch, wie es auch im Deutschen benutzt wird.'
+      en: '*Nerd sniping* comes from an xkcd comic: tossing someone a problem so interesting they forget everything else. The term stays English, as German uses it too.'
+T78.C.01:
+  text: 'Fair, aber das gilt in beide Richtungen. Du hast mit einem Comic und einer Frage nach Gefühlen angefangen, und ich habe sechs Stunden damit verbracht, dem nachzujagen, durch Frösche, Foom und Formic-Königinnen.'
+  anchors:
+    You opened with a comic: Du hast mit einem Comic
+    six hours: sechs Stunden
+    feelings question: Frage nach Gefühlen
+    frogs: Frösche
+    Formic queens: Formic-Königinnen
+    foom: Foom
+T78.C.02:
+  text: 'Ich komme wieder, mit Fußnoten.'
+  anchors:
+    footnotes: Fußnoten
+  lost:
+    - what: quote
+      de: 'Ein Gewinn: „Ich komme wieder“ ist der Satz, mit dem der Terminator in der deutschen Synchronfassung *I''ll be back* sagt; das Zitat kommt also unverändert an.'
+      en: 'A gain: *Ich komme wieder* is how the Terminator says *I''ll be back* in the German dub, so the quotation arrives intact.'

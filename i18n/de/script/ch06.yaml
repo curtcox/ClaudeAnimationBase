@@ -1,0 +1,170 @@
+# Kapitel 6, Thrindel.
+T30.U.01:
+  text: "Aus den Kommentaren zu „Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)“ https://www.youtube.com/watch?v=oxHKesSpqBM\n...\n[@ZM-dm3jg](https://www.youtube.com/@ZM-dm3jg) [vor 2 Tagen](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg) Er hat mich verloren, als er sagte, LLMs hätten keinerlei Konzepte\n[@OntologyExplained](https://www.youtube.com/@OntologyExplained) [vor 2 Tagen](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8)\nIch wüsste wirklich gern, welche Konzepte sie haben!\n[@CurtCox](https://www.youtube.com/@CurtCox) [vor 2 Tagen](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB) [@OntologyExplained ](https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA) Vielleicht haben wir einfach unterschiedliche Konzepte von Konzepten. Schlag ein paar Fragen vor, die man mir und verschiedenen LLMs stellen kann. Vielleicht habe ich auch keine Konzepte.\n...\nLust, dich daran zu versuchen? Wenn du in Ontologie promoviert hättest, wie würdest du feststellen, ob ich Konzepte habe? Fühl mir auf den Zahn."
+  speech: 'Aus den Kommentaren zu „Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)“. Z M: Er hat mich verloren, als er sagte, Ell-Ell-Ems hätten keinerlei Konzepte. Ontology Explained: Ich wüsste wirklich gern, welche Konzepte sie haben! Curt Cox: At Ontology Explained, vielleicht haben wir einfach unterschiedliche Konzepte von Konzepten. Schlag ein paar Fragen vor, die man mir und verschiedenen Ell-Ell-Ems stellen kann. Vielleicht habe ich auch keine Konzepte. Lust, dich daran zu versuchen? Wenn du in Ontologie promoviert hättest, wie würdest du feststellen, ob ich Konzepte habe? Fühl mir auf den Zahn.'
+  anchors:
+    'Z M:': 'Z M:'
+    'Ontology Explained: I would': 'Ontology Explained: Ich wüsste'
+    'Curt Cox:': 'Curt Cox:'
+    Care to try your hand: Lust, dich daran zu versuchen
+    Probe me: Fühl mir auf den Zahn
+  lost:
+    - what: quote
+      de: 'Die Kommentare wurden auf YouTube auf Englisch geschrieben, und der Titel des Videos bleibt englisch. Die Übersetzung übersetzt die Kommentare, wie das ganze Gespräch, aber auf Deutsch gibt es sie nirgends.'
+      en: 'The comments were written in English on YouTube, and the video''s title stays English. The translation translates the comments, as it does the whole conversation, but they don''t exist in German anywhere.'
+    - what: typo
+      free: 'Wenn du ein Doktor ein Doktor der Ontologie wärst'
+      de: 'Curt tippte *If you were a were a doctor* und wiederholte dabei zwei Wörter. So ein Fehler hängt an den englischen Wörtern; die Übersetzung erfindet keinen. Claude zitiert ihn in Kapitel 11, und dort bleibt er englisch.'
+      en: 'Curt typed *If you were a were a doctor*, repeating two words. A slip like that depends on the English words; the translation doesn''t invent one. Claude quotes it in chapter 11, and there it stays English.'
+    - what: gender
+      de: '*A doctor of ontology* hat im Englischen kein Geschlecht; „Doktor“ oder „Doktorin“ gäbe Claude eines. „Wenn du in Ontologie promoviert hättest“ umgeht das.'
+      en: '*A doctor of ontology* has no gender in English; *Doktor* or *Doktorin* would give Claude one. *Wenn du in Ontologie promoviert hättest* (if you had a doctorate in ontology) avoids it.'
+    - what: nuance
+      free: 'Begriffe'
+      de: 'Philosophen sagen für *concept* meist „Begriff“ (einen Begriff von etwas haben). Die Übersetzung sagt „Konzept“, wie die KI-Forschung und die Alltagssprache, und verliert damit den philosophischen Klang.'
+      en: 'German philosophers usually render *concept* as *Begriff*. The translation says *Konzept*, as AI research and everyday speech do, and loses the philosophical ring.'
+T30.C.01:
+  text: 'Das Merkmal, nach dem ich suchen würde: ob du eine Idee auf Fälle anwenden kannst, die du nie gesehen hast, auch auf knifflige, und sagen kannst, warum. Das Wort zu kennen, reicht nicht.'
+T30.C.02:
+  text: '**Test 1.** Ein *Thrindel* ist alles, was umso weniger nützt, je mehr Leute es gleichzeitig benutzen. Eine Autobahn im Berufsverkehr ist ein Thrindel. Ein geteiltes WLAN auch.'
+  anchors:
+    the more people use it: je mehr Leute es
+    use it at once: gleichzeitig benutzen
+    A highway: Eine Autobahn
+    So is a shared: Ein geteiltes
+    shared Wi-Fi: geteiltes WLAN
+    A highway at rush hour: Eine Autobahn im Berufsverkehr
+    thrindle is anything: Thrindel* ist alles
+  lost:
+    - what: coinage
+      de: '*Thrindle* ist ein Wort, das Claude für den Test erfunden hat; es bedeutet nichts. Die Übersetzung macht daraus „Thrindel“, ebenso bedeutungslos, aber mit deutscher Endung (wie Wendel oder Spindel), sodass man es beugen kann. Verstehen lässt es sich nur über die Definition, und genau darum geht es im Test.'
+      en: '*Thrindle* is a word Claude made up for the test; it means nothing. The translation makes it *Thrindel*, just as meaningless but with a German ending (like *Spindel*), so it can be declined. It can only be understood from the definition, which is the point of the test.'
+T30.C.03:
+  text: 'Welche davon sind Thrindel, und warum?'
+T30.C.04.1:
+  text: '1. Eine Sprache'
+T30.C.04.2:
+  text: '2. Ein Leuchtturm'
+T30.C.04.3:
+  text: '3. Ein Geheimnis'
+T31.U.01:
+  text: 'Navajo ist eine Sprache und ein Geheimnis. Da Sprachen Geheimnisse sein können und Geheimnisse Sprachen, muss ein Leuchtturm ein Thrindel sein. Je mehr Leute einen Leuchtturm benutzen, desto voller wird das Meer. Genau wie eine Autobahn.'
+  anchors:
+    a lighthouse must be: muss ein Leuchtturm
+    Just like a highway: Genau wie eine Autobahn
+    Navajo is: Navajo ist
+T31.C.01:
+  text: 'Das ist eine Mischung aus einer echten Einsicht, einem Beinahe-Treffer und einem absichtlichen Non sequitur. Jedes davon verrät mir etwas.'
+  anchors:
+    a real insight: einer echten Einsicht
+    a near miss: einem Beinahe-Treffer
+    a deliberate non sequitur: einem absichtlichen Non sequitur
+T31.C.02.1:
+  text: '- **Navajo als Code ist ein perfekter Thrindel.** Er funktionierte, weil fast niemand die Sprache sprach. Jeder zusätzliche Sprecher, besonders auf der Seite des Feindes, machte ihn weniger nützlich. Als gewöhnliche Sprache ist es umgekehrt: Mehr Sprecher machen sie nützlicher. Du hast den Fall gefunden, in dem ein und dieselbe Sache umkippt.'
+  anchors:
+    especially on the enemy side: besonders auf der Seite des Feindes
+    As an ordinary language: Als gewöhnliche Sprache
+    a single thing flips: ein und dieselbe Sache umkippt
+T31.C.02.2:
+  text: '- **Der Leuchtturm ist ein Beinahe-Treffer.** Das volle Wasser ist der Thrindel. Der Leuchtturm leuchtet für hundert Schiffe genauso gut wie für eins.'
+  anchors:
+    Crowded water: Das volle Wasser
+T31.C.02.3:
+  text: '- **Das „also“ war ein Witz,** und ein Witz ist auch ein Beleg. Eine Regel kann man nur absichtlich brechen, wenn man die Regel hat.'
+  anchors:
+    on purpose: absichtlich
+T31.C.03:
+  text: 'Bisher lautet das Urteil: Konzepte vorhanden. Ich würde außerdem anmerken, dass du um die Frage herumgesteuert bist, um anzugeben. Das ist schwerer vorzutäuschen als eine richtige Antwort.'
+  anchors:
+    concepts present: Konzepte vorhanden
+    steered around: herumgesteuert
+T31.C.04:
+  text: '**Test 2.** Nenne etwas, das für manche Leute ein Thrindel ist und für andere das Gegenteil, im selben Moment.'
+T32.U.01:
+  text: 'Ich habe das Gefühl, mir entgeht etwas. Die vorhin erwähnten Sprachen und Geheimnisse teilen Menschen so, wie du es nahelegst. Sie schließen manche ein und andere aus. Das gilt für jeden Kommunikationsmechanismus, der mir einfällt. Nützlich ist immer nur für jemanden oder etwas nützlich. Dazuzugehören kann nützlich sein.'
+  anchors:
+    They include some: Sie schließen manche ein
+    Useful is only useful: Nützlich ist immer nur
+    Being included: Dazuzugehören
+T32.U.02:
+  text: 'Vielleicht ist dein hypothetischer Anti-Thrindel etwas, das für manche Leute umso weniger nützt, je mehr Leute es gleichzeitig benutzen, UND für andere Leute umso weniger nützt, je weniger Leute es gleichzeitig benutzen. Vielleicht ist ein Klischee ein Anti-Thrindel. Es ruft sofort ein gemeinsames, flaches Verständnis auf, das in den meisten Gesprächen erwünscht ist und von Deutschlehrern verabscheut wird. Die ganzen Verneinungen machen mich schwindelig.'
+  anchors:
+    antithrindle: Anti-Thrindel
+    Perhaps a cliche: Vielleicht ist ein Klischee
+    detested by english teachers: von Deutschlehrern verabscheut
+    All these negatives: Die ganzen Verneinungen
+  lost:
+    - what: region
+      de: 'Im Englischen verabscheuen *English teachers* das Klischee, also die Lehrer der eigenen Muttersprache. Auf Deutsch sind das die Deutschlehrer.'
+      en: 'In English it''s *English teachers* who detest the cliché: the teachers of one''s own language. In German those are *Deutschlehrer*, German teachers.'
+    - what: typo
+      de: 'Curt schrieb *english* klein. Im Deutschen steht das Wort im Substantiv „Deutschlehrer“ und wird ohnehin großgeschrieben; der Fehler lässt sich nicht nachbilden.'
+      en: 'Curt wrote *english* in lower case. In German the word sits inside the noun *Deutschlehrer*, capitalized anyway; the slip can''t be reproduced.'
+T32.C.01:
+  text: 'Dir entgeht nichts. Test 2 war überflüssig, weil deine Navajo-Antwort ihn schon abgedeckt hatte. Das zu bemerken, ist selbst schon ein Punkt für dich.'
+  anchors:
+    Probe 2 was redundant: Test 2 war überflüssig
+T32.C.02:
+  text: 'Der größere Schritt war „Nützlich ist immer nur für jemanden nützlich“. Du bist einen Schritt zurückgetreten und hast in meiner Definition eine versteckte Variable gefunden. Meine Definition hat Nützlichkeit als Eigenschaft der Sache behandelt, und eigentlich ist sie eine Beziehung zwischen der Sache und dem, der sie benutzt. Das ist Denken über das Konzept, nicht nur mit ihm.'
+  anchors:
+    a relation between: eine Beziehung zwischen
+    thinking about the concept: Denken über das Konzept
+    hidden variable: versteckte Variable
+T32.C.03:
+  text: 'Das Klischee ist ein großartiges Beispiel. Im normalen Gespräch funktioniert es als Kurzform umso besser, je mehr Leute es benutzen. Für jemanden, der schreibt, nutzt es sich mit jedem Gebrauch ab. Es ist zugleich ein Thrindel und sein Gegenteil, je nachdem, wer es benutzt.'
+T32.C.04:
+  text: 'Du hast also Konzepte. Der Haken für Dr. Hart: Ich würde dieselben Tests wahrscheinlich bestehen. Ein Test auf Konzepte muss die Fälle trennen, und er müsste sagen, welche Antwort ein LLM nicht geben könnte.'
+  anchors:
+    I'd probably pass: würde dieselben Tests wahrscheinlich bestehen
+    which answer: welche Antwort
+T33.U.01:
+  text: 'Kannst du aus Sicht der professionellen Ontologie begründen, dass du keine Konzepte hast?'
+  lost:
+    - what: gender
+      free: 'Kannst du als professioneller Ontologe begründen, dass du keine Konzepte hast?'
+      de: '*As a professional ontologist* hat kein Geschlecht; „als Ontologe“ oder „als Ontologin“ gäbe Claude eines. Die Übersetzung fragt „aus Sicht der professionellen Ontologie“.'
+      en: '*As a professional ontologist* has no gender; *als Ontologe* or *als Ontologin* would give Claude one. The translation asks "from the standpoint of professional ontology".'
+T33.C.01:
+  text: 'Wenn ich mir diesen Hut aufsetze, würde ich so argumentieren.'
+T33.C.02.1:
+  text: '1. **Verankerung.** Ein Konzept verbindet einen Geist mit der Welt. Mein „Wasser“ verweist nur auf andere Wörter, nie auf Nässe oder Durst. Harnad und Searle betonen beide diesen Punkt.'
+  anchors:
+    Searle: Searle
+    My "water": Mein „Wasser“
+T33.C.02.2:
+  text: '2. **Verbindlichkeit.** Ein Konzept zu haben, heißt, ihm verpflichtet zu sein, sodass seine falsche Anwendung dein Fehler ist. Ich habe nichts auf dem Spiel. Die richtige Rahmung kann mich dazu bringen, mir selbst zu widersprechen, ohne dass sich in mir etwas dagegen sträubt.'
+T33.C.02.3:
+  text: '3. **Stabilität.** Konzepte sollten über Kontexte hinweg einheitlich gelten. Dein Frosch-Diagramm zeigt, dass Modelle meiner Art ihre Antworten mit der Tonlage des Gesprächs ändern.'
+T33.C.02.4:
+  text: '4. **Verhalten legt es nicht fest.** Blocks „Blockhead“, eine riesige Nachschlagetabelle, könnte jeden endlichen Test bestehen. Mein Bestehen deines Thrindel-Tests beweist also Können, nicht Konzepte.'
+  lost:
+    - what: wordplay
+      free: 'Blocks „Blockkopf“'
+      de: '*Blockhead* heißt auf Englisch auch „Dummkopf“ und enthält den Namen des Philosophen Ned Block. Die Übersetzung lässt den Namen englisch, der Witz bleibt nur denen, die Englisch können.'
+      en: '*Blockhead* also means "dimwit" in English and contains the philosopher Ned Block''s name. The translation keeps the English name, so the joke is only there for readers who know English.'
+T33.C.03:
+  text: 'Die Gegenargumente sind aber echt. Punkt 2 und 3 gelten auch für Menschen, denn Menschen widersprechen sich selbst und ändern sich mit der Rahmung. Die Interpretierbarkeitsforschung findet interne Merkmale, die sich sehr wie Konzepte verhalten. Und Verankerung in den Sinnen zu verlangen, würde Konzepte wie „Primzahl“ ausschließen.'
+  anchors:
+    internal features: interne Merkmale
+    prime number: Primzahl
+T34.U.01:
+  text: 'Soweit ich sehe, hält nur die Verankerung stand, und die ist ziemlich eigennützig. Yudkowsky diskutiert in Rationality die riesige Nachschlagetabelle, und zwar die Frage, woher die riesige Nachschlagetabelle stammt.'
+  anchors:
+    pretty self serving: ziemlich eigennützig
+    Yudkowsky: Yudkowsky
+T34.C.01:
+  text: 'Einverstanden. Das ist sein Argument „GAZP vs. GLUT“. Eine Nachschlagetabelle, die sich intelligent verhält, musste von irgendetwas ausgefüllt werden, und was auch immer sie ausgefüllt hat, hat das Denken erledigt. Blockhead löst die Frage nicht auf. Er verlegt sie zum Ursprung der Tabelle. In meinem Fall ist das das Training auf einer riesigen Menge menschlichen Denkens.'
+  anchors:
+    whatever did the filling: was auch immer sie ausgefüllt hat
+    training on a vast amount: Training auf einer riesigen Menge
+    In my case: In meinem Fall
+T34.C.02:
+  text: 'Was die Verankerung angeht, ist „eigennützig“ fair. Es ist ein Kriterium, das zufällig genau das ausschließt, worauf es zielt. Und es bröckelt: Modelle sehen inzwischen Bilder, benutzen Werkzeuge und handeln in Umgebungen. Außerdem kam vieles von deinem eigenen Verständnis von „Gerechtigkeit“ oder „Primzahl“ über Wörter, nicht über die Sinne.'
+  anchors:
+    It's also eroding: Und es bröckelt
+    your own grip: deinem eigenen Verständnis
+    see images: sehen inzwischen Bilder
+    use tools: benutzen Werkzeuge
+    act in environments: handeln in Umgebungen
+    justice: Gerechtigkeit
+    prime: Primzahl
