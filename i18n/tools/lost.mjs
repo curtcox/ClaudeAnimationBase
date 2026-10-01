@@ -17,7 +17,7 @@ const chapters = readYaml('script/chapters.yaml'), titles = optYaml(`${L}/chapte
 const page = optYaml(`${L}/cold_open.yaml`, {}), balloonsEn = readYaml('script/cold_open.yaml');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 // bold and italics touching Chinese or Japanese become HTML first, as on the rest of the site (tools/build_site.mjs)
-const CJK = /[　-ヿ㐀-鿿豈-﫿＀-￯]/;
+const CJK = /[　-ヿ㐀-鿿豈-﫿＀-￯가-힯]/;   // Hangul too, as in tools/build_site.mjs
 const cjkEmphasis = s => s.replace(/(\*\*|\*)(?=[^\s*])([^*\n]*?[^\s*])\1/g, (m, d, x, at) => CJK.test(x + (s[at - 1] || '') + (s[at + m.length] || '')) ? (d === '**' ? `<strong>${x}</strong>` : `<em>${x}</em>`) : m);
 const md = s => marked.parseInline(cjkEmphasis(String(s ?? '')));
 const mdb = s => marked.parse(cjkEmphasis(String(s ?? '')));

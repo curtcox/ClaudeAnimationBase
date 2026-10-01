@@ -1,0 +1,6 @@
+# Codes only the Korean film has, in script/refs.yaml's form (i18n/tools/stage.mjs adds them to the stage's).
+#
+# The translation's own page (i18n/tools/lost.mjs → the Korean site's beonyeok/): how the film was translated, how
+# else it could have been, and what a freer translation would have said, in Korean and English. Its code goes up on the
+# ventriloquist line, as in the other translations: in a dubbed film someone else really is doing the talking.
+- { id: beonyeok, url: "https://curtcox.github.io/axol-f/ko/beonyeok/", host: beonyeok/, caption: "어떻게 번역했고, 무엇을 잃었나", origin: added, at: T03.C.03.1, cue: "실제로 말하고 있는 건 다른 누군가", mode: shelf, style: note }

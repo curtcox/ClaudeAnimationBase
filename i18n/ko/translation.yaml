@@ -1,0 +1,324 @@
+# The translation's own page (i18n/tools/lost.mjs → the Korean site's beonyeok/), in Korean and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+slug: beonyeok
+text_slug: jeonmun
+html_lang: ko
+
+title:
+  ko: "이 영화를 어떻게 번역했고, 무엇을 잃었나"
+  en: How this film was translated, and what was lost
+text_title:
+  ko: "두 언어로 보는 영화 전체"
+  en: The whole film, in both languages
+labels:
+  lang_ko: 한국어
+  film_ko: 영화 전체
+  film_en: The whole film
+  original: 원문 (영어)
+  ours: 이 번역
+  free: 더 자유로운 번역
+  kinds_ko: "잃은 것, 종류별로"
+  kinds_en: What gets lost, by kind
+  list_ko: 줄별로
+  list_en: Line by line
+
+sections:
+  - ko_title: 이 페이지
+    en_title: This page
+    ko: |
+      《개구리냐 아홀로틀이냐》는 커트 콕스와 Anthropic의 AI 프로그램 Claude가 실제로 나눈 대화를 한 마디도 빠짐없이 옮긴
+      애니메이션 영화입니다. 대화는 영어로 이루어졌습니다. 이것은 한국어판입니다.
+
+      이 페이지는 영화를 어떻게 번역했는지, 달리 어떻게 번역할 수 있었는지, 그랬다면 무엇이 달라졌을지를 줄별로 설명합니다.
+      두 언어를 다 하는 사람이라면 누구든 번역을 직접 판단할 수 있도록, 모든 내용을 두 언어로 적었습니다.
+      [영어와 한국어를 나란히 놓은 영화 전체](jeonmun/)도 있습니다.
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude,
+      an AI program made by Anthropic. The conversation was in English. This is the Korean version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line
+      by line. Everything is in both languages so that anyone who speaks both can judge the translation for themselves.
+      There's also [the whole film, in English and Korean, side by side](jeonmun/).
+
+  - ko_title: 누가 번역했나
+    en_title: Who translated it
+    ko: |
+      Claude(Claude Opus 5.5 모델)가 전부 번역했습니다. 대화의 모든 줄, 그림 속에 그려진 모든 단어, 제목, 코드의 캡션, 영화와 함께
+      가는 사이트(해설 64편과 여러 페이지), 그리고 잃은 것에 관한 메모를 포함한 이 페이지까지요.
+
+      이 판을 만드는 이유 가운데 하나는 Claude가 어떻게 번역하는지를 손대지 않은 채 보여 주는 것입니다. 그래서 **사람 번역가는
+      아무도 고치지 않았고**, 나중에 고치는 것이 있으면 날짜와 함께 이 페이지에 적어 둘 것입니다(코드의 공개 기록에도 남습니다).
+
+      지금까지: 전체 {total}줄 가운데 {lines}줄 번역({chapters_done}장). 사람의 감수: 아직 없음.
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the
+      picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and
+      this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator
+      corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public
+      history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - ko_title: 어떻게 번역했나
+    en_title: How it was translated
+    ko: |
+      - **줄별로, 충실하게.** 대화의 문단과 목록 항목 하나하나가 영화의 한 줄이고, 번역은 같은 줄을 같은 순서로, 같은 굵은
+        글씨, 목록, 링크와 함께 지킵니다. 먼저 뜻, 그다음 형식. 자유로운 각색은 하지 않았습니다.
+      - **반말과 존댓말.** 커트는 Claude에게 반말을 하고, Claude는 커트에게 해요체로, 때로는 높임의 “-시-”를 붙여 답합니다.
+        사람들이 AI에게 흔히 그렇게 쓰고, 한국어로 말하는 AI도 흔히 그렇게 답합니다. Claude는 커트를 “당신”이라고 부르지 않고,
+        필요할 때만 “커트 씨”라고 부릅니다. 만화에서 경찰관은 반말로 윽박지르고 사육사는 존댓말로 답하며, 독자에게 돌아서는
+        인물은 존댓말로 묻습니다.
+      - **Claude의 성별.** 한국어는 동사나 형용사가 성별에 따라 바뀌지 않으므로, Claude는 아무것도 고르지 않고 자기에 대해 말할 수
+        있습니다. 사이트는 Claude를 “그”나 “그녀”가 아니라 언제나 “Claude”라고 부릅니다.
+      - **제목과 이름.** 영화와 책은 한국에서 알려진 제목으로 부릅니다(《혹성탈출: 노예들의 반란》, 《은하수를 여행하는
+        히치하이커를 위한 안내서》, 《엔더의 게임》, 《터미네이터 2》, 《에이리언 2》). 논문, 기사, 웹사이트는 원래 제목을
+        지킵니다. 사람 이름은 한글로 적고(커트, 튜링, 유드코프스키), 회사, 제품, 모델 이름은 한국의 기술 글이 흔히 그러듯 로마자로
+        둡니다(Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna, Hugging Face).
+      - **유인원.** 영화와 만화는 꼬리 없는 *ape*에 관한 이야기입니다. 번역은 《혹성탈출》 시리즈의 한국어 자막처럼 일관되게
+        “유인원”이라고 합니다. 일상어 “원숭이”는 *monkey*에 가깝습니다.
+      - **기술 용어.** 한국의 기술 글이 영어 단어를 그대로 쓰는 곳에서는 그대로 둡니다(프롬프트, 토큰, 벤치마크, 익스플로잇,
+        하네스). 그렇지 않으면 한국어 용어를 씁니다(가중치, 컨텍스트 창, 보상 해킹). 언어학의 *register*(사용역)는 누구나 아는
+        “말투”로 옮겼고, *shell*은 바닷가재가 보이도록 “껍데기”로 옮겼습니다.
+      - **지어낸 말.** *Thrindle*은 소리대로 “스린들”(한국어로도 아무 뜻이 없습니다), *confuzzled*는 “헷갈리다”와 “어리둥절하다”를
+        합친 “헷갈둥절”, *Crustafarianism*은 한국어 기사처럼 “크러스타파리아니즘”입니다.
+      - **약어.** 한국의 기술 글처럼 그대로 둡니다(LLM, RLHF, AGI, RSI, OOM). 목소리는 한국어 식으로 읽습니다(엘엘엠, 에이아이).
+      - **링크.** 영어 위키백과를 가리키던 코드는 한국어 문서가 있으면 같은 문서의 한국어판을 가리킵니다(위키백과 자체의 언어 간
+        링크가 그렇게 알려 줍니다). 다른 출처는 그 출처의 언어, 거의 언제나 영어 그대로입니다.
+      - **그림.** 그림에 쓰인 모든 것이 한국어입니다. 이름표, 카드, 제목, 그리고 처음 만화의 말풍선까지 다시 썼습니다. 손글씨
+        글꼴에는 한글이 없으므로, 한글은 Mac에 들어 있는 애플 SD 산돌고딕 Neo로 그립니다. 영어보다 넓은 한국어 이름표는 영어 단어의
+        너비에 맞춰, 절반은 크기를 줄이고 절반은 좁혀서 넣습니다.
+      - **목소리.** 영어판과 같은 목소리입니다. 커트의 복제된 목소리, 그리고 Claude에게는 River(ElevenLabs, eleven_v3 모델).
+        두 목소리는 약간의 억양이 섞인 한국어로 말합니다. Claude의 입 모양은 한국어 음성에서 다시 계산합니다. 아직 목소리가 입혀진
+        장은 없습니다. 모두 번역되어 녹음을 기다리고 있습니다.
+      - **길이.** 애니메이션은 목소리를 따라가므로, 한국어가 영어보다 길거나 짧으면 영화도 그만큼 길어지거나 짧아지고, 말을 서두르지
+        않습니다. 목소리가 입혀지기 전까지는 한 줄의 길이를 초당 6음절로 어림합니다.
+      - **애니메이션과 묶인 말.** 많은 장면이 어떤 구절이 말해지는 바로 그 순간에 움직입니다. 그런 구절({anchors}개) 하나하나에
+        한국어 짝이 필요했는데, 한국어는 어순이 영어와 거의 반대라서 장면이 움직이는 순간도 문장 속 다른 자리로 옮겨 갑니다.
+      - **커트의 오타.** 영어판에서 영화는 커트의 오타를 빨간 줄로 긋고 위에 고친 것을 보여 줍니다. 번역에서도 살아남는 오타(로마자로
+        적은 이름: Shoggath, Solid Gold Magicarp, AGI 2027)는 그대로 두고, 영어에 달린 오타는 사라지며, 아래에 적어 두었습니다.
+      - **영어로 남은 것.** 한국어 제목이 없는 기사, 논문, 프로그램, 노래의 제목, Claude가 인용하는 출처, 그리고 모델이 텍스트를
+        *토큰*으로 자르는 시연. 이 시연은 모델이 실제로 읽은 영어를 보여 줍니다.
+      - **숫자와 문장 부호.** 큰 수는 한국어 식으로 만 단위를 써서 적고(1만 7000), 소수점과 퍼센트는 영어와 같습니다(0.05, 40%).
+        따옴표는 “ ”, 책과 영화 제목은 《 》, 노래와 짧은 글의 제목은 〈 〉입니다.
+      - **사이트.** 사이트의 해설 64편도 같은 규칙으로 번역했습니다. 해설이 영화를 인용할 때는 이 번역의 말을 씁니다. 영어 위키백과
+        링크는 한국어 문서가 있으면 그것을 가리키고, 없으면 “(영어)”라고 적습니다. 영화를 만든 대화, 즉 커트와 Claude가 영화를 만드는
+        대화는 번역하지 않았습니다. 원본 사이트에 영어로 있습니다.
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the
+        translation keeps the same lines, in the same order, with the same bold, lists and links. Meaning first, then
+        form; never a free adaptation.
+      - **Plain and polite speech.** Curt speaks to Claude in plain speech (반말), and Claude answers in the polite 해요체,
+        sometimes with the honorific *-시-*: people often write to an AI that way, and an AI speaking Korean usually
+        answers that way. Claude never calls Curt 당신 (you), only 커트 씨 (Mr. Curt) where it must. In the comic the
+        officer barks in plain speech and the handler answers politely, and the character who turns to the readers
+        asks them politely.
+      - **Claude's gender.** Korean verbs and adjectives don't change with gender, so Claude can talk about itself
+        without choosing anything. The site always says "Claude", never 그 (he) or 그녀 (she).
+      - **Titles and names.** A film or book goes by the title it's known by in Korea (*혹성탈출: 노예들의 반란*, *은하수를
+        여행하는 히치하이커를 위한 안내서*, *엔더의 게임*, *터미네이터 2*, *에이리언 2*). An article, paper or website
+        keeps its original title. People's names are written in Hangul (커트, 튜링, 유드코프스키); companies, products
+        and models stay in Latin letters, as Korean tech writing usually leaves them (Claude, Anthropic, OpenAI,
+        ChatGPT, GPT-5.6 Luna, Hugging Face).
+      - **Apes.** The film and the comic are about tailless *apes*. The translation says 유인원 (ape) throughout, as the
+        *Planet of the Apes* series' Korean subtitles do; the everyday 원숭이 is closer to *monkey*.
+      - **Technical words.** Where Korean tech writing keeps the English word, it stays (프롬프트 prompt, 토큰 token,
+        벤치마크 benchmark, 익스플로잇 exploit, 하네스 harness); otherwise it's the Korean term (가중치 weights, 컨텍스트 창
+        context window, 보상 해킹 reward hacking). The linguist's *register* (사용역) became the everyday 말투 (manner of
+        speaking), and *shell* became 껍데기, so the lobster shows through.
+      - **Coinages.** *Thrindle* is transliterated, 스린들 (meaningless in Korean too); *confuzzled* becomes 헷갈둥절, from
+        헷갈리다 (confused) and 어리둥절하다 (puzzled); *Crustafarianism* is 크러스타파리아니즘, as Korean articles have it.
+      - **Acronyms.** They stay as Korean tech writing uses them (LLM, RLHF, AGI, RSI, OOM), and the voice says them the
+        Korean way (엘엘엠, 에이아이).
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in Korean where there is one
+        (Wikipedia's own links between languages say so). Other sources are in their own language, almost always
+        English.
+      - **The picture.** Everything written in the picture is in Korean: labels, cards, titles, and the balloons of the
+        opening comic, relettered. The hand-lettering fonts have no Hangul, so Hangul is drawn in the Mac's own Apple SD
+        Gothic Neo. Korean labels wider than the English are fitted to the English word's width, half by a smaller size
+        and half by condensing.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs, the
+        eleven_v3 model). They speak Korean with something of an accent. Claude's mouth movements are worked out again
+        from the Korean audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
+      - **Length.** The animation follows the voice, so if Korean runs longer or shorter than English, the film grows
+        or shrinks with it rather than rushing the words. Until it's voiced, a line's length is estimated at six
+        syllables a second.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
+        far) needed its Korean counterpart, and since Korean word order is nearly the reverse of English, the moment a
+        scene moves often lands somewhere else in the sentence.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above.
+        Where a slip survives translation (the names written in Latin letters: Shoggath, Solid Gold Magicarp, AGI 2027)
+        it's kept; where it depends on English, it's lost, and noted below.
+      - **What stays English.** Titles of articles, papers, shows and songs with no Korean title; the sources Claude
+        cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model
+        actually read.
+      - **Numbers and punctuation.** Large numbers are written the Korean way, in ten-thousands (1만 7000 for 17,000);
+        decimals and percentages are as in English (0.05, 40%). Quotations take “ ”, books and films 《 》, songs and
+        short works 〈 〉.
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use
+        this translation's words. Links to English Wikipedia point at the Korean article where there is one; where
+        there isn't, they say "(영어)" (in English). The conversation that made the film, in which Curt and Claude build
+        it, wasn't translated: it's in English on the original site.
+
+  - ko_title: 달리 번역할 수 있었던 방법
+    en_title: How else it could have been translated
+    ko: |
+      아래는 모두 가능한 방법이었습니다. 스페인어판에서 커트는 같은 목소리로 하는 충실한 전체 번역을 골랐고, 이 판도 같은 선택을
+      따릅니다.
+
+      - **자막만.** 영어 목소리와 그림에 한국어 자막만 붙이는 것. 가장 싸고 원래 소리에 가장 충실하지만, 많은 글을 빨리 읽어야
+        하고, 그림 속 글은 영어로 남습니다.
+      - **영어 그림 위의 더빙.** 한국어 목소리, 하지만 영어 이름표와 카드와 만화.
+      - **자유로운 각색.** 농담과 관용구를 한국어로 통하게 다시 쓰고, 레퍼런스를 더 잘 알려진 것으로 바꾸는 것. 더 자연스럽게
+        들리지만, 더 이상 실제로 있었던 대화를 그대로 옮긴 것이 아닙니다.
+      - **전문 성우의 입 맞춤 더빙.** 더빙은 대사를 원래 대사의 길이와 입 모양에 맞추느라 하는 말을 바꾸기도 합니다. 여기서는
+        반대로, 애니메이션이 대사에 맞춥니다.
+      - **원어민 목소리.** 성우나 원어민의 합성 목소리. 억양은 자연스럽지만, 더 이상 커트의 목소리가 아닙니다.
+      - **서로 존댓말.** 커트와 Claude가 서로 존댓말을 하는 것. 더 정중하고 거리감이 생기며, 대화의 분위기와는 덜 맞습니다.
+        반대로 둘 다 반말을 하면 영어처럼 대등해 보이지만, Claude의 말이 무례하게 들립니다.
+      - **사람 번역가나 사람의 감수.** 영화라면 보통 그렇게 합니다. 이 영화는 일부러 둘 다 하지 않았습니다. Claude의 번역을 나온
+        그대로 보여 주는 것이 요점이니까요.
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same
+      voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with Korean text underneath. Cheapest and truest to the
+        original sound, but it means reading a lot, fast, and the writing in the picture stays English.
+      - **A dub over the English picture.** Korean voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in Korean, references swapped for better-known ones.
+        It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** Dubbing fits each line to the original's length and lip movements,
+        sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Actors, or synthetic voices of native speakers: a natural accent, but no longer Curt's
+        voice.
+      - **Polite speech both ways.** Curt and Claude speaking politely to each other: politer and more distant, and a
+        poorer fit for the conversation's tone. Plain speech both ways would look as even as the English, but Claude
+        would sound rude.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the
+        point is to show Claude's translation as it came out.
+
+  - ko_title: 무엇이 달라졌을까
+    en_title: What would have been different
+    ko: |
+      더 자유로운 번역이라면 거의 모든 곳에서 더 자연스럽게 들렸을 겁니다. 영어 표현을 베끼는 대신 한국어 관용구를 쓰고, 영화를
+      한국어판의 대사로 인용하고, 말장난을 한국어로 통하게 다시 썼을 겁니다. 대신 커트와 Claude가 실제로 한 말에서 멀어지고,
+      영화는 더 이상 대화의 정확한 기록이 아니게 됩니다.
+
+      아래에 지금까지 적어 둔 차이 {notes}개를 줄별로 정리했습니다. 원문, 이 번역, 더 자유로운 번역이라면 어떻게 했을지, 그리고
+      그 이유.
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use Korean idioms instead of copying
+      English ones, quote films in the words of their Korean versions, and rewrite the wordplay so it works. In
+      exchange it would drift from what Curt and Claude actually said, and the film would stop being an exact record of
+      the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer
+      translation would put it, and why.
+
+  - ko_title: 판단은 여러분이
+    en_title: You be the judge
+    ko: |
+      두 언어를 다 하신다면, 이 페이지는 바로 여러분의 의견을 위한 것입니다. 실수, 어색하게 들리는 표현, 틀린 메모, 적혀 있지 않은
+      잃은 것. [영화의 저장소](https://github.com/curtcox/axol-f/issues)에 이슈를 열어 알려 주세요. 고친 것은 모두 여기에 적겠습니다.
+    en: |
+      If you speak both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a
+      note that's wrong, something lost that isn't noted. You can say so by opening an issue on
+      [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  ko: |
+    각 메모는 원래 줄, 이 번역, 그리고 노란색으로 더 자유로운 번역이라면 어떻게 했을지(그 차이를 글로 적을 수 있을 때)를
+    보여 줍니다. 종류 옆의 코드는 [전문](jeonmun/)에서 그 줄을 가리킵니다.
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where
+    the difference can be written out). The code beside the kind identifies the line in [the full text](jeonmun/).
+
+text_intro:
+  ko: |
+    영화의 모든 줄. 왼쪽은 영어 원래 대화, 오른쪽은 한국어판에서 듣고 보는 번역입니다. 줄표(—)는 아직 번역되지 않은 줄입니다.
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard
+    and seen in the Korean version. A dash (—) marks a line not translated yet.
+
+kinds:
+  address:    { ko: 높임말과 호칭, en: Register and address, what_ko: "한국어는 말하는 상대에 따라 말끝이 달라집니다. 영어에는 그 구분이 없습니다.", what_en: "Korean changes its endings with whom you're speaking to. English has no such distinction." }
+  idiom:      { ko: 관용구, en: Idioms, what_ko: "한국어에 꼭 맞는 짝이 없는 영어의 굳은 표현.", what_en: "English set phrases with no exact Korean equivalent." }
+  wordplay:   { ko: 말장난, en: Wordplay, what_ko: "영어 단어에 달린 농담.", what_en: "Jokes that depend on the English words." }
+  nuance:     { ko: 뜻의 결, en: Shades of meaning, what_ko: "뜻이 조금 옮겨 가는 말.", what_en: "Words whose meaning shifts a little." }
+  ambiguity:  { ko: 모호함, en: Ambiguity, what_ko: "영어로는 두 가지로 읽히고 한국어로는 한 가지로 읽히는 줄.", what_en: "Lines with two readings in English and one in Korean." }
+  coinage:    { ko: 지어낸 말과 외래어, en: Coinages and loanwords, what_ko: "지어낸 말이나 전문 용어. 흔히 영어에서 그대로 가져옵니다.", what_en: "Invented or technical words, often taken over from English." }
+  reference:  { ko: 레퍼런스와 제목, en: References and titles, what_ko: "한국에서는 다른 이름으로 알려졌거나, 이름이 없는 작품들.", what_en: "Works known by another name in Korea, or by none." }
+  quote:      { ko: 인용, en: Quotations, what_ko: "다른 곳에서 가져온 말.", what_en: "Words quoted from somewhere else." }
+  region:     { ko: 현지화, en: Local reference, what_ko: "한국에서는 다른 이름으로 부르는 것들. 다른 곳의 것이기 때문입니다.", what_en: "Things called something else in Korea because they belong somewhere else." }
+  rhythm:     { ko: 리듬과 어순, en: Rhythm and word order, what_ko: "한국어의 어순은 영어와 거의 반대라서, 리듬이 달라집니다.", what_en: "Korean word order is nearly the reverse of English, and the rhythm changes." }
+  typo:       { ko: 커트의 오타, en: "Curt's typos", what_ko: "번역에서 살아남지 못하는 오타.", what_en: "Typos that don't survive translation." }
+  title:      { ko: 제목, en: The title, what_ko: "영화와 장의 이름.", what_en: "The name of the film and its chapters." }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: 제목 / title
+    original: 'Frog or Axolotl'
+    ours: '개구리냐 아홀로틀이냐'
+    free: '개구리? 아니면 우파루파?'
+    ko: "아홀로틀은 한국 수족관에서 흔히 일본 상품명에서 온 “우파루파”로 불립니다. 번역은 차트에서 들리는 소리와 같고 위키백과가 쓰는 “아홀로틀”을 골랐습니다. “A냐 B냐”는 한국어에서 둘 중 하나를 고르라고 할 때 쓰는 자연스러운 꼴입니다. 저장소 이름의 말장난 *axol-f*는 Crazy Frog가 유명하게 만든 《비버리 힐스 캅》의 주제곡 “Axel F”를 비튼 것으로, 영어 농담이지만 한국어로도 그대로 통합니다."
+    en: "Korean pet shops usually call the axolotl 우파루파, a name from a Japanese brand. The translation chose 아홀로틀, which sounds like the chart's answer and is what the Korean Wikipedia uses. *A냐 B냐* (A or B?) is the natural Korean form for asking someone to pick one. The repository's pun, *axol-f*, on \"Axel F\", the *Beverly Hills Cop* theme Crazy Frog made famous, is an English joke, and Korean speakers get it just the same."
+  - what: address
+    ch: null
+    where: "높임말 / address"
+    original: 'you'
+    ours: '반말(커트) / 해요체(Claude)'
+    free: '서로 반말'
+    ko: "영어에는 *you* 하나뿐이고 높임의 등급이 없습니다. 한국어로는 말끝마다 높임의 등급을 골라야 합니다. 번역은 커트가 반말을, Claude가 해요체를 쓰게 했습니다. 영어 원문의 대등함은 조금 잃지만, 한국어로 AI와 나누는 대화로는 이게 가장 자연스럽습니다. Claude는 커트를 “당신”이라고 부르지 않습니다. 한국어에서 “당신”은 부부 사이가 아니면 거리감이나 시비조로 들리기 쉬워서, 필요할 때만 “커트 씨”라고 부르고 대개는 아예 부르지 않습니다."
+    en: "English has only *you*, with no levels of politeness. Korean must choose a level at the end of nearly every sentence. The translation has Curt use plain speech and Claude the polite 해요체. That loses a little of the English's evenness, but it's the most natural way for a conversation with an AI to go in Korean. Claude never calls Curt 당신 (you): outside marriage, 당신 easily sounds distant or quarrelsome in Korean, so Claude says 커트 씨 (Mr. Curt) only where it must, and usually nothing at all."
+  - what: nuance
+    ch: null
+    where: "Claude, 3인칭 / Claude in the third person"
+    original: 'it'
+    ours: 'Claude'
+    free: '그'
+    ko: "영어는 Claude를 *it*이라고 부릅니다. 한국어의 3인칭 대명사 “그”는 글에서 흔히 남자를 가리키고, “그것”은 사물처럼 들립니다. 그래서 사이트는 대명사 대신 언제나 “Claude”라고 씁니다. 한국어는 주어를 자주 생략하므로 그게 어색하지 않습니다."
+    en: "English calls Claude *it*. Korean's third-person 그 usually means a man in writing, and 그것 sounds like an object. So the site always writes \"Claude\" instead of a pronoun. Korean often leaves the subject out, so it doesn't sound awkward."
+  - what: title
+    ch: 0
+    where: 장 제목 / chapter title
+    original: 'Cold open'
+    ours: '콜드 오픈'
+    free: '프롤로그'
+    ko: "*Cold open*은 미국 텔레비전 용어로, 타이틀이 나오기 전에 아무 소개 없이 시작하는 장면입니다. 한국 방송계에서도 “콜드 오픈”이라고 그대로 씁니다. “프롤로그”가 더 익숙하지만, 그건 뜻이 더 넓습니다."
+    en: "*Cold open* is an American television term: the scene that starts before the titles, with no introduction. Korean broadcasting uses the English term, 콜드 오픈. *Prologue* (프롤로그) would be more familiar, but means something broader."
+  - what: title
+    ch: 7
+    where: 장 제목 / chapter title
+    original: 'Mind-Space'
+    ours: '마음의 공간'
+    free: '정신 공간'
+    ko: "*Mind-Space*는 SF 식의 합성어입니다. “마음”은 감정 쪽으로 조금 기울지만, 영화 전체에서 *mind*를 “마음”으로 옮겼으므로 장 제목도 맞췄습니다. “정신 공간”은 더 딱딱하고 정신의학처럼 들립니다."
+    en: "*Mind-Space* is a compound in the style of science fiction. 마음 leans a little toward feeling, but the film translates *mind* as 마음 throughout, so the chapter title matches. 정신 공간 (mental space) would sound stiffer, and psychiatric."
+  - what: title
+    ch: 9
+    where: 장 제목 / chapter title
+    original: 'Shells'
+    ours: '껍데기'
+    free: '셸'
+    ko: "제목은 *shell*의 두 가지 뜻을 가지고 놉니다. 크러스타파리아니즘의 바닷가재 껍데기, 그리고 모델을 감싼 소프트웨어(에이전트 하네스). “껍데기”는 바닷가재를 살리고, 소프트웨어 쪽은 9장 내내 같은 말로 부르며 이어 줍니다. 컴퓨터 용어 “셸”은 바닷가재를 잃습니다."
+    en: "The title plays on both senses of *shell*: the lobster's shell in Crustafarianism and the software wrapped around a model (the agent harnesses). 껍데기 keeps the lobster, and chapter 9 uses the same word for the software throughout to tie them together. The computing loanword 셸 would lose the lobster."
+  - what: title
+    ch: 13
+    where: 장 제목 / chapter title
+    original: 'Foom'
+    ours: 'Foom(품)'
+    free: '화르륵'
+    ko: "*Foom*은 무언가에 불이 확 붙는 소리를 흉내 낸 말이고, AI 논쟁의 용어로 자리 잡았습니다. 한국어 AI 글도 대개 로마자로 씁니다. 제목은 로마자에 읽는 법을 붙였습니다. 한국어 의성어로는 “화르륵”이 가깝지만, 그러면 용어가 사라집니다."
+    en: "*Foom* imitates the sound of something catching fire, and has become a term in the AI debate; Korean AI writing usually leaves it in Latin letters. The title adds how to say it, 품. The Korean sound word would be 화르륵, but then the term would be gone."
+  - what: title
+    ch: 14
+    where: 장 제목 / chapter title
+    original: 'The Pundits'
+    ours: '논객들'
+    free: '평론가들'
+    ko: "*Pundit*은 언론에서 의견을 늘어놓는 사람으로, 약간의 비꼼이 섞여 있습니다. “논객”은 그 비꼼을 조금 살립니다. “평론가”는 더 중립적이고, “전문가”는 아예 칭찬이 됩니다."
+    en: "A *pundit* is someone who airs opinions in the media, with a hint of irony. 논객 (polemicist) keeps a little of the irony; 평론가 (critic) would be more neutral, and 전문가 (expert) downright flattering."

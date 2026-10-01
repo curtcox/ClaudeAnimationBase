@@ -1,0 +1,63 @@
+# Speech-only respellings for the Korean voice, applied in order to every spoken line after markdown is stripped
+# (tools/script_lib.mjs's autoSpeech; format as script/pronounce.yaml). They change what's said, never what's painted.
+# Names and acronyms written in Latin letters are said the way Korean says them (에이아이, 엘엘엠, 클로드), and a
+# range's dash is read as 에서. verify: true = a guess to check by ear.
+- { match: "LLMs", say: "엘엘엠" }
+- { match: "LLM", say: "엘엘엠" }
+- { match: "RLHF", say: "알엘에이치에프" }
+- { match: "Claude Code", say: "클로드 코드" }
+- { match: "Claude", say: "클로드" }
+- { match: "Anthropic", say: "앤트로픽" }
+- { match: "OpenAI", say: "오픈에이아이" }
+- { match: "ChatGPT", say: "챗지피티" }
+- { match: "GPT-5.6", say: "지피티 오 점 육" }
+- { match: "Opus 5.5", say: "오퍼스 오 점 오" }
+- { match: "MAD", say: "매드" }
+- { match: "AGI", say: "에이지아이" }
+- { match: "AIDE²", say: "에이드 제곱", verify: true }
+- { match: "AI", say: "에이아이" }
+- { match: "Shoggath", say: "쇼가스" }
+- { match: "Shoggoth", say: "쇼고스" }
+- { match: "GAZP vs. GLUT", say: "개즈프 대 글럿", verify: true }
+- { match: "HAL", say: "할" }
+- { match: "T-800", say: "티 팔백" }
+- { match: "《T2》", say: "티 투" }
+- { match: "Hermes", say: "헤르메스" }
+- { match: "OpenClaw", say: "오픈클로" }
+- { match: "Hugging Face", say: "허깅페이스" }
+- { match: "Fable", say: "페이블" }
+- { match: "Mythos", say: "미토스" }
+- { match: "Sol", say: "솔" }
+- { match: "Luna", say: "루나" }
+- { match: "Solid Gold Magicarp", say: "솔리드 골드 매지카프" }
+- { match: "Solid Gold Magikarp", say: "솔리드 골드 매지카프" }
+- { match: "SolidGoldMagikarp", say: "솔리드골드매지카프" }
+- { match: "Magikarp", say: "매지카프" }
+- { match: "Delta P(foom)", say: "델타 피 품" }
+- { match: "P(foom)", say: "피 품" }
+- { match: "Foom", say: "품" }
+- { match: "foom", say: "품" }
+- { match: "RSI", say: "알에스아이" }
+- { match: "OOMs", say: "오오엠" }
+- { match: "OOM", say: "오오엠" }
+- { match: "AFAYCT", say: "에이 에프 에이 와이 씨 티" }
+- { match: "TWiT", say: "트윗" }
+- { match: "Intelligent Machines", say: "인텔리전트 머신스" }
+- { match: "#888", say: "888회" }
+- { match: "#889", say: "889회" }
+- { match: "TESCREAL", say: "테스크리얼" }
+- { match: "hashbin", say: "해시빈" }
+- { match: "TwistedPear", say: "트위스티드페어" }
+- { match: "NPR", say: "엔피알" }
+- { match: "Machine Gods", say: "머신 갓즈" }
+- { match: "Python", say: "파이썬" }
+- { match: "Java", say: "자바" }
+- { match: "Flask", say: "플라스크" }
+- { match: "AlphaFold", say: "알파폴드" }
+- { match: "SAT", say: "에스에이티" }
+- { match: "P≠NP", say: "피는 엔피가 아니" }
+- { match: "2×2", say: "이 곱하기 이" }
+- { match: "0–100", say: "0에서 100" }
+- { match: "5–10%", say: "5에서 10퍼센트" }
+- { match: "25–35%", say: "25에서 35퍼센트" }
+- { match: "2026–2030년", say: "2026년에서 2030년" }

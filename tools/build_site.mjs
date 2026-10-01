@@ -11,7 +11,7 @@ import { marked, Marked } from 'marked';
 import { PATHS, readYaml, pad, withQrTargets } from './script_lib.mjs';
 // Bold and italics touching Chinese or Japanese: CommonMark won't close "**…。**" when a letter follows directly, as
 // it does in writing without spaces, so such spans become HTML first. Text with no CJK in it is left alone.
-const CJK = /[\u3000-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+const CJK = /[\u3000-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef\uac00-\ud7af]/;   // and Hangul: a Korean particle follows a closing mark (**‘…’**은)
 const cjkEmphasis = s => s.replace(/(\*\*|\*)(?=[^\s*])([^*\n]*?[^\s*])\1/g, (m, d, x, at) => CJK.test(x + (s[at - 1] || '') + (s[at + m.length] || '')) ? (d === '**' ? `<strong>${x}</strong>` : `<em>${x}</em>`) : m);
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));

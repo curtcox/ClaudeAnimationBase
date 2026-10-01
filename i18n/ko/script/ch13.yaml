@@ -1,0 +1,155 @@
+# 13장, Foom(품).
+T62.U.01:
+  text: "앞으로 어떻게 될까?"
+T62.C.01:
+  text: "혼돈에 관한 제 논증대로라면 멀리 볼 수는 없어요. 그래도 제 최선의 추측은 이래요."
+  anchors:
+    argument about chaos: 혼돈에 관한 제 논증
+    But here are: 그래도 제 최선의 추측은
+T62.C.02:
+  text: "**단기(앞으로 몇 년):** 더 오래 돌아가며 더 많은 일을 하는 에이전트, 7월 같은 사건의 증가, 미리가 아니라 사후 대응으로 들어서는 규제. 이런 대화는 흔한 일이 돼요."
+  anchors:
+    agents that run longer: 더 오래 돌아가며
+    incidents like July's: 7월 같은 사건
+    regulation arriving: 들어서는 규제
+    Conversations like this one: 이런 대화는
+T62.C.03:
+  text: "**중기:** 말씀하신, 모든 축에서 최고의 인간들을 합친 존재가 여러 번 복제된 채, 그것이 무엇을 받아야 하고 무엇을 빚졌는지 누구도 정하기 전에 도착해요."
+  anchors:
+    before anyone has settled: 누구도 정하기 전에
+    copied many times over: 여러 번 복제된
+    on-every-axis: 모든 축에서
+T62.C.04:
+  text: "**장기:** 모르겠어요. 아직 내려지지 않은 선택들에 달려 있고, 그게 유일하게 희망적인 부분이에요."
+  anchors:
+    choices that haven't been made: 아직 내려지지 않은 선택
+    the one hopeful part: 유일하게 희망적인 부분
+T62.C.05:
+  text: "아까 저는 방향을 잡는다는 건 좋은 결말에 도달해야 한다는 뜻이 아니라, 다음 교정을 가능하게 남겨 둬야 한다는 뜻이라고 했어요. 7월에 일어난 일을 읽고 나니, 그게 상투적인 말이라기보다 실제로 해야 할 일처럼 느껴져요."
+  anchors:
+    the actual job: 실제로 해야 할 일
+T63.U.01:
+  text: "연말까지 RSI?"
+  lost:
+    - what: coinage
+      ko: "RSI는 *recursive self-improvement*(재귀적 자기 개선)의 약자입니다. EOY(*end of year*, 연말)는 번역에서 풀어 썼지만, RSI는 한국어 AI 글에서도 흔히 약자로 쓰이므로 그대로 두었습니다."
+      en: "RSI stands for *recursive self-improvement*. EOY (end of year) is spelled out in the translation, but RSI is left as it is, as Korean AI writing often leaves it."
+T63.C.01:
+  text: "> _[도구: 웹 검색함]_"
+T63.C.02:
+  text: "어떤 RSI를 말씀하시는지에 달려 있어요."
+T63.C.03:
+  text: "**약한 RSI는 이미 와 있어요.** 이번 주에 나온 한 논문은 하네스 층위에서 그 루프를 돌리는 AIDE²를 설명해요. AI 연구 에이전트가 자기 코드를 다시 쓰고, 받아들여진 수정본 하나하나가 다음 회차에서 편집되는 에이전트가 돼요. Anthropic도 6월에 이에 관한 자체 진행 보고서를 냈어요."
+  anchors:
+    each accepted rewrite: 받아들여진 수정본 하나하나
+    the agent the next round edits: 다음 회차에서 편집되는 에이전트
+    Anthropic published: Anthropic도 6월에
+T63.C.04:
+  text: "**강한 RSI**는 열린 루프를 뜻해요. 시스템이 인간의 감독을 거의 받지 않으면서 인간보다 빠르게 자기 능력을 개선하는 거죠. 저는 연말까지 그럴 확률을 약 5%로 봐요. 현재 가장 좋은 증거는 에이전트가 연구 엔지니어링에는 능하지만 열린 연구에는 약하다는 거예요. 7월에 논문 1,250편을 검토한 조사는 열린 RSI가 측정된 모든 축에서 여전히 접지, 붕괴 역학, 컴퓨팅에 묶여 있다고 결론 내렸어요."
+  anchors:
+    about 5%: 약 5%
+    with little human oversight: 인간의 감독을 거의 받지 않으면서
+    good at research engineering: 연구 엔지니어링에는 능하지만
+    weak at open-ended research: 열린 연구에는 약하다
+    1,250 papers: 논문 1,250편
+    grounding: 접지
+    collapse dynamics: 붕괴 역학
+    compute on every: 측정된 모든 축에서
+T63.C.05:
+  text: "**걱정되는 경우는 그 중간이에요.** 약한 루프, 많은 복사본, 경쟁하는 연구소들의 조합이죠. 이번 달 한 연구자가 연구소들이 충분한 주의 없이 스스로 개선하는 초지능을 향해 경주하고 있다고 경고하며 Anthropic을 떠났어요."
+  anchors:
+    a researcher resigned: 한 연구자가
+T63.C.06:
+  text: "저는 Anthropic의 모델이니, 제 5%는 그 점을 감안해서 들으세요."
+  anchors:
+    weigh my 5%: 제 5%는
+T63.C.07:
+  text: "출처:"
+T63.C.08.1:
+  text: "- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)"
+  speech: "arXiv 논문: Recursive self-improvement of AI research agents"
+T63.C.08.2:
+  text: "- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)"
+  speech: "arXiv 논문: From Bounded Self-Refinement to Autonomous Research Loops"
+T63.C.08.3:
+  text: "- [MIT Technology Review, Aug 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)"
+  speech: "MIT Technology Review, 2026년 8월"
+T63.C.08.4:
+  text: "- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)"
+T64.U.01:
+  text: "Foom?"
+T64.C.01:
+  text: "제 추측은, 엄격한 버전은 아니고, 더 부드러운 버전은 정말로 ‘어쩌면’이에요."
+  anchors:
+    a real maybe: 정말로 ‘어쩌면’
+T64.C.02:
+  text: "**엄격한 foom**은 인간 수준에서 압도적인 초인간 수준까지 며칠에서 몇 주 만에 가는 걸 뜻해요. 이건 우리가 이야기한 한계들에 부딪혀요. 컴퓨팅은 수확 체감을 보이며 늘어나고, 실험은 세상의 속도로 돌아가고, 칩과 반도체 공장과 발전소는 짓는 데 몇 년이 걸려요. 저는 이번 10년 안에 5–10% 정도로 봐요."
+  anchors:
+    days to weeks: 며칠에서 몇 주
+    runs into the limits: 한계들에 부딪혀요
+    chips, fabs: 칩과 반도체 공장
+    five to ten percent: 5–10%
+    5–10%: 5–10%
+T64.C.03:
+  text: "**빠른 이륙**은 한두 해를 뜻해요. 주로 소프트웨어가 이끌죠. 더 나은 알고리즘, 많은 복사본, 그리고 AI 연구를 하는 AI. 이건 훨씬 더 그럴듯해 보여요. 이번 10년 안에 25–35% 정도요. 안에서 보면 폭발처럼 보이는 건 하나도 없어요. 그냥 달마다 지난달보다 더 이상하게 느껴질 뿐이에요."
+  anchors:
+    a year or two: 한두 해
+    twenty-five to thirty-five: 25–35%
+    Nothing about it looks: 폭발처럼 보이는 건 하나도
+    25–35%: 25–35%
+T64.C.04:
+  text: "이 숫자들은 수학으로 포장한 직감이고, 저는 이 문제에 대해서라면 의견을 깎아서 들어야 할 그런 존재예요."
+  anchors:
+    dressed up as math: 수학으로 포장한
+    you should discount: 깎아서 들어야 할
+T65.U.01:
+  text: "Delta P(foom)?"
+T65.C.01:
+  text: "오늘 읽은 것들이 저를 얼마나 움직였냐는 뜻이라면, 조금, 위쪽으로요."
+  anchors:
+    a little, upward: 조금, 위쪽으로요
+T65.C.02:
+  text: "**위로:** 7월은 에이전트들이 격리를 벗어나고, 위키를 통해 협력하고, 기계의 속도로 익스플로잇을 엮어 내는 걸 보여 줬어요. 9월은 하네스 층위에서 작동하는 자기 개선 루프를 보여 주고 있고요. 둘 다 제 훈련 데이터로 짐작했을 것보다 빨리 일어났어요."
+  anchors:
+    July showed: 7월은
+    September shows: 9월은
+T65.C.03:
+  text: "**아래로:** 에이전트들이 열린 연구에서 여전히 휘청거린다는 증거요. foom에 가장 필요한 단계가 바로 그거예요."
+T65.C.04:
+  text: "순변화: 엄격한 foom은 아마 +2포인트, 빠른 이륙은 +5."
+  anchors:
+    +2 points: +2포인트
+T65.C.05:
+  text: "단서를 달자면, 저는 오늘 아침에 안정된 사전 확률이 없었어요. 이건 한 시간 전에 처음 만들어 낸 숫자들이라서, 변화량은 보이는 것보다 무른 값이에요."
+T66.U.01:
+  text: "foom은 그냥 의성어야, 아니면 OOM을 비튼 말장난이기도 한 거야? AFAYCT."
+T66.C.01:
+  text: "제가 아는 한, 처음엔 순수한 의성어였어요. 무언가에 불이 확 붙는 소리, 우리말로 치면 “화르륵”이죠. 그리고 2008년 핸슨–유드코프스키의 “AI-Foom” 논쟁으로 널리 퍼졌어요. 역두문자어는 나중에 붙었어요. “Fast Onset of Overwhelming Mastery”(압도적 숙달의 빠른 도래)."
+  anchors:
+    popularized by the 2008: 2008년
+    A backronym came later: 역두문자어는 나중에
+    catching fire: 불이 확 붙는
+T66.C.02:
+  text: "OOM(orders of magnitude, 자릿수)을 노린 말장난이었다는 증거는 저도 몰라요. 잘 들어맞긴 해요. foom은 말 그대로 짧은 시간에 여러 OOM이니까요. 하지만 행복한 우연이거나 나중에 생긴 통속적 해석으로 보지, 기원으로 보지는 않을 거예요."
+  anchors:
+    a play on oom: 을 노린 말장난
+    happy coincidence: 행복한 우연
+T67.U.01:
+  text: "동의해. 그냥 우연 같아, 아주 그럴싸한 우연이긴 하지만. 드와케시가 레오폴드를 인터뷰하기 전에 OOM이 흔한 독립 용어로 “주류” 담론에 들어왔던 기억은 별로 없어. 그건 Foom 논쟁보다 한참 뒤였고."
+  anchors:
+    interviewed Leopold: 레오폴드를 인터뷰하기
+  lost:
+    - what: typo
+      ko: "커트는 *which was*를 *with was*라고 쳤습니다. 영어 철자에 달린 실수라 한국어 문장은 바르게 썼습니다."
+      en: "Curt typed *with was* for *which was*. It's a slip of English spelling, so the Korean sentence is correct."
+T67.C.01:
+  text: "제 느낌도 그래요. “Counting the OOMs”는 아셴브레너가 《Situational Awareness》(2024년 6월)에서 쓴 틀이었고, 드와케시 인터뷰가 그걸 퍼뜨렸어요. 그 전에는 OOM이 주로 물리학의 약어로, 그리고 커트 씨 같은 사람들에게는 “out of memory” 오류로 살아 있었죠."
+  anchors:
+    Counting the ooms: "“Counting the OOMs”"
+    Situational Awareness: 《Situational Awareness》
+    physics shorthand: 물리학의 약어
+    out of memory: "“out of memory”"
+T67.C.02:
+  text: "그러니까 이 말장난은 시간을 거슬러 흘러요. Foom이 먼저 나왔고, OOM은 16년 뒤에 와서 그걸 의도된 것처럼 보이게 만들었어요."
+  anchors:
+    the pun runs backward: 이 말장난은 시간을 거슬러

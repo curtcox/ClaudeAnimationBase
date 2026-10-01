@@ -22,7 +22,8 @@ Later, if the first three find viewers:
   full on 2026-10-01, at Curt's word: see *Conventions (Hindi)* and the steps below.)
 - **Chinese, Korean, Arabic**: large, but YouTube is blocked in mainland China, Korean needs another script, and
   Arabic runs right to left (the site would need it). (Chinese begun in full on 2026-10-01, at Curt's word, in
-  Traditional characters for Taiwan: see *Conventions (Chinese)* and the steps below.)
+  Traditional characters for Taiwan: see *Conventions (Chinese)* and the steps below. Korean begun in full the same
+  day, at Curt's word: see *Conventions (Korean)*.)
 
 Cheapest wide reach, any time: YouTube subtitles in many languages, made from each translated script.
 
@@ -228,6 +229,49 @@ the same voices. French of France.
 - **The voice:** acronyms and model names respelled for a French voice (`i18n/fr/pronounce.yaml`: LLM → elle-elle-emme,
   T-800 → T huit cents, GPT-5.6 → G-P-T cinq point six…).
 
+## Conventions (Korean, `i18n/ko`, site at `/ko/`)
+
+Claude's choices (2026-10-01, for Curt to confirm), carrying over the Spanish decisions: a full, faithful translation,
+the same voices.
+
+- **The title** is 《개구리냐 아홀로틀이냐》 (*A냐 B냐*, "A or B?", the natural Korean way to ask for a pick). *Axolotl*
+  is 아홀로틀, as Korean Wikipedia has it and as the chart's answer sounds; pet shops' 우파루파 (from a Japanese brand) is
+  in a note. *Frog* is 개구리; *ape* is 유인원, as the *Planet of the Apes* series' Korean subtitles say (원숭이 is
+  *monkey*).
+- **Speech levels:** Curt speaks to Claude in plain speech (반말), as people often write to an AI; Claude answers in the
+  polite 해요체, with the honorific *-시-* where Korean wants it, as an AI speaking Korean does. Claude never says 당신 to
+  Curt: 커트 씨 where it must, usually nothing. In the comic the officer barks in 반말, the handler answers politely, the
+  villain proclaims in the plain declarative (*-다!*), and the man in the turtleneck asks the readers politely.
+- **Claude has no gender**, and Korean asks for none (its verbs and adjectives don't agree). On the site Claude is
+  "Claude", never 그 or 그녀; Korean drops subjects easily, so that reads naturally.
+- **Names:** people's in Hangul (커트 콕스, 튜링, 먼로, 유드코프스키, 제프 자비스); companies, products and models in Latin
+  letters, as Korean tech writing leaves them (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna, Hugging Face, Hermes,
+  OpenClaw). Data is 데이터 소령 (a Lieutenant Commander is a navy 소령).
+- **Works** by their Korean titles (《혹성탈출: 노예들의 반란》, 《은하수를 여행하는 히치하이커를 위한 안내서》, 《우주의 끝에
+  있는 레스토랑》, 《엔더의 게임》, 《사자의 대변인》, 《터미네이터 2》, 《에이리언 2》, 《광기의 산맥》, 《생각에 관한 생각》);
+  songs keep theirs (〈The Stranger〉), and so do papers, articles and sites. "I'll be back" stays English, as Korea knows it.
+- **Words:** *register* is 말투 (the linguist's 사용역 is too technical); *probe* is 테스트; *shell* is 껍데기 (the lobster
+  shows through); *harness* 하네스, *prompt* 프롬프트, *token* 토큰, *exploit* 익스플로잇; *reward hacking* 보상 해킹;
+  *context* 맥락, the technical *context window* 컨텍스트 창. AGI, LLM, RLHF, RSI, OOM, foom stay in Latin letters.
+- **Coinages:** *thrindle* is 스린들 (as meaningless); *confuzzled* is 헷갈둥절 (헷갈리다 + 어리둥절하다); *Crustafarianism*
+  is 크러스타파리아니즘, as Korean articles have it; *nerd sniping* 너드 스나이핑.
+- **Typography:** “ ” for quotations, ‘ ’ inside them; 《 》 for books and films, 〈 〉 for songs and short works. Large
+  numbers in ten-thousands (1만 7000), decimals and percentages as in English (0.05, 40%). No space before a bracket, so a
+  particle can follow it ("《Mathnet》(영어)은").
+- **What stays in English:** the sources' titles, code names, the token demonstrations in chapter 12. Curt's surviving
+  typos are the Latin-letter names (Solid Gold Magicarp, Shoggath, AGI 2027).
+- **On the site:** what the translation adds goes in a lost note on the translation's page (`/ko/beonyeok/`); a link
+  with no Korean article says "(영어)" right after it (139 of the film's 202 Wikipedia codes have a Korean article; 218
+  of the explainers' links moved).
+- **The picture:** Korean lettering in the Mac's own Apple SD Gothic Neo (its own `@font-face` for the hand-lettering
+  fonts' Hangul range: Medium for Patrick Hand, Bold for Permanent Marker), nothing downloaded; labels wider than the
+  English are fitted as Japanese ones are. Korean puts spaces between words, so captions and subtitles wrap at spaces as
+  English does (no `Intl.Segmenter`), a sentence may end before Hangul, and an anchor may run into a particle
+  ("개구리는"); subtitle rows are as short as Chinese ones (16 syllables). Until it's voiced, a line's length is
+  estimated at 6 syllables a second.
+- **The voice:** acronyms, names and model names respelled the way Korean says them (`i18n/ko/pronounce.yaml`: LLM →
+  엘엘엠, AI → 에이아이, Claude → 클로드, GPT-5.6 → 지피티 오 점 육, T-800 → 티 팔백, P≠NP → 피는 엔피가 아니…).
+
 ## How it's built
 
 Everything for a language lives under `i18n/<lang>/`. The English film's files are left alone, except where a small,
@@ -415,6 +459,20 @@ The tools, run from the project's root:
       before its colon ("Le policier : …"; English subtitles unchanged).
 - [ ] Curt confirms the conventions above (or changes them); a French-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks French. Then drafts, then the final on the faster Mac.
+
+### Korean
+
+- [x] The engine's hooks: Hangul from the Mac's Apple SD Gothic Neo (`i18n/ko/studio.css`); Korean timed by syllables
+      but spaced, wrapped and split into sentences like English (`particles` in `i18n/src/i18n.js`, `KO`/`WIDE` in
+      `tools/subtitles.mjs`); markdown bold and italics next to Hangul (`tools/build_site.mjs`, `i18n/tools/lost.mjs`);
+      "(영어)" after a link with no Korean article, hugging it (`i18n/tools/wiki_notes.mjs`) (English captions,
+      subtitles and site unchanged) (2026-10-01).
+- [x] The transcript (453 lines, every anchor), the cold open, the chapter titles, the lettering (407 strings), the
+      codes' captions (409; Korean Wikipedia for 139 of 202), the 64 explainers (Wikipedia links moved to Korean for
+      218, marked "(영어)" for 72), the site's words, the YouTube words, the translation's page
+      (`i18n/ko/translation.yaml`, at `/ko/beonyeok/`), both thumbnails.
+- [ ] Curt confirms the conventions above (or changes them); a Korean-reading reviewer, if one turns up.
+- [ ] Voice it: eleven_v3 speaks Korean. Then drafts, then the final on the faster Mac.
 
 ## Costs
 

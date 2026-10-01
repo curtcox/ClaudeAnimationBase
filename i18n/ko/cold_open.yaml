@@ -1,0 +1,59 @@
+# The cold open's page in Korean, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+officer:
+  say: "[shouting] 거기 서! 저 유인원이 방금 뭐라고 했어?!"
+  who: 경찰관
+  lines: ['*거기 서!*', '*저 유인원이*', '*방금*', '*뭐라고*', '*했어?!?*']
+  lost:
+    - what: reference
+      ko: '영화와 만화는 *ape*, 즉 꼬리 없는 유인원에 관한 이야기입니다. 한국에서 이 시리즈는 《혹성탈출》로 알려져 있고, 자막과 해설에서 이들을 "유인원"이라고 부르므로 번역도 페이지 전체에서 "유인원"이라고 합니다. 일상어 "원숭이"는 영어의 *monkey*에 가깝습니다.'
+      en: 'The film and the comic are about *apes*. In Korea the series is known as *혹성탈출* (Escape from the Planet), and its subtitles and reviews call them 유인원 (ape, "humanlike primate"), so the translation says 유인원 throughout the page. The everyday 원숭이 is closer to English *monkey*.'
+    - what: address
+      ko: '경찰관은 반말로 윽박지르고, 사육사는 경찰관에게 존댓말로 대답합니다. 영어에는 이런 구분이 없어서, 번역이 두 사람의 관계를 원문보다 조금 더 드러냅니다.'
+      en: 'The officer barks in plain speech (반말), and the handler answers him politely (존댓말). English makes no such distinction, so the translation shows a little more of the two men''s standing than the original does.'
+silly:
+  say: "[nervously] 어, 실없는 소리 마세요! 유인원은 말을 못 해요!"
+  who: 사육사
+  lines: ['어, *실없는*', '*소리 마세요!*', '*유인원은*', '*말을 못 해요!*']
+positive:
+  say: "분명히 저 유인원이 말하는 걸 들었다고!"
+  who: 경찰관
+  lines: ['*분명히*', '저 유인원이', '말하는 걸', '들었다고!']
+impossible:
+  say: "불가능해요! 유인원에겐 언어 능력이 없다고요!"
+  who: 사육사
+  lines: ['*불가능해요!*', '유인원에겐', '*언어 능력이*', '없다고요!']
+sound:
+  say: "그럼 저놈 입에서 나온 소리는 뭐야?!"
+  who: 경찰관
+  lines: ['그럼 저놈', '*입에서* 나온', '*소리는 뭐야?!?*']
+handler:
+  say: "그건 저 유인원이 복화술사라서 그래요!"
+  who: 사육사
+  lines: ['그건 *저* 유인원이', '*복화술사*라서 그래요!']
+suspect:
+  say: "우리는 당신이 이십 년 전 새끼 때 탈출한 지능 있는 유인원을 숨기고 있다고 의심합니다!"
+  who: 금발 남자
+  lines: ['우리는 당신이', '20년 전', '*새끼* 때', '*탈출한*', '*지능 있는*', '유인원을 숨기고', '있다고', '의심합니다!']
+fuss:
+  say: "사실이 아니에요! 그리고 말하는 유인원 하나 가지고 왜들 이 난리예요?"
+  who: 수염 난 남자
+  lines: ['*사실이*', '*아니에요!*', '그리고', '말하는', '유인원', '하나 가지고', '왜들 이', '*난리예요?*']
+villain:
+  say: "지능 있는 데다 말까지 하는 유인원은 다른 유인원들을 노예 상태에서 이끌어 낼 수 있으니까… 그리고 우리는 노예제를 영속시켜야 한다! 우리에겐 언제나 노예가 필요했고, 앞으로도 영원히 필요할 것이다!"
+  who: 악당
+  lines: ['*지능 있는* 데다 *말까지*', '하는 유인원은 *다른*', '유인원들을 *노예* 상태에서', '이끌어 낼 수 있으니까 . . .', '그리고 우리는 노예제를', '*영속시켜야* 한다!', '우리에겐 언제나 노예가', '*필요했고*, 앞으로도', '영원히 *필요할 것이다!*']
+  lost:
+    - what: address
+      ko: '악당은 연설하듯 해라체("영속시켜야 한다!")로 말합니다. 한국어 더빙에서 악당이 선언할 때 흔히 쓰는 말투입니다. 영어 원문에는 말투의 차이가 없습니다.'
+      en: 'The villain speaks in the plain declarative of a proclamation (*영속시켜야 한다!*, "must perpetuate!"), the way villains declare things in Korean dubbing. The English has no such difference of register.'
+turtle:
+  say: "혹시 잘못된 영화에 들어와 있는 기분, 든 적 없나요?"
+  who: 터틀넥 입은 남자
+  lines: ['혹시', '*잘못된*', '*영화*에', '들어와 있는', '기분,', '든 적', '*없나요?*']
+  lost:
+    - what: address
+      ko: '이 인물은 독자들을 향해 돌아서므로 존댓말("없나요?")로 묻습니다. 말풍선, Claude의 인용(T01.C.03), 장 제목 "잘못된 영화"가 서로 맞춰져 있습니다.'
+      en: 'The character turns to the readers, so he asks politely (*없나요?*). The balloon, Claude''s quotation (T01.C.03) and the chapter title *잘못된 영화* (The Wrong Movie) match.'

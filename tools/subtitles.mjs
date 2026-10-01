@@ -18,7 +18,10 @@ const NAMES = { curt: 'Curt', claude: 'Claude', ...(words.subtitle_names || {}) 
 // most 26 (phrases rarely split two rows evenly), and it
 // breaks between phrases, never inside a word or before 、。」, as the translation's captions do (i18n/src/i18n.js)
 const LANG = existsSync('script/site_strings.yaml') ? readYaml('script/site_strings.yaml').lang : 'en';
-const CJK = /^(ja|zh|ko)\b/.test(LANG), ROW = CJK ? 16 : 42, PIECE = CJK ? 26 : 80, GAP = CJK ? '' : ' ';
+// Korean puts spaces between words, so it breaks there, as English does, but its syllables are as wide as Chinese
+// characters, so its rows are as short
+const CJK = /^(ja|zh)\b/.test(LANG), KO = /^ko\b/.test(LANG), WIDE = CJK || KO;
+const ROW = WIDE ? 16 : 42, PIECE = WIDE ? 26 : 80, GAP = CJK ? '' : ' ';
 const SEG = CJK && new Intl.Segmenter(LANG, { granularity: 'word' });
 const ZH = /^zh\b/.test(LANG), ZH_PARTICLE = /^(的|了|嗎|呢|吧|啊|呀|嘛|啦|們|著|過|得|地)$/u;
 const PARTICLE = /^(を|は|が|に|で|と|も|へ|や|の|か|には|では|とは|から|まで|より|ので|けど|って)$/u, NO_START = /^[、。，．！？!?…‥・：；:;）」』】〕)\]’”ーぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ%％]/u, NO_END = /[「『（【〔(\[‘“]$/u;
@@ -44,7 +47,7 @@ const FR = /^fr\b/.test(LANG); // French sets a no-break space before a colon
 const HI = /^hi\b/.test(LANG), CLITIC = /^(में|का|की|के|को|से|पर|ने|तक|है|हैं|था|थी|थे|हो|हूँ|भी|ही|नहीं)[,।?!:;"”)]*$/u;
 const hiWords = s => s.split(' ').reduce((out, w) => (out.length && CLITIC.test(w) ? out[out.length - 1] += ' ' + w : out.push(w), out), []);
 const tokensOf = s => CJK ? cjkWords(s) : HI ? hiWords(s) : s.split(' ');
-const len = CJK ? s => [...s].reduce((a, c) => a + (c.codePointAt(0) < 0x2e80 ? .5 : 1), 0) : s => s.length;
+const len = WIDE ? s => [...s].reduce((a, c) => a + (c.codePointAt(0) < 0x2e80 ? .5 : 1), 0) : s => s.length;
 const tidy = CJK ? s => s.trim() : s => s;
 
 // the same cleaning and sentence split as the captions
@@ -52,7 +55,7 @@ const tidy = CJK ? s => s.trim() : s => s;
 const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/[^\S\u00a0]+/g, ' ').trim();
 const sentencesOf = s => { s = s.replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․').replace(/(\d)\.(?= (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b)/g, '$1․');
   return (CJK ? s.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean)
-    : s.split(/(?<=[.!?](?:\u00a0?["”»)])*)\s+(?=["“«(¿¡]?\u00a0?[\p{Lu}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u)).map(x => x.replace(/․/g, '.')); };
+    : s.split(/(?<=[.!?](?:\u00a0?["”»)])*)\s+(?=["“«(¿¡]?\u00a0?[\p{Lu}\p{Script=Hangul}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u)).map(x => x.replace(/․/g, '.')); };
 // a typo mark ("Solid Gold [Magicarp→Magikarp]", "[+as]", "[were a→]") as the text typed and the text shown
 function fixOf(mark) {
   let typed = '', shown = '', last = 0, m; const re = /\[(\+)?([^\]→]*)(?:→([^\]]*))?\]/g;
@@ -124,5 +127,5 @@ for (let i = 0; i < cues.length - 1; i++) {
 cues.forEach((q, i) => { const next = cues[i + 1]?.t0 ?? Infinity; q.t1 = Math.min(next, Math.max(q.t1, q.t0 + 1.2)); });
 const srt = cues.map((q, i) => `${i + 1}\n${stamp(q.t0)} --> ${stamp(q.t1)}\n${rows(q.txt)}\n`).join('\n');
 writeFileSync(OUT, srt);
-const long = cues.filter(q => len(q.txt) > ROW * ROWS + (CJK ? 4 : 12)).length;
+const long = cues.filter(q => len(q.txt) > ROW * ROWS + (WIDE ? 4 : 12)).length;
 console.log(`${OUT}: ${cues.length} subtitles, to ${stamp(cues.at(-1).t1)}${long ? `; ${long} longer than two rows` : ''}`);

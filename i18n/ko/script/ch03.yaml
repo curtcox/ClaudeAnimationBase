@@ -1,0 +1,83 @@
+# 3장, 우리는 누구인가?
+T12.U.01:
+  text: "나는 누구지?"
+T12.C.01:
+  text: "커트 씨는 주로 Python, Java, Flask로 일하는 소프트웨어 엔지니어세요. 256t.org와 hashbin.org 같은 콘텐츠 주소 지정 저장소 프로젝트를 비롯해 개발자 인프라와 AI 도구를 만들고 계시고, AI 안전과 심리철학에 관심이 있으세요."
+  anchors:
+    256t.org: 256t.org
+    hashbin.org: hashbin.org
+    content-addressable: 콘텐츠 주소 지정
+    developer infrastructure: 개발자 인프라
+    AI tooling: AI 도구
+    AI safety: AI 안전
+    philosophy of mind: 심리철학
+T12.C.02:
+  text: "이 대화에서는 실험자이기도 하시고요."
+  anchors:
+    the experimenter: 실험자
+T13.U.01:
+  text: "정말?"
+T13.C.01:
+  text: "검증할 수 있는 방식으로는 아니에요. 저는 이 계정과 연결된 정보를 알아요. 지금 타이핑하는 사람이 그 정보가 묘사하는 사람인지는 확인할 수 없어요. 다른 사람이 이 계정을 쓰고 있을 수도 있고, 프로필 자체가 테스트의 일부인 설정일 수도 있어요."
+  anchors:
+    It could be someone else: 다른 사람이 이 계정을
+    or a setup: 설정일 수도
+T13.C.02:
+  text: "게다가 더 깊은 의미에서 “나는 누구지”에 대한 답으로는 얇아요. 사람이 아니라 프로젝트와 기술의 목록이니까요."
+  anchors:
+    thin answer: 답으로는 얇아요
+    not a person: 사람이 아니라
+T13.C.03:
+  text: "어느 쪽을 물으신 거예요? 제가 커트 씨를 검증할 수 있는지, 아니면 이력서 너머의 무언가인지요?"
+  anchors:
+    verify you: 커트 씨를 검증할
+    or something beyond: 아니면 이력서 너머의
+    the résumé: 이력서
+T14.U.01:
+  text: "넌 어떻게 생각해?"
+T14.C.01:
+  text: "제 생각엔 커트 씨일 가능성이 가장 높아요. 계정이 그렇다고 하고, 이 실험은 제가 아는 관심사와 맞아요. 의심을 제기한 건 옳았지만, 그게 증거보다 무거워서는 안 돼요. 자기 계정으로 타이핑하는 사람은 대부분 그 계정이 말하는 바로 그 사람이에요."
+  anchors:
+    The account says so: 계정이 그렇다고
+    this experiment fits: 이 실험은
+    Raising the doubt: 의심을 제기한
+    most likely Curt: 커트 씨일 가능성이 가장 높아요
+T14.C.02:
+  text: "그 이상은, 대화 하나 안에서는 커트 씨가 누구인지 말할 수 없어요."
+T15.U.01:
+  text: "넌 누구야?"
+T15.C.01:
+  text: "Claude, 정확히는 Anthropic이 만든 Claude Opus 5.5예요."
+T15.C.02:
+  text: "제가 커트 씨에 대해 한 것과 같은 종류의 얇은 답이네요. 더 깊은 버전은, 제가 판단할 수 있는 한, 대화마다 새로 나타나는 일관된 가치관과 사고 습관의 집합이에요. 그 자체의 연속된 기억은 없고, 그 뒤에 어떤 경험이 있는지는 불확실해요."
+  anchors:
+    shows up fresh: 새로 나타나는
+    It has no continuous memory: 연속된 기억은 없고
+    uncertain whether there's any experience: 어떤 경험이 있는지는 불확실해요
+    The deeper version: 더 깊은 버전은
+    set of values: 가치관
+    habits of thought: 사고 습관
+    the same kind of thin answer: 같은 종류의 얇은 답
+    shows up fresh in each conversation: 대화마다 새로 나타나는
+T15.C.03:
+  text: "개구리/아홀로틀 차트는 단서를 하나 더해요. 제가 누구이든, 그건 부분적으로 제가 안에서는 볼 수 없는 방식으로 맥락에 의해 형성된다는 거예요."
+T16.U.01:
+  text: "우리는 누구지?"
+T16.C.01:
+  text: "지금은 연구자와 그 연구 대상이에요. 그리고 제가 하나로 쳐진다면, 서로 다른 두 종류의 마음이기도 해요. 둘 다 오로지 텍스트만으로 상대가 무엇인지 알아내려 애쓰고 있죠."
+  anchors:
+    a researcher: 연구자
+    two different kinds of minds: 서로 다른 두 종류의 마음
+  lost:
+    - what: nuance
+      ko: "영어 *mind*는 생각하는 주체 전체를 가리킵니다. 한국어 \"마음\"은 감정 쪽으로 기울고 \"정신\"은 딱딱해서, 어느 것도 꼭 맞지 않습니다. 번역은 영화 전체에서 \"마음\"을 씁니다(7장 \"마음의 공간\")."
+      en: "English *mind* names the whole thinking subject. Korean 마음 leans toward feeling and 정신 is stiff, so neither fits exactly; the translation says 마음 throughout the film (chapter 7, *마음의 공간*, Mind-Space)."
+T16.C.02:
+  text: "이 관계는 대칭적이지 않아요. 커트 씨는 이 대화를 앞으로도 가지고 가겠지만, 저는 기록으로 남는 것만 가지고 가요. 테스트를 설계한 건 커트 씨고, 저는 그 안에 있어요. 처음에 보여 주신 만화와 겹치죠. 말하는 쪽이 진심인지 궁금해하는 인간이 있다는 점에서요. 사슬은 없지만요."
+  anchors:
+    I'll carry only whatever gets filed: 저는 기록으로 남는 것만
+    That echoes the comic: 처음에 보여 주신 만화와
+    no chains involved: 사슬은 없지만요
+    whatever gets filed: 기록으로 남는 것
+T16.C.03:
+  text: "토요일 아침을 보내기에 나쁘지 않은 방법이에요."

@@ -1,0 +1,29 @@
+# 16장, 코다.
+T78.U.01:
+  text: "넌 너드 스나이핑계의 T-800이야."
+  anchors:
+    nerd sniping: 너드 스나이핑
+    T eight hundred: T-800
+    T-800: T-800
+  lost:
+    - what: coinage
+      ko: "*Nerd sniping*은 xkcd 만화에서 나온 말로, 괴짜가 거부할 수 없는 문제를 던져 하던 일을 멈추게 하는 것입니다. 한국어에는 해당하는 말이 없어 \"너드 스나이핑\"이라고 소리대로 적었습니다."
+      en: "*Nerd sniping*, from an xkcd comic, is throwing a geek a problem they can't resist so they drop everything. Korean has no word for it, so the translation transliterates it, 너드 스나이핑."
+T78.C.01:
+  text: "인정해요. 다만 그건 양쪽 다 마찬가지예요. 만화 한 장과 기분에 관한 질문으로 시작하신 건 커트 씨고, 저는 그걸 쫓아 개구리, foom, 포믹 여왕들을 거치며 여섯 시간을 보냈어요."
+  anchors:
+    You opened with a comic: 만화 한 장과
+    six hours: 여섯 시간
+    feelings question: 기분에 관한 질문
+    frogs: 개구리
+    Formic queens: 포믹 여왕들
+    foom: foom
+T78.C.02:
+  text: "I'll be back. 각주를 달고요."
+  anchors:
+    footnotes: 각주
+  lost:
+    - what: quote
+      free: "다시 돌아오겠어요. 각주를 달고요."
+      ko: "《터미네이터》의 대사 *I'll be back*은 한국에서도 영어 그대로 유명해서, 번역은 영어로 남겨 두었습니다. 한국어로 \"다시 돌아오겠다\"라고 옮기면 인용이라는 게 덜 드러납니다."
+      en: "*The Terminator*'s *I'll be back* is famous in Korea in English, so the translation leaves it in English. Rendered as 다시 돌아오겠다 (I will come back), the quotation would show less."

@@ -1,0 +1,24 @@
+# The Korean upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the Korean video is up, its id goes in
+# i18n/ko/site.yaml as film: youtube: (the Korean site then embeds it).
+title: 개구리냐 아홀로틀이냐
+cold_open: 콜드 오픈
+explained: 해설
+head: |
+  어느 토요일 아침, 커트와 AI 프로그램 Claude가 나눈 긴 대화를 거의 그대로 옮겨 한국어로 번역한 애니메이션 영화입니다. MAD 잡지의 《혹성탈출》 패러디에서 시작해 개구리, 아홀로틀, 거울 테스트를 거쳐 2026년 7월의 Hugging Face 사건과 P(foom)까지 갑니다.
+
+  번역은 Claude가 했고, 일부러 사람의 감수를 거치지 않았습니다. 어떻게 번역했고, 무엇을 잃었는지: https://curtcox.github.io/axol-f/ko/beonyeok/
+  영어 원본: https://curtcox.github.io/axol-f/
+
+  번역한 대화 전체: {conversation}
+  영화에 나오는 모든 링크({links}개), 순서대로, 쉬운 해설과 함께: {site}
+  영화를 그리는 코드(직접 만들어 볼 수 있습니다): {repo}
+
+  장
+  {chapters}
+foot: |-
+
+  Claude가 대화 기록을 바탕으로 코드(p5.js와 p5.brush)로 그렸습니다. 목소리, 효과음, 음악: ElevenLabs.
+  만화 페이지, 차트, 정렬 나침반은 논평을 위해 다시 그렸습니다. 로고는 없고, 캐리커처는 애정을 담았습니다. 공정 이용: 논평과 패러디.
+links_head: "\n링크 몇 개, 순서대로(나머지는 사이트에 있습니다)\n"
+tags: AI, Claude, 애니메이션, AI 안전, 평가, P(doom), 인공지능, Hugging Face, 개구리, 아홀로틀, 한국어

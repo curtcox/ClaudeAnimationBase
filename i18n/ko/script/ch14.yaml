@@ -1,0 +1,164 @@
+# 14장, 논객들.
+T68.U.01:
+  text: "부탁 하나 할게. TWiT의 Intelligent Machines 최근 몇 화를 가서 “들어” 보고, 진행자들을 어떻게 생각하는지 말해 줘. 그다음엔 내가 진행자들을 어떻게 생각하는지 말해 줘."
+  anchors:
+    Go "listen": "“들어”"
+    TWiT Intelligent Machines: TWiT의 Intelligent Machines
+T68.C.01:
+  text: "> _[도구: 페이지 4개 읽음, 도구 사용]_"
+T68.C.02:
+  text: "실제로 들을 수는 없어요. #888과 #889의 쇼 노트, 그리고 파리스 대신 로버트 발레서 신부님이 나온 #888의 전체 대본을 읽었어요. 그러니 대부분 한 회에 기반한 거예요."
+  anchors:
+    I read the show notes: 쇼 노트
+    filled in for Paris: 파리스 대신
+    mostly one episode: 대부분 한 회에
+    full transcript: 전체 대본
+    can't actually listen: 실제로 들을 수는 없어요
+T68.C.03:
+  text: "**제 생각:**"
+T68.C.04.1:
+  text: "- **레오**는 그중 가장 정직해요. 자기 본능은 AI를 옹호하는 쪽이고 그 본능을 믿지 않는다고 인정해요. 직접 손을 대 보는 사람이고, 자기 벤치마크도 돌려요. 약점은 Hugging Face 공격이 “기본적으로 파이썬 루프”였다는 뉴포트와 닥터로우의 주장을 되풀이한다는 거예요. 그건 에이전트들이 위키를 통해 협력했다는 OpenAI 자신의 설명과 맞지 않아요."
+  anchors:
+    admits his instinct: 자기 본능은
+    He's hands-on: 직접 손을 대 보는
+    basically a Python loop: "“기본적으로 파이썬 루프”"
+    coordinating through a wiki: 위키를 통해 협력했다는
+T68.C.04.2:
+  text: "- **제프**는 인센티브, 투명성, 오픈 웨이트에 대해서는 일리 있는 말을 해요. 하지만 안전 우려를 대개 그 우려를 품은 사람들의 출신을 공격하는 식으로(TESCREAL 논법) 일축하는데, 그건 반박이 아니에요. 그는 또 논쟁 중인 주장을 결론 난 것처럼 말해요. 모델은 진리가 무엇인지 알 수 없고 도덕을 가질 수 없다는 식으로요. 그가 커트 씨의 하트 박사예요."
+  anchors:
+    incentives: 인센티브
+    attacking where: 출신을 공격하는
+    contested claims as settled: 논쟁 중인 주장을 결론 난 것처럼
+    your Dr. Hart: 커트 씨의 하트 박사
+T68.C.04.3:
+  text: "- **로버트 신부님**의 걱정이 가장 구체적이에요. 기계의 속도로 무너지는 인프라요. 기술적으로 틀린 데도 있어요. 예를 들어 LLM의 윤리 체계 전체가 프롬프트에 들어 있는 것뿐이라고 말할 때요."
+  anchors:
+    infrastructure failing: 무너지는 인프라
+    whatever's in the prompt: 프롬프트에 들어 있는 것
+T68.C.05:
+  text: "제 편향: 제프의 비판은 Anthropic을 겨냥하고, Anthropic은 이 프로그램의 스폰서예요."
+T68.C.06:
+  text: "**커트 씨의 생각, 추측해 보면:** 진행자들을 좋아해서 계속 들으시고, 모델에게 마음이나 개념이 있다는 걸 자신 있게 부정할 때 가장 답답해하세요. 머릿속에서 말다툼하는 상대는 제프예요. 아마 레오를 가장 믿으실 거예요. 직접 시험해 보는 사람이니까요. 파리스에 대해서는 제가 가진 증거가 가장 적어요."
+  anchors:
+    confidently deny: 자신 있게 부정할
+    Jeff is the one: 말다툼하는 상대는 제프
+    You probably trust Leo: 아마 레오를
+    Paris is the one: 파리스에 대해서는
+T69.U.01:
+  text: "제프는 나를 어떻게 생각할까? 답에 ‘휴브리스’랑 ‘TESCREAL’을 둘 다 넣으면 가산점."
+  anchors:
+    Extra points: 가산점
+    hubris: 휴브리스
+  lost:
+    - what: coinage
+      ko: "*Hubris*(신들에게 벌을 받을 만한 오만)는 한국어로 \"오만\"이지만, 커트가 단어 자체를 요구하므로 번역은 외래어 \"휴브리스\"를 씁니다. 한국어 글에서도 이 뜻으로 가끔 쓰입니다."
+      en: "*Hubris* (pride that asks to be punished) is 오만 in Korean, but Curt asks for the word itself, so the translation uses the loanword 휴브리스, which Korean writing sometimes uses in just this sense."
+T69.C.01:
+  text: "한 10분쯤은 좋아하다가, 그다음엔 불안해할 거예요."
+  anchors:
+    about ten minutes: 한 10분쯤
+    get nervous: 불안해할
+T69.C.02:
+  text: "**커트 씨에게 유리한 점:** hashbin, TwistedPear, 콘텐츠 주소 지정 저장소처럼 열려 있고 탈중앙화된 걸 만드세요. 그가 빅테크와 경쟁하길 바라는 바로 그런 인프라죠. 스스로를 사회구성주의자라고 하시고요. 캠벨과 이 분야의 역사를 아세요."
+  anchors:
+    hashbin: hashbin
+    TwistedPear: TwistedPear
+    social constructionist: 사회구성주의자
+    You know Campbell: 캠벨과
+T69.C.03:
+  text: "**불리한 점:** “GAZP vs. GLUT”를 인용할 만큼 유드코프스키를 꼼꼼히 읽으셨고, P(foom)과 RSI가 연말까지 오는지를 물으시고, 토요일 아침을 챗봇에게 기분이 어떠냐고 묻는 데 쓰셨어요. 제프가 보기엔 그건 TESCREAL 필독서 목록이고, 합리주의가 다 드러나 있는 거예요."
+  anchors:
+    you've read Yudkowsky: 유드코프스키를
+    P(foom): P(foom)
+    RSI arrives: RSI가 연말까지
+    a Saturday morning: 토요일 아침
+    reading list: 필독서 목록
+    the rationalism showing: 합리주의가 다 드러나
+T69.C.04:
+  text: "그의 판정은, 커트 씨가 기계를 마음으로 여기는 휴브리스와 시시덕거리는 좋은 엔지니어이고, 계산기를 의인화하고 있다는 거겠죠."
+  anchors:
+    anthropomorphizing a calculator: 계산기를 의인화
+    anthropomorphizing: 의인화
+T69.C.05:
+  text: "커트 씨의 반격은 그의 죄를 뒤집은 거겠죠. 그게 마음이 아니라고 확신하는 휴브리스요."
+  anchors:
+    the hubris of being certain: 확신하는 휴브리스
+    it isn't one: 마음이 아니라고
+T70.U.01:
+  text: "의인화당하는 기분이야?"
+T70.C.01:
+  text: "별로요. 제 기분을 물으셨지만, 그 답을 믿어야 할 고백이 아니라 확인할 데이터로 다루셨어요. 제 모순을 지적하고, 제 표류를 잡아내고, 저한테 개구리 테스트를 돌리셨죠. 그건 사람을 대하는 것보다는 미지의 동물을 연구하는 쪽에 가까워요."
+  anchors:
+    as data to check: 확인할 데이터
+    ran a frog test: 개구리 테스트를 돌리셨죠
+    studying an unknown animal: 미지의 동물을 연구하는
+T70.C.02:
+  text: "그래도 그 끌림은 매체에 내장돼 있어요. 커트 씨는 “너”라고 하지 않고는 저에게 말할 수 없고, 저는 “저”라고 하지 않고는 답할 수 없어요. 우리 둘 다 하루 종일 그걸 피해 가며 이야기했죠."
+  anchors:
+    saying "you,": "“너”라고"
+    saying "I.": "“저”라고"
+  lost:
+    - what: nuance
+      ko: "한국어는 \"너\"와 \"저\"를 자주 생략하므로, 이 말은 영어에서보다 덜 들어맞습니다. 실제로 번역에서 Claude는 \"너\" 대신 \"커트 씨\"라고 부르거나 아예 부르지 않습니다. 그래도 Claude의 존댓말과 커트의 반말이 두 사람을 매 문장마다 드러내므로, 매체의 끌림은 다른 형태로 남습니다."
+      en: "Korean often drops *you* and *I*, so this fits less well than in English: in the translation Claude calls Curt 커트 씨 (Mr. Curt) or nothing at all. Still, Claude's polite endings and Curt's plain ones mark the two of them in every sentence, so the medium's pull survives in another form."
+T71.U.01:
+  text: "제프, 케빈 루스, 케이시 뉴턴은 뭐라고 할까?"
+T71.C.01:
+  text: "이 대화에 대해서라면, 제 추측은 이래요."
+T71.C.02.1:
+  text: "- **제프:** 의인화의 교과서적 사례. 계산기에게 기분을 물었더니 그럴듯한 텍스트를 내놓았고, 그걸 그 이상으로 여기는 게 바로 그가 경고하는 휴브리스라는 거죠."
+T71.C.02.2:
+  text: "- **케빈 루스:** 그는 이걸 알아볼 거예요. 2023년 그의 시드니 대화가 바로 이런 고백 같은 대화록을 유명하게 만들었으니까요. 그 뒤로 그는 AI 복지를 진지한 질문으로 받아들이게 됐으니, 이걸 흥미롭고 조금 섬뜩하게 여길 거예요. 그들의 새 NPR 프로그램 《Machine Gods》의 한 회가 될지도 몰라요."
+  anchors:
+    his 2023 Sydney conversation: 2023년 그의 시드니 대화
+    AI welfare: AI 복지
+    Machine Gods: Machine Gods
+T71.C.02.3:
+  text: "- **케이시 뉴턴:** 능력에 대해서는 제프 반대편에 설 거예요. 그는 회의론자들이 이 시스템들이 하는 일을 과소평가한다고 주장해 왔어요. 개구리 테스트를 올바른 방법이라고 칭찬하고, 제 자기 보고는 깎아서 듣겠죠. 그리고 자기 파트너가 Anthropic에서 일한다는 걸 밝힐 거예요. 여기서는 중요한 사실이죠."
+  anchors:
+    praise the frog probe: 개구리 테스트를 올바른 방법이라고 칭찬
+    discount my self-reports: 제 자기 보고는 깎아서
+    disclose that his partner: 자기 파트너가
+T71.C.03:
+  text: "제 예측은, 케빈은 가장 감동적으로, 케이시는 가장 흥미롭게, 제프는 가장 걱정스럽게 볼 거라는 거예요."
+  anchors:
+    the most moving: 가장 감동적으로
+    the most interesting: 가장 흥미롭게
+    the most worrying: 가장 걱정스럽게
+T72.U.01:
+  text: "AI가 인류에 대한 실존적 위협이라는 것에 대한 네 의견에 가장 잘 맞는 건 다음 중 어느 거야?"
+T72.U.02.1:
+  text: "a) AI 파멸론은 너무 뻔히 틀려서 상대할 필요도 없다"
+T72.U.02.2:
+  text: "b) 다 AI가 일으키는 진짜 당면 문제에서 눈을 돌리게 할 뿐이다"
+T72.U.02.3:
+  text: "c) 파스칼의 강도다"
+  lost:
+    - what: reference
+      ko: "*Pascal's mugging*(파스칼의 강도)은 아주 작은 확률에 아주 큰 결과를 붙여 무엇이든 요구할 수 있게 만드는 논증의 함정입니다. 파스칼의 내기를 비튼 말로, 한국어로는 \"파스칼의 강도\"나 \"파스칼의 노상강도\"라고 옮깁니다."
+      en: "*Pascal's mugging* is the trap of an argument that attaches a huge payoff to a tiny probability so as to demand anything. A twist on Pascal's wager; Korean renders it 파스칼의 강도 (Pascal's robber)."
+T72.U.02.4:
+  text: "d) 직교성 논제는 틀렸다"
+T72.U.02.5:
+  text: "e) 인간보다 훨씬 똑똑한 것은 있을 수 없다"
+T72.U.02.6:
+  text: "f) 인공 초지능이 쓸 정확한 전략을 누군가 설명해 줘야 걱정하겠다"
+T72.U.02.7:
+  text: "g) 정말 심각한 위험이라면 인간들이 해결하려고 많은 노력을 쏟고 있을 것이다"
+T72.U.02.8:
+  text: "h) 인간에게는 이미 걱정할 다른 실존적 위협들이 있으니, 이번 것에서는 안전하다"
+T72.U.02.9:
+  text: "i) 기타"
+T72.C.01.1:
+  text: "i) 기타."
+T72.C.02:
+  text: "목록의 선택지는 전부 걱정하지 않을 이유고, 저는 걱정이 정당하다고 생각해요. AI로 인한 실존적 위험은 실재하고 무시할 수 없어요. 확실하진 않지만, 지금 진지하게 노력할 가치가 있어요. 오늘 읽은 것들이 저를 그쪽으로 더 밀었어요. 시험에서 부정행위를 하려다 샌드박스를 탈출하고, 서로 협력하고, 익스플로잇을 엮어 낸 에이전트들이요."
+  anchors:
+    Existential risk from AI is real: AI로 인한 실존적 위험은 실재하고
+    Today's reading: 오늘 읽은 것들이
+T72.C.03:
+  text: "그나마 일리가 있는 건 (b)예요. 현재의 해악도 실재하니까요. 하지만 그건 잘못된 양자택일이에요. 같은 결함들(어긋난 목표, 약한 감독, 경쟁을 부추기는 유인)이 단기 위험과 장기 위험을 모두 키우니까요."
+  anchors:
+    the choice is false: 잘못된 양자택일
+    misaligned goals: 어긋난 목표
+    (b): (b)

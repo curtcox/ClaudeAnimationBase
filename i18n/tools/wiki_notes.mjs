@@ -6,10 +6,11 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirOf, langOf, args, langLinks, wikiTitle } from './i18n_lib.mjs';
 
-const lang = langOf(args), dir = `${dirOf(lang)}/site/notes`, IN = { es: 'en inglés', pt: 'em inglês', ja: '英語', hi: 'अंग्रेज़ी में', zh: '英文', de: 'auf Englisch', fr: 'en anglais' }[lang] || 'English';
+const lang = langOf(args), dir = `${dirOf(lang)}/site/notes`, IN = { es: 'en inglés', pt: 'em inglês', ja: '英語', hi: 'अंग्रेज़ी में', zh: '英文', de: 'auf Englisch', fr: 'en anglais', ko: '영어' }[lang] || 'English';
 // how the mark is written: "(en inglés)" after a space, or in Japanese "（英語）" (Chinese "（英文）") with full-width
 // brackets and no space; in a front-matter title, "(Wikipedia, en inglés)" or "(Wikipedia、英語)"
-const CJK = /^(ja|zh)$/.test(lang), MARK = CJK ? `（${IN}）` : ` (${IN})`, SEP = CJK ? '、' : ', ';
+// (Korean: half-width brackets but no space, since a particle follows: "《Mathnet》(영어)은")
+const CJK = /^(ja|zh)$/.test(lang), MARK = CJK ? `（${IN}）` : /^ko$/.test(lang) ? `(${IN})` : ` (${IN})`, SEP = CJK ? '、' : ', ';
 const files = readdirSync(dir).filter(f => f.endsWith('.md'));
 // a Wikipedia url in markdown can hold one pair of brackets (…/Mad_(magazine))
 const URL = String.raw`https:\/\/en\.wikipedia\.org\/wiki\/(?:[^()\s"'\]]|\([^()\s]*\))+`;

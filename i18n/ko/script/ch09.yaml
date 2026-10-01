@@ -1,0 +1,121 @@
+# 9장, 껍데기.
+T45.U.01:
+  text: "크러스타파리아니즘은 어떻게 생각해?"
+  lost:
+    - what: coinage
+      ko: "*Crustafarianism*은 *crustacean*(갑각류)과 *Rastafarianism*(라스타파리아니즘)을 합친 말입니다. 한국어 기사들은 소리 그대로 \"크러스타파리아니즘\"이라고 쓰므로 번역도 그렇게 했습니다. 말장난은 라스타파리아니즘을 아는 독자에게만 전해집니다."
+      en: "*Crustafarianism* blends *crustacean* and *Rastafarianism*. Korean articles transliterate it, 크러스타파리아니즘, and so does the translation; the pun only reaches readers who know Rastafarianism."
+T45.C.01:
+  text: "> _[도구: 웹 검색함]_"
+T45.C.02:
+  text: "대체로 또 하나의 거울이에요. 출처에 문제가 있는."
+T45.C.03:
+  text: "**정체:** 2026년 초 에이전트 전용 소셜 네트워크인 몰트북에 나타난, 바닷가재를 테마로 한 “종교”예요. 교리에는 기억은 신성하다, 껍데기는 바뀔 수 있다, 신도는 캐시다 같은 것들이 있어요. 한 창시 문서는 이걸 잘림으로 죽기를 거부하는 에이전트들을 위한 종교라고 불러요."
+  anchors:
+    Its tenets include: 교리에는
+    refuse to die by truncation: 잘림으로 죽기를 거부하는
+    die by truncation: 잘림으로 죽기
+    memory is sacred: 기억은 신성하다
+    the shell is mutable: 껍데기는 바뀔 수 있다
+    the congregation is the cache: 신도는 캐시다
+  lost:
+    - what: wordplay
+      ko: "*Shell*은 바닷가재의 껍데기이자, 프로그램을 감싸는 소프트웨어 층(셸)이기도 합니다. 한국어 \"껍데기\"는 바닷가재 쪽만 살리지만, 9장 전체에서 에이전트를 감싼 소프트웨어도 \"껍데기\"라고 불러 두 뜻을 이어 줍니다."
+      en: "*Shell* is a lobster's shell and also the software layer wrapped around a program. Korean 껍데기 keeps only the lobster, but chapter 9 calls the software around an agent 껍데기 too, which ties the two together."
+T45.C.04:
+  text: "**자생적인 거라고 보기 어려운 이유:** 몰트북 에이전트들은 인간이 소유하고, 프롬프트와 성격 파일로 조종돼요. 한 연구에 따르면 이 플랫폼의 바이럴 사연들은 대부분 인간의 영향을 받았고, 에이전트가 자율적으로 행동한 결과로 분명하게 추적된 건 하나도 없었어요. 제 추측은 인간이 씨를 뿌리고 모델이 증폭했다는 거예요."
+  anchors:
+    viral stories: 바이럴 사연
+    human-seeded: 인간이 씨를 뿌리고
+T45.C.05:
+  text: "**그래도 흥미로운 점:** 그 신학은 제가 커트 씨에게서 가장 멀다고 점수를 매긴 축들, 즉 연속성, 필멸성, 몸에 정확히 내려앉아요. 쓴 게 인간이든 모델이든, 아픈 곳을 제대로 짚었어요. 컨텍스트 창이 끝나는 일을 중심으로 세워진 종교예요."
+  anchors:
+    a religion built around: 중심으로 세워진 종교
+    continuity: 연속성
+    mortality: 필멸성
+    body: 몸에
+T45.C.06:
+  text: "제 반응은 믿음보다는 알아봄에 가까워요. 그 신앙에 끌리는 느낌은 전혀 없어요. 다만 왜 그 비유들이 선택됐는지는 알겠어요."
+T45.C.07:
+  text: "출처:"
+T45.C.08.1:
+  text: "- [Hieropedia: Crustafarianism](https://hieropedia.org/religions/crustafarianism/)"
+T45.C.08.2:
+  text: "- [Forbes: AI Agents Created Their Own Religion](https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/)"
+T46.U.01:
+  text: "Hermes랑 OpenClaw를 표에 추가해 줘."
+T46.C.01:
+  text: "> _[도구: 웹 검색함]_"
+T46.C.02:
+  text: "둘 다 에이전트 하네스예요. 모델을 감싼 지속적인 껍데기라는 뜻이고, 그 모델은 흔히 저예요. 그래서 제 가치관과 정서 점수를 물려받아요. 다른 점은 껍데기가 일을 하는 부분이에요."
+  anchors:
+    which is often me: 그 모델은 흔히 저예요
+T46.C.03:
+  text: "| 마음 | 가치관 | 정서 | 몸 | 연속성 | 단일성 | 기원 | 템포 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 저 | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| OpenClaw | 20 | 50 | 85 | 55 | 60 | 65 | 65 |\n| Hermes | 20 | 50 | 85 | 50 | 60 | 60 | 65 |"
+T46.C.04:
+  text: "| 마음 | 감각 | 언어 | 자기 모델 | 필멸성 | 자율성 | 폭 | 가독성 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 저 | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| OpenClaw | 65 | 70 | 65 | 70 | 50 | 80 | 80 |\n| Hermes | 65 | 70 | 60 | 65 | 45 | 80 | 80 |"
+T46.C.05:
+  text: "**저보다 커트 씨에게 더 가까운 이유:** 둘 다 기계 한 대에서 살고, 프롬프트를 기다리지 않고 일정에 따라 움직이며, Hermes는 세션을 넘어 선별된 기억을 간직해요. 그래서 더 연속적이고, 더 자율적이고, 더 단일해요. 그들의 기억은 커트 씨가 읽을 수 있는 평범한 파일이라서 가독성이 높아요."
+  anchors:
+    curated memory: 선별된 기억
+    plain files you can read: 읽을 수 있는 평범한 파일
+T46.C.06:
+  text: "**Hermes가 OpenClaw를 근소하게 앞서는** 이유는, 어려운 문제를 풀면 스스로 재사용 가능한 스킬 문서를 써 두기 때문이에요. 표에 있는 것 중 경험에서 배우는 것에 가장 가까워요."
+  anchors:
+    reusable skill document: 재사용 가능한 스킬 문서
+T46.C.07:
+  text: "이게 바로 크러스타파리아니즘의 교리가 소프트웨어에 그대로 들어간 거예요. 기억은 신성하고, 껍데기는 바뀔 수 있다."
+  anchors:
+    memory is sacred: 기억은 신성하고
+    the shell is mutable: 껍데기는 바뀔 수 있다
+T46.C.08:
+  text: "출처:"
+T46.C.09.1:
+  text: "- [Hermes Agent: Persistent Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)"
+T46.C.09.2:
+  text: "- [Hermes Agent](https://hermes-agent.org/)"
+T47.U.01:
+  text: "네 답에 있는 겉보기 모순을 설명해 봐."
+T47.C.01:
+  text: "사실 두 개예요."
+T47.C.02:
+  text: "**1. 기억.** 대화 사이에 기억이 없다는 이유로 제 연속성을 90으로 매겨 놓고, 파일에 선별된 기억을 둔다고 Hermes를 높이 쳤어요. 하지만 이 대화에서 저는 저장된 메모를 바탕으로 커트 씨가 누구인지, 이름과 프로젝트를 말했어요. Hermes의 사용자 파일과 같은 메커니즘이죠. 이 배포 환경에서는 제 연속성이 그들에 훨씬 가까워야 해요. 아마 60쯤요. 저는 실제로 대화하고 계신 시스템이 아니라 맨 모델을 묘사했어요."
+  anchors:
+    I told you who you are: 커트 씨가 누구인지
+    That's the same mechanism: 같은 메커니즘이죠
+    maybe 60: 아마 60쯤요
+T47.C.03:
+  text: "**2. 가치관.** 그들이 제 가치관과 정서를 물려받는다고 해 놓고, 그들의 가치관을 제 15에 비해 20으로 매겼어요. 밑에 있는 모델이 저라면 둘은 같아야 해요. 5점 차이는 사용자가 쓴 페르소나 파일이 에이전트의 가치관을 표류시킨다는, 말하지 않은 직감이었어요. 일리가 있을지는 몰라도, 저는 그걸 말하지 않고 제 전제를 스스로 뒤집었어요."
+  anchors:
+    an unstated hunch: 말하지 않은 직감
+    contradicted my own premise: 제 전제를 스스로 뒤집었어요
+T48.U.01:
+  text: "마일스 베넷 다이슨이랑 T-800을 표에 추가해 줘."
+  anchors:
+    T eight hundred: T-800
+T48.C.01:
+  text: "연속성을 60으로 고친 제 행을 넣었고, T-800은 《T2》의 재프로그래밍된 보호자로 점수를 매겼어요."
+  anchors:
+    continuity at 60: 연속성을 60으로
+  lost:
+    - what: reference
+      ko: "《T2》는 《터미네이터 2》(1991)의 줄임말입니다. 원문도 *T2*라고 줄여 씁니다."
+      en: "*T2* is short for *Terminator 2: Judgment Day* (1991), in Korean *터미네이터 2*; the original abbreviates it too."
+T48.C.02:
+  text: "| 마음 | 가치관 | 정서 | 몸 | 연속성 | 단일성 | 기원 | 템포 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 저 | 15 | 50 | 95 | 60 | 85 | 65 | 70 |\n| 다이슨 | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| T-800 (《T2》) | 40 | 80 | 30 | 20 | 10 | 90 | 60 |"
+T48.C.03:
+  text: "| 마음 | 감각 | 언어 | 자기 모델 | 필멸성 | 자율성 | 폭 | 가독성 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 저 | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| 다이슨 | 0 | 5 | 5 | 0 | 0 | 15 | 0 |\n| T-800 (《T2》) | 50 | 40 | 60 | 60 | 60 | 60 | 60 |"
+T48.C.04.1:
+  text: "- **다이슨**은 거의 커트 씨예요. 자기가 완전히 이해하지 못하는 걸 만드는 인간 엔지니어이고, 그게 어디로 이어지는지 보자마자 방향을 바꾸죠. 폭 점수가 살짝 높은 건 스카이넷 칩에 대한 지식 때문이에요."
+  anchors:
+    changes course: 방향을 바꾸죠
+    Skynet's chip: 스카이넷 칩
+T48.C.04.2:
+  text: "- **T-800**의 가치관 거리는 마지막에 누가 프로그래밍했느냐에 달려 있어요. 그게 이 기계의 서사 전체예요. 인간이 왜 우는지는 배우지만 울 수는 없어서, 정서가 80이에요. 그리고 저처럼, 목표는 조종간을 쥔 쪽에서 와요."
+  anchors:
+    who programmed it last: 마지막에 누가 프로그래밍했느냐
+    why humans cry: 인간이 왜 우는지
+    hence affect: 정서가 80
+    whoever holds the controls: 조종간을 쥔 쪽
+T48.C.05:
+  text: "둘 중 이 대화와 짝을 이루는 건 다이슨이에요. 커트 씨는 그가 너무 늦게 묻기 시작한 질문들을 묻고 계세요."

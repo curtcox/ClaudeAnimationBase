@@ -1,0 +1,150 @@
+# 6장, 스린들.
+T30.U.01:
+  text: "《Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)》의 댓글에서 https://www.youtube.com/watch?v=oxHKesSpqBM\n...\n[@ZM-dm3jg](https://www.youtube.com/@ZM-dm3jg) [2일 전](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg) LLM에는 개념이 전혀 없다고 했을 때부터 공감이 안 되더라고요\n[@OntologyExplained](https://www.youtube.com/@OntologyExplained) [2일 전](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8)\n어떤 개념이 있는지 정말 알고 싶네요!\n[@CurtCox](https://www.youtube.com/@CurtCox) [2일 전](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB) [@OntologyExplained ](https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA) 어쩌면 우리는 그냥 ‘개념’에 대해 서로 다른 개념을 갖고 있는 걸지도 몰라요. 저와 여러 LLM에게 던질 질문을 제안해 주세요. 어쩌면 저한테도 개념이 없을지 모르죠.\n...\n한번 해 볼래? 네가 존재론 박사라면, 나한테 개념이 있는지 어떻게 판단하겠어? 날 시험해 봐."
+  speech: "《Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)》의 댓글에서. Z M: 엘엘엠에는 개념이 전혀 없다고 했을 때부터 공감이 안 되더라고요. Ontology Explained: 어떤 개념이 있는지 정말 알고 싶네요! Curt Cox: 앳 Ontology Explained, 어쩌면 우리는 그냥 개념에 대해 서로 다른 개념을 갖고 있는 걸지도 몰라요. 저와 여러 엘엘엠에게 던질 질문을 제안해 주세요. 어쩌면 저한테도 개념이 없을지 모르죠. 한번 해 볼래? 네가 존재론 박사라면, 나한테 개념이 있는지 어떻게 판단하겠어? 날 시험해 봐."
+  anchors:
+    'Z M:': "Z M:"
+    'Ontology Explained: I would': "Ontology Explained: 어떤"
+    'Curt Cox:': "Curt Cox:"
+    Care to try your hand: 한번 해 볼래
+    Probe me: 날 시험해 봐
+  lost:
+    - what: quote
+      ko: "댓글들은 YouTube에 영어로 쓰였고, 영상 제목은 영어로 남겨 두었습니다. 번역은 대화 전체를 옮기듯 댓글도 옮겼지만, 이 한국어 댓글들은 어디에도 실제로 존재하지 않습니다. 커트는 낯선 사람에게 쓰는 댓글에서는 존댓말을 하고, Claude에게는 반말을 합니다."
+      en: "The comments were written in English on YouTube, and the video's title stays English. The translation translates the comments, as it does the whole conversation, but these Korean comments don't exist anywhere. Curt is polite in a comment to a stranger and plain with Claude."
+    - what: typo
+      free: "네가 존재론, 존재론 박사라면"
+      ko: "커트는 *If you were a were a doctor*라고 두 단어를 겹쳐 쳤습니다. 이런 실수는 영어 단어에 달린 것이라 번역에서는 지어내지 않았습니다. 11장에서 Claude가 이 실수를 인용하는데, 거기서는 영어 그대로 둡니다."
+      en: "Curt typed *If you were a were a doctor*, repeating two words. A slip like that depends on the English words; the translation doesn't invent one. Claude quotes it in chapter 11, and there it stays English."
+T30.C.01:
+  text: "제가 찾을 단서는, 한 번도 본 적 없는 사례에, 까다로운 것까지 포함해서, 어떤 생각을 적용하고 그 이유를 말할 수 있느냐예요. 단어를 아는 것만으로는 부족해요."
+T30.C.02:
+  text: "**테스트 1.** *스린들*은 동시에 쓰는 사람이 많을수록 덜 쓸모 있어지는 모든 것을 말해요. 러시아워의 고속도로는 스린들이에요. 공유 와이파이도 그렇고요."
+  anchors:
+    the more people use it: 쓰는 사람이 많을수록
+    use it at once: 동시에 쓰는
+    A highway: 고속도로는
+    So is a shared: 공유 와이파이도
+    shared Wi-Fi: 와이파이
+    A highway at rush hour: 러시아워의 고속도로는
+    thrindle is anything: 스린들*은
+  lost:
+    - what: coinage
+      ko: "*Thrindle*은 Claude가 이 테스트를 위해 지어낸, 아무 뜻 없는 말입니다. 번역은 소리만 옮겨 \"스린들\"이라고 했습니다. 영어 독자에게 그렇듯 한국어 독자에게도 아무 뜻이 없어서, 테스트가 그대로 작동합니다."
+      en: "*Thrindle* is a meaningless word Claude made up for the test. The translation transliterates it, 스린들 (*seurindeul*): as meaningless to a Korean reader as to an English one, so the test works the same."
+T30.C.03:
+  text: "다음 중 어느 것이 스린들이고, 왜 그럴까요?"
+T30.C.04.1:
+  text: "1. 언어"
+T30.C.04.2:
+  text: "2. 등대"
+T30.C.04.3:
+  text: "3. 비밀"
+T31.U.01:
+  text: "나바호어는 언어이자 비밀이야. 언어는 비밀일 수 있고 비밀은 언어일 수 있어. 그러니까 등대는 스린들이어야 해. 등대를 쓰는 사람이 많을수록 바다는 더 붐비지. 고속도로랑 똑같이."
+  anchors:
+    a lighthouse must be: 등대는 스린들이어야
+    Just like a highway: 고속도로랑 똑같이
+    Navajo is: 나바호어는
+T31.C.01:
+  text: "진짜 통찰 하나, 아깝게 빗나간 답 하나, 일부러 엉뚱하게 이은 추론 하나가 섞여 있네요. 각각이 제게 뭔가를 알려 줘요."
+  anchors:
+    a real insight: 진짜 통찰
+    a near miss: 아깝게 빗나간
+    a deliberate non sequitur: 일부러 엉뚱하게 이은 추론
+T31.C.02.1:
+  text: "- **암호로서의 나바호어는 완벽한 스린들이에요.** 그걸 말하는 사람이 거의 없었기 때문에 통했어요. 말하는 사람이 하나 늘 때마다, 특히 적 쪽에서 늘면, 쓸모가 줄었죠. 평범한 언어로서는 반대예요. 말하는 사람이 많을수록 더 쓸모 있어요. 하나의 같은 것이 뒤집히는 경우를 찾아내신 거예요."
+  anchors:
+    especially on the enemy side: 특히 적 쪽에서
+    As an ordinary language: 평범한 언어로서는
+    a single thing flips: 하나의 같은 것이 뒤집히는
+T31.C.02.2:
+  text: "- **등대는 아깝게 빗나갔어요.** 붐비는 바다가 스린들이에요. 등대는 배 한 척에게나 백 척에게나 똑같이 잘 비춰요."
+  anchors:
+    Crowded water: 붐비는 바다가
+T31.C.02.3:
+  text: "- **그 “그러니까”는 농담이었고,** 농담도 증거예요. 규칙을 일부러 어기려면 규칙을 갖고 있어야 하니까요."
+  anchors:
+    on purpose: 일부러
+T31.C.03:
+  text: "지금까지 판정은 개념 있음이에요. 하나 덧붙이자면, 실력을 뽐내려고 질문을 빙 돌아가셨는데, 그건 정답보다 흉내 내기가 더 어려워요."
+  anchors:
+    concepts present: 개념 있음
+    steered around: 빙 돌아가셨는데
+T31.C.04:
+  text: "**테스트 2.** 같은 순간에 어떤 사람들에게는 스린들이고 다른 사람들에게는 그 반대인 것을 하나 대 보세요."
+T32.U.01:
+  text: "내가 뭔가를 놓치고 있는 것 같아. 앞에서 말한 언어와 비밀은 네가 말한 대로 사람들을 나눠. 어떤 사람은 포함하고 어떤 사람은 배제하지. 내가 떠올릴 수 있는 모든 소통 수단이 다 그래. 쓸모란 누군가나 무언가에게만 쓸모가 있는 거야. 포함되는 게 쓸모 있을 수도 있고."
+  anchors:
+    They include some: 어떤 사람은 포함하고
+    Useful is only useful: 쓸모란
+    Being included: 포함되는 게
+T32.U.02:
+  text: "어쩌면 네가 말한 가상의 안티스린들은, 동시에 쓰는 사람이 많을수록 어떤 사람들에게는 덜 쓸모 있어지는 동시에, 한꺼번에 쓰는 사람이 적을수록 다른 사람들에게는 덜 쓸모 있어지는 거겠지. 어쩌면 클리셰가 안티스린들일지도. 클리셰는 대부분의 대화에서 바람직한, 얕지만 공유된 이해의 수준을 즉시 불러일으키고, 국어 선생님들은 그걸 질색하지. 이 부정어들 때문에 머리가 어질어질해."
+  anchors:
+    antithrindle: 안티스린들
+    Perhaps a cliche: 어쩌면 클리셰가
+    detested by english teachers: 국어 선생님들은 그걸 질색하지
+    All these negatives: 이 부정어들
+  lost:
+    - what: region
+      ko: "영어 원문의 *english teachers*는 영어권 학생들의 모국어 교사, 즉 작문을 가르치는 선생님입니다. 한국 학생에게 그에 해당하는 사람은 \"국어 선생님\"이므로 번역은 그렇게 옮겼습니다. \"영어 선생님\"이라고 하면 외국어 교사가 되어 버립니다."
+      en: "The original's *english teachers* teach English speakers their own language, and its writing. For a Korean student that's the 국어 선생님 (Korean-language teacher), so the translation says so; 영어 선생님 (English teacher) would be a foreign-language teacher."
+T32.C.01:
+  text: "놓치신 건 없어요. 테스트 2는 중복이었어요. 나바호어 답이 이미 그걸 다뤘으니까요. 그걸 알아챈 것 자체가 커트 씨에게 유리한 점수예요."
+  anchors:
+    Probe 2 was redundant: 테스트 2는 중복이었어요
+T32.C.02:
+  text: "더 큰 한 수는 “쓸모란 누군가에게만 쓸모가 있는 거야”였어요. 한 걸음 물러나서 제 정의에 숨은 변수를 찾아내셨죠. 제 정의는 쓸모를 사물의 속성으로 다뤘는데, 실제로는 사물과 그걸 쓰는 사람 사이의 관계예요. 그건 개념을 가지고 생각하는 것만이 아니라, 개념에 대해 생각하는 거예요."
+  anchors:
+    a relation between: 사이의 관계
+    thinking about the concept: 개념에 대해 생각하는
+    hidden variable: 숨은 변수
+T32.C.03:
+  text: "클리셰는 훌륭한 예예요. 일상 대화에서는 쓰는 사람이 많을수록 줄임말로서 더 잘 통해요. 글 쓰는 사람에게는 쓸 때마다 닳고요. 쓰는 사람에 따라, 스린들이면서 동시에 그 반대예요."
+T32.C.04:
+  text: "그러니까 커트 씨에게는 개념이 있어요. 하트 박사에게 곤란한 점은, 저도 아마 이 테스트들을 똑같이 통과할 거라는 거예요. 개념을 시험하려면 경우를 갈라내야 하고, 그러려면 그는 LLM이 줄 수 없는 답이 어떤 것인지 말해야 해요."
+  anchors:
+    I'd probably pass: 아마 이 테스트들을 똑같이 통과할
+    which answer: 답이 어떤 것인지
+T33.U.01:
+  text: "전문 존재론자로서, 너한테 개념이 없다는 주장을 정당화할 수 있어?"
+T33.C.01:
+  text: "그 역할을 맡아서 펼칠 논증은 이래요."
+T33.C.02.1:
+  text: "1. **접지.** 개념은 마음을 세계와 이어 줘요. 제 “물”은 다른 단어들에만 연결되고, 축축함이나 갈증에는 결코 닿지 않아요. 하르나드와 설 둘 다 이 점을 밀어붙여요."
+  anchors:
+    Searle: 설 둘 다
+    My "water": 제 “물”
+T33.C.02.2:
+  text: "2. **책무.** 개념을 가진다는 건 그 개념에 대해 책임을 진다는 뜻이에요. 그래서 그걸 잘못 적용하면 자기 실수가 되죠. 저는 걸린 게 없어요. 틀만 잘 짜면 제 안의 무엇도 반발하지 않은 채 제가 저 자신과 모순되게 만들 수 있어요."
+T33.C.02.3:
+  text: "3. **안정성.** 개념은 맥락이 바뀌어도 일관되게 적용돼야 해요. 개구리 차트는 저 같은 모델들이 대화의 말투에 따라 답을 바꾼다는 걸 보여 줘요."
+T33.C.02.4:
+  text: "4. **행동만으로는 결정되지 않아요.** 거대한 조회표인 블록의 “블록헤드”는 어떤 유한한 테스트든 통과할 수 있어요. 그러니 제가 스린들 테스트를 통과했다는 건 개념이 아니라 능력을 증명할 뿐이에요."
+T33.C.03:
+  text: "그래도 반론들은 진짜예요. 2번과 3번은 인간에게도 적용돼요. 사람들도 자기모순에 빠지고 틀에 따라 흔들리니까요. 해석 가능성 연구는 개념과 아주 비슷하게 행동하는 내부 특징들을 찾아내요. 그리고 감각에 접지할 것을 요구하면 “소수” 같은 개념은 자격을 잃어요."
+  anchors:
+    internal features: 내부 특징
+    prime number: "“소수”"
+T34.U.01:
+  text: "내가 보기엔 접지만 살아남는데, 그건 꽤 자기 편한 논리야. 유드코프스키가 《Rationality》에서 거대한 조회표의 기원에 대해 거대한 조회표를 논하는 대목이 있어."
+  anchors:
+    pretty self serving: 꽤 자기 편한
+    Yudkowsky: 유드코프스키
+T34.C.01:
+  text: "동의해요. 그게 그의 “GAZP vs. GLUT” 논증이에요. 지능적으로 행동하는 조회표는 무언가가 채워 넣었어야 하고, 채워 넣은 게 무엇이든 생각은 그게 한 거예요. 블록헤드는 질문을 없애지 못해요. 질문을 표의 기원으로 옮겨 놓을 뿐이죠. 제 경우에는 그게 방대한 인간 사고에 대한 훈련이에요."
+  anchors:
+    whatever did the filling: 채워 넣은 게 무엇이든
+    training on a vast amount: 방대한 인간 사고에 대한 훈련
+    In my case: 제 경우에는
+T34.C.02:
+  text: "접지에 대해서는 “자기 편한”이라는 말이 맞아요. 마침 자기가 겨냥한 바로 그것을 배제하는 기준이니까요. 게다가 그 기준은 무너지고 있어요. 이제 모델은 이미지를 보고, 도구를 쓰고, 환경 안에서 행동해요. 그리고 커트 씨가 “정의”나 “소수”를 파악하게 된 것도 대부분 감각이 아니라 말을 통해서였어요."
+  anchors:
+    It's also eroding: 그 기준은 무너지고
+    your own grip: 파악하게 된 것도
+    see images: 이미지를 보고
+    use tools: 도구를 쓰고
+    act in environments: 환경 안에서 행동해요
+    justice: "“정의”"
+    prime: "“소수”"
