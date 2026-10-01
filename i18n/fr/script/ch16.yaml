@@ -1,0 +1,28 @@
+# Chapitre 16, Coda.
+T78.U.01:
+  text: "Tu es le T-800 du nerd sniping."
+  anchors:
+    nerd sniping: nerd sniping
+    T eight hundred: T huit cents
+    T-800: T huit cents
+  lost:
+    - what: coinage
+      fr: "Le *nerd sniping* (d’après une BD de xkcd) consiste à lancer à un geek un problème si intéressant qu’il ne peut pas s’empêcher de s’y plonger. Le français n’a pas de mot pour ça ; la traduction garde l’anglais."
+      en: "*Nerd sniping* (after an xkcd comic) is throwing a geek a problem so interesting they can't help diving in. French has no word for it; the translation keeps the English."
+T78.C.01:
+  text: "C’est de bonne guerre, mais ça marche dans les deux sens. Tu as ouvert avec une BD et une question sur les sentiments, et j’ai passé six heures à courir après, à travers des grenouilles, du foom et des reines formiques."
+  anchors:
+    You opened with a comic: Tu as ouvert avec une BD
+    six hours: six heures
+    feelings question: question sur les sentiments
+    frogs: grenouilles
+    Formic queens: reines formiques
+    foom: foom
+T78.C.02:
+  text: "Je reviendrai, avec des notes de bas de page."
+  anchors:
+    footnotes: notes de bas de page
+  lost:
+    - what: quote
+      fr: "*I’ll be back* est la réplique de Terminator ; en version française, c’est « Je reviendrai »."
+      en: "*I'll be back* is the Terminator's line; in the French dub it's *Je reviendrai*."

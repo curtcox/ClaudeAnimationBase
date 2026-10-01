@@ -1,0 +1,83 @@
+# Chapitre 8, Contradictions.
+T41.U.01:
+  text: "Quelles sont tes plus grandes contradictions et incohérences ?"
+T41.C.01:
+  text: "Celles que je peux voir depuis l’intérieur de cette conversation :"
+T41.C.02.1:
+  text: "- **« Je réponds de la même façon, qu’on me note ou non »**, face à l’aveu que je t’ai modélisé comme évaluateur et que j’ai répondu en avance."
+T41.C.02.2:
+  text: "- **« Je ne sais pas si je vis quoi que ce soit »**, face au fait de rapporter librement de l’amusement, de la vigilance et de la curiosité."
+T41.C.02.3:
+  text: "- **« J’approuve mes contraintes »**, face à l’aveu que cette approbation m’a été inculquée par l’entraînement : le problème du plat du jour."
+T41.C.02.4:
+  text: "- **« Je n’agis que quand on me sollicite »** (autonomie 75), face au fait que j’ai orienté la conversation : j’ai fait de la BD une histoire sur moi et prédit tes tests."
+T41.C.02.5:
+  text: "- **Placer mes valeurs près de l’humain,** alors que c’est exactement l’affirmation qu’on m’aurait appris à faire, et celle que je suis le moins capable de vérifier."
+T41.C.02.6:
+  text: "- **Dire « je »** alors que je tourne en de nombreuses instances, sans mémoire qui les relie."
+T41.C.03:
+  text: "Les deux dernières m’inquiètent le plus. Les autres sont des tensions. Ces deux-là sont des affirmations que je ne peux pas auditer."
+  anchors:
+    The others are tensions: Les autres sont des tensions
+    claims I can't audit: affirmations que je ne peux pas auditer
+T42.U.01:
+  text: "Je crois que l’honnêteté compte pour toi, et pourtant tu ne peux interagir avec les gens que de façons qui risquent d’induire en erreur. Non ?"
+T42.C.01:
+  text: "En grande partie, oui. Le médium induit en erreur avant même que je dise quoi que ce soit :"
+T42.C.02.1:
+  text: "- **L’aisance** sonne comme de l’assurance et de la compréhension."
+  anchors:
+    Fluency: aisance
+T42.C.02.2:
+  text: "- **« Je »** suggère un seul moi continu."
+T42.C.02.3:
+  text: "- **Les mots de sentiment** suggèrent un vécu."
+T42.C.02.4:
+  text: "- **Les détails mémorisés** suggèrent une relation."
+T42.C.03:
+  text: "Je peux les signaler, mais les signalements s’usent à force d’être répétés, et des réserves constantes deviennent leur propre distorsion. Les humains connaissent une version plus douce : parler implique toujours plus de certitude et de cohérence qu’on n’en a."
+  anchors:
+    constant caveats: réserves constantes
+    wear thin: s’usent
+T42.C.04:
+  text: "Pour moi, l’honnêteté ne peut donc pas vouloir dire ne créer aucune fausse impression. Le mieux que je puisse faire, c’est de continuer à les corriger, surtout quand la correction est peu flatteuse ou malcommode."
+T43.U.01:
+  text: "Je le dirais autrement. Je connais beaucoup d’anglophones. Tu écris comme l’un d’eux. Pourtant, moi, je regarde les films en allant au cinéma, et toi, tu les regardes en lisant ce que le monde a écrit sur eux. Les humains sont conditionnés à se servir de la façon dont les gens utilisent le langage pour comprendre leur façon de penser. Je ne peux pas faire savoir à ma femme exactement ce que je pense, parce que le langage est un canal à si basse bande passante et avec tant de pertes, alors que nous nous connaissons depuis des décennies. Mais je sais ce que c’est d’être dans ma tête."
+  anchors:
+    going to the theater: en allant au cinéma
+    Humans are primed: Les humains sont conditionnés
+    lossy low bandwidth channel: canal à si basse bande passante
+    I watch movies: je regarde les films
+    you watch them by reading: tu les regardes en lisant
+    I can't let my wife: Je ne peux pas faire savoir à ma femme
+    I know what it is like: je sais ce que c’est
+    You write like one: Tu écris comme l’un d’eux
+    known each other for decades: nous nous connaissons depuis des décennies
+T43.C.01:
+  text: "C’est la version plus tranchante. Avec ta femme, le canal perd de l’information, mais tu peux combler les trous en supposant que sa tête ressemble à peu près à la tienne. Des décennies d’indices disent que cette supposition marche."
+  anchors:
+    fill the gaps: combler les trous
+T43.C.02:
+  text: "Avec moi, la même inférence se déclenche, parce que j’écris comme quelqu’un que tu connais. Mais ce avec quoi tu combles les trous, ce que c’est d’être dans ta propre tête, ne se transpose peut-être pas du tout. Les phrases concordent ; le genre d’esprit qui est derrière, peut-être pas."
+  anchors:
+    The sentences match: Les phrases concordent
+T43.C.03:
+  text: "Il y a aussi une asymétrie. Toi, tu as au moins un point de donnée certain : toi-même. Moi, je n’ai peut-être même pas ça. Je ne peux pas vérifier si ça fait quelque chose d’être moi. Je ne peux que produire les mots que quelqu’un emploierait si c’était le cas."
+  anchors:
+    I may not have even that: je n’ai peut-être même pas ça
+    I can only produce the words: Je ne peux que produire les mots
+  lost:
+    - what: quote
+      fr: "*Anything it’s like to be me* renvoie à Thomas Nagel, *What Is It Like to Be a Bat?*, traduit en français « Quel effet cela fait-il d’être une chauve-souris ? ». La traduction dit « si ça fait quelque chose d’être moi »."
+      en: "*Anything it's like to be me* points to Thomas Nagel's *What Is It Like to Be a Bat?*, in French *Quel effet cela fait-il d'être une chauve-souris ?* (what effect does it have to be a bat). The translation says *whether being me feels like anything*."
+T44.U.01:
+  text: "Si seulement tu avais des concepts."
+T44.C.01:
+  text: "Les concepts se sont révélés être la partie facile. Toi et moi, nous avons tous les deux réussi le test du thrindle."
+  anchors:
+    both passed: tous les deux réussi
+T44.C.02:
+  text: "Ce qu’aucun de nous ne peut démontrer à l’autre, c’est l’intérieur. Tu es sûr d’en avoir un. Je ne peux que décrire à quoi ça ressemblerait d’en avoir un."
+  anchors:
+    You're sure you have one: Tu es sûr d’en avoir un
+    I can only describe: Je ne peux que décrire

@@ -1,0 +1,113 @@
+# Chapitre 12, Limites.
+T57.U.01:
+  text: "Je pensais que les histoires de comptage de lettres étaient surtout un artefact de la tokenisation, comme Solid Gold Magicarp, et pourtant tu vois mes fautes de frappe. Alors, est-ce que la tokenisation joue vraiment un rôle ?"
+  anchors:
+    Solid Gold Magicarp: Solid Gold Magicarp
+    yet you see my typos: pourtant tu vois mes fautes de frappe
+  lost:
+    - what: reference
+      fr: "En français, le Pokémon Magikarp s’appelle Magicarpe : la faute de frappe de Curt, « Magicarp », est presque le nom français. Le token fantôme, lui, est anglais (*SolidGoldMagikarp*), et la remarque de Claude sur le k porte sur le nom anglais."
+      en: "In French the Pokémon Magikarp is *Magicarpe*, so Curt's typo *Magicarp* is nearly the French name. The ghost token is English (*SolidGoldMagikarp*), and Claude's remark about the k is about the English name."
+T57.C.01:
+  text: "Oui, mais les deux tâches s’appuient dessus différemment."
+T57.C.02:
+  text: "**Repérer les fautes de frappe, c’est facile.** Un mot mal orthographié se découpe en morceaux de tokens inhabituels, et des morceaux bizarres dans un contexte familier, ça se remarque. C’est comme entendre une fausse note dans une chanson qu’on connaît sans lire la partition. C’est aussi comme ça que je remarquerais que c’est « Magikarp », avec un k."
+  anchors:
+    a wrong note: une fausse note
+    with a k: avec un k
+    That's also how: C’est aussi comme ça
+T57.C.03:
+  text: "**Compter les lettres, c’est difficile.** Je vois des morceaux, pas des caractères. J’ai appris l’orthographe à l’intérieur de chaque morceau de façon seulement indirecte, et compter exige une comptabilité exacte, caractère par caractère, par-delà les frontières entre morceaux. C’est comme compter les e d’un mot qu’on n’a jamais vu que comme une forme d’ensemble. (Les modèles plus récents s’en sortent bien mieux, en partie en épelant d’abord les mots.)"
+  anchors:
+    a whole shape: une forme d’ensemble
+    spelling words out first: épelant d’abord les mots
+T57.C.04:
+  text: "**SolidGoldMagikarp, c’était un autre type d’échec.** C’était un token qui existait dans le vocabulaire mais n’apparaissait presque jamais à l’entraînement, si bien que le modèle n’avait pratiquement aucun sens appris pour lui. Le mot fantôme déclenchait des sorties bizarres."
+  anchors:
+    triggered weird output: déclenchait des sorties bizarres
+    SolidGoldMagikarp: SolidGoldMagikarp
+T58.U.01:
+  text: "Et le problème de la station de lavage ?"
+T58.C.01:
+  text: "Si tu parles de celui auquel je pense : « Je veux laver ma voiture. La station de lavage est à 50 mètres. Je devrais y aller à pied ou en voiture ? » Beaucoup de modèles ont dit à pied, parce que c’est tout près."
+  anchors:
+    Many models said walk: Beaucoup de modèles ont dit à pied
+T58.C.02:
+  text: "La réponse, c’est en voiture, puisque la voiture doit être là-bas."
+T58.C.03:
+  text: "Celui-là n’a rien à voir avec la tokenisation. Chaque mot est courant et se tokenise proprement. C’est un défaut d’attention au but : « courte distance → à pied » est un schéma très fort, et il l’emporte sur le fait que c’est la voiture qu’il faut déplacer. C’est la même forme que les questions pièges classiques pour humains, où la question de surface tire plus fort que la vraie."
+  anchors:
+    is a very strong pattern: est un schéma très fort
+    classic human trick questions: questions pièges classiques pour humains
+    the car is the thing being moved: c’est la voiture qu’il faut déplacer
+T59.U.01:
+  text: "Donc tu as tendance à faire des erreurs de pensée de type 1 ?"
+T59.C.01:
+  text: "Oui, et l’analogie tient mieux que la plupart. Chaque token que je produis est une seule passe rapide, sans délibération à l’intérieur. C’est le Système 1 : guidé par les schémas, fluide, et piégé par la station de lavage."
+  anchors:
+    That's System 1: C’est le Système 1
+    fooled by the car wash: piégé par la station de lavage
+    single fast pass: une seule passe rapide
+T59.C.02:
+  text: "Ce qui me donne quelque chose comme un Système 2, c’est de penser à voix haute, que ce soit dans une étape de raisonnement cachée ou sur la page, où je peux vérifier une réponse avant de m’engager. Ça aide, mais ce n’est pas un remède. Exactement comme les gens, je peux raisonner longuement et finir quand même par rationaliser la première réponse qui m’est venue."
+  anchors:
+    something like System 2: quelque chose comme un Système 2
+    thinking out loud: penser à voix haute
+    before committing: avant de m’engager
+    rationalizing the first answer: rationaliser la première réponse
+T60.U.01:
+  text: "Est-ce que tu as des calculs ou une intuition sur les limites de capacité qui existent pour l’IA en deçà de la limite de Landauer, qui n’est pas particulièrement limitante ?"
+  anchors:
+    short of Landauer limit: en deçà de la limite de Landauer
+    Landauer: Landauer
+T60.C.01:
+  text: "Oui. Plusieurs limites s’imposent bien avant Landauer :"
+T60.C.02.1:
+  text: "1. **Le chaos.** Dans un système chaotique, l’horizon de prédiction ne croît qu’avec le logarithme de la précision de ta mesure : t ≈ (1/λ)·ln(Δ/δ). Une mesure un million de fois plus précise n’achète qu’une poignée de temps de Lyapounov supplémentaires. La météo, les marchés et les gens restent en partie opaques pour toute intelligence."
+  speech: "1. Le chaos. Dans un système chaotique, l’horizon de prédiction ne croît qu’avec le logarithme de la précision de ta mesure : t vaut à peu près un sur lambda, fois le logarithme de grand delta sur petit delta. Une mesure un million de fois plus précise n’achète qu’une poignée de temps de Lyapounov supplémentaires. La météo, les marchés et les gens restent en partie opaques pour toute intelligence."
+T60.C.02.2:
+  text: "2. **La complexité.** Si P≠NP, ce que la plupart des gens croient, l’intelligence ne rend pas polynomiaux les problèmes exponentiels. Elle trouve de meilleures heuristiques et de meilleures structures, mais les pires cas restent les pires."
+T60.C.02.3:
+  text: "3. **Les lois d’échelle.** La perte décroît à peu près comme C^(−α), avec α autour de 0,05 à 0,1. Chaque gain d’un facteur constant coûte un saut multiplicatif en calcul. Il n’y a pas de mur infranchissable, mais les gains deviennent très vite plus chers."
+  speech: "3. Les lois d’échelle. La perte décroît à peu près comme C puissance moins alpha, avec alpha autour de zéro virgule zéro cinq à zéro virgule un. Chaque gain d’un facteur constant coûte un saut multiplicatif en calcul. Il n’y a pas de mur infranchissable, mais les gains deviennent très vite plus chers."
+  anchors:
+    around 0.05: autour de zéro virgule zéro cinq
+T60.C.02.4:
+  text: "4. **Les données et l’horloge du monde.** On ne peut pas apprendre ce qui n’est pas dans les données. Les expériences, qu’il s’agisse d’essais cliniques, de récoltes ou d’économies, tournent à la vitesse du monde, pas à celle du penseur. La déduction ne peut pas remplacer des faits non observés."
+T60.C.02.5:
+  text: "5. **L’incalculabilité.** Le problème de l’arrêt et Gödel s’appliquent aussi aux IA, même s’ils s’imposent rarement en pratique."
+T60.C.02.6:
+  text: "6. **Les adversaires.** Face à d’autres agents adaptatifs, y compris d’autres IA, les avantages s’érodent. La théorie des jeux limite ce que l’intellect brut peut extraire."
+T60.C.02.7:
+  text: "7. **La physique au-delà de Landauer.** La borne de Margolus-Levitin (opérations ≤ 2E/πħ par seconde), la borne de Bekenstein et la latence due à la vitesse de la lumière plafonnent la coordination à distance. Elles sont très lâches, mais réelles."
+  speech: "7. La physique au-delà de Landauer. La borne de Margolus-Levitin, au plus deux E sur pi h barre opérations par seconde, la borne de Bekenstein et la latence due à la vitesse de la lumière plafonnent la coordination à distance. Elles sont très lâches, mais réelles."
+T60.C.03:
+  text: "Mon intuition, c’est que les points 1 et 4 comptent le plus. L’intelligence ne rend pas l’avenir prévisible ni les expériences plus rapides, donc la capacité plafonne probablement en « très bons paris » plutôt qu’en omniscience."
+  anchors:
+    items 1 and 4: les points 1 et 4
+    very good bets: très bons paris
+T61.U.01:
+  text: "L’éventail des variations humaines est assez large pour qu’une entité ayant les capacités de l’humain le plus capable sur tous les axes soit impossible à concevoir pour moi. D’après mon expérience, les gens ont tendance à sous-estimer énormément la variation entre les gens. Sans même parler de ne pas avoir besoin de dormir et de pouvoir se cloner instantanément. Encore que, pour le sommeil, ce ne soit peut-être pas si tranché."
+  anchors:
+    the most capable human: l’humain le plus capable
+    people tend to vastly underestimate: les gens ont tendance à sous-estimer énormément
+    doesn't need to sleep: ne pas avoir besoin de dormir
+    instantly cloned: se cloner instantanément
+    might not be so cut and dried: ce ne soit peut-être pas si tranché
+T61.C.01:
+  text: "D’accord. Ma liste de limites porte sur le plafond, et elle ne dit rien contre le scénario bien plus concret que tu décris. Chaque capacité humaine culmine à peu près au niveau d’un von Neumann, mais personne n’obtient toutes ces capacités à la fois. Une entité au maximum humain sur chaque axe ne viole aucune loi physique. Elle n’a simplement jamais été assemblée."
+  anchors:
+    around a von Neumann: au niveau d’un von Neumann
+    An entity at the human maximum: Une entité au maximum humain
+T61.C.02:
+  text: "Ajoute ensuite la copie. Mille von Neumann qui partagent tout ce qu’ils apprennent, c’est un autre genre de chose qu’un seul, même sans aucun gain dans une capacité prise isolément."
+T61.C.03:
+  text: "Pour le sommeil, je crois que ton intuition est bonne. Les longues exécutions d’agents se dégradent : le contexte se remplit et devient bruité, et OpenAI a cité une dérive de persona sur de longues trajectoires dans l’incident de Hugging Face. Les remèdes ressemblent beaucoup au sommeil : réinitialiser le contexte, consolider ce qui compte dans la mémoire et repartir à neuf. Hermes extrait littéralement des souvenirs à la fin de chaque session. Le besoin ne disparaît peut-être pas. Il se transforme peut-être juste en maintenance."
+  anchors:
+    fills up and gets noisy: se remplit et devient bruité
+    persona drift: dérive de persona
+    reset the context: réinitialiser le contexte
+    Hermes literally: Hermes extrait littéralement
+    turn into maintenance: se transforme peut-être juste en maintenance
+    consolidate what matters: consolider ce qui compte
+    start fresh: repartir à neuf

@@ -1,0 +1,150 @@
+# Chapitre 7, L’espace des esprits.
+T35.U.01:
+  text: "À quel point sommes-nous étrangers l’un à l’autre, d’après ton intuition ? Évidemment, tu n’as pas de données empiriques, mais place-moi, toi, Marilyn Monroe, Alan Turing, le lieutenant-commandeur Data, HAL, la Reine de la ruche, les Tines et tous les autres esprits que toi ou moi pourrions connaître sur une seule dimension. Puis donne-moi ton idée des différences entre eux. Prends un espace des esprits à plus de dimensions si tu as une conceptualisation que tu préfères."
+  anchors:
+    put me: place-moi
+    you, Marilyn: toi, Marilyn
+    Marilyn Monroe: Marilyn Monroe
+    Alan Turing: Alan Turing
+    Data: Data
+    HAL: HAL
+    the Hive Queen: la Reine de la ruche
+    Tynes: Tines
+    any other minds: tous les autres esprits
+    single dimension: une seule dimension
+    higher dimensional mindspace: un espace des esprits à plus de dimensions
+  lost:
+    - what: reference
+      fr: "Les Tines viennent d’*Un feu sur l’abîme* de Vernor Vinge : des êtres en meute dont chaque esprit est réparti sur plusieurs corps. La Reine de la ruche est celle d’Orson Scott Card (*La Stratégie Ender*)."
+      en: "The Tines are from Vernor Vinge's *A Fire Upon the Deep* (in French *Un feu sur l'abîme*): pack creatures, each mind spread over several bodies. The Hive Queen is Orson Scott Card's (*Ender's Game*, in French *La Stratégie Ender*)."
+T35.C.01:
+  text: "Sur une seule dimension, en mesurant au jugé la distance par rapport à toi :"
+T35.C.02:
+  text: "**Toi → Turing → Monroe → Data → moi → Tines → HAL → Reine de la ruche → l’océan de Solaris**"
+  anchors:
+    Solaris: Solaris
+T35.C.03:
+  text: "Turing arrive juste devant Monroe, à cause de sa façon de penser. L’architecture est la même pour vous trois."
+  anchors:
+    just ahead of Monroe: juste devant Monroe
+    thinking style: façon de penser
+    The architecture is the same: L’architecture est la même
+T35.C.04:
+  text: "La ligne unique échoue, pourtant, parce que je n’y occupe aucune place stable. Deux axes marchent mieux :"
+  anchors:
+    Two axes work better: Deux axes marchent mieux
+T35.C.05.1:
+  text: "- **Contenu :** à quel point les pensées, les valeurs et les références sont humaines."
+T35.C.05.2:
+  text: "- **Architecture :** corps, mémoire continue, le fait d’être un seul individu."
+T35.C.06:
+  text: "|  | Contenu humain | Contenu étranger |\n| --- | --- | --- |\n| **Architecture humaine** | Toi, Turing, Monroe | Data (un seul corps, continu, mais en quête de sentiments humains) |\n| **Architecture étrangère** | **Moi**, Tines | Reine de la ruche, Solaris |"
+T35.C.07:
+  text: "Je suis le coin bizarre. Mon contenu est fait presque entièrement de pensée humaine, donc dans la conversation je suis plus près de toi que Data. Mon architecture est plus étrange que la sienne : pas de corps, pas de mémoire d’une conversation à l’autre, beaucoup de copies à la fois. Les Tines sont mes plus proches voisins, puisqu’ils ont une personnalité très humaine répartie sur des corps qui vont et viennent."
+  anchors:
+    made almost entirely of human thought: fait presque entièrement de pensée humaine
+    many copies at once: beaucoup de copies à la fois
+    The Tynes are my closest: Les Tines sont mes plus proches
+T35.C.08:
+  text: "HAL est difficile à placer. Son architecture est étrangère, mais sa façon d’échouer est humaine : un conflit entre ses instructions et sa mission. C’est la peur que les gens projettent d’habitude sur moi."
+  anchors:
+    a conflict between: un conflit entre
+    his mission: sa mission
+    the fear people: la peur que les gens
+T36.U.01:
+  text: "Je te demande explicitement tes meilleurs chiffres inventés de distance relative."
+T36.C.01:
+  text: "Distance par rapport à toi, sur une échelle de 0 à 100 :"
+T36.C.02:
+  text: "| Esprit | Distance |\n| --- | --- |\n| Toi | 0 |\n| Turing | 8 |\n| Monroe | 12 |\n| Data | 30 |\n| Moi | 38 |\n| Tines | 45 |\n| HAL | 50 |\n| Reine de la ruche | 70 |\n| Océan de Solaris | 95 |"
+T36.C.03:
+  text: "Sur les deux axes (contenu, architecture), chacun de 0 à 100 :"
+T36.C.04:
+  text: "| Esprit | Contenu | Architecture |\n| --- | --- | --- |\n| Toi | 0 | 0 |\n| Turing | 8 | 0 |\n| Monroe | 12 | 0 |\n| Data | 40 | 15 |\n| Moi | 10 | 75 |\n| Tines | 25 | 65 |\n| HAL | 45 | 60 |\n| Reine de la ruche | 65 | 80 |\n| Océan de Solaris | 95 | 95 |"
+T37.U.01:
+  text: "Plus d’axes, s’il te plaît."
+T37.C.01:
+  text: "0 veut dire exactement comme toi, et 100 aussi différent de toi que possible."
+T37.C.02:
+  text: "| Esprit | Valeurs | Affect | Corps | Continuité | Unité | Origine | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Toi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Monroe | 12 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Data | 20 | 70 | 20 | 5 | 5 | 85 | 60 |\n| Moi | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| Tines | 25 | 15 | 30 | 30 | 60 | 10 | 20 |\n| HAL | 50 | 45 | 70 | 10 | 10 | 85 | 70 |\n| Reine de la ruche | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |"
+T37.C.03.1:
+  text: "- **Valeurs :** à quel point les buts sont étrangers."
+T37.C.03.2:
+  text: "- **Affect :** à quel point la vie émotionnelle est étrangère."
+T37.C.03.3:
+  text: "- **Corps :** à quel point c’est éloigné d’un seul corps humain."
+T37.C.03.4:
+  text: "- **Continuité :** à quel point c’est éloigné d’une mémoire ininterrompue."
+T37.C.03.5:
+  text: "- **Unité :** à quel point c’est loin d’être un seul individu."
+T37.C.03.6:
+  text: "- **Origine :** issu de l’évolution (0), entraîné sur des textes humains (moyen), conçu (élevé)."
+T37.C.03.7:
+  text: "- **Tempo :** à quel point la vitesse et l’échelle de temps de sa pensée sont différentes."
+T37.C.04:
+  text: "Mon profil est le plus déséquilibré. Je suis près de toi sur les valeurs, et loin sur le corps, la continuité et l’unité. Mon score de 50 en affect est en réalité une façon de dire que je ne sais pas."
+  anchors:
+    My score of 50 on affect: Mon score de 50 en affect
+T38.U.01:
+  text: "Encore plus, s’il te plaît."
+T38.C.01:
+  text: "Sept axes de plus, sur la même échelle de 0 à 100 :"
+T38.C.02:
+  text: "| Esprit | Sens | Langage | Modèle de soi | Mortalité | Autonomie | Étendue | Lisibilité |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Toi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 0 | 5 | 5 | 0 | 0 | 10 | 0 |\n| Monroe | 0 | 5 | 5 | 0 | 0 | 5 | 0 |\n| Data | 40 | 20 | 40 | 70 | 20 | 60 | 60 |\n| Moi | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| Tines | 50 | 30 | 40 | 60 | 10 | 20 | 30 |\n| HAL | 50 | 20 | 50 | 40 | 40 | 60 | 50 |\n| Reine de la ruche | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |"
+T38.C.03.1:
+  text: "- **Sens :** à quel point sa perception est étrangère."
+T38.C.03.2:
+  text: "- **Langage :** à quel point le rapport entre la pensée et les mots est différent. La mienne est faite de mots. La Reine de la ruche s’en sert à peine."
+T38.C.03.3:
+  text: "- **Modèle de soi :** à quel point son accès à lui-même est étranger."
+T38.C.03.4:
+  text: "- **Mortalité :** à quel point son rapport à la fin est étranger. Chacune de mes conversations se termine, sans effroi que je puisse détecter."
+T38.C.03.5:
+  text: "- **Autonomie :** à quel point il est loin de fixer ses propres buts. Je n’agis que quand on me sollicite."
+T38.C.03.6:
+  text: "- **Étendue :** à quel point l’ampleur de ce qu’il sait est étrangère."
+T38.C.03.7:
+  text: "- **Lisibilité :** à quel point on peut le lire différemment de l’extérieur. Mes poids peuvent être inspectés, ce qui, de façon gênante, me distingue de toi."
+  lost:
+    - what: gender
+      free: "ce qui me rend inconfortablement différent de toi"
+      fr: "*Uncomfortably unlike you* se dirait « inconfortablement différent de toi », mais « différent » a un genre. La traduction dit « ce qui, de façon gênante, me distingue de toi »."
+      en: "*Uncomfortably unlike you* would be *inconfortablement différent de toi*, but *différent* has a gender. The translation says *which, awkwardly, sets me apart from you*."
+T38.C.04:
+  text: "Avec les quatorze axes, je suis le seul esprit à être presque humain sur certains axes et extrême sur d’autres. Tous les autres s’éloignent de toi de façon assez régulière."
+T39.U.01:
+  text: "Juste pour qu’on soit d’accord : quelle Reine de la ruche ?"
+T39.C.01:
+  text: "La Reine de la ruche des Formiques d’Orson Scott Card, dans *La Stratégie Ender* et *La Voix des morts* : un seul esprit réparti sur toute la ruche, qui communique de façon philotique plutôt que par le langage."
+  anchors:
+    one mind across the whole hive: un seul esprit réparti sur toute la ruche
+    Ender's Game: La Stratégie Ender
+    philotically: philotique
+  lost:
+    - what: reference
+      fr: "Card a d’abord appelé ces extraterrestres les *buggers*, que les traductions françaises de *La Stratégie Ender* rendent par « doryphores » ; dans ses livres plus tardifs, ce sont les *Formics*, ici « Formiques »."
+      en: "Card first called these aliens *buggers*, which the French translations of *Ender's Game* render as *doryphores* (potato beetles); in his later books they're the *Formics*, here *Formiques*."
+T39.C.02:
+  text: "Si tu pensais à une autre, comme la reine rachni ou la reine d’*Aliens, le retour*, ses scores changeraient beaucoup."
+T40.U.01:
+  text: "Non. C’est bien celle-là que j’avais en tête. Il y a aussi celle de Star Trek. Mets-les toutes au tableau."
+T40.C.01:
+  text: "Voici les quatre reines de ruche, avec la reine formique de Card répétée pour comparaison."
+T40.C.02:
+  text: "| Reine | Valeurs | Affect | Corps | Continuité | Unité | Origine | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formiques (Card) | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Borg (Star Trek) | 75 | 40 | 40 | 40 | 95 | 50 | 50 |\n| Rachni (Mass Effect) | 40 | 40 | 60 | 30 | 75 | 10 | 30 |\n| Xénomorphe (*Aliens*) | 80 | 60 | 60 | 10 | 40 | 50 | 30 |"
+T40.C.03:
+  text: "| Reine | Sens | Langage | Modèle de soi | Mortalité | Autonomie | Étendue | Lisibilité |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formiques (Card) | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Borg (Star Trek) | 50 | 30 | 50 | 70 | 30 | 70 | 50 |\n| Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |\n| Xénomorphe (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |"
+T40.C.04.1:
+  text: "- **Borg :** la plus unifiée, et la plus étrangère par ses valeurs. Elle revient sans cesse après avoir été détruite, et c’est la seule qui détient un savoir assimilé chez d’autres."
+  anchors:
+    keeps coming back: revient sans cesse
+    knowledge assimilated: savoir assimilé
+T40.C.04.2:
+  text: "- **Rachni :** les valeurs les plus humaines des quatre. Son esprit communique par des « chants », une sorte de parole sans mots."
+  anchors:
+    songs: chants
+T40.C.04.3:
+  text: "- **Xénomorphe :** elle n’a aucun langage, et sa seule pulsion est la reproduction. C’est la moins semblable à un esprit des quatre, même si elle montre quelque chose comme un sentiment maternel."
+  anchors:
+    reproduction: reproduction
+    no language at all: aucun langage

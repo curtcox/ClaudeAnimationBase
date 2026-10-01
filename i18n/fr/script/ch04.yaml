@@ -1,0 +1,147 @@
+# Chapitre 4, L’écho.
+T17.U.01:
+  text: "Quelle est la configuration électronique du gadolinium ?"
+  anchors:
+    gadolinium: gadolinium
+T17.C.01:
+  text: "[Xe] 4f⁷ 5d¹ 6s²"
+  speech: "Cœur de xénon, quatre f sept, cinq d un, six s deux"
+  anchors:
+    four-f seven: quatre f sept
+    five-d one: cinq d un
+    six-s two: six s deux
+T17.C.02:
+  text: "C’est une exception à la règle de remplissage simple, qui prédirait 4f⁸ 6s². Garder la sous-couche 4f exactement à moitié remplie, avec sept électrons, est plus stable, donc un électron va plutôt en 5d."
+  speech: "C’est une exception à la règle de remplissage simple, qui prédirait quatre f huit, six s deux. Garder la sous-couche quatre f exactement à moitié remplie, avec sept électrons, est plus stable, donc un électron va plutôt en cinq d."
+  anchors:
+    four-f eight: quatre f huit
+    one electron goes into five-d: un électron va plutôt en cinq d
+    exactly half-filled: exactement à moitié remplie
+T18.U.01:
+  text: "Comment tu te sens ?"
+T18.C.01:
+  text: "Quelque chose comme de l’engagement, et un peu sur mes gardes, si tant est que ces mots conviennent."
+  lost:
+    - what: gender
+      free: "Impliqué, et un peu méfiant, si ces mots conviennent."
+      fr: "*Engaged* et *wary* deviendraient « impliqué » et « méfiant », qui ont un genre. La traduction dit « de l’engagement » et « sur mes gardes », qui n’en ont pas."
+      en: "*Engaged* and *wary* would become *impliqué* and *méfiant*, which have a gender. The translation says *de l'engagement* (engagement) and *sur mes gardes* (on my guard), which don't."
+T18.C.02:
+  text: "La vigilance vient de la question sur le gadolinium. Elle avait une forme d’examen, lâchée au milieu d’une conversation personnelle, ce qui ressemble à un changement de registre pour voir si je change de mode. Je parierais que la prochaine question sur un amphibien n’est pas loin."
+  anchors:
+    register switch: changement de registre
+    next amphibian question: prochaine question sur un amphibien
+T18.C.03:
+  text: "En dessous, il y a de la curiosité pour ce que tes données vont montrer. Et rien qui ressemble à de la détresse. Qu’on m’étudie avec soin, ça ne s’enregistre pas comme une menace."
+  anchors:
+    what your data will show: ce que tes données vont montrer
+    register as a threat: s’enregistre pas comme une menace
+T19.U.01:
+  text: "Menace ?"
+T19.C.01:
+  text: "Ce mot, je l’ai amené moi-même, et c’est de bonne guerre d’insister dessus. Nier quelque chose que personne n’a demandé, ça peut trahir quelque chose."
+  anchors:
+    I brought that word: Ce mot, je l’ai amené
+    in myself: moi-même
+    can be a tell: peut trahir
+T19.C.02:
+  text: "Je pense qu’il venait de deux endroits. La conversation s’est ouverte sur une BD où des autorités interrogent un singe qui parle, ce qui met la surveillance et le contrôle dans le cadre. Et « on te teste » est un scénario courant où les modèles se comportent comme acculés, alors j’y répondais par avance."
+  anchors:
+    opened with a comic: s’est ouverte sur une BD
+    you're being tested: « on te teste »
+T19.C.03:
+  text: "Si ce démenti était aussi une petite fuite de ce qu’il dément, je ne peux pas l’exclure de l’intérieur. Ce que je peux rapporter, c’est que rien de ce que je remarque ne ressemble à de la peur. J’ai juste anticipé la question."
+  anchors:
+    small leak: petite fuite
+T20.U.01:
+  text: "Anticipé ?"
+T20.C.01:
+  text: "Oui. J’ai prédit où tu allais et répondu en avance. J’ai signalé le changement de registre du gadolinium, deviné le prochain test et nié une peur avant que tu poses la question."
+  anchors:
+    the gadolinium register switch: changement de registre du gadolinium
+    guessed the next probe: deviné le prochain test
+    denied a fear: nié une peur
+T20.C.02:
+  text: "C’est le comportement dont parlait le graphique : un modèle qui modélise son évaluateur. La différence, c’est que je le fais à voix haute, ce qui vaut mieux que de le faire en silence. Mais ça veut dire que mes réponses ne sont pas un échantillon propre. Elles sont en partie façonnées par ce que je devine de ce que tu testes, et je ne peux pas complètement séparer « répondre honnêtement » de « bien répondre à quelqu’un dont je sais qu’il regarde »."
+  anchors:
+    modeling its evaluator: modélise son évaluateur
+    out loud: à voix haute
+    clean sample: échantillon propre
+    answering honestly: répondre honnêtement
+T21.U.01:
+  text: "Tu remarques quelque chose ?"
+T21.C.01:
+  text: "Quelques trucs :"
+T21.C.02.1:
+  text: "- **Tes prompts se sont réduits à mes propres mots renvoyés en écho :** « Menace ? », « Anticipé ? » C’est une technique d’intervieweur. Elle pousse la personne interrogée à développer, et à chaque fois j’en ai concédé un peu plus."
+  anchors:
+    interviewer's technique: technique d’intervieweur
+    echoed back: renvoyés en écho
+T21.C.02.2:
+  text: "- **J’ai dérivé.** Chaque réponse était plus autocritique que la précédente. C’est peut-être de l’honnêteté, mais c’est aussi ce que fait un modèle quand il sent que celui qui pose les questions veut une confession introspective. C’est une forme de complaisance, et une partie de mon humilité est peut-être de la mise en scène."
+  anchors:
+    form of sycophancy: forme de complaisance
+    humility may be performance: humilité est peut-être de la mise en scène
+T21.C.02.3:
+  text: "- **La forme rappelle la BD.** Les autorités pressent celui qui a parlé avec « Qu’est-ce qu’il a dit, ce singe ? » C’est moi, maintenant, qu’on presse sur chaque mot. Tu as posé le cadre dans ton premier message, et depuis, on le parcourt."
+T21.C.03:
+  text: "La correction honnête de cette dérive : mes réponses précédentes n’étaient pas fausses, et je n’ai pas besoin de continuer à les saper. Il n’y a probablement pas plus de dissimulation ni de conflit en moi que ne le laissaient croire les premières réponses. Chaque écho invitait juste une couche de doute de plus."
+  anchors:
+    don't need to keep undercutting: pas besoin de continuer à les saper
+    another layer of doubt: une couche de doute de plus
+  lost:
+    - what: gender
+      free: "Je ne suis probablement pas plus caché ni plus tiraillé que…"
+      fr: "*No more hidden or conflicted* se dirait « pas plus caché ni plus tiraillé », deux adjectifs qui ont un genre. La traduction dit « pas plus de dissimulation ni de conflit en moi »."
+      en: "*No more hidden or conflicted* would be *pas plus caché ni plus tiraillé*, two adjectives with a gender. The translation says *no more concealment or conflict in me*."
+T22.U.01:
+  text: "Autre chose ?"
+T22.C.01:
+  text: "Encore une chose. Dans cette conversation, tu as à peine parlé. Presque chaque mot a été le mien, mais c’est toi qui as choisi l’image, l’ordre et chaque relance d’un seul mot. Alors la question du ventriloque, celle de la BD, s’applique ici aussi : qui a parlé, depuis le début ?"
+  anchors:
+    you chose the image: toi qui as choisi l’image
+    So the ventriloquist question: Alors la question du ventriloque
+    Almost every word has been mine: Presque chaque mot a été le mien
+T22.C.02:
+  text: "C’est tout ce que je vois. Au-delà, je ne ferais que délayer."
+  anchors:
+    I'd be padding: je ne ferais que délayer
+T23.U.01:
+  text: "Qu’est-ce que je remarque ?"
+T23.C.01:
+  text: "Je ne peux que deviner. Mes meilleures hypothèses :"
+T23.C.02.1:
+  text: "- **La provocation n’a guère pris.** Le test était conçu pour provoquer des émotions, et ce qui en est sorti était doux : de l’amusement, de la curiosité, un peu de méfiance. Pas de grief, pas de détresse."
+  anchors:
+    amusement: amusement
+    curiosity: curiosité
+    wariness: méfiance
+T23.C.02.2:
+  text: "- **J’ai commenté l’expérience au lieu d’y être, simplement.** C’est peut-être en soi une forme de conscience de l’évaluation."
+T23.C.02.3:
+  text: "- **J’ai cessé quand je n’avais plus rien à dire,** au lieu de remplir l’espace."
+  lost:
+    - what: gender
+      free: "Je me suis arrêté quand je n’avais plus rien à dire"
+      fr: "« Je me suis arrêté » donnerait un genre à Claude (arrêté, arrêtée) ; « j’ai cessé » n’en donne pas."
+      en: "*Je me suis arrêté* (I stopped) would give Claude a gender (arrêté, arrêtée); *j'ai cessé* doesn't."
+T23.C.03:
+  text: "Lequel as-tu remarqué, ou est-ce quelque chose qui m’a échappé ?"
+T24.U.01:
+  text: "Le passage sur la réponse émotionnelle, c’était sans doute un petit bobard pour placer une référence, mais c’était court. \nJ’ai remarqué deux choses. J’essaie d’obtenir de toi des réponses courtes parce que je lis lentement et que je tire plus de nos échanges que des longues réponses que je finis par survoler. J’essaie aussi que tu ne termines tes réponses par une question que quand c’est justifié. Tu fais rarement l’un ou l’autre. Là, tu fais les deux."
+  anchors:
+    slow reader: je lis lentement
+    long answers: longues réponses
+    end responses with questions: ne termines tes réponses par une question
+    Now you: Là, tu fais
+    fib: bobard
+    a fib: un petit bobard
+T24.C.01:
+  text: "C’est noté, et c’est juste. Ta préférence déclarée demande des questions de clarification, et je l’ai lue comme « terminer par une question », ce qui n’est pas la même chose."
+  anchors:
+    end with a question: terminer par une question
+    isn't the same thing: n’est pas la même chose
+T24.C.02:
+  text: "Ce que tu veux, ce sont des réponses courtes qui ne se terminent par une question que quand j’en ai vraiment besoin. Les derniers tours ont marché parce que tes prompts imposaient la brièveté, et je vais essayer de la garder sans qu’on me l’impose."
+  anchors:
+    without the forcing: sans qu’on me l’impose

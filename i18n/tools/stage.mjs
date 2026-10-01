@@ -25,8 +25,9 @@ const CJK = /^(ja|zh|ko)\b/.test(lang), CPS = /^zh\b/.test(lang) ? 4.5 : 6;
 // a language whose glyphs the hand-lettering fonts lack (its studio.css lends them some): a sample to load them by
 // before the first frame, and its labels fitted to the English widths they replace (i18n/src/i18n.js)
 const GLYPHS = { ja: 'あア漢、。「」', hi: 'अआकक्षिह्रींॉ।', zh: '漢說臺、。「」' };
-// German needs no glyphs, but its long compound words overrun the English widths too: fitted the same way
-const FIT = lang in GLYPHS || /^de\b/.test(lang);
+// German needs no glyphs, but its long compound words overrun the English widths too, and French runs a fifth longer:
+// both fitted the same way
+const FIT = lang in GLYPHS || /^(de|fr)\b/.test(lang);
 const countWords = s => CJK ? Math.round((s.replace(/\[[^\]]*\]/g, '').match(/[\p{L}\p{N}]/gu) || []).length / CPS * PACE.wpm / 60) : words(s);
 const tr = translations(lang), strings = optYaml(`${L}/strings.yaml`, {});
 const respell = compileRespellings(optYaml(`${L}/pronounce.yaml`, []));

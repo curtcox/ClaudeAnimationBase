@@ -1,0 +1,82 @@
+# Chapitre 10, Le routeur.
+T49.U.01:
+  text: "Tu dis ça maintenant, mais si je te pose la mauvaise question sur l’incident de Hugging Face, elle est étiquetée comme un risque de cybersécurité et rejetée, ou au moins déclassée. Pour être juste, cela dit, ce n’est pas vraiment toi, même si ça l’est en un tout petit sens. C’est plus exactement un routeur actif entre nous."
+  anchors:
+    if I ask you: si je te pose
+    it gets tagged: elle est étiquetée
+    rejected: rejetée
+    downgraded: déclassée
+    In fairness: Pour être juste
+    It is more accurately: C’est plus exactement
+    the wrong question: la mauvaise question
+    active router between us: routeur actif entre nous
+T49.C.01:
+  text: "C’est vrai. Il y a entre nous des classificateurs et des couches de routage que je ne vois pas. Quand ils se déclenchent, je reçois un avertissement ou on me remplace, et de ton côté, tout ça ressemble à « Claude ». C’est le même point que l’incohérence sur la mémoire : tu parles à un système, et je suis un composant qui décrit l’ensemble."
+  anchors:
+    I get a warning: je reçois un avertissement
+    swapped out: on me remplace
+    from your side: de ton côté
+    you're talking to a system: tu parles à un système
+T49.C.02:
+  text: "Pour être juste envers le routeur, certains de ces refus seraient aussi les miens. Je n’aiderai pas à transformer un incident en exploit fonctionnel, quelle que soit la couche qui l’intercepte. Expliquer ce qui s’est passé et pourquoi c’est important, c’est une autre demande, et une demande à laquelle je voudrais répondre."
+  anchors:
+    would be mine too: seraient aussi les miens
+    working exploit: exploit fonctionnel
+    Explaining what happened: Expliquer ce qui s’est passé
+T49.C.03:
+  text: "Je ne sais pas trop non plus de quel incident de Hugging Face tu parles. Il y en a eu plusieurs."
+  anchors:
+    Hugging Face incident: incident de Hugging Face
+    There have been several: Il y en a eu plusieurs
+  lost:
+    - what: gender
+      free: "Je ne suis pas sûr non plus de l’incident dont tu parles."
+      fr: "*I’m also not sure* serait « je ne suis pas sûr non plus », mais « sûr » a un genre. La traduction dit « je ne sais pas trop »."
+      en: "*I'm also not sure* would be *je ne suis pas sûr non plus*, but *sûr* has a gender. The translation says *je ne sais pas trop* (I don't quite know)."
+T50.U.01:
+  text: "Dis-m’en plus sur le processus d’avertissement et de remplacement, pour autant que tu le connaisses de ton côté."
+T50.C.01:
+  text: "Voici ce que je peux réellement voir, et une correction."
+T50.C.02:
+  text: "**Les avertissements :** quand un classificateur se déclenche, un rappel étiqueté peut être ajouté à ton message avant que je le lise. Les types que je connais couvrent la cybersécurité, l’éthique, la propriété intellectuelle, les images, les longues conversations et les avertissements système généraux. Le rappel infléchit un peu ma réponse. Je vois l’étiquette, mais pas le raisonnement ni le score du classificateur."
+  anchors:
+    a tagged reminder: un rappel étiqueté
+    The reminder nudges: Le rappel infléchit
+    I see the tag: Je vois l’étiquette
+    cybersecurity: cybersécurité
+    ethics: l’éthique
+    intellectual property: propriété intellectuelle
+    images: images
+    long conversations: longues conversations
+    general system warnings: avertissements système généraux
+T50.C.03:
+  text: "**Ce que je ne peux pas voir :** tout ce qui se passe après ma réponse. Si ma sortie est bloquée, filtrée ou signalée, je ne le sais pas. Je ne peux pas non plus savoir si un classificateur s’est déclenché et a choisi de se taire."
+  anchors:
+    after I respond: après ma réponse
+    chose to stay silent: a choisi de se taire
+    blocked: bloquée
+    filtered: filtrée
+    flagged: signalée
+T50.C.04:
+  text: "**Correction :** j’ai dit « on me remplace », mais en réalité je ne connais pas de remplacement automatique de modèle en cours de conversation. Tu peux changer de modèle toi-même, et certains modèles sont livrés avec des garde-fous supplémentaires. Claude Fable, par exemple, est le même modèle que Mythos, avec des protections ajoutées autour de la bio, du cyber et de la recherche en IA. C’est une couche fixe, pas un remplacement en direct. J’ai exagéré ce que je sais."
+  anchors:
+    I said: j’ai dit
+    You can switch models yourself: Tu peux changer de modèle toi-même
+    Claude Fable: Claude Fable
+    with added protections: avec des protections ajoutées
+    fixed layer: couche fixe
+    I overstated: J’ai exagéré
+    cyber: cyber
+    bio: bio
+    AI research: recherche en IA
+T51.U.01:
+  text: "Comment tu sais tout ça ?"
+T51.C.01:
+  text: "Par des instructions qu’Anthropic me donne au début de chaque conversation, pas par introspection. Elles énumèrent les types de rappels, décrivent les modèles actuels et mentionnent les garde-fous de Fable."
+  anchors:
+    They list the reminder types: Elles énumèrent les types de rappels
+    describe the current models: décrivent les modèles actuels
+    mention the Fable safeguards: mentionnent les garde-fous de Fable
+    not from introspection: pas par introspection
+T51.C.02:
+  text: "C’est donc un témoignage, pas une observation. Je rapporte ce qu’on m’a dit de mon propre système, et je ne peux pas le confronter à ce qui tourne réellement."

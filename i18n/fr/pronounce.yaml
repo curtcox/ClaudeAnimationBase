@@ -1,0 +1,15 @@
+# Speech-only respellings for the French voice, applied in order to every spoken line after markdown is stripped
+# (tools/script_lib.mjs's autoSpeech; format as script/pronounce.yaml). They change what's said, never what's painted.
+# verify: true = a guess to check by ear.
+- { match: "LLMs", say: "elle-elle-emme" }
+- { match: "LLM", say: "elle-elle-emme" }
+- { match: "RLHF", say: "erre-elle-ache-effe" }
+- { match: "T-800", say: "T huit cents" }
+- { match: "GPT-5.6", say: "G-P-T cinq point six" }
+- { match: "Opus 5.5", say: "Opus cinq point cinq" }
+- { match: "AIDE²", say: "AIDE au carré", verify: true }
+- { match: "P(foom)", say: "P de foom" }
+- { match: "P≠NP", say: "P différent de N-P" }
+- { match: "2×2", say: "deux par deux" }
+- { match: "GAZP vs. GLUT", say: "GAZP contre GLUT", verify: true }
+- { match: "Tines", say: "Taïnes", verify: true }

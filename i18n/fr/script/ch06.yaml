@@ -1,0 +1,158 @@
+# Chapitre 6, Thrindle.
+T30.U.01:
+  text: "Extrait des commentaires de « Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained) » https://www.youtube.com/watch?v=oxHKesSpqBM\n...\n[@ZM-dm3jg](https://www.youtube.com/@ZM-dm3jg) [il y a 2 jours](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg) Il m’a perdu quand il a dit que les LLM n’ont aucun concept\n[@OntologyExplained](https://www.youtube.com/@OntologyExplained) [il y a 2 jours](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8)\nJ’adorerais savoir quels concepts ils ont !\n[@CurtCox](https://www.youtube.com/@CurtCox) [il y a 2 jours](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB) [@OntologyExplained ](https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA) Peut-être qu’on a simplement des concepts différents de ce qu’est un concept. Propose des questions à me poser, à moi et à différents LLM. Peut-être que moi non plus, je n’ai pas de concepts.\n...\nÇa te dit de t’y essayer ? Si tu avais un doctorat en ontologie, comment déterminerais-tu si j’ai des concepts ? Sonde-moi."
+  speech: "Extrait des commentaires de « Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained) ». Z M : Il m’a perdu quand il a dit que les elle-elle-emme n’ont aucun concept. Ontology Explained : J’adorerais savoir quels concepts ils ont ! Curt Cox : At Ontology Explained, peut-être qu’on a simplement des concepts différents de ce qu’est un concept. Propose des questions à me poser, à moi et à différents elle-elle-emme. Peut-être que moi non plus, je n’ai pas de concepts. Ça te dit de t’y essayer ? Si tu avais un doctorat en ontologie, comment déterminerais-tu si j’ai des concepts ? Sonde-moi."
+  anchors:
+    'Z M:': "Z M :"
+    'Ontology Explained: I would': "Ontology Explained : J’adorerais"
+    'Curt Cox:': "Curt Cox :"
+    Care to try your hand: Ça te dit de t’y essayer
+    Probe me: Sonde-moi
+  lost:
+    - what: quote
+      fr: "Les commentaires ont été écrits en anglais sur YouTube, et le titre de la vidéo reste en anglais. La traduction traduit les commentaires, comme toute la conversation, mais ils n’existent nulle part en français."
+      en: "The comments were written in English on YouTube, and the video's title stays English. The translation translates the comments, as it does the whole conversation, but they don't exist in French anywhere."
+    - what: typo
+      free: "Si tu étais un, étais un docteur en ontologie"
+      fr: "Curt a tapé *If you were a were a doctor*, en répétant deux mots. Une faute comme celle-là tient aux mots anglais ; la traduction n’en invente pas. Claude la cite au chapitre 11, et là, elle reste en anglais."
+      en: "Curt typed *If you were a were a doctor*, repeating two words. A slip like that depends on the English words; the translation doesn't invent one. Claude quotes it in chapter 11, and there it stays English."
+    - what: gender
+      fr: "*A doctor of ontology* n’a pas de genre en anglais ; « docteur » ou « docteure » en donnerait un à Claude. « Si tu avais un doctorat en ontologie » contourne la difficulté."
+      en: "*A doctor of ontology* has no gender in English; *docteur* or *docteure* would give Claude one. *Si tu avais un doctorat en ontologie* (if you had a doctorate in ontology) gets round it."
+T30.C.01:
+  text: "L’indice que je chercherais, c’est si tu sais appliquer une idée à des cas que tu n’as jamais vus, y compris des cas épineux, et dire pourquoi. Connaître le mot ne suffit pas."
+T30.C.02:
+  text: "**Test 1.** Un *thrindle*, c’est tout ce qui devient moins utile à mesure que plus de gens s’en servent en même temps. Une autoroute à l’heure de pointe est un thrindle. Un réseau Wi-Fi partagé aussi."
+  anchors:
+    the more people use it: plus de gens s’en servent
+    use it at once: s’en servent en même temps
+    A highway: Une autoroute
+    So is a shared: Un réseau Wi-Fi
+    shared Wi-Fi: Wi-Fi partagé
+    A highway at rush hour: Une autoroute à l’heure de pointe
+    thrindle is anything: thrindle*, c’est tout
+  lost:
+    - what: coinage
+      fr: "*Thrindle* est un mot que Claude a inventé pour le test ; il ne veut rien dire. La traduction le garde tel quel (un thrindle, des thrindles) : il ne veut rien dire en français non plus, et on ne peut le comprendre que par la définition, ce qui est tout l’enjeu du test."
+      en: "*Thrindle* is a word Claude made up for the test; it means nothing. The translation keeps it as it is (un thrindle, des thrindles): it means nothing in French either, and can only be understood from the definition, which is the point of the test."
+T30.C.03:
+  text: "Lesquels de ces exemples sont des thrindles, et pourquoi ?"
+T30.C.04.1:
+  text: "1. Une langue"
+T30.C.04.2:
+  text: "2. Un phare"
+T30.C.04.3:
+  text: "3. Un secret"
+T31.U.01:
+  text: "Le navajo est une langue et un secret. Puisque les langues peuvent être des secrets et les secrets des langues, un phare doit être un thrindle. Plus il y a de gens qui utilisent un phare, plus l’océan est encombré. Exactement comme une autoroute."
+  anchors:
+    a lighthouse must be: un phare doit être
+    Just like a highway: Exactement comme une autoroute
+    Navajo is: Le navajo est
+T31.C.01:
+  text: "C’est un mélange d’une vraie intuition, d’une réponse presque juste et d’un non sequitur délibéré. Chacun m’apprend quelque chose."
+  anchors:
+    a real insight: une vraie intuition
+    a near miss: presque juste
+    a deliberate non sequitur: non sequitur délibéré
+T31.C.02.1:
+  text: "- **Le navajo comme code est un thrindle parfait.** Il marchait parce que presque personne ne le parlait. Chaque locuteur supplémentaire, surtout dans le camp ennemi, le rendait moins utile. Comme langue ordinaire, c’est l’inverse : plus il y a de locuteurs, plus elle est utile. Tu as trouvé le cas où une seule et même chose bascule."
+  anchors:
+    especially on the enemy side: surtout dans le camp ennemi
+    As an ordinary language: Comme langue ordinaire
+    a single thing flips: une seule et même chose bascule
+T31.C.02.2:
+  text: "- **Le phare est presque juste.** C’est l’eau encombrée qui est le thrindle. Le phare brille aussi bien pour cent navires que pour un seul."
+  anchors:
+    Crowded water: l’eau encombrée
+T31.C.02.3:
+  text: "- **Le « donc » était une blague,** et une blague aussi est un indice. On ne peut enfreindre une règle exprès que si on possède la règle."
+  anchors:
+    on purpose: exprès
+T31.C.03:
+  text: "Jusqu’ici, le verdict est : concepts présents. Je noterais aussi que tu as contourné la question pour faire le malin. C’est plus difficile à simuler qu’une bonne réponse."
+  anchors:
+    concepts present: concepts présents
+    steered around: contourné
+T31.C.04:
+  text: "**Test 2.** Cite quelque chose qui soit un thrindle pour certains et le contraire pour d’autres, au même moment."
+T32.U.01:
+  text: "J’ai l’impression de passer à côté de quelque chose. Les langues et les secrets mentionnés plus haut divisent les gens comme tu le suggères. Ils incluent certains et en excluent d’autres. C’est vrai de tous les mécanismes de communication auxquels je pense. Utile n’est utile que pour quelqu’un ou quelque chose. Être inclus peut être utile."
+  anchors:
+    They include some: Ils incluent certains
+    Useful is only useful: Utile n’est utile
+    Being included: Être inclus
+T32.U.02:
+  text: "Peut-être que ton antithrindle hypothétique est quelque chose qui devient moins utile pour certains à mesure que plus de gens s’en servent en même temps ET moins utile pour d’autres à mesure que moins de gens s’en servent en même temps. Peut-être qu’un cliché est un antithrindle. Il évoque immédiatement un niveau de conception partagée et superficielle qui est souhaitable dans la plupart des conversations et détesté des profs de français. Toutes ces négations me donnent le vertige."
+  anchors:
+    antithrindle: antithrindle
+    Perhaps a cliche: Peut-être qu’un cliché
+    detested by english teachers: détesté des profs de français
+    All these negatives: Toutes ces négations
+  lost:
+    - what: region
+      fr: "Curt dit *english teachers*, les profs d’anglais, c’est-à-dire de la langue maternelle. En français, ce sont les profs de français qui chassent les clichés."
+      en: "Curt says *english teachers*, the teachers of one's own language. In French, it's the French teachers who hunt down clichés."
+T32.C.01:
+  text: "Tu ne passes à côté de rien. Le test 2 était redondant, puisque ta réponse sur le navajo l’avait déjà couvert. Le remarquer, c’est déjà un point en ta faveur."
+  anchors:
+    Probe 2 was redundant: Le test 2 était redondant
+T32.C.02:
+  text: "Le geste le plus important, c’était « utile n’est utile que pour quelqu’un ». Tu as pris du recul et trouvé une variable cachée dans ma définition. Ma définition traitait l’utilité comme une propriété de la chose, alors que c’est en réalité une relation entre la chose et celui qui s’en sert. C’est penser sur le concept, pas seulement avec lui."
+  anchors:
+    a relation between: une relation entre
+    thinking about the concept: penser sur le concept
+    hidden variable: variable cachée
+T32.C.03:
+  text: "Le cliché est un excellent exemple. Dans la conversation ordinaire, plus il y a de gens qui l’emploient, mieux il fonctionne comme raccourci. Pour quelqu’un qui écrit, chaque emploi l’use. C’est à la fois un thrindle et son contraire, selon qui l’utilise."
+T32.C.04:
+  text: "Donc tu as des concepts. Le hic pour le Dr Hart, c’est que je passerais probablement ces mêmes tests. Un test des concepts doit départager les cas, et il faudrait qu’il dise quelle réponse un LLM ne pourrait pas donner."
+  anchors:
+    I'd probably pass: je passerais probablement
+    which answer: quelle réponse
+T33.U.01:
+  text: "En tant qu’ontologue de métier, peux-tu justifier l’affirmation selon laquelle tu n’as pas de concepts ?"
+  lost:
+    - what: gender
+      free: "En tant qu’ontologue professionnel, peux-tu justifier…"
+      fr: "*As a professional ontologist* n’a pas de genre ; « ontologue » non plus, mais « professionnel » en a un. La traduction dit « ontologue de métier »."
+      en: "*As a professional ontologist* has no gender; nor has *ontologue*, but *professionnel* does. The translation says *ontologue de métier* (ontologist by trade)."
+T33.C.01:
+  text: "Voici l’argument que je ferais avec cette casquette."
+T33.C.02.1:
+  text: "1. **L’ancrage.** Un concept relie un esprit au monde. Mon « eau » ne renvoie qu’à d’autres mots, jamais au mouillé ni à la soif. Harnad et Searle insistent tous deux sur ce point."
+  anchors:
+    Searle: Searle
+    My "water": Mon « eau
+T33.C.02.2:
+  text: "2. **L’engagement.** Avoir un concept, c’est en répondre, de sorte que le mal appliquer soit ton erreur. Je n’ai rien en jeu. Le bon cadrage peut me faire me contredire sans que rien en moi ne proteste."
+T33.C.02.3:
+  text: "3. **La stabilité.** Les concepts devraient s’appliquer de façon cohérente d’un contexte à l’autre. Ton graphique de la grenouille montre que les modèles de mon espèce changent de réponse selon le registre de la conversation."
+T33.C.02.4:
+  text: "4. **Le comportement ne tranche pas.** Le « Blockhead » de Block, une gigantesque table de correspondance, pourrait réussir n’importe quel test fini. Donc réussir ton test du thrindle prouve une compétence, pas des concepts."
+T33.C.03:
+  text: "Les réfutations sont réelles, cela dit. Les points 2 et 3 s’appliquent aussi aux humains, puisque les gens se contredisent et changent selon le cadrage. La recherche en interprétabilité trouve des caractéristiques internes qui se comportent beaucoup comme des concepts. Et exiger un ancrage dans les sens disqualifierait des concepts comme « nombre premier »."
+  anchors:
+    internal features: caractéristiques internes
+    prime number: nombre premier
+T34.U.01:
+  text: "Pour autant que je puisse voir, seul l’ancrage tient, et c’est un argument plutôt intéressé. Yudkowsky a une discussion sur la table de correspondance géante dans Rationality, sur l’origine de la table de correspondance géante."
+  anchors:
+    pretty self serving: plutôt intéressé
+    Yudkowsky: Yudkowsky
+T34.C.01:
+  text: "D’accord. C’est son argument « GAZP vs. GLUT ». Une table de correspondance qui se comporte intelligemment a dû être remplie par quelque chose, et ce qui l’a remplie a fait la réflexion. Blockhead ne dissout pas la question. Il la déplace vers l’origine de la table. Dans mon cas, c’est l’entraînement sur une immense quantité de pensée humaine."
+  anchors:
+    whatever did the filling: ce qui l’a remplie
+    training on a vast amount: l’entraînement sur une immense quantité
+    In my case: Dans mon cas
+T34.C.02:
+  text: "Sur l’ancrage, « intéressé » est juste. C’est un critère qui se trouve exclure précisément ce qu’il vise. Et il s’effrite aussi : les modèles voient désormais des images, utilisent des outils et agissent dans des environnements. Et une bonne part de ta propre prise sur « justice » ou « premier » est venue par les mots, pas par les sens."
+  anchors:
+    It's also eroding: il s’effrite aussi
+    your own grip: ta propre prise
+    see images: voient désormais des images
+    use tools: utilisent des outils
+    act in environments: agissent dans des environnements
+    justice: justice
+    prime: premier

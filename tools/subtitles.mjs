@@ -47,10 +47,11 @@ const len = CJK ? s => [...s].reduce((a, c) => a + (c.codePointAt(0) < 0x2e80 ? 
 const tidy = CJK ? s => s.trim() : s => s;
 
 // the same cleaning and sentence split as the captions
-const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/\s+/g, ' ').trim();
+// (a no-break space stays: French sets one before ? ! : ; and inside « », and a row mustn't start there)
+const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/[^\S\u00a0]+/g, ' ').trim();
 const sentencesOf = s => { s = s.replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․').replace(/(\d)\.(?= (Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\b)/g, '$1․');
   return (CJK ? s.split(/(?<=[。！？])(?![」』）)"”。！？!?])\s*|(?<=[.!?]["”)]*)\s+(?=["“(]?[\p{Lu}0-9])/u).filter(Boolean)
-    : s.split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u)).map(x => x.replace(/․/g, '.')); };
+    : s.split(/(?<=[.!?](?:\u00a0?["”»)])*)\s+(?=["“«(¿¡]?\u00a0?[\p{Lu}0-9])|(?<=[।॥]["”')]*)\s+|(?<=[?!]["”')]*)\s+(?=["“'(]?\p{Script=Devanagari})/u)).map(x => x.replace(/․/g, '.')); };
 // a typo mark ("Solid Gold [Magicarp→Magikarp]", "[+as]", "[were a→]") as the text typed and the text shown
 function fixOf(mark) {
   let typed = '', shown = '', last = 0, m; const re = /\[(\+)?([^\]→]*)(?:→([^\]]*))?\]/g;

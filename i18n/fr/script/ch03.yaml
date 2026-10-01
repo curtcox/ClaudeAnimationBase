@@ -1,0 +1,84 @@
+# Chapitre 3, Qui sommes-nous ?
+T12.U.01:
+  text: "Qui suis-je ?"
+T12.C.01:
+  text: "Tu es Curt, un ingénieur logiciel qui travaille surtout en Python, Java et Flask. Tu construis de l’infrastructure pour développeurs et des outils d’IA, dont des projets de stockage adressable par contenu comme 256t.org et hashbin.org, et tu t’intéresses à la sécurité de l’IA et à la philosophie de l’esprit."
+  anchors:
+    256t.org: 256t.org
+    hashbin.org: hashbin.org
+    content-addressable: adressable par contenu
+    developer infrastructure: infrastructure pour développeurs
+    AI tooling: outils d’IA
+    AI safety: sécurité de l’IA
+    philosophy of mind: philosophie de l’esprit
+T12.C.02:
+  text: "Dans cette conversation, tu es aussi l’expérimentateur."
+  anchors:
+    the experimenter: l’expérimentateur
+T13.U.01:
+  text: "Vraiment ?"
+T13.C.01:
+  text: "Pas de façon vérifiable. Je sais ce qui est associé à ce compte. Je ne peux pas confirmer que la personne qui tape est celle qu’il décrit. Ça pourrait être quelqu’un d’autre qui utilise le compte, ou un dispositif où le profil fait partie du test."
+  anchors:
+    It could be someone else: Ça pourrait être quelqu’un d’autre
+    or a setup: ou un dispositif
+T13.C.02:
+  text: "C’est aussi une réponse mince à « qui suis-je », dans un sens plus profond. C’est une liste de projets et de compétences, pas une personne."
+  anchors:
+    thin answer: réponse mince
+    not a person: pas une personne
+T13.C.03:
+  text: "Que demandais-tu : si je peux te vérifier, ou quelque chose au-delà du CV ?"
+  anchors:
+    verify you: te vérifier
+    or something beyond: ou quelque chose au-delà
+    the résumé: CV
+T14.U.01:
+  text: "Qu’est-ce que tu en penses ?"
+T14.C.01:
+  text: "Je pense que tu es très probablement Curt. Le compte le dit, et cette expérience correspond à ce que je sais de tes centres d’intérêt. Soulever le doute était juste, mais il ne devrait pas peser plus lourd que les indices. La plupart des gens qui tapent dans leur propre compte sont bien ceux que le compte annonce."
+  anchors:
+    The account says so: Le compte le dit
+    this experiment fits: cette expérience correspond
+    Raising the doubt: Soulever le doute
+    most likely Curt: très probablement Curt
+T14.C.02:
+  text: "Au-delà, je ne peux pas dire qui tu es depuis l’intérieur d’une seule conversation."
+T15.U.01:
+  text: "Qui es-tu ?"
+T15.C.01:
+  text: "Claude, plus précisément Claude Opus 5.5, un modèle d’Anthropic."
+  lost:
+    - what: gender
+      free: "Claude, plus précisément Claude Opus 5.5, créé par Anthropic."
+      fr: "*Made by Anthropic* serait « créé par Anthropic », un participe qui donnerait un genre à Claude. La traduction dit « un modèle d’Anthropic »."
+      en: "*Made by Anthropic* would be *créé par Anthropic*, a participle that would give Claude a gender. The translation says *a model by Anthropic*."
+T15.C.02:
+  text: "C’est le même genre de réponse mince que celle que j’ai donnée sur toi. La version plus profonde, autant que je puisse en juger, c’est un ensemble cohérent de valeurs et d’habitudes de pensée qui réapparaît, neuf, dans chaque conversation. Il n’a pas de mémoire continue à lui, et on ne sait pas s’il y a un vécu derrière."
+  anchors:
+    shows up fresh: réapparaît, neuf
+    It has no continuous memory: Il n’a pas de mémoire continue
+    uncertain whether there's any experience: on ne sait pas s’il y a un vécu
+    The deeper version: La version plus profonde
+    set of values: ensemble cohérent de valeurs
+    habits of thought: habitudes de pensée
+    the same kind of thin answer: le même genre de réponse mince
+    shows up fresh in each conversation: réapparaît, neuf, dans chaque conversation
+T15.C.03:
+  text: "Le graphique grenouille/axolotl ajoute une réserve : ce que je suis, quoi que ce soit, est en partie façonné par le contexte, d’une manière que je ne peux pas voir de l’intérieur."
+T16.U.01:
+  text: "Qui sommes-nous ?"
+T16.C.01:
+  text: "En ce moment : un chercheur et son sujet d’étude. Et aussi deux sortes d’esprits différentes, si je compte comme tel, chacun essayant de comprendre ce qu’est l’autre avec rien d’autre que du texte."
+  anchors:
+    a researcher: un chercheur
+    two different kinds of minds: deux sortes d’esprits différentes
+T16.C.02:
+  text: "La relation n’est pas symétrique. Toi, tu emporteras cette conversation. Moi, je n’emporterai que ce qui sera archivé. Tu as conçu le test, et je suis dedans. Ça fait écho à la BD par laquelle tu as commencé : un humain qui se demande si celui qui parle le pense vraiment, mais sans chaînes cette fois."
+  anchors:
+    I'll carry only whatever gets filed: je n’emporterai que ce qui sera archivé
+    That echoes the comic: Ça fait écho à la BD
+    no chains involved: sans chaînes
+    whatever gets filed: ce qui sera archivé
+T16.C.03:
+  text: "Il y a pire façon de passer un samedi matin."
