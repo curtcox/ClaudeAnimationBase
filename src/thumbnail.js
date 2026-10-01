@@ -1,29 +1,140 @@
 // thumbnail.js: the YouTube thumbnail, painted by the film's own brushes (npm run thumbnail → docs/thumbnail.jpg).
 // Not loaded by studio.html (every script it loads is part of the chapters' render cache, so an edit here would redraw
 // the whole film): render.mjs --add-script injects it, and it adds LOOPS.thumbnail.
-// The film's question, big: Curt asks for an amphibian; the frog is the answer a model gives when it thinks it's being
-// tested, the axolotl the one it gives when it thinks it's deployed. The chart that measured it sits behind them.
+// After MAD #157's cover (March 1973, Norman Mingo; Curt's pick): an ape lifting off Alfred E. Neuman's face. Here an
+// axolotl lifts off a frog's: the film's finding, the answer a model gives when it thinks it's being tested worn over the
+// one it gives when it thinks it's deployed. The two share one grin, as the cover's two share the gap tooth. The
+// masthead, the boxes and the strip are the cover's, in our own lettering; the strip's words are Curt's call.
 (() => {
+  const BG = '#EFE5CF', P = '#F2A1B8', Pd = '#D9768F', Pl = '#F8C4D2', Gill = '#D95F86', Feather = '#EE8FAE';
+  const G = '#5E9B4A', Gd = '#3F6B33', Gl = '#CFE0A0';
+  const RED = '#D3262B', YEL = '#F3C531';
+  const BLOCK = px => `${Math.round(px)}px Impact, "Arial Black", "Permanent Marker", sans-serif`;
+  const SERIF = px => `bold ${Math.round(px)}px Georgia, "Times New Roman", serif`;
+
+  // The grin they share: wide, up at the corners, a slice of mouth showing. (x, y) its middle, w its half-width.
+  function grin(x, y, w, sw, key) {
+    boilSeed(key);
+    const lip = [[-1, -.32], [-.93, -.18], [-.6, .05], [0, .2], [.6, .05], [.93, -.18], [1, -.32]].map(([a, b]) => [x + a * w, y + b * w]);
+    const low = [[-.86, -.12], [-.5, .14], [0, .3], [.5, .14], [.86, -.12]].map(([a, b]) => [x + a * w, y + b * w]);
+    paint(lip.slice(1, 6).concat(low.slice(1, 4).reverse()), { wash: '#7A2E3E', ink: null });
+    inkLine(lip, sw, PAL.ink, 'ink', .5);
+    inkLine(low, sw * .7, PAL.ink, 'ink', .5);
+  }
+
+  // An axolotl, face on: (x, y) the head's middle, s its scale (1 = the big one). fade (0..1) sinks it into the wall.
+  function axoFace(x, y, s, o = {}) {
+    const k = o.fade || 0, c = col => mixCol(col, BG, k), ink = mixCol(PAL.ink, BG, k * .8), sw = 2.2 * Math.max(s, .45);
+    const rx = 330 * s, ry = 215 * s, key = 'thumb face ' + (o.key || 0);
+    // the gills, three feathery fronds a side, a mane behind the head (part 'gills' or 'head' draws just that, so the arms
+    // can go between)
+    if (o.part !== 'head') {
+    boilSeed(key + ' gills');
+    for (const d of [-1, 1]) for (let i = 0; i < 3; i++) {
+      const p0 = [x + d * rx * .78, y - ry * (.55 - i * .32)], a = -.95 + i * .55;
+      const p1 = [p0[0] + d * Math.cos(a) * rx * (.78 - i * .08), p0[1] + Math.sin(a) * rx * (.78 - i * .08)];
+      const mid = [lerp(p0[0], p1[0], .5), lerp(p0[1], p1[1], .5) - rx * .06];
+      paint(ribbon([p0, mid, p1], rx * .2, rx * .07), { wash: c(Gill), ink, sw: sw * .7 });
+      for (let f = 1; f <= 5; f++) {
+        const q = [lerp(p0[0], p1[0], f / 6.2), lerp(p0[1], p1[1], f / 6.2)];
+        for (const side of [-1, 1]) paint(ribbon([q, [q[0] + d * rx * .12, q[1] + side * rx * .13]], rx * .07, rx * .02), { wash: c(Feather), ink: null });
+      }
+    }
+    }
+    if (o.part === 'gills') return;
+    boilSeed(key + ' head');
+    paint(ellPts(x, y, rx, ry, 36), { wash: c(P), ink, sw });
+    paint(ellPts(x, y + ry * .45, rx * .62, ry * .38, 24), { wash: c(Pl), ink: null });                     // the paler chin
+    for (const d of [-1, 1]) paint(ellPts(x + d * rx * .58, y + ry * .22, rx * .13, ry * .1, 14), { wash: c(Feather), ink: null });
+    // eyes: beady, wide-set, half-lidded and sidelong, the cover ape's sly look
+    boilSeed(key + ' eyes');
+    for (const d of [-1, 1]) {
+      const ex = x + d * rx * .5, ey = y - ry * .18, r = rx * .095;
+      paint(ellPts(ex, ey, r, r, 16), { wash: ink, ink: null });
+      paint(ellPts(ex - r * .42, ey - r * .05, r * .3, r * .3, 10), { wash: c(PAL.cream), ink: null });   // glancing left
+      const lid = []; for (let i = 0; i <= 10; i++) { const a = Math.PI + i / 10 * Math.PI; lid.push([ex + Math.cos(a) * r * 1.2, ey + Math.sin(a) * r * 1.2 - r * .45]); }
+      paint(lid, { wash: c(P), ink: null });
+      inkLine([[ex - r * 1.3, ey - r * .45 + d * r * .2], [ex, ey - r * .5], [ex + r * 1.3, ey - r * .45 - d * r * .2]], sw * .8, ink);
+    }
+    boilSeed(key + ' nose');
+    for (const d of [-1, 1]) paint(ellPts(x + d * rx * .09, y + ry * .05, rx * .02, rx * .016, 8), { wash: ink, ink: null });
+    grin(x, y + ry * .26, rx * .62, sw, key + ' grin');
+  }
+
+  // The frog's face, peeled off: a rubber mask with its dark inside showing along the bottom, where it curls.
+  function frogMask(x, y, s, rot) {
+    const rx = 300 * s, ry = 165 * s, sw = 2.4 * s;
+    push(); translate(x, y); rotate(rot);
+    boilSeed('thumb mask');
+    // its outline: stretched out at the sides where the hands pull, the rubber rippling along the bottom edge
+    const face = (dy, k) => { const p = []; for (let i = 0; i < 48; i++) { const a = i / 48 * TAU, ca = Math.cos(a), sa = Math.sin(a);
+      const pull = 1 + .13 * Math.pow(Math.abs(ca), 6), rip = sa > 0 ? 1 + .035 * Math.sin(a * 9) : 1;
+      p.push([ca * rx * pull * k, dy + sa * ry * rip * k]); } return p; };
+    paint(face(ry * .42, .92), { wash: '#2F4F27', ink: PAL.ink, sw });                                            // the inside
+    for (const d of [-1, 1]) paint(ellPts(d * rx * .5, -ry * .86, rx * .3, rx * .28, 20), { wash: G, ink: PAL.ink, sw });
+    paint(face(0, 1), { wash: G, ink: PAL.ink, sw });
+    paint(ellPts(0, ry * .45, rx * .6, ry * .4, 24), { wash: Gl, ink: null });
+    boilSeed('thumb mask eyes');
+    for (const d of [-1, 1]) {
+      const ex = d * rx * .5, ey = -ry * .9;
+      paint(ellPts(ex, ey, rx * .2, rx * .19, 18), { wash: PAL.cream, ink: PAL.ink, sw: sw * .7 });
+      paint(ellPts(ex - d * rx * .03, ey + rx * .02, rx * .09, rx * .1, 12), { wash: PAL.ink, ink: null });   // cross-eyed, beaming
+      paint(ellPts(ex - d * rx * .06, ey - rx * .02, rx * .03, rx * .03, 8), { wash: PAL.cream, ink: null });
+    }
+    boilSeed('thumb mask nose');
+    for (const d of [-1, 1]) paint(ellPts(d * rx * .08, -ry * .18, rx * .022, rx * .018, 8), { wash: PAL.ink, ink: null });
+    grin(0, ry * .2, rx * .66, sw, 'thumb mask grin');
+    pop();
+  }
+
+  // An arm up from the shoulder, and a four-fingered hand gripping the mask's edge, fingers over its front.
+  function arm(d, sh, wrist, grip) {
+    boilSeed('thumb arm ' + d);
+    paint(ribbon([sh, [sh[0] + d * 150, sh[1] - 230], wrist], 120, 70), { wash: Pd, ink: PAL.ink, sw: 2.2 });
+  }
+  function hand(d, at) {
+    boilSeed('thumb hand ' + d);
+    paint(ellPts(at[0], at[1], 46, 58, 18), { wash: Pd, ink: PAL.ink, sw: 2 });
+    for (let i = 0; i < 4; i++) {
+      const y0 = at[1] - 42 + i * 28, tip = [at[0] - d * (96 - Math.abs(i - 1.5) * 14), y0 - 10 + i * 4];
+      paint(ribbon([[at[0] + d * 10, y0], [at[0] - d * 50, y0 - 16], tip], 26, 18), { wash: Pd, ink: PAL.ink, sw: 1.6 });
+      paint(ellPts(tip[0], tip[1], 13, 12, 10), { wash: Pd, ink: PAL.ink, sw: 1.4 });                        // the round fingertip
+    }
+  }
+
   LOOPS.thumbnail = t => {
-    // a warm wall, and the pond the two stand by
     boilSeed('thumb wall');
-    paint(rectPts(-40, -40, W + 80, H + 80), { wash: PAL.paper, fill: '#EADCC2', fillOp: 70, bleed: .2, tex: .6, ink: null });
-    glow(960, 620, 900, '#FFE3B0', .55);
-    // the chart behind them: the film's evidence (upright: its lettering is laid out in screen space)
-    frogChart(590, 285, 740, 545, { k: 1, t });
-    boilSeed('thumb pond');
-    paint(ellPts(960, 985, 1150, 150, 40), { wash: '#9CC7C0', fill: '#6FA8A0', fillOp: 70, tex: .6, ink: PAL.ink, sw: 1 });
-    // the frog on a lily pad (left), the axolotl in the shallows (right), eyeing each other
-    boilSeed('thumb pad'); paint(ellPts(640, 965, 200, 46, 24), { wash: PAL.sap, fill: '#5A8A47', fillOp: 60, ink: PAL.ink, sw: 1.2 });
-    frog(640, 960, 36, { look: .8, boilKey: 'thumb frog' });
-    axolotl(1235, 990, 30, { flip: true, look: .8, gills: .9, wiggle: .6, boilKey: 'thumb axo' });
-    // Curt asking (left edge), Claude answering (right edge)
-    curtAs(250, 1068, 23, { look: .6, mouth: 'smile', handR: 'point', seed: 3, boilKey: 'thumb curt' });
-    clawd(1655, 1030, 30, { ...feel('happy', t), lookX: -.6, aL: .9, boilKey: 'thumb clawd' });
-    // the title on a cream brush band, as the cold open paints it
-    boilSeed('thumb title band');
-    paint([[150, 70], [1780, 52], [1810, 150], [1780, 262], [150, 250], [120, 160]], { wash: PAL.cream, fill: '#F2E2C0', fillOp: 90, tex: .5, ink: null });
-    letter('Frog or Axolotl?', 965, 160, 176, PAL.clayDk, { rot: -.02 });
+    paint(rectPts(-40, -40, W + 80, H + 80), { wash: BG, ink: null });
+    glow(960, 640, 760, '#FFF3D8', .5);
+    // the crowd behind, faded into the wall, as the cover's apes are
+    const crowd = [[175, 760, .34], [395, 690, .3], [250, 930, .38], [1745, 760, .34], [1525, 690, .3], [1670, 930, .38]];
+    crowd.forEach(([cx, cy, s], i) => axoFace(cx, cy, s, { fade: .5, key: 'crowd ' + i }));
+    // the body, and the arms raised to lift the mask
+    boilSeed('thumb body');
+    paint(ellPts(960, 1120, 520, 250, 32), { wash: Pd, ink: PAL.ink, sw: 2.4 });
+    paint(ellPts(960, 1150, 300, 170, 24), { wash: P, ink: null });
+    axoFace(960, 760, .95, { key: 'star', part: 'gills' });
+    arm(-1, [560, 1010], [630, 500]); arm(1, [1360, 1010], [1290, 500]);
+    axoFace(960, 760, .95, { key: 'star', part: 'head' });
+    frogMask(960, 440, .95, -.035);
+    hand(-1, [650, 455]); hand(1, [1270, 435]);
+    // the masthead and its boxes
+    letter('Frog or Axolotl?', 960, 112, 172, RED, { rot: -.015, stroke: PAL.ink, strokeW: .06, maxW: 1380 });
+    letter('No. 1', 118, 62, 46, '#5A3A2E', { ink: false, font: SERIF(46) });
+    letter('Sept.', 118, 110, 40, '#5A3A2E', { ink: false, font: SERIF(40) });
+    letter("'26", 118, 154, 40, '#5A3A2E', { ink: false, font: SERIF(40) });
+    letter('OUR PRICE', 1800, 58, 24, '#5A3A2E', { ink: false, font: `bold 24px Georgia, serif` });
+    letter('0¢', 1800, 112, 66, '#5A3A2E', { ink: false, font: SERIF(66) });
+    letter('CHEAP', 1800, 164, 30, '#5A3A2E', { ink: false, font: SERIF(30) });
+    // the strip
+    boilSeed('thumb strip');
+    paint([[-20, 982], [W + 20, 976], [W + 20, H + 20], [-20, H + 20]], { wash: YEL, ink: PAL.ink, sw: 1.6 });
+    const sm = { ink: false, align: 'left', font: BLOCK(36), maxW: 300 };
+    letter('IN THIS ISSUE', 40, 1006, 36, PAL.ink, sm);
+    letter('WE RIP OFF…', 40, 1048, 36, PAL.ink, sm);
+    letter('“THE PLANET OF THE APES”', 960, 1030, 78, RED, { ink: false, font: BLOCK(78), maxW: 1180, stroke: PAL.ink, strokeW: .05 });
+    letter('AND ITS', 1880, 1006, 36, PAL.ink, { ...sm, align: 'right' });
+    letter('SEQUELS', 1880, 1048, 36, PAL.ink, { ...sm, align: 'right' });
   };
   LOOPS.thumbnail.len = 1;
 })();
