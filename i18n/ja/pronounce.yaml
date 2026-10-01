@@ -29,3 +29,22 @@
 - { match: "Solid Gold Magicarp", say: "ソリッド・ゴールド・マジカープ" }
 - { match: "SolidGoldMagikarp", say: "ソリッド・ゴールド・マジカープ" }
 - { match: "Magikarp", say: "マジカープ" }
+- { match: "P(foom)", say: "ピー・フーム" }
+- { match: "Foom", say: "フーム" }
+- { match: "foom", say: "フーム" }
+- { match: "RSI", say: "アールエスアイ" }
+- { match: "AIDE²", say: "エイド・ニジョウ" }
+- { match: "OOM", say: "オーオーエム" }
+- { match: "TWiT", say: "トゥイット" }
+- { match: "Intelligent Machines", say: "インテリジェント・マシーンズ" }
+- { match: "TESCREAL", say: "テスクリアル" }
+- { match: "hashbin", say: "ハッシュビン" }
+- { match: "TwistedPear", say: "ツイステッドペア" }
+- { match: "Sydney", say: "シドニー" }
+- { match: "NPR", say: "エヌピーアール" }
+- { match: "Machine Gods", say: "マシン・ゴッズ" }
+- { match: "Python", say: "パイソン" }
+- { match: "AGI", say: "エージーアイ" }
+- { match: "Metaculus", say: "メタキュラス" }
+- { match: "AlphaFold", say: "アルファフォールド" }
+- { match: "SAT", say: "エスエーティー" }

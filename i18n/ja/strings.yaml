@@ -193,6 +193,39 @@ Hermes: Hermes
 Dyson: ダイソン
 T-800 (T2): T-800（T2）
 
+# ---- 13 Foom ----
+FOOM: FOOM
+
+# ---- 14 論客たち ----
+harm now: 今の害
+risk later: 先のリスク
+Paul Lynde: ポール・リンド
+Paris: パリス
+Leo: レオ
+Jeff: ジェフ
+Kevin: ケヴィン
+Casey: ケイシー
+
+# ---- 15 コンパス ----
+# the compass's quadrant names, each lettered as two lines (first word on top), in Japanese order
+tech: 技術
+accelerationists: 加速主義者
+goalpost movers: ゴールポストを動かす人
+unimpressed: 感心しない
+(AGI not now): （AGIはまだ）
+scale: スケール
+maximalists: 至上主義者
+(AGI soon): （AGIはもうすぐ）
+doomers: 破滅論者
+Connor: コナー
+Gubrud: グブラッド
+Goertzel: ゲーツェル
+Legg: レッグ
+longtermists: 長期主義者
+
+# ---- 16 コーダ ----
+'XKCD: NERD SNIPING': 'XKCD: NERD SNIPING'
+
 # ---- words the scenes take from the lines, by chapter ----
 # 2
 real users: 実際のユーザー
@@ -340,6 +373,75 @@ maintenance: 保守
 Landauer: ランダウアー
 ops ≤ 2E/πħ: 演算 ≤ 2E/πħ
 token: トークン
+# 13
+# the backronym stays English, lettered with its capitals apart (F ast, O nset of, ...)
+13|ast: ast
+13|nset of: nset of
+13|verwhelming: verwhelming
+13|astery: astery
+Counting the OOMs: OOMを数える
+June 2024: 2024年6月
+1,250 papers: 1250本の論文
+accepted: 受け入れ
+Delta P(foom)?: デルタP(foom)？
+# 14 (the doom options, top line and bottom line on each door, and the hosts' cards)
+obviously: 明らかに
+wrong: 間違い
+14|a: 目を
+distraction: そらすもの
+14|Pascal's: パスカルの
+14|mugging: 強盗
+Orthogonality: 直交性
+smarter: 賢い
+14|much: はるかに
+14|exact: 正確な
+14|strategy: 戦略
+strategy: 戦略
+14|plenty of: たっぷりの
+effort: 労力
+14|other existential: ほかの存亡の
+14|threats: 脅威
+Other: その他
+Hubris: ヒュブリス
+Python loop: Pythonのループ
+misaligned goals: ずれた目標
+weak oversight: 弱い監督
+racing incentives: 競争を煽るインセンティブ
+you: あなた
+incentives: インセンティブ
+moving: 心を動かす
+transparency: 透明性
+open weights: オープンウェイト
+Father Robert: ロバート神父
+disclose: 開示
+interesting: 興味深い
+'"listen"': 「聴いて」
+the frog: カエル
+worrying: 心配
+# 15 (the Metaculus checklists are lettered a line at a time)
+AGI good: AGIは善
+AGI bad: AGIは悪
+Weak AGI: 弱いAGI
+Turing-test-style: チューリングテスト風
+Winograd schemas: ウィノグラード・スキーマ
+75th-percentile SAT math: SATの数学で75パーセンタイル
+Strong AGI: 強いAGI
+15|two-hour adversarial: 2時間の敵対的
+15|Turing test: チューリングテスト
+15|expert-level exam and: 専門家レベルの試験と
+15|coding benchmarks: コーディングのベンチマーク
+15|a robot assembling a: 精密な模型の車を
+15|detailed model car: 組み立てるロボット
+AI alignment alignment chart: AIアライメントのアライメント表
+generality: 汎用性
+learning on the job: 仕事をしながら学ぶ
+long-horizon autonomy: 長い時間軸での自律性
+is it good enough to matter?: それは重要になるほど優れているか？
+is it general?: それは汎用か？
+# 16
+Formic queens: フォーミックの女王たち
+frogs: カエル
+foom: Foom
 
 # ---- every chapter ----
 Explained: 解説

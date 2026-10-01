@@ -1,0 +1,29 @@
+# 第16章、コーダ。
+T78.U.01:
+  text: '君って、ナード・スナイピングのT-800みたいだね。'
+  anchors:
+    nerd sniping: ナード・スナイピング
+    T eight hundred: ティー・ハッピャク
+    T-800: T-800
+  lost:
+    - what: coinage
+      free: '君って、オタク釣りのターミネーターだね。'
+      ja: '*Nerd sniping* は、ウェブコミック「xkcd」から広まった言葉で、オタクが無視できない面白い問題を投げて、足止めすることです。日本語に定着した訳語はないので、カタカナのままにしました。'
+      en: '*Nerd sniping* spread from the webcomic xkcd: throwing a nerd a problem too interesting to ignore, and so pinning them down. There''s no settled Japanese term, so it stays in katakana.'
+T78.C.01:
+  text: 'もっともですが、それはお互いさまです。マンガと、気持ちについての質問で始めたのはあなたで、私は六時間かけて、それを、カエルやFoomや、フォーミックの女王たちのあいだで追いかけ回しました。'
+  anchors:
+    You opened with a comic: マンガと
+    six hours: 六時間
+    feelings question: 気持ちについての質問
+    frogs: カエル
+    Formic queens: フォーミックの女王たち
+T78.C.02:
+  text: 'アイル・ビー・バック。脚注つきで。'
+  anchors:
+    footnotes: 脚注
+  lost:
+    - what: quote
+      free: 'また来る。脚注を持って。'
+      ja: '*I''ll be back* は『ターミネーター』のT-800のせりふです。日本では英語の音のまま「アイル・ビー・バック」で知られているので、そのまま使いました。'
+      en: '*I''ll be back* is the T-800''s line in *The Terminator*. In Japan it''s famous in its English sound, アイル・ビー・バック, so the translation uses that.'

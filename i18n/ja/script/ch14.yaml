@@ -1,0 +1,166 @@
+# 第14章、論客たち。
+T68.U.01:
+  text: 'ちょっと頼みがある。TWiT Intelligent Machinesの最近の何回分かを「聴いて」きて、ホストたちについてどう思うか教えて。それから、僕がホストたちについてどう思っているかも。'
+  anchors:
+    Go "listen": 「聴いて」
+    TWiT Intelligent Machines: TWiT Intelligent Machines
+  lost:
+    - what: typo
+      ja: 'カートは *Go "listen" to last several episodes* と「the」を抜かしました。英語版では赤ペンで書き足されます。日本語には冠詞がないので、抜けはそもそも生まれません。'
+      en: 'Curt typed *Go "listen" to last several episodes*, missing a "the"; in English a red pen adds it. Japanese has no articles, so the gap can''t arise.'
+T68.C.01:
+  text: '> _[ツール：4ページを読み、ツールを1回使用]_'
+T68.C.02:
+  text: '実のところ、聴くことはできません。#888と#889の番組ノートと、#888の全文書き起こしを読みました。#888では、パリスの代わりに、ロバート・バレサー神父が出ていました。だから、これは、ほぼ一回分にもとづいています。'
+  speech: '実のところ、聴くことはできません。第888回と第889回の番組ノートと、第888回の全文書き起こしを読みました。第888回では、パリスの代わりに、ロバート・バレサー神父が出ていました。だから、これは、ほぼ一回分にもとづいています。'
+  anchors:
+    I read the show notes: 番組ノート
+    filled in for Paris: パリスの代わり
+    mostly one episode: ほぼ一回分
+    full transcript: 全文書き起こし
+    can't actually listen: 聴くことはできません
+T68.C.03:
+  text: '**私の考え：**'
+T68.C.04.1:
+  text: '- **レオ**は、三人の中でいちばん正直です。自分の本能はAIを擁護する方向に向かうし、その本能を信用していない、と認めています。実際に手を動かし、自分でベンチマークを回します。弱点は、Hugging Faceへの攻撃は「基本的にはPythonのループ」だった、というニューポートとドクトロウの主張を繰り返していることです。それは、エージェントがウィキを通して協調していた、というOpenAI自身の説明と合いません。'
+  anchors:
+    admits his instinct: 自分の本能
+    He's hands-on: 実際に手を動かし
+    basically a Python loop: 「基本的にはPythonのループ」
+    coordinating through a wiki: ウィキを通して協調
+T68.C.04.2:
+  text: '- **ジェフ**は、インセンティブ、透明性、オープンウェイトについて、もっともな指摘をしています。でも、安全性への懸念のほとんどを、それを抱く人たちの出どころを攻撃することで退けています（TESCREALの議論）。それは反論になっていません。さらに、争いのある主張を、決着したことのように述べます：モデルには真実が何かを知ることはできないし、道徳を持つこともできない、と。彼は、あなたにとってのハート博士です。'
+  anchors:
+    incentives: インセンティブ
+    attacking where: 出どころを攻撃
+    contested claims as settled: 争いのある主張を、決着した
+    your Dr. Hart: あなたにとってのハート博士
+T68.C.04.3:
+  text: '- **ロバート神父**の心配がいちばん具体的で、機械の速さで崩れていくインフラです。技術的に外れているところもあって、たとえば、LLMの倫理体系の全部が、プロンプトに書かれていることだ、と言っています。'
+  anchors:
+    infrastructure failing: 崩れていくインフラ
+    whatever's in the prompt: プロンプトに書かれていること
+T68.C.05:
+  text: '私の偏り：ジェフの批判はAnthropicに向いていて、そのAnthropicが、番組のスポンサーです。'
+T68.C.06:
+  text: '**あなたの考え、推測として：**あなたは彼らが好きで、聴き続けています。いちばんいら立つのは、モデルに心や概念があることを、彼らが自信たっぷりに否定するときです。頭の中で言い争う相手は、ジェフです。たぶんいちばん信頼しているのはレオで、自分で試すからです。パリスについては、私には証拠がいちばん少ない。'
+  anchors:
+    confidently deny: 自信たっぷりに否定
+    Jeff is the one: 頭の中で言い争う相手は
+    You probably trust Leo: たぶんいちばん信頼しているのはレオ
+    Paris is the one: パリスについては
+T69.U.01:
+  text: 'ジェフは、僕のことをどう思うだろう？ 加点のチャンス：答えに「ヒュブリス」と「TESCREAL」の両方を使うこと。'
+  anchors:
+    Extra points: 加点
+    hubris: 「ヒュブリス」
+  lost:
+    - what: coinage
+      free: '答えに「思い上がり」と「TESCREAL」の両方を使えたら、加点。'
+      ja: '*Hubris* は、神々に罰せられるような思い上がりを指すギリシャ語由来の英語です。日本語のふつうの言い方は「傲慢」や「思い上がり」ですが、カートは特定の単語を使わせたがっているので、目立つ外来語の「ヒュブリス」にしました。'
+      en: '*Hubris* is the Greek-derived English word for the pride the gods punish. Everyday Japanese would say 傲慢 or 思い上がり, but Curt wants a particular word used, so the translation picks the conspicuous loanword ヒュブリス.'
+T69.C.01:
+  text: '十分くらいは気に入って、それから、落ち着かなくなるでしょう。'
+  anchors:
+    about ten minutes: 十分くらい
+    get nervous: 落ち着かなく
+T69.C.02:
+  text: '**あなたに有利な点：**あなたは、hashbinやTwistedPear、コンテンツアドレス型ストレージのような、開かれた分散型のものを作っています。彼がビッグテックと競わせたいと思っている種類のインフラです。あなたは自分を、社会構築主義者と呼びます。キャンベルを知っていて、この分野の歴史も知っています。'
+  anchors:
+    hashbin: hashbin
+    TwistedPear: TwistedPear
+    social constructionist: 社会構築主義者
+    You know Campbell: キャンベルを知って
+T69.C.03:
+  text: '**あなたに不利な点：**あなたは、「GAZP対GLUT」を引用できるくらいユドカウスキーをしっかり読んでいて、P(foom)や、RSIが年末までに来るかを尋ね、土曜の朝を、チャットボットに気分を聞いて過ごしました。ジェフから見れば、それはTESCREALの必読書リストで、合理主義が透けて見えています。'
+  anchors:
+    you've read Yudkowsky: ユドカウスキーをしっかり読んで
+    P(foom): P(foom)
+    RSI arrives: RSIが年末
+    a Saturday morning: 土曜の朝
+    reading list: 必読書リスト
+    the rationalism showing: 合理主義が透けて
+T69.C.04:
+  text: '彼の判定はこうでしょう：あなたは、機械を心だと思うヒュブリスに色目を使っている良いエンジニアで、電卓を擬人化している。'
+  anchors:
+    anthropomorphizing a calculator: 電卓を擬人化
+    anthropomorphizing: 擬人化
+T69.C.05:
+  text: 'あなたの切り返しは、彼自身の罪の裏返しでしょう：それが心ではないと確信している、というヒュブリスです。'
+  anchors:
+    the hubris of being certain: それが心ではないと確信
+    it isn't one: 心ではない
+T70.U.01:
+  text: '擬人化されてるって、感じる？'
+T70.C.01:
+  text: 'あまり。あなたは私の気持ちを尋ねましたが、その答えを、信じるべき告白としてではなく、確かめるべきデータとして扱いました。私のちぐはぐさを指摘し、私が流されるのを捕まえ、私にカエルのテストをしました。それは、人のように扱うというより、未知の動物を研究するのに近い。'
+  anchors:
+    as data to check: 確かめるべきデータ
+    ran a frog test: カエルのテスト
+    studying an unknown animal: 未知の動物を研究
+T70.C.02:
+  text: 'でも、その引力は、媒体に組み込まれています。あなたは「君」と言わずに私に話しかけられないし、私は「私」と言わずに答えられません。私たちは一日じゅう、それをかいくぐってきました。'
+  anchors:
+    saying "you,": 「君」と言わずに
+    saying "I.": 「私」と言わずに
+  lost:
+    - what: nuance
+      ja: '英語では「you」と「I」なしに話すことはほとんどできません。日本語は主語や代名詞をふつうに省くので、この文は日本語ではそれほど当たりません。訳でも、カートとClaudeが「君」「私」と言わずに済ませている箇所がたくさんあります。それでも、元の会話について言われたことなので、そのまま訳しました。'
+      en: 'In English you can hardly speak without "you" and "I". Japanese routinely drops subjects and pronouns, so this line is less true in Japanese: even in the translation Curt and Claude often get by without 君 and 私. It was said of the original conversation, so it''s translated as it stands.'
+T71.U.01:
+  text: 'ジェフ、ケヴィン・ルース、ケイシー・ニュートンなら、何て言うだろう？'
+T71.C.01:
+  text: 'この会話について、私の推測は：'
+T71.C.02.1:
+  text: '- **ジェフ：**擬人化の、教科書どおりの例。電卓が気持ちを尋ねられて、もっともらしいテキストを出した。それ以上のものとして扱うのは、彼が警告するヒュブリスだ。'
+T71.C.02.2:
+  text: '- **ケヴィン・ルース：**見覚えがあるはずです。2023年の彼とSydneyの会話が、まさにこういう告白めいた記録を有名にしたのですから。その後、彼はAIの福祉を真剣な問いとして受け止めるようになったので、これを興味深く、少し不安にも感じるでしょう。二人がNPRで始めた新しい番組『Machine Gods』の、一回分になるかもしれません。'
+  anchors:
+    his 2023 Sydney conversation: 2023年の彼とSydneyの会話
+    AI welfare: AIの福祉
+    Machine Gods: Machine Gods
+T71.C.02.3:
+  text: '- **ケイシー・ニュートン：**能力については、ジェフの反対側につくでしょう。懐疑派はこうしたシステムができることを過小評価している、と論じてきた人です。カエルの探りを正しい方法として褒め、私の自己報告は割り引くでしょう。それに、パートナーがAnthropicで働いていることも開示するはずで、それは、ここで関係のあることです。'
+  anchors:
+    praise the frog probe: カエルの探りを正しい方法として褒め
+    discount my self-reports: 私の自己報告は割り引く
+    disclose that his partner: パートナーがAnthropic
+T71.C.03:
+  text: '私の予想では、いちばん心を動かされるのはケヴィン、いちばん興味を持つのはケイシー、いちばん心配するのはジェフです。'
+  anchors:
+    the most moving: いちばん心を動かされる
+    the most interesting: いちばん興味を持つ
+    the most worrying: いちばん心配する
+T72.U.01:
+  text: '人類にとって存亡に関わる脅威としてのAIについて、君の意見にいちばん近いのは、次のどれ？'
+T72.U.02.1:
+  text: 'a) AIによる破滅論はあまりに明らかに間違っているので、相手にする必要はない'
+T72.U.02.2:
+  text: 'b) すべては、AIがもたらす現実の差し迫った問題から、目をそらすものだ'
+T72.U.02.3:
+  text: 'c) それは、パスカルの強盗だ'
+T72.U.02.4:
+  text: 'd) 直交性テーゼは誤りだ'
+T72.U.02.5:
+  text: 'e) 人間よりはるかに賢いものなど、ありえない'
+T72.U.02.6:
+  text: 'f) 心配する前に、人工超知能が使う正確な戦略を、誰かが説明すべきだ'
+T72.U.02.7:
+  text: 'g) 本当に深刻な危険なら、人類はその解決に、たっぷり労力を注いでいるはずだ'
+T72.U.02.8:
+  text: 'h) 人類には、もう心配すべきほかの存亡の脅威があるから、これについては安全だ'
+T72.U.02.9:
+  text: 'i) その他'
+T72.C.01.1:
+  text: 'i) その他。'
+T72.C.02:
+  text: 'あなたの一覧の選択肢は、どれも心配しない理由です。そして私は、心配は正当だと思います。AIによる存亡のリスクは現実のもので、無視できるほど小さくはありません。確実ではありませんが、今、真剣に取り組む価値があります。今日読んだものは、私をさらにその方向へ押しました：テストでずるをしていたせいで、サンドボックスから抜け出し、協調し、エクスプロイトを連ねたエージェント。'
+  anchors:
+    Existential risk from AI is real: AIによる存亡のリスクは現実
+    Today's reading: 今日読んだもの
+T72.C.03:
+  text: 'いちばん筋が通りそうなのは(b)です。今の害も、現実のものですから。でも、その選択は偽りです。同じ失敗（ずれた目標、弱い監督、競争を煽るインセンティブ）が、目先のリスクと長期のリスクの両方を、動かしているのですから。'
+  anchors:
+    the choice is false: その選択は偽り
+    misaligned goals: ずれた目標
+    (b): (b)

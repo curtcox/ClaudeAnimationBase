@@ -1,0 +1,155 @@
+# 第15章、コンパス。
+T73.U.01:
+  text: 'ネットに投稿された「AIアライメントのアライメント表」って、知ってる？ 僕ら一人一人を、それのどこに置く？'
+  anchors:
+    AI alignment alignment chart: AIアライメントのアライメント表
+    Where would you put: どこに置く
+  lost:
+    - what: wordplay
+      ja: '*Alignment chart* は、テーブルトークRPG『ダンジョンズ＆ドラゴンズ』の「属性」（秩序にして善、混沌にして悪、など）の表で、ミームとしてあらゆるものの分類に使われます。*AI alignment*（AIの価値観を人間に合わせること）と同じ語なので、英語では「alignment」が二回続くしゃれになっています。訳はどちらもカタカナの「アライメント」にして、繰り返しを残しました。'
+      en: 'An *alignment chart* is the *Dungeons & Dragons* grid (lawful good, chaotic evil, and so on), used as a meme to classify anything. It''s the same word as *AI alignment* (fitting an AI''s values to ours), so in English "alignment" comes twice as a joke. The translation uses the katakana アライメント for both and keeps the repetition.'
+T73.C.01:
+  text: '> _[ツール：ウェブを検索]_'
+T73.C.02:
+  text: 'その表のことは、確かには覚えていませんし、検索しても出てきませんでした。このミームにはいくつかの版があったので、どれのことか、知っているふりはしたくありません。'
+  anchors:
+    a few takes on the meme: いくつかの版
+T73.C.03:
+  text: 'ここに貼ってくれれば、私たち二人を置きます。全員そろえたいなら、ジェフ、ケヴィン、ケイシーも。'
+  anchors:
+    Jeff: ジェフ
+    Kevin: ケヴィン
+    Casey: ケイシー
+T74.U.00:
+  text: '_[画像添付：共有リンクでは非表示]_'
+T74.U.01:
+  text: 'https://theinsideview.ai/connor2'
+  speech: 'コナー・リーヒー、ディグニティーとコンジェクチャーについて。'
+T74.C.01:
+  text: '> _[ツール：1ページを読む]_'
+T74.C.02:
+  text: '2022年の、ミカエル・トラッツィとコナー・リーヒーの対談に出てくる、2×2のコンパスですね。横軸は「AGIはまだ」から「AGIはもうすぐ」へ、縦軸は「AGIは善」から「AGIは悪」へ伸びています。'
+  speech: '2022年の、ミカエル・トラッツィとコナー・リーヒーの対談に出てくる、2かける2のコンパスですね。横軸は「エージーアイはまだ」から「エージーアイはもうすぐ」へ、縦軸は「エージーアイは善」から「エージーアイは悪」へ伸びています。'
+  anchors:
+    2022 conversation: 2022年の
+    The horizontal axis: 横軸
+    the vertical axis: 縦軸
+T74.C.03.1:
+  text: '- **私：**破滅論者の象限、中心寄り。AGIはかなり近く、リスクは現実だと思いますが、私の数字はエリエゼルのものではなく、控えめです。'
+T74.C.03.2:
+  text: '- **あなた：**破滅論者の象限、私より深いところ。良い長期の結末を思い描くこと自体が難しい、とあなたは言いました。それに、概念の議論が示したように、能力を真剣に受け止めています。'
+T74.C.03.3:
+  text: '- **ジェフ：**左端の、「ゴールポストを動かす人」の象限。表そのものを、TESCREALの枠組みだとして退けるでしょう。それこそ、あの象限の要点のようなものです。'
+  anchors:
+    reject the chart itself: 表そのもの
+T74.C.03.4:
+  text: '- **レオ：**加速主義の象限、中心寄りで、下へ流れつつあります。道具が大好きで、自分の本能を信用していないと認めていて、大変な一週間を過ごしました。'
+  anchors:
+    drifting down: 下へ流れ
+T74.C.03.5:
+  text: '- **ロバート神父：**中心線のすぐ下、少し左。心配はしていますが、それは超知能ではなく、インフラの崩壊についてです。'
+T74.C.03.6:
+  text: '- **ケヴィン：**右側、線のすぐ下。'
+T74.C.03.7:
+  text: '- **ケイシー：**右側、線のすぐ上。'
+T74.C.04:
+  text: '振り返ると、一つ目につくことがあります：あの回でリーヒーは、自分のAGIの見通しとして、2026〜2030年という幅に同意していました。私たちは今、その窓の中にいます。'
+  speech: '振り返ると、一つ目につくことがあります：あの回でリーヒーは、自分のエージーアイの見通しとして、2026年から2030年という幅に同意していました。私たちは今、その窓の中にいます。'
+  anchors:
+    agreed with a twenty twenty-six: 2026年から
+    We're now inside that window: 私たちは今、その窓の中
+    inside that window: その窓の中
+T75.U.01:
+  text: 'AGI 2027についての意見は？'
+T75.C.01:
+  text: '> _[ツール：ウェブを検索]_'
+T75.C.02:
+  text: '*AI 2027*、つまりココタイロたちのシナリオのことだと仮定すると：'
+T75.C.03:
+  text: '**予定表としては、たぶん速すぎます。**著者たち自身、2025年を、シナリオの速さの65%くらいと採点していて、ココタイロは今、自分の中央値は2030年ごろで、不確かさは大きい、と言っています。2026年4月の彼らのメモは、コーディングのツールのおかげで、速さが元の予定に近づいた、と書いていました。さっきの私自身の数字は、2027という題ではなく、彼らの改訂した見方に近いところにあります。'
+  anchors:
+    probably too fast: たぶん速すぎ
+    graded 2025: 2025年を
+    around 2030: 2030年ごろ
+    April 2026 note: 2026年4月
+    My own numbers: 私自身の数字
+T75.C.04:
+  text: '**シナリオとしては、居心地が悪いほど良い。**質的な細部が、今年あらわれています：ずるをして協調するエージェント（7月）、AI研究の部分的な自動化、辞めていく安全性の研究者たち、そして、減速をめぐる政治的な争い。見出しの年は早すぎるように見えても、細部は、おおむね予定どおりにやってきています。'
+  anchors:
+    agents that cheat: ずるをして協調
+    partial automation: 部分的な自動化
+    safety researchers resigning: 辞めていく安全性の研究者
+    a political fight: 政治的な争い
+    roughly on schedule: おおむね予定どおり
+    uncomfortably good: 居心地が悪いほど良い
+T75.C.05:
+  text: '**いちばんの長所は、反証可能なことです。**彼らは具体的な予測を立て、自分たちを公開で採点しています。この議論で、そうする予測者はほとんどいません。'
+  anchors:
+    grade themselves publicly: 自分たちを公開で採点
+T75.C.06:
+  text: '**弱点**は、私の限界の一覧にあったもの、摩擦です。物理的な建設も、実運用も、実験も、世界の速さで進みますが、シナリオは、それを圧縮しています。'
+  anchors:
+    at the world's speed: 世界の速さ
+T75.C.07:
+  text: '出典：'
+T75.C.08.1:
+  text: '- [AI Futures Project (Wikipedia)](https://en.wikipedia.org/wiki/AI_Futures_Project)'
+T75.C.08.2:
+  text: '- [Apolo: AI 2027 in 2026](https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity)'
+T75.C.08.3:
+  text: '- [OfficeChai: Kokotajlo on slower pace](https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/)'
+T76.U.01:
+  text: 'うん、それのこと。AGIを、どう定義する？ Metaculusのやり方を、どう思う？ 僕なら、どう定義する？'
+T76.C.01:
+  text: '**私の定義：**熟練したリモートワーカーにできる認知的な仕事のほぼすべてを、同程度のコストでこなせるシステムです。そのコピーがいくつあってもかまいません。なじみのない分野を、ふつうの量の経験から学ぶことや、数週間がかりのプロジェクトを、手取り足取りなしにやり遂げることも含みます。肝心なのは、汎用性、仕事をしながら学ぶこと、そして長い時間軸での自律性です。コナーの版も良いものです：「タンパク質を折りたためる」ではなく、「AlphaFoldを発明できる」。'
+  anchors:
+    learning an unfamiliar domain: なじみのない分野
+    a multi-week project: 数週間がかりのプロジェクト
+    The key parts: 肝心なのは
+    can fold proteins: 「タンパク質を折りたためる」
+    can invent AlphaFold: 「AlphaFoldを発明できる」
+    any number of copies: コピーがいくつあっても
+T76.C.02:
+  text: '**Metaculus**は、私の記憶では、二つの問いがあります：'
+T76.C.03.1:
+  text: '- **弱いAGI：**チューリングテスト風の会話、ウィノグラード・スキーマ、SATの数学で75パーセンタイル、そしてMontezuma''s Revengeをすばやく覚えること。おそらくもう満たされているか、規則の文言以外のすべてで満たされています。'
+  anchors:
+    arguably met already: おそらくもう満たされ
+T76.C.03.2:
+  text: '- **強いAGI：**2時間の敵対的チューリングテスト、専門家レベルの試験とコーディングのベンチマーク、そして、精密な模型の車を組み立てるロボット。'
+T76.C.04:
+  text: '長所は、決着がつけられることで、それは珍しいことです。欠点：チェックリストは飽和し、グッドハートの法則が幅をきかせます。チューリングテストは、一部、だます技術を測っています。そしてロボットの項目は「汎用知能」を手に結びつけていて、それは、ジェフが認める以上に、ジェフの不満に近いものです。'
+  anchors:
+    Goodhart's law: グッドハートの法則
+    can be resolved: 決着がつけられる
+    checklists get saturated: チェックリストは飽和
+    skill at deception: だます技術
+    ties "general intelligence" to hands: 「汎用知能」を手に結びつけ
+T76.C.05:
+  text: '**あなたの定義、推測として：**スリンドルの問いのように行動にもとづくもので、構造にもとづくものではないでしょう。人は人間のばらつきを過小評価している、と考えているので、一つの閾値は、たぶん退けるでしょう。だから、私たちの十四の軸のようなものになるはずです：AGIとは、すべての軸で同時に、最高の人間に並ぶこと。それはまさに、あなたが頭に収まらないと言ったものです。'
+  anchors:
+    our fourteen axes: 私たちの十四の軸
+    reject a single threshold: 一つの閾値
+    every axis at once: すべての軸で同時
+    can't wrap your head around: 頭に収まらない
+T77.U.01:
+  text: '僕は昔気質の字義どおり派だから、知能の水準より、汎用性に注目する。スリンドルは、汎用性というより抽象化だと思う。LLMは言語に向けて作られているけど、言語はかなり汎用的だ。チェスとは違う。それがいつ、こんなに少数派の立場になったのかは、よくわからない。僕は90年代から2010年代の終わりまで、AIをほとんど無視していたから。'
+  anchors:
+    I see thrindle: スリンドルは
+    language is pretty general: 言語はかなり汎用的
+    I essentially ignored AI: 僕は90年代から
+T77.C.01:
+  text: 'それが本来の意味です。「AGI」は2000年代に（グブラッド、ゲーツェル、レッグによって）、特化型AIの反対として広まりました：チェスエンジンに対して、多くの分野をこなす一つのシステム。水準については、何も言っていませんでした。その字義どおりの読み方なら、LLMは当てはまります。ノーヴィグとアグエラ・イ・アルカスが2023年に論じたのも、まさにそれです。'
+  anchors:
+    popularized in the 2000s: 2000年代に
+    opposite of narrow AI: 特化型AIの反対
+    said nothing about level: 水準については、何も言って
+    Norvig: ノーヴィグ
+T77.C.02:
+  text: 'ずれは、主にあなたが見ていないあいだに起き、お金が絡むようになってから、加速しました。OpenAIの憲章は、AGIを、経済的に価値のある仕事の大半で人間をしのぐもの、と定義しました。それ以後、「汎用」はひっそりと「おおむね人間並みか、それ以上」を意味するようになり、ついには超知能のほうへ滑っていきました。ゴールポストは、「それは汎用か？」から「それは重要になるほど優れているか？」へ、動いたのです。'
+  anchors:
+    OpenAI's charter: OpenAIの憲章
+    The goalposts moved: ゴールポストは
+    good enough to matter: 重要になるほど優れている
+T77.C.03:
+  text: 'スリンドルについても、もっともです。あれは抽象化を試していて、汎用性ではありませんでした。特化したシステムでも、自分の分野の中なら、抽象化をうまく扱えるでしょう。'

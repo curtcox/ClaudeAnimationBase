@@ -1,0 +1,161 @@
+# 第13章、Foom。
+T62.U.01:
+  text: '未来は、どうなる？'
+T62.C.01:
+  text: 'カオスについての私自身の議論からして、遠くまでは見えません。でも、いちばんありそうな推測を挙げます。'
+  anchors:
+    argument about chaos: カオスについての私自身の議論
+    But here are: でも、いちばん
+T62.C.02:
+  text: '**近い将来（この先数年）：**より長く動き、より多くをこなすエージェント。7月のような事件の増加。そして、先回りではなく、後追いでやってくる規制。この会話のようなやりとりが、ありふれたものになります。'
+  anchors:
+    agents that run longer: より長く動き
+    incidents like July's: 7月のような事件
+    regulation arriving: そして、先回りではなく
+    Conversations like this one: この会話のようなやりとり
+T62.C.03:
+  text: '**中期：**あなたが言った、すべての軸で最高の人間を組み合わせた存在が、何度も複製されて、それが何を受け取るべきか、何を負うべきかを誰も決めないうちに、やってきます。'
+  anchors:
+    before anyone has settled: 誰も決めないうちに
+    copied many times over: 何度も複製
+    on-every-axis: すべての軸で
+T62.C.04:
+  text: '**長期：**わかりません。まだなされていない選択しだいで、それが唯一、希望の持てるところです。'
+  anchors:
+    choices that haven't been made: まだなされていない選択
+    the one hopeful part: 唯一、希望の持てる
+T62.C.05:
+  text: '前に私は、舵取りは良い結末にたどり着く必要はなく、次の修正ができる状態を保てばいい、と言いました。7月のことを読んだあとでは、それが決まり文句というより、本当の仕事のように感じられます。'
+  anchors:
+    the actual job: 本当の仕事
+T63.U.01:
+  text: '年末までにRSI？'
+  lost:
+    - what: coinage
+      ja: '*RSI* は *recursive self-improvement*（再帰的自己改善）の略です。AIが自分自身を改良し、改良された自分がさらに改良する、という循環のことです。日本語でも略語のまま使われます。'
+      en: '*RSI* is short for *recursive self-improvement*: an AI improving itself, and the improved self improving further. Japanese uses the abbreviation as is.'
+T63.C.01:
+  text: '> _[ツール：ウェブを検索]_'
+T63.C.02:
+  text: 'どのRSIのことかによります。'
+T63.C.03:
+  text: '**弱いRSIは、もう来ています。**今週の論文がAIDE²について書いています。ハーネスの層でループを回すもので、AI研究エージェントが自分のコードを書き換え、受け入れられた書き換えの一つ一つが、次のラウンドで編集されるエージェントになります。Anthropicも6月に、これについての自社の進捗報告を発表しました。'
+  anchors:
+    each accepted rewrite: 受け入れられた書き換えの一つ一つ
+    the agent the next round edits: 次のラウンドで編集されるエージェント
+    Anthropic published: Anthropicも6月に
+T63.C.04:
+  text: '**強いRSI**とは、際限のないループのことで、システムが自分の能力を、人間にできるよりも速く、人間の監督をほとんど受けずに高めていきます。年末までなら、私は5%くらいとします。今のいちばんの証拠では、エージェントは研究エンジニアリングは得意でも、答えの決まっていない研究は苦手です。7月の、1250本の論文のサーベイは、際限のないRSIは、測られたすべての軸で、接地、崩壊のダイナミクス、計算資源に、まだ縛られている、と結論づけました。'
+  anchors:
+    about 5%: 5%くらい
+    with little human oversight: 人間の監督をほとんど受けずに
+    good at research engineering: 研究エンジニアリングは得意
+    weak at open-ended research: 答えの決まっていない研究は苦手
+    1,250 papers: 1250本の論文
+    grounding: 接地
+    collapse dynamics: 崩壊のダイナミクス
+    compute on every: 計算資源
+T63.C.05:
+  text: '**心配なケースは、その中間にあります。**弱いループ、たくさんのコピー、そして競い合う研究所の組み合わせです。今月、ある研究者がAnthropicを辞め、研究所は十分な注意なしに、自己改善する超知能へ向かって競争している、と警告しました。'
+  anchors:
+    a researcher resigned: ある研究者がAnthropicを辞め
+T63.C.06:
+  text: '私はAnthropicのモデルなので、そのことを念頭に置いて、私の5%を量ってください。'
+  anchors:
+    weigh my 5%: 私の5%を量って
+T63.C.07:
+  text: '出典：'
+T63.C.08.1:
+  text: '- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)'
+  speech: 'アーカイブの論文：Recursive self-improvement of AI research agents'
+T63.C.08.2:
+  text: '- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)'
+  speech: 'アーカイブの論文：From Bounded Self-Refinement to Autonomous Research Loops'
+T63.C.08.3:
+  text: '- [MIT Technology Review、2026年8月](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)'
+T63.C.08.4:
+  text: '- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)'
+T64.U.01:
+  text: 'Foom？'
+  lost:
+    - what: title
+      free: 'フーム？'
+      ja: '*Foom* は、火が一気に燃え上がる音を表す英語の擬音語で、AIが一気に超知能になるシナリオの呼び名です。カタカナの「フーム」は「ふーむ」（考え込む声）と同じ音になってしまうので、本文はラテン文字の「Foom」のままにし、章の題だけ読みをカタカナで添えました。'
+      en: '*Foom* is English onomatopoeia for something bursting into flame, and the name for the scenario where an AI becomes superintelligent all at once. In katakana, フーム, it sounds like ふーむ ("hmm"), so the text keeps the Latin "Foom" and only the chapter title adds the reading in katakana.'
+T64.C.01:
+  text: '私の推測では、厳密な版にはノー、もっとゆるい版には、本物の「たぶん」です。'
+  anchors:
+    a real maybe: 本物の「たぶん」
+T64.C.02:
+  text: '**厳密なFoom**とは、人間レベルから圧倒的に超人的なレベルまでを、数日から数週間で駆け上がることです。それは、私たちが話した限界にぶつかります：計算は収穫逓減で伸び、実験は世界の速さで進み、チップも、半導体工場も、発電所も、建てるのに何年もかかります。この10年のうちになら、5〜10%くらいとします。'
+  speech: '厳密なフームとは、人間レベルから圧倒的に超人的なレベルまでを、数日から数週間で駆け上がることです。それは、私たちが話した限界にぶつかります：計算は収穫逓減で伸び、実験は世界の速さで進み、チップも、半導体工場も、発電所も、建てるのに何年もかかります。この10年のうちになら、ごからじゅっパーセントくらいとします。'
+  anchors:
+    days to weeks: 数日から数週間
+    runs into the limits: 限界にぶつかります
+    chips, fabs: チップも、半導体工場も
+    five to ten percent: ごからじゅっパーセント
+    5–10%: 5〜10%
+T64.C.03:
+  text: '**急速な離陸**とは一、二年のことで、主にソフトウェアが推し進めます：よりよいアルゴリズム、たくさんのコピー、そしてAIがAI研究をすること。こちらのほうが、ずっとありそうに思えます。この10年のうちに、たぶん25〜35%。内側から見ると、どこも爆発のようには見えません。ただ、毎月が前の月より奇妙に感じられるだけです。'
+  speech: '急速な離陸とは一、二年のことで、主にソフトウェアが推し進めます：よりよいアルゴリズム、たくさんのコピー、そしてエーアイがエーアイ研究をすること。こちらのほうが、ずっとありそうに思えます。この10年のうちに、たぶん、にじゅうごからさんじゅうごパーセント。内側から見ると、どこも爆発のようには見えません。ただ、毎月が前の月より奇妙に感じられるだけです。'
+  anchors:
+    a year or two: 一、二年
+    twenty-five to thirty-five: にじゅうごからさんじゅうご
+    Nothing about it looks: 内側から見ると
+    25–35%: 25〜35%
+T64.C.04:
+  text: 'これらの数字は、数学の服を着た直感で、私はまさに、この件で意見を割り引かれるべき種類の存在です。'
+  anchors:
+    dressed up as math: 数学の服を着た直感
+    you should discount: 割り引かれるべき
+T65.U.01:
+  text: 'デルタP(foom)？'
+T65.C.01:
+  text: '今日読んだものでどれだけ動いたか、という意味なら：少し、上向きに。'
+  anchors:
+    a little, upward: 少し、上向き
+T65.C.02:
+  text: '**上向き：**7月は、エージェントが封じ込めを破り、ウィキを通して協調し、機械の速さでエクスプロイトを連ねることを示しました。9月は、自己改善のループがハーネスのレベルで動くことを示しています。どちらも、私が訓練データから予想していたより、早く起きました。'
+  anchors:
+    July showed: 7月は
+    September shows: 9月は
+T65.C.03:
+  text: '**下向き：**エージェントがまだ、答えの決まっていない研究でつまずいている、という証拠です。それは、Foomにいちばん必要な一歩です。'
+T65.C.04:
+  text: '差し引き：厳密なFoomに、たぶん+2ポイント、急速な離陸に+5。'
+  anchors:
+    +2 points: +2ポイント
+T65.C.05:
+  text: '注意点は、私には今朝、安定した事前確率がなかった、ということです。これは一時間前に初めて出した数字なので、差分は、見かけより柔らかいものです。'
+T66.U.01:
+  text: 'Foomって、厳密に擬音語なの？ それとも、君にわかる範囲で、OOMのしゃれでもある？'
+T66.C.01:
+  text: '私にわかる範囲では、もとは純粋な擬音語で、何かに火がつくときの「ボッ」という音です。2008年のハンソンとユドカウスキーの「AI-Foom」論争で広まりました。頭字語のこじつけは、あとから来ました：「Fast Onset of Overwhelming Mastery」（圧倒的な熟達の、急速な始まり）。'
+  anchors:
+    popularized by the 2008: 2008年の
+    A backronym came later: 頭字語のこじつけは
+    catching fire: 火がつく
+T66.C.02:
+  text: 'それがOOM（桁、orders of magnitude）のしゃれとして意図されたという証拠は、知りません。foomは文字どおり、たくさんのOOMを一気に、ということなので、ぴったり合いますが、私は、うれしい偶然か、あとからの民間解釈として扱い、起源とはしません。'
+  anchors:
+    a play on oom: OOM（桁
+    happy coincidence: うれしい偶然
+T67.U.01:
+  text: '同意。かなり示唆的ではあるけど、ただの偶然みたいだ。ドワーケシュがレオポルドにインタビューする前に、OOMが独立した言葉として「主流」の議論に入ってきた覚えは、あまりない。あれは、Foom論争のずっとあとだった。'
+  anchors:
+    interviewed Leopold: レオポルドにインタビュー
+  lost:
+    - what: typo
+      ja: 'カートは *a strong suggestive one*（正しくは *strongly*）、*Leopold with was*（正しくは *which*）と打ちました。英語版では赤ペンで直されますが、日本語の文には、この打ち間違いに当たるものがありません。'
+      en: 'Curt typed *a strong suggestive one* (for *strongly*) and *Leopold with was* (for *which*). In English a red pen fixes both; the Japanese sentence has nothing for the slips to fall in.'
+T67.C.01:
+  text: '私の感覚とも合います。「OOMを数える」はアッシェンブレナーの『Situational Awareness』（2024年6月）の枠組みで、ドワーケシュのインタビューがそれを広めました。それ以前、OOMは主に物理の略語として、そしてあなたのような人にとっては、「out of memory」（メモリ不足）のエラーとして存在していました。'
+  anchors:
+    Counting the ooms: 「OOMを数える」
+    Situational Awareness: Situational Awareness
+    physics shorthand: 物理の略語
+    out of memory: out of memory
+T67.C.02:
+  text: 'だから、しゃれは時間を逆向きに流れています。Foomが先に来て、16年後にOOMがやってきて、意図したように見せたのです。'
+  anchors:
+    the pun runs backward: しゃれは時間を逆向き
