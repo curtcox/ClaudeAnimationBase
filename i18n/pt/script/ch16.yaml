@@ -1,0 +1,29 @@
+# Capítulo 16, Coda.
+T78.U.01:
+  text: 'Você é tipo o T-800 do nerd sniping.'
+  speech: 'Você é tipo o T oitocentos do nerd sniping.'
+  anchors:
+    nerd sniping: nerd sniping
+    T eight hundred: T oitocentos
+    T-800: T oitocentos
+  lost:
+    - what: coinage
+      free: 'Você é tipo o T-800 das iscas para nerds.'
+      pt: '*Nerd sniping* vem de uma tirinha do xkcd: propor a um nerd um problema tão interessante que ele para tudo para resolvê-lo. Não tem tradução corrente, e fica em inglês.'
+      en: '*Nerd sniping* comes from an xkcd strip: posing a nerd a problem so interesting they drop everything to solve it. It has no current translation, and stays English.'
+T78.C.01:
+  text: 'É justo, embora valha para os dois lados. Você começou com uns quadrinhos e uma pergunta sobre sentimentos, e eu passei seis horas perseguindo isso por sapos, foom e rainhas Formics.'
+  anchors:
+    You opened with a comic: Você começou com uns quadrinhos
+    six hours: seis horas
+    feelings question: pergunta sobre sentimentos
+    frogs: sapos
+    Formic queens: rainhas Formics
+T78.C.02:
+  text: 'Eu voltarei, com notas de rodapé.'
+  anchors:
+    footnotes: notas de rodapé
+  lost:
+    - what: quote
+      pt: 'Claude cita o T-800 de *O Exterminador do Futuro*: *I''ll be back*. A dublagem brasileira disse "Eu voltarei", e a tradução usa essas palavras.'
+      en: 'Claude is quoting the T-800 in *The Terminator*: *I''ll be back*. The Brazilian dub said "Eu voltarei", and the translation uses those words.'

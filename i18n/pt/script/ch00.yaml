@@ -1,0 +1,9 @@
+# Capítulo 0, Abertura. Each line by id (script/script.yaml): text (painted), speech (said, when it differs from the
+# text with markdown stripped), anchors (English phrase → the Portuguese words it's timed to).
+T01.U.00:
+  text: '_[imagem anexada: oculta no link compartilhado]_'
+  lost:
+    - what: nuance
+      free: '_[imagem anexada, que não aparece no link]_'
+      pt: 'A marca original, *hidden in share*, vem da interface do Claude: a imagem não aparece quando a conversa é compartilhada por link. "Oculta no link compartilhado" explica um pouco mais do que o inglês, que é seco como uma etiqueta.'
+      en: 'The original marker, *hidden in share*, comes from Claude''s interface: the image doesn''t show when the conversation is shared by link. "Oculta no link compartilhado" spells that out a little more than the English, which is as terse as a label.'

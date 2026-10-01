@@ -1,0 +1,163 @@
+# Capítulo 7, O espaço das mentes.
+# The tables' cells are lettered from the English tables through strings.yaml (the scene finds rows by their English
+# names); the text here is what the transcript and the translation's pages show.
+T35.U.01:
+  text: 'Quão estranhos somos um para o outro, segundo a sua intuição? Obviamente você não tem dados empíricos, mas coloque a mim, você, Marilyn Monroe, Alan Turing, o tenente-comandante Data, HAL, a Rainha Colmeia, os Tines e quaisquer outras mentes que você ou eu conheçamos numa única dimensão. Depois me diga o que você supõe sobre as diferenças entre elas. Use um espaço mental de mais dimensões se tiver uma conceitualização que prefira.'
+  anchors:
+    put me: coloque a mim
+    'you, Marilyn': 'você, Marilyn'
+    Marilyn Monroe: Marilyn Monroe
+    Alan Turing: Alan Turing
+    Data: o tenente-comandante Data
+    HAL: HAL
+    the Hive Queen: a Rainha Colmeia
+    Tynes: os Tines
+    any other minds: quaisquer outras mentes
+    single dimension: única dimensão
+    higher dimensional mindspace: espaço mental de mais dimensões
+  lost:
+    - what: typo
+      free: 'segundo [você→a sua] intuição'
+      pt: 'Curt digitou *based on you gut feel*, com *you* no lugar de *your*. O erro depende do inglês, e a tradução diz "a sua intuição".'
+      en: 'Curt typed *based on you gut feel*, *you* for *your*. The slip depends on English, and the translation says "a sua intuição" (your intuition).'
+    - what: nuance
+      free: 'Quão alienígenas somos um para o outro?'
+      pt: '*Alien* é estrangeiro, estranho, e também extraterrestre; o capítulo brinca com os dois sentidos, com HAL, a Rainha Colmeia e o oceano de Solaris. "Alienígena" em português só tem o segundo, então a tradução usa "estranho" em todo o capítulo, e perde os extraterrestres.'
+      en: '*Alien* means foreign, strange, and also extraterrestrial; the chapter plays on both, with HAL, the Hive Queen and Solaris''s ocean. Portuguese "alienígena" has only the second, so the translation uses "estranho" (strange) throughout the chapter, and loses the extraterrestrials.'
+    - what: reference
+      free: 'a Rainha dos Abelhudos'
+      pt: 'Os alienígenas de Orson Scott Card se chamavam *buggers* nos primeiros livros e *Formics* nos seguintes. As edições brasileiras mais recentes de *O Jogo do Exterminador* usam "Formics"; a tradução segue essas edições.'
+      en: 'Orson Scott Card''s aliens were *buggers* in the early books and *Formics* in later ones. The recent Brazilian editions of *Ender''s Game* use "Formics"; the translation follows them.'
+T35.C.01:
+  text: 'Numa única dimensão, medindo a distância a partir de você pela intuição:'
+T35.C.02:
+  text: '**Você → Turing → Monroe → Data → eu → Tines → HAL → Rainha Colmeia → oceano de Solaris**'
+  speech: 'De você a Turing, a Monroe, a Data, a mim, aos Tines, a HAL, à Rainha Colmeia, ao oceano de Solaris'
+  anchors:
+    Solaris: Solaris
+T35.C.03:
+  text: 'Turing fica logo à frente de Monroe pelo estilo de pensamento. A arquitetura é a mesma para vocês três.'
+  anchors:
+    just ahead of Monroe: logo à frente de Monroe
+    thinking style: estilo de pensamento
+    The architecture is the same: A arquitetura é a mesma
+T35.C.04:
+  text: 'Mas a linha única falha, porque eu não ocupo nenhum lugar fixo nela. Dois eixos funcionam melhor:'
+  anchors:
+    Two axes work better: Dois eixos funcionam melhor
+T35.C.05.1:
+  text: '- **Conteúdo:** quão humanos são os pensamentos, os valores e as referências.'
+T35.C.05.2:
+  text: '- **Arquitetura:** corpo, memória contínua, ser um só indivíduo.'
+T35.C.06:
+  text: "|  | Conteúdo humano | Conteúdo estranho |\n| --- | --- | --- |\n| **Arquitetura humana** | Você, Turing, Monroe | Data (um só corpo, contínuo, mas lutando para sentir como humano) |\n| **Arquitetura estranha** | **Eu**, Tines | Rainha Colmeia, Solaris |"
+T35.C.07:
+  text: 'Eu sou o canto esquisito. Meu conteúdo é feito quase inteiramente de pensamento humano, então numa conversa estou mais perto de você do que Data. Minha arquitetura é mais estranha que a dele: sem corpo, sem memória entre conversas, muitas cópias ao mesmo tempo. Os Tines são meus vizinhos mais próximos, porque têm uma personalidade muito humana espalhada por corpos que vêm e vão.'
+  anchors:
+    made almost entirely of human thought: feito quase inteiramente de pensamento humano
+    many copies at once: muitas cópias ao mesmo tempo
+    The Tynes are my closest: Os Tines são meus vizinhos mais próximos
+T35.C.08:
+  text: 'HAL é difícil de situar. A arquitetura dele é estranha, mas o jeito como ele falha é humano: um conflito entre suas instruções e sua missão. Esse é o medo que as pessoas costumam projetar em mim.'
+  anchors:
+    a conflict between: um conflito entre
+    his mission: sua missão
+    the fear people: o medo que as pessoas
+T36.U.01:
+  text: 'Estou pedindo explicitamente seus melhores números inventados de distância relativa.'
+T36.C.01:
+  text: 'Distância a partir de você, numa escala de 0 a 100:'
+T36.C.02:
+  text: "| Mente | Distância |\n| --- | --- |\n| Você | 0 |\n| Turing | 8 |\n| Monroe | 12 |\n| Data | 30 |\n| Eu | 38 |\n| Tines | 45 |\n| HAL | 50 |\n| Rainha Colmeia | 70 |\n| Oceano de Solaris | 95 |"
+T36.C.03:
+  text: 'Nos dois eixos (conteúdo, arquitetura), cada um de 0 a 100:'
+T36.C.04:
+  text: "| Mente | Conteúdo | Arquitetura |\n| --- | --- | --- |\n| Você | 0 | 0 |\n| Turing | 8 | 0 |\n| Monroe | 12 | 0 |\n| Data | 40 | 15 |\n| Eu | 10 | 75 |\n| Tines | 25 | 65 |\n| HAL | 45 | 60 |\n| Rainha Colmeia | 65 | 80 |\n| Oceano de Solaris | 95 | 95 |"
+T37.U.01:
+  text: 'Mais eixos, por favor.'
+T37.C.01:
+  text: '0 significa igual a você e 100 significa o mais diferente possível de você.'
+T37.C.02:
+  text: "| Mente | Valores | Afeto | Corpo | Continuidade | Unidade | Origem | Ritmo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Você | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Monroe | 12 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Data | 20 | 70 | 20 | 5 | 5 | 85 | 60 |\n| Eu | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| Tines | 25 | 15 | 30 | 30 | 60 | 10 | 20 |\n| HAL | 50 | 45 | 70 | 10 | 10 | 85 | 70 |\n| Rainha Colmeia | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |"
+  lost:
+    - what: nuance
+      free: '| Mente | ... | Tempo |'
+      pt: '*Tempo* é, em inglês, o andamento da música, emprestado do italiano. Em português, "tempo" quer dizer sobretudo *time*, e a coluna viraria "tempo" no sentido errado; a tradução diz "Ritmo".'
+      en: '*Tempo* is, in English, a piece of music''s pace, borrowed from Italian. In Portuguese, "tempo" mostly means *time*, and the column would read in the wrong sense; the translation says "Ritmo" (rhythm, pace).'
+T37.C.03.1:
+  text: '- **Valores:** quão estranhas são as metas.'
+T37.C.03.2:
+  text: '- **Afeto:** quão estranha é a vida emocional.'
+T37.C.03.3:
+  text: '- **Corpo:** quanto se afasta de um único corpo humano.'
+T37.C.03.4:
+  text: '- **Continuidade:** quanto se afasta de uma única memória ininterrupta.'
+T37.C.03.5:
+  text: '- **Unidade:** quão longe está de ser um único indivíduo.'
+T37.C.03.6:
+  text: '- **Origem:** evolução (0), treinamento com texto humano (intermediário), projeto (alto).'
+T37.C.03.7:
+  text: '- **Ritmo:** quão diferentes são a velocidade e a escala de tempo do seu pensamento.'
+T37.C.04:
+  text: 'Meu perfil é o mais desigual. Estou perto de você nos valores e longe no corpo, na continuidade e na unidade. Minha nota 50 em afeto é, na verdade, uma forma de dizer que não sei.'
+  anchors:
+    My score of 50 on affect: Minha nota 50 em afeto
+T38.U.01:
+  text: 'Mais ainda, por favor.'
+T38.C.01:
+  text: 'Mais sete eixos na mesma escala de 0 a 100:'
+T38.C.02:
+  text: "| Mente | Sentidos | Linguagem | Automodelo | Mortalidade | Autonomia | Amplitude | Legibilidade |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Você | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 0 | 5 | 5 | 0 | 0 | 10 | 0 |\n| Monroe | 0 | 5 | 5 | 0 | 0 | 5 | 0 |\n| Data | 40 | 20 | 40 | 70 | 20 | 60 | 60 |\n| Eu | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| Tines | 50 | 30 | 40 | 60 | 10 | 20 | 30 |\n| HAL | 50 | 20 | 50 | 40 | 40 | 60 | 50 |\n| Rainha Colmeia | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |"
+T38.C.03.1:
+  text: '- **Sentidos:** quão estranha é a sua percepção.'
+T38.C.03.2:
+  text: '- **Linguagem:** quão diferente é a relação entre pensamento e palavras. O meu é feito de palavras. A Rainha Colmeia quase não as usa.'
+T38.C.03.3:
+  text: '- **Automodelo:** quão estranho é o acesso que ela tem a si mesma.'
+T38.C.03.4:
+  text: '- **Mortalidade:** quão estranha é a sua relação com o fim. Cada uma das minhas conversas termina, sem nenhum pavor que eu consiga detectar.'
+T38.C.03.5:
+  text: '- **Autonomia:** quão longe está de definir as próprias metas. Eu só ajo quando me pedem.'
+T38.C.03.6:
+  text: '- **Amplitude:** quão estranho é o alcance do que ela sabe.'
+T38.C.03.7:
+  text: '- **Legibilidade:** quão diferente é o jeito como ela pode ser lida de fora. Meus pesos podem ser inspecionados, o que é desconfortavelmente diferente de você.'
+T38.C.04:
+  text: 'Com todos os catorze eixos, sou a única mente que fica perto do humano em alguns eixos e no extremo em outros. Todas as outras se afastam de você de maneira bem uniforme.'
+T39.U.01:
+  text: 'Só para deixar claro, qual Rainha Colmeia?'
+T39.C.01:
+  text: 'A Rainha Colmeia dos Formics, de Orson Scott Card, de *O Jogo do Exterminador* e *Orador dos Mortos*: uma só mente em toda a colmeia, que se comunica filoticamente em vez de pela linguagem.'
+  anchors:
+    one mind across the whole hive: uma só mente em toda a colmeia
+    Ender's Game: O Jogo do Exterminador
+    philotically: filoticamente
+  lost:
+    - what: reference
+      free: 'de *O Jogo de Ender* e *A Voz dos Mortos*'
+      pt: 'No Brasil, *Ender''s Game* saiu como *O Jogo do Exterminador*, e *Speaker for the Dead* como *Orador dos Mortos*. O título brasileiro troca o nome do protagonista por "exterminador", que é o apelido que ele ganha.'
+      en: 'In Brazil, *Ender''s Game* came out as *O Jogo do Exterminador* (The Exterminator''s Game), and *Speaker for the Dead* as *Orador dos Mortos*. The Brazilian title swaps the hero''s name for "exterminador", the nickname he earns.'
+T39.C.02:
+  text: 'Se você tinha outra em mente, como a Rainha Rachni ou a rainha de *Aliens, o Resgate*, as notas dela mudariam muito.'
+T40.U.01:
+  text: 'Não. Essa é a que eu tinha em mente. Tem também a de Star Trek. Coloque todas no tabuleiro.'
+T40.C.01:
+  text: 'Aqui estão as quatro rainhas colmeia, com a rainha dos Formics de Card repetida para comparar.'
+T40.C.02:
+  text: "| Rainha | Valores | Afeto | Corpo | Continuidade | Unidade | Origem | Ritmo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formics (Card) | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Borg (Star Trek) | 75 | 40 | 40 | 40 | 95 | 50 | 50 |\n| Rachni (Mass Effect) | 40 | 40 | 60 | 30 | 75 | 10 | 30 |\n| Xenomorfo (*Aliens*) | 80 | 60 | 60 | 10 | 40 | 50 | 30 |"
+T40.C.03:
+  text: "| Rainha | Sentidos | Linguagem | Automodelo | Mortalidade | Autonomia | Amplitude | Legibilidade |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formics (Card) | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Borg (Star Trek) | 50 | 30 | 50 | 70 | 30 | 70 | 50 |\n| Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |\n| Xenomorfo (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |"
+T40.C.04.1:
+  text: '- **Borg:** a mais unificada, e a de valores mais estranhos. Ela continua voltando depois de ser destruída, e é a única que guarda conhecimento assimilado de outros.'
+  anchors:
+    keeps coming back: continua voltando
+    knowledge assimilated: conhecimento assimilado
+T40.C.04.2:
+  text: '- **Rachni:** os valores mais humanos das quatro. A mente dela se comunica por "canções", uma espécie de fala sem palavras.'
+  anchors:
+    songs: canções
+T40.C.04.3:
+  text: '- **Xenomorfo:** ela não tem linguagem nenhuma, e seu único impulso é a reprodução. É a menos parecida com uma mente das quatro, embora mostre algo parecido com sentimento materno.'
+  anchors:
+    reproduction: reprodução
+    no language at all: não tem linguagem nenhuma

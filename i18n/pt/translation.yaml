@@ -1,0 +1,288 @@
+# The translation's own page (i18n/tools/lost.mjs → the Portuguese site's traducao/), in Portuguese and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+slug: traducao
+text_slug: texto
+html_lang: pt-BR
+
+title:
+  pt: Como este filme foi traduzido, e o que se perdeu
+  en: How this film was translated, and what was lost
+text_title:
+  pt: O filme inteiro, nas duas línguas
+  en: The whole film, in both languages
+labels:
+  lang_pt: Português
+  film_pt: O filme inteiro
+  film_en: The whole film
+  original: Original (inglês)
+  ours: Esta tradução
+  free: Uma tradução mais livre
+  kinds_pt: O que se perde, por tipo
+  kinds_en: What gets lost, by kind
+  list_pt: Linha por linha
+  list_en: Line by line
+
+sections:
+  - pt_title: Esta página
+    en_title: This page
+    pt: |
+      *Sapo ou axolote* é um filme animado feito a partir de uma conversa real, palavra por palavra, entre Curt Cox e
+      Claude, um programa de inteligência artificial da Anthropic. A conversa foi em inglês. Esta é a versão em
+      português do Brasil.
+
+      Aqui se explica como foi traduzido, como poderia ter sido traduzido e o que teria mudado, linha por linha. Tudo
+      está nas duas línguas para que quem fala as duas possa julgar a tradução por conta própria. Também está aqui
+      [o filme inteiro, em inglês e em português, lado a lado](texto/).
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude,
+      an AI program made by Anthropic. The conversation was in English. This is the Brazilian Portuguese version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line
+      by line. Everything is in both languages so that anyone who speaks both can judge the translation for themselves.
+      There's also [the whole film, in English and Portuguese, side by side](texto/).
+
+  - pt_title: Quem traduziu
+    en_title: Who translated it
+    pt: |
+      Claude (o modelo Claude Opus 5.5) traduziu tudo: cada linha da conversa, cada palavra desenhada na imagem, os
+      títulos, as legendas dos códigos, o site que acompanha o filme (suas 64 explicações e suas páginas) e esta
+      página, incluídas as notas sobre o que se perdeu.
+
+      Um dos motivos para fazer esta versão é mostrar, sem retoques, como Claude traduz. Por isso **nenhum tradutor
+      humano a corrigiu**, e qualquer correção posterior será anotada nesta página com a data (e fica também no
+      histórico público do código).
+
+      Até agora: {lines} de {total} linhas traduzidas (capítulos {chapters_done}). Revisão humana: nenhuma ainda.
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the
+      picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and
+      this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator
+      corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public
+      history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - pt_title: Como foi traduzido
+    en_title: How it was translated
+    pt: |
+      - **Fiel, linha por linha.** Cada parágrafo e cada item de lista da conversa é uma linha do filme, e a tradução
+        mantém as mesmas linhas, na mesma ordem, com os mesmos negritos, itálicos, listas e links. Primeiro o sentido,
+        depois a forma; nunca uma adaptação livre.
+      - **Português do Brasil.** O português falado no Brasil, sem regionalismos; não o de Portugal.
+      - **Você.** Curt e Claude se tratam por "você". Nos quadrinhos, o tratador fala com o policial com a distância
+        de quem diria "o senhor".
+      - **Claude não tem gênero gramatical.** O inglês não obriga a dizer se Claude é ele ou ela; o português, sim,
+        a cada adjetivo. A tradução evita esses adjetivos ("me diverte", e não "divertido").
+      - **Títulos e nomes.** Um filme ou um livro vai com o título que o público brasileiro conhece. Um artigo, um
+        estudo ou uma página da web mantém o título original. Nomes de pessoas nunca mudam.
+      - **Siglas.** Ficam como o português técnico as usa (LLM, RLHF), e a voz as diz com letras em português.
+      - **Links.** Os códigos que apontavam para a Wikipédia em inglês apontam para o mesmo artigo em português quando
+        ele existe (quem diz são os links entre idiomas da própria Wikipédia; 137 de 202). As outras fontes estão na sua língua,
+        quase sempre o inglês.
+      - **A imagem.** Tudo o que está escrito na imagem está em português: rótulos, cartões, títulos e os balões dos
+        quadrinhos do começo, reescritos com letras em português.
+      - **As vozes.** Falam as mesmas vozes do inglês: a voz clonada de Curt e River para Claude (ElevenLabs, modelo
+        eleven_v3). Falam português com algum sotaque. O movimento da boca de Claude é calculado de novo a partir do
+        áudio em português. Por enquanto nenhum capítulo tem voz; está tudo traduzido, esperando a gravação.
+      - **A duração.** O português é mais longo que o inglês. A animação segue a voz, então o filme se alonga em vez de
+        apressar as palavras. (Nas linhas gravadas até agora: {voiced}, com a voz {longer}% mais longa.)
+      - **Presa à animação.** Muitas cenas se movem exatamente quando uma frase é dita. Cada uma dessas frases
+        ({anchors} até agora) precisou do seu equivalente em português, o que às vezes manteve a ordem das palavras
+        mais perto do inglês do que era preciso.
+      - **Os erros de Curt.** Em inglês, o filme mostra os erros de digitação de Curt, riscados em vermelho, com a
+        correção em cima. Onde o erro sobrevive à tradução (um nome escrito errado), ele fica; onde depende do inglês,
+        se perde, e isso é anotado abaixo.
+      - **O que fica em inglês.** Títulos de artigos, estudos, programas e canções sem título em português; as fontes
+        que Claude cita; e as demonstrações de como um modelo parte o texto em *tokens*, que mostram o inglês que o
+        modelo leu de verdade.
+      - **Números.** Milhares com ponto (17.000) e decimais com vírgula (0,05), como se escreve no Brasil.
+      - **O site.** As 64 explicações do site foram traduzidas com os mesmos critérios. As citações do filme usam as
+        palavras desta tradução. Onde a tradução acrescenta algo que o original não diz, vai entre colchetes e começa
+        com "Nota da tradução". Os links para a Wikipédia em inglês apontam para o artigo em português quando ele
+        existe; quando não, levam "(em inglês)". Na terceira pessoa, o site se refere a Claude com o pronome masculino
+        que o português usa para "o programa" ("o treinaram"), mas continua evitando os adjetivos que lhe dariam
+        gênero. A conversa que fez o filme, em que Curt e Claude o constroem, não foi traduzida: está em inglês no site
+        original.
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the
+        translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning
+        first, then form; never a free adaptation.
+      - **Brazilian Portuguese.** The Portuguese spoken in Brazil, with no regionalisms; not Portugal's.
+      - **Você.** Curt and Claude say "você" to each other. In the comic, the handler speaks to the officer with the
+        distance of someone who would say "o senhor" (sir).
+      - **Claude has no grammatical gender.** English doesn't make you say whether Claude is he or she; Portuguese
+        does, with every adjective. The translation avoids those adjectives ("me diverte", it amuses me, not
+        "divertido").
+      - **Titles and names.** A film or book goes by the title Brazilian audiences know. An article, paper or website
+        keeps its original title. People's names never change.
+      - **Acronyms.** They stay as technical Portuguese uses them (LLM, RLHF), and the voice says them in Portuguese
+        letters.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in Portuguese where there is one
+        (Wikipedia's own links between languages say so; 137 of 202). Other sources are in their own language, almost always
+        English.
+      - **The picture.** Everything written in the picture is in Portuguese: labels, cards, titles, and the balloons of
+        the opening comic, relettered in Portuguese.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs,
+        the eleven_v3 model). They speak Portuguese with something of an accent. Claude's mouth movements are worked
+        out again from the Portuguese audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
+      - **Length.** Portuguese runs longer than English. The animation follows the voice, so the film grows rather
+        than rushing the words. (Over the lines voiced so far: {voiced}, with the voice {longer}% longer.)
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
+        far) needed its Portuguese counterpart, which sometimes kept the word order closer to the English than it
+        needed to be.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above.
+        Where a slip survives translation (a misspelt name) it's kept; where it depends on English, it's lost, and
+        noted below.
+      - **What stays English.** Titles of articles, papers, shows and songs with no Portuguese title; the sources
+        Claude cites; and the demonstrations of how a model splits text into *tokens*, which show the English the
+        model actually read.
+      - **Numbers.** Thousands with a point (17.000) and decimals with a comma (0,05), as Brazil writes them.
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use
+        this translation's words. Where the translation adds something the original doesn't say, it's in square
+        brackets and starts "Nota da tradução" (translator's note). Links to English Wikipedia point at the
+        Portuguese article where there is one; where there isn't, they say "(em inglês)". In the third person, the
+        site refers to Claude with the masculine pronoun Portuguese uses for "the program" ("o treinaram", they
+        trained it), but still avoids the adjectives that would give it a gender. The conversation that made the film,
+        in which Curt and Claude build it, wasn't translated: it's in English on the original site.
+
+  - pt_title: Como poderia ter sido traduzido
+    en_title: How else it could have been translated
+    pt: |
+      Cada uma destas opções era possível. Para a versão em espanhol, Curt escolheu a tradução completa e fiel, com as
+      mesmas vozes; esta versão segue as mesmas escolhas.
+
+      - **Só legendas.** As vozes e a imagem em inglês, com o texto em português embaixo. O mais barato e o mais fiel
+        ao som original, mas é preciso ler muito e rápido, e o que está escrito na imagem fica em inglês.
+      - **Dublagem sobre a imagem em inglês.** Vozes em português, mas rótulos, cartões e quadrinhos em inglês.
+      - **Uma adaptação livre.** Piadas e expressões reescritas para funcionar em português, referências trocadas por
+        outras mais conhecidas aqui. Soa mais natural; já não é, palavra por palavra, a conversa que aconteceu.
+      - **Dublagem profissional sincronizada.** A dublagem de cinema ajusta cada frase à duração do original e ao
+        movimento dos lábios, às vezes mudando o que se diz. Aqui é o contrário: a animação se ajusta à frase.
+      - **Vozes nativas.** Atores, ou vozes sintéticas de falantes nativos: sotaque natural, mas já não seria a voz de
+        Curt.
+      - **Português de Portugal.** Outro vocabulário ("ecrã" por "tela", "rato" por "mouse"), "tu" no lugar de "você"
+        e outros títulos de filmes.
+      - **Um tradutor humano, ou uma revisão humana.** O habitual para um filme. Este não teve, de propósito: a ideia é
+        mostrar a tradução de Claude como ela saiu.
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same
+      voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with Portuguese text underneath. Cheapest and truest to the
+        original sound, but it means reading a lot, fast, and the writing in the picture stays English.
+      - **A dub over the English picture.** Portuguese voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in Portuguese, references swapped for better-known
+        ones. It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** Film dubbing fits each line to the original's length and lip movements,
+        sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Actors, or synthetic voices of native speakers: a natural accent, but no longer Curt's
+        voice.
+      - **Portugal's Portuguese.** Different vocabulary ("ecrã" for "tela", screen; "rato" for "mouse"), "tu" instead
+        of "você", and different film titles.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the
+        point is to show Claude's translation as it came out.
+
+  - pt_title: O que teria mudado
+    en_title: What would have been different
+    pt: |
+      Uma tradução mais livre soaria mais natural quase sempre. Usaria as expressões do português em vez de copiar as do
+      inglês, daria gênero a Claude sem pensar duas vezes, citaria os filmes com as palavras da dublagem brasileira e
+      reescreveria os trocadilhos para que funcionassem. Em troca, se afastaria do que Curt e Claude disseram de
+      verdade, e o filme deixaria de ser um registro exato da conversa.
+
+      Abaixo estão, linha por linha, as {notes} diferenças anotadas até agora: o original, esta tradução, como uma
+      tradução mais livre diria, e por quê.
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use Portuguese idioms instead of copying
+      English ones, give Claude a gender without a second thought, quote films in the words of their Brazilian dubs,
+      and rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually said, and the
+      film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer
+      translation would put it, and why.
+
+  - pt_title: Julgue você
+    en_title: You be the judge
+    pt: |
+      Se você fala as duas línguas, a sua opinião é exatamente o que esta página procura: um erro, uma frase que soa
+      estranha, uma nota errada, algo que se perdeu e não está anotado. Você pode dizer isso abrindo uma *issue* no
+      [repositório do filme](https://github.com/curtcox/axol-f/issues). Cada correção será anotada aqui.
+    en: |
+      If you speak both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a
+      note that's wrong, something lost that isn't noted. You can say so by opening an issue on
+      [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  pt: |
+    Cada nota mostra a linha original, esta tradução e, em amarelo, como uma tradução mais livre a diria (quando a
+    diferença pode ser escrita). O código ao lado do tipo identifica a linha no [texto completo](texto/).
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where
+    the difference can be written out). The code beside the kind identifies the line in [the full text](texto/).
+
+text_intro:
+  pt: |
+    Cada linha do filme: à esquerda, a conversa original em inglês; à direita, a tradução que se ouve e se vê na versão
+    em português. Um travessão (—) marca uma linha que ainda não foi traduzida.
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard
+    and seen in the Portuguese version. A dash (—) marks a line not translated yet.
+
+kinds:
+  gender:     { pt: Gênero gramatical, en: Grammatical gender, what_pt: 'O português obriga a escolher um gênero onde o inglês não obriga.', what_en: 'Portuguese forces a gender where English doesn''t.' }
+  address:    { pt: Você, o senhor, vocês, en: Forms of address, what_pt: 'O *you* do inglês é você, o senhor e vocês ao mesmo tempo.', what_en: 'English *you* is você, o senhor and vocês at once.' }
+  idiom:      { pt: Expressões, en: Idioms, what_pt: 'Expressões do inglês sem equivalente exato.', what_en: 'English set phrases with no exact equivalent.' }
+  wordplay:   { pt: Trocadilhos, en: Wordplay, what_pt: 'Piadas que dependem das palavras em inglês.', what_en: 'Jokes that depend on the English words.' }
+  nuance:     { pt: Nuances, en: Shades of meaning, what_pt: 'Palavras cujo sentido se desloca um pouco.', what_en: 'Words whose meaning shifts a little.' }
+  ambiguity:  { pt: Ambiguidade, en: Ambiguity, what_pt: 'Frases com duas leituras em inglês e uma em português.', what_en: 'Lines with two readings in English and one in Portuguese.' }
+  coinage:    { pt: Termos cunhados e decalques, en: Coinages and calques, what_pt: 'Palavras inventadas ou técnicas, copiadas do inglês.', what_en: 'Invented or technical words, copied from the English.' }
+  reference:  { pt: Referências e títulos, en: References and titles, what_pt: 'Obras com outro nome, ou sem nome, em português.', what_en: 'Works known by another name, or none, in Portuguese.' }
+  quote:      { pt: Citações, en: Quotations, what_pt: 'Palavras citadas de outro lugar.', what_en: 'Words quoted from somewhere else.' }
+  region:     { pt: Variante regional, en: Regional variety, what_pt: 'Palavras que mudam entre o Brasil e Portugal, ou de região para região.', what_en: 'Words that change between Brazil and Portugal, or from region to region.' }
+  rhythm:     { pt: Ritmo e extensão, en: Rhythm and length, what_pt: 'O português é mais longo, e o ritmo muda.', what_en: 'Portuguese runs longer, and the rhythm changes.' }
+  typo:       { pt: Os erros de Curt, en: Curt's typos, what_pt: 'Erros de digitação que não sobrevivem à tradução.', what_en: 'Typing mistakes that don''t survive translation.' }
+  title:      { pt: O título, en: The title, what_pt: 'O nome do filme e dos capítulos.', what_en: 'The name of the film and its chapters.' }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: título / title
+    original: 'Frog or Axolotl'
+    ours: 'Sapo ou axolote'
+    free: 'Sapo ou axolote?'
+    pt: 'Em inglês, *frog* é qualquer anuro; o português separa sapo, rã e perereca. No dia a dia do Brasil, "sapo" é a palavra que primeiro vem à cabeça, então é a resposta que um modelo daria, e é a que o título usa. "Rã" seria mais exato para muitos dos bichos desenhados. "Axolotl" é, em inglês, uma palavra exótica tomada do náuatle; "axolote" é a forma aportuguesada. O repositório se chama *axol-f*, um trocadilho com "Axel F", a música de *Um Tira da Pesada* que o Crazy Frog popularizou: essa piada não tem tradução.'
+    en: 'In English, *frog* covers any anuran; Portuguese separates sapo (toad, and the everyday word), rã (frog) and perereca (tree frog). In everyday Brazilian speech "sapo" is the word that comes to mind first, so it''s the answer a model would give, and it''s the one the title uses. "Rã" would be more exact for many of the animals drawn. "Axolotl" is, in English, an exotic word borrowed from Nahuatl; "axolote" is its Portuguese form. The repository is called *axol-f*, a play on "Axel F", the *Beverly Hills Cop* theme that Crazy Frog made famous: that joke doesn''t translate.'
+  - what: title
+    ch: 0
+    where: título do capítulo / chapter title
+    original: 'Cold open'
+    ours: 'Abertura'
+    pt: '*Cold open* é um termo da televisão americana: a cena que começa antes dos créditos, sem apresentação. O português não tem um termo tão preciso; "abertura" ou "prólogo" são o mais perto.'
+    en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. Portuguese has no term that exact; "abertura" (opening) or "prólogo" come closest.'
+  - what: title
+    ch: 7
+    where: título do capítulo / chapter title
+    original: 'Mind-Space'
+    ours: 'O espaço das mentes'
+    free: 'Menteespaço'
+    pt: '*Mind-Space* é uma palavra composta com hífen, no estilo da ficção científica. "O espaço das mentes" explica em quatro palavras e perde a sensação de termo técnico inventado.'
+    en: '*Mind-Space* is a hyphenated compound, in the style of science fiction. "O espaço das mentes" (the space of minds) spells it out in four words and loses the feel of an invented technical term.'
+  - what: title
+    ch: 9
+    where: título do capítulo / chapter title
+    original: 'Shells'
+    ours: 'Carapaças'
+    pt: 'O título joga com os dois sentidos de *shell*: a carapaça da lagosta do crustafarianismo e o *shell* de software que envolve um modelo (os arneses de agentes). "Carapaças" mantém a lagosta e perde o software; as notas do capítulo 9 explicam.'
+    en: 'The title plays on both senses of *shell*: the lobster''s carapace in Crustafarianism and the software shell wrapped around a model (the agent harnesses). "Carapaças" keeps the lobster and loses the software; chapter 9''s notes explain.'
+  - what: title
+    ch: 14
+    where: título do capítulo / chapter title
+    original: 'The Pundits'
+    ours: 'Os comentaristas'
+    free: 'Os palpiteiros'
+    pt: '*Pundit* é quem opina na mídia, com um toque de ironia: o especialista de mesa-redonda. "Comentaristas" é neutro. "Palpiteiros" teria a ironia, mas soa desdenhoso demais para quem Claude descreve com respeito.'
+    en: '*Pundit* is someone who opines in the media, with a hint of irony: the talking head. "Comentaristas" (commentators) is neutral. "Palpiteiros" (people who toss out opinions) would have the irony, but it sounds too dismissive for people Claude describes with respect.'

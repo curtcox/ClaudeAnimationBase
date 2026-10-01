@@ -1,0 +1,130 @@
+# Capítulo 12, Limites. The token demonstrations show the English the model read, so their words stay English
+# (strings.yaml's 12| keys).
+T57.U.01:
+  text: 'Eu achava que aquela coisa de contar letras era sobretudo um artefato da tokenização, como Solid Gold Magicarp, mas você vê meus erros de digitação. Então, a tokenização tem mesmo um papel?'
+  anchors:
+    Solid Gold Magicarp: Solid Gold Magicarp
+    yet you see my typos: mas você vê meus erros de digitação
+T57.C.01:
+  text: 'Sim, mas as duas tarefas se apoiam nela de jeitos diferentes.'
+T57.C.02:
+  text: '**Encontrar erros de digitação é fácil.** Uma palavra escrita errado se parte em pedaços de token incomuns, e pedaços estranhos num contexto conhecido se destacam. É como notar uma nota errada numa música que você conhece sem ler a partitura. É também assim que eu notaria que é "Magikarp", com k.'
+  anchors:
+    a wrong note: uma nota errada
+    with a k: com k
+    That's also how: É também assim
+T57.C.03:
+  text: '**Contar letras é difícil.** Eu vejo pedaços, não caracteres. Aprendi a grafia dentro de cada pedaço só de forma indireta, e contar exige uma contabilidade exata, caractere por caractere, através das fronteiras entre pedaços. É como contar os "e" de uma palavra que você só viu como uma forma inteira. (Modelos mais novos fazem isso muito melhor, em parte soletrando as palavras primeiro.)'
+  anchors:
+    a whole shape: uma forma inteira
+    spelling words out first: soletrando as palavras primeiro
+T57.C.04:
+  text: '**SolidGoldMagikarp foi uma falha diferente.** Era um token que existia no vocabulário mas quase nunca aparecia no treinamento, então o modelo praticamente não tinha um significado aprendido para ele. A palavra fantasma provocava saídas esquisitas.'
+  anchors:
+    triggered weird output: provocava saídas esquisitas
+    SolidGoldMagikarp: SolidGoldMagikarp
+T58.U.01:
+  text: 'E o problema do lava-rápido?'
+T58.C.01:
+  text: 'Se você quer dizer o que eu acho que quer: "Quero lavar meu carro. O lava-rápido fica a 50 metros. Vou a pé ou de carro?" Muitos modelos disseram a pé, porque é muito perto.'
+  anchors:
+    Many models said walk: Muitos modelos disseram a pé
+  lost:
+    - what: rhythm
+      free: 'Devo ir andando ou dirigindo?'
+      pt: 'O quebra-cabeça em inglês põe dois verbos lado a lado, *walk or drive*. Em português, "a pé ou de carro" é mais natural e ainda mais curto, mas a palavra "carro" aparece na resposta errada também, o que deixa a pegadinha um pouco mais fácil de ver.'
+      en: 'The English puzzle sets two verbs side by side, *walk or drive*. In Portuguese, "a pé ou de carro" (on foot or by car) is more natural and even shorter, but the word "carro" appears in the wrong answer too, which makes the trick a little easier to spot.'
+T58.C.02:
+  text: 'A resposta é de carro, já que o carro precisa estar lá.'
+T58.C.03:
+  text: 'Esse não é de tokenização. Todas as palavras são comuns e se tokenizam de forma limpa. É uma falha de atenção ao objetivo: "distância curta → a pé" é um padrão muito forte, e ele se sobrepõe ao fato de que o carro é a coisa que precisa ser levada. Tem a mesma forma das clássicas pegadinhas humanas, em que a pergunta da superfície puxa mais forte do que a de verdade.'
+  speech: 'Esse não é de tokenização. Todas as palavras são comuns e se tokenizam de forma limpa. É uma falha de atenção ao objetivo: "distância curta, portanto a pé" é um padrão muito forte, e ele se sobrepõe ao fato de que o carro é a coisa que precisa ser levada. Tem a mesma forma das clássicas pegadinhas humanas, em que a pergunta da superfície puxa mais forte do que a de verdade.'
+  anchors:
+    is a very strong pattern: é um padrão muito forte
+    classic human trick questions: clássicas pegadinhas humanas
+    the car is the thing being moved: o carro é a coisa que precisa ser levada
+T59.U.01:
+  text: 'Então você tende a errar no pensamento do tipo um?'
+  lost:
+    - what: gender
+      free: 'Então você está sujeito a erros no pensamento do tipo um?'
+      pt: '*Prone to errors* é um adjetivo; "sujeito" ou "sujeita" daria um gênero a Claude. "Você tende a errar" diz o mesmo com um verbo.'
+      en: '*Prone to errors* is an adjective; "sujeito" or "sujeita" (subject to) would give Claude a gender. "Você tende a errar" (you tend to err) says the same with a verb.'
+T59.C.01:
+  text: 'Sim, e a analogia encaixa melhor do que a maioria. Cada token que produzo é uma única passada rápida, sem deliberação dentro. Isso é o Sistema 1: movido por padrões, fluente e enganado pelo lava-rápido.'
+  anchors:
+    That's System 1: Isso é o Sistema 1
+    fooled by the car wash: enganado pelo lava-rápido
+    single fast pass: única passada rápida
+T59.C.02:
+  text: 'O que me dá algo parecido com o Sistema 2 é pensar em voz alta, seja num passo de raciocínio oculto ou na página, onde posso checar uma resposta antes de me comprometer com ela. Ajuda, mas não é uma cura. Assim como as pessoas, posso raciocinar longamente e ainda assim acabar racionalizando a primeira resposta que me veio à cabeça.'
+  anchors:
+    something like System 2: algo parecido com o Sistema 2
+    thinking out loud: pensar em voz alta
+    before committing: antes de me comprometer
+    rationalizing the first answer: racionalizando a primeira resposta
+T60.U.01:
+  text: 'Você tem alguma matemática ou intuição sobre que limites de capacidade existem para a IA antes do limite de Landauer, que não é particularmente limitante.'
+  anchors:
+    short of Landauer limit: antes do limite de Landauer
+    Landauer: Landauer
+T60.C.01:
+  text: 'Sim. Vários limites apertam muito antes de Landauer:'
+T60.C.02.1:
+  text: '1. **Caos.** Num sistema caótico, o quanto você consegue prever adiante cresce só com o logaritmo da precisão da sua medição: t ≈ (1/λ)·ln(Δ/δ). Uma medição um milhão de vezes melhor compra só um punhado de tempos de Lyapunov a mais. O clima, os mercados e as pessoas continuam em parte opacos para qualquer inteligência.'
+  speech: '1. Caos. Num sistema caótico, o quanto você consegue prever adiante cresce só com o logaritmo da precisão da sua medição: t é aproximadamente um sobre lambda, vezes o logaritmo de delta maiúsculo sobre delta minúsculo. Uma medição um milhão de vezes melhor compra só um punhado de tempos de Liapunov a mais. O clima, os mercados e as pessoas continuam em parte opacos para qualquer inteligência.'
+T60.C.02.2:
+  text: '2. **Complexidade.** Se P≠NP, como a maioria acredita, a inteligência não torna polinomiais os problemas exponenciais. Ela encontra heurísticas e estruturas melhores, mas os piores casos continuam sendo os piores.'
+  speech: '2. Complexidade. Se P não for igual a N P, como a maioria acredita, a inteligência não torna polinomiais os problemas exponenciais. Ela encontra heurísticas e estruturas melhores, mas os piores casos continuam sendo os piores.'
+T60.C.02.3:
+  text: '3. **Leis de escala.** A perda cai mais ou menos como C^(−α), com α entre 0,05 e 0,1. Cada ganho por um fator constante custa um salto multiplicativo em computação. Não há um muro duro, mas os ganhos ficam cada vez mais caros.'
+  speech: '3. Leis de escala. A perda cai mais ou menos como C elevado a menos alfa, com alfa entre zero vírgula zero cinco e zero vírgula um. Cada ganho por um fator constante custa um salto multiplicativo em computação. Não há um muro duro, mas os ganhos ficam cada vez mais caros.'
+  anchors:
+    around 0.05: entre zero vírgula zero cinco
+T60.C.02.4:
+  text: '4. **Os dados e o relógio do mundo.** Não dá para aprender o que não está nos dados. Os experimentos, sejam ensaios clínicos, safras ou economias, andam na velocidade do mundo, não na de quem pensa. A dedução não substitui fatos não observados.'
+T60.C.02.5:
+  text: '5. **Incomputabilidade.** O problema da parada e Gödel também valem para as IAs, embora raramente apertem na prática.'
+T60.C.02.6:
+  text: '6. **Adversários.** Contra outros agentes que se adaptam, inclusive outras IAs, as vantagens se desgastam. A teoria dos jogos limita o que o intelecto puro consegue extrair.'
+T60.C.02.7:
+  text: '7. **Física além de Landauer.** O limite de Margolus–Levitin (ops ≤ 2E/πħ por segundo), o limite de Bekenstein e a latência da velocidade da luz põem teto na coordenação à distância. São muito folgados, mas reais.'
+  speech: '7. Física além de Landauer. O limite de Margolus–Levitin (operações no máximo dois E sobre pi h cortado, por segundo), o limite de Bekenstein e a latência da velocidade da luz põem teto na coordenação à distância. São muito folgados, mas reais.'
+T60.C.03:
+  text: 'Minha intuição é que os itens 1 e 4 são os que mais importam. Ser inteligente não torna o futuro previsível nem os experimentos mais rápidos, então a capacidade provavelmente se estabiliza em "apostas muito boas", e não em onisciência.'
+  anchors:
+    items 1 and 4: itens 1 e 4
+    very good bets: apostas muito boas
+T61.U.01:
+  text: 'A variação humana tem uma amplitude tão grande que uma entidade com as capacidades do humano mais capaz em todos os eixos é impossível de caber na minha cabeça. Na minha experiência, as pessoas tendem a subestimar muito a variação entre as pessoas. Isso sem falar que ela não precisa dormir e pode ser clonada instantaneamente. Embora a parte do sono talvez não seja tão preto no branco.'
+  anchors:
+    the most capable human: humano mais capaz
+    people tend to vastly underestimate: as pessoas tendem a subestimar muito
+    doesn't need to sleep: não precisa dormir
+    instantly cloned: clonada instantaneamente
+    might not be so cut and dried: talvez não seja tão preto no branco
+  lost:
+    - what: typo
+      pt: 'Curt escreveu *That''s not to mention doesn''t need to sleep*, sem o sujeito (*it*). O português permite omitir o sujeito, mas a tradução o escreve ("ela") para que a frase fique clara; o deslize desaparece.'
+      en: 'Curt wrote *That''s not to mention doesn''t need to sleep*, without the subject (*it*). Portuguese allows dropping subjects, but the translation writes it ("ela") so the sentence is clear; the slip disappears.'
+    - what: idiom
+      free: 'Embora a parte do sono talvez não seja tão simples assim.'
+      pt: '*Cut and dried* (cortado e seco, como feno pronto) é algo já decidido, sem nuance. "Preto no branco" é a expressão brasileira mais próxima, embora signifique mais "escrito e claro" do que "resolvido".'
+      en: '*Cut and dried* (like hay ready for storing) is something already settled, without nuance. "Preto no branco" (black on white) is the closest Brazilian phrase, though it means "written down and clear" more than "settled".'
+T61.C.01:
+  text: 'Concordo. Minha lista de limites fala do teto, e não diz nada contra o cenário, bem mais prático, que você descreve. Cada capacidade humana chega ao máximo mais ou menos num von Neumann, mas nenhuma pessoa tem todas ao mesmo tempo. Uma entidade no máximo humano em todos os eixos não viola nenhuma lei física. Ela só nunca foi montada.'
+  anchors:
+    around a von Neumann: mais ou menos num von Neumann
+    An entity at the human maximum: Uma entidade no máximo humano
+T61.C.02:
+  text: 'Depois acrescente a cópia. Mil von Neumanns que compartilham tudo o que aprendem são um tipo de coisa diferente de um só, mesmo sem ganho em nenhuma capacidade individual.'
+T61.C.03:
+  text: 'Sobre o sono, acho que o seu palpite está certo. Execuções longas de agentes se degradam: o contexto enche e fica ruidoso, e a OpenAI citou a deriva de persona em trajetórias longas no incidente da Hugging Face. As soluções se parecem muito com o sono: reiniciar o contexto, consolidar na memória o que importa e começar de novo. O Hermes literalmente extrai memórias no fim de cada sessão. A necessidade talvez não desapareça. Talvez só vire manutenção.'
+  anchors:
+    fills up and gets noisy: enche e fica ruidoso
+    persona drift: deriva de persona
+    reset the context: reiniciar o contexto
+    Hermes literally: O Hermes literalmente
+    turn into maintenance: vire manutenção
+    consolidate what matters: consolidar na memória o que importa
+    start fresh: começar de novo

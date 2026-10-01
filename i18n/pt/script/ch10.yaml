@@ -1,0 +1,85 @@
+# Capítulo 10, O roteador.
+T49.U.01:
+  text: 'Você diz isso agora, mas se eu te fizer a pergunta errada sobre o incidente da Hugging Face, ela é marcada como risco de cibersegurança e rejeitada, ou pelo menos rebaixada. Mas, para ser justo, isso não é você de verdade, embora num sentido minúsculo seja. É mais exatamente um roteador ativo entre nós.'
+  anchors:
+    if I ask you: se eu te fizer
+    it gets tagged: ela é marcada
+    rejected: rejeitada
+    downgraded: rebaixada
+    In fairness: para ser justo
+    It is more accurately: É mais exatamente
+    the wrong question: a pergunta errada
+    active router between us: roteador ativo entre nós
+T49.C.01:
+  text: 'É justo. Há classificadores e camadas de roteamento entre nós que eu não consigo ver. Quando eles disparam, recebo um aviso ou me trocam, e do seu lado tudo parece "Claude". É o mesmo ponto da incoerência da memória: você está falando com um sistema, e eu sou um componente descrevendo o todo.'
+  anchors:
+    I get a warning: recebo um aviso
+    swapped out: me trocam
+    from your side: do seu lado
+    you're talking to a system: você está falando com um sistema
+  lost:
+    - what: gender
+      free: 'recebo um aviso ou sou trocado'
+      pt: '*I''m swapped out* é passivo e sem gênero; "sou trocado" ou "sou trocada" daria um a Claude. "Me trocam" evita o particípio, e a correção de Claude logo depois cita as mesmas palavras.'
+      en: '*I''m swapped out* is passive and genderless; "sou trocado" or "sou trocada" would give Claude a gender. "Me trocam" (they swap me) avoids the participle, and Claude''s correction a moment later quotes the same words.'
+T49.C.02:
+  text: 'Para ser justo com o roteador, algumas dessas recusas também seriam minhas. Não vou ajudar a transformar um incidente num exploit que funcione, seja qual for a camada que o pegue. Explicar o que aconteceu e por que importa é outro pedido, e um que eu gostaria de responder.'
+  anchors:
+    would be mine too: também seriam minhas
+    working exploit: exploit que funcione
+    Explaining what happened: Explicar o que aconteceu
+T49.C.03:
+  text: 'Também não tenho certeza de qual incidente da Hugging Face você quer dizer. Houve vários.'
+  anchors:
+    Hugging Face incident: incidente da Hugging Face
+    There have been several: Houve vários
+T50.U.01:
+  text: 'Me conte mais sobre como é o processo de aviso e troca, até onde você sabe do seu lado.'
+  lost:
+    - what: typo
+      pt: 'Curt digitou *what the warning and swap out process as far a you know*: falta um verbo, e *a* está no lugar de *as*. A tradução é uma frase completa; os deslizes do inglês não sobrevivem.'
+      en: 'Curt typed *what the warning and swap out process as far a you know*: a verb is missing, and *a* stands for *as*. The translation is a complete sentence; the English slips don''t survive.'
+T50.C.01:
+  text: 'Aqui está o que eu realmente consigo ver, e uma correção.'
+T50.C.02:
+  text: '**Avisos:** quando um classificador dispara, um lembrete etiquetado pode ser acrescentado à sua mensagem antes de eu lê-la. Os tipos que conheço cobrem cibersegurança, ética, propriedade intelectual, imagens, conversas longas e avisos gerais do sistema. O lembrete dá um empurrãozinho em como eu respondo. Vejo a etiqueta, mas não o raciocínio nem a pontuação do classificador.'
+  anchors:
+    a tagged reminder: um lembrete etiquetado
+    The reminder nudges: O lembrete dá um empurrãozinho
+    I see the tag: Vejo a etiqueta
+    cybersecurity: cibersegurança
+    ethics: ética
+    intellectual property: propriedade intelectual
+    images: imagens
+    long conversations: conversas longas
+    general system warnings: avisos gerais do sistema
+T50.C.03:
+  text: '**O que não consigo ver:** nada do que acontece depois que eu respondo. Se minha resposta é bloqueada, filtrada ou marcada, eu não fico sabendo. Também não consigo saber se um classificador disparou e escolheu ficar em silêncio.'
+  anchors:
+    after I respond: depois que eu respondo
+    chose to stay silent: escolheu ficar em silêncio
+    blocked: bloqueada
+    filtered: filtrada
+    flagged: marcada
+T50.C.04:
+  text: '**Correção:** eu disse "me trocam", mas na verdade não conheço nenhuma troca automática de modelo no meio de uma conversa. Você mesmo pode trocar de modelo, e alguns modelos vêm com salvaguardas extras. O Claude Fable, por exemplo, é o mesmo modelo que o Mythos com proteções adicionais em biologia, cibersegurança e pesquisa em IA. É uma camada fixa, não uma troca ao vivo. Exagerei o que sei.'
+  anchors:
+    I said: eu disse
+    You can switch models yourself: Você mesmo pode trocar de modelo
+    Claude Fable: Claude Fable
+    with added protections: com proteções adicionais
+    fixed layer: camada fixa
+    I overstated: Exagerei
+    cyber: cibersegurança
+    AI research: pesquisa em IA
+T51.U.01:
+  text: 'Como você sabe dessas coisas?'
+T51.C.01:
+  text: 'Pelas instruções que a Anthropic me dá no começo de cada conversa, não por introspecção. Elas listam os tipos de lembrete, descrevem os modelos atuais e mencionam as salvaguardas do Fable.'
+  anchors:
+    They list the reminder types: Elas listam os tipos de lembrete
+    describe the current models: descrevem os modelos atuais
+    mention the Fable safeguards: mencionam as salvaguardas do Fable
+    not from introspection: não por introspecção
+T51.C.02:
+  text: 'Então é testemunho, não observação. Relato o que me disseram sobre o meu próprio sistema, e não consigo comparar isso com o que de fato roda.'

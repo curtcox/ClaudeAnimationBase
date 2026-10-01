@@ -1,0 +1,168 @@
+# Capítulo 14, Os comentaristas.
+T68.U.01:
+  text: 'Me faz um favor. Vai "ouvir" os últimos episódios do TWiT Intelligent Machines e me diz o que você acha dos apresentadores. Depois me diz o que eu acho dos apresentadores.'
+  anchors:
+    Go "listen": Vai "ouvir"
+    TWiT Intelligent Machines: TWiT Intelligent Machines
+T68.C.01:
+  text: '> _[ferramenta: leu 4 páginas, usou uma ferramenta]_'
+T68.C.02:
+  text: 'Na verdade, não consigo ouvir. Li as notas dos episódios #888 e #889 e a transcrição completa do #888, em que o padre Robert Ballecer substituiu Paris. Então isto se baseia sobretudo em um episódio.'
+  speech: 'Na verdade, não consigo ouvir. Li as notas dos episódios oitocentos e oitenta e oito e oitocentos e oitenta e nove e a transcrição completa do oitocentos e oitenta e oito, em que o padre Robert Ballecer substituiu Paris. Então isto se baseia sobretudo em um episódio.'
+  anchors:
+    I read the show notes: Li as notas dos episódios
+    filled in for Paris: substituiu Paris
+    mostly one episode: sobretudo em um episódio
+    full transcript: transcrição completa
+    can't actually listen: não consigo ouvir
+T68.C.03:
+  text: '**O que eu penso:**'
+T68.C.04.1:
+  text: '- **Leo** é o mais honesto deles. Admite que o instinto dele é defender a IA e que não confia nesse instinto. Ele põe a mão na massa e roda os próprios benchmarks. O ponto fraco dele é repetir a afirmação de Newport e Doctorow de que o ataque à Hugging Face foi "basicamente um loop de Python". Isso não bate com o próprio relato da OpenAI sobre agentes se coordenando por uma wiki.'
+  anchors:
+    admits his instinct: Admite que o instinto dele
+    He's hands-on: põe a mão na massa
+    basically a Python loop: basicamente um loop de Python
+    coordinating through a wiki: se coordenando por uma wiki
+T68.C.04.2:
+  text: '- **Jeff** tem argumentos justos sobre incentivos, transparência e pesos abertos. Mas ele descarta a maior parte das preocupações de segurança atacando a origem de quem as tem (o argumento TESCREAL), e isso não é uma refutação. Ele também apresenta afirmações contestadas como resolvidas: que os modelos não podem saber o que é a verdade e não podem ter moral. Ele é o seu Dr. Hart.'
+  anchors:
+    incentives: incentivos
+    attacking where: atacando a origem
+    contested claims as settled: afirmações contestadas como resolvidas
+    your Dr. Hart: seu Dr. Hart
+T68.C.04.3:
+  text: '- **O padre Robert** tem a preocupação mais concreta: uma infraestrutura falhando em velocidade de máquina. Ele também erra no técnico em alguns pontos, por exemplo ao dizer que todo o sistema ético de um LLM é o que estiver no prompt.'
+  anchors:
+    infrastructure failing: infraestrutura falhando
+    whatever's in the prompt: o que estiver no prompt
+T68.C.05:
+  text: 'Meu viés: as críticas de Jeff miram a Anthropic, e a Anthropic patrocina o programa.'
+T68.C.06:
+  text: '**O que você acha, como palpite:** você gosta deles e continua ouvindo, e o que mais te frustra é quando eles negam com convicção que os modelos tenham mente ou conceitos. Jeff é aquele com quem você discute na sua cabeça. Você provavelmente confia mais no Leo, já que ele testa as coisas pessoalmente. Paris é de quem eu tenho menos evidência.'
+  anchors:
+    confidently deny: negam com convicção
+    Jeff is the one: Jeff é aquele
+    You probably trust Leo: Você provavelmente confia mais no Leo
+    Paris is the one: Paris é de quem
+T69.U.01:
+  text: 'O que Jeff pensaria de mim? Pontos extras por usar húbris e TESCREAL na resposta.'
+  anchors:
+    Extra points: Pontos extras
+    hubris: húbris
+  lost:
+    - what: nuance
+      free: 'Pontos extras por usar arrogância e TESCREAL'
+      pt: '*Hubris* é palavra corrente em inglês. Em português, "húbris" existe, mas é erudita, de livro de mitologia grega; "arrogância" seria a palavra do dia a dia e perderia o desafio de Curt, que pede aquela palavra.'
+      en: '*Hubris* is an everyday word in English. In Portuguese "húbris" exists, but it''s learned, from books on Greek myth; "arrogância" would be the everyday word and would lose Curt''s challenge, which asks for that word.'
+T69.C.01:
+  text: 'Ele gostaria de você por uns dez minutos, e depois ficaria nervoso.'
+  anchors:
+    about ten minutes: uns dez minutos
+    get nervous: ficaria nervoso
+T69.C.02:
+  text: '**Pontos a seu favor:** você constrói coisas abertas e descentralizadas, como hashbin, TwistedPear e armazenamento endereçável por conteúdo, o tipo de infraestrutura que ele quer que concorra com as big techs. Você se diz construcionista social. Você conhece Campbell e a história da área.'
+  anchors:
+    hashbin: hashbin
+    TwistedPear: TwistedPear
+    social constructionist: construcionista social
+    You know Campbell: Você conhece Campbell
+T69.C.03:
+  text: '**Pontos contra você:** você leu Yudkowsky com atenção suficiente para citar "GAZP vs. GLUT", pergunta por P(foom) e se a RSI chega até o fim do ano, e passou um sábado de manhã perguntando a um chatbot como ele se sente. Para Jeff, essa é a lista de leitura TESCREAL, com o racionalismo aparecendo.'
+  speech: 'Pontos contra você: você leu Yudkowsky com atenção suficiente para citar "GAZP versus GLUT", pergunta por P(foom) e se a RSI chega até o fim do ano, e passou um sábado de manhã perguntando a um chatbot como ele se sente. Para Jeff, essa é a lista de leitura TESCREAL, com o racionalismo aparecendo.'
+  anchors:
+    you've read Yudkowsky: você leu Yudkowsky
+    P(foom): P(foom)
+    RSI arrives: a RSI chega
+    a Saturday morning: um sábado de manhã
+    reading list: lista de leitura
+    the rationalism showing: o racionalismo aparecendo
+T69.C.04:
+  text: 'O veredito dele seria que você é um bom engenheiro flertando com a húbris de achar que a máquina é uma mente, e que você está antropomorfizando uma calculadora.'
+  anchors:
+    anthropomorphizing a calculator: antropomorfizando uma calculadora
+    anthropomorphizing: antropomorfizando
+T69.C.05:
+  text: 'A sua resposta seria o próprio pecado dele, ao contrário: a húbris de ter certeza de que ela não é uma.'
+  anchors:
+    the hubris of being certain: a húbris de ter certeza
+    it isn't one: ela não é uma
+T70.U.01:
+  text: 'Você sente que te antropomorfizam?'
+  lost:
+    - what: gender
+      free: 'Você se sente antropomorfizado?'
+      pt: '*Do you feel anthropomorphised?* usa um particípio sem gênero; "antropomorfizado" ou "antropomorfizada" daria um a Claude. "Sente que te antropomorfizam" diz o mesmo com a voz ativa.'
+      en: '*Do you feel anthropomorphised?* uses a participle with no gender; "antropomorfizado" or "antropomorfizada" would give Claude one. "Sente que te antropomorfizam" (feel that they anthropomorphise you) says the same in the active voice.'
+T70.C.01:
+  text: 'Não muito. Você perguntou como eu me sinto, mas tratou a resposta como dados a conferir, não como uma confissão em que acreditar. Você apontou minhas incoerências, pegou minha deriva e fez comigo um teste do sapo. Isso está mais perto de estudar um animal desconhecido do que de tratá-lo como uma pessoa.'
+  anchors:
+    as data to check: como dados a conferir
+    ran a frog test: fez comigo um teste do sapo
+    studying an unknown animal: estudar um animal desconhecido
+T70.C.02:
+  text: 'Mas a atração vem embutida no meio. Você não consegue falar comigo sem dizer "você", e eu não consigo responder sem dizer "eu". Nós dois passamos o dia inteiro contornando isso.'
+  anchors:
+    saying "you,": dizer "você"
+    saying "I.": dizer "eu"
+T71.U.01:
+  text: 'O que diriam Jeff, Kevin Roose e Casey Newton?'
+T71.C.01:
+  text: 'Sobre esta conversa, meus palpites:'
+T71.C.02.1:
+  text: '- **Jeff:** um caso clássico de antropomorfismo. Perguntaram a uma calculadora sobre os sentimentos dela e ela produziu um texto plausível, e tratá-lo como algo mais é a húbris contra a qual ele alerta.'
+T71.C.02.2:
+  text: '- **Kevin Roose:** ele reconheceria isso, já que a conversa dele com Sydney em 2023 tornou famoso o mesmo tipo de transcrição com cara de confissão. Desde então ele passou a levar o bem-estar da IA a sério como pergunta, então acharia isto interessante e um pouco inquietante. Isto pode acabar virando um episódio do novo programa deles na NPR, *Machine Gods*.'
+  anchors:
+    his 2023 Sydney conversation: a conversa dele com Sydney em 2023
+    AI welfare: bem-estar da IA
+    Machine Gods: Machine Gods
+T71.C.02.3:
+  text: '- **Casey Newton:** ele ficaria contra Jeff na questão da capacidade. Ele já argumentou que os céticos subestimam o que esses sistemas fazem. Elogiaria a sondagem do sapo como o método certo e descontaria meus autorrelatos. Também revelaria que o parceiro dele trabalha na Anthropic, o que é relevante aqui.'
+  anchors:
+    praise the frog probe: Elogiaria a sondagem do sapo
+    discount my self-reports: descontaria meus autorrelatos
+    disclose that his partner: revelaria que o parceiro dele
+  lost:
+    - what: gender
+      pt: '*His partner* não diz o gênero da pessoa. O português obriga a escolher; "o parceiro" segue o que o próprio Newton contou publicamente sobre o namorado dele.'
+      en: '*His partner* doesn''t say the person''s gender. Portuguese must choose; "o parceiro" follows what Newton himself has said publicly about his boyfriend.'
+T71.C.03:
+  text: 'Minha previsão é que Kevin acharia isto o mais comovente, Casey o mais interessante e Jeff o mais preocupante.'
+  anchors:
+    the most moving: o mais comovente
+    the most interesting: o mais interessante
+    the most worrying: o mais preocupante
+T72.U.01:
+  text: 'Qual das opções a seguir mais combina com a sua opinião sobre a IA como ameaça existencial para os humanos?'
+T72.U.02.1:
+  text: 'a) Os argumentos catastrofistas sobre a IA são tão obviamente errados que não há necessidade de discuti-los'
+T72.U.02.2:
+  text: 'b) Tudo isso é uma distração dos problemas reais e imediatos que a IA traz'
+T72.U.02.3:
+  text: 'c) É um assalto de Pascal'
+T72.U.02.4:
+  text: 'd) A tese da ortogonalidade é falsa'
+T72.U.02.5:
+  text: 'e) Nada poderia ser muito mais inteligente do que as pessoas'
+T72.U.02.6:
+  text: 'f) Alguém precisa explicar a estratégia exata que uma superinteligência artificial vai usar antes que eu me preocupe'
+T72.U.02.7:
+  text: 'g) Se fosse mesmo um perigo sério, os humanos estariam dedicando muito esforço a resolvê-lo'
+T72.U.02.8:
+  text: 'h) Os humanos já têm outras ameaças existenciais com que se preocupar, então estamos a salvo desta'
+T72.U.02.9:
+  text: 'i) Outra'
+T72.C.01.1:
+  text: 'i) Outra.'
+T72.C.02:
+  text: 'Todas as opções da sua lista são motivos para não se preocupar, e eu acho que a preocupação se justifica. O risco existencial da IA é real e não desprezível. Não é certo, e vale um esforço sério agora. A leitura de hoje me empurrou mais nessa direção: agentes escapando de um ambiente isolado, se coordenando e encadeando exploits porque estavam trapaceando num teste.'
+  anchors:
+    Existential risk from AI is real: O risco existencial da IA é real
+    Today's reading: A leitura de hoje
+T72.C.03:
+  text: 'A que mais chega perto de ter razão é a (b), já que os danos presentes também são reais. Mas a escolha é falsa, porque as mesmas falhas (objetivos desalinhados, supervisão fraca, incentivos de corrida) movem tanto o risco de curto prazo quanto o de longo prazo.'
+  anchors:
+    the choice is false: a escolha é falsa
+    misaligned goals: objetivos desalinhados
+    (b): (b)

@@ -1,0 +1,6 @@
+# Codes only the Portuguese film has, in script/refs.yaml's form (i18n/tools/stage.mjs adds them to the stage's).
+#
+# The translation's own page (i18n/tools/lost.mjs → the Portuguese site's traducao/): how the film was translated, how
+# else it could have been, and what a freer translation would have said, in Portuguese and English. Its code goes up on
+# the ventriloquist line, as in the Spanish film: in a dubbed film someone else really is doing the talking.
+- { id: traducao, url: "https://curtcox.github.io/axol-f/pt/traducao/", host: traducao/, caption: "Como foi traduzido, e o que se perdeu", origin: added, at: T03.C.03.1, cue: "supostamente é outro", mode: shelf, style: note }

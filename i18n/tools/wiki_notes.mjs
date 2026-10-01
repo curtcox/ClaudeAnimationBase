@@ -6,7 +6,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirOf, langOf, args, langLinks, wikiTitle } from './i18n_lib.mjs';
 
-const lang = langOf(args), dir = `${dirOf(lang)}/site/notes`, IN = { es: 'en inglés' }[lang] || 'English';
+const lang = langOf(args), dir = `${dirOf(lang)}/site/notes`, IN = { es: 'en inglés', pt: 'em inglês' }[lang] || 'English';
 const files = readdirSync(dir).filter(f => f.endsWith('.md'));
 // a Wikipedia url in markdown can hold one pair of brackets (…/Mad_(magazine))
 const URL = String.raw`https:\/\/en\.wikipedia\.org\/wiki\/(?:[^()\s"'\]]|\([^()\s]*\))+`;

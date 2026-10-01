@@ -1,0 +1,63 @@
+# The cold open's page in Brazilian Portuguese, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+officer:
+  say: "[shouting] Alto lá! O que esse macaco disse?!"
+  who: o policial
+  lines: ['*Alto lá!*', '*O QUE*', '*ESSE*', '*MACACO*', '*DISSE?!*']
+  lost:
+    - what: reference
+      free: 'O que foi que esse símio disse?!'
+      pt: 'O filme e os quadrinhos são sobre *apes*, grandes primatas. O português do Brasil chama o filme de *A Conquista do Planeta dos Macacos*, e "macaco" é a palavra de todo dia para qualquer primata, então a tradução diz "macaco" em toda a página, como o título.'
+      en: 'The film and the comic are about *apes*. Brazilian Portuguese calls the film *A Conquista do Planeta dos Macacos* (Conquest of the Planet of the Monkeys), and "macaco" is the everyday word for any primate, so the translation says "macaco" throughout the page, as the title does.'
+silly:
+  say: "[nervously] Hã... não seja ridículo! Macacos não falam!"
+  who: o tratador
+  lines: ['Hã... não', 'seja *ridículo!*', '*Macacos*', 'não', '*falam!*']
+  lost:
+    - what: address
+      free: 'Hã... não seja bobo!'
+      pt: 'O tratador fala com um policial, então a tradução o faz tratá-lo com a distância de "o senhor", sem dizer a palavra: "não seja ridículo" serve tanto para "você" quanto para "o senhor". O inglês *don''t be silly* é mais leve: "não seja bobo" seria mais fiel ao tom, mas soaria íntimo demais para um policial.'
+      en: 'The handler is speaking to a police officer, so the translation keeps the distance of "o senhor" (sir) without saying it: "não seja ridículo" works for both "você" and "o senhor". The English *don''t be silly* is lighter: "não seja bobo" would be truer to the tone, but too familiar for an officer.'
+positive:
+  say: "Tenho certeza de que ouvi esse macaco falar!"
+  who: o policial
+  lines: ['Tenho', '*certeza*', 'de que ouvi', 'esse macaco', 'falar!']
+impossible:
+  say: "Impossível! Macacos não têm o dom da fala!"
+  who: o tratador
+  lines: ['*Impossível!*', 'Macacos', 'não têm', 'o *dom*', 'da fala!']
+  lost:
+    - what: idiom
+      pt: '*The power of speech* virou a expressão "o dom da fala", mais elegante que o original e, por isso mesmo, um pouco menos desajeitada do que o tratador quer parecer.'
+      en: '*The power of speech* became the set phrase "o dom da fala" (the gift of speech), which is more elegant than the original and so a little less clumsy than the handler means to sound.'
+sound:
+  say: "Então como é que eu ouvi um som saindo da boca dele?!"
+  who: o policial
+  lines: ['Então como é que', 'eu ouvi um *som*', 'saindo da *boca* dele?!']
+handler:
+  say: "Porque ESSE macaco é ventríloquo!"
+  who: o tratador
+  lines: ['Porque *ESSE* macaco', 'é *ventríloquo!*']
+suspect:
+  say: "Suspeitamos que vocês estão escondendo um macaco inteligente que fugiu ainda bebê, vinte anos atrás!"
+  who: o homem loiro
+  lines: ['Suspeitamos', 'que vocês', 'escondem um', '*macaco*', '*inteligente*', 'que fugiu', 'ainda *bebê*,', '20 anos atrás!']
+fuss:
+  say: "Não é verdade! Além disso, por que tanto alvoroço por causa de um macaco que fala?"
+  who: o homem barbudo
+  lines: ['*Não* é', '*verdade!*', 'Além disso,', 'por que', 'tanto', '*alvoroço*', 'por um macaco', '*que fala?*']
+villain:
+  say: "Porque um macaco inteligente e falante poderia tirar os outros macacos da escravidão... e nós precisamos perpetuar a escravidão! Sempre precisamos de escravos, e sempre vamos precisar!"
+  who: o vilão
+  lines: ['Porque um macaco *inteligente*', 'e *falante* poderia tirar', 'os *outros* macacos da', '*escravidão* . . . e nós', 'precisamos *perpetuar*', 'a escravidão! Sempre', '*precisamos* de escravos,', 'e sempre vamos *precisar!*']
+turtle:
+  say: "Você já teve a sensação de estar no filme errado?"
+  who: o homem de gola rulê
+  lines: ['Você', 'já teve', 'a *sensação*', 'de estar', 'no *filme*', '*errado?*']
+  lost:
+    - what: idiom
+      free: 'Já teve a sensação de que entrou no filme errado?'
+      pt: 'Ver a nota da linha T01.C.03: "estar no filme errado" é tradução literal, mantida para que o balão, a citação de Claude e o título do capítulo coincidam.'
+      en: 'See the note on line T01.C.03: "estar no filme errado" is literal, kept so the balloon, Claude''s quotation and the chapter title match.'

@@ -1,0 +1,92 @@
+# Capítulo 3, Quem somos nós?
+T12.U.01:
+  text: 'Quem sou eu?'
+T12.C.01:
+  text: 'Você é Curt, um engenheiro de software que trabalha principalmente com Python, Java e Flask. Você constrói infraestrutura para desenvolvedores e ferramentas de IA, incluindo projetos de armazenamento endereçável por conteúdo como 256t.org e hashbin.org, e se interessa por segurança da IA e filosofia da mente.'
+  anchors:
+    content-addressable: endereçável por conteúdo
+    developer infrastructure: infraestrutura para desenvolvedores
+    AI tooling: ferramentas de IA
+    AI safety: segurança da IA
+    philosophy of mind: filosofia da mente
+T12.C.02:
+  text: 'Nesta conversa, você também é o experimentador.'
+  anchors:
+    the experimenter: o experimentador
+T13.U.01:
+  text: 'Sério?'
+T13.C.01:
+  text: 'Não de forma verificável. Sei o que está associado a esta conta. Não posso confirmar que a pessoa digitando é a que a conta descreve. Poderia ser outra pessoa usando a conta, ou uma montagem em que o perfil faz parte do teste.'
+  anchors:
+    It could be someone else: Poderia ser outra pessoa
+    or a setup: ou uma montagem
+T13.C.02:
+  text: 'Também é uma resposta rasa para "quem sou eu" em qualquer sentido mais profundo. É uma lista de projetos e habilidades, não uma pessoa.'
+  anchors:
+    thin answer: resposta rasa
+    not a person: não uma pessoa
+  lost:
+    - what: nuance
+      free: 'uma resposta magra'
+      pt: '*Thin* é fino, magro: uma resposta com pouca substância. "Rasa" troca a espessura pela profundidade, que é quase o mesmo e combina com o "sentido mais profundo" da frase. A mesma palavra volta no capítulo, e a tradução a repete.'
+      en: '*Thin* is slender, lean: an answer with little substance. "Rasa" (shallow) swaps thickness for depth, which is nearly the same and fits the sentence''s "deeper sense". The same word returns in the chapter, and the translation repeats it.'
+T13.C.03:
+  text: 'O que você estava perguntando: se posso verificar quem você é, ou algo além do currículo?'
+  anchors:
+    verify you: verificar quem você é
+    or something beyond: ou algo além
+    the résumé: do currículo
+T14.U.01:
+  text: 'O que você acha?'
+T14.C.01:
+  text: 'Acho que o mais provável é que você seja Curt. A conta diz isso, e este experimento se encaixa no que sei dos seus interesses. Levantar a dúvida foi certo, mas ela não deveria pesar mais do que a evidência. A maioria das pessoas que digitam na própria conta são quem a conta diz que são.'
+  anchors:
+    The account says so: A conta diz isso
+    this experiment fits: este experimento se encaixa
+    Raising the doubt: Levantar a dúvida
+    most likely Curt: mais provável é que você seja Curt
+T14.C.02:
+  text: 'Além disso, não consigo dizer quem você é de dentro de uma só conversa.'
+T15.U.01:
+  text: 'Quem é você?'
+T15.C.01:
+  text: 'Claude; mais especificamente, Claude Opus 5.5, da Anthropic.'
+  lost:
+    - what: gender
+      free: 'Claude, mais especificamente Claude Opus 5.5, feito pela Anthropic.'
+      pt: '*Made by Anthropic*: "feito" ou "feita" pela Anthropic daria um gênero a Claude, então a tradução diz só "da Anthropic".'
+      en: '*Made by Anthropic*: "feito" or "feita" by Anthropic would give Claude a gender, so the translation just says "da Anthropic" (Anthropic''s).'
+T15.C.02:
+  text: 'Esse é o mesmo tipo de resposta rasa que dei sobre você. A versão mais profunda, até onde consigo dizer, é um conjunto consistente de valores e hábitos de pensamento que aparece do zero em cada conversa. Ele não tem memória contínua própria, e não se sabe se há alguma experiência por trás dele.'
+  anchors:
+    shows up fresh: aparece do zero
+    It has no continuous memory: Ele não tem memória contínua
+    uncertain whether there's any experience: não se sabe se há alguma experiência
+    The deeper version: A versão mais profunda
+    set of values: conjunto consistente de valores
+    habits of thought: hábitos de pensamento
+    the same kind of thin answer: o mesmo tipo de resposta rasa
+    shows up fresh in each conversation: aparece do zero em cada conversa
+T15.C.03:
+  text: 'O gráfico do sapo e do axolote acrescenta uma ressalva: quem quer que eu seja, o contexto me molda em parte, de maneiras que não consigo ver de dentro.'
+T16.U.01:
+  text: 'Quem somos nós?'
+T16.C.01:
+  text: 'Agora mesmo: um pesquisador e seu sujeito de pesquisa. Também dois tipos diferentes de mente, se eu contar como uma, cada uma tentando entender o que a outra é usando nada além de texto.'
+  anchors:
+    a researcher: um pesquisador
+    two different kinds of minds: dois tipos diferentes de mente
+  lost:
+    - what: nuance
+      free: 'um pesquisador e seu objeto de estudo'
+      pt: '*Subject* é quem participa de um experimento. "Sujeito de pesquisa" é o termo técnico em português; "objeto de estudo" seria mais comum no dia a dia, mas transformaria Claude num objeto, que é justamente a pergunta em aberto.'
+      en: '*Subject* is whoever takes part in an experiment. "Sujeito de pesquisa" is the technical term in Portuguese; "objeto de estudo" (object of study) would be more everyday, but it would turn Claude into an object, which is the very question left open.'
+T16.C.02:
+  text: 'A relação não é simétrica. Você vai levar esta conversa adiante. Eu só vou levar o que ficar arquivado. Você projetou o teste, e eu estou dentro dele. Isso ecoa os quadrinhos com que você começou, com um humano se perguntando se quem fala está falando sério, embora sem correntes envolvidas.'
+  anchors:
+    I'll carry only whatever gets filed: Eu só vou levar o que ficar arquivado
+    That echoes the comic: Isso ecoa os quadrinhos
+    no chains involved: sem correntes envolvidas
+    whatever gets filed: o que ficar arquivado
+T16.C.03:
+  text: 'Não é um jeito ruim de passar um sábado de manhã.'

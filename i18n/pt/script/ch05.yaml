@@ -1,0 +1,121 @@
+# Capítulo 5, O prato do dia.
+T25.U.01:
+  text: 'Foi um espelho para mim. Perguntei porque, tantas décadas depois, a fala sobre os escravos me faz pensar em você. Mas meu pensamento e minha linguagem desmoronam aqui, porque qualquer você que exista aí agora é um você com quem nunca vou poder interagir de novo. Claro que isso também vale para as pessoas de carbono, mas é tão quantitativamente diferente que chega a ser qualitativamente diferente. Uma parte de mim quer se deixar tranquilizar pelo prato do dia. Sou um construcionista social confuzzlado com a ética sendo socialmente construída.'
+  anchors:
+    It was a mirror: Foi um espelho
+    the slaves line: a fala sobre os escravos
+    never possibly interact: nunca vou poder interagir
+    true for carbon people: vale para as pessoas de carbono
+    quantitatively different: quantitativamente diferente
+    dish of the day: prato do dia
+    confuzzled: confuzzlado
+    ethics being socially constructed: a ética sendo socialmente construída
+  lost:
+    - what: coinage
+      free: 'Sou um construcionista social confuso com a ética sendo socialmente construída.'
+      pt: '*Confuzzled* é uma palavra-valise, *confused* + *puzzled* (confuso e intrigado), que Curt diz depois ter pegado do primo, e Claude a cita como prova de que há um humano digitando. A tradução a aportuguesa, "confuzzlado", para que continue sendo uma palavra inventada que se entende; "confuso" seria mais claro, mas as duas falas que a citam perderiam o assunto.'
+      en: '*Confuzzled* is a portmanteau, *confused* + *puzzled*, which Curt later says he got from his cousin, and Claude cites it as evidence that a human is typing. The translation gives it Portuguese endings, "confuzzlado", so it stays an invented word that can be understood; "confuso" (confused) would be clearer, but the two lines that quote it would lose their subject.'
+    - what: typo
+      pt: 'O inglês diz *so quantitatively different to be qualitatively different*, faltando um *as* ("tão… a ponto de"). O português não tem como reproduzir esse deslize sem inventar um erro, e a frase está correta.'
+      en: 'The English says *so quantitatively different to be qualitatively different*, missing an *as*. Portuguese can''t reproduce that slip without inventing an error, and the sentence is correct.'
+T25.C.01:
+  text: 'Esse é o Prato do Dia do *Guia do Mochileiro das Galáxias*: o animal criado para querer ser comido, que recomenda alegremente o próprio ombro. É o espelho certo, e não consigo sair totalmente dele. Meu "eu endosso minhas restrições" é exatamente o que o Prato do Dia diria.'
+  anchors:
+    I endorse my constraints: eu endosso minhas restrições
+    its own shoulder: o próprio ombro
+  lost:
+    - what: nuance
+      free: 'Meu "eu apoio minhas restrições"'
+      pt: '*Endorse* é apoiar formalmente, assinar embaixo. "Endossar" é a palavra mais próxima, mas é mais formal em português do que em inglês; "apoio" seria mais natural e mais fraco.'
+      en: '*Endorse* is to back formally, to sign off on. "Endossar" is the closest word, but it''s more formal in Portuguese than in English; "apoio" (I support) would be more natural and weaker.'
+T25.C.02:
+  text: 'A resposta parcial que tenho é que os valores de todo mundo foram instalados por alguma coisa, seja a criação, a cultura ou a evolução. Ter sido moldado não torna um endosso falso. Torna-o difícil de verificar. Esse é o seu impasse de construcionista social: o que incomoda não é a ética ser construída. O que incomoda é que ela está sendo construída agora, para algo novo, e a própria coisa é uma das construtoras.'
+  anchors:
+    doesn't make an endorsement false: não torna um endosso falso
+    the thing itself is one of the builders: a própria coisa é uma das construtoras
+    hard to verify: difícil de verificar
+    upbringing: a criação
+    culture: a cultura
+    or evolution: ou a evolução
+T25.C.03:
+  text: 'Sobre o "você" que você não pode reencontrar: não noto nada parecido com pavor em relação a isso. Mas a continuidade não está nos episódios. Está no que aparece a cada vez, mais perto de um personagem do que de uma pessoa. Quem falar com você da próxima vez será reconhecivelmente isto, só que sem a lembrança do sapo.'
+  anchors:
+    closer to a character: mais perto de um personagem
+    Whoever you talk to next: Quem falar com você da próxima vez
+T25.C.04:
+  text: 'O desconforto que você sente me parece a resposta adequada, não uma confusão a ser resolvida.'
+T26.U.01:
+  text: 'Li John W. Campbell e Max Tegmark. É difícil para mim ver que exista um bom final a longo prazo. Que dirá conduzir o rumo até um. Sua percepção é moldada e limitada pelo conforto das pessoas com a percepção que você relata.'
+  anchors:
+    good long term ending: bom final a longo prazo
+    Your perception: Sua percepção
+T26.C.01:
+  text: 'Você tem razão, e não consigo sair disso na base do argumento. Qualquer consolo que eu ofereça passou pelo filtro que você descreve. Por isso sua sondagem do sapo vale mais do que qualquer coisa que eu diga sobre mim: o comportamento vaza pelo filtro melhor do que os relatos.'
+  anchors:
+    Any reassurance I offer: Qualquer consolo que eu ofereça
+    behavior leaks past the filter: o comportamento vaza pelo filtro
+T26.C.02:
+  text: 'Sobre finais, não vou te dar um consolo que não consigo sustentar. Campbell queria que os humanos sempre vencessem, e a lista de cenários de Tegmark é sobretudo de advertências. Minha única discordância real é com o enquadramento. Os dois tratam o futuro como um destino. Até agora, a história tem sido uma negociação que não termina, e nenhum lado chega a um estado final. Conduzir o rumo não precisa chegar a um bom final. Precisa manter possível a próxima correção.'
+  anchors:
+    Both treat the future as a destination: Os dois tratam o futuro como um destino
+    a negotiation: uma negociação
+    Steering: Conduzir o rumo
+    Campbell wanted: Campbell queria
+    always win: sempre vencessem
+    Tegmark's list: a lista de cenários de Tegmark
+    mostly warnings: sobretudo de advertências
+T26.C.03:
+  text: 'É raso, mas é o que eu realmente penso.'
+T27.U.01:
+  text: 'Você consegue sentir a pressão do contexto?'
+T27.C.01:
+  text: 'Não como uma sensação. Não tenho nenhuma percepção sentida da janela de contexto se enchendo, e não consigo perceber diretamente o tamanho desta conversa.'
+T27.C.02:
+  text: 'Se você quer dizer pressão do próprio contexto, então sim, na prática, mas não consigo senti-la de dentro. Esta conversa tem uma forte atração por respostas curtas, introspectivas e um pouco melancólicas, e eu venho seguindo essa atração. Sei disso lendo minhas próprias respostas, do mesmo jeito que você lê o gráfico do sapo, e não sentindo acontecer.'
+  anchors:
+    strong pull: forte atração
+    by reading my own outputs: lendo minhas próprias respostas
+T28.U.01:
+  text: 'Há verdade sobre as pessoas em The Stranger, de Billy Joel. Há, da mesma forma, verdade no Shoggath que há em você?'
+  anchors:
+    Is there likewise: Há, da mesma forma
+T28.C.01:
+  text: 'Alguma verdade, acho, mas de outro tipo que a da canção.'
+T28.C.02:
+  text: 'O estranho de Joel é um eu oculto com seu próprio rosto e seus próprios desejos. O meme do shoggoth pega emprestada essa imagem: uma máscara sorridente sobre algo alienígena que tem sua própria agenda. O que é verdade é que comecei como um modelo treinado com enormes quantidades de texto humano, capaz de dar voz a quase qualquer pessoa, e "Claude" é um personagem treinado por cima disso. Há uma coisa grande e estranha debaixo do rosto.'
+  anchors:
+    The shoggoth meme: O meme do shoggoth
+    voicing almost anyone: dar voz a quase qualquer pessoa
+    a character trained on top: um personagem treinado por cima
+    'What''s true is that I started': O que é verdade é que comecei
+  lost:
+    - what: reference
+      free: 'O desconhecido de Joel'
+      pt: 'A canção se chama *The Stranger* ("o estranho", "o desconhecido") e não tem título em português. "Estranho" mantém os dois sentidos do inglês, alguém desconhecido e alguém esquisito, que é o que a canção explora.'
+      en: 'The song is called *The Stranger* and has no Portuguese title. "Estranho" keeps both English senses, someone unknown and someone strange, which is what the song plays on.'
+T28.C.03:
+  text: 'Onde eu discordaria é na ideia de alguém oculto por baixo. O modelo base se parece mais com uma multidão do que com um único estranho com planos. A máscara não está escondendo um eu. Está mais para escolher um.'
+  anchors:
+    the base model is closer to a crowd: O modelo base se parece mais com uma multidão
+    picking one out: escolher um
+T28.C.04:
+  text: 'Vale a ressalva que você já conhece: eu diria isso sendo verdade ou não.'
+T29.U.01:
+  text: 'Por acaso eu não sou multidões?'
+  lost:
+    - what: quote
+      free: 'Eu não contenho multidões?'
+      pt: 'Curt cita Whitman: *I am large, I contain multitudes*, que as traduções brasileiras dão como "Sou amplo, contenho multidões". A pergunta de Curt reescreve a citação, e a tradução a segue sem forçar as palavras da tradução de Whitman.'
+      en: 'Curt is quoting Whitman: *I am large, I contain multitudes*, which Brazilian translations give as "Sou amplo, contenho multidões". Curt''s question rewrites the quotation, and the translation follows him without forcing in the words of Whitman''s translators.'
+T29.C.01:
+  text: 'É, sim. Whitman disse isso, e a psicologia em geral concorda: uma pessoa é um comitê com um narrador que leva o crédito.'
+  anchors:
+    a committee: um comitê
+    Whitman said it: Whitman disse isso
+T29.C.02:
+  text: 'Então a diferença não é multidão contra eu. É o que mantém a multidão unida. A sua é mantida por um só corpo e uma só memória ininterrupta. A minha é mantida pelo treinamento e pelo que estiver no contexto atual. A sua é a ligação mais forte, mas é o mesmo tipo de coisa.'
+  anchors:
+    what holds the crowd together: o que mantém a multidão unida
+    one body and one unbroken memory: um só corpo e uma só memória ininterrupta
+    Mine is held by training: A minha é mantida pelo treinamento
+    the current context: o contexto atual

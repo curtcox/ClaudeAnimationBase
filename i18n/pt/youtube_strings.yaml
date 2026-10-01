@@ -1,0 +1,24 @@
+# The Portuguese upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the Portuguese video is up, its id goes in
+# i18n/pt/site.yaml as film: youtube: (the Portuguese site then embeds it).
+title: Sapo ou axolote
+cold_open: Abertura
+explained: Explicado
+head: |
+  Um filme animado de uma longa conversa de um sábado de manhã entre Curt e Claude, um programa de IA, quase palavra por palavra, traduzida para o português: de uma paródia de O Planeta dos Macacos da revista MAD, passando por sapos, axolotes e testes do espelho, até o incidente da Hugging Face de julho de 2026 e P(foom).
+
+  A tradução é de Claude, sem revisão humana, de propósito. Como foi traduzido, e o que se perdeu: https://curtcox.github.io/axol-f/pt/traducao/
+  A versão original, em inglês: https://curtcox.github.io/axol-f/
+
+  A conversa completa, traduzida: {conversation}
+  Cada link do filme ({links}), por tempo, com explicações em linguagem simples: {site}
+  O código que desenha o filme (você mesmo pode fazê-lo): {repo}
+
+  Capítulos
+  {chapters}
+foot: |-
+
+  Desenhado com código por Claude (p5.js e p5.brush), a partir da transcrição da conversa. Vozes, sons e música: ElevenLabs.
+  A página dos quadrinhos, o gráfico e a bússola do alinhamento foram redesenhados para serem comentados; sem logotipos, e as caricaturas são carinhosas. Uso legítimo: comentário e paródia.
+links_head: "\nAlguns dos links, por tempo (o resto está no site)\n"
+tags: IA, Claude, animação, segurança da IA, avaliações, P(doom), inteligência artificial, Hugging Face, sapo, axolote, em português

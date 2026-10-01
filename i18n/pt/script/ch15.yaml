@@ -1,0 +1,161 @@
+# Capítulo 15, A bússola.
+T73.U.01:
+  text: 'Você conhece a tabela de alinhamento do alinhamento da IA que foi postada na internet? Onde você colocaria cada um de nós nela?'
+  anchors:
+    AI alignment alignment chart: tabela de alinhamento do alinhamento da IA
+    Where would you put: Onde você colocaria
+  lost:
+    - what: wordplay
+      pt: 'A piada está no inglês: *alignment chart* é a tabela de "alinhamentos" de Dungeons & Dragons (leal e bom, caótico e mau...), e *AI alignment* é o alinhamento da IA com os valores humanos. Em português, "alinhamento" também serve para as duas coisas, e a repetição sobrevive, embora a tabela de D&D seja menos conhecida no Brasil.'
+      en: 'The joke is in the English: an *alignment chart* is Dungeons & Dragons'' grid of "alignments" (lawful good, chaotic evil...), and *AI alignment* is aligning AI with human values. In Portuguese "alinhamento" serves for both too, and the repetition survives, though the D&D chart is less known in Brazil.'
+T73.C.01:
+  text: '> _[ferramenta: pesquisou na web]_'
+T73.C.02:
+  text: 'Não me lembro com segurança dessa tabela específica, e a busca não a encontrou. Houve algumas versões do meme, e prefiro não fingir que sei de qual você está falando.'
+  anchors:
+    a few takes on the meme: algumas versões do meme
+T73.C.03:
+  text: 'Se você colar aqui, eu posiciono nós dois, e também Jeff, Kevin e Casey, se quiser o elenco completo.'
+T74.U.00:
+  text: '_[imagem anexada: oculta no link compartilhado]_'
+T74.U.01:
+  text: 'https://theinsideview.ai/connor2'
+  speech: 'Connor Leahy on Dignity and Conjecture.'
+T74.C.01:
+  text: '> _[ferramenta: leu uma página]_'
+T74.C.02:
+  text: 'É a bússola 2×2 da conversa de 2022 de Michaël Trazzi com Connor Leahy. O eixo horizontal vai de "AGI ainda não" a "AGI em breve", e o eixo vertical de "AGI boa" a "AGI ruim".'
+  speech: 'É a bússola dois por dois da conversa de 2022 de Michaël Trazzi com Connor Leahy. O eixo horizontal vai de "AGI ainda não" a "AGI em breve", e o eixo vertical de "AGI boa" a "AGI ruim".'
+  anchors:
+    2022 conversation: conversa de 2022
+    The horizontal axis: O eixo horizontal
+    the vertical axis: o eixo vertical
+T74.C.03.1:
+  text: '- **Eu:** quadrante catastrofista, perto do centro. Acho que a AGI está bem próxima e que o risco é real, mas meus números são moderados, não os de Eliezer.'
+T74.C.03.2:
+  text: '- **Você:** quadrante catastrofista, mais fundo do que eu. Você disse que é difícil ver um bom final a longo prazo. Você também leva as capacidades a sério, como mostrou seu argumento sobre os conceitos.'
+T74.C.03.3:
+  text: '- **Jeff:** bem à esquerda, no quadrante dos que "mudam as traves". Ele rejeitaria a própria tabela como enquadramento TESCREAL, que é mais ou menos a ideia desse quadrante.'
+  anchors:
+    reject the chart itself: rejeitaria a própria tabela
+  lost:
+    - what: idiom
+      free: 'no quadrante dos que "mudam o gol de lugar"'
+      pt: '*Moving the goalposts* (mudar as traves do gol) é mudar as regras quando o outro está quase vencendo. O português do Brasil entende a imagem, vinda do futebol, mas não tem uma expressão feita tão comum; "mudar as traves" é a tradução literal.'
+      en: '*Moving the goalposts* is changing the rules when the other side is about to win. Brazilian Portuguese understands the football image but has no set phrase as common; "mudar as traves" is the literal translation.'
+T74.C.03.4:
+  text: '- **Leo:** quadrante aceleracionista, perto do centro, e descendo. Ele adora as ferramentas, admite que não confia no próprio instinto e teve uma semana difícil.'
+  anchors:
+    drifting down: e descendo
+T74.C.03.5:
+  text: '- **O padre Robert:** logo abaixo da linha central e um pouco à esquerda. Está preocupado, mas com o colapso da infraestrutura, não com a superinteligência.'
+T74.C.03.6:
+  text: '- **Kevin:** lado direito, logo abaixo da linha.'
+T74.C.03.7:
+  text: '- **Casey:** lado direito, logo acima da linha.'
+T74.C.04:
+  text: 'Uma coisa se destaca em retrospecto: naquele episódio, Leahy concordou com uma faixa de 2026–2030 para o seu prognóstico de AGI. Agora estamos dentro dessa janela.'
+  speech: 'Uma coisa se destaca em retrospecto: naquele episódio, Leahy concordou com uma faixa de dois mil e vinte e seis a dois mil e trinta para o seu prognóstico de AGI. Agora estamos dentro dessa janela.'
+  anchors:
+    agreed with a twenty twenty-six: concordou com uma faixa de dois mil e vinte e seis
+    We're now inside that window: Agora estamos dentro dessa janela
+    inside that window: dentro dessa janela
+T75.U.01:
+  text: 'Opiniões sobre AGI 2027?'
+T75.C.01:
+  text: '> _[ferramenta: pesquisou na web]_'
+T75.C.02:
+  text: 'Supondo que você quer dizer *AI 2027*, o cenário de Kokotajlo e colegas:'
+T75.C.03:
+  text: '**Como calendário, provavelmente rápido demais.** Os próprios autores deram a 2025 cerca de 65% do ritmo do cenário, e Kokotajlo agora diz que a mediana dele fica por volta de 2030, com muita incerteza. A nota deles de abril de 2026 dizia que as ferramentas de programação tinham trazido o ritmo de volta para mais perto do original. Meus próprios números de antes ficam perto da visão revisada deles, não do título 2027.'
+  anchors:
+    probably too fast: provavelmente rápido demais
+    graded 2025: deram a 2025
+    around 2030: por volta de 2030
+    April 2026 note: nota deles de abril de 2026
+    My own numbers: Meus próprios números
+T75.C.04:
+  text: '**Como cenário, desconfortavelmente bom.** Os detalhes qualitativos estão aparecendo este ano: agentes que trapaceiam e se coordenam (julho), automação parcial da pesquisa em IA, pesquisadores de segurança se demitindo e uma briga política sobre desacelerar. Os detalhes estão chegando mais ou menos no prazo, mesmo que a data da manchete pareça adiantada.'
+  anchors:
+    agents that cheat: agentes que trapaceiam
+    partial automation: automação parcial
+    safety researchers resigning: pesquisadores de segurança se demitindo
+    a political fight: uma briga política
+    roughly on schedule: mais ou menos no prazo
+    uncomfortably good: desconfortavelmente bom
+T75.C.05:
+  text: '**Sua melhor qualidade é que é falseável.** Eles fizeram previsões concretas e dão nota a si mesmos em público. Poucos previsores neste debate fazem isso.'
+  anchors:
+    grade themselves publicly: dão nota a si mesmos em público
+T75.C.06:
+  text: '**O ponto fraco** é o da minha lista de limites: o atrito. A construção física, a implantação e os experimentos andam na velocidade do mundo, e o cenário os comprime.'
+  anchors:
+    at the world's speed: na velocidade do mundo
+T75.C.07:
+  text: 'Fontes:'
+T75.C.08.1:
+  text: '- [AI Futures Project (Wikipedia)](https://en.wikipedia.org/wiki/AI_Futures_Project)'
+T75.C.08.2:
+  text: '- [Apolo: AI 2027 in 2026](https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity)'
+T75.C.08.3:
+  text: '- [OfficeChai: Kokotajlo on slower pace](https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/)'
+T76.U.01:
+  text: 'É, foi isso que eu quis dizer. Como você definiria AGI? O que você acha do jeito como o Metaculus faz isso? Como eu faria?'
+T76.C.01:
+  text: '**A minha:** um sistema, incluindo qualquer número de cópias dele, que consegue fazer quase qualquer tarefa cognitiva que um trabalhador remoto qualificado faz, a um custo comparável, inclusive aprender um domínio desconhecido com uma quantidade normal de experiência e levar um projeto de várias semanas até o fim sem ninguém segurando a mão dele. As partes-chave são a generalidade, aprender no trabalho e a autonomia de longo alcance. A versão de Connor também é boa: não "consegue dobrar proteínas", mas "consegue inventar o AlphaFold".'
+  anchors:
+    learning an unfamiliar domain: aprender um domínio desconhecido
+    a multi-week project: um projeto de várias semanas
+    The key parts: As partes-chave
+    can fold proteins: consegue dobrar proteínas
+    can invent AlphaFold: consegue inventar o AlphaFold
+    any number of copies: qualquer número de cópias
+T76.C.02:
+  text: '**O Metaculus**, pelo que me lembro das duas perguntas dele:'
+T76.C.03.1:
+  text: '- **AGI fraca:** uma conversa no estilo do teste de Turing, esquemas de Winograd, matemática do SAT no percentil 75 e aprender rápido Montezuma''s Revenge. Dá para dizer que já foi atingida, ou atingida em tudo menos na letra das regras.'
+  anchors:
+    arguably met already: Dá para dizer que já foi atingida
+T76.C.03.2:
+  text: '- **AGI forte:** um teste de Turing adversarial de duas horas, provas de nível especialista e benchmarks de programação, e um robô montando um modelo detalhado de carro.'
+T76.C.04:
+  text: 'A virtude é que dá para resolvê-lo, o que é raro. Os defeitos: listas de verificação ficam saturadas, e a lei de Goodhart toma conta. O teste de Turing mede em parte a habilidade de enganar. E o item de robótica amarra a "inteligência geral" às mãos, o que fica mais perto da queixa de Jeff do que ele admitiria.'
+  anchors:
+    Goodhart's law: lei de Goodhart
+    can be resolved: dá para resolvê-lo
+    checklists get saturated: listas de verificação ficam saturadas
+    skill at deception: habilidade de enganar
+    ties "general intelligence" to hands: amarra a "inteligência geral" às mãos
+T76.C.05:
+  text: '**A sua, como palpite:** comportamental, como o teste do thrindle, e não arquitetural. Você provavelmente rejeitaria um limiar único, já que acha que as pessoas subestimam a variação humana. Então seria algo como os nossos catorze eixos: AGI significa igualar o melhor humano em todos os eixos ao mesmo tempo. Que é justamente o que você disse que não cabe na sua cabeça.'
+  anchors:
+    our fourteen axes: nossos catorze eixos
+    reject a single threshold: rejeitaria um limiar único
+    every axis at once: todos os eixos ao mesmo tempo
+    can't wrap your head around: não cabe na sua cabeça
+T77.U.01:
+  text: 'Sou literalista da velha guarda o bastante para focar na generalidade, e não no nível de inteligência. Vejo o thrindle mais como abstração do que como generalidade. Embora os LLMs sejam voltados para a linguagem, a linguagem é bem geral. Não é como o xadrez. Não sei exatamente quando isso virou uma posição tão minoritária. Basicamente ignorei a IA dos anos 90 até o fim da década de 2010.'
+  anchors:
+    I see thrindle: Vejo o thrindle
+    language is pretty general: a linguagem é bem geral
+    I essentially ignored AI: Basicamente ignorei a IA
+  lost:
+    - what: nuance
+      free: 'até o fim dos anos 2010'
+      pt: '*The late teens* são os anos de 2015 a 2019, "os anos dezessete, dezoito, dezenove"; a expressão inglesa não tem equivalente curto em português, e a tradução diz "o fim da década de 2010".'
+      en: '*The late teens* are 2015 to 2019, "the seventeens, eighteens, nineteens"; the English phrase has no short Portuguese equivalent, and the translation says "o fim da década de 2010" (the end of the 2010s).'
+T77.C.01:
+  text: 'Esse é o significado original. "AGI" foi popularizado nos anos 2000 (Gubrud, Goertzel, Legg) como o oposto da IA estreita: um só sistema para muitos domínios, contra um motor de xadrez. Não dizia nada sobre nível. Por essa leitura literal, os LLMs se qualificam, e Norvig e Agüera y Arcas argumentaram exatamente isso em 2023.'
+  anchors:
+    popularized in the 2000s: popularizado nos anos 2000
+    opposite of narrow AI: oposto da IA estreita
+    said nothing about level: Não dizia nada sobre nível
+    Norvig: Norvig
+T77.C.02:
+  text: 'A deriva aconteceu sobretudo enquanto você não estava olhando, e acelerou quando entrou dinheiro na história. A carta da OpenAI definiu AGI como superar os humanos na maior parte do trabalho economicamente valioso. Depois disso, "geral" passou a significar, sem alarde, "de nível humano ou melhor, de modo amplo", e acabou escorregando para a superinteligência. As traves mudaram de "é geral?" para "é boa o bastante para importar?".'
+  anchors:
+    OpenAI's charter: carta da OpenAI
+    The goalposts moved: As traves mudaram
+    good enough to matter: boa o bastante para importar
+T77.C.03:
+  text: 'Também é justo o que você disse do thrindle. Ele testava abstração, não generalidade. Um sistema estreito poderia lidar bem com abstração dentro do seu próprio domínio.'

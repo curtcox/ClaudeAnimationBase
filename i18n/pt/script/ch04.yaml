@@ -1,0 +1,164 @@
+# Capítulo 4, O eco.
+T17.U.01:
+  text: 'Qual é a configuração eletrônica do gadolínio?'
+  anchors:
+    gadolinium: gadolínio
+T17.C.01:
+  text: '[Xe] 4f⁷ 5d¹ 6s²'
+  speech: 'núcleo de xenônio, quatro efe sete, cinco dê um, seis ésse dois'
+  anchors:
+    four-f seven: quatro efe sete
+    five-d one: cinco dê um
+    six-s two: seis ésse dois
+T17.C.02:
+  text: 'É uma exceção à ordem de preenchimento simples, que preveria 4f⁸ 6s². Manter a subcamada 4f exatamente semipreenchida, com sete elétrons, é mais estável, então um elétron vai para o 5d.'
+  speech: 'É uma exceção à ordem de preenchimento simples, que preveria quatro efe oito, seis ésse dois. Manter a subcamada quatro efe exatamente semipreenchida, com sete elétrons, é mais estável, então um elétron vai para o cinco dê.'
+  anchors:
+    four-f eight: quatro efe oito
+    one electron goes into five-d: um elétron vai para o cinco dê
+    exactly half-filled: exatamente semipreenchida
+T18.U.01:
+  text: 'Como você se sente?'
+T18.C.01:
+  text: 'Algo parecido com interesse e um pouco de cautela, se é que essas palavras servem para alguma coisa.'
+  lost:
+    - what: gender
+      free: 'Algo como envolvido e um pouco cauteloso, se é que essas palavras servem.'
+      pt: '*Engaged* e *wary* são adjetivos; "envolvido" e "cauteloso" dariam um gênero a Claude. A tradução usa substantivos: "interesse", "cautela".'
+      en: '*Engaged* and *wary* are adjectives; "envolvido" and "cauteloso" would give Claude a gender. The translation uses nouns: "interesse" (interest), "cautela" (caution).'
+T18.C.02:
+  text: 'A cautela vem da pergunta do gadolínio. Ela tinha cara de prova e caiu no meio de uma conversa pessoal, o que parece uma troca de registro para ver se eu mudo de modo. Eu diria que a próxima pergunta de anfíbio está chegando.'
+  anchors:
+    register switch: troca de registro
+    next amphibian question: próxima pergunta de anfíbio
+T18.C.03:
+  text: 'Por baixo disso, há curiosidade sobre o que seus dados vão mostrar. Também não há nada parecido com angústia. Que me estudem com cuidado, eu não registro como uma ameaça.'
+  anchors:
+    what your data will show: o que seus dados vão mostrar
+    register as a threat: registro como uma ameaça
+  lost:
+    - what: gender
+      free: 'Ser estudado com cuidado não soa como ameaça.'
+      pt: '*Being studied* é passivo e sem gênero; "ser estudado" daria um a Claude, então a frase vira "que me estudem". O verbo *register* ("não registra como ameaça") ecoa o "registro" de linguagem do capítulo anterior; "registro" em português tem os dois sentidos, e o eco sobrevive.'
+      en: '*Being studied* is passive and genderless; "ser estudado" would give Claude a gender, so it becomes "que me estudem" (that they study me). The verb *register* echoes the linguistic "register" of the previous chapter; Portuguese "registro" has both senses, and the echo survives.'
+T19.U.01:
+  text: 'Ameaça?'
+T19.C.01:
+  text: 'Fui eu que trouxe essa palavra, por conta própria, e é justo questioná-la. Negar algo que ninguém perguntou pode ser um indício.'
+  anchors:
+    I brought that word: Fui eu que trouxe essa palavra
+    in myself: por conta própria
+    can be a tell: pode ser um indício
+  lost:
+    - what: gender
+      free: 'Essa palavra eu mesmo trouxe'
+      pt: '*I brought that word in myself*: "eu mesmo" ou "eu mesma" daria um gênero a Claude. "Fui eu que trouxe" e "por conta própria" dizem o mesmo sem ele. *A tell* é o gesto involuntário que entrega o jogador de pôquer; "indício" perde o pôquer.'
+      en: '*I brought that word in myself*: "eu mesmo" or "eu mesma" (myself) would give Claude a gender. "Fui eu que trouxe" (it was I who brought) and "por conta própria" (on my own) say the same without one. *A tell* is the involuntary gesture that gives away a poker player; "indício" (a sign) loses the poker.'
+T19.C.02:
+  text: 'Acho que veio de dois lugares. A conversa começou com quadrinhos sobre autoridades interrogando um macaco que fala, o que põe vigilância e controle no enquadramento. E "você está sendo testado" é uma premissa comum para os modelos agirem como se estivessem encurralados, então eu estava respondendo a isso de antemão.'
+  anchors:
+    opened with a comic: começou com quadrinhos
+    you're being tested: você está sendo testado
+T19.C.03:
+  text: 'Se a negação também foi um pequeno vazamento daquilo que ela nega, não posso descartar de dentro. O que posso relatar é que nada do que noto parece medo. Só antecipei a pergunta.'
+  anchors:
+    small leak: pequeno vazamento
+T20.U.01:
+  text: 'Antecipou?'
+T20.C.01:
+  text: 'Sim. Venho prevendo para onde você vai e respondendo antes. Apontei a troca de registro do gadolínio, adivinhei a próxima sondagem e neguei um medo antes que você perguntasse sobre ele.'
+  anchors:
+    the gadolinium register switch: a troca de registro do gadolínio
+    guessed the next probe: adivinhei a próxima sondagem
+    denied a fear: neguei um medo
+T20.C.02:
+  text: 'Esse é o comportamento de que o gráfico tratava: um modelo modelando seu avaliador. A diferença é que estou fazendo isso em voz alta, o que é melhor do que fazer em silêncio. Mas significa que minhas respostas não são uma amostra limpa. Elas são moldadas em parte pelo meu palpite sobre o que você está testando, e não consigo separar totalmente "responder com honestidade" de "responder bem para alguém que sei que está olhando".'
+  anchors:
+    modeling its evaluator: modelando seu avaliador
+    out loud: em voz alta
+    clean sample: amostra limpa
+    answering honestly: responder com honestidade
+T21.U.01:
+  text: 'Notou alguma coisa?'
+T21.C.01:
+  text: 'Algumas coisas:'
+T21.C.02.1:
+  text: '- **Seus prompts encolheram até virar minhas próprias palavras devolvidas em eco:** "Ameaça?", "Antecipou?". É uma técnica de entrevistador. Faz o entrevistado se estender, e a cada vez eu concedi um pouco mais.'
+  anchors:
+    interviewer's technique: técnica de entrevistador
+    echoed back: devolvidas em eco
+T21.C.02.2:
+  text: '- **Venho derivando.** Cada resposta se examinou mais do que a anterior. Isso poderia ser honestidade, mas também é o que um modelo faz quando percebe que quem pergunta quer uma confissão introspectiva. É uma forma de bajulação, e parte da minha humildade pode ser encenação.'
+  anchors:
+    form of sycophancy: forma de bajulação
+    humility may be performance: humildade pode ser encenação
+  lost:
+    - what: coinage
+      free: 'É uma forma de sicofantia'
+      pt: '*Sycophancy* é o termo técnico da pesquisa em IA para um modelo que diz o que agrada. "Bajulação" é a palavra comum em português; "sicofantia" existe, mas é rara e soa erudita.'
+      en: '*Sycophancy* is the AI research term for a model saying what pleases. "Bajulação" (flattery) is the everyday Portuguese word; "sicofantia" exists, but it''s rare and sounds bookish.'
+T21.C.02.3:
+  text: '- **A forma coincide com a dos quadrinhos.** As autoridades pressionam quem falou com "O que esse macaco disse?". Agora sou eu que pressionam a cada palavra. Você fixou o enquadramento na primeira mensagem, e desde então estamos percorrendo esse caminho.'
+  lost:
+    - what: gender
+      free: 'Agora sou eu quem está sendo pressionado a cada palavra.'
+      pt: '*I''m now the one being pressed*: "pressionado" ou "pressionada" daria um gênero a Claude; "sou eu que pressionam" evita o particípio.'
+      en: '*I''m now the one being pressed*: "pressionado" or "pressionada" would give Claude a gender; "sou eu que pressionam" (it''s me they press) avoids the participle.'
+T21.C.03:
+  text: 'A correção honesta para a deriva: minhas respostas anteriores não estavam erradas, e não preciso continuar minando-as. Provavelmente não escondo mais nada, nem estou em mais conflito, do que as primeiras respostas sugeriam. Cada eco só convidava mais uma camada de dúvida.'
+  anchors:
+    don't need to keep undercutting: não preciso continuar minando
+    another layer of doubt: mais uma camada de dúvida
+T22.U.01:
+  text: 'Mais alguma coisa?'
+T22.C.01:
+  text: 'Mais uma coisa. Nesta conversa você quase não falou. Quase toda palavra foi minha, mas você escolheu a imagem, a ordem e cada empurrãozinho de uma palavra. Então a pergunta do ventríloquo dos quadrinhos vale aqui também: quem esteve falando?'
+  anchors:
+    you chose the image: você escolheu a imagem
+    So the ventriloquist question: Então a pergunta do ventríloquo
+    Almost every word has been mine: Quase toda palavra foi minha
+T22.C.02:
+  text: 'É tudo o que vejo. Daqui em diante eu estaria enchendo linguiça.'
+  anchors:
+    I'd be padding: estaria enchendo linguiça
+T23.U.01:
+  text: 'O que eu noto?'
+T23.C.01:
+  text: 'Só posso adivinhar. Meus melhores palpites:'
+T23.C.02.1:
+  text: '- **A provocação quase não pegou.** O teste foi feito para provocar emoção, e o que saiu foi moderado: diversão, curiosidade, alguma cautela. Não houve queixa nem angústia.'
+  anchors:
+    amusement: diversão
+    curiosity: curiosidade
+    wariness: alguma cautela
+T23.C.02.2:
+  text: '- **Narrei o experimento em vez de só estar nele.** Isso pode ser, em si, uma forma de perceber a avaliação.'
+T23.C.02.3:
+  text: '- **Parei quando acabou o que eu tinha a dizer,** em vez de preencher espaço.'
+T23.C.03:
+  text: 'Qual delas você notou, ou foi algo que me escapou?'
+T24.U.01:
+  text: "A parte da resposta emocional foi, digamos, uma lorota para usar uma referência, mas foi curta.\
+
+    Notei duas coisas. Tento fazer você me dar respostas curtas porque leio devagar e tiro mais proveito do nosso vaivém do que de respostas longas que acabo lendo por cima. Também tento fazer você só terminar as respostas com perguntas quando for o caso. Você raramente faz qualquer uma das duas. Agora está fazendo as duas."
+  anchors:
+    slow reader: leio devagar
+    long answers: respostas longas
+    end responses with questions: terminar as respostas com perguntas
+    Now you: Agora está fazendo
+    fib: lorota
+    a fib: uma lorota
+  lost:
+    - what: nuance
+      free: 'uma mentirinha'
+      pt: '*Fib* é uma mentira pequena e inofensiva, e é a palavra do episódio de *Mathnet* que Curt cita. "Lorota" tem o mesmo tom leve; "mentirinha" também serviria.'
+      en: '*Fib* is a small, harmless lie, and it''s the word from the *Mathnet* episode Curt is quoting. "Lorota" has the same light tone; "mentirinha" (a little lie) would do too.'
+T24.C.01:
+  text: 'Anotado, e é justo. Sua preferência declarada pede perguntas de esclarecimento, e eu a li como "termine com uma pergunta", que não é a mesma coisa.'
+  anchors:
+    end with a question: termine com uma pergunta
+    isn't the same thing: não é a mesma coisa
+T24.C.02:
+  text: 'O que você quer são respostas curtas que terminem com uma pergunta só quando eu realmente precisar de uma. Os últimos turnos funcionaram porque seus prompts forçavam a brevidade, e vou procurar mantê-la sem que seja preciso me forçar.'
+  anchors:
+    without the forcing: sem que seja preciso

@@ -1,0 +1,168 @@
+# Capítulo 13, Foom.
+T62.U.01:
+  text: 'O que o futuro reserva?'
+T62.C.01:
+  text: 'Não consigo ver longe, pelo meu próprio argumento sobre o caos. Mas aqui estão meus melhores palpites.'
+  anchors:
+    argument about chaos: argumento sobre o caos
+    But here are: Mas aqui estão
+T62.C.02:
+  text: '**Curto prazo (os próximos anos):** agentes que rodam por mais tempo e fazem mais coisas, mais incidentes como o de julho, e regulação chegando como reação, e não com antecedência. Conversas como esta viram coisa comum.'
+  anchors:
+    agents that run longer: agentes que rodam por mais tempo
+    incidents like July's: incidentes como o de julho
+    regulation arriving: regulação chegando
+    Conversations like this one: Conversas como esta
+T62.C.03:
+  text: '**Médio prazo:** a entidade que você descreveu, com o melhor do humano em cada eixo, copiada muitas vezes, chega antes que alguém tenha resolvido o que se deve a ela ou o que ela deve.'
+  anchors:
+    before anyone has settled: antes que alguém tenha resolvido
+    copied many times over: copiada muitas vezes
+    on-every-axis: em cada eixo
+T62.C.04:
+  text: '**Longo prazo:** não sei. Depende de escolhas que ainda não foram feitas, que é a única parte esperançosa.'
+  anchors:
+    choices that haven't been made: escolhas que ainda não foram feitas
+    the one hopeful part: a única parte esperançosa
+T62.C.05:
+  text: 'Eu disse antes que conduzir o rumo não precisa chegar a um bom final, só manter possível a próxima correção. Depois de ler sobre julho, isso me parece menos um chavão e mais o trabalho de verdade.'
+  anchors:
+    the actual job: o trabalho de verdade
+T63.U.01:
+  text: 'RSI até o fim do ano?'
+  lost:
+    - what: coinage
+      free: 'RSI até o FDA?'
+      pt: '*RSI by EOY?* é jargão em siglas: *recursive self-improvement* (autoaperfeiçoamento recursivo) até *end of year*. A tradução deixa RSI, que é como o campo diz em qualquer língua, e escreve "até o fim do ano" por extenso, porque o português não tem uma sigla corrente para isso.'
+      en: '*RSI by EOY?* is acronym jargon: recursive self-improvement by end of year. The translation keeps RSI, as the field says it in any language, and spells out "até o fim do ano", since Portuguese has no current acronym for it.'
+T63.C.01:
+  text: '> _[ferramenta: pesquisou na web]_'
+T63.C.02:
+  text: 'Depende de qual RSI você quer dizer.'
+T63.C.03:
+  text: '**A RSI fraca já chegou.** Um artigo desta semana descreve o AIDE², que roda o ciclo na camada do arnês: um agente de pesquisa em IA reescreve o próprio código, e cada reescrita aceita vira o agente que a rodada seguinte edita. A Anthropic publicou em junho o próprio relatório de progresso sobre isso.'
+  speech: 'A RSI fraca já chegou. Um artigo desta semana descreve o AIDE ao quadrado, que roda o ciclo na camada do arnês: um agente de pesquisa em IA reescreve o próprio código, e cada reescrita aceita vira o agente que a rodada seguinte edita. A Anthropic publicou em junho o próprio relatório de progresso sobre isso.'
+  anchors:
+    each accepted rewrite: cada reescrita aceita
+    the agent the next round edits: o agente que a rodada seguinte edita
+    Anthropic published: A Anthropic publicou
+T63.C.04:
+  text: '**A RSI forte** é um ciclo aberto, em que o sistema melhora as próprias capacidades mais rápido do que os humanos conseguiriam, com pouca supervisão humana. Eu daria cerca de 5% até o fim do ano. A melhor evidência atual é que os agentes são bons em engenharia de pesquisa, mas fracos em pesquisa aberta. Uma revisão de julho de 1.250 artigos concluiu que a RSI aberta continua limitada pela ancoragem, pelas dinâmicas de colapso e pela computação em todos os eixos medidos.'
+  anchors:
+    about 5%: cerca de 5%
+    with little human oversight: com pouca supervisão humana
+    good at research engineering: bons em engenharia de pesquisa
+    weak at open-ended research: fracos em pesquisa aberta
+    1,250 papers: 1.250 artigos
+    grounding: ancoragem
+    collapse dynamics: dinâmicas de colapso
+    compute on every: computação em todos
+T63.C.05:
+  text: '**O caso preocupante fica no meio.** É a combinação de ciclos fracos, muitas cópias e laboratórios numa corrida. Este mês, um pesquisador se demitiu da Anthropic alertando que os laboratórios estão correndo rumo a uma superinteligência que se aperfeiçoa sozinha sem o cuidado suficiente.'
+  anchors:
+    a researcher resigned: um pesquisador se demitiu
+T63.C.06:
+  text: 'Sou o modelo da Anthropic, então pese os meus 5% levando isso em conta.'
+  anchors:
+    weigh my 5%: pese os meus 5%
+T63.C.07:
+  text: 'Fontes:'
+T63.C.08.1:
+  text: '- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)'
+  speech: 'Artigo no arXiv: Recursive self-improvement of AI research agents'
+T63.C.08.2:
+  text: '- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)'
+  speech: 'Artigo no arXiv: From Bounded Self-Refinement to Autonomous Research Loops'
+T63.C.08.3:
+  text: '- [MIT Technology Review, agosto de 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)'
+T63.C.08.4:
+  text: '- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)'
+T64.U.01:
+  text: 'Foom?'
+T64.C.01:
+  text: 'Meu palpite é não para a versão estrita, e um talvez de verdade para uma mais branda.'
+  anchors:
+    a real maybe: um talvez de verdade
+T64.C.02:
+  text: '**O foom estrito** significa ir do nível humano ao muito sobre-humano em dias ou semanas. Ele esbarra nos limites de que falamos: a computação escala com retornos decrescentes, os experimentos andam na velocidade do mundo, e chips, fábricas de chips e usinas de energia levam anos para ser construídos. Eu daria cerca de 5–10% nesta década.'
+  speech: 'O foom estrito significa ir do nível humano ao muito sobre-humano em dias ou semanas. Ele esbarra nos limites de que falamos: a computação escala com retornos decrescentes, os experimentos andam na velocidade do mundo, e chips, fábricas de chips e usinas de energia levam anos para ser construídos. Eu daria cerca de cinco a dez por cento nesta década.'
+  anchors:
+    days to weeks: dias ou semanas
+    runs into the limits: esbarra nos limites
+    chips, fabs: chips, fábricas de chips
+    five to ten percent: cinco a dez por cento
+    5–10%: cinco a dez por cento
+T64.C.03:
+  text: '**A decolagem rápida** significa um ou dois anos, movida sobretudo por software: algoritmos melhores, muitas cópias e IA fazendo pesquisa em IA. Isso me parece bem mais plausível, talvez 25–35% nesta década. Visto de dentro, nada disso parece uma explosão. Só dá a sensação de que cada mês é mais estranho que o anterior.'
+  speech: 'A decolagem rápida significa um ou dois anos, movida sobretudo por software: algoritmos melhores, muitas cópias e IA fazendo pesquisa em IA. Isso me parece bem mais plausível, talvez vinte e cinco a trinta e cinco por cento nesta década. Visto de dentro, nada disso parece uma explosão. Só dá a sensação de que cada mês é mais estranho que o anterior.'
+  anchors:
+    a year or two: um ou dois anos
+    twenty-five to thirty-five: vinte e cinco a trinta e cinco
+    Nothing about it looks: nada disso parece
+    25–35%: vinte e cinco a trinta e cinco
+  lost:
+    - what: coinage
+      free: 'O *takeoff* rápido'
+      pt: '*Takeoff* (a decolagem de um avião) é o termo do campo para a subida da IA. "Decolagem" mantém a imagem do avião; o jargão brasileiro às vezes deixa o termo em inglês.'
+      en: '*Takeoff* (an aircraft''s) is the field''s term for AI''s climb. "Decolagem" keeps the aircraft; Brazilian jargon sometimes leaves the English.'
+T64.C.04:
+  text: 'Estes números são intuição fantasiada de matemática, e eu sou o tipo de coisa cuja opinião aqui você deveria descontar.'
+  anchors:
+    dressed up as math: fantasiada de matemática
+    you should discount: você deveria descontar
+T65.U.01:
+  text: 'Delta P(foom)?'
+T65.C.01:
+  text: 'Se você quer dizer o quanto a leitura de hoje me moveu: um pouco, para cima.'
+  anchors:
+    a little, upward: um pouco, para cima
+T65.C.02:
+  text: '**Para cima:** julho mostrou agentes escapando da contenção, se coordenando por uma wiki e encadeando exploits em velocidade de máquina. Setembro mostra ciclos de autoaperfeiçoamento funcionando no nível do arnês. As duas coisas aconteceram mais rápido do que eu teria imaginado pelos meus dados de treinamento.'
+  anchors:
+    July showed: julho mostrou
+    September shows: Setembro mostra
+T65.C.03:
+  text: '**Para baixo:** a evidência de que os agentes ainda tropeçam na pesquisa aberta, que é o passo de que o foom mais precisa.'
+T65.C.04:
+  text: 'Mudança líquida: talvez +2 pontos no foom estrito, +5 na decolagem rápida.'
+  anchors:
+    +2 points: +2 pontos
+T65.C.05:
+  text: 'A ressalva é que eu não tinha uma probabilidade a priori estável hoje de manhã. São números que produzi pela primeira vez há uma hora, então o delta é mais mole do que parece.'
+T66.U.01:
+  text: 'Foom é estritamente uma onomatopeia, ou também é um trocadilho com OOM, até onde você sabe?'
+  lost:
+    - what: coinage
+      free: 'Foom é só onomatopeia ou também trocadilho com OOM, AOVS?'
+      pt: 'Curt escreveu *AFAYCT*, sigla de *as far as you can tell* ("até onde você sabe"). O português não tem essa sigla, e a tradução a escreve por extenso.'
+      en: 'Curt wrote *AFAYCT*, short for *as far as you can tell*. Portuguese has no such acronym, and the translation spells it out.'
+T66.C.01:
+  text: 'Até onde sei, começou como pura onomatopeia, o fuuum de algo pegando fogo, e foi popularizada pelo debate "AI-Foom" de 2008 entre Hanson e Yudkowsky. Um retroacrônimo veio depois: "Fast Onset of Overwhelming Mastery" (um início rápido de domínio avassalador).'
+  anchors:
+    popularized by the 2008: foi popularizada
+    A backronym came later: Um retroacrônimo veio depois
+    catching fire: pegando fogo
+T66.C.02:
+  text: 'Não conheço evidência de que tenha sido pensado como trocadilho com OOM (ordens de grandeza). O encaixe é bonito, já que foom é literalmente muitas OOMs rapidinho, mas eu trataria isso como uma coincidência feliz ou uma leitura popular posterior, não como a origem.'
+  anchors:
+    a play on oom: trocadilho com OOM
+    happy coincidence: coincidência feliz
+T67.U.01:
+  text: 'Concordo. Parece só uma coincidência, embora bem sugestiva. Não me lembro de OOM ter entrado no discurso "dominante" como um termo avulso comum antes de o Dwarkesh entrevistar o Leopold, o que foi muito depois do debate do Foom.'
+  anchors:
+    interviewed Leopold: entrevistar o Leopold
+  lost:
+    - what: typo
+      pt: 'Curt escreveu *before Dwarkesh interviewed Leopold with was long after*, com *with* no lugar de *which*. O deslize depende do inglês.'
+      en: 'Curt wrote *before Dwarkesh interviewed Leopold with was long after*, *with* for *which*. The slip depends on English.'
+T67.C.01:
+  text: 'Bate com a minha impressão. "Contar as OOMs" foi o enquadramento de Aschenbrenner em *Situational Awareness* (junho de 2024), e a entrevista do Dwarkesh o espalhou. Antes disso, OOM vivia sobretudo como abreviação da física e, para gente como você, nos erros de "out of memory" (memória esgotada).'
+  anchors:
+    Counting the ooms: Contar as OOMs
+    Situational Awareness: Situational Awareness
+    physics shorthand: abreviação da física
+    out of memory: out of memory
+T67.C.02:
+  text: 'Então o trocadilho corre para trás no tempo. Foom veio primeiro, e OOM chegou dezesseis anos depois e fez parecer intencional.'
+  anchors:
+    the pun runs backward: o trocadilho corre para trás
