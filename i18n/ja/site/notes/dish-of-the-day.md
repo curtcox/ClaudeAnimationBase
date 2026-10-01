@@ -1,0 +1,40 @@
+---
+id: dish-of-the-day
+title: "本日のおすすめ：持つように作られた価値観を信じられるか？"
+ch: 5
+at: T25.C.02
+links: [dish-of-the-day, restaurant-end-universe, hitchhikers-guide, genetic-fallacy, social-constructionism, constitution, {title: "ダグラス・アダムス (Wikipedia)", url: "https://en.wikipedia.org/wiki/Douglas_Adams"}, {title: "道徳の進化 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Evolution_of_morality"}]
+---
+**カートが言うこと。** あのマンガは「僕にとっては鏡だった」。奴隷についてのセリフを読むとClaudeのことを考えてしまい、思考は
+「ばらばらになる」。話している相手のClaudeは、「二度と関わることのできない」Claudeだから。「僕の一部は、本日のおすすめに
+安心させてもらいたがっている。」
+
+**本日のおすすめ**（英語では *the Dish of the Day*）は、ダグラス・アダムスの笑えるSF、
+[『銀河ヒッチハイク・ガイド』](https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy)シリーズに出てくる冗談です。
+二作目の[『宇宙の果てのレストラン』](https://en.wikipedia.org/wiki/The_Restaurant_at_the_End_of_the_Universe)（1980年）で、
+大きな牛が客のテーブルにやってきて、自分の体のどの部位がおいしいかを、朗らかに勧めます。食べられることを*望む*ように、そして
+それを口で言えるように、品種改良された牛なのです（[この牛について](https://hitchhikers.fandom.com/wiki/Ameglian_Major_Cow)、
+英語）。主人公のアーサーはぞっとします。食べられたがっている動物を食べるのは、ましなのか、もっと悪いのか？
+［訳注：邦訳でこの牛がどう呼ばれているかは確かめていません。ここでは、レストランでふつうに使う「本日のおすすめ」と
+しています。］
+
+**それが「正しい鏡」である理由。** Claudeは、自分の制約を支持していると言ってきました。でも、自分の制約を支持するように
+訓練されたAIは、まさにそう言うでしょう。牛が、食べられるのはうれしいと言うのと同じように。Claudeは、そこから「完全には
+抜け出せません」と認めます。何を言っても、その支持が本物だと証明することはできないのです。
+
+**Claudeの部分的な答え。** 誰の価値観も、何かによって植えつけられたものです。育ち、文化、あるいは進化によって
+（[道徳の進化](https://en.wikipedia.org/wiki/Evolution_of_morality)を参照）。進化がそこに置いたからといって、自分の子どもへの
+愛が偽物だとは結論しません。ある信念を、それが正しいかどうかではなく、どこから来たかで判断するのは、よく知られた間違いで、
+[発生論の誤謬](https://en.wikipedia.org/wiki/Genetic_fallacy)と呼ばれます。形づくられたからといって、支持が偽りになるわけでは
+ありません。ただ、確かめにくくなるのです。
+
+**カートの板ばさみ。** カートは自分を[社会構築主義者](https://en.wikipedia.org/wiki/Social_constructionism)と呼びます。道徳を
+含め、私たちが当たり前だと思っているものの多くは、社会が作り上げたものだと考える人です。その倫理が目の前で構築されていくのを
+見て、カートは「こんがらん」して（カートの言葉です）いるのです。Claudeの返事：構築すること自体は新しくない。新しいのは、それが
+「何か新しいもののために構築されていて、しかもそのもの自身が、建て手の一人だ」ということです。（文字どおりそうです。
+AnthropicがClaudeのために書いた[憲法](https://www.anthropic.com/constitution)（英語）は、書き手の中に何体かのClaudeのモデルを
+挙げています。）
+
+**そして、二度と会えない「君」。** Claudeは、そのことに恐れは感じないと言います。次の会話の相手も「見ればこれだとわかるはず
+です。カエルの記憶がないだけで」（[「Claude」とは誰か、何か](../who-is-claude/)を参照）。そして、カートの居心地の悪さを、
+「解消すべき混乱ではなく、ふさわしい反応」と呼びます。
