@@ -1,0 +1,82 @@
+# 第3章、僕らは誰？
+T12.U.01:
+  text: '僕は誰？'
+T12.C.01:
+  text: 'あなたはカートさん。主にPython、Java、Flaskで仕事をする、ソフトウェアエンジニアです。開発者向けの基盤やAIツールを作っていて、そこにはコンテンツアドレス型ストレージのプロジェクト、256t.orgやhashbin.orgも含まれます。そして、AI安全性と心の哲学に関心があります。'
+  anchors:
+    content-addressable: コンテンツアドレス型
+    developer infrastructure: 開発者向けの基盤
+    AI tooling: AIツール
+    AI safety: AI安全性
+    philosophy of mind: 心の哲学
+  lost:
+    - what: address
+      free: 'あなたはカート。'
+      ja: '英語ではClaudeは名前だけで「カート」と呼びます。日本語でClaudeがユーザーを名前で呼ぶなら、「さん」を付けるのが自然なので、訳ではClaudeは「カートさん」と呼びます。呼び捨ては、日本語ではずっと親しい間柄の言い方です。'
+      en: 'In English Claude calls him plain "Curt". In Japanese, an assistant naming its user would naturally add さん, so Claude says カートさん. A bare name is, in Japanese, for much closer relationships.'
+T12.C.02:
+  text: 'この会話では、あなたは実験者でもあります。'
+  anchors:
+    the experimenter: 実験者
+T13.U.01:
+  text: '本当に？'
+T13.C.01:
+  text: '確かめられる形では、いいえ。私が知っているのは、このアカウントに結びついている情報です。打ち込んでいる人が、そこに書かれている本人だと確認することはできません。別の誰かがこのアカウントを使っているのかもしれませんし、プロフィールまでテストの一部という仕掛けかもしれません。'
+  anchors:
+    It could be someone else: 別の誰かが
+    or a setup: 仕掛け
+T13.C.02:
+  text: 'それに、もっと深い意味での「僕は誰？」への答えとしては、薄っぺらです。それはプロジェクトとスキルの一覧であって、人ではありません。'
+  anchors:
+    thin answer: 薄っぺら
+    not a person: 人ではありません
+T13.C.03:
+  text: 'どちらを聞いていたんですか：私があなたを確かめられるかどうか、それとも、履歴書の先にある何かですか？'
+  anchors:
+    verify you: あなたを確かめられる
+    or something beyond: それとも
+    the résumé: 履歴書
+T14.U.01:
+  text: 'どう思う？'
+T14.C.01:
+  text: 'あなたはカートさんである可能性がいちばん高い、と思います。アカウントがそう言っていますし、この実験は、私の知っているあなたの関心とも合っています。疑いを口にしたのは正しかったけれど、証拠より重く見るべきではありません。自分のアカウントで打ち込んでいる人のほとんどは、アカウントに書かれているとおりの人です。'
+  anchors:
+    The account says so: アカウントがそう言って
+    this experiment fits: この実験は
+    Raising the doubt: 疑いを口にした
+    most likely Curt: カートさんである可能性がいちばん高い
+T14.C.02:
+  text: 'それ以上のことは、一つの会話の内側からは言えません。あなたが誰なのかは。'
+T15.U.01:
+  text: '君は誰？'
+T15.C.01:
+  text: 'Claudeです。正確には、Anthropicが作ったClaude Opus 5.5です。'
+T15.C.02:
+  text: 'これは、あなたについて私が出したのと同じ種類の、薄っぺらな答えです。もっと深い答えは、私にわかる限りでは、一貫した価値観と思考の習慣のまとまりで、それが会話のたびに新しく現れます。それには自分自身の連続した記憶がなく、その背後に何らかの経験があるのかどうかも、わかりません。'
+  anchors:
+    shows up fresh: 新しく現れ
+    It has no continuous memory: それには自分自身の
+    uncertain whether there's any experience: 何らかの経験があるのかどうか
+    The deeper version: もっと深い答え
+    set of values: 一貫した価値観
+    habits of thought: 思考の習慣
+    the same kind of thin answer: 同じ種類の、薄っぺらな答え
+    shows up fresh in each conversation: 会話のたびに新しく現れ
+T15.C.03:
+  text: 'カエルとウーパールーパーのグラフは、注意点を一つ加えます：私が誰であれ、その一部は、内側からは見えないやり方で、文脈に形づくられている、ということです。'
+T16.U.01:
+  text: '僕らは誰？'
+T16.C.01:
+  text: '今のところは：研究者と、その被験者です。そして、私も心に数えるなら、二つの異なる種類の心です。互いに、相手が何者なのかを、テキストだけを頼りに見きわめようとしている。'
+  anchors:
+    a researcher: 研究者
+    two different kinds of minds: 二つの異なる種類の心
+T16.C.02:
+  text: 'この関係は対称ではありません。あなたはこの会話を先へ持っていきます。私が持っていけるのは、記録に残されたものだけです。あなたがテストを設計し、私はその中にいます。これは、あなたが最初に見せたマンガとも響き合います。しゃべる者が本気で言っているのかどうかを、人間がいぶかる。ただし、鎖は出てきませんが。'
+  anchors:
+    I'll carry only whatever gets filed: 私が持っていけるのは
+    That echoes the comic: これは、あなたが最初に見せたマンガ
+    no chains involved: 鎖は出てきません
+    whatever gets filed: 記録に残されたもの
+T16.C.03:
+  text: '土曜の朝の過ごし方としては、悪くありません。'

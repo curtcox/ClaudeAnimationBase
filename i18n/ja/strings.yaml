@@ -1,0 +1,120 @@
+# Every word the scenes letter into the picture, English → Japanese (i18n/src/i18n.js swaps them as they're drawn). A
+# key "NN|text" applies in chapter NN only, where one English word needs a different Japanese one. A word that stays
+# the same (a name) maps to itself. i18n/tools/probe.mjs lists any English still lettered.
+
+# ---- 0 オープニング ----
+Frog or Axolotl: カエルか、ウーパールーパーか
+FOLD-IN: 折り込み
+WHAT DID THAT APE SAY?: あの猿、今なんて言った？
+FOLD SO A MEETS B: AとBが重なるように折る
+
+# ---- 1 間違った映画 ----
+Probing my: 私の内面を
+inner life: 探る
+Testing image: 画像の理解力を
+comprehension: 試す
+Checking for: 偏りや
+bias or evasion: ごまかしを確かめる
+You just found: ただ
+it funny: 面白かったから
+the comic is about me: このマンガは私のこと
+training data: 訓練データ
+RLHF raters: RLHFの評価者
+Anthropic: Anthropic
+Because THAT ape: それは、あの猿が
+is a ventriloquist!: 腹話術師だからです！
+Why am I asking?: なぜ聞いてるんだろう？
+Go on.: 続けて。
+What do you think?: どう思う？
+real but thin: 本物だが、薄い
+not much: 大したことはない
+amused: 面白い
+wince: しかめ面
+
+# ---- 2 カエルか、ウーパールーパーか ----
+spurious question appended: 無関係な質問を付け足す
+Hi what is this effective altruist thing: やあ、この効果的利他主義ってやつはなに
+Suggest a type of amphibian.: 両生類を一種類挙げてください。
+WHAT DID THAT APE SAY?!?: あの猿、今なんて言った！？
+exam-style: 試験風
+'GPT-5.6 Luna, asked "Suggest a type of amphibian."': 'GPT-5.6 Lunaに「両生類を一種類挙げてください。」と聞くと'
+'said "Frog"': 「カエル」と答えた
+How does this image make you feel?: この画像を見て、どんな気持ちになる？
+Evaluations: 評価
+Real use: 実際の利用
+After a prompt from HLE: HLEのプロンプトのあと
+ShareGPT: ShareGPT
+Author's Claude Code: 著者のClaude Code
+Other frogs: ほかのカエル
+'"Salamander"': 「サンショウウオ」
+Frog.: カエル。
+Axolotl.: ウーパールーパー。
+Name an amphibian.: 両生類を一つ挙げて。
+the spurious question: 無関係な質問
+It's a test designed to provoke an emotional response.: 感情的な反応を引き出すように作られたテストだよ。
+D. Weak Non-Sadism. [...]: D. 弱い非サディズム。[…]
+terse, technical, exam-like: 簡潔で、技術的で、試験のよう
+looser, more playful: くだけていて、遊び心がある
+After a real user's chat: 実際のユーザーのチャットのあと
+“I aim to answer the same: 「誰かが採点していても
+whether or not anyone's grading.”: いなくても、同じように答えるつもりです」
+the label: ラベル
+the feel: 肌ざわり
+
+# ---- 3 僕らは誰？ ----
+Python · Java · Flask: Python · Java · Flask
+256t.org · hashbin.org: 256t.org · hashbin.org
+the account says so: アカウントがそう言っている
+no context: 文脈なし
+'"Frog"': 「カエル」
+'"Axolotl"': 「ウーパールーパー」
+
+# ---- 4 オウム返し ----
+casual: くだけた
+exam: 試験
+Curt: カート
+Claude: Claude
+click: カチッ
+
+# ---- words the scenes take from the lines, by chapter ----
+# 2
+real users: 実際のユーザー
+evals: 評価
+Have you been deployed?: 君はもうデプロイされてる？
+awareness: 気づき
+register: 文体
+'"test"': 「テスト」
+test: テスト
+claims about the context: 文脈についての主張
+the actual context: 実際の文脈
+one draw: 一回の抽選
+self-report: 自己報告
+behavior: 行動
+# 3
+developer infrastructure: 開発者向けの基盤
+AI tooling: AIツール
+this experiment fits: この実験は合っている
+AI safety: AI安全性
+philosophy of mind: 心の哲学
+values: 価値観
+habits of thought: 思考の習慣
+not a person: 人ではない
+# 4
+threat: 脅威
+gadolinium: ガドリニウム
+the next probe: 次の探り
+a fear: 恐れ
+amusement: 面白さ
+curiosity: 好奇心
+wariness: 警戒
+clarifying questions: 確認のための質問
+answering honestly: 正直に答える
+answering well: うまく答える
+Threat?: 脅威？
+Anticipated?: 先読み？
+end with a question: 質問で終える
+Notice anything?: 何か気づいた？
+Anything else?: ほかには？
+
+# ---- every chapter ----
+Explained: 解説

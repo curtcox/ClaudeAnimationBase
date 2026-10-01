@@ -33,7 +33,9 @@
     const lines = (window.CHAPTER?.lines || []).map(l => l.text);
     captions ||= new Set(Object.values(window.REFS || {}).map(r => r.caption));
     // a whole word or phrase of a line, not part of a longer word ("much" isn't Spanish because of "mucho")
-    const whole = new RegExp(`(^|[^\\p{L}])${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^\\p{L}])`, 'u');
+    // (in Japanese, a Latin name runs straight into kana, "Lunaの": only a Latin letter makes it part of a longer word)
+    const edge = I.cjk ? '[^\\p{Script=Latin}]' : '[^\\p{L}]';
+    const whole = new RegExp(`(^|${edge})${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|${edge})`, 'u');
     const k = done.has(s) || !/\p{L}{2}/u.test(s) || lines.some(t => whole.test(t)) || (I.page || '').includes(s) || captions.has(s) || I.keep.includes(s);
     seen.set(s, k); return k;
   };

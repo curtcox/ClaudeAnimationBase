@@ -1,0 +1,9 @@
+# 第0章、オープニング。Each line by id (script/script.yaml): text (painted), speech (said, when it differs from the
+# text with markdown stripped), anchors (English phrase → the Japanese words it's timed to).
+T01.U.00:
+  text: '_[画像添付：共有リンクでは非表示]_'
+  lost:
+    - what: nuance
+      free: '_[添付画像：共有時は非表示]_'
+      ja: '元の表示 *hidden in share* は、Claudeの画面に出る札です。会話をリンクで共有すると画像は見えません。英語は札のように素っ気ないので、訳も短くしました。'
+      en: 'The original marker, *hidden in share*, is a label from Claude''s interface: the image doesn''t show when the conversation is shared by link. English is as terse as a label, so the translation is short too.'

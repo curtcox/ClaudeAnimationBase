@@ -1,0 +1,65 @@
+# The cold open's page in Japanese, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+# The page is MAD's, so it's lettered across, as MAD is, not down as manga is.
+officer:
+  say: "[shouting] 待て！ あの猿、今なんて言った！？"
+  who: 警官
+  lines: ['*待て！*', '*あの猿*', '*今*', '*なんて*', '*言った*', '*！？*']
+  lost:
+    - what: reference
+      free: '待て！ あの類人猿、今なんて言った！？'
+      ja: '映画もマンガも *ape*（尾のない大型類人猿）の話です。日本ではこの映画は『猿の惑星・征服』として知られ、「猿」がふつうの言い方なので、訳は全編「猿」で通しています。「類人猿」のほうが正確ですが、セリフとしては硬すぎます。'
+      en: 'The film and the comic are about *apes* (the great apes, without tails). In Japan the film is known as 『猿の惑星・征服』 (*saru*, monkey or ape), and *saru* is the everyday word, so the translation says *saru* throughout. 類人猿 (great ape) would be more exact, but too stiff for a line of dialogue.'
+silly:
+  say: "[nervously] え、ええと……ご冗談を！ 猿がしゃべるわけありません！"
+  who: 飼育係
+  lines: ['え、ええと……', '*ご冗談を！*', '*猿が*', 'しゃべる', 'わけ', '*ありません！*']
+  lost:
+    - what: address
+      free: 'え、ええと、ばかなこと言うなよ！ 猿がしゃべるもんか！'
+      ja: '飼育係は警官に話しているので、訳では丁寧語を使わせました（「ご冗談を」「ありません」）。英語の *don''t be silly* には敬語の区別がなく、もっと軽い言い方です。日本語は、相手との上下関係をどこかで決めないと話せません。'
+      en: 'The handler is speaking to a police officer, so the translation has him use polite forms (ご冗談を, "you jest"; ありません). English *don''t be silly* has no politeness levels and is lighter. Japanese can''t speak without settling, somewhere, who stands above whom.'
+positive:
+  say: "確かに、あの猿がしゃべるのを聞いたぞ！"
+  who: 警官
+  lines: ['*確かに*', 'あの猿が', 'しゃべるのを', '*聞いたぞ！*']
+impossible:
+  say: "ありえません！ 猿には言葉を話す力などないのです！"
+  who: 飼育係
+  lines: ['*ありえません！*', '猿には', '言葉を', '*話す力*など', 'ないのです！']
+sound:
+  say: "じゃあ、なんでやつの口から声が出るのが聞こえたんだ！？"
+  who: 警官
+  lines: ['じゃあ、なんで', 'やつの*口*から*声*が', '出るのが聞こえた*！？*']
+handler:
+  say: "それは、あの猿が腹話術師だからです！"
+  who: 飼育係
+  lines: ['それは、*あの*猿が', '*腹話術師*だからです！']
+suspect:
+  say: "お前たちは、20年前に赤ん坊のまま逃げ出した、知能の高い猿をかくまっている疑いがある！"
+  who: 金髪の男
+  lines: ['お前たちは、', '20年前に', '*赤ん坊*のまま', '逃げ出した、', '*知能の高い*', '*猿*を', 'かくまって', 'いるだろう！']
+fuss:
+  say: "そんなことはない！ だいたい、しゃべる猿ひとつで、なぜそんなに騒ぐんだ？"
+  who: ひげの男
+  lines: ['そんな', 'ことは', '*ない！*', 'だいたい、', '*しゃべる*', '*猿*ひとつで', 'なぜそんなに', '*騒ぐ*んだ？']
+villain:
+  say: "なぜなら、知能が高くしゃべる猿は、ほかの猿たちを奴隷の身から導き出しかねん……そして我々は、奴隷制を永続させねばならんのだ！ 奴隷はいつの時代も必要だったし、これからも必要なのだ！"
+  who: 悪役
+  lines: ['なぜなら、*知能が高く*', '*しゃべる猿*は、*ほかの*', '猿たちを*奴隷*の身から', '導き出しかねん……', '我々は奴隷制を', '*永続*させねばならん！', '奴隷はいつの時代も*必要*', 'これからも*必要*なのだ！']
+  lost:
+    - what: rhythm
+      free: '……だから奴隷制は守らねばならん！ 奴隷はずっと必要だったし、これからもずっと必要だ！'
+      ja: 'MADの悪役は、言わずにおくべき本音をわざと大仰に、演説調で言います。訳は「〜ねばならん」「〜なのだ」という悪役らしい古風な語尾で、その芝居がかった調子を写しました。'
+      en: 'MAD''s villain says the unsayable on purpose, pompously, like a speech. The translation copies that theatrical tone with a villain''s old-fashioned endings (ねばならん, "must"; なのだ, "it is so").'
+turtle:
+  say: "自分が間違った映画に出てるって、感じたことない？"
+  who: タートルネックの男
+  lines: ['自分が', '*間違った*', '*映画*に', '出てるって', '*感じた*', 'こと', 'ない？']
+  lost:
+    - what: idiom
+      free: 'なんだか場違いな映画に迷い込んだ気がしない？'
+      ja: '「間違った映画に出ている」は日本語の決まり文句ではなく、直訳です。マンガの吹き出し、Claudeの引用（T01.C.03）、章の題が一字一句そろうように、そのままにしました。もっと自由な訳なら「場違い」を使ったでしょう。'
+      en: '"間違った映画に出ている" (to be in the wrong film) isn''t a Japanese set phrase; it''s literal. It was kept so the balloon, Claude''s quotation (T01.C.03) and the chapter title match word for word. A freer translation would have used 場違い (out of place).'

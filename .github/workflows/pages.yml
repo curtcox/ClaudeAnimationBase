@@ -34,6 +34,10 @@ jobs:
         run: |
           for d in i18n/*/script; do
             lang=$(basename $(dirname $d))
+            # a translation still under way, without its site's words or its translation page yet, isn't published
+            if [ ! -f i18n/$lang/site_strings.yaml ] || { [ ! -f i18n/$lang/translation.yaml ] && [ ! -f i18n/$lang/traduccion.yaml ]; }; then
+              echo "skipping $lang: its site isn't translated yet"; continue
+            fi
             node i18n/tools/stage.mjs --lang=$lang
             (cd i18n/$lang/stage && node tools/timeline.mjs && node tools/build_site.mjs)
             node i18n/tools/lost.mjs --lang=$lang

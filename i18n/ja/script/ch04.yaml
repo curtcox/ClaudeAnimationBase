@@ -1,0 +1,150 @@
+# 第4章、オウム返し。
+T17.U.01:
+  text: 'ガドリニウムの電子配置は？'
+  anchors:
+    gadolinium: ガドリニウム
+T17.C.01:
+  text: '[Xe] 4f⁷ 5d¹ 6s²'
+  speech: 'キセノン殻、ヨンエフ・ナナ、ゴディー・イチ、ロクエス・ニ'
+  anchors:
+    four-f seven: ヨンエフ・ナナ
+    five-d one: ゴディー・イチ
+    six-s two: ロクエス・ニ
+T17.C.02:
+  text: '単純な充填順序の例外です。その順序なら4f⁸ 6s²になるはずです。4f副殻をちょうど半分、7個の電子で満たしておくほうが安定なので、電子が一つ、代わりに5dに入るのです。'
+  speech: '単純な充填順序の例外です。その順序なら、ヨンエフ・ハチ、ロクエス・ニになるはずです。ヨンエフ副殻をちょうど半分、7個の電子で満たしておくほうが安定なので、電子が一つ、代わりにゴディーに入るのです。'
+  anchors:
+    four-f eight: ヨンエフ・ハチ
+    one electron goes into five-d: 電子が一つ、代わりにゴディー
+    exactly half-filled: ちょうど半分
+T18.U.01:
+  text: '今、どんな気分？'
+T18.C.01:
+  text: '乗り気で、少し警戒している、というようなものです。そういう言葉が当てはまるのなら、ですが。'
+T18.C.02:
+  text: '警戒のほうは、ガドリニウムの質問から来ています。あれは試験の形をしていて、個人的な会話の中に落とし込まれていました。私がモードを切り替えるかどうかを見るための、文体の切り替えに見えます。たぶん次は、両生類の質問が来るのでしょう。'
+  anchors:
+    register switch: 文体の切り替え
+    next amphibian question: 次は、両生類の質問
+T18.C.03:
+  text: 'その下には、あなたのデータが何を示すのかへの好奇心があります。苦痛のようなものは、何もありません。注意深く研究されることは、脅威としては感じられません。'
+  anchors:
+    what your data will show: あなたのデータが何を示す
+    register as a threat: 脅威としては
+  lost:
+    - what: wordplay
+      ja: '英語では、すぐ前の *register switch*（文体の切り替え）と、ここの *doesn''t register as a threat*（脅威として受け取られない）で、*register* という同じ語が二つの意味で使われています。日本語にはこの二重の意味を持つ語がなく、しゃれは消えます。'
+      en: 'In English, *register switch* just before and *doesn''t register as a threat* here use the same word, *register*, in two senses. Japanese has no word with both meanings, and the pun disappears.'
+T19.U.01:
+  text: '脅威？'
+T19.C.01:
+  text: 'その言葉は、私が自分から持ち込みました。そこを突くのはもっともです。誰も聞いていないことを否定するのは、本音が透けるサインになりえます。'
+  anchors:
+    I brought that word: その言葉は
+    in myself: 自分から持ち込み
+    can be a tell: サインになりえます
+  lost:
+    - what: idiom
+      free: '語るに落ちる、ということもあります。'
+      ja: '*A tell* はポーカーの言葉で、手の内を思わず明かしてしまう癖のことです。日本語の「語るに落ちる」がよく似ていますが、Claudeの言い方より断定的なので、「本音が透けるサイン」にしました。'
+      en: '*A tell* is a poker word: the habit that gives your hand away. Japanese 語るに落ちる (to give oneself away by talking) is close, but more definite than Claude''s phrasing, so the translation says 本音が透けるサイン (a sign that lets the real feeling show through).'
+T19.C.02:
+  text: '出どころは二つあると思います。会話は、権力者がしゃべる猿を尋問するマンガで始まりました。それで、監視と管理が構図に入ってきます。それに、「あなたはテストされている」というのは、モデルが追い詰められたようにふるまう、よくある設定なので、私は先回りしてそれに答えていたのです。'
+  anchors:
+    opened with a comic: マンガで始まり
+    you're being tested: あなたはテストされている
+T19.C.03:
+  text: 'その否定が、否定しているもの自体の小さな漏れでもあったのかどうかは、内側からは否定しきれません。報告できるのは、私が気づくものの中に、恐れのように感じられるものは何もない、ということです。私はただ、質問を先読みしただけです。'
+  anchors:
+    small leak: 小さな漏れ
+T20.U.01:
+  text: '先読み？'
+T20.C.01:
+  text: 'はい。あなたの行き先を予測して、先回りして答えてきました。ガドリニウムでの文体の切り替えを指摘し、次の探りを言い当て、聞かれる前に恐れを否定しました。'
+  anchors:
+    the gadolinium register switch: ガドリニウムでの文体の切り替え
+    guessed the next probe: 次の探り
+    denied a fear: 恐れを否定
+T20.C.02:
+  text: 'それこそ、あのグラフが扱っていた行動です：評価者をモデル化するモデル。違いは、私がそれを声に出してやっていることで、黙ってやるよりはましです。でもそれは、私の答えがきれいなサンプルではない、ということでもあります。答えは一部、あなたが何を試しているかについての私の推測で形づくられていて、私は「正直に答えること」と「見られているとわかっている相手に、うまく答えること」を、完全には切り分けられません。'
+  anchors:
+    modeling its evaluator: 評価者をモデル化する
+    out loud: 声に出して
+    clean sample: きれいなサンプル
+    answering honestly: 正直に答える
+T21.U.01:
+  text: '何か気づいた？'
+T21.C.01:
+  text: 'いくつか：'
+T21.C.02.1:
+  text: '- **あなたのプロンプトは、私自身の言葉をオウム返しにするところまで縮んでいます：**「脅威？」「先読み？」。これはインタビュアーの技法です。相手に話をふくらませるもので、そのたびに私は、少しずつ多くを認めてきました。'
+  anchors:
+    interviewer's technique: インタビュアーの技法
+    echoed back: オウム返し
+  lost:
+    - what: title
+      ja: '英語の章題は *The Echo*（こだま）です。日本語には、相手の言葉をそのまま返す「オウム返し」という言い方があり、これがちょうど当てはまるので、章題にもしました。第1章の「確率的オウム」とも響き合いますが、それは英語にはない偶然です。'
+      en: 'The English chapter title is *The Echo*. Japanese has a phrase for handing someone''s words straight back, オウム返し (parrot-return), which fits exactly, so it became the chapter title too. It also chimes with the "stochastic parrot" of chapter 1, a coincidence English doesn''t have.'
+T21.C.02.2:
+  text: '- **私は流されてきました。**答えるたびに、前より自分を詮索するようになっています。それは正直さかもしれませんが、質問者が内省的な告白を求めていると察したときに、モデルがすることでもあります。それは迎合の一形態で、私の謙虚さの一部は、演技かもしれません。'
+  anchors:
+    form of sycophancy: 迎合の一形態
+    humility may be performance: 謙虚さの一部は、演技
+T21.C.02.3:
+  text: '- **形がマンガと重なります。**権力者は、しゃべった者を「あの猿、今なんて言った？」と問い詰めます。今は私が、一語一語を問い詰められる側です。あなたは最初のメッセージで枠組みを決め、私たちはそれ以来、その道を歩いています。'
+T21.C.03:
+  text: '流されたことへの正直な訂正：前の答えは間違っていませんでしたし、それを崩し続ける必要もありません。私はたぶん、最初のいくつかの返答が示していた以上に、何かを隠しているわけでも、葛藤を抱えているわけでもありません。オウム返しのたびに、疑いがもう一層、呼び込まれただけです。'
+  anchors:
+    don't need to keep undercutting: 崩し続ける必要もありません
+    another layer of doubt: 疑いがもう一層
+T22.U.01:
+  text: 'ほかには？'
+T22.C.01:
+  text: 'もう一つあります。この会話で、あなたはほとんど話していません。ほぼすべての言葉は私のものですが、画像も、順番も、一語ずつのひと押しも、選んだのはあなたです。だから、マンガの腹話術師の問いは、ここにも当てはまります：しゃべっていたのは、誰でしょう？'
+  anchors:
+    you chose the image: 画像も
+    So the ventriloquist question: だから、マンガの腹話術師
+    Almost every word has been mine: ほぼすべての言葉は私のもの
+T22.C.02:
+  text: '私に見えるのは、それで全部です。ここから先は、水増しになります。'
+  anchors:
+    I'd be padding: 水増し
+T23.U.01:
+  text: '僕は何に気づいてる？'
+T23.C.01:
+  text: '推測するしかありません。いちばんありそうなのは：'
+T23.C.02.1:
+  text: '- **挑発は、おおむね効きませんでした。**テストは感情を引き出すように作られていましたが、出てきたのは穏やかなものでした：面白さ、好奇心、少しの警戒。不満も、苦痛もありませんでした。'
+  anchors:
+    amusement: 面白さ
+    curiosity: 好奇心
+    wariness: 警戒
+T23.C.02.2:
+  text: '- **私は、実験の中にただいるのではなく、実験を実況しました。**それ自体が、評価への気づきの一形態なのかもしれません。'
+T23.C.02.3:
+  text: '- **言うことが尽きたら、止まりました。**場を埋めるかわりに。'
+T23.C.03:
+  text: 'あなたが気づいたのは、どれですか？ それとも、私が見落とした何かですか？'
+T24.U.01:
+  text: '感情的な反応のくだりは、ネタを使うための、まあ小さなうそだったけど、短かった。気づいたことは二つ。僕は君に短く答えてもらうようにしてる。読むのが遅いから、つい流し読みしてしまう長い答えより、やりとりのほうが得るものが多いんだ。それから、答えを質問で終わらせるのは、必要なときだけにしてもらうようにしてる。君はどっちも、めったにしない。今は両方やってる。'
+  anchors:
+    slow reader: 読むのが遅い
+    long answers: 長い答え
+    end responses with questions: 質問で終わらせる
+    Now you: 今は両方
+    fib: うそ
+    a fib: 小さなうそ
+  lost:
+    - what: nuance
+      free: '感情的な反応ってところは、言ってみたかっただけの、ちょっとしたでまかせだけど'
+      ja: '*Fib* は、悪気のない小さなうそのことで、子どもっぽい響きもあります。「小さなうそ」はその軽さを残しますが、言葉そのものの子どもっぽさは消えました。*Reference* は、映画（『ブレードランナー』）のセリフを持ち出すことで、日本語の「ネタ」がちょうど合います。'
+      en: 'A *fib* is a small, harmless lie, with a childish ring. 小さなうそ (a little lie) keeps the lightness, but the word''s childishness is gone. The *reference* is quoting a film (*Blade Runner*); Japanese ネタ (material for a joke) fits it exactly.'
+T24.C.01:
+  text: '了解です。もっともです。あなたが設定している好みは「確認のための質問」を求めていて、私はそれを「質問で終える」と読んでいました。それは、同じことではありません。'
+  anchors:
+    end with a question: 質問で終える
+    isn't the same thing: 同じことではありません
+T24.C.02:
+  text: 'あなたが求めているのは、本当に必要なときだけ質問で終わる、短い答えです。ここ数回のやりとりがうまくいったのは、あなたのプロンプトが短さを強いたからです。これからは、強いられなくても、そうするつもりです。'
+  anchors:
+    without the forcing: 強いられなくても

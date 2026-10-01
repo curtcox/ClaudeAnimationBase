@@ -1,0 +1,12 @@
+# Speech-only respellings for the Japanese voice, applied in order to every spoken line after markdown is stripped
+# (tools/script_lib.mjs's autoSpeech; format as script/pronounce.yaml). They change what's said, never what's painted.
+# Names and acronyms written in Latin letters are said the way Japanese says them. verify: true = a guess to check by ear.
+- { match: "LLMs", say: "エルエルエム" }
+- { match: "LLM", say: "エルエルエム" }
+- { match: "RLHF", say: "アールエルエイチエフ" }
+- { match: "Claude", say: "クロード" }
+- { match: "Anthropic", say: "アンソロピック" }
+- { match: "OpenAI", say: "オープンエーアイ" }
+- { match: "ChatGPT", say: "チャットジーピーティー" }
+- { match: "MAD", say: "マッド" }
+- { match: "AI", say: "エーアイ" }
