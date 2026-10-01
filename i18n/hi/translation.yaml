@@ -1,0 +1,226 @@
+# The translation's own page (i18n/tools/lost.mjs → the Hindi site's anuvad/), in Hindi and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+slug: anuvad
+text_slug: poora-path
+html_lang: hi
+
+title:
+  hi: इस फ़िल्म का अनुवाद कैसे हुआ, और क्या छूट गया
+  en: How this film was translated, and what was lost
+text_title:
+  hi: पूरी फ़िल्म, दोनों भाषाओं में
+  en: The whole film, in both languages
+labels:
+  lang_hi: हिंदी
+  film_hi: पूरी फ़िल्म
+  film_en: The whole film
+  original: मूल (अंग्रेज़ी)
+  ours: यह अनुवाद
+  free: ज़्यादा खुला अनुवाद
+  kinds_hi: क्या छूटता है, क़िस्म के हिसाब से
+  kinds_en: What gets lost, by kind
+  list_hi: पंक्ति-दर-पंक्ति
+  list_en: Line by line
+
+sections:
+  - hi_title: यह पेज
+    en_title: This page
+    hi: |
+      *मेंढक या एक्सोलोटल* एक एनिमेटेड फ़िल्म है, जो कर्ट कॉक्स और Anthropic के बनाए AI प्रोग्राम Claude के बीच हुई एक असली बातचीत से, शब्दशः, बनी है। बातचीत अंग्रेज़ी में हुई थी। यह उसका हिंदी संस्करण है।
+
+      यह पेज पंक्ति-दर-पंक्ति बताता है कि अनुवाद कैसे हुआ, और कैसे हो सकता था, और क्या अलग होता। सब कुछ दोनों भाषाओं में है, ताकि जो भी दोनों पढ़ सके, वह ख़ुद अनुवाद को परख सके। [पूरी फ़िल्म, अंग्रेज़ी और हिंदी में अगल-बगल](poora-path/) भी है।
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude, an AI program made by Anthropic. The conversation was in English. This is the Hindi version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line by line. Everything is in both languages so that anyone who reads both can judge the translation for themselves. There's also [the whole film, in English and Hindi, side by side](poora-path/).
+
+  - hi_title: अनुवाद किसने किया
+    en_title: Who translated it
+    hi: |
+      Claude (Claude Opus 5.5 मॉडल) ने सब कुछ अनुवाद किया: बातचीत की हर पंक्ति, तस्वीर में लिखा हर शब्द, शीर्षक, कोडों के कैप्शन, फ़िल्म के साथ की साइट (उसकी 64 व्याख्याएँ और उसके पेज), और यह पेज, जो कुछ छूटा उसके नोट्स समेत।
+
+      यह संस्करण बनाने की एक वजह यह दिखाना है कि Claude का अनुवाद कैसा होता है, बिना छेड़े। इसलिए **किसी इंसानी अनुवादक ने इसे नहीं सुधारा**, और बाद का कोई भी सुधार इस पेज पर तारीख़ के साथ दर्ज होगा (और कोड के सार्वजनिक इतिहास में भी रहेगा)।
+
+      अब तक: {total} में से {lines} पंक्तियाँ अनुवादित (अध्याय {chapters_done})। इंसानी जाँच: अभी कोई नहीं।
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - hi_title: अनुवाद कैसे हुआ
+    en_title: How it was translated
+    hi: |
+      - **वफ़ादारी से, पंक्ति-दर-पंक्ति।** बातचीत का हर पैराग्राफ़ और सूची का हर बिंदु फ़िल्म की एक पंक्ति है, और अनुवाद वही पंक्तियाँ, उसी क्रम में, उसी मोटे और तिरछे अक्षरों, सूचियों और कड़ियों के साथ रखता है। पहले अर्थ, फिर रूप; कभी कोई खुला रूपांतरण नहीं।
+      - **बोली।** वह हिंदी जो पढ़े-लिखे भारतीय बोलते हैं, सरकारी सूचनाओं वाली संस्कृतनिष्ठ हिंदी नहीं: जहाँ भारतीय बोलने वाले अंग्रेज़ी शब्द इस्तेमाल करते हैं (मॉडल, टेस्ट, प्रॉम्प्ट, डेटा), वहाँ वही, देवनागरी में।
+      - **आप और तुम।** कर्ट के लिए Claude का संबोधन "आप" है; Claude के लिए कर्ट का "तुम", जैसे कोई दोस्त कहे। अंग्रेज़ी के *you* में यह फ़र्क़ नहीं होता। शुरुआत की कॉमिक में पुलिस अफ़सर "तुम" कहता है और रखवाला उसे "आप"।
+      - **Claude का कोई लिंग नहीं।** यह इस अनुवाद का सबसे बड़ा फ़ैसला है। हिंदी में क्रियाएँ अपने कर्ता का लिंग बताती हैं ("मैं सोचता हूँ" या "सोचती हूँ"), इसलिए पहले पुरुष में बोलते हुए Claude को लगभग हर क्रिया पर एक लिंग चुनना पड़ता। पर कोई लिंग चुना नहीं गया: उसकी पंक्तियाँ ऐसे बनाई गई हैं कि कोई क्रिया या विशेषण लिंग न दिखाए ("मुझे लगता है", "मेरा जवाब है", "मैंने कहा", "कहूँ")। Claude से बात करते समय कर्ट की पंक्तियाँ ("तुम करते/करती हो"), और साइट पर Claude के बारे में वाक्य ("Claude ने कहा", "Claude के मुताबिक़") भी इसी तरह बने हैं। जहाँ इसकी क़ीमत थोड़ी सहजता रही, वहाँ नीचे नोट है।
+      - **नाम।** लोगों के नाम देवनागरी में (कर्ट कॉक्स, जेफ़ जार्विस); कंपनियाँ, उत्पाद और मॉडल लैटिन अक्षरों में, जैसे हिंदी की टेक लेखनी उन्हें छोड़ देती है (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna)।
+      - **कृतियाँ।** भारत में हॉलीवुड की फ़िल्में और अंग्रेज़ी किताबें अपने अंग्रेज़ी नामों से जानी जाती हैं, इसलिए वे जैसे सुनाई देते हैं वैसे देवनागरी में लिखे गए (*कॉन्क्वेस्ट ऑफ़ द प्लैनेट ऑफ़ द एप्स*)। शोध-पत्र, लेख और साइटें अपने ही शीर्षक रखते हैं।
+      - **बंदर।** *Ape* पूरे अनुवाद में "बंदर" है, रोज़ की बोली का शब्द; "वनमानुष" ज़्यादा सटीक है, पर संवाद के लिए किताबी।
+      - **एक्सोलोटल।** *Axolotl* का कोई अपना हिंदी नाम नहीं है, इसलिए वह "एक्सोलोटल" है, जैसा सुनाई देता है। हिंदी दर्शक के लिए यह जवाब अंग्रेज़ी से ज़्यादा अजनबी है, और "मेंढक" ज़्यादा जाना-पहचाना।
+      - **कड़ियाँ।** जो कोड अंग्रेज़ी Wikipedia की ओर इशारा करते थे, वे हिंदी Wikipedia के उसी लेख की ओर करते हैं, जहाँ वह मौजूद है (Wikipedia की अपनी भाषा-कड़ियों के हिसाब से; 202 में से 39)। बाक़ी स्रोत ज़्यादातर अंग्रेज़ी में ही हैं।
+      - **तस्वीर।** तस्वीर में लिखी हर चीज़ हिंदी में है: लेबल, कार्ड, शीर्षक, और शुरुआत की कॉमिक के गुब्बारे। अक्षर Mac के अपने कोहिनूर देवनागरी फ़ॉन्ट में हैं।
+      - **आवाज़ें।** वही आवाज़ें बोलती हैं जो अंग्रेज़ी में: कर्ट की क्लोन की हुई आवाज़, और Claude के लिए River (ElevenLabs, eleven_v3 मॉडल)। वे हिंदी कुछ विदेशी लहजे के साथ बोलेंगी। Claude के मुँह की हरकतें हिंदी आवाज़ से फिर से निकाली जाती हैं। अभी तक कोई अध्याय आवाज़ में नहीं आया; सब अनुवादित है, रिकॉर्ड होने का इंतज़ार कर रहा है।
+      - **लंबाई।** एनिमेशन आवाज़ के पीछे चलता है, इसलिए शब्दों को जल्दी-जल्दी बुलवाने के बजाय फ़िल्म ख़ुद लंबी या छोटी होती है।
+      - **एनिमेशन से जुड़ाव।** बहुत-से दृश्य ठीक उस पल हिलते हैं जब कोई ख़ास वाक्यांश बोला जाता है। ऐसे हर वाक्यांश (अब तक {anchors}) को उसका हिंदी जोड़ चाहिए था। हिंदी में क्रिया आख़िर में आती है, इसलिए कई बार शब्द अंग्रेज़ी से अलग क्रम में आते हैं, और दृश्य उसी के हिसाब से थोड़ा आगे-पीछे होता है।
+      - **कर्ट की टाइपिंग की ग़लतियाँ।** अंग्रेज़ी में फ़िल्म कर्ट की टाइपिंग की ग़लतियाँ दिखाती है, लाल क़लम से काटकर, ऊपर सुधार के साथ। जहाँ कोई चूक अनुवाद में बचती है (लैटिन अक्षरों में रखे नाम: Shoggath, Solid Gold Magicarp, AGI 2027), वहाँ वह रखी गई है; जहाँ वह अंग्रेज़ी पर टिकी है, वहाँ वह छूट गई, और नीचे दर्ज है।
+      - **जो अंग्रेज़ी में रहा।** शोध-पत्रों, लेखों, शो और गानों के शीर्षक; Claude के उद्धृत स्रोत; और यह प्रदर्शन कि कोई मॉडल पाठ को *टोकन* में कैसे काटता है, जो वही अंग्रेज़ी दिखाता है जो मॉडल ने सच में पढ़ी।
+      - **संख्याएँ।** अंतरराष्ट्रीय अंकों में, जैसे हिंदी अख़बार छापते हैं, और जहाँ स्वाभाविक हो वहाँ भारतीय ढंग से (17 हज़ार)।
+      - **साइट।** साइट की 64 व्याख्याएँ भी इन्हीं नियमों से अनुवादित हुईं। उनमें फ़िल्म के उद्धरण इसी अनुवाद के शब्दों में हैं। जिन कड़ियों का कोई हिंदी लेख नहीं, उनके साथ "(अंग्रेज़ी में)" लिखा है। फ़िल्म बनाने वाली बातचीत, जिसमें कर्ट और Claude इसे बनाते हैं, अनुवादित नहीं हुई: वह मूल साइट पर अंग्रेज़ी में है।
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning first, then form; never a free adaptation.
+      - **Register.** The Hindi educated Indians speak, not the Sanskritized Hindi of official notices: English words where Indian speakers use them (मॉडल, टेस्ट, प्रॉम्प्ट, डेटा), written in Devanagari.
+      - **आप and तुम.** Claude says आप (the respectful "you") to Curt; Curt says तुम (the familiar one) to Claude, as a friend would. English *you* makes no such difference. In the opening comic the police officer says तुम and the handler answers him with आप.
+      - **Claude has no gender.** This is the translation's biggest decision. Hindi verbs show their subject's gender (मैं सोचता हूँ, "I think", he; सोचती हूँ, she), so a Claude speaking in the first person would have to choose one at nearly every verb. It doesn't: its lines are built so no verb or adjective shows a gender (मुझे लगता है, "it seems to me"; मेरा जवाब है, "my answer is"; मैंने कहा, "I said", which agrees with what was said; the subjunctive कहूँ). Curt's lines to Claude (तुम करते/करती हो, "you do") and the site's sentences about Claude ("Claude said", "according to Claude") are built the same way. Where that cost some naturalness, there's a note below.
+      - **Names.** People's names in Devanagari (कर्ट कॉक्स, जेफ़ जार्विस); companies, products and models in Latin letters, as Hindi tech writing leaves them (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna).
+      - **Works.** In India Hollywood films and English books are known by their English titles, so they're spelled as they sound, in Devanagari (*कॉन्क्वेस्ट ऑफ़ द प्लैनेट ऑफ़ द एप्स*). Papers, articles and sites keep their own titles.
+      - **बंदर.** *Ape* is बंदर (monkey) throughout, the everyday word; वनमानुष (great ape) is more exact but bookish for dialogue.
+      - **एक्सोलोटल.** *Axolotl* has no Hindi name of its own, so it's एक्सोलोटल, spelled as it sounds. For a Hindi viewer the answer is stranger than in English, and मेंढक (frog) more familiar.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in Hindi where there is one (Wikipedia's own links between languages say so; 39 of 202). Other sources are mostly still English.
+      - **The picture.** Everything written in the picture is in Hindi: labels, cards, titles, and the balloons of the opening comic. The lettering is the Mac's own Kohinoor Devanagari.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs, the eleven_v3 model). They'll speak Hindi with something of an accent. Claude's mouth movements are worked out again from the Hindi audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
+      - **Length.** The animation follows the voice, so the film stretches or shrinks rather than rushing the words.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so far) needed its Hindi counterpart. Hindi puts the verb last, so words often arrive in a different order from English, and the scene moves a little earlier or later to match.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above. Where a slip survives translation (names kept in Latin letters: Shoggath, Solid Gold Magicarp, AGI 2027) it's kept; where it depends on English, it's lost, and noted below.
+      - **What stays English.** Titles of papers, articles, shows and songs; the sources Claude cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model actually read.
+      - **Numbers.** International digits, as Hindi newspapers print them, in Indian grouping where it's natural (17 हज़ार, "17 thousand").
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use this translation's words. Links with no Hindi article say "(अंग्रेज़ी में)" (in English). The conversation that made the film, in which Curt and Claude build it, wasn't translated: it's in English on the original site.
+
+  - hi_title: अनुवाद और कैसे हो सकता था
+    en_title: How else it could have been translated
+    hi: |
+      इनमें से हर एक मुमकिन था। स्पेनिश संस्करण के लिए कर्ट ने उन्हीं आवाज़ों के साथ पूरा, वफ़ादार अनुवाद चुना; यह संस्करण भी उन्हीं फ़ैसलों पर चलता है।
+
+      - **सिर्फ़ सबटाइटल।** अंग्रेज़ी आवाज़ें और तस्वीर, नीचे हिंदी पाठ के साथ। सबसे सस्ता और मूल आवाज़ के सबसे क़रीब, पर इसका मतलब है बहुत कुछ, तेज़ी से पढ़ना, और तस्वीर में लिखा सब अंग्रेज़ी ही रहता। भारत में बहुत-से तकनीकी दर्शक अंग्रेज़ी में ही देखते हैं, इसलिए यह एक स्वाभाविक विकल्प होता; इस योजना ने पहले इसी का सुझाव दिया था।
+      - **अंग्रेज़ी तस्वीर पर डबिंग।** हिंदी आवाज़ें, पर अंग्रेज़ी लेबल, कार्ड और कॉमिक।
+      - **हिंग्लिश।** भारतीय टेक की बातचीत अक्सर हिंदी और अंग्रेज़ी को मिलाकर, लैटिन अक्षरों में भी, चलती है। ऐसा अनुवाद कई दर्शकों के कान को ज़्यादा स्वाभाविक लगता, पर वह किसी और तरह की भाषा होती, और हिंदी पढ़ने वालों के एक हिस्से तक ही पहुँचती।
+      - **खुला रूपांतरण।** मज़ाक़ और मुहावरे दोबारा लिखे जाते ताकि हिंदी में काम करें, हवाले यहाँ के जाने-पहचाने हवालों से बदल दिए जाते। सुनने में ज़्यादा स्वाभाविक; पर तब यह शब्दशः वह बातचीत नहीं रहती जो हुई थी।
+      - **Claude के लिए एक लिंग।** हिंदी में AI सहायक अक्सर पुल्लिंग में बोलते हैं ("मैं कर सकता हूँ")। यह आसान और ज़्यादा सहज होता, पर Claude को वह लिंग देता जो अंग्रेज़ी में उसके पास नहीं है।
+      - **होंठों से मिलती पेशेवर डबिंग।** फ़िल्मों की डबिंग हर पंक्ति को मूल की लंबाई और होंठों की हरकत पर फ़िट करती है, कभी-कभी कही गई बात बदलकर। यहाँ उलटा है: एनिमेशन पंक्ति पर फ़िट होता है।
+      - **देसी आवाज़ें।** आवाज़ कलाकार, या हिंदी भाषी आवाज़ों के कृत्रिम रूप: स्वाभाविक लहजा, पर फिर वह कर्ट की आवाज़ नहीं रहती।
+      - **इंसानी अनुवादक, या इंसानी जाँच।** किसी फ़िल्म के लिए यही आम बात है। इसमें जान-बूझकर दोनों में से कुछ नहीं: मक़सद Claude का अनुवाद वैसा दिखाना है जैसा वह निकला।
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with Hindi text underneath. Cheapest and truest to the original sound, but it means reading a lot, fast, and the writing in the picture stays English. Many technical viewers in India watch in English anyway, so this would have been a natural choice; this project's plan first suggested it.
+      - **A dub over the English picture.** Hindi voices, but English labels, cards and comic.
+      - **Hinglish.** Indian tech talk often mixes Hindi and English, in Latin letters too. A translation like that would sound more natural to many viewers' ears, but it would be a different kind of language, and would reach only part of those who read Hindi.
+      - **A free adaptation.** Jokes and idioms rewritten to work in Hindi, references swapped for ones better known here. It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **A gender for Claude.** AI assistants in Hindi often speak in the masculine ("I can", कर सकता हूँ). That would have been easier and more natural, but it would give Claude a gender it doesn't have in English.
+      - **Professional lip-synced dubbing.** Film dubbing fits each line to the original's length and lip movements, sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Voice actors, or synthetic voices of native Hindi speakers: a natural accent, but no longer Curt's voice.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the point is to show Claude's translation as it came out.
+
+  - hi_title: क्या अलग होता
+    en_title: What would have been different
+    hi: |
+      ज़्यादा खुला अनुवाद लगभग हर जगह ज़्यादा स्वाभाविक लगता। वह अंग्रेज़ी मुहावरों की नक़ल के बजाय हिंदी मुहावरे इस्तेमाल करता, Claude को एक लिंग दे देता, और शब्द-खेलों को दोबारा लिखता ताकि वे काम करें। बदले में वह कर्ट और Claude की असल में कही बातों से दूर चला जाता, और फ़िल्म बातचीत का सटीक रिकॉर्ड नहीं रहती।
+
+      नीचे, पंक्ति-दर-पंक्ति, अब तक दर्ज {notes} फ़र्क़ हैं: मूल, यह अनुवाद, ज़्यादा खुला अनुवाद उसे कैसे कहता, और क्यों।
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use Hindi idioms instead of copying English ones, give Claude a gender, and rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually said, and the film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer translation would put it, and why.
+
+  - hi_title: आप फ़ैसला कीजिए
+    en_title: You be the judge
+    hi: |
+      अगर आप दोनों भाषाएँ पढ़ते हैं, तो आपकी राय ठीक वही है जिसके लिए यह पेज है: कोई ग़लती, कोई वाक्य जो अटपटा लगे, कोई ग़लत नोट, कुछ जो छूट गया पर दर्ज नहीं हुआ। [फ़िल्म की रिपॉज़िटरी](https://github.com/curtcox/axol-f/issues) पर एक issue खोलकर बताइए। हर सुधार यहाँ दर्ज होगा।
+    en: |
+      If you read both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a note that's wrong, something lost that isn't noted. You can say so by opening an issue on [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  hi: |
+    हर नोट मूल पंक्ति, यह अनुवाद, और पीले रंग में, ज़्यादा खुला अनुवाद उसे कैसे कहता (जहाँ फ़र्क़ लिखकर दिखाया जा सके), दिखाता है। क़िस्म के बगल का कोड [पूरे पाठ](poora-path/) में उस पंक्ति की पहचान है।
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where the difference can be written out). The code beside the kind identifies the line in [the full text](poora-path/).
+
+text_intro:
+  hi: |
+    फ़िल्म की हर पंक्ति: बाईं ओर अंग्रेज़ी में मूल बातचीत; दाईं ओर वह अनुवाद जो हिंदी संस्करण में सुनाई और दिखाई देता है। डैश (—) उस पंक्ति का निशान है जिसका अभी अनुवाद नहीं हुआ।
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard and seen in the Hindi version. A dash (—) marks a line not translated yet.
+
+kinds:
+  gender:     { hi: Claude का लिंग, en: Claude's gender, what_hi: 'हिंदी क्रियाएँ अपने कर्ता का लिंग बताती हैं; Claude की पंक्तियाँ ऐसे बनाई गईं कि वह लिंग न दिखे।', what_en: 'Hindi verbs show their subject''s gender; Claude''s lines are built so that none shows.' }
+  address:    { hi: संबोधन और लहजा, en: Register and address, what_hi: 'हिंदी को हमेशा तय करना पड़ता है कि सामने वाले से "आप" कहें, "तुम" या "तू"।', what_en: 'Hindi must always settle whether to say आप, तुम or तू to the person addressed.' }
+  idiom:      { hi: मुहावरे, en: Idioms, what_hi: 'अंग्रेज़ी के तय जुमले, जिनका हिंदी में कोई ठीक-ठीक जोड़ नहीं।', what_en: 'English set phrases with no exact equivalent.' }
+  wordplay:   { hi: शब्द-खेल, en: Wordplay, what_hi: 'अंग्रेज़ी शब्दों पर टिके मज़ाक़।', what_en: 'Jokes that depend on the English words.' }
+  nuance:     { hi: अर्थ की बारीकियाँ, en: Shades of meaning, what_hi: 'ऐसे शब्द जिनका अर्थ थोड़ा खिसक जाता है।', what_en: 'Words whose meaning shifts a little.' }
+  ambiguity:  { hi: दोहरा अर्थ, en: Ambiguity, what_hi: 'ऐसी पंक्तियाँ जिनके अर्थ एक भाषा में दो हैं और दूसरी में एक।', what_en: 'Lines with two readings in one language and one in the other.' }
+  coinage:    { hi: गढ़े हुए और उधार के शब्द, en: Coinages and loanwords, what_hi: 'गढ़े हुए या तकनीकी शब्द, जिनमें से कई अंग्रेज़ी से वैसे ही ले लिए गए।', what_en: 'Invented or technical words, many taken over from English as they are.' }
+  reference:  { hi: हवाले और शीर्षक, en: References and titles, what_hi: 'ऐसी कृतियाँ जो हिंदी में किसी और नाम से जानी जाती हैं, या जिनका कोई नाम ही नहीं।', what_en: 'Works known by another name, or none, in Hindi.' }
+  quote:      { hi: उद्धरण, en: Quotations, what_hi: 'कहीं और से लिए गए शब्द।', what_en: 'Words quoted from somewhere else.' }
+  rhythm:     { hi: लय और शब्द-क्रम, en: Rhythm and word order, what_hi: 'हिंदी में क्रिया आख़िर में आती है, इसलिए शब्द अलग क्रम में आते हैं।', what_en: 'Hindi puts the verb last, so words arrive in a different order.' }
+  typo:       { hi: कर्ट की टाइपिंग की ग़लतियाँ, en: Curt's typos, what_hi: 'टाइपिंग की वे ग़लतियाँ जो अनुवाद में नहीं बचतीं।', what_en: 'Typing mistakes that don''t survive translation.' }
+  title:      { hi: शीर्षक, en: The title, what_hi: 'फ़िल्म और उसके अध्यायों के नाम।', what_en: 'The name of the film and its chapters.' }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: शीर्षक / title
+    original: 'Frog or Axolotl'
+    ours: 'मेंढक या एक्सोलोटल'
+    free: 'मेंढक या कुछ और?'
+    hi: 'अंग्रेज़ी शीर्षक तीन छोटे, सपाट शब्द है, और हिंदी भी उतना ही छोटा है। फ़र्क़ दूसरे शब्द में है: अंग्रेज़ी बोलने वालों में से बहुत-से *axolotl* को इंटरनेट से पहचानते हैं; हिंदी में "एक्सोलोटल" एक अजनबी शब्द है, जिसे शायद समझाना पड़े।'
+    en: 'The English title is three short, flat words, and the Hindi is just as short. The difference is the second word: many English speakers know *axolotl* from the internet; in Hindi एक्सोलोटल is a strange word that may need explaining.'
+  - what: gender
+    ch: null
+    where: पूरी फ़िल्म / the whole film
+    original: 'I think / I can / I''ll be back'
+    ours: 'मुझे लगता है / मेरे बस में है / आइ''ल बी बैक'
+    free: 'मैं सोचता हूँ / मैं कर सकता हूँ / मैं लौटूँगा'
+    hi: 'अंग्रेज़ी में "I" का कोई लिंग नहीं होता, और Claude के बारे में "it" कहा जाता है। हिंदी में पहले पुरुष की ज़्यादातर क्रियाएँ (वर्तमान, भविष्य, अकर्मक भूत) और कई विशेषण लिंग माँगते हैं। अनुवाद ने Claude की हर पंक्ति ऐसे बनाई कि लिंग न आए: "मुझे लगता है", "मेरे बस में नहीं", कर्मवाच्य ("मुझसे नहीं हो सकता"), ने-वाला भूतकाल ("मैंने कहा"), और संभावनार्थ ("कहूँ")। कई जगह यह सहज भी है, कुछ जगह थोड़ा भारी; हर ऐसी जगह नीचे दर्ज है। फ़िल्म की आख़िरी पंक्ति, *I''ll be back*, अंग्रेज़ी में ही रखी गई, जो इसका सबसे साफ़ उदाहरण है।'
+    en: 'In English "I" has no gender, and Claude is called "it". In Hindi most first-person verbs (present, future, intransitive past) and many adjectives demand one. The translation built every line of Claude''s so none comes in: मुझे लगता है ("it seems to me"), मेरे बस में नहीं ("not in my power"), the passive ("it can''t be done by me"), the ergative past (मैंने कहा, "I said"), and the subjunctive (कहूँ, "that I say"). In many places that''s natural too, in some a little heavy; each such place is noted below. The film''s last line, *I''ll be back*, stays English, the clearest case.'
+  - what: address
+    ch: null
+    where: पूरी फ़िल्म / the whole film
+    original: 'you'
+    ours: 'आप (Claude से कर्ट) / तुम (कर्ट से Claude)'
+    free: 'तुम / तुम'
+    hi: 'अंग्रेज़ी का *you* बराबरी का है। हिंदी में Claude का "आप" उसे सहायक की जगह रखता है, और कर्ट का "तुम" दोस्ती की। दोनों तरफ़ "तुम" ज़्यादा बराबरी वाला होता, पर Claude के मुँह से कम विनम्र लगता।'
+    en: 'English *you* is level. In Hindi Claude''s आप puts it in an assistant''s place, and Curt''s तुम in a friend''s. तुम both ways would be more equal, but less polite from Claude.'
+  - what: title
+    ch: 0
+    where: अध्याय का शीर्षक / chapter title
+    original: 'Cold open'
+    ours: 'शुरुआत'
+    free: 'कोल्ड ओपन'
+    hi: '*Cold open* अमेरिकी टीवी का शब्द है: वह दृश्य जो शीर्षक से पहले, बिना किसी परिचय के शुरू हो जाता है। हिंदी में इसका कोई तय शब्द नहीं, इसलिए "शुरुआत" रखा गया, जो अर्थ रखता है, टीवी वाला रंग नहीं।'
+    en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. Hindi has no set word for it, so it''s शुरुआत (the beginning), which keeps the meaning and loses the TV colour.'
+  - what: title
+    ch: 7
+    where: अध्याय का शीर्षक / chapter title
+    original: 'Mind-Space'
+    ours: 'मनों का दायरा'
+    free: 'माइंड-स्पेस'
+    hi: '*Mind-Space* विज्ञान-कथा के अंदाज़ में हाइफ़न से जुड़ा एक संयुक्त शब्द है। "मनों का दायरा" अर्थ बताता है, पर गढ़े हुए तकनीकी शब्द वाला अहसास खो देता है।'
+    en: '*Mind-Space* is a hyphenated compound in the style of science fiction. मनों का दायरा ("the range of minds") says what it means but loses the feel of an invented technical term.'
+  - what: title
+    ch: 9
+    where: अध्याय का शीर्षक / chapter title
+    original: 'Shells'
+    ours: 'खोल'
+    free: 'शेल'
+    hi: 'अंग्रेज़ी शीर्षक *shell* के दोनों अर्थों से खेलता है: क्रस्टाफ़ेरियनिज़्म के लॉबस्टर का कवच, और मॉडल के चारों ओर लिपटा सॉफ़्टवेयर का "शेल"। हिंदी "खोल" दोनों को काफ़ी हद तक ढक लेता है, क्योंकि ख़ाली खोल किसी भी चीज़ का आवरण हो सकता है।'
+    en: 'The title plays on both senses of *shell*: the lobster''s carapace in Crustafarianism and the software shell wrapped around a model. Hindi खोल covers both fairly well, since a खोल can be the casing of anything.'
+  - what: title
+    ch: 14
+    where: अध्याय का शीर्षक / chapter title
+    original: 'The Pundits'
+    ours: 'पंडित'
+    free: 'टीवी के जानकार'
+    hi: 'अंग्रेज़ी *pundit* ख़ुद हिंदी-संस्कृत के "पंडित" से गया था: विद्वान, फिर मीडिया में राय देने वाला। यहाँ शब्द अपने घर लौट आता है, पर अंग्रेज़ी का हल्का व्यंग्य उसमें कम है, क्योंकि हिंदी में "पंडित" आदर भी जगाता है।'
+    en: 'English *pundit* came from Hindi and Sanskrit पंडित in the first place: a scholar, then a media opinion-giver. Here the word comes home, but with less of the English irony, since in Hindi पंडित also commands respect.'
+  - what: title
+    ch: 16
+    where: अध्याय का शीर्षक / chapter title
+    original: 'Coda'
+    ours: 'उपसंहार'
+    free: 'कोडा'
+    hi: '*Coda* संगीत का शब्द है: किसी रचना के आख़िर में जुड़ा छोटा हिस्सा। "उपसंहार" किसी किताब या भाषण का समापन है; अर्थ वही, पर संगीत वाला अर्थ छूट जाता है।'
+    en: '*Coda* is a musical term: the short passage that ends a piece. उपसंहार is the closing of a book or a speech; the meaning holds, but the musical sense is lost.'

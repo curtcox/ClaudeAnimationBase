@@ -1,0 +1,62 @@
+# The Hindi site's own words (tools/build_site.mjs's SITE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/site_strings.yaml). {name} is filled in by the builder. Some values are HTML.
+lang: hi
+film_title: मेंढक या एक्सोलोटल
+index_title: 'मेंढक या एक्सोलोटल: कड़ियाँ'
+explained: व्याख्या
+index_intro: >-
+  <p>कर्ट और AI प्रोग्राम Claude के बीच शनिवार की एक सुबह हुई लंबी बातचीत से बनी एक एनिमेटेड फ़िल्म। बातचीत विज्ञान-कथा, दर्शन और AI की ताज़ा ख़बरों के बीच घूमती रहती है, इसलिए यह ऐसे विषयों से भरी है जिन्हें ज़्यादातर लोग नहीं जानते।</p><p>वे सब यहाँ हैं, अध्याय-दर-अध्याय, क्रम से। जहाँ सिर्फ़ एक कड़ी काफ़ी नहीं, वहाँ एक छोटी, आसान व्याख्या है। <strong>पीली चीज़ें व्याख्याएँ हैं।</strong> अगर फ़िल्म में कहीं उलझन हो, तो वहीं से शुरू कीजिए।</p>
+  <p class="note">यह हिंदी संस्करण है। फ़िल्म और यह साइट Claude ने, जान-बूझकर बिना किसी इंसानी जाँच के, अनुवाद की है: <a href="anuvad/">अनुवाद कैसे हुआ, और क्या छूट गया</a>। मूल अंग्रेज़ी साइट <a href="../">curtcox.github.io/axol-f</a> पर है।</p>
+watch_film: ▶ फ़िल्म देखिए
+watch_film_after: ' (उसकी कड़ियाँ साथ-साथ, जैसे-जैसे वे आती हैं)।'
+on_its_way: >-
+  फ़िल्म आ रही है। कड़ियाँ और व्याख्याएँ सब यहीं हैं। इंतज़ार नहीं हो रहा? पूरी फ़िल्म कोड से बनी है, इसलिए आप उसे ख़ुद बना सकते हैं: <a href="{repo}">कोड लीजिए</a> और <code>npm start</code> चलाइए।
+two_conversations: दो बातचीतें
+conversation_shown: वह बातचीत जो फ़िल्म दिखाती है
+conversation_shown_after: ', शब्दशः अनुवाद में (<a href="conversation.txt">पाठ</a>)।'
+# the making-of is in English only, on the English site
+making_of_href: ../making-of/
+conversation_made: वह बातचीत जिससे फ़िल्म बनी
+conversation_made_after: ': कर्ट ने Claude से फ़िल्म बनाने को कहा, और Claude ने जो कुछ किया (अंग्रेज़ी में; <a href="{href}making-of.txt">पाठ</a>)।'
+chapters: अध्याय
+index_notes: >-
+  <p class="note">व्याख्याएँ फ़िल्म के AI, Claude, ने इस साइट के लिए लिखी हैं, और उनकी कड़ियों वाले स्रोतों से मिलाकर जाँची हैं। ज़्यादातर स्रोत अंग्रेज़ी में हैं। फ़िल्म पूरी होने तक समय थोड़े खिसक सकते हैं।</p>
+  <p class="note">इस फ़िल्म का हर दृश्य Claude ने कोड से बनाया है। कर्ट को आधार वाला कोड इसी तरह बनी एक पिछली फ़िल्म, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (उसकी व्याख्या वाली साइट, अंग्रेज़ी में), से मिला।</p>
+  <p class="note">इस साइट का नाम <em>axol-f</em> क्यों? एक्सोलोटल का अंग्रेज़ी नाम axolotl है, जो <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Crazy Frog के "Axel F"</a> से बस एक अक्षर दूर है: मेंढक या एक्सोलोटल।</p>
+going_to: यहाँ जाएँ
+conversation_title: बातचीत
+conversation_crumb: बातचीत
+conversation_intro: >-
+  <p>वह पूरी बातचीत जिससे फ़िल्म बनी, कर्ट और Claude के बीच, शब्दशः, अध्याय-दर-अध्याय, फ़िल्म के अनुवाद में। अंग्रेज़ी मूल <a href="{orig}">claude.ai</a> पर है। इसका <a href="../conversation.txt">पाठ</a> भी है, और <a href="../anuvad/poora-path/">अंग्रेज़ी और हिंदी अगल-बगल</a> पूरी फ़िल्म भी। और <a href="{making_of}">वह बातचीत जिससे फ़िल्म बनी</a> (अंग्रेज़ी में) भी।</p>
+the_original: मूल
+watch_chapter: ▶ यह अध्याय देखिए, कड़ियों के साथ
+chapter: अध्याय
+no_links: इस अध्याय में अभी कोई कड़ी नहीं है।
+in_the_film: फ़िल्म में लगभग
+read_more: और पढ़िए
+play_from_here: फ़िल्म यहाँ से चलाइए
+film_local_final: इस कंप्यूटर पर बना अंतिम संस्करण
+film_local_draft: इस कंप्यूटर पर बना ताज़ा मसौदा
+film_preview: यह एक झलक है; पूरी फ़िल्म YouTube पर आएगी
+this_is: 'यह {what} है।'
+on_its_way_film: >-
+  फ़िल्म आ रही है। इसकी सारी कड़ियाँ यहीं हैं, समय के क्रम में। इंतज़ार नहीं हो रहा? पूरी फ़िल्म कोड से बनी है, इसलिए आप उसे ख़ुद बना सकते हैं: <a href="{repo}">कोड लीजिए</a> और <code>npm start</code> चलाइए।
+watch: देखिए
+the_film: फ़िल्म
+watch_crumb: देखिए
+chapter_links: अध्याय {n} की कड़ियाँ
+highlighted: रंगी हुई कड़ियाँ वे हैं जो इस वक़्त स्क्रीन पर हैं। किसी समय पर क्लिक करके वहाँ पहुँचिए। कड़ियाँ नए टैब में खुलती हैं।
+follow_film: सूची को फ़िल्म के साथ चलाइए
+follow_video: सूची को वीडियो के साथ चलाइए
+badge_explained: व्याख्या
+badge_chat: बातचीत में
+badge_source: स्रोत
+# the head of the transcript the site serves as plain text (conversation.txt), which i18n/tools/stage.mjs writes
+transcript_head: |-
+  # बातचीत का लिखित रूप, हिंदी अनुवाद में
+
+  मूल (अंग्रेज़ी में): https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
+  अनुवाद: Claude, बिना इंसानी जाँच के। अनुवाद कैसे हुआ: https://curtcox.github.io/axol-f/hi/anuvad/
+on_youtube: YouTube पर देखिए
+on_youtube_after: ' (वही फ़िल्म, YouTube की टिप्पणियों और अध्यायों के साथ)।'
+home_alt: '{title}: मुख्य पेज पर लौटिए'

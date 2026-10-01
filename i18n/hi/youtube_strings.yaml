@@ -1,0 +1,26 @@
+# The Hindi upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the Hindi video is up, its id goes in
+# i18n/hi/site.yaml as film: youtube: (the Hindi site then embeds it).
+title: मेंढक या एक्सोलोटल
+cold_open: शुरुआत
+explained: व्याख्या
+head: |
+  कर्ट और AI प्रोग्राम Claude के बीच शनिवार की एक सुबह हुई लंबी बातचीत, लगभग शब्दशः एनिमेशन में, हिंदी अनुवाद के साथ। MAD पत्रिका की *प्लैनेट ऑफ़ द एप्स* वाली पैरोडी से शुरू होकर मेंढकों, एक्सोलोटल, विचार-प्रयोगों से होते हुए जुलाई 2026 की AI एजेंट वाली घटना तक।
+
+  अनुवाद Claude ने किया है, और उसमें जान-बूझकर कोई इंसानी जाँच नहीं रखी गई। अनुवाद कैसे हुआ, और क्या छूट गया: https://curtcox.github.io/axol-f/hi/anuvad/
+  मूल अंग्रेज़ी संस्करण: https://curtcox.github.io/axol-f/
+
+  पूरी बातचीत (हिंदी अनुवाद): {conversation}
+  फ़िल्म की हर कड़ी ({links}), समय के क्रम में, आसान व्याख्याओं के साथ: {site}
+  फ़िल्म बनाने वाला कोड (आप इसे ख़ुद भी बना सकते हैं): {repo}
+
+  अध्याय
+  {chapters}
+foot: |-
+
+  Claude ने कोड से बनाई (p5.js और p5.brush), बातचीत के लिखित रूप से। आवाज़ें, ध्वनि-प्रभाव और संगीत: ElevenLabs।
+  कॉमिक का पन्ना, ग्राफ़ और अलाइनमेंट कंपास टिप्पणी के लिए दोबारा बनाए गए हैं। कोई लोगो नहीं, कैरिकेचर प्यार से बने हैं। उचित उपयोग (फ़ेयर यूज़): टिप्पणी और पैरोडी।
+links_head: "\nकुछ कड़ियाँ, समय के क्रम में (बाक़ी साइट पर)\n"
+tags: AI, Claude, एनिमेशन, AI सुरक्षा, मूल्यांकन, P(doom), कृत्रिम बुद्धि, Hugging Face, मेंढक, एक्सोलोटल, हिंदी
+# the subtitles' speaker names (tools/subtitles.mjs); Claude stays in Latin letters
+subtitle_names: { curt: कर्ट }

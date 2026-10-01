@@ -118,7 +118,7 @@ the same voices.
 - **Works:** Hollywood films and English books are known in India by their English titles, so they're spelled as they
   sound, in Devanagari (*प्लैनेट ऑफ़ द एप्स*), with a Hindi gloss where one helps. Papers, articles and sites keep
   their own titles.
-- **Punctuation and numbers:** the danda (।) ends a sentence; commas, ? and ! as in English; “ ” for quotations.
+- **Punctuation and numbers:** the danda (।) ends a sentence; commas, ?, ! and quotation marks as in English.
   Numbers in international digits, as Hindi newspapers print them, in Indian grouping where it's natural (17 हज़ार,
   12.5 लाख).
 - **Apes:** *ape* is बंदर throughout, the everyday word (वानर is literary; वनमानुष is a zoologist's), as Japanese
@@ -241,6 +241,22 @@ The tools, run from the project's root:
 - [ ] Curt confirms the conventions above (or changes them); a Japanese-reading reviewer, if one turns up.
 - [ ] Voice it: ElevenLabs' eleven_v3 speaks Japanese; names and acronyms are respelled in katakana
       (`i18n/ja/pronounce.yaml`). Then drafts, then the final on the faster Mac.
+
+### Hindi
+
+- [x] The engine's hooks, in the translation's own files: Kohinoor Devanagari for the hand-lettering fonts
+      (`i18n/hi/studio.css`), loaded before the first frame like the Japanese glyphs; labels wider than their English
+      fitted as Japanese ones are; captions and subtitles end a sentence at the danda (।), and a subtitle row never
+      starts with a postposition (में, का, है…). English captions and subtitles unchanged (2026-10-01).
+- [x] The transcript (453 lines, every anchor), the cold open, the chapter titles, the lettering (406 strings), the
+      codes' captions (409; Hindi Wikipedia for 39 of 202), both thumbnails, the 64 explainers (Wikipedia links moved
+      to Hindi for 70, marked "(अंग्रेज़ी में)" for 237), the site's words, the YouTube words, the translation's page
+      (`i18n/hi/translation.yaml`, at `/hi/anuvad/`). No italics on the Hindi site (Devanagari has none to borrow).
+- [x] Claude never takes a gender: every line was built for it and checked by a scan for gendered verbs about Claude,
+      in the transcript and the explainers; each place it cost something is a note on the translation's page.
+- [ ] Curt confirms the conventions above (or changes them); a Hindi-reading reviewer, if one turns up.
+- [ ] Voice it: eleven_v3 speaks Hindi; Latin names and acronyms are respelled in Devanagari (`i18n/hi/pronounce.yaml`).
+      Then drafts, then the final on the faster Mac.
 
 ## Costs
 

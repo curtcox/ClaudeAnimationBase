@@ -36,7 +36,10 @@ const cjkWords = s => {
   }
   return out;
 };
-const tokensOf = s => CJK ? cjkWords(s) : s.split(' ');
+// Hindi: a postposition or auxiliary (में, का, है, था…) stays with the word before it, so no row starts with one
+const HI = /^hi\b/.test(LANG), CLITIC = /^(में|का|की|के|को|से|पर|ने|तक|है|हैं|था|थी|थे|हो|हूँ|भी|ही|नहीं)[,।?!:;"”)]*$/u;
+const hiWords = s => s.split(' ').reduce((out, w) => (out.length && CLITIC.test(w) ? out[out.length - 1] += ' ' + w : out.push(w), out), []);
+const tokensOf = s => CJK ? cjkWords(s) : HI ? hiWords(s) : s.split(' ');
 const len = CJK ? s => [...s].reduce((a, c) => a + (c.codePointAt(0) < 0x2e80 ? .5 : 1), 0) : s => s.length;
 const tidy = CJK ? s => s.trim() : s => s;
 
