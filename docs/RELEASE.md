@@ -40,8 +40,9 @@ renders (many hours), and `--no-open` skips opening the browser.
 | on YouTube | the film, embedded on the published site | upload time | by hand (§5) |
 
 **What the site's film page plays.** Built on this computer, it plays the newest local cut (`out/film/film.mp4`).
-Published, it plays the first of these that's set in [script/site.yaml](../script/site.yaml):
-- `film.youtube`: YouTube's player, from its privacy-enhanced domain.
+Published, it plays the first of these that's set in [script/site.yaml](../script/site.yaml)
+(`node tools/build_site.mjs --published` builds it that way here, to check):
+- `film.youtube`: YouTube's player, from its privacy-enhanced domain. Now [9CbRUTpuWpA](https://www.youtube.com/watch?v=9CbRUTpuWpA).
 - `film.preview`: a video file, such as the preview on the repo's releases page.
 - Neither set: the page says the film is on its way and how to make it from the repo.
 

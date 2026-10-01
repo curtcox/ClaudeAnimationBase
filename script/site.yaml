@@ -6,6 +6,6 @@ notes: n/          # an explainer lives at base + notes + id + '/'
 # The film, on the site (tools/build_site.mjs). Built on this computer, the site plays the newest local cut
 # (out/film/film.mp4, from npm run film). Published, it plays the first of these that's set:
 film:
-  youtube:           # the video's id (the part after v=) once it's on YouTube: the site embeds YouTube's player
+  youtube: 9CbRUTpuWpA   # the video's id (the part after v=): https://www.youtube.com/watch?v=9CbRUTpuWpA, published 2026-09-30
   preview:           # until then, a video file's address, e.g. a cut on the repo's releases page (tools/publish_preview.mjs)
   repo: https://github.com/curtcox/axol-f   # neither set: the site says the film is on its way, and how to make it from here

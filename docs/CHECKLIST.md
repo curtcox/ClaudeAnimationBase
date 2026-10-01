@@ -21,9 +21,9 @@ http://localhost:8077/review/ (`npm run review` lists them).
 ## After the final render
 - [ ] Curt: a full watch-through of the final cut.
 - [ ] Curt: scan a few codes with a phone, off a real screen.
-- [ ] Upload (docs/RELEASE.md §5): the film, the title, description and tags from `out/film/youtube.md`, and
+- [x] Upload (docs/RELEASE.md §5): the film, the title, description and tags from `out/film/youtube.md`, and
       `docs/thumbnail.jpg`. Then put the video's id in `script/site.yaml` as `film: youtube:` and push; the site
-      embeds it.
+      embeds it. Published 2026-09-30: https://www.youtube.com/watch?v=9CbRUTpuWpA
 
 ## Done
 - A final candidate (2026-09-30, 16:51): `out/film/film.mp4`, 1:17:28, 1080p, 24 fps, 2.7 GB, −14.2 LUFS, peaks at

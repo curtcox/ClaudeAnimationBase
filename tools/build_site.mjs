@@ -1,7 +1,7 @@
 // build_site.mjs: the companion site. Every link in the film, by chapter and moment, and the plain-language explainers
 // (site/notes/*.md) for the moments that need more than a link. Plain HTML, big type, no scripts: for anyone.
-//   node tools/build_site.mjs [--check]     → site/public/, and script/notes_refs.yaml (each explainer as a QR reference)
-// --check also fetches every link the explainers cite. The address the site lives at is script/site.yaml's `base`.
+//   node tools/build_site.mjs [--check] [--published]     → site/public/, and script/notes_refs.yaml (each explainer as a QR reference)
+// --check also fetches every link the explainers cite. --published builds it as GitHub Pages does, without the local cut. The address the site lives at is script/site.yaml's `base`.
 // The film page (film/) plays the whole film with every link in step: the local cut if there is one (out/film/, from
 // tools/assemble.mjs), else site.yaml's film.youtube, else its film.preview; with none, it says the film is on its way.
 // The published site is built by .github/workflows/pages.yml on every push to main, from a clean checkout (so no out/).
@@ -40,12 +40,14 @@ const stamp = s => `${Math.floor(s / 60)}:${pad(Math.floor(s % 60))}`;
 const lineTime = new Map(); CH.forEach((c, i) => c.lines.forEach(l => lineTime.set(l.id, offset[i] + l.t0)));
 
 // ---- the film: which one the site plays, and where each chapter starts in it ----
-const local = existsSync('out/film/film.json') && existsSync('out/film/film.mp4') ? JSON.parse(readFileSync('out/film/film.json', 'utf8')) : null;
+const local = !args.published && existsSync('out/film/film.json') && existsSync('out/film/film.mp4') ? JSON.parse(readFileSync('out/film/film.json', 'utf8')) : null;
 const filmCfg = site.film || {};
 const FILM = local ? { kind: 'file', src: 'film.mp4', what: local.final ? T.film_local_final : T.film_local_draft }
   : filmCfg.youtube ? { kind: 'youtube', id: String(filmCfg.youtube) }
   : filmCfg.preview ? { kind: 'file', src: filmCfg.preview, what: T.film_preview } : null;
 const startOf = i => local ? local.chapters[i].start : offset[i];
+// the film on YouTube itself, from time t
+const ytUrl = t => `https://www.youtube.com/watch?v=${FILM.id}${t >= 1 ? `&t=${Math.floor(t)}s` : ''}`;
 const filmLink = (t, depth) => FILM ? `${'../'.repeat(depth)}film/#t=${Math.floor(t)}` : null;
 const when = (t, depth) => FILM ? `<a href="${filmLink(t, depth)}" title="${esc(T.play_from_here)}">▶ ${stamp(t)}</a>` : stamp(t);
 
@@ -73,7 +75,7 @@ mkdirSync(OUT, { recursive: true });
 writeFileSync(`${OUT}/style.css`, CSS);
 write(`${OUT}/index.html`, page(T.index_title, `<h1>${esc(T.film_title)}</h1>
 ${T.index_intro}
-${FILM ? `<p class="explainer" style="padding:.6rem 1rem"><a href="film/"><strong>${T.watch_film}</strong></a>${T.watch_film_after}</p>`
+${FILM ? `<p class="explainer" style="padding:.6rem 1rem"><a href="film/"><strong>${T.watch_film}</strong></a>${T.watch_film_after}</p>${FILM.kind === 'youtube' ? `<p><a href="${esc(ytUrl(0))}">${T.on_youtube}</a>${T.on_youtube_after}</p>` : ''}`
   : `<p class="note">${fill(T.on_its_way, { repo: esc(filmCfg.repo || '') })}</p>`}
 <h2>${T.two_conversations}</h2><ul>
 <li><a href="conversation/"><strong>${T.conversation_shown}</strong></a>${T.conversation_shown_after}</li>
@@ -160,8 +162,8 @@ chapters.forEach((c, i) => {
     items.push(`<div class="moment"><div class="when">${when(inFilm(i, l.id), 1)} · ${l.speaker === 'curt' ? 'Curt' : 'Claude'}</div>
 <blockquote>${esc(quote)}</blockquote><ul>${here.map(r => r.explains ? `<li class="explainer"><a href="../${site.notes}${r.explains.id}/">${T.explained}: ${esc(r.explains.title)}</a></li>` : r.host ? `<li><a href="../${r.host}">${esc(r.caption)}</a> (<a href="${esc(r.url)}">${T.the_original}</a>)</li>` : `<li><a href="${esc(r.url)}">${esc(r.caption)}</a></li>`).join('')}</ul></div>`);
   }
-  const watch = existsSync(`out/watch/ch${pad(c.n)}.json`) ? `<p><a href="../watch/ch${pad(c.n)}.html">${T.watch_chapter}</a></p>` : '';
-  write(`${OUT}/ch${pad(c.n)}/index.html`, page(`${c.n}. ${c.title}`, `<p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.chapter} ${c.n}</p><h1>${c.n}. ${esc(c.title)}</h1>${watch}
+  const watch = !args.published && existsSync(`out/watch/ch${pad(c.n)}.json`) ? `<p><a href="../watch/ch${pad(c.n)}.html">${T.watch_chapter}</a></p>` : '';
+  write(`${OUT}/ch${pad(c.n)}/index.html`, page(`${c.n}. ${c.title}`, `<p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.chapter} ${c.n}</p><h1>${c.n}. ${esc(c.title)}</h1>${FILM ? `<div class="when">${when(startOf(i), 1)}</div>` : ''}${watch}
 ${items.join('\n') || `<p>${T.no_links}</p>`}`, 1));
 });
 for (const n of notes) {
@@ -174,7 +176,7 @@ ${marked.parse(n.body)}<h2>${T.read_more}</h2><ul>${links.map(k => `<li><a href=
 // ---- watch pages: a chapter's video with its links in step (out/watch/chNN.json, from tools/watch.mjs) ----
 const watched = [];
 for (const c of chapters) {
-  const f = `out/watch/ch${pad(c.n)}.json`; if (!existsSync(f)) continue;
+  const f = `out/watch/ch${pad(c.n)}.json`; if (args.published || !existsSync(f)) continue;
   const { video, times, shots = [] } = JSON.parse(readFileSync(f, 'utf8')), ch = CH[chapters.indexOf(c)];
   if (!existsSync(video)) continue;
   mkdirSync(`${OUT}/watch`, { recursive: true }); clone(video, `${OUT}/watch/ch${pad(c.n)}.mp4`);
@@ -207,47 +209,69 @@ console.log(`${notes.length} explainers, ${chapters.length} chapter pages${watch
 
 function filmPage(items, lines) {
   const chs = chapters.map((c, i) => `<li><a href="#t=${Math.floor(startOf(i))}" data-t="${startOf(i)}">${c.n}. ${esc(c.title)}</a> <span class="when">${stamp(startOf(i))}</span></li>`).join('');
+  const yt = FILM && FILM.kind === 'youtube', embed = yt ? `https://www.youtube-nocookie.com/embed/${FILM.id}?enablejsapi=1&rel=0&playsinline=1` : '';
   const player = !FILM ? `<p class="note">${fill(T.on_its_way_film, { repo: esc(filmCfg.repo || '') })}</p>`
-    : FILM.kind === 'youtube' ? `<div id="stage"><div id="yt"></div></div>` : `<div id="stage"><video id="v" src="${esc(FILM.src)}" controls preload="metadata"></video></div><p class="small">${esc(fill(T.this_is, { what: FILM.what }))}</p>`;
+    : yt ? `<div id="pin"><iframe id="yt" src="${esc(embed)}" title="${esc(T.film_title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe><div id="line"></div></div>
+<p class="small"><a id="onyt" href="${esc(ytUrl(0))}" target="_blank" rel="noopener">${T.on_youtube}</a>${T.on_youtube_after}</p>`
+    : `<div id="pin"><video id="v" src="${esc(FILM.src)}" controls preload="metadata"></video><div id="line"></div></div><p class="small">${esc(fill(T.this_is, { what: FILM.what }))}</p>`;
   return `<!doctype html><html lang="${T.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(T.watch)}: ${esc(T.film_title)}</title><link rel="stylesheet" href="../style.css"><style>
 body{font-size:17px}main{max-width:none;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:1.2rem;padding:1rem}
-video,#stage iframe{width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:10px;background:#000}#line{min-height:5.5em;margin-top:.6rem;font-size:1.05rem}#line b{font:600 .8rem system-ui;letter-spacing:.05em}
-#list{max-height:calc(100vh - 2rem);overflow:auto;position:sticky;top:1rem}.it{display:flex;gap:.6rem;padding:.45rem .6rem;border-radius:8px;margin:.15rem 0;border:1px solid transparent}
-.it.on{background:#FFF1CE;border-color:#E3C28A}.it.explainer a{font-weight:600}.t{font:600 .8rem system-ui;color:#6A6470;cursor:pointer;min-width:3.6em;padding-top:.2em}
+video,#pin iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;border-radius:10px;background:#000}#line{min-height:5.5em;margin-top:.6rem;font-size:1.05rem}#line b{font:600 .8rem system-ui;letter-spacing:.05em}
+#list{max-height:calc(100vh - 2rem);overflow:auto;position:sticky;top:1rem}.it{display:flex;gap:.6rem;padding:.45rem .6rem;border-radius:8px;margin:.15rem 0;border:1px solid transparent;scroll-margin-top:calc(var(--pin-h,0px) + .5rem)}
+.it.on{background:#FFF1CE;border-color:#E3C28A}.it.explainer a{font-weight:600}a.t{font:600 .8rem system-ui;color:#6A6470;text-decoration:none;min-width:3.6em;padding-top:.2em}a.t:hover{color:#8A3A22;text-decoration:underline}
 .badge{font:600 .7rem system-ui;color:#fff;background:#8A3A22;border-radius:4px;padding:0 .3em;margin-left:.3em}.badge.src{background:#6A6470}.badge.tr{background:#3A6FC9}
-.chs{columns:2;font-size:.95rem}.small{font:.8rem system-ui;color:#6A6470}@media (max-width:900px){main{grid-template-columns:1fr}#list{position:static;max-height:none}.chs{columns:1}}</style></head><body><main>
-<div><p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.the_film}</p><h1 style="margin-top:0">${esc(T.film_title)}</h1>
-${player}<div id="line"></div>
-<p class="note">${T.highlighted} <label><input type="checkbox" id="follow" checked> ${T.follow_film}</label></p>
-<h2>${T.chapters}</h2><ol class="chs" start="0">${chs}</ol></div>
-<div id="list">${items.map(x => `<div class="it${x.explainer ? ' explainer' : ''}"><span class="t" data-t="${x.t0}">${stamp(x.t0)}</span><span><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${x.explainer ? `<span class="badge">${T.badge_explained}</span>` : x.origin === 'transcript' ? `<span class="badge tr">${T.badge_chat}</span>` : `<span class="badge src">${T.badge_source}</span>`}</span></div>`).join('')}</div>
+.chs{columns:2;font-size:.95rem}.small{font:.8rem system-ui;color:#6A6470}
+@media (max-width:900px){main{grid-template-columns:1fr}#left{display:contents}#list{position:static;max-height:none;order:1}.chs{columns:1}
+#pin{position:sticky;top:0;z-index:2;background:#FBF8F0;margin:0 -1rem;padding:.4rem 1rem .3rem;box-shadow:0 6px 8px -6px rgba(0,0,0,.25)}#line{min-height:3.2em;font-size:.9rem;margin-top:.3rem}#rest{order:2}}</style></head><body><main>
+<div id="left"><div><p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.the_film}</p><h1 style="margin-top:0">${esc(T.film_title)}</h1></div>
+${player}
+<div id="rest"><p class="note">${T.highlighted} <label><input type="checkbox" id="follow" checked> ${T.follow_film}</label></p>
+<h2>${T.chapters}</h2><ol class="chs" start="0">${chs}</ol></div></div>
+<div id="list">${items.map(x => `<div class="it${x.explainer ? ' explainer' : ''}"><a class="t" href="#t=${Math.floor(x.t0)}" data-t="${x.t0}" title="${esc(T.play_from_here)}">${stamp(x.t0)}</a><span><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>${x.explainer ? `<span class="badge">${T.badge_explained}</span>` : x.origin === 'transcript' ? `<span class="badge tr">${T.badge_chat}</span>` : `<span class="badge src">${T.badge_source}</span>`}</span></div>`).join('')}</div>
 </main><script>
 const items = ${JSON.stringify(items.map(x => ({ t0: +x.t0.toFixed(2), t1: +x.t1.toFixed(2) })))}, lines = ${JSON.stringify(lines.filter(l => l.spoken).map(l => ({ t0: +l.t0.toFixed(2), t1: +l.t1.toFixed(2), who: l.who, text: l.text })))};
 const rows = [...document.querySelectorAll('.it')], line = document.getElementById('line'), follow = document.getElementById('follow');
+const pin = document.getElementById('pin'), onyt = document.getElementById('onyt'), YT_WATCH = ${JSON.stringify(yt ? `https://www.youtube.com/watch?v=${FILM.id}` : '')};
 const hashT = () => { const t = new URLSearchParams(location.hash.slice(1)).get('t'); return t == null ? null : +t; };
-let now = () => 0, seek = () => {}, last = null;
-document.querySelectorAll('[data-t]').forEach(el => el.onclick = e => { e.preventDefault(); seek(+el.dataset.t); });
+let now = () => 0, seek = () => {}, playing = false, last = null, shown = -1;
+// a time (in the list, or a chapter) plays the film from there, and the address keeps it, to share or come back to
+document.querySelectorAll('[data-t]').forEach(el => el.onclick = e => { e.preventDefault(); history.replaceState(null, '', '#t=' + Math.floor(+el.dataset.t)); follow.checked = true; last = null; seek(+el.dataset.t); });
 window.addEventListener('hashchange', () => { const t = hashT(); if (t != null) seek(t); });
+// scrolling the list yourself while the film plays stops the list following it, so it doesn't pull you back
+const mine = e => { if (playing && follow.checked && !(pin && pin.contains(e.target))) follow.checked = false; };
+addEventListener('wheel', mine, { passive: true }); addEventListener('touchmove', mine, { passive: true });
+follow.onchange = () => { last = null; };
+// on a phone the player stays pinned at the top; the list scrolls beneath it
+if (pin) new ResizeObserver(() => document.documentElement.style.setProperty('--pin-h', getComputedStyle(pin).position === 'sticky' ? pin.offsetHeight + 'px' : '0px')).observe(pin);
 function tick() {
   const t = now(); let first = null;
   rows.forEach((r, i) => { const on = t >= items[i].t0 && t <= items[i].t1; r.classList.toggle('on', on); if (on && !first) first = r; });
-  const l = lines.find(l => t >= l.t0 && t < l.t1);
-  line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : l.who === 'claude' ? 'CLAUDE' : l.who.toUpperCase()) + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '';
-  if (first && follow.checked && first !== last) { first.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); last = first; }
+  const i = lines.findIndex(l => t >= l.t0 && t < l.t1), l = lines[i];
+  if (i !== shown) { shown = i; line.innerHTML = l ? '<b>' + (l.who === 'curt' ? 'CURT' : l.who === 'claude' ? 'CLAUDE' : l.who.toUpperCase()) + '</b><br>' + l.text.replace(/&/g, '&amp;').replace(/</g, '&lt;') : ''; }
+  if (first && follow.checked && first !== last) { first.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); last = first; }
+  if (onyt) onyt.href = YT_WATCH + (t >= 1 ? '&t=' + Math.floor(t) + 's' : '');
   requestAnimationFrame(tick);
 }
 const v = document.getElementById('v'), yt = document.getElementById('yt');
 if (v) {
   now = () => v.currentTime; seek = t => { v.currentTime = t; v.play(); };
+  v.addEventListener('play', () => playing = true); v.addEventListener('pause', () => playing = false);
   v.addEventListener('loadedmetadata', () => { const t = hashT(); if (t != null) v.currentTime = t; }, { once: true });
   tick();
 } else if (yt) {
-  // YouTube's player, from its privacy-enhanced domain; the IFrame API reports the time, so the list can follow
-  window.onYouTubeIframeAPIReady = () => { const p = new YT.Player('yt', { host: 'https://www.youtube-nocookie.com', videoId: ${JSON.stringify(FILM && FILM.id || '')},
-    playerVars: { rel: 0, playsinline: 1, start: Math.floor(hashT() || 0) },
-    events: { onReady: () => { now = () => p.getCurrentTime() || 0; seek = t => { p.seekTo(t, true); p.playVideo(); }; tick(); } } }); };
+  // YouTube's player, from its privacy-enhanced domain. The IFrame API reports the time, so the list can follow; until
+  // it's ready (or if something blocks it), a time reloads the player there instead.
+  const EMBED = ${JSON.stringify(embed)}, at = (t, go) => EMBED + (t >= 1 ? '&start=' + Math.floor(t) : '') + (go ? '&autoplay=1' : '');
+  if (hashT() != null) yt.src = at(hashT(), false);
+  seek = t => { yt.src = at(t, true); };
+  window.onYouTubeIframeAPIReady = () => { const p = new YT.Player('yt', { events: {
+    onReady: () => { now = () => p.getCurrentTime() || 0;
+      // a player not yet started plays from its start= however it's seeked, so it loads the film afresh at t instead
+      seek = t => { if ([-1, 5].includes(p.getPlayerState())) p.loadVideoById({ videoId: ${JSON.stringify(yt ? FILM.id : '')}, startSeconds: t }); else { p.seekTo(t, true); p.playVideo(); } }; },
+    onStateChange: e => { playing = e.data === YT.PlayerState.PLAYING; } } }); };
   const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.head.append(s);
+  tick();
 }
 </script></body></html>
 `;
@@ -428,7 +452,7 @@ entirely by code, so you can make it yourself: <a href="{repo}">get the code</a>
     conversation_made_after: ': Curt asking Claude to make it, and everything Claude did (<a href="{href}making-of.txt">plain text</a>).',
     chapters: 'Chapters',
     index_notes: `<p class="note">The explanations were written by Claude, the AI in the film, for this site, and checked against the linked
-sources. Times may still shift a little before the film is finished.</p>
+sources.</p>
 <p class="note">The film is drawn in code, by Claude. Curt found the code it's built on through an earlier film made
 the same way, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (that's its explainer site).</p>
 <p class="note">Why is this site called <em>axol-f</em>? An axolotl, one letter away from
@@ -449,5 +473,6 @@ by code, so you can make it yourself: <a href="{repo}">get the code</a> and run 
     highlighted: 'Highlighted links are on screen now. Click a time to jump there; links open in a new tab.',
     follow_film: 'keep the list following the film', follow_video: 'keep the list following the video',
     badge_explained: 'explained', badge_chat: 'in the chat', badge_source: 'source',
+    on_youtube: 'Watch on YouTube', on_youtube_after: ' (the same film, with YouTube\'s comments and chapters).',
   };
 }

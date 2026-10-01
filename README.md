@@ -8,6 +8,9 @@ every link it mentions is a QR code on screen, pointing at the companion site: h
 
 ## See it
 
+Watch it on YouTube: https://www.youtube.com/watch?v=9CbRUTpuWpA, or [on the site](https://curtcox.github.io/axol-f/film/),
+with every link beside the film as it comes up. Or make it yourself:
+
 ```bash
 npm start
 ```

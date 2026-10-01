@@ -77,3 +77,5 @@ transcript_head: |-
 
   Original (en inglés): https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
   Traducción: Claude, sin revisión humana. Cómo se tradujo: https://curtcox.github.io/axol-f/es/traduccion/
+on_youtube: Ver en YouTube
+on_youtube_after: ' (la misma película, con los comentarios y capítulos de YouTube).'
