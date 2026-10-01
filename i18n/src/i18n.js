@@ -42,7 +42,9 @@
   // a key "NN|text" is text's translation in chapter NN only (the same English word can need two translations)
   const tr = k => { const n = window.CHAPTER?.n, own = n == null ? undefined : I.strings[`${String(n).padStart(2, '0')}|${k}`]; return own ?? I.strings[k]; };
   // Japanese glyphs run wider than the English letters a scene was laid out for: a translation wider than its English
-  // (by a tenth) is squeezed to that width, down to 62%, so it stays on its card or sign
+  // (by a tenth), or than the width the scene allows it (o.maxW), is fitted to that width half by a smaller size and
+  // half by condensing (each the square root of the whole), since Japanese reads well a little condensed but not
+  // squashed flat
   let MCTX = null;
   const widthIn = (s, font) => { MCTX ||= document.createElement('canvas').getContext('2d'); MCTX.font = font; return MCTX.measureText(s).width; };
   const letter0 = window.letter;
@@ -50,9 +52,14 @@
     if (typeof txt === 'string') {
       const k = txt.trim(), t = tr(k);
       if (t != null) {
-        if (I.cjk && o.maxW == null && t !== k) {
+        if (I.cjk && t !== k) {
           const font = o.font || `${size}px "Permanent Marker", "Comic Sans MS", cursive`, en = widthIn(k, font), w = widthIn(t, font);
-          if (w > en * 1.1) o = { ...o, maxW: Math.max(en * 1.1, w * .62) * (CAM && !o.screen ? CAM.zoom : 1) };
+          const limit = o.maxW ?? (w > en * 1.1 ? en * 1.1 : null);
+          if (limit && w > limit) {
+            const s = Math.sqrt(limit / w), zoom = o.maxW == null && CAM && !o.screen ? CAM.zoom : 1;
+            size *= s;
+            o = { ...o, maxW: limit * zoom, ...(o.font ? { font: o.font.replace(/(\d+(\.\d+)?)px/, (m, v) => (v * s) + 'px') } : {}) };
+          }
         }
         txt = txt.replace(k, t);
       }

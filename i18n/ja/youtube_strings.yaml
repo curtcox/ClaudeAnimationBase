@@ -1,0 +1,24 @@
+# The Japanese upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the Japanese video is up, its id goes in
+# i18n/ja/site.yaml as film: youtube: (the Japanese site then embeds it).
+title: カエルか、ウーパールーパーか
+cold_open: オープニング
+explained: 解説
+head: |
+  カートと、AIプログラムのClaudeとが交わした、土曜の朝の長い会話を、ほぼ一字一句そのままアニメーションにして、日本語に訳した映画です。MAD誌の『猿の惑星』パロディから始まり、カエル、ウーパールーパー、思考実験、そして2026年7月のAIエージェント事件まで。
+
+  翻訳はClaudeによるもので、人の校閲はわざと入れていません。どう翻訳したか、何が失われたか：https://curtcox.github.io/axol-f/ja/honyaku/
+  英語の元の版：https://curtcox.github.io/axol-f/
+
+  会話の全文（日本語訳）：{conversation}
+  映画のすべてのリンク（{links}）を時刻順に、わかりやすい解説つきで：{site}
+  映画を描くコード（自分で作ることもできます）：{repo}
+
+  章
+  {chapters}
+foot: |-
+
+  Claudeがコードで描きました（p5.jsとp5.brush）。もとは会話の書き起こしです。声、効果音、音楽：ElevenLabs。
+  マンガのページ、グラフ、アライメントのコンパスは、論評のために描き直したものです。ロゴはなく、似顔絵は愛情をこめたものです。フェアユース：論評とパロディ。
+links_head: "\nリンクの一部を時刻順に（残りはサイトに）\n"
+tags: AI, Claude, アニメーション, AI安全性, 評価, P(doom), 人工知能, Hugging Face, カエル, ウーパールーパー, 日本語
