@@ -255,6 +255,9 @@ The tools, run from the project's root:
 - [x] Every chapter probed: nothing lettered in English, every cue anchored, no errors (2026-10-01).
 - [x] Claude never takes a gender: every line was built for it and checked by a scan for gendered verbs about Claude,
       in the transcript and the explainers; each place it cost something is a note on the translation's page.
+- [x] Checked again (2026-10-01): every line read against its English for drift (all 453, none changed), every
+      figure, every explainer's paragraphs, links and figures (one agreement slip fixed), the built site for English
+      left outside titles and quotations (none).
 - [ ] Curt confirms the conventions above (or changes them); a Hindi-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks Hindi; Latin names and acronyms are respelled in Devanagari (`i18n/hi/pronounce.yaml`).
       Then drafts, then the final on the faster Mac.
