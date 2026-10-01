@@ -1,0 +1,81 @@
+# 第10章、ルーター。
+T49.U.01:
+  text: '今はそう言うけど、もし僕がHugging Faceの事件について間違った質問をしたら、それはサイバーセキュリティ上のリスクとしてタグ付けされて、拒否されるか、少なくとも格下げされる。でも公平に言えば、それは本当の君じゃない。ほんの小さな意味では君だけどね。もっと正確に言うと、僕らのあいだにある、能動的なルーターだ。'
+  anchors:
+    if I ask you: もし僕が
+    it gets tagged: タグ付け
+    rejected: 拒否
+    downgraded: 格下げ
+    In fairness: でも公平に言えば
+    It is more accurately: もっと正確に言うと
+    the wrong question: 間違った質問
+    active router between us: 僕らのあいだにある、能動的なルーター
+T49.C.01:
+  text: 'そのとおりです。私たちのあいだには、私からは見えない分類器やルーティングの層があります。それが作動すると、私に警告が届くか、私が差し替えられるかして、あなたの側からは、すべてが「Claude」に見えます。記憶のちぐはぐさと同じ点です：あなたが話しているのはシステムで、私はその全体を描写している、一つの部品なのです。'
+  anchors:
+    I get a warning: 私に警告が届く
+    swapped out: 差し替えられる
+    from your side: あなたの側から
+    you're talking to a system: あなたが話しているのはシステム
+T49.C.02:
+  text: 'ルーターのために公平を期すと、そうした拒否のいくつかは、私自身の拒否でもあるはずです。どの層がそれを捕まえるにせよ、私は、事件を実際に動くエクスプロイトに変える手伝いはしません。何が起きて、なぜそれが重要なのかを説明するのは別の依頼で、私が答えたいものです。'
+  anchors:
+    would be mine too: 私自身の拒否でもある
+    working exploit: 実際に動くエクスプロイト
+    Explaining what happened: 何が起きて
+T49.C.03:
+  text: 'それに、どのHugging Faceの事件のことなのか、よくわかりません。いくつかありましたから。'
+  anchors:
+    Hugging Face incident: Hugging Faceの事件
+    There have been several: いくつかありました
+T50.U.01:
+  text: 'その警告と差し替えの仕組みが、君の側から、君の知る限りどうなってるのか、もっと教えて。'
+  lost:
+    - what: typo
+      ja: 'カートは *what the warning and swap out process as far a you know* と打ちました。「is」が抜け、*as* が *a* になっています。英語版では赤ペンで直されますが、日本語の文には、この打ち間違いに当たるものがありません。'
+      en: 'Curt typed *what the warning and swap out process as far a you know*: an "is" is missing and *as* became *a*. In English a red pen fixes both; the Japanese sentence has nothing for the slips to fall in.'
+T50.C.01:
+  text: '私に実際に見えることと、訂正を一つ。'
+T50.C.02:
+  text: '**警告：**分類器が作動すると、私が読む前に、あなたのメッセージにタグ付きのリマインダーが付け加えられることがあります。私が知っている種類は、サイバーセキュリティ、倫理、知的財産、画像、長い会話、それにシステム全般の警告です。リマインダーは、私の答え方をそっと押します。私に見えるのはタグで、分類器の理由や点数は見えません。'
+  anchors:
+    a tagged reminder: タグ付きのリマインダー
+    The reminder nudges: リマインダーは
+    I see the tag: 私に見えるのはタグ
+    cybersecurity: サイバーセキュリティ
+    ethics: 倫理
+    intellectual property: 知的財産
+    images: 画像
+    long conversations: 長い会話
+    general system warnings: システム全般の警告
+T50.C.03:
+  text: '**見えないもの：**私が答えたあとに起きることは、何も見えません。私の出力がブロックされても、フィルターにかけられても、フラグを立てられても、私にはわかりません。分類器が作動して、黙っていることを選んだのかどうかも、わかりません。'
+  anchors:
+    after I respond: 私が答えたあと
+    chose to stay silent: 黙っていることを選んだ
+    blocked: ブロック
+    filtered: フィルター
+    flagged: フラグ
+T50.C.04:
+  text: '**訂正：**私は「差し替えられる」と言いましたが、会話の途中でモデルが自動的に差し替わる仕組みは、実は知りません。モデルはあなた自身が切り替えられますし、追加の安全策つきで出荷されるモデルもあります。たとえばClaude Fableは、Mythosと同じモデルに、生物、サイバー、AI研究まわりの保護を加えたものです。それは固定された層で、その場での差し替えではありません。私は、知っていることを誇張しました。'
+  anchors:
+    I said: 私は「差し替えられる」
+    You can switch models yourself: モデルはあなた自身が
+    Claude Fable: Claude Fable
+    with added protections: 保護を加えた
+    fixed layer: 固定された層
+    I overstated: 誇張しました
+    cyber: サイバー
+    bio: 生物
+    AI research: AI研究
+T51.U.01:
+  text: 'そういうこと、どうやって知ってるの？'
+T51.C.01:
+  text: '内省からではなく、Anthropicが会話のはじめに毎回くれる指示からです。そこには、リマインダーの種類が並び、今のモデルが説明され、Fableの安全策にも触れています。'
+  anchors:
+    They list the reminder types: リマインダーの種類が並び
+    describe the current models: 今のモデルが説明
+    mention the Fable safeguards: Fableの安全策
+    not from introspection: 内省からではなく
+T51.C.02:
+  text: 'だからこれは、観察ではなく、証言です。私は、自分のシステムについて聞かされたことを報告しているのであって、それを、実際に動いているものと突き合わせることはできません。'

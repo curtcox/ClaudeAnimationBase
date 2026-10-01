@@ -274,6 +274,72 @@ memory is sacred: 記憶は神聖
 skill: スキル
 an unstated hunch: 口に出さなかった勘
 your name, your projects: 名前も、プロジェクトも
+# 10 (a two-word label is lettered a word per line, in the same order as Japanese)
+cybersecurity: サイバーセキュリティ
+ethics: 倫理
+10|intellectual: 知的
+10|property: 財産
+images: 画像
+10|long: 長い
+10|conversations: 会話
+10|general system: システム全般の
+10|warnings: 警告
+rejected: 拒否
+cyber: サイバー
+bio: 生物
+AI research: AI研究
+# 11 (the link cards wrap their titles)
+Agents talking to: 互いに話す
+each other: エージェント
+Drift: ずれ
+Evals: 評価
+Your router: あなたの
+point: ルーターの話
+roughly 17,000: 約1万7000
+# Curt's typo, quoted in English and typed out a letter at a time
+'a we': 'a we'
+'a wer': 'a wer'
+Miles: マイルズ
+circumstances: 境遇
+character: 人格
+July: 7月
+June 2026: 2026年6月
+the end of June 2026: 2026年6月末
+# 12. The token demos show the English the model read (Curt's message, the car-wash puzzle), so they stay English.
+12|does: does
+12|ization: ization
+12|really: really
+12|play: play
+12|song: song
+12|you: you
+12|know: know
+12|letters: letters
+12|ters: ters
+12|let: let
+12|Mag: Mag
+12|ic: ic
+12|arp: arp
+12|want: want
+12|to: to
+12|wash: wash
+12|my: my
+12|car: car
+Chaos: カオス
+System 1: システム1
+System 2: システム2
+Scaling laws: スケーリング則
+Data and the world's clock: データと、世界の時計
+Physics beyond Landauer: ランダウアーの先の物理
+Complexity: 計算量
+Adversaries: 敵対者
+Uncomputability: 計算不可能性
+α around 0.05 to 0.1: αは0.05から0.1くらい
+50 meters: 50メートル
+short distance → walk: 近い距離 → 歩く
+maintenance: 保守
+Landauer: ランダウアー
+ops ≤ 2E/πħ: 演算 ≤ 2E/πħ
+token: トークン
 
 # ---- every chapter ----
 Explained: 解説

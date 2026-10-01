@@ -19,3 +19,13 @@
 - { match: "Hermes", say: "ヘルメス" }
 - { match: "OpenClaw", say: "オープンクロー" }
 - { match: "Moltbook", say: "モルトブック" }
+- { match: "Hugging Face", say: "ハギングフェイス" }
+- { match: "Fable", say: "フェイブル" }
+- { match: "Mythos", say: "ミュトス" }
+- { match: "GPT-5.6", say: "ジーピーティー・ゴーテンロク" }
+- { match: "Sol", say: "ソル" }
+- { match: "Luna", say: "ルナ" }
+- { match: "Solid Gold Magikarp", say: "ソリッド・ゴールド・マジカープ" }
+- { match: "Solid Gold Magicarp", say: "ソリッド・ゴールド・マジカープ" }
+- { match: "SolidGoldMagikarp", say: "ソリッド・ゴールド・マジカープ" }
+- { match: "Magikarp", say: "マジカープ" }
