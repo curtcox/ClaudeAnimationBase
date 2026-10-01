@@ -18,7 +18,7 @@ const NAMES = { curt: 'Curt', claude: 'Claude', ...(words.subtitle_names || {}) 
 // the same cleaning and sentence split as the captions
 const plainText = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_|^- |^> /gm, '').replace(/\s+/g, ' ').trim();
 const sentencesOf = s => s.replace(/\b(vs|e\.g|i\.e|Dr|Lt|Mr|Ms|St)\./g, '$1․')
-  .split(/(?<=[.!?]["”)]*)\s+(?=["“(]?[A-Z0-9])/).map(x => x.replace(/․/g, '.'));
+  .split(/(?<=[.!?]["”»)]*)\s+(?=["“«(¿¡]?[\p{Lu}0-9])/u).map(x => x.replace(/․/g, '.'));
 // a typo mark ("Solid Gold [Magicarp→Magikarp]", "[+as]", "[were a→]") as the text typed and the text shown
 function fixOf(mark) {
   let typed = '', shown = '', last = 0, m; const re = /\[(\+)?([^\]→]*)(?:→([^\]]*))?\]/g;

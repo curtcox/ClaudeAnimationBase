@@ -129,8 +129,8 @@ export function loadTypos(lines) {
 export function pageLines(c) {
   if (!c.page) return [];
   return readYaml(c.page).map(b => {
-    const speech = b.say.replace(/^\[[^\]]*\]\s*/, '');   // without its audio tag
-    return { id: `MAD.${b.balloon}`, ch: c.n, speaker: b.speaker, who: b.who, kind: 'balloon', spoken: true, text: speech, speech: b.say, words: words(speech), before: b.before || 0 };
+    const speech = b.say.replace(/^\[[^\]]*\]\s*/, '');   // without its audio tag; a translation may give its words
+    return { id: `MAD.${b.balloon}`, ch: c.n, speaker: b.speaker, who: b.who, kind: 'balloon', spoken: true, text: speech, speech: b.say, words: b.words ?? words(speech), before: b.before || 0 };
   });
 }
 // the words as Curt meant them: the voice reads these, while the page keeps what he typed

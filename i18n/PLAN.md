@@ -68,6 +68,33 @@ translation, the same voices.
   202 Wikipedia codes have one; 211 of the explainers' links moved to Portuguese Wikipedia).
 - The translation page is `i18n/pt/translation.yaml` (its texts keyed `pt` and `en`), at `/pt/traducao/`.
 
+## Conventions (Japanese, `i18n/ja`, site at `/ja/`)
+
+Claude's choices (2026-09-30, for Curt to confirm), carrying over the Spanish decisions: a full, faithful translation,
+the same voices.
+
+- **The title** is 『カエルか、ウーパールーパーか』. *Axolotl* is ウーパールーパー, the name every Japanese viewer knows (from
+  the 1985 craze); the zoologists' アホロートル is in a note. *Frog* is カエル.
+- **Register:** Claude speaks です・ます, as it does in Japanese; Curt types plain, terse Japanese, as he types English.
+  In the cold open's comic the officer barks and the handler answers him politely.
+- **Pronouns:** Claude says 私; Curt says 僕 where he needs a pronoun at all. Claude calls Curt あなた only where Japanese
+  needs a "you", and Curt calls Claude 君. Japanese adjectives have no gender, and neither do です・ます endings, so
+  Claude stays genderless without effort. On the site Claude is "Claude", never 彼 or 彼女.
+- **Names:** people's in katakana (カート・コックス, ジェフ・ジャービス); companies, products and models as they're
+  written in Japanese, in Latin letters (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna, Hugging Face).
+- **Works:** by their Japanese titles (『猿の惑星・征服』, 『エンダーのゲーム』, 『銀河ヒッチハイク・ガイド』,
+  『ターミネーター2』, Billy Joel's 「ストレンジャー」). Papers, articles and sites keep their own titles.
+- 「」 for quotations, 『』 for titles and quotations inside quotations; numbers as Japanese writes them (1万7000,
+  0.05, 40%); プロンプト for "prompt".
+- **What stays in English:** the sources' titles, code names, and the token demonstrations in chapter 12. Curt's
+  surviving typos are the Latin-letter names (Solid Gold Magicarp, Shoggath, AGI 2027).
+- **On the site:** "［訳注：…］" for what the translation adds, and "（英語）" after a link with no Japanese article.
+- **The picture:** Japanese lettering in the system's Hiragino Maru Gothic (its own `@font-face` for the hand-lettering
+  fonts' CJK range, so every Mac renders it the same, with nothing downloaded). Captions break a sentence at 。！？ and
+  wrap between phrases (`Intl.Segmenter`, with each word's kana kept on it), never mid-word; a label wider than the
+  English it replaces is squeezed to that width. Until it's voiced, a line's length is estimated at 6 characters a
+  second (Japanese has no words to count).
+
 ## How it's built
 
 Everything for a language lives under `i18n/<lang>/`. The English film's files are left alone, except where a small,
@@ -148,6 +175,12 @@ The tools, run from the project's root:
 - [x] The transcript (453 lines, every anchor), the lettering (361), the codes' captions (409), the cold open, the
       chapter titles, the 64 explainers, the site's words, the YouTube words, the translation's page (92 notes), the
       thumbnail (`i18n/pt/thumbnail.jpg`). Built by the same Pages workflow, at `/pt/` (2026-09-30).
+- [x] Every line read against its English for drift (Claude, 2026-09-30: all 453, none changed); no European forms, and
+      Claude never takes a gender. The probe: every chapter, nothing lettered in English, every cue anchored, no errors.
+- [x] Captions a sentence at a time in any language: the English engine starts a sentence only at A–Z, which missed
+      27 breaks in Portuguese ("É…") and 12 in Spanish ("¿…"). `i18n/src/i18n.js` splits at any capital (the English
+      `src/timing.js` is left alone, so the English final's frames stay current); `tools/subtitles.mjs` the same (the
+      English subtitles come out byte for byte the same).
 - [ ] Curt confirms the Spanish decisions apply (or changes them).
 - [ ] Voice it (ElevenLabs quota permitting), then drafts, then the final on the faster Mac.
 
