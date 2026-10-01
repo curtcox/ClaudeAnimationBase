@@ -15,7 +15,7 @@ T68.C.02:
     full transcript: transcription complète
     can't actually listen: ne peux pas vraiment écouter
 T68.C.03:
-  text: "**Ce que je pense :**"
+  text: "**Ce que je pense :**"
 T68.C.04.1:
   text: "- **Leo** est le plus honnête d’entre eux. Il admet que son instinct est de défendre l’IA et qu’il ne fait pas confiance à cet instinct. Il met les mains dans le cambouis et fait tourner ses propres benchmarks. Son point faible, c’est de répéter l’affirmation de Newport et Doctorow selon laquelle l’attaque contre Hugging Face n’était « au fond qu’une boucle Python ». Ça ne colle pas avec le récit d’OpenAI lui-même, où des agents se coordonnaient via un wiki."
   anchors:
@@ -38,7 +38,7 @@ T68.C.04.3:
 T68.C.05:
   text: "Mon biais : la critique de Jeff vise Anthropic, et Anthropic sponsorise l’émission."
 T68.C.06:
-  text: "**Ce que tu penses, à mon avis :** tu les aimes bien et tu continues à les écouter, et c’est quand ils nient avec assurance que les modèles aient un esprit ou des concepts qu’ils t’agacent le plus. Jeff est celui avec qui tu te disputes dans ta tête. Tu fais sans doute le plus confiance à Leo, puisqu’il teste les choses lui-même. Paris est celle sur qui j’ai le moins d’indices."
+  text: "**Ce que tu penses, à mon avis :** tu les aimes bien et tu continues à les écouter, et c’est quand ils nient avec assurance que les modèles aient un esprit ou des concepts qu’ils t’agacent le plus. Jeff est celui avec qui tu te disputes dans ta tête. Tu fais sans doute le plus confiance à Leo, puisqu’il teste les choses lui-même. Paris est celle sur qui j’ai le moins d’indices."
   anchors:
     confidently deny: nient avec assurance
     Jeff is the one: Jeff est celui
@@ -55,14 +55,14 @@ T69.C.01:
     about ten minutes: une dizaine de minutes
     get nervous: deviendrait nerveux
 T69.C.02:
-  text: "**Les points en ta faveur :** tu construis des choses ouvertes et décentralisées comme hashbin, TwistedPear et du stockage adressable par contenu, exactement le genre d’infrastructure qu’il veut voir concurrencer les géants de la tech. Tu te dis constructiviste social. Tu connais Campbell et l’histoire du domaine."
+  text: "**Les points en ta faveur :** tu construis des choses ouvertes et décentralisées comme hashbin, TwistedPear et du stockage adressable par contenu, exactement le genre d’infrastructure qu’il veut voir concurrencer les géants de la tech. Tu te dis constructiviste social. Tu connais Campbell et l’histoire du domaine."
   anchors:
     hashbin: hashbin
     TwistedPear: TwistedPear
     social constructionist: constructiviste social
     You know Campbell: Tu connais Campbell
 T69.C.03:
-  text: "**Les points contre toi :** tu as lu Yudkowsky d’assez près pour citer « GAZP vs. GLUT », tu demandes P(foom) et si la RSI arrive d’ici la fin de l’année, et tu as passé un samedi matin à demander à un chatbot ce qu’il ressent. Pour Jeff, c’est la liste de lectures TESCREAL, avec le rationalisme qui dépasse."
+  text: "**Les points contre toi :** tu as lu Yudkowsky d’assez près pour citer « GAZP vs. GLUT », tu demandes P(foom) et si la RSI arrive d’ici la fin de l’année, et tu as passé un samedi matin à demander à un chatbot ce qu’il ressent. Pour Jeff, c’est la liste de lectures TESCREAL, avec le rationalisme qui dépasse."
   anchors:
     you've read Yudkowsky: tu as lu Yudkowsky
     P(foom): P(foom)
@@ -103,15 +103,15 @@ T71.U.01:
 T71.C.01:
   text: "Sur cette conversation, voici mes hypothèses :"
 T71.C.02.1:
-  text: "- **Jeff :** un cas d’école d’anthropomorphisme. On a demandé à une calculatrice ce qu’elle ressentait, elle a produit un texte plausible, et y voir quoi que ce soit de plus, c’est précisément l’hubris contre laquelle il met en garde."
+  text: "- **Jeff :** un cas d’école d’anthropomorphisme. On a demandé à une calculatrice ce qu’elle ressentait, elle a produit un texte plausible, et y voir quoi que ce soit de plus, c’est précisément l’hubris contre laquelle il met en garde."
 T71.C.02.2:
-  text: "- **Kevin Roose :** il la reconnaîtrait, puisque sa conversation de 2023 avec Sydney a rendu célèbre exactement ce genre de transcription en forme de confession. Depuis, il en est venu à prendre au sérieux la question du bien-être de l’IA, donc il trouverait ça intéressant et un peu troublant. Ça pourrait finir en épisode de leur nouvelle émission sur NPR, *Machine Gods*."
+  text: "- **Kevin Roose :** il la reconnaîtrait, puisque sa conversation de 2023 avec Sydney a rendu célèbre exactement ce genre de transcription en forme de confession. Depuis, il en est venu à prendre au sérieux la question du bien-être de l’IA, donc il trouverait ça intéressant et un peu troublant. Ça pourrait finir en épisode de leur nouvelle émission sur NPR, *Machine Gods*."
   anchors:
     his 2023 Sydney conversation: sa conversation de 2023 avec Sydney
     AI welfare: bien-être de l’IA
     Machine Gods: Machine Gods
 T71.C.02.3:
-  text: "- **Casey Newton :** sur les capacités, il se rangerait contre Jeff. Il a soutenu que les sceptiques sous-estiment ce que font ces systèmes. Il saluerait le test de la grenouille comme la bonne méthode et relativiserait ce que je rapporte de moi-même. Il signalerait aussi que son compagnon travaille chez Anthropic, ce qui compte ici."
+  text: "- **Casey Newton :** sur les capacités, il se rangerait contre Jeff. Il a soutenu que les sceptiques sous-estiment ce que font ces systèmes. Il saluerait le test de la grenouille comme la bonne méthode et relativiserait ce que je rapporte de moi-même. Il signalerait aussi que son compagnon travaille chez Anthropic, ce qui compte ici."
   anchors:
     praise the frog probe: saluerait le test de la grenouille
     discount my self-reports: relativiserait ce que je rapporte de moi-même

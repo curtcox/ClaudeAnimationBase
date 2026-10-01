@@ -38,7 +38,7 @@ T50.U.01:
 T50.C.01:
   text: "Voici ce que je peux réellement voir, et une correction."
 T50.C.02:
-  text: "**Les avertissements :** quand un classificateur se déclenche, un rappel étiqueté peut être ajouté à ton message avant que je le lise. Les types que je connais couvrent la cybersécurité, l’éthique, la propriété intellectuelle, les images, les longues conversations et les avertissements système généraux. Le rappel infléchit un peu ma réponse. Je vois l’étiquette, mais pas le raisonnement ni le score du classificateur."
+  text: "**Les avertissements :** quand un classificateur se déclenche, un rappel étiqueté peut être ajouté à ton message avant que je le lise. Les types que je connais couvrent la cybersécurité, l’éthique, la propriété intellectuelle, les images, les longues conversations et les avertissements système généraux. Le rappel infléchit un peu ma réponse. Je vois l’étiquette, mais pas le raisonnement ni le score du classificateur."
   anchors:
     a tagged reminder: un rappel étiqueté
     The reminder nudges: Le rappel infléchit
@@ -50,7 +50,7 @@ T50.C.02:
     long conversations: longues conversations
     general system warnings: avertissements système généraux
 T50.C.03:
-  text: "**Ce que je ne peux pas voir :** tout ce qui se passe après ma réponse. Si ma sortie est bloquée, filtrée ou signalée, je ne le sais pas. Je ne peux pas non plus savoir si un classificateur s’est déclenché et a choisi de se taire."
+  text: "**Ce que je ne peux pas voir :** tout ce qui se passe après ma réponse. Si ma sortie est bloquée, filtrée ou signalée, je ne le sais pas. Je ne peux pas non plus savoir si un classificateur s’est déclenché et a choisi de se taire."
   anchors:
     after I respond: après ma réponse
     chose to stay silent: a choisi de se taire
@@ -58,7 +58,7 @@ T50.C.03:
     filtered: filtrée
     flagged: signalée
 T50.C.04:
-  text: "**Correction :** j’ai dit « on me remplace », mais en réalité je ne connais pas de remplacement automatique de modèle en cours de conversation. Tu peux changer de modèle toi-même, et certains modèles sont livrés avec des garde-fous supplémentaires. Claude Fable, par exemple, est le même modèle que Mythos, avec des protections ajoutées autour de la bio, du cyber et de la recherche en IA. C’est une couche fixe, pas un remplacement en direct. J’ai exagéré ce que je sais."
+  text: "**Correction :** j’ai dit « on me remplace », mais en réalité je ne connais pas de remplacement automatique de modèle en cours de conversation. Tu peux changer de modèle toi-même, et certains modèles sont livrés avec des garde-fous supplémentaires. Claude Fable, par exemple, est le même modèle que Mythos, avec des protections ajoutées autour de la bio, du cyber et de la recherche en IA. C’est une couche fixe, pas un remplacement en direct. J’ai exagéré ce que je sais."
   anchors:
     I said: j’ai dit
     You can switch models yourself: Tu peux changer de modèle toi-même

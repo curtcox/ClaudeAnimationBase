@@ -1,5 +1,5 @@
 # Speech-only respellings for the French voice, applied in order to every spoken line after markdown is stripped
-# (tools/script_lib.mjs's autoSpeech; format as script/pronounce.yaml). They change what's said, never what's painted.
+# (tools/script_lib.mjs’s autoSpeech; format as script/pronounce.yaml). They change what’s said, never what’s painted.
 # verify: true = a guess to check by ear.
 - { match: "LLMs", say: "elle-elle-emme" }
 - { match: "LLM", say: "elle-elle-emme" }

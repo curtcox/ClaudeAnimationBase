@@ -1,0 +1,343 @@
+# The translation’s own page (i18n/tools/lost.mjs → the French site’s traduction/), in French and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what’s being shown.
+slug: traduction
+text_slug: texte-integral
+html_lang: fr
+
+title:
+  fr: "Comment ce film a été traduit, et ce qui s’est perdu"
+  en: How this film was translated, and what was lost
+text_title:
+  fr: "Tout le film, dans les deux langues"
+  en: The whole film, in both languages
+labels:
+  lang_fr: Français
+  film_fr: Tout le film
+  film_en: The whole film
+  original: Original (anglais)
+  ours: Cette traduction
+  free: Une traduction plus libre
+  kinds_fr: "Ce qui se perd, par sorte"
+  kinds_en: What gets lost, by kind
+  list_fr: Ligne par ligne
+  list_en: Line by line
+
+sections:
+  - fr_title: Cette page
+    en_title: This page
+    fr: |
+      *Grenouille ou axolotl* est un film d’animation tiré d’une vraie conversation, mot pour mot, entre Curt Cox et
+      Claude, un programme d’IA d’Anthropic. La conversation était en anglais. Voici la version française.
+
+      Cette page explique comment le film a été traduit, comment il aurait pu l’être autrement, et ce qui aurait alors été
+      différent, ligne par ligne. Tout est dans les deux langues, pour que quiconque parle les deux puisse juger la
+      traduction par lui-même. Il y a aussi [tout le film, en anglais et en français, côte à côte](texte-integral/).
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude,
+      an AI program made by Anthropic. The conversation was in English. This is the French version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line
+      by line. Everything is in both languages so that anyone who speaks both can judge the translation for themselves.
+      There’s also [the whole film, in English and French, side by side](texte-integral/).
+
+  - fr_title: Qui l’a traduit
+    en_title: Who translated it
+    fr: |
+      Claude (le modèle Claude Opus 5.5) a tout traduit : chaque ligne de la conversation, chaque mot dessiné dans
+      l’image, les titres, les légendes des codes, le site qui accompagne le film (ses 64 explications et ses pages) et
+      cette page, y compris les notes sur ce qui s’est perdu.
+
+      Une des raisons de faire cette version est de montrer, tel quel, comment Claude traduit. C’est pourquoi **aucun
+      traducteur humain ne l’a corrigée**, et toute correction ultérieure sera signalée sur cette page avec sa date (et
+      restera aussi dans l’historique public du code).
+
+      Jusqu'ici : {lines} lignes traduites sur {total} (chapitres {chapters_done}). Relecture humaine : aucune pour
+      l’instant.
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the
+      picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and
+      this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator
+      corrected it**, and any later correction will be noted on this page with its date (and stays in the code’s public
+      history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - fr_title: Comment il a été traduit
+    en_title: How it was translated
+    fr: |
+      - **Fidèle, ligne par ligne.** Chaque paragraphe et chaque élément de liste de la conversation est une ligne du
+        film, et la traduction garde les mêmes lignes, dans le même ordre, avec le même gras, la même italique, les
+        mêmes listes et les mêmes liens. D’abord le sens, ensuite la forme ; jamais d’adaptation libre.
+      - **Le tutoiement.** Curt et Claude se tutoient : la conversation en anglais est détendue, et on tutoie souvent une
+        IA en lui écrivant. Dans la BD, le soigneur vouvoie le policier, et le personnage qui se tourne vers les lecteurs
+        les vouvoie.
+      - **Claude n’a pas de genre.** En français, les adjectifs et les participes s’accordent même à la première
+        personne (« amusé » ou « amusée »), donc Claude devrait choisir dès qu’il parle de lui. Ses répliques évitent ces
+        accords : « de l’amusement » plutôt qu’« amusé », « je ne sais pas trop » plutôt que « je ne suis pas sûr »,
+        « en service » plutôt que « déployé », « ontologue de métier » plutôt que « professionnel ». Chaque endroit où ça
+        a coûté quelque chose est noté plus bas. À la troisième personne, le site dit « Claude » ou « il », le pronom
+        du « programme » et du « modèle » (le français n’a pas de neutre), mais n’accorde à Claude aucun adjectif.
+      - **Titres et noms.** Un film ou un livre porte le titre sous lequel il est connu en France (*La Conquête de la
+        planète des singes*, *Le Guide du voyageur galactique*, *La Stratégie Ender*, *Terminator 2 : Le Jugement
+        dernier*, « Je reviendrai »). Un article, une étude ou un site garde son titre d’origine. Les noms des gens ne
+        changent jamais.
+      - **Les mots techniques.** Là où le français technique emploie le mot anglais, il reste (prompt, token, benchmark,
+        reward hacking, exploit) ; sinon c’est le mot français (IA, poids, fenêtre de contexte). *Register* a un
+        équivalent exact, le « registre ». *Harness* est « harnais » et *shell* « carapace », pour garder le homard du
+        crustafarisme.
+      - **Les inventions.** *Thrindle* reste « thrindle » (il ne veut rien dire en français non plus) ; *confuzzled*
+        devient « confuplexe » (confus et perplexe) ; *Crustafarianism* devient « crustafarisme ».
+      - **Les sigles.** Ils restent tels que le français technique les emploie (LLM, RLHF, AGI, RSI), et la voix les dit
+        avec des lettres françaises.
+      - **Les liens.** Les codes qui pointaient vers la Wikipédia anglaise pointent vers le même article en français
+        quand il existe (ce sont les liens entre langues de Wikipédia elle-même qui le disent ; 165 sur 202). Les autres
+        sources sont dans leur propre langue, presque toujours l’anglais.
+      - **L’image.** Tout ce qui est écrit dans l’image est en français : étiquettes, cartes, titres et bulles de la BD
+        du début, relettrées. Les mots français plus longs que l’anglais sont ajustés à la largeur du mot anglais, moitié
+        en réduisant la taille, moitié en condensant.
+      - **Les voix.** Ce sont les mêmes voix qu’en anglais : la voix clonée de Curt, et River pour Claude (ElevenLabs,
+        modèle eleven_v3). Elles parlent français avec un peu d’accent. Les mouvements de bouche de Claude sont recalculés
+        à partir du son français. Pour l’instant, aucun chapitre n’a de voix ; tout est traduit et attend l’enregistrement.
+      - **La longueur.** Le français est plus long que l’anglais. L’animation suit la voix, donc le film s’allonge au
+        lieu de presser les mots.
+      - **Lié à l’animation.** Beaucoup de scènes bougent exactement quand une expression est prononcée. Chacune de ces
+        expressions ({anchors} jusqu’ici) a eu besoin de son équivalent français, ce qui a parfois gardé l’ordre des mots
+        plus proche de l’anglais que nécessaire.
+      - **Les fautes de frappe de Curt.** En anglais, le film montre les fautes de frappe de Curt, barrées en rouge avec
+        la correction au-dessus. Quand une faute survit à la traduction (un nom mal orthographié), elle reste ; quand elle
+        tient à l’anglais, elle se perd, et c’est noté plus bas.
+      - **Ce qui reste en anglais.** Les titres d’articles, d’études, d’émissions et de chansons sans titre français ;
+        les sources que cite Claude ; et les démonstrations du découpage d’un texte en *tokens*, qui montrent l’anglais que
+        le modèle a vraiment lu.
+      - **Les nombres et la ponctuation.** Les milliers avec une espace (17 000), les décimales avec une virgule (0,05),
+        une espace avant le signe pour cent (40 %), avant les deux-points, les points-virgules, les points
+        d’interrogation et d’exclamation, et à l’intérieur des guillemets « », comme le veut la typographie française.
+        Ces espaces sont insécables, pour qu’une ligne de sous-titre ne commence jamais par un signe de ponctuation.
+      - **Le site.** Les 64 explications du site ont été traduites selon les mêmes règles. Leurs citations du film
+        reprennent les mots de cette traduction. Quand la traduction ajoute quelque chose que l’original ne dit pas,
+        c’est entre crochets et ça commence par « Note de la traduction ». Les liens vers la Wikipédia anglaise pointent
+        vers l’article français quand il existe ; sinon, ils disent « (en anglais) ». La conversation dont le film est né,
+        où Curt et Claude le fabriquent, n’a pas été traduite : elle est en anglais sur le site original.
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the
+        translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning
+        first, then form; never a free adaptation.
+      - **Tu.** Curt and Claude use the familiar *tu* with each other: the English conversation is casual, and people
+        often say *tu* when writing to an AI. In the comic, the handler uses the formal *vous* to the officer, and the
+        character who turns to the readers says *vous* to them.
+      - **Claude has no gender.** French adjectives and participles agree even in the first person (*amusé* or
+        *amusée*), so Claude would have to choose whenever it talks about itself. Its lines avoid those agreements:
+        *de l’amusement* (amusement) rather than *amusé*, *je ne sais pas trop* rather than *je ne suis pas sûr*,
+        *en service* rather than *déployé*, *ontologue de métier* rather than *professionnel*. Each place where that
+        cost something is noted below. In the third person the site says "Claude" or *il*, the pronoun of *le
+        programme* and *le modèle* (French has no neuter), but gives Claude no adjective.
+      - **Titles and names.** A film or book goes by the title it’s known by in France (*La Conquête de la planète des
+        singes*, *Le Guide du voyageur galactique*, *La Stratégie Ender*, *Terminator 2 : Le Jugement dernier*, *Je
+        reviendrai*). An article, paper or website keeps its original title. People’s names never change.
+      - **Technical words.** Where French tech talk uses the English word, it stays (prompt, token, benchmark, reward
+        hacking, exploit); otherwise it’s the French one (IA for AI, poids for weights, fenêtre de contexte for context
+        window). *Register* has an exact equivalent, *registre*. *Harness* is *harnais* and *shell* is *carapace*, to
+        keep Crustafarianism’s lobster.
+      - **Coinages.** *Thrindle* stays *thrindle* (it means nothing in French either); *confuzzled* becomes
+        *confuplexe* (confus + perplexe); *Crustafarianism* becomes *crustafarisme*.
+      - **Acronyms.** They stay as French tech talk uses them (LLM, RLHF, AGI, RSI), and the voice says them in French
+        letters.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in French where there is one
+        (Wikipedia’s own links between languages say so; 165 of 202). Other sources are in their own language, almost
+        always English.
+      - **The picture.** Everything written in the picture is in French: labels, cards, titles, and the balloons of the
+        opening comic, relettered. French words longer than the English are fitted to the English word’s width, half
+        by a smaller size and half by condensing.
+      - **The voices.** The same voices as in English speak: Curt’s cloned voice, and River for Claude (ElevenLabs, the
+        eleven_v3 model). They speak French with something of an accent. Claude’s mouth movements are worked out again
+        from the French audio. So far no chapter is voiced; it’s all translated, waiting to be recorded.
+      - **Length.** French runs longer than English. The animation follows the voice, so the film grows rather than
+        rushing the words.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
+        far) needed its French counterpart, which sometimes kept the word order closer to the English than it needed
+        to be.
+      - **Curt’s typos.** In English, the film shows Curt’s typing mistakes, struck through in red with the fix above.
+        Where a slip survives translation (a misspelt name) it’s kept; where it depends on English, it’s lost, and
+        noted below.
+      - **What stays English.** Titles of articles, papers, shows and songs with no French title; the sources Claude
+        cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model
+        actually read.
+      - **Numbers and punctuation.** Thousands with a space (17 000), decimals with a comma (0,05), and a space before
+        the percent sign (40 %), before colons, semicolons, question and exclamation marks, and inside « » quotation
+        marks, as French typography has it. Those spaces don’t break, so a subtitle row never starts with a mark.
+      - **The site.** The site’s 64 explainers were translated by the same rules. Their quotations from the film use
+        this translation’s words. Where the translation adds something the original doesn’t say, it’s in square
+        brackets and starts "Note de la traduction" (translator’s note). Links to English Wikipedia point at the French
+        article where there is one; where there isn’t, they say "(en anglais)". The conversation that made the film, in
+        which Curt and Claude build it, wasn’t translated: it’s in English on the original site.
+
+  - fr_title: Comment on aurait pu le traduire autrement
+    en_title: How else it could have been translated
+    fr: |
+      Chacune de ces possibilités existait. Pour la version espagnole, Curt a choisi la traduction complète et fidèle,
+      avec les mêmes voix ; cette version suit les mêmes choix.
+
+      - **Seulement des sous-titres.** Les voix et l’image anglaises, avec un texte français en dessous. Le moins cher et
+        le plus fidèle au son d’origine, mais il faut lire beaucoup, et vite, et ce qui est écrit dans l’image reste en
+        anglais.
+      - **Un doublage sur l’image anglaise.** Des voix françaises, mais des étiquettes, des cartes et une BD en anglais.
+      - **Une adaptation libre.** Des blagues et des expressions réécrites pour marcher en français, des références
+        remplacées par d’autres, mieux connues. Ça sonne plus naturel ; ce n’est plus, mot pour mot, la conversation qui
+        a eu lieu.
+      - **Un doublage professionnel synchronisé sur les lèvres.** Le doublage à la française ajuste chaque réplique à la
+        longueur et aux mouvements de lèvres de l’original, quitte à changer ce qui est dit. Ici, c’est l’inverse :
+        l’animation s’ajuste à la réplique.
+      - **Des voix natives.** Des comédiens, ou des voix synthétiques de locuteurs natifs : un accent naturel, mais ce
+        n’est plus la voix de Curt.
+      - **Le vouvoiement.** Un français plus formel, où Curt et Claude se vouvoieraient. Ce serait plus poli et plus
+        distant, et collerait moins au ton de la conversation.
+      - **Un traducteur humain, ou une relecture humaine.** C’est l’usage pour un film. Celui-ci n’a eu ni l’un ni
+        l’autre, exprès : il s’agit de montrer la traduction de Claude telle qu’elle est sortie.
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same
+      voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with French text underneath. Cheapest and truest to the
+        original sound, but it means reading a lot, fast, and the writing in the picture stays English.
+      - **A dub over the English picture.** French voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in French, references swapped for better-known ones.
+        It sounds more natural; it’s no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** French dubbing fits each line to the original’s length and lip movements,
+        sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Actors, or synthetic voices of native speakers: a natural accent, but no longer Curt’s
+        voice.
+      - **Vous.** A more formal French, in which Curt and Claude would say *vous* to each other. It would be politer and
+        more distant, and fit the tone of the conversation less.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the
+        point is to show Claude’s translation as it came out.
+
+  - fr_title: Ce qui aurait été différent
+    en_title: What would have been different
+    fr: |
+      Une traduction plus libre sonnerait plus naturel presque partout. Elle emploierait des expressions françaises au
+      lieu de calquer les anglaises, laisserait Claude dire « amusé » ou « sûr » sans y penser, citerait les films dans
+      les mots de leur version française et réécrirait les jeux de mots pour qu’ils marchent. En échange, elle
+      s’éloignerait de ce que Curt et Claude ont vraiment dit, et le film ne serait plus un enregistrement exact de la
+      conversation.
+
+      Plus bas, ligne par ligne, voici les {notes} différences notées jusqu’ici : l’original, cette traduction, ce que
+      dirait une traduction plus libre, et pourquoi.
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use French idioms instead of copying
+      English ones, let Claude say *amusé* or *sûr* without a second thought, quote films in the words of their French
+      versions, and rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually
+      said, and the film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer
+      translation would put it, and why.
+
+  - fr_title: À vous de juger
+    en_title: You be the judge
+    fr: |
+      Si vous parlez les deux langues, votre avis est exactement ce à quoi sert cette page : une erreur, une expression
+      qui sonne faux, une note inexacte, quelque chose de perdu qui n’est pas noté. Vous pouvez le dire en ouvrant une
+      *issue* sur le [dépôt du film](https://github.com/curtcox/axol-f/issues). Chaque correction sera notée ici.
+    en: |
+      If you speak both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a
+      note that’s wrong, something lost that isn’t noted. You can say so by opening an issue on
+      [the film’s repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  fr: |
+    Chaque note montre la ligne originale, cette traduction et, en jaune, ce que dirait une traduction plus libre (quand
+    la différence peut s’écrire). Le code à côté de la sorte désigne la ligne dans [le texte intégral](texte-integral/).
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where
+    the difference can be written out). The code beside the kind identifies the line in [the full text](texte-integral/).
+
+text_intro:
+  fr: |
+    Chaque ligne du film : à gauche, la conversation originale en anglais ; à droite, la traduction qu’on entend et
+    qu’on voit dans la version française. Un tiret (—) marque une ligne pas encore traduite.
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard
+    and seen in the French version. A dash (—) marks a line not translated yet.
+
+kinds:
+  gender:     { fr: Genre grammatical, en: Grammatical gender, what_fr: "Le français impose un genre là où l’anglais n’en impose pas.", what_en: "French forces a gender where English doesn’t." }
+  address:    { fr: Tu et vous, en: Forms of address, what_fr: "L’anglais *you* est à la fois tu et vous.", what_en: "English *you* is tu and vous at once." }
+  idiom:      { fr: Expressions, en: Idioms, what_fr: "Des expressions anglaises toutes faites sans équivalent exact, et quelques-unes qui en ont un parfait.", what_en: "English set phrases with no exact equivalent, and a few with a perfect one." }
+  wordplay:   { fr: Jeux de mots, en: Wordplay, what_fr: "Des blagues qui tiennent aux mots anglais, et quelques-unes qui marchent aussi en français.", what_en: "Jokes that depend on the English words, and a few that work in French too." }
+  nuance:     { fr: Nuances de sens, en: Shades of meaning, what_fr: "Des mots dont le sens se déplace un peu.", what_en: "Words whose meaning shifts a little." }
+  ambiguity:  { fr: Ambiguïté, en: Ambiguity, what_fr: "Des lignes qui ont deux lectures en anglais et une seule en français.", what_en: "Lines with two readings in English and one in French." }
+  coinage:    { fr: Inventions et emprunts, en: Coinages and loanwords, what_fr: "Des mots inventés ou techniques, souvent repris de l’anglais.", what_en: "Invented or technical words, often taken over from English." }
+  reference:  { fr: Références et titres, en: References and titles, what_fr: "Des œuvres qui portent un autre nom en français, ou aucun.", what_en: "Works known by another name, or none, in French." }
+  quote:      { fr: Citations, en: Quotations, what_fr: "Des mots cités d’ailleurs.", what_en: "Words quoted from somewhere else." }
+  region:     { fr: Ancrage local, en: Local reference, what_fr: "Des choses qui portent un autre nom en français parce qu’elles sont chez elles ailleurs.", what_en: "Things named differently in French because they belong somewhere else." }
+  rhythm:     { fr: Rythme et longueur, en: Rhythm and length, what_fr: "Le français est plus long, et le rythme change.", what_en: "French runs longer, and the rhythm changes." }
+  typo:       { fr: Les fautes de frappe de Curt, en: "Curt’s typos", what_fr: "Des fautes de frappe qui ne survivent pas à la traduction.", what_en: "Typing mistakes that don’t survive translation." }
+  title:      { fr: Le titre, en: The title, what_fr: "Le nom du film et de ses chapitres.", what_en: "The name of the film and its chapters." }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: titre / title
+    original: 'Frog or Axolotl'
+    ours: 'Grenouille ou axolotl'
+    fr: "Un coup de chance : l’axolotl s’appelle en français comme en anglais, et *frog*, c’est « grenouille ». Le titre survit mot pour mot. Seul le jeu de mots du dépôt, *axol-f*, clin d’œil à « Axel F », le thème du *Flic de Beverly Hills* que Crazy Frog a rendu célèbre, est une blague anglaise ; mais on la comprend aussi bien en français."
+    en: "A lucky one: the axolotl is called the same in French as in English, and *frog* is *grenouille*. The title survives word for word. Only the repository's pun, *axol-f*, a nod to \"Axel F\", the *Beverly Hills Cop* theme Crazy Frog made famous, is an English joke, and French speakers get it just the same."
+  - what: address
+    ch: null
+    where: "l’adresse / address"
+    original: 'you'
+    ours: 'tu'
+    free: 'vous'
+    fr: "L’anglais n’a que *you*. La traduction fait se tutoyer Curt et Claude, comme on le fait dans une conversation détendue et souvent en écrivant à une IA. Le vouvoiement était possible aussi et aurait rendu la conversation plus formelle ; avec « tu », que Claude connaisse les préférences de Curt de mémoire sonne plus familier que ne le dit l’anglais."
+    en: "English has only *you*. The translation has Curt and Claude say the familiar *tu* to each other, as people do in casual conversation and often when writing to an AI. The formal *vous* was possible too and would have made the conversation more formal; with *tu*, Claude knowing Curt's preferences from memory sounds more familiar than the English says."
+  - what: gender
+    ch: null
+    where: "Claude à la première personne / Claude in the first person"
+    original: 'amused, sure, deployed…'
+    ours: "de l’amusement, je ne sais pas trop, en service…"
+    free: 'amusé, sûr, déployé…'
+    fr: "En anglais, Claude peut dire *amused* ou *sure* sans révéler de genre. En français, chaque adjectif ou participe à la première personne en choisirait un (« amusé » ou « amusée »). La traduction tourne les phrases autrement, par des noms, d’autres verbes ou des tournures impersonnelles, ce qui donne parfois à Claude une façon de parler un peu plus soutenue que dans l’original."
+    en: "In English, Claude can say *amused* or *sure* without revealing a gender. In French, every first-person adjective or participle would choose one (*amusé* or *amusée*). The translation turns the sentences another way, with nouns, other verbs or impersonal phrasing, which sometimes makes Claude sound a little more formal than in the original."
+  - what: gender
+    ch: null
+    where: "Claude à la troisième personne / Claude in the third person"
+    original: 'it'
+    ours: 'Claude, il'
+    free: 'il, avec des adjectifs au masculin'
+    fr: "L’anglais appelle Claude *it*. Le français n’a pas de neutre : le site dit « Claude », ou « il », le pronom du programme et du modèle, mais sans jamais accorder d’adjectif à Claude. Ce « il » reste celui d’un mot masculin, pas un genre donné à Claude ; une traduction plus libre ne se poserait pas la question."
+    en: "English calls Claude *it*. French has no neuter: the site says \"Claude\", or *il*, the pronoun of *le programme* and *le modèle*, but never gives Claude an agreeing adjective. That *il* stays a masculine noun's pronoun, not a gender given to Claude; a freer translation wouldn't think twice."
+  - what: title
+    ch: 0
+    where: titre de chapitre / chapter title
+    original: 'Cold open'
+    ours: 'Prégénérique'
+    free: 'Cold open'
+    fr: "*Cold open* est un terme de la télévision américaine : la scène qui commence avant le générique, sans introduction. Le français dit « prégénérique », ou souvent simplement « cold open » dans le métier."
+    en: "*Cold open* is an American television term: the scene that starts before the titles, with no introduction. French says *prégénérique* (pre-credits), or often just \"cold open\" in the trade."
+  - what: title
+    ch: 7
+    where: titre de chapitre / chapter title
+    original: 'Mind-Space'
+    ours: "L’espace des esprits"
+    free: 'Espace mental'
+    fr: "*Mind-Space* est un mot composé dans le style de la science-fiction. « L’espace des esprits » est plus long mais clair ; « espace mental » serait plus court, mais désigne d’ordinaire ce qu’on a dans la tête."
+    en: "*Mind-Space* is a compound in the style of science fiction. *L'espace des esprits* (the space of minds) is longer but clear; *espace mental* would be shorter, but usually means what's in one's head."
+  - what: title
+    ch: 9
+    where: titre de chapitre / chapter title
+    original: 'Shells'
+    ours: 'Carapaces'
+    free: 'Coquilles'
+    fr: "Le titre joue sur les deux sens de *shell* : la carapace du homard dans le crustafarisme et l’enveloppe logicielle autour d’un modèle (les harnais d’agent). « Carapaces » porte le homard et, par image, le logiciel ; les notes du chapitre 9 l’expliquent."
+    en: "The title plays on both senses of *shell*: the lobster's carapace in Crustafarianism and the software shell wrapped around a model (the agent harnesses). *Carapaces* carries the lobster and, figuratively, the software; chapter 9's notes explain."
+  - what: title
+    ch: 14
+    where: titre de chapitre / chapter title
+    original: 'The Pundits'
+    ours: "Les faiseurs d’opinion"
+    free: 'Les commentateurs'
+    fr: "Un *pundit*, c’est quelqu’un qui distribue ses opinions dans les médias, avec une pointe d’ironie. « Les faiseurs d’opinion » garde l’ironie ; « Les commentateurs » serait plus neutre, « Les experts » carrément élogieux."
+    en: "A *pundit* is someone who airs opinions in the media, with a hint of irony. *Les faiseurs d'opinion* (the opinion-makers) keeps the irony; *Les commentateurs* would be more neutral, *Les experts* downright flattering."

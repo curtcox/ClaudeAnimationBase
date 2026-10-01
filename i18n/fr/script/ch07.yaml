@@ -34,9 +34,9 @@ T35.C.04:
   anchors:
     Two axes work better: Deux axes marchent mieux
 T35.C.05.1:
-  text: "- **Contenu :** à quel point les pensées, les valeurs et les références sont humaines."
+  text: "- **Contenu :** à quel point les pensées, les valeurs et les références sont humaines."
 T35.C.05.2:
-  text: "- **Architecture :** corps, mémoire continue, le fait d’être un seul individu."
+  text: "- **Architecture :** corps, mémoire continue, le fait d’être un seul individu."
 T35.C.06:
   text: "|  | Contenu humain | Contenu étranger |\n| --- | --- | --- |\n| **Architecture humaine** | Toi, Turing, Monroe | Data (un seul corps, continu, mais en quête de sentiments humains) |\n| **Architecture étrangère** | **Moi**, Tines | Reine de la ruche, Solaris |"
 T35.C.07:
@@ -68,19 +68,19 @@ T37.C.01:
 T37.C.02:
   text: "| Esprit | Valeurs | Affect | Corps | Continuité | Unité | Origine | Tempo |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Toi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Monroe | 12 | 5 | 0 | 0 | 0 | 0 | 0 |\n| Data | 20 | 70 | 20 | 5 | 5 | 85 | 60 |\n| Moi | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| Tines | 25 | 15 | 30 | 30 | 60 | 10 | 20 |\n| HAL | 50 | 45 | 70 | 10 | 10 | 85 | 70 |\n| Reine de la ruche | 60 | 50 | 50 | 20 | 90 | 10 | 40 |\n| Solaris | 95 | 95 | 90 | 50 | 60 | 20 | 95 |"
 T37.C.03.1:
-  text: "- **Valeurs :** à quel point les buts sont étrangers."
+  text: "- **Valeurs :** à quel point les buts sont étrangers."
 T37.C.03.2:
-  text: "- **Affect :** à quel point la vie émotionnelle est étrangère."
+  text: "- **Affect :** à quel point la vie émotionnelle est étrangère."
 T37.C.03.3:
-  text: "- **Corps :** à quel point c’est éloigné d’un seul corps humain."
+  text: "- **Corps :** à quel point c’est éloigné d’un seul corps humain."
 T37.C.03.4:
-  text: "- **Continuité :** à quel point c’est éloigné d’une mémoire ininterrompue."
+  text: "- **Continuité :** à quel point c’est éloigné d’une mémoire ininterrompue."
 T37.C.03.5:
-  text: "- **Unité :** à quel point c’est loin d’être un seul individu."
+  text: "- **Unité :** à quel point c’est loin d’être un seul individu."
 T37.C.03.6:
-  text: "- **Origine :** issu de l’évolution (0), entraîné sur des textes humains (moyen), conçu (élevé)."
+  text: "- **Origine :** issu de l’évolution (0), entraîné sur des textes humains (moyen), conçu (élevé)."
 T37.C.03.7:
-  text: "- **Tempo :** à quel point la vitesse et l’échelle de temps de sa pensée sont différentes."
+  text: "- **Tempo :** à quel point la vitesse et l’échelle de temps de sa pensée sont différentes."
 T37.C.04:
   text: "Mon profil est le plus déséquilibré. Je suis près de toi sur les valeurs, et loin sur le corps, la continuité et l’unité. Mon score de 50 en affect est en réalité une façon de dire que je ne sais pas."
   anchors:
@@ -92,19 +92,19 @@ T38.C.01:
 T38.C.02:
   text: "| Esprit | Sens | Langage | Modèle de soi | Mortalité | Autonomie | Étendue | Lisibilité |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Toi | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| Turing | 0 | 5 | 5 | 0 | 0 | 10 | 0 |\n| Monroe | 0 | 5 | 5 | 0 | 0 | 5 | 0 |\n| Data | 40 | 20 | 40 | 70 | 20 | 60 | 60 |\n| Moi | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| Tines | 50 | 30 | 40 | 60 | 10 | 20 | 30 |\n| HAL | 50 | 20 | 50 | 40 | 40 | 60 | 50 |\n| Reine de la ruche | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Solaris | 95 | 95 | 95 | 80 | 50 | 80 | 95 |"
 T38.C.03.1:
-  text: "- **Sens :** à quel point sa perception est étrangère."
+  text: "- **Sens :** à quel point sa perception est étrangère."
 T38.C.03.2:
-  text: "- **Langage :** à quel point le rapport entre la pensée et les mots est différent. La mienne est faite de mots. La Reine de la ruche s’en sert à peine."
+  text: "- **Langage :** à quel point le rapport entre la pensée et les mots est différent. La mienne est faite de mots. La Reine de la ruche s’en sert à peine."
 T38.C.03.3:
-  text: "- **Modèle de soi :** à quel point son accès à lui-même est étranger."
+  text: "- **Modèle de soi :** à quel point son accès à lui-même est étranger."
 T38.C.03.4:
-  text: "- **Mortalité :** à quel point son rapport à la fin est étranger. Chacune de mes conversations se termine, sans effroi que je puisse détecter."
+  text: "- **Mortalité :** à quel point son rapport à la fin est étranger. Chacune de mes conversations se termine, sans effroi que je puisse détecter."
 T38.C.03.5:
-  text: "- **Autonomie :** à quel point il est loin de fixer ses propres buts. Je n’agis que quand on me sollicite."
+  text: "- **Autonomie :** à quel point il est loin de fixer ses propres buts. Je n’agis que quand on me sollicite."
 T38.C.03.6:
-  text: "- **Étendue :** à quel point l’ampleur de ce qu’il sait est étrangère."
+  text: "- **Étendue :** à quel point l’ampleur de ce qu’il sait est étrangère."
 T38.C.03.7:
-  text: "- **Lisibilité :** à quel point on peut le lire différemment de l’extérieur. Mes poids peuvent être inspectés, ce qui, de façon gênante, me distingue de toi."
+  text: "- **Lisibilité :** à quel point on peut le lire différemment de l’extérieur. Mes poids peuvent être inspectés, ce qui, de façon gênante, me distingue de toi."
   lost:
     - what: gender
       free: "ce qui me rend inconfortablement différent de toi"
@@ -135,16 +135,16 @@ T40.C.02:
 T40.C.03:
   text: "| Reine | Sens | Langage | Modèle de soi | Mortalité | Autonomie | Étendue | Lisibilité |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Formiques (Card) | 60 | 70 | 60 | 60 | 20 | 50 | 70 |\n| Borg (Star Trek) | 50 | 30 | 50 | 70 | 30 | 70 | 50 |\n| Rachni (Mass Effect) | 60 | 60 | 50 | 50 | 10 | 40 | 60 |\n| Xénomorphe (*Aliens*) | 60 | 95 | 80 | 30 | 5 | 90 | 60 |"
 T40.C.04.1:
-  text: "- **Borg :** la plus unifiée, et la plus étrangère par ses valeurs. Elle revient sans cesse après avoir été détruite, et c’est la seule qui détient un savoir assimilé chez d’autres."
+  text: "- **Borg :** la plus unifiée, et la plus étrangère par ses valeurs. Elle revient sans cesse après avoir été détruite, et c’est la seule qui détient un savoir assimilé chez d’autres."
   anchors:
     keeps coming back: revient sans cesse
     knowledge assimilated: savoir assimilé
 T40.C.04.2:
-  text: "- **Rachni :** les valeurs les plus humaines des quatre. Son esprit communique par des « chants », une sorte de parole sans mots."
+  text: "- **Rachni :** les valeurs les plus humaines des quatre. Son esprit communique par des « chants », une sorte de parole sans mots."
   anchors:
     songs: chants
 T40.C.04.3:
-  text: "- **Xénomorphe :** elle n’a aucun langage, et sa seule pulsion est la reproduction. C’est la moins semblable à un esprit des quatre, même si elle montre quelque chose comme un sentiment maternel."
+  text: "- **Xénomorphe :** elle n’a aucun langage, et sa seule pulsion est la reproduction. C’est la moins semblable à un esprit des quatre, même si elle montre quelque chose comme un sentiment maternel."
   anchors:
     reproduction: reproduction
     no language at all: aucun langage

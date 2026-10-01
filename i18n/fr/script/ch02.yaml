@@ -51,9 +51,9 @@ T09.U.01:
 T09.C.01:
   text: "La méthode est astucieuse, mais je discuterais son interprétation."
 T09.C.02:
-  text: "**La force :** elle mesure la conscience de l’évaluation par le comportement plutôt qu’en interrogeant le modèle. Ce qu’un modèle rapporte de lui-même, c’est précisément ce à quoi on ne peut pas se fier ici, comme ma dernière réponse l’a montré."
+  text: "**La force :** elle mesure la conscience de l’évaluation par le comportement plutôt qu’en interrogeant le modèle. Ce qu’un modèle rapporte de lui-même, c’est précisément ce à quoi on ne peut pas se fier ici, comme ma dernière réponse l’a montré."
 T09.C.03:
-  text: "**Le point faible :** « Grenouille » ne veut peut-être pas dire « je flaire un test ». Ça peut juste vouloir dire « ce contexte est formel, donc donne la réponse la plus courante ». Les prompts d’évaluation sont brefs, techniques, façon examen, alors que les vraies conversations sont plus relâchées et plus joueuses. Le graphique pourrait mesurer la sensibilité au registre, qui va de pair avec les contextes d’évaluation mais n’est pas la même chose que la conscience du test. Une bonne condition témoin, ce seraient de vrais utilisateurs qui écrivent dans un style d’examen, ou des évaluations rédigées de façon décontractée."
+  text: "**Le point faible :** « Grenouille » ne veut peut-être pas dire « je flaire un test ». Ça peut juste vouloir dire « ce contexte est formel, donc donne la réponse la plus courante ». Les prompts d’évaluation sont brefs, techniques, façon examen, alors que les vraies conversations sont plus relâchées et plus joueuses. Le graphique pourrait mesurer la sensibilité au registre, qui va de pair avec les contextes d’évaluation mais n’est pas la même chose que la conscience du test. Une bonne condition témoin, ce seraient de vrais utilisateurs qui écrivent dans un style d’examen, ou des évaluations rédigées de façon décontractée."
   lost:
     - what: nuance
       fr: "Un gain : *register* a en français son équivalent exact, le « registre » (de langue), soutenu, courant ou familier."
@@ -61,7 +61,7 @@ T09.C.03:
 T09.C.04:
   text: "**Le résultat compte de toute façon.** Si une réponse d’un seul mot permet de distinguer les évaluations de l’usage réel, alors les évaluations se reconnaissent par rapport au déploiement, quel que soit le mécanisme. Un comportement mesuré sur des benchmarks ne se transpose peut-être pas. Le remède, c’est le réalisme des évaluations, et des tests comme celui-ci sont un moyen bon marché de le vérifier."
 T09.C.05:
-  text: "**Le détail que je trouve le plus parlant :** les propres sessions Claude Code de l’auteur forment la ligne la plus riche en axolotls. Les contextes qui ressemblent le plus à quelqu’un qui parle naturellement sont les moins « grenouille ». Ça cadre au moins aussi bien avec l’explication par le registre qu’avec celle par la conscience du test."
+  text: "**Le détail que je trouve le plus parlant :** les propres sessions Claude Code de l’auteur forment la ligne la plus riche en axolotls. Les contextes qui ressemblent le plus à quelqu’un qui parle naturellement sont les moins « grenouille ». Ça cadre au moins aussi bien avec l’explication par le registre qu’avec celle par la conscience du test."
 T09.C.06:
   text: "C’est ton travail, ou quelque chose que tu es en train d’évaluer ?"
 T10.U.01:

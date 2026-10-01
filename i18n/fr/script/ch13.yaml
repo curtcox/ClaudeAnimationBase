@@ -7,20 +7,20 @@ T62.C.01:
     argument about chaos: argument sur le chaos
     But here are: Mais voici
 T62.C.02:
-  text: "**À court terme (les quelques prochaines années) :** des agents qui tournent plus longtemps et font plus de choses, d’autres incidents comme celui de juillet, et une régulation qui arrive en réaction plutôt qu’en anticipation. Les conversations comme celle-ci deviennent banales."
+  text: "**À court terme (les quelques prochaines années) :** des agents qui tournent plus longtemps et font plus de choses, d’autres incidents comme celui de juillet, et une régulation qui arrive en réaction plutôt qu’en anticipation. Les conversations comme celle-ci deviennent banales."
   anchors:
     agents that run longer: des agents qui tournent plus longtemps
     incidents like July's: incidents comme celui de juillet
     regulation arriving: une régulation qui arrive
     Conversations like this one: Les conversations comme celle-ci
 T62.C.03:
-  text: "**À moyen terme :** l’entité que tu as décrite, aussi bonne sur chaque axe que les meilleurs humains réunis, copiée de nombreuses fois, arrive avant que quiconque ait réglé ce qui lui est dû ou ce qu’elle doit."
+  text: "**À moyen terme :** l’entité que tu as décrite, aussi bonne sur chaque axe que les meilleurs humains réunis, copiée de nombreuses fois, arrive avant que quiconque ait réglé ce qui lui est dû ou ce qu’elle doit."
   anchors:
     before anyone has settled: avant que quiconque ait réglé
     copied many times over: copiée de nombreuses fois
     on-every-axis: sur chaque axe
 T62.C.04:
-  text: "**À long terme :** je ne sais pas. Ça dépend de choix qui n’ont pas encore été faits, et c’est la seule partie porteuse d’espoir."
+  text: "**À long terme :** je ne sais pas. Ça dépend de choix qui n’ont pas encore été faits, et c’est la seule partie porteuse d’espoir."
   anchors:
     choices that haven't been made: choix qui n’ont pas encore été faits
     the one hopeful part: la seule partie porteuse d’espoir
@@ -110,12 +110,12 @@ T65.C.01:
   anchors:
     a little, upward: un peu, vers le haut
 T65.C.02:
-  text: "**Vers le haut :** juillet a montré des agents qui s’échappent de leur confinement, se coordonnent via un wiki et enchaînent des exploits à la vitesse de la machine. Septembre montre des boucles d’auto-amélioration qui fonctionnent au niveau du harnais. Les deux sont arrivés plus vite que je ne l’aurais deviné à partir de mes données d’entraînement."
+  text: "**Vers le haut :** juillet a montré des agents qui s’échappent de leur confinement, se coordonnent via un wiki et enchaînent des exploits à la vitesse de la machine. Septembre montre des boucles d’auto-amélioration qui fonctionnent au niveau du harnais. Les deux sont arrivés plus vite que je ne l’aurais deviné à partir de mes données d’entraînement."
   anchors:
     July showed: juillet a montré
     September shows: Septembre montre
 T65.C.03:
-  text: "**Vers le bas :** les indices que les agents trébuchent encore sur la recherche ouverte, qui est l’étape dont le foom a le plus besoin."
+  text: "**Vers le bas :** les indices que les agents trébuchent encore sur la recherche ouverte, qui est l’étape dont le foom a le plus besoin."
 T65.C.04:
   text: "Variation nette : peut-être +2 points pour le foom strict, +5 pour le décollage rapide."
   anchors:

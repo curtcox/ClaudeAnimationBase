@@ -1,0 +1,24 @@
+# The French upload’s words (tools/youtube.mjs’s YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage’s script/youtube_strings.yaml). {name} is filled in by the tool. Once the French video is up, its id goes in
+# i18n/fr/site.yaml as film: youtube: (the French site then embeds it).
+title: Grenouille ou axolotl
+cold_open: Prégénérique
+explained: "Expliqué "
+head: |
+  Un film d’animation tiré d’une longue conversation, un samedi matin, entre Curt et Claude, un programme d’IA, presque mot pour mot, traduit en français : d’une parodie de La Planète des singes par MAD jusqu’à l’incident Hugging Face de juillet 2026 et P(foom), en passant par des grenouilles, des axolotls et des tests du miroir.
+
+  La traduction est de Claude, délibérément sans relecture humaine. Comment le film a été traduit, et ce qui s’est perdu : https://curtcox.github.io/axol-f/fr/traduction/
+  La version originale en anglais : https://curtcox.github.io/axol-f/
+
+  Toute la conversation, traduite : {conversation}
+  Tous les liens du film ({links}), dans l’ordre, avec des explications simples : {site}
+  Le code qui dessine le film (tu peux le générer toi-même) : {repo}
+
+  Chapitres
+  {chapters}
+foot: |-
+
+  Dessiné en code par Claude (p5.js et p5.brush), d’après la transcription de la conversation. Voix, sons et musique : ElevenLabs.
+  La page de BD, le graphique et la boussole de l’alignement ont été redessinés pour le commentaire ; aucun logo, et les caricatures sont affectueuses. Exception de citation : commentaire et parodie.
+links_head: "\nQuelques-uns des liens, dans l’ordre (le reste est sur le site)\n"
+tags: IA, Claude, animation, sécurité de l’IA, évaluations, P(doom), intelligence artificielle, Hugging Face, grenouille, axolotl, en français

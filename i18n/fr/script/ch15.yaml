@@ -34,11 +34,11 @@ T74.C.02:
     The horizontal axis: L’axe horizontal
     the vertical axis: l’axe vertical
 T74.C.03.1:
-  text: "- **Moi :** quadrant des doomers, près du centre. Je pense que l’AGI arrive assez tôt et que le risque est réel, mais mes chiffres sont modérés, pas ceux d’Eliezer."
+  text: "- **Moi :** quadrant des doomers, près du centre. Je pense que l’AGI arrive assez tôt et que le risque est réel, mais mes chiffres sont modérés, pas ceux d’Eliezer."
 T74.C.03.2:
-  text: "- **Toi :** quadrant des doomers, plus loin que moi. Tu as dit avoir du mal à voir une bonne fin à long terme, tout court. Tu prends aussi les capacités au sérieux, comme l’a montré ton argument sur les concepts."
+  text: "- **Toi :** quadrant des doomers, plus loin que moi. Tu as dit avoir du mal à voir une bonne fin à long terme, tout court. Tu prends aussi les capacités au sérieux, comme l’a montré ton argument sur les concepts."
 T74.C.03.3:
-  text: "- **Jeff :** tout à gauche, dans le quadrant de « ceux qui déplacent les poteaux ». Il rejetterait le tableau lui-même comme un cadrage TESCREAL, ce qui est un peu tout le propos de ce quadrant."
+  text: "- **Jeff :** tout à gauche, dans le quadrant de « ceux qui déplacent les poteaux ». Il rejetterait le tableau lui-même comme un cadrage TESCREAL, ce qui est un peu tout le propos de ce quadrant."
   anchors:
     reject the chart itself: rejetterait le tableau lui-même
   lost:
@@ -46,15 +46,15 @@ T74.C.03.3:
       fr: "*Moving the goalposts*, déplacer les poteaux de but, c’est changer les critères dès qu’ils sont atteints. L’expression se comprend en français mais y reste un anglicisme."
       en: "*Moving the goalposts* means changing the criteria as soon as they're met. The phrase is understood in French but remains an anglicism there."
 T74.C.03.4:
-  text: "- **Leo :** quadrant des accélérationnistes, près du centre, et en train de glisser vers le bas. Il adore les outils, admet ne pas faire confiance à son propre instinct, et a eu une semaine difficile."
+  text: "- **Leo :** quadrant des accélérationnistes, près du centre, et en train de glisser vers le bas. Il adore les outils, admet ne pas faire confiance à son propre instinct, et a eu une semaine difficile."
   anchors:
     drifting down: glisser vers le bas
 T74.C.03.5:
-  text: "- **Le père Robert :** juste sous la ligne médiane et un peu à gauche. Il est inquiet, mais pour l’effondrement des infrastructures, pas pour la superintelligence."
+  text: "- **Le père Robert :** juste sous la ligne médiane et un peu à gauche. Il est inquiet, mais pour l’effondrement des infrastructures, pas pour la superintelligence."
 T74.C.03.6:
-  text: "- **Kevin :** côté droit, juste sous la ligne."
+  text: "- **Kevin :** côté droit, juste sous la ligne."
 T74.C.03.7:
-  text: "- **Casey :** côté droit, juste au-dessus de la ligne."
+  text: "- **Casey :** côté droit, juste au-dessus de la ligne."
 T74.C.04:
   text: "Une chose ressort avec le recul : dans cet épisode, Leahy était d’accord avec une fourchette de 2026 à 2030 pour son calendrier de l’AGI. Nous sommes maintenant à l’intérieur de cette fenêtre."
   anchors:
@@ -103,7 +103,7 @@ T75.C.08.3:
 T76.U.01:
   text: "Oui, c’est ce que je voulais dire. Comment définirais-tu l’AGI ? Qu’est-ce que tu penses de la façon dont Metaculus s’y prend ? Comment est-ce que je m’y prendrais, moi ?"
 T76.C.01:
-  text: "**La mienne :** un système, y compris n’importe quel nombre de copies de lui, capable de faire presque toutes les tâches cognitives qu’une personne qualifiée en télétravail peut faire, pour un coût comparable, y compris apprendre un domaine inconnu à partir d’une quantité normale d’expérience et mener un projet de plusieurs semaines jusqu’au bout sans qu’on lui tienne la main. Les éléments clés sont la généralité, l’apprentissage sur le tas et l’autonomie sur de longues durées. La version de Connor est bonne aussi : pas « sait replier des protéines » mais « sait inventer AlphaFold »."
+  text: "**La mienne :** un système, y compris n’importe quel nombre de copies de lui, capable de faire presque toutes les tâches cognitives qu’une personne qualifiée en télétravail peut faire, pour un coût comparable, y compris apprendre un domaine inconnu à partir d’une quantité normale d’expérience et mener un projet de plusieurs semaines jusqu’au bout sans qu’on lui tienne la main. Les éléments clés sont la généralité, l’apprentissage sur le tas et l’autonomie sur de longues durées. La version de Connor est bonne aussi : pas « sait replier des protéines » mais « sait inventer AlphaFold »."
   anchors:
     learning an unfamiliar domain: apprendre un domaine inconnu
     a multi-week project: un projet de plusieurs semaines
@@ -114,11 +114,11 @@ T76.C.01:
 T76.C.02:
   text: "**Metaculus**, tel que je me souviens de ses deux questions :"
 T76.C.03.1:
-  text: "- **AGI faible :** une conversation façon test de Turing, des schémas de Winograd, un score en maths au SAT meilleur que 75 % des candidats, et apprendre vite *Montezuma’s Revenge*. On peut dire qu’elle est déjà atteinte, ou atteinte sur tout sauf la lettre du règlement."
+  text: "- **AGI faible :** une conversation façon test de Turing, des schémas de Winograd, un score en maths au SAT meilleur que 75 % des candidats, et apprendre vite *Montezuma’s Revenge*. On peut dire qu’elle est déjà atteinte, ou atteinte sur tout sauf la lettre du règlement."
   anchors:
     arguably met already: déjà atteinte
 T76.C.03.2:
-  text: "- **AGI forte :** un test de Turing adversarial de deux heures, des examens et des benchmarks de programmation de niveau expert, et un robot qui assemble une maquette de voiture détaillée."
+  text: "- **AGI forte :** un test de Turing adversarial de deux heures, des examens et des benchmarks de programmation de niveau expert, et un robot qui assemble une maquette de voiture détaillée."
 T76.C.04:
   text: "Sa vertu, c’est qu’on peut trancher la question, ce qui est rare. Ses défauts : les listes de critères finissent saturées, et la loi de Goodhart prend le dessus. Le test de Turing mesure en partie l’habileté à tromper. Et l’épreuve de robotique lie « l’intelligence générale » à des mains, ce qui est plus proche de la plainte de Jeff qu’il ne l’admettrait."
   anchors:
@@ -128,7 +128,7 @@ T76.C.04:
     skill at deception: l’habileté à tromper
     ties "general intelligence" to hands: lie « l’intelligence générale » à des mains
 T76.C.05:
-  text: "**La tienne, à mon avis :** comportementale, comme le test du thrindle, pas architecturale. Tu rejetterais probablement un seuil unique, puisque tu penses que les gens sous-estiment la variation humaine. Ce serait donc quelque chose comme nos quatorze axes : l’AGI, c’est égaler le meilleur humain sur chaque axe à la fois. Ce qui est exactement ce que tu as dit ne pas arriver à concevoir."
+  text: "**La tienne, à mon avis :** comportementale, comme le test du thrindle, pas architecturale. Tu rejetterais probablement un seuil unique, puisque tu penses que les gens sous-estiment la variation humaine. Ce serait donc quelque chose comme nos quatorze axes : l’AGI, c’est égaler le meilleur humain sur chaque axe à la fois. Ce qui est exactement ce que tu as dit ne pas arriver à concevoir."
   anchors:
     our fourteen axes: nos quatorze axes
     reject a single threshold: rejetterais probablement un seuil unique

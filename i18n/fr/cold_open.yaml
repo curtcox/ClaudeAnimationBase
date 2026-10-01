@@ -1,0 +1,60 @@
+# The cold open’s page in French, by balloon (script/cold_open.yaml; src/comic.js’s MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon’s lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+officer:
+  say: "[shouting] Halte ! Qu’est-ce qu’il a dit, ce singe ?!"
+  who: le policier
+  lines: ['*Halte !*', '*QU’EST-CE*', '*QU’IL A DIT,*', '*CE*', '*SINGE ?!?*']
+  lost:
+    - what: reference
+      fr: "Le film et la BD parlent d’*apes*, de grands singes sans queue. Le titre français dit simplement *La Planète des singes*, et « singe » est le mot courant pour tout primate, donc la traduction dit « singe » sur toute la page, comme le titre."
+      en: "The film and the comic are about *apes*. The French title just says *La Planète des singes*, and *singe* is the everyday word for any primate, so the translation says *singe* throughout the page, as the title does."
+silly:
+  say: "[nervously] Euh, ne soyez pas ridicule ! Les singes ne parlent pas !"
+  who: le soigneur
+  lines: ['Euh, ne soyez', 'pas *ridicule !*', '*Les singes*', 'ne', '*parlent pas !*']
+  lost:
+    - what: address
+      fr: "Le soigneur parle à un policier, donc il le vouvoie : « ne soyez pas ridicule ». L’anglais *don’t be silly* ne trahit aucune forme d’adresse et sonne plus léger."
+      en: "The handler is speaking to a police officer, so he uses *vous*: *ne soyez pas ridicule*. English *don't be silly* shows no form of address and sounds lighter."
+positive:
+  say: "Je suis certain d’avoir entendu ce singe parler !"
+  who: le policier
+  lines: ['Je suis', '*certain*', 'd’avoir entendu', 'ce singe', 'parler !']
+impossible:
+  say: "Impossible ! Les singes n’ont pas l’usage de la parole !"
+  who: le soigneur
+  lines: ['*Impossible !*', 'Les singes', 'n’ont pas', 'l’usage', 'de la *parole !*']
+  lost:
+    - what: idiom
+      fr: "*The power of speech* devient l’expression toute faite « l’usage de la parole », plus soutenue que l’original, et donc un peu moins maladroite que le soigneur ne voudrait le paraître."
+      en: "*The power of speech* became the set phrase *l'usage de la parole* (the use of speech), more formal than the original and so a little less clumsy than the handler means to sound."
+sound:
+  say: "Alors pourquoi des sons sortaient-ils de sa bouche ?!"
+  who: le policier
+  lines: ['Alors pourquoi', 'des *sons* sortaient-ils', 'de sa *bouche ?!?*']
+handler:
+  say: "Parce que CE singe est ventriloque !"
+  who: le soigneur
+  lines: ['Parce que *CE* singe', 'est *ventriloque !*']
+suspect:
+  say: "Nous soupçonnons que vous cachez un singe intelligent qui s’est échappé bébé, il y a vingt ans !"
+  who: le blond
+  lines: ['Nous soupçonnons', 'que vous cachez', 'un singe', '*intelligent*', 'qui s’est', '*échappé*', '*bébé*, il y a', '20 ans !']
+fuss:
+  say: "C’est faux ! D’ailleurs, pourquoi tout ce tapage autour d’un singe qui parle ?"
+  who: le barbu
+  lines: ['C’est', '*faux !*', 'D’ailleurs,', 'pourquoi tout', 'ce *tapage*', 'autour', 'd’un singe', '*qui parle ?*']
+villain:
+  say: "Parce qu’un singe intelligent et doué de parole pourrait conduire les autres singes hors de leur esclavage… et nous devons perpétuer l’esclavage ! Nous avons toujours eu besoin d’esclaves, et nous en aurons toujours besoin !"
+  who: le méchant
+  lines: ['Parce qu’un singe *intelligent*', 'et *doué de parole* pourrait', 'conduire les *autres* singes', 'hors de leur *esclavage* . . .', 'et nous devons *perpétuer*', 'l’esclavage ! Nous avons', 'toujours eu *besoin* d’esclaves,', 'et nous en aurons', 'toujours *besoin !*']
+turtle:
+  say: "Vous n’avez jamais l’impression d’être dans le mauvais film ?"
+  who: l’homme au col roulé
+  lines: ['Vous', 'n’avez', 'jamais', 'l’impression', 'd’être', 'dans', 'le', '*mauvais*', '*film ?*']
+  lost:
+    - what: address
+      fr: "Le personnage se tourne vers les lecteurs, au pluriel, donc il les vouvoie. La bulle, la citation de Claude (T01.C.03) et le titre du chapitre, « Le mauvais film », concordent."
+      en: "The character turns to the readers, in the plural, so he says *vous*. The balloon, Claude's quotation (T01.C.03) and the chapter title *Le mauvais film* match."

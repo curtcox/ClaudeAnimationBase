@@ -16,7 +16,8 @@ In order:
 Later, if the first three find viewers:
 
 - **German, French**: strong interest in AI policy, but many of these viewers manage English already. Subtitles may do.
-  (German begun in full on 2026-10-01, at Curt's word: see *Conventions (German)* and the steps below.)
+  (German begun in full on 2026-10-01, at Curt's word: see *Conventions (German)* and the steps below. French begun
+  in full the same day, at Curt's word: see *Conventions (French)*.)
 - **Hindi**: YouTube's biggest market, but Indian tech viewers mostly watch in English. Subtitles first. (Begun in
   full on 2026-10-01, at Curt's word: see *Conventions (Hindi)* and the steps below.)
 - **Chinese, Korean, Arabic**: large, but YouTube is blocked in mainland China, Korean needs another script, and
@@ -196,6 +197,37 @@ the same voices.
 - **The voice:** acronyms and model names respelled for a German voice (`i18n/de/pronounce.yaml`: LLM → Ell-Ell-Em,
   T-800 → T achthundert, GPT-5.6 → G-P-T fünf Punkt sechs…).
 
+## Conventions (French, `i18n/fr`, site at `/fr/`)
+
+Claude's choices (2026-10-01, for Curt to confirm), carrying over the Spanish decisions: a full, faithful translation,
+the same voices. French of France.
+
+- **The title** is *Grenouille ou axolotl*: the axolotl keeps its name, and *frog* is *grenouille*.
+- **Tu.** Curt and Claude say *tu* to each other; in the cold open's comic the handler says *vous* to the officer, and
+  the man in the turtleneck says *vous* to the readers.
+- **Claude has no gender.** French adjectives and participles agree even in the first person, so Claude's lines avoid
+  them: *de l'amusement* not *amusé*, *je ne sais pas trop* not *je ne suis pas sûr*, *en service* not *déployé*,
+  *ontologue de métier* not *professionnel*, *j'ai cessé* not *je me suis arrêté*. Curt's questions to Claude avoid them
+  too (*tu as l'impression qu'on t'anthropomorphise ?*). On the site Claude is "Claude" or *il* (the pronoun of *le
+  programme*, *le modèle*; French has no neuter), never with an agreeing adjective.
+- **Works** by their French titles (*La Conquête de la planète des singes*, *Le Guide du voyageur galactique*, *La
+  Stratégie Ender*, *Terminator 2 : Le Jugement dernier*, "Je reviendrai"); papers, articles and sites keep their own.
+  *Ape* is *singe*, as in *La Planète des singes*; the Formics are *Formiques*.
+- **Words:** IA for AI (but AGI, LLM, RLHF, RSI stay); *register* is *registre* (an exact equivalent); *probe* is *test*;
+  *harness* is *harnais*; *shell* is *carapace* (the lobster shows through); *prompt*, *token*, *benchmark*, *reward
+  hacking*, *exploit* stay.
+- **Coinages:** *thrindle* stays *thrindle*; *confuzzled* is *confuplexe* (confus + perplexe); *Crustafarianism* is
+  *crustafarisme*.
+- **Typography** as France sets it: « » with no-break spaces inside, a no-break space before : ; ? ! and %, thousands
+  with a no-break space (17 000), decimals with a comma (0,05), typographic apostrophes. Captions and subtitles keep a
+  no-break space with its mark, so no row starts with one (`i18n/src/i18n.js`, `tools/subtitles.mjs`; English unchanged).
+- **On the site:** "[Note de la traduction : …]" for what the translation adds, and "(en anglais)" after a link with no
+  French article (165 of the film's 202 Wikipedia codes have one; 248 of the explainers' links moved).
+- **The picture:** Latin letters, so the hand-lettering fonts serve as they are; long French labels are fitted to the
+  English widths as German ones are (`fit`, `i18n/tools/stage.mjs`).
+- **The voice:** acronyms and model names respelled for a French voice (`i18n/fr/pronounce.yaml`: LLM → elle-elle-emme,
+  T-800 → T huit cents, GPT-5.6 → G-P-T cinq point six…).
+
 ## How it's built
 
 Everything for a language lives under `i18n/<lang>/`. The English film's files are left alone, except where a small,
@@ -366,6 +398,18 @@ The tools, run from the project's root:
       Claude (one in an explainer rephrased), the built site for English outside titles and quotations (none).
 - [ ] Curt confirms the conventions above (or changes them); a German-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks German. Then drafts, then the final on the faster Mac.
+
+### French
+
+- [x] The engine's hooks: French labels fitted like German ones; a no-break space stays with its mark in captions and
+      subtitles, and a sentence may end inside « » (English captions and subtitles unchanged); French Wikipedia links
+      marked "(en anglais)" where there's no French article (2026-10-01).
+- [x] The transcript (453 lines, every anchor), the cold open, the chapter titles, the lettering (406 strings), the
+      codes' captions (409; French Wikipedia for 165 of 202), the 64 explainers (Wikipedia links moved to French for
+      248, marked "(en anglais)" for 59), the site's words, the YouTube words, the translation's page
+      (`i18n/fr/translation.yaml`, at `/fr/traduction/`).
+- [ ] Curt confirms the conventions above (or changes them); a French-reading reviewer, if one turns up.
+- [ ] Voice it: eleven_v3 speaks French. Then drafts, then the final on the faster Mac.
 
 ## Costs
 

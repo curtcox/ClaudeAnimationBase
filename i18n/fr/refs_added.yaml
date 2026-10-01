@@ -1,0 +1,6 @@
+# Codes only the French film has, in script/refs.yaml’s form (i18n/tools/stage.mjs adds them to the stage’s).
+#
+# The translation’s own page (i18n/tools/lost.mjs → the French site’s traduction/): how the film was translated, how
+# else it could have been, and what a freer translation would have said, in French and English. Its code goes up on the
+# ventriloquist line, as in the other translations: in a dubbed film someone else really is doing the talking.
+- { id: traduction, url: "https://curtcox.github.io/axol-f/fr/traduction/", host: traduction/, caption: "Comment le film a été traduit, et ce qui s’est perdu", origin: added, at: T03.C.03.1, cue: "censément quelqu’un d’autre", mode: shelf, style: note }
