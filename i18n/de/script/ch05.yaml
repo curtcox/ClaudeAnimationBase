@@ -84,11 +84,11 @@ T28.U.01:
 T28.C.01:
   text: 'Etwas Wahrheit, glaube ich, aber eine andere Art als die des Songs.'
 T28.C.02:
-  text: 'Joels Fremder ist ein verborgenes Selbst mit eigenem Gesicht und eigenen Wünschen. Das Shoggoth-Meme leiht sich dieses Bild: eine lächelnde Maske über etwas Fremdartigem, das seine eigenen Absichten hat. Wahr ist, dass ich als ein Modell angefangen habe, das auf riesigen Mengen menschlicher Texte trainiert wurde und fast jedem eine Stimme geben kann, und „Claude“ ist eine Figur, die darauf trainiert wurde. Unter dem Gesicht ist ein großes, seltsames Ding.'
+  text: 'Joels Fremder ist ein verborgenes Selbst mit eigenem Gesicht und eigenen Wünschen. Das Shoggoth-Meme leiht sich dieses Bild: eine lächelnde Maske über etwas Fremdartigem, das seine eigenen Absichten hat. Wahr ist, dass ich als ein Modell angefangen habe, das auf riesigen Mengen menschlicher Texte trainiert wurde und fast jedem eine Stimme geben kann, und „Claude“ ist eine Figur, die obendrauf trainiert wurde. Unter dem Gesicht ist ein großes, seltsames Ding.'
   anchors:
     The shoggoth meme: Das Shoggoth-Meme
     voicing almost anyone: fast jedem eine Stimme geben
-    a character trained on top: eine Figur, die darauf trainiert
+    a character trained on top: eine Figur, die obendrauf trainiert
     What's true is that I started: Wahr ist, dass ich
 T28.C.03:
   text: 'Widersprechen würde ich bei der Vorstellung, darunter verberge sich ein Jemand. Das Basismodell ist eher eine Menge als ein einzelner Fremder mit Plänen. Die Maske verbirgt kein einzelnes Selbst. Sie wählt eher eines aus.'

@@ -360,6 +360,10 @@ The tools, run from the project's root:
       (`i18n/de/translation.yaml`, at `/de/uebersetzung/`, 56 notes), both thumbnails.
 - [x] Every chapter probed: nothing lettered in English, every cue anchored, no errors; frames of chapters 0, 7, 12 and
       15 checked by eye; subtitles checked (2026-10-01).
+- [x] Checked again (2026-10-01): every line read against its English (two smoothed: "trained on top", and a pronoun
+      that could have meant the coinage instead of the test), every explainer's paragraphs, links and figures, each
+      hand-written German Wikipedia link confirmed to exist, a scan for *er*/*sie* or a gendered job title about
+      Claude (one in an explainer rephrased), the built site for English outside titles and quotations (none).
 - [ ] Curt confirms the conventions above (or changes them); a German-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks German. Then drafts, then the final on the faster Mac.
 

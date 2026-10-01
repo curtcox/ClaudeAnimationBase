@@ -44,7 +44,7 @@ zum Kanal jedes Kommentators.
 
 „LLMs“ sind große Sprachmodelle, die Art von KI-Programm, die Claude ist.
 
-**Also drehte Curt es um.** Er fügte den Thread in dieses Gespräch ein und bat Claude, den Ontologen zu spielen: Wie würdest
+**Also drehte Curt es um.** Er fügte den Thread in dieses Gespräch ein und bat Claude, es aus Sicht der Ontologie zu versuchen: Wie würdest
 du feststellen, ob *ich* Konzepte habe? „Fühl mir auf den Zahn.“ Was folgte, steht in [den Thrindel-Tests](../thrindles/)
 und in [den Argumenten gegen Konzepte bei KI](../concepts-case/).
 
