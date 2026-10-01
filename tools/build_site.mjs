@@ -52,6 +52,10 @@ const filmLink = (t, depth) => FILM ? `${'../'.repeat(depth)}film/#t=${Math.floo
 const when = (t, depth) => FILM ? `<a href="${filmLink(t, depth)}" title="${esc(T.play_from_here)}">▶ ${stamp(t)}</a>` : stamp(t);
 
 // ---- pages ----
+// Every page opens with the film's thumbnail (site/thumbnail.jpg, the one YouTube shows; a translation's own, from its
+// stage), a link back to the site's front page.
+const THUMB = existsSync('site/thumbnail.jpg');
+const home = depth => THUMB ? `<a class="home${depth ? '' : ' root'}" href="${'../'.repeat(depth) || './'}"><img src="${'../'.repeat(depth)}thumbnail.jpg" width="480" height="270" alt="${esc(fill(T.home_alt, { title: T.film_title }))}"></a>` : '';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const plain = s => s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*|\*|_\[|\]_/g, '').replace(/^- |^> /gm, '');
 const CSS = `body{margin:0;background:#FBF8F0;color:#1E1A22;font:21px/1.6 Georgia,"Times New Roman",serif}
@@ -65,14 +69,17 @@ blockquote{margin:.4rem 0 .6rem;padding:.2rem 0 .2rem 1rem;border-left:4px solid
 .msg pre,details pre{overflow-x:auto;font-size:.8rem;background:#F4EEDF;padding:.5rem}.msg code,details code{font-size:.85em}
 details{margin:.5rem 0;font-size:.85rem;color:#4A4450;overflow-wrap:anywhere}details summary{cursor:pointer;font:600 .8rem system-ui,sans-serif;color:#6A6470}
 details.think{border-left:3px solid #D9D2C4;padding-left:.8rem}.mnote{font:italic .8rem system-ui,sans-serif;color:#8A8490;text-align:center;margin:1rem 0}
-table{border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1px solid #D9D2C4;padding:.3rem .5rem;text-align:left;vertical-align:top}`;
+table{border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1px solid #D9D2C4;padding:.3rem .5rem;text-align:left;vertical-align:top}
+.home{display:inline-block;margin:.2rem 0 .4rem;border-radius:8px;line-height:0}.home img{width:200px;height:auto;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.home:hover img,.home:focus img{box-shadow:0 0 0 3px #8A3A22}.home.root img{width:min(100%,480px)}`;
 const page = (title, body, depth) => `<!doctype html><html lang="${T.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(title)}</title><link rel="stylesheet" href="${'../'.repeat(depth)}style.css"></head><body><main>${body}</main></body></html>\n`;
+<title>${esc(title)}</title><link rel="stylesheet" href="${'../'.repeat(depth)}style.css"></head><body><main>${home(depth)}${body}</main></body></html>\n`;
 const write = (path, html) => { mkdirSync(path.replace(/\/[^/]*$/, ''), { recursive: true }); writeFileSync(path, html); };
 
 if (existsSync(OUT)) rmSync(OUT, { recursive: true });
 mkdirSync(OUT, { recursive: true });
 writeFileSync(`${OUT}/style.css`, CSS);
+if (THUMB) copyFileSync('site/thumbnail.jpg', `${OUT}/thumbnail.jpg`);
 write(`${OUT}/index.html`, page(T.index_title, `<h1>${esc(T.film_title)}</h1>
 ${T.index_intro}
 ${FILM ? `<p class="explainer" style="padding:.6rem 1rem"><a href="film/"><strong>${T.watch_film}</strong></a>${T.watch_film_after}</p>${FILM.kind === 'youtube' ? `<p><a href="${esc(ytUrl(0))}">${T.on_youtube}</a>${T.on_youtube_after}</p>` : ''}`
@@ -85,8 +92,9 @@ ${T.index_notes}`, 0));
 // the site's own addresses for other pages (base + r/NAME/, see script_lib's withQrTargets): each forwards to its url
 for (const r of refs.filter(r => r.qr_url && r.qr_url.startsWith(site.base + site.short))) {
   const name = r.qr_url.slice((site.base + site.short).length).replace(/\/$/, '');
+  const deep = `${site.short}${name}`.split('/').filter(Boolean).length;
   write(`${OUT}/${site.short}${name}/index.html`, `<!doctype html><html lang="${T.lang}"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${esc(r.url)}">
-<link rel="canonical" href="${esc(r.url)}"><title>${esc(r.caption)}</title></head><body><p>${T.going_to} <a href="${esc(r.url)}">${esc(r.caption)}</a>…</p></body></html>\n`);
+<link rel="canonical" href="${esc(r.url)}"><title>${esc(r.caption)}</title><link rel="stylesheet" href="${'../'.repeat(deep)}style.css"></head><body><main>${home(deep)}<p>${T.going_to} <a href="${esc(r.url)}">${esc(r.caption)}</a>…</p></main></body></html>\n`);
 }
 // the conversation itself, the site's own copy (refs.yaml the-conversation, host: conversation/): every turn, word for
 // word as the transcript has it, under the chapter it falls in
@@ -224,7 +232,7 @@ video,#pin iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:
 .chs{columns:2;font-size:.95rem}.small{font:.8rem system-ui;color:#6A6470}
 @media (max-width:900px){main{grid-template-columns:1fr}#left{display:contents}#list{position:static;max-height:none;order:1}.chs{columns:1}
 #pin{position:sticky;top:0;z-index:2;background:#FBF8F0;margin:0 -1rem;padding:.4rem 1rem .3rem;box-shadow:0 6px 8px -6px rgba(0,0,0,.25)}#line{min-height:3.2em;font-size:.9rem;margin-top:.3rem}#rest{order:2}}</style></head><body><main>
-<div id="left"><div><p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.the_film}</p><h1 style="margin-top:0">${esc(T.film_title)}</h1></div>
+<div id="left"><div>${home(1)}<p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.the_film}</p><h1 style="margin-top:0">${esc(T.film_title)}</h1></div>
 ${player}
 <div id="rest"><p class="note">${T.highlighted} <label><input type="checkbox" id="follow" checked> ${T.follow_film}</label></p>
 <h2>${T.chapters}</h2><ol class="chs" start="0">${chs}</ol></div></div>
@@ -296,7 +304,7 @@ button{font:600 .85rem system-ui;padding:.35rem .7rem;border-radius:6px;border:1
 .nt{border:1px solid #E0D8C8;border-radius:10px;padding:.5rem .7rem;margin:.5rem 0;background:#fff;overflow-wrap:anywhere}.nt.claude{border-left:5px solid #A84D33}.nt.curt{border-left:5px solid #3A6FC9}.nt.resolved{opacity:.55}.nt.near{box-shadow:0 0 0 3px #F2C14E}.nt.target{box-shadow:0 0 0 4px #3A6FC9}
 .who{font:700 .75rem system-ui;letter-spacing:.04em}.claude .who{color:#A84D33}.curt .who{color:#3A6FC9}.rep{margin:.3rem 0 0 1rem;font-size:.95rem}.rep.curt .who{color:#3A6FC9}.rep.claude .who{color:#A84D33}.rep .who{margin-right:.4em}
 .nt .opts button{font-weight:500}.small{font:.8rem system-ui;color:#6A6470}</style></head><body><main>
-<div><p class="crumbs"><a href="../">${esc(T.film_title)}</a> · <a href="../ch${pad(c.n)}/">${fill(T.chapter_links, { n: c.n })}</a> · ${T.watch_crumb}</p><h1 style="margin-top:0">${c.n}. ${esc(c.title)}</h1>
+<div>${home(1)}<p class="crumbs"><a href="../">${esc(T.film_title)}</a> · <a href="../ch${pad(c.n)}/">${fill(T.chapter_links, { n: c.n })}</a> · ${T.watch_crumb}</p><h1 style="margin-top:0">${c.n}. ${esc(c.title)}</h1>
 <div id="stage"><video id="v" src="ch${pad(c.n)}.mp4" controls preload="metadata"></video><div id="pinlayer"></div></div><div id="line"></div>
 <p class="note">${T.highlighted} <label><input type="checkbox" id="follow" checked> ${T.follow_video}</label></p>
 <section id="notes" hidden><h2>Review notes <a href="/review/" class="small">(what needs review, all chapters)</a></h2>
@@ -473,6 +481,6 @@ by code, so you can make it yourself: <a href="{repo}">get the code</a> and run 
     highlighted: 'Highlighted links are on screen now. Click a time to jump there; links open in a new tab.',
     follow_film: 'keep the list following the film', follow_video: 'keep the list following the video',
     badge_explained: 'explained', badge_chat: 'in the chat', badge_source: 'source',
-    on_youtube: 'Watch on YouTube', on_youtube_after: ' (the same film, with YouTube\'s comments and chapters).',
+    home_alt: '{title}: back to the front page', on_youtube: 'Watch on YouTube', on_youtube_after: ' (the same film, with YouTube\'s comments and chapters).',
   };
 }

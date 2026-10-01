@@ -1,5 +1,7 @@
 # Frog or Axolotl
 
+<img src="docs/thumbnail_swarm.jpg" width="640" alt="Frog or Axolotl: a crowd of coloured dots lifting a smiling Claude mask off its face, on a MAD-style cover">
+
 A voiced, painted film of one long Saturday-morning conversation between Curt and Claude, from a *MAD* magazine parody
 to eval awareness, minds, the July 2026 Hugging Face incident and P(foom). Every word is the conversation's own, and
 every link it mentions is a QR code on screen, pointing at the companion site: https://curtcox.github.io/axol-f/

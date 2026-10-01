@@ -56,9 +56,14 @@ h2{font-size:1.35rem;margin:2.4rem 0 .6rem;border-top:1px solid #D9D2C4;padding-
 td,th{border-bottom:1px solid #D9D2C4;padding:.4rem .5rem;text-align:left;vertical-align:top}th{font:600 .8rem system-ui,sans-serif;color:#6A6470}
 td.id{font:.72rem system-ui,sans-serif;color:#8A8490;white-space:nowrap}ul{padding-left:1.2rem}li{margin:.3rem 0}
 .count{font:600 .85rem system-ui,sans-serif;color:#6A6470}
+.home{display:inline-block;margin:.2rem 0 .4rem;border-radius:8px;line-height:0}.home img{width:200px;height:auto;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.home:hover img,.home:focus img{box-shadow:0 0 0 3px #8A3A22}
 @media (max-width:720px){.pair,.texts{grid-template-columns:1fr}main{padding:1rem 16px 3rem}td.id{white-space:normal}}`;
+// the site's thumbnail, back to the front page, as on every page of the site (tools/build_site.mjs)
+const SITE_T = optYaml(`${dirOf(lang)}/site_strings.yaml`, {});
+const home = depth => existsSync(`${S}/site/thumbnail.jpg`) ? `<a class="home" href="${'../'.repeat(depth)}"><img src="${'../'.repeat(depth)}thumbnail.jpg" width="480" height="270" alt="${esc(String(SITE_T.home_alt || '{title}').replace('{title}', SITE_T.film_title || 'Frog or Axolotl'))}"></a>` : '';
 const html = (title, body, depth) => `<!doctype html><html lang="${HL}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(title)}</title><style>${CSS}</style></head><body><main>${body}</main></body></html>\n`;
+<title>${esc(title)}</title><style>${CSS}</style></head><body><main>${home(depth)}${body}</main></body></html>\n`;
 const pair = (a, b) => `<div class="pair"><div lang="${HL}"><p class="lang">${esc(P.labels[`lang_${lang}`])}</p>${mdb(fill(a))}</div><div lang="en"><p class="lang">English</p>${mdb(fill(b))}</div></div>`;
 const chName = n => n == null ? `${P.labels[`film_${lang}`]} / ${P.labels.film_en}` : `${n}. ${titles[n] ?? ''} / ${chapters.find(c => c.n === n)?.title ?? ''}`;
 

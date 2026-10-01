@@ -125,6 +125,8 @@ yaml('script/site_strings.yaml', "The site's own words, translated.", optYaml(`$
 // the YouTube upload's words (tools/youtube.mjs's YOUTUBE_WORDS), translated
 yaml('script/youtube_strings.yaml', "The YouTube upload's words, translated.", optYaml(`${L}/youtube_strings.yaml`, {}));
 for (const f of ['pronounce.yaml', 'overrides.yaml']) yaml(`script/${f}`, 'Unused in a translation (see i18n/<lang>/pronounce.yaml).', []);
+// the site's thumbnail, the language's own (i18n/<lang>/site/thumbnail.jpg, from its thumbnail_swarm.jpg)
+if (existsSync(`${L}/site/thumbnail.jpg`)) link(`${L}/site/thumbnail.jpg`, 'site/thumbnail.jpg');
 // the explainers' codes: from the language's explainers (i18n/<lang>/site/notes, linked in as the stage's site/notes),
 // as tools/build_site.mjs writes them; until those exist, the English ones with their captions translated
 const NOTES = `${L}/site/notes`;

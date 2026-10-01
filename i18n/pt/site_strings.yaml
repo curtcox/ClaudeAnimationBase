@@ -79,3 +79,4 @@ transcript_head: |-
   Tradução: Claude, sem revisão humana. Como foi traduzido: https://curtcox.github.io/axol-f/pt/traducao/
 on_youtube: Assistir no YouTube
 on_youtube_after: ' (o mesmo filme, com os comentários e capítulos do YouTube).'
+home_alt: '{title}: voltar à página inicial'
