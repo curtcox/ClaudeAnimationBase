@@ -7,6 +7,7 @@
 // Also writes, in out/film/:
 //   film.json    which renders went in, and where each chapter starts in the film (the site's film page uses it)
 //   youtube.md   the upload's title, description and tags, to paste in (tools/youtube.mjs)
+//   subtitles.srt  the subtitles, to upload beside the film (tools/subtitles.mjs)
 import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, statSync, writeFileSync, readFileSync, renameSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -76,4 +77,5 @@ function hms(s) { s = Math.floor(s); const h = Math.floor(s / 3600), m = Math.fl
 console.log(`${DIR}/film.json`);
 // the YouTube upload's words
 await import('./youtube.mjs');
+await import('./subtitles.mjs');
 

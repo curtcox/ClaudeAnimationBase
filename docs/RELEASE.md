@@ -89,6 +89,8 @@ It needs one-time setup (Curt):
    description (with chapter markers and the site's address, checked against YouTube's rules and 5,000-character limit)
    and tags.
 2. Upload `film.mp4` on YouTube Studio and paste those in. Add the thumbnail, `docs/thumbnail.jpg` (`npm run thumbnail`).
+   Under Subtitles, add English with "Upload file", "With timing": `out/film/subtitles.srt` (made with the film, or
+   `node tools/subtitles.mjs`). It's the burned-in captions' words and times, for viewers who'd rather use YouTube's.
 3. Put the video's id in `script/site.yaml` as `film: youtube:`, commit and push. The published site then embeds it.
 
 **Possible automation later** (not easy enough to do now):
