@@ -20,6 +20,7 @@ const NAMES = { curt: 'Curt', claude: 'Claude', ...(words.subtitle_names || {}) 
 const LANG = existsSync('script/site_strings.yaml') ? readYaml('script/site_strings.yaml').lang : 'en';
 const CJK = /^(ja|zh|ko)\b/.test(LANG), ROW = CJK ? 16 : 42, PIECE = CJK ? 26 : 80, GAP = CJK ? '' : ' ';
 const SEG = CJK && new Intl.Segmenter(LANG, { granularity: 'word' });
+const ZH = /^zh\b/.test(LANG), ZH_PARTICLE = /^(的|了|嗎|呢|吧|啊|呀|嘛|啦|們|著|過|得|地)$/u;
 const PARTICLE = /^(を|は|が|に|で|と|も|へ|や|の|か|には|では|とは|から|まで|より|ので|けど|って)$/u, NO_START = /^[、。，．！？!?…‥・：；:;）」』】〕)\]’”ーぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ%％]/u, NO_END = /[「『（【〔(\[‘“]$/u;
 const cjkWords = s => {
   const out = []; let prev = '';
@@ -31,7 +32,9 @@ const cjkWords = s => {
     // a figure keeps its counter (20|年 → 20年), and この・その・あの・どの the word they point at
     const counted = /[0-9０-９]$/.test(out[last] || '') && /^[\p{Script=Han}\p{Script=Katakana}]/u.test(g);
     const pointer = /^(この|その|あの|どの)$/.test(out[last] || '');
-    if (last >= 0 && (counted || pointer || /^\s+$/.test(g) || kana || latin || NO_START.test(g) || NO_END.test(out[last]))) out[last] += g; else out.push(g);
+    // Chinese: a particle (的 了 嗎 們…) stays with the word before it, and a measure word with its numeral (十四|條)
+    const zh = ZH && (ZH_PARTICLE.test(g) || /[一二兩三四五六七八九十百千萬幾]$/u.test(out[last] || '') && /^\p{Script=Han}$/u.test(g));
+    if (last >= 0 && (counted || pointer || zh || /^\s+$/.test(g) || kana || latin || NO_START.test(g) || NO_END.test(out[last]))) out[last] += g; else out.push(g);
     prev = g;
   }
   return out;
@@ -63,7 +66,7 @@ function fixOf(mark) {
 function rows(s) {
   if (len(s) <= ROW) return s;
   const w = tokensOf(s); let best = null;
-  for (let i = 1; i < w.length; i++) { const a = tidy(w.slice(0, i).join(GAP)), b = tidy(w.slice(i).join(GAP)), m = Math.max(len(a), len(b)), d = m + (CJK ? (/[、。！？」』）]$/.test(a) ? 0 : 3) + (m > ROW ? (m - ROW) * 10 : 0) : 0); if (!best || d < best[0]) best = [d, a + '\n' + b]; }
+  for (let i = 1; i < w.length; i++) { const a = tidy(w.slice(0, i).join(GAP)), b = tidy(w.slice(i).join(GAP)), m = Math.max(len(a), len(b)), d = m + (CJK ? (/[、，；。！？」』）]$/.test(a) ? 0 : 3) + (m > ROW ? (m - ROW) * 10 : 0) : 0); if (!best || d < best[0]) best = [d, a + '\n' + b]; }
   return best ? best[1] : s;
 }
 // a sentence cut into pieces that fit, preferring a break after a comma, semicolon, colon or dash
@@ -75,7 +78,9 @@ function pieces(s) {
     cur.push(w[i]);
     const now = len(tidy(cur.join(GAP))), left = len(tidy(w.slice(i + 1).join(GAP))), aim = len(s) / n;
     const soft = (CJK ? /[、，；：…—）」』]\s*$/ : /[,;:—–)]$/).test(w[i]) && now > aim * .6, hard = now + GAP.length + len(tidy(w[i + 1] || '')) > max;
-    if (left > (CJK ? 8 : 0) && (hard || soft || now >= aim)) { out.push(tidy(cur.join(GAP))); cur = []; }
+    // in Japanese or Chinese, a cue past its share waits for a comma a little further on rather than cut mid-phrase
+    const comma = CJK && !soft && !hard && w.slice(i + 1).findIndex((x, k) => /[、，；：…—）」』]\s*$/.test(x) && len(tidy([...cur, ...w.slice(i + 1, i + 2 + k)].join(GAP))) <= Math.min(max, aim * 1.4) && len(tidy(w.slice(i + 2 + k).join(GAP))) > 8) >= 0;
+    if (left > (CJK ? 8 : 0) && (hard || soft || now >= aim && !comma)) { out.push(tidy(cur.join(GAP))); cur = []; }
   }
   if (cur.length) out.push(tidy(cur.join(GAP)));
   return out;

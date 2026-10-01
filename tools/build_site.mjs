@@ -9,6 +9,10 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync
 import YAML from 'yaml';
 import { marked, Marked } from 'marked';
 import { PATHS, readYaml, pad, withQrTargets } from './script_lib.mjs';
+// Bold and italics touching Chinese or Japanese: CommonMark won't close "**…。**" when a letter follows directly, as
+// it does in writing without spaces, so such spans become HTML first. Text with no CJK in it is left alone.
+const CJK = /[\u3000-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef]/;
+const cjkEmphasis = s => s.replace(/(\*\*|\*)(?=[^\s*])([^*\n]*?[^\s*])\1/g, (m, d, x, at) => CJK.test(x + (s[at - 1] || '') + (s[at + m.length] || '')) ? (d === '**' ? `<strong>${x}</strong>` : `<em>${x}</em>`) : m);
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true]; }));
 const site = readYaml('script/site.yaml'), OUT = 'site/public';
@@ -108,7 +112,7 @@ for (const r of refs.filter(r => r.qr_url && r.qr_url.startsWith(site.base + sit
   let ch = null; const body = [];
   for (const t of turns) {
     if (t.ch !== ch) { ch = t.ch; const c = chapters.find(c => c.n === ch); body.push(`<h2><a href="../ch${pad(ch)}/">${ch}. ${esc(c.title)}</a></h2>`); }
-    body.push(`<div class="moment"><div class="when">${t.speaker === 'curt' ? 'Curt' : 'Claude'}</div>${marked.parse(t.md)}</div>`);
+    body.push(`<div class="moment"><div class="when">${t.speaker === 'curt' ? T.curt ?? 'Curt' : 'Claude'}</div>${marked.parse(cjkEmphasis(t.md))}</div>`);
   }
   const orig = byRef.get('the-conversation');
   write(`${OUT}/conversation/index.html`, page(T.conversation_title, `<p class="crumbs"><a href="../">${esc(T.film_title)}</a> · ${T.conversation_crumb}</p>
@@ -179,7 +183,7 @@ for (const n of notes) {
   const links = (n.links || []).map(linkOf);
   write(`${OUT}/${site.notes}${n.id}/index.html`, page(n.title, `<p class="crumbs"><a href="../../">${esc(T.film_title)}</a> · <a href="../../ch${pad(n.ch)}/">${T.chapter} ${n.ch}: ${esc(chapters[ci].title)}</a></p>
 <h1>${esc(n.title)}</h1>${l ? `<div class="when">${T.in_the_film} ${when(inFilm(ci, l.id), 2)}</div><blockquote>${esc(plain(l.text).slice(0, 260))}${plain(l.text).length > 260 ? '…' : ''}</blockquote>` : ''}
-${marked.parse(n.body)}<h2>${T.read_more}</h2><ul>${links.map(k => `<li><a href="${esc(k.url)}">${esc(k.title)}</a></li>`).join('')}</ul>`, 2));
+${marked.parse(cjkEmphasis(n.body))}<h2>${T.read_more}</h2><ul>${links.map(k => `<li><a href="${esc(k.url)}">${esc(k.title)}</a></li>`).join('')}</ul>`, 2));
 }
 // ---- watch pages: a chapter's video with its links in step (out/watch/chNN.json, from tools/watch.mjs) ----
 const watched = [];

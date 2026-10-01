@@ -1,0 +1,204 @@
+# The translation's own page (i18n/tools/lost.mjs → the Chinese site's fanyi/), in Chinese and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+slug: fanyi
+text_slug: quanwen
+html_lang: zh-Hant-TW
+
+title:
+  zh: 這部影片怎麼翻譯的，又失去了什麼
+  en: How this film was translated, and what was lost
+text_title:
+  zh: 整部影片，兩種語言
+  en: The whole film, in both languages
+labels:
+  lang_zh: 中文
+  film_zh: 整部影片
+  film_en: The whole film
+  original: 原文（英文）
+  ours: 這個翻譯
+  free: 比較自由的翻譯
+  kinds_zh: 失去了什麼，按種類
+  kinds_en: What gets lost, by kind
+  list_zh: 逐行
+  list_en: Line by line
+
+sections:
+  - zh_title: 這一頁
+    en_title: This page
+    zh: |
+      《青蛙還是六角恐龍》是一部動畫影片，逐字取材自寇特‧考克斯和Anthropic打造的AI程式Claude之間一段真實的對話。對話原本是英文的。這是它的繁體中文版。
+
+      這一頁說明它是怎麼翻譯的、還可以怎麼翻譯，以及逐行來看，有什麼會不一樣。所有內容都有兩種語言，讓兩種都讀得懂的人可以自己判斷這個翻譯。另外也有[整部影片的英文和中文並排對照](quanwen/)。
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude, an AI program made by Anthropic. The conversation was in English. This is the Chinese version, in Traditional characters.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line by line. Everything is in both languages so that anyone who reads both can judge the translation for themselves. There's also [the whole film, in English and Chinese, side by side](quanwen/).
+
+  - zh_title: 誰翻譯的
+    en_title: Who translated it
+    zh: |
+      全部由Claude（Claude Opus 5.5模型）翻譯：對話的每一行、畫面裡畫出的每一個字、標題、代碼的說明文字、影片附帶的網站（它的64篇解說和各個頁面），以及這一頁，包括關於失去了什麼的註記。
+
+      做這個版本的理由之一，是原封不動地呈現Claude怎麼翻譯。所以**沒有任何人類譯者修改過它**，之後如果有任何修正，都會連同日期註記在這一頁（也會留在程式碼的公開歷史紀錄裡）。
+
+      目前：{total}行中已翻譯{lines}行（章節{chapters_done}）。人工審校：尚無。
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - zh_title: 怎麼翻譯的
+    en_title: How it was translated
+    zh: |
+      - **忠實，逐行。** 對話的每一個段落和清單項目，就是影片的一行，翻譯保留同樣的行、同樣的順序，以及同樣的粗體、斜體、清單和連結。先求意思，再求形式；絕不自由改編。
+      - **繁體中文，台灣的用法。** 在中國大陸，YouTube被封鎖，所以這部影片的中文觀眾主要在台灣、香港和海外。用字和用詞照台灣的習慣（程式、軟體、網路、資料）。從繁體轉成簡體幾乎可以自動完成，反過來就不行，所以先做繁體，簡體版的字幕之後可以很便宜地轉出來。
+      - **你。** 寇特和Claude彼此都說「你」，不說「您」：英文的對話很隨意，而Claude的英文也不是恭敬的語氣。
+      - **Claude沒有性別。** 中文的動詞和形容詞沒有性別，所以Claude說話時不必選擇。只有書面的第三人稱「他」、「她」、「它」在字形上有分別（讀音都一樣）。網站上照英文的 *it* 寫成「它」，或直接寫「Claude」，從不寫成「他」或「她」。
+      - **標題和名字。** 電影或書用台灣的中文片名或書名（《猩球征服》、《安德的遊戲》、《銀河便車指南》、《魔鬼終結者2》、比利‧喬的〈陌生人〉）。論文、文章和網站保留原本的標題。人名照台灣媒體的習慣音譯成漢字（寇特、圖靈、夢露）；公司、產品和模型保留英文，像台灣的科技報導一樣（Claude、Anthropic、OpenAI、ChatGPT、GPT-5.6 Luna）。
+      - **六角恐龍。** *Axolotl*譯成「六角恐龍」，這是台灣人人都知道的名字，而不是動物學的「墨西哥鈍口螈」：這部影片講的，正是一個人第一個想到的名字。*Ape*譯成「猩猩」，系列電影的中文片名「猩球」就是從這裡來的。
+      - **連結。** 原本指向英文維基百科的代碼，在有中文條目的地方，改成指向同一個條目的中文版，並以台灣的正體字顯示（根據維基百科自己的跨語言連結；202個中有147個）。其他資料來源大多仍是英文。
+      - **畫面。** 畫面裡寫的每一樣東西都是中文：標籤、卡片、標題，以及開場漫畫的對話框。MAD那一頁是美國雜誌的，所以是橫著寫的。字體是每台Mac都有的蘋方（PingFang TC）。
+      - **聲音。** 和英文版同樣的聲音：寇特的複製聲音，以及替Claude配音的River（ElevenLabs，eleven_v3模型）。他們說中文時會帶一點口音。Claude的嘴形會根據中文音訊重新計算。目前還沒有任何一章錄好音；全部都翻譯好了，等著錄製。
+      - **長度。** 動畫跟著聲音走，所以影片會拉長或縮短，而不是讓話趕著說。
+      - **和動畫綁在一起。** 許多場景會在某個詞句說出的那一刻剛好動起來。每一個這樣的詞句（目前{anchors}個）都需要它的中文對應。中文的語序和英文不同，所以有些地方，翻譯保留了比必要更接近英文的語序。
+      - **寇特的打字錯誤。** 英文版的影片會把寇特的打字錯誤用紅筆劃掉，上面寫上正確的字。錯誤能在翻譯中存活的地方（留在英文字母裡的名字：Shoggath、Solid Gold Magicarp、AGI 2027）就保留；取決於英文的地方就失去了，並在下面註記。
+      - **保留英文的東西。** 沒有中文名稱的論文、文章、節目和歌曲的標題；Claude引用的資料來源；以及示範模型如何把文字切成*詞元*的畫面，它們呈現的是模型實際讀到的英文。
+      - **數字。** 照中文的寫法：1萬7000（17,000）、0.05、40%，有時說「九成」。
+      - **網站。** 網站的64篇解說照同樣的規則翻譯。它們引用影片的話，用的是這個翻譯的字句。翻譯加上原文沒有的東西時，放在方括號裡，以「譯註」開頭。指向英文維基百科的連結，在有中文條目的地方改指中文條目；沒有的地方，標上（英文）。做出這部影片的那段對話，也就是寇特和Claude一起打造它的那段，沒有翻譯：它在原版網站上，是英文的。
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning first, then form; never a free adaptation.
+      - **Traditional Chinese, as Taiwan writes it.** YouTube is blocked in mainland China, so the film's Chinese viewers are mostly in Taiwan, Hong Kong and abroad. The characters and words are Taiwan's (程式 for program, 軟體 software, 網路 network, 資料 data). Traditional converts to Simplified almost automatically, and not the other way round, so Traditional came first; Simplified subtitles can follow cheaply.
+      - **You.** Curt and Claude both say 你 (you) to each other, never the polite 您: the English conversation is casual, and Claude's English isn't deferential.
+      - **Claude has no gender.** Chinese verbs and adjectives have no gender, so Claude never has to choose when it speaks. Only the written third person tells 他 (he), 她 (she) and 它 (it) apart (they sound the same). On the site Claude is 它, following the English *it*, or simply "Claude", never 他 or 她.
+      - **Titles and names.** A film or book goes by its Taiwanese title (《猩球征服》, 《安德的遊戲》, 《銀河便車指南》, 《魔鬼終結者2》, Billy Joel's 〈陌生人〉). Papers, articles and sites keep their own titles. People's names are transliterated into characters, as Taiwanese media do (寇特 Curt, 圖靈 Turing, 夢露 Monroe); companies, products and models stay in Latin letters, as Taiwanese tech writing leaves them (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna).
+      - **六角恐龍.** *Axolotl* is 六角恐龍 ("six-horned dinosaur"), the name everyone in Taiwan knows, not the zoologists' 墨西哥鈍口螈: the film is about the name a person thinks of first. *Ape* is 猩猩, the word the series' Chinese titles (猩球, "ape planet") come from.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in Chinese where there is one, shown in Taiwan's characters (Wikipedia's own links between languages say so; 147 of 202). Other sources are mostly still English.
+      - **The picture.** Everything written in the picture is in Chinese: labels, cards, titles, and the balloons of the opening comic. The MAD page is an American magazine's, so it's lettered across. The lettering is PingFang TC, which every Mac has.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs, the eleven_v3 model). They'll speak Chinese with something of an accent. Claude's mouth movements are worked out again from the Chinese audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
+      - **Length.** The animation follows the voice, so the film stretches or shrinks rather than rushing the words.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so far) needed its Chinese counterpart. Chinese word order differs from English, so in places the translation kept an order closer to the English than it needed to.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above. Where a slip survives translation (names kept in Latin letters: Shoggath, Solid Gold Magicarp, AGI 2027) it's kept; where it depends on English, it's lost, and noted below.
+      - **What stays English.** Titles of papers, articles, shows and songs with no Chinese title; the sources Claude cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model actually read.
+      - **Numbers.** As Chinese writes them: 1萬7000 (17,000), 0.05, 40%, and sometimes 九成 ("nine tenths").
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use this translation's words. Where the translation adds something the original doesn't say, it's in square brackets and starts 譯註 (translator's note). Links to English Wikipedia point at the Chinese article where there is one; where there isn't, they say （英文） (English). The conversation that made the film, in which Curt and Claude build it, wasn't translated: it's in English on the original site.
+
+  - zh_title: 還可以怎麼翻譯
+    en_title: How else it could have been translated
+    zh: |
+      這些都是可能的做法。西班牙語版本，寇特選擇了完整、忠實的翻譯，用同樣的聲音；這個版本照同樣的選擇。
+
+      - **只有字幕。** 英文的聲音和畫面，下面加中文字幕。最便宜，也最忠於原本的聲音，但要讀很多字、讀得很快，而且畫面裡的字仍是英文。台灣的觀眾習慣看有字幕的外國片，所以這會是一個特別自然的選擇。
+      - **在英文畫面上配音。** 中文的聲音，但標籤、卡片和漫畫是英文的。
+      - **自由改編。** 把笑話和俗語改寫成在中文裡行得通，把引用換成比較熟悉的。聽起來比較自然；但它就不再逐字是那段真實發生過的對話。
+      - **專業的對嘴配音。** 電影配音會讓每一句符合原本的長度和嘴形，有時會改變說的內容。這裡剛好相反：是動畫去配合台詞。
+      - **母語的聲音。** 配音員，或母語人士的合成聲音：自然的口音，但不再是寇特的聲音。
+      - **簡體中文。** 中文讀者最多的寫法。但這部影片的中文觀眾主要在YouTube上，而那裡的觀眾大多讀繁體；簡體的字幕之後可以從這個版本轉出來。
+      - **人類譯者，或人工審校。** 一部影片的常規做法。這一部刻意兩者都沒有：重點是呈現Claude翻譯出來的原樣。
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with Chinese text underneath. Cheapest and truest to the original sound, but it means reading a lot, fast, and the writing in the picture stays English. Taiwanese audiences are used to subtitled foreign films, so this would have been an especially natural choice.
+      - **A dub over the English picture.** Chinese voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in Chinese, references swapped for better-known ones. It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** Film dubbing fits each line to the original's length and lip movements, sometimes changing what's said. Here it's the other way round: the animation fits the line.
+      - **Native voices.** Voice actors, or synthetic voices of native speakers: a natural accent, but no longer Curt's voice.
+      - **Simplified Chinese.** The way most Chinese readers write. But the film's Chinese audience is mostly on YouTube, where viewers mostly read Traditional; Simplified subtitles can be converted from this version later.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the point is to show Claude's translation as it came out.
+
+  - zh_title: 有什麼會不一樣
+    en_title: What would have been different
+    zh: |
+      比較自由的翻譯，幾乎在每個地方聽起來都會更自然。它會用中文的俗語，而不是照搬英文的；它會用電影中文配音裡的字句來引用電影；它會改寫文字遊戲，讓它們行得通。代價是，它會偏離寇特和Claude實際說過的話，而這部影片也就不再是那段對話的精確紀錄。
+
+      以下逐行列出目前記下的{notes}處差異：原文、這個翻譯、比較自由的翻譯會怎麼說，以及為什麼。
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use Chinese idioms instead of copying English ones, quote films in the words of their Chinese dubs, and rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually said, and the film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer translation would put it, and why.
+
+  - zh_title: 你來判斷
+    en_title: You be the judge
+    zh: |
+      如果你兩種語言都讀得懂，你的看法正是這一頁的用意：一個錯誤、一句聽起來不對勁的話、一則錯誤的註記、一處失去了卻沒有註記的東西。你可以在[這部影片的儲存庫](https://github.com/curtcox/axol-f/issues)開一個issue告訴我們。每一個修正都會註記在這裡。
+    en: |
+      If you read both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a note that's wrong, something lost that isn't noted. You can say so by opening an issue on [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  zh: |
+    每一則註記都列出原本的那一行、這個翻譯，以及用黃色標出的、比較自由的翻譯會怎麼說（在差異寫得出來的地方）。種類旁邊的代碼，指出那一行在[全文](quanwen/)裡的位置。
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where the difference can be written out). The code beside the kind identifies the line in [the full text](quanwen/).
+
+text_intro:
+  zh: |
+    影片的每一行：左邊是英文的原始對話，右邊是中文版裡聽到和看到的翻譯。破折號（—）表示還沒翻譯的行。
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard and seen in the Chinese version. A dash (—) marks a line not translated yet.
+
+kinds:
+  script:     { zh: 字體, en: The script, what_zh: '繁體字和台灣的用詞，相對於簡體字和大陸的用詞。', what_en: 'Traditional characters and Taiwan''s words, as against Simplified characters and the mainland''s.' }
+  address:    { zh: 稱呼和語氣, en: Register and address, what_zh: '中文要選擇對人說「你」還是「您」。', what_en: 'Chinese has to choose between 你 and the polite 您 for "you".' }
+  idiom:      { zh: 俗語, en: Idioms, what_zh: '在中文裡沒有完全對應的英文固定說法。', what_en: 'English set phrases with no exact equivalent.' }
+  wordplay:   { zh: 文字遊戲, en: Wordplay, what_zh: '依賴英文字詞的笑話。', what_en: 'Jokes that depend on the English words.' }
+  nuance:     { zh: 意思的細微差別, en: Shades of meaning, what_zh: '意思稍微偏移的字詞。', what_en: 'Words whose meaning shifts a little.' }
+  ambiguity:  { zh: 歧義, en: Ambiguity, what_zh: '在英文裡有兩種讀法、在中文裡只剩一種的句子。', what_en: 'Lines with two readings in English and one in Chinese.' }
+  coinage:    { zh: 新造詞和外來語, en: Coinages and loanwords, what_zh: '自創的字或專門術語，很多直接保留英文。', what_en: 'Invented or technical words, many kept in English.' }
+  reference:  { zh: 引用的作品和標題, en: References and titles, what_zh: '在中文裡以別的名字為人所知，或根本沒有名字的作品。', what_en: 'Works known by another name, or none, in Chinese.' }
+  quote:      { zh: 引文, en: Quotations, what_zh: '從別處引來的話。', what_en: 'Words quoted from somewhere else.' }
+  rhythm:     { zh: 節奏和語序, en: Rhythm and word order, what_zh: '中文的語序和英文不同，字詞出現的順序也跟著變。', what_en: 'Chinese word order differs from English, so words arrive in a different order.' }
+  typo:       { zh: 寇特的打字錯誤, en: Curt's typos, what_zh: '在翻譯中存活不了的打字錯誤。', what_en: 'Typing mistakes that don''t survive translation.' }
+  title:      { zh: 標題, en: The title, what_zh: '影片和各章的名字。', what_en: 'The name of the film and its chapters.' }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: 片名 / title
+    original: 'Frog or Axolotl'
+    ours: '青蛙還是六角恐龍'
+    free: '青蛙？還是六角恐龍？'
+    zh: '英文片名是三個字，簡短、平鋪直敘。中文用「還是」連起來，意思一樣，但少了一點英文那種乾脆。'
+    en: 'The English title is three words, short and flat. The Chinese joins them with 還是 ("or else"): the same meaning, a little less blunt than the English.'
+  - what: script
+    ch: null
+    where: 整部影片 / the whole film
+    original: 'English'
+    ours: '繁體中文（台灣）'
+    free: '简体中文'
+    zh: '中文有兩套寫法。這個版本用繁體字和台灣的用詞（程式、軟體、網路、資料），因為YouTube在中國大陸被封鎖，這部影片的中文觀眾主要在台灣、香港和海外。用簡體字和大陸用詞（程序、软件、网络、数据）的讀者讀得懂，但會覺得有些字詞陌生。'
+    en: 'Chinese has two ways of writing. This version uses Traditional characters and Taiwan''s words (程式, 軟體, 網路, 資料) because YouTube is blocked in mainland China and the film''s Chinese viewers are mostly in Taiwan, Hong Kong and abroad. Readers of Simplified characters and mainland words (程序, 软件, 网络, 数据) can read it, but will find some words unfamiliar.'
+  - what: address
+    ch: null
+    where: 整部影片 / the whole film
+    original: 'you'
+    ours: '你'
+    free: '您'
+    zh: '中文的「你」可以換成比較恭敬的「您」。Claude對使用者說話，有些中文聊天機器人會用「您」；這個翻譯讓Claude說「你」，因為它的英文是平等、隨意的語氣，而寇特對Claude也說「你」。'
+    en: 'Chinese 你 (you) can be swapped for the polite 您. Some Chinese chatbots say 您 to their users; this translation has Claude say 你, because its English is even and casual, and Curt says 你 to Claude too.'
+  - what: title
+    ch: 0
+    where: 章名 / chapter title
+    original: 'Cold open'
+    ours: '開場'
+    free: '片頭'
+    zh: '*Cold open* 是美國電視的用語，指片名出現之前、沒有任何介紹就開始的那一場戲。「開場」意思夠清楚，但少了那個專業術語的味道。'
+    en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. 開場 (opening) is clear enough but loses the trade term''s flavour.'
+  - what: title
+    ch: 9
+    where: 章名 / chapter title
+    original: 'Shells'
+    ours: '殼'
+    free: '外殼'
+    zh: '英文章名玩的是 *shell* 的兩個意思：甲殼教龍蝦的殼，以及包在模型外面的軟體「殼」（代理框架）。「殼」在中文裡也可以指軟體的外殼，所以兩個意思大致都保住了，只是軟體的那一層比較淡。'
+    en: 'The title plays on both senses of *shell*: the lobster''s carapace in Crustafarianism and the software shell wrapped around a model (the agent harnesses). Chinese 殼 can mean a software shell too, so both survive, though the software sense is fainter.'
+  - what: title
+    ch: 14
+    where: 章名 / chapter title
+    original: 'The Pundits'
+    ours: '名嘴們'
+    free: '評論家們'
+    zh: '「名嘴」是台灣對電視政論節目上那些常客的稱呼，帶一點揶揄，和英文 *pundits* 的語氣很接近。'
+    en: '名嘴 ("famous mouths") is what Taiwan calls the regulars of television talk shows, a little mocking, close to the tone of English *pundits*.'

@@ -1,0 +1,65 @@
+# The Chinese site's own words (tools/build_site.mjs's SITE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/site_strings.yaml). {name} is filled in by the builder. Some values are HTML. Chinese has no spaces
+# between words, so no paragraph here breaks a line inside Chinese text (a browser would show the break as a space).
+lang: zh-Hant-TW
+film_title: 青蛙還是六角恐龍
+index_title: 青蛙還是六角恐龍：連結
+explained: 解說
+index_intro: >-
+  <p>一部動畫影片，取材自寇特和AI程式Claude在一個星期六早上的長談。對話在科幻、哲學和AI的最新消息之間跳來跳去，所以充滿了大多數人不熟悉的東西。</p><p>它們全都在這裡，按章節、依序排列。光有一個連結不夠的地方，就有一篇簡短、淺白的解說。<strong>黃色的是解說。</strong>如果影片裡有什麼讓你一頭霧水，從那裡開始。</p>
+  <p class="note">這是繁體中文版。影片和這個網站由Claude翻譯，刻意不經人工審校：<a href="fanyi/">怎麼翻譯的，又失去了什麼</a>。英文原版網站在<a href="../">curtcox.github.io/axol-f</a>。</p>
+watch_film: ▶ 看影片
+watch_film_after: '（連結隨著影片出現）。'
+on_its_way: >-
+  影片快來了。連結和解說都已經在這裡。等不及了？整部影片是用程式碼做的，所以你可以自己把它做出來：<a href="{repo}">取得程式碼</a>，然後執行<code>npm start</code>。
+two_conversations: 兩段對話
+conversation_shown: 影片呈現的那段對話
+conversation_shown_after: '，逐字翻譯（<a href="conversation.txt">純文字</a>）。'
+# the making-of is in English only, on the English site
+making_of_href: ../making-of/
+conversation_made: 做出這部影片的那段對話
+conversation_made_after: '：寇特請Claude做這部影片，以及Claude做了什麼（英文；<a href="{href}making-of.txt">純文字</a>）。'
+chapters: 章節
+index_notes: >-
+  <p class="note">解說是影片裡的AI，Claude，為這個網站寫的，並和它們連結的資料來源核對過。大多數資料來源是英文的。影片完成之前，時間點可能會稍有移動。</p>
+  <p class="note">這部影片的每一個畫面，都是Claude用程式碼畫的。寇特打底的程式碼，來自用同樣方式做的上一部影片<a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a>（它的解說網站，英文）。</p>
+  <p class="note">這個網站為什麼叫<em>axol-f</em>？六角恐龍的英文是axolotl，和<a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Crazy Frog的〈Axel F〉</a>只差一個字母：青蛙還是六角恐龍。</p>
+going_to: 前往
+# the speaker name on the conversation page (Claude stays Claude)
+curt: 寇特
+conversation_title: 對話
+conversation_crumb: 對話
+conversation_intro: >-
+  <p>做出這部影片的那段完整對話，寇特和Claude之間，逐字、按章節，用影片的翻譯呈現。英文原文在<a href="{orig}">claude.ai</a>。也有<a href="../conversation.txt">純文字版</a>，以及<a href="../fanyi/quanwen/">英文和中文並排</a>的整部影片。還有<a href="{making_of}">做出這部影片的那段對話</a>（英文）。</p>
+the_original: 原文
+watch_chapter: ▶ 看這一章，連結同步出現
+chapter: 章節
+no_links: 這一章還沒有連結。
+in_the_film: 影片中約
+read_more: 繼續閱讀
+play_from_here: 從這裡播放影片
+film_local_final: 這台電腦上做出的最終版本
+film_local_draft: 這台電腦上做出的最新草稿
+film_preview: 這是預覽；完整的影片會放上YouTube
+this_is: '這是{what}。'
+on_its_way_film: >-
+  影片快來了。它所有的連結都已經在這裡，按時間排列。等不及了？整部影片是用程式碼做的，所以你可以自己把它做出來：<a href="{repo}">取得程式碼</a>，然後執行<code>npm start</code>。
+watch: 觀看
+the_film: 影片
+watch_crumb: 觀看
+chapter_links: 第{n}章的連結
+highlighted: 標亮的連結，是此刻出現在畫面上的。點一個時間，就跳到那裡。連結會在新分頁開啟。
+follow_film: 讓清單跟著影片走
+follow_video: 讓清單跟著影片走
+badge_explained: 解說
+badge_chat: 對話中
+badge_source: 來源
+# the head of the transcript the site serves as plain text (conversation.txt), which i18n/tools/stage.mjs writes
+transcript_head: |-
+  # 對話逐字稿，中文翻譯
+
+  原文（英文）：https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
+  翻譯：Claude，未經人工審校。怎麼翻譯的：https://curtcox.github.io/axol-f/zh/fanyi/
+on_youtube: 在YouTube上觀看
+on_youtube_after: '（同一部影片，附YouTube的留言和章節）。'
+home_alt: '{title}：回首頁'

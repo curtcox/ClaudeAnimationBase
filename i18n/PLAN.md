@@ -19,7 +19,8 @@ Later, if the first three find viewers:
 - **Hindi**: YouTube's biggest market, but Indian tech viewers mostly watch in English. Subtitles first. (Begun in
   full on 2026-10-01, at Curt's word: see *Conventions (Hindi)* and the steps below.)
 - **Chinese, Korean, Arabic**: large, but YouTube is blocked in mainland China, Korean needs another script, and
-  Arabic runs right to left (the site would need it).
+  Arabic runs right to left (the site would need it). (Chinese begun in full on 2026-10-01, at Curt's word, in
+  Traditional characters for Taiwan: see *Conventions (Chinese)* and the steps below.)
 
 Cheapest wide reach, any time: YouTube subtitles in many languages, made from each translated script.
 
@@ -130,6 +131,39 @@ the same voices.
 - **The picture:** Hindi lettering in the Mac's own Kohinoor Devanagari (its own `@font-face` for the hand-lettering
   fonts' Devanagari range, as for Japanese). Captions end a sentence at the danda; labels wider than the English they
   replace are fitted to it, as Japanese labels are.
+
+## Conventions (Chinese, `i18n/zh`, site at `/zh/`)
+
+Claude's choices (2026-10-01, for Curt to confirm), carrying over the Spanish decisions: a full, faithful translation,
+the same voices.
+
+- **Traditional characters, as Taiwan writes them** (程式, 軟體, 網路, 資料; 「」 for quotations, 《》 for titles of
+  films and books, 〈〉 for songs and articles). YouTube is blocked in mainland China, so the film's Chinese viewers are
+  mostly in Taiwan, Hong Kong and abroad, who read Traditional. Traditional converts to Simplified almost mechanically
+  (OpenCC), and not the other way round, so Simplified subtitles can follow cheaply if wanted.
+- **The title** is 《青蛙還是六角恐龍》. *Axolotl* is 六角恐龍, the pet-shop name every Taiwanese viewer knows (the
+  zoologists' 墨西哥鈍口螈 is in a note); *frog* is 青蛙; *ape* is 猩猩, which the series' Chinese titles (猩球) come
+  from.
+- **Address:** Curt and Claude both say 你 (never the polite 您): the English is casual and even.
+- **Claude has no gender.** Chinese verbs and adjectives have none; only the written third person does (他, 她, 它, all
+  said *tā*). On the site Claude is 它, following the English *it*, or "Claude"; never 他 or 她.
+- **Names:** people's in characters, as Taiwanese media transliterate them (寇特 Curt, 圖靈, 夢露, 尤考斯基), except a
+  Chinese name only known in romanization (Ziqian Zhong), which stays as written; companies, products and models in
+  Latin letters (Claude, Anthropic, OpenAI, ChatGPT, GPT-5.6 Luna, Hugging Face). No space between Chinese and Latin.
+- **Works:** by their Taiwanese titles (《猩球征服》, 《安德的遊戲》, 《銀河便車指南》, 《魔鬼終結者2》, 〈陌生人〉).
+  Papers, articles and sites keep their own titles.
+- **Coinages:** *thrindle* is 斯林朵 (as meaningless in Chinese); *confuzzled* is the Taiwanese slang 霧煞煞 (a note says
+  it's not a coinage); *foom*, OOM, RSI, AFAYCT and TESCREAL stay in Latin letters, as Chinese AI writing leaves them.
+- **What stays in English:** the sources' titles, code names, the token demonstrations in chapter 12. Curt's surviving
+  typos are the Latin-letter names (Solid Gold Magicarp, Shoggath, AGI 2027).
+- **On the site:** "［譯註：…］" for what the translation adds, and "（英文）" after a link with no Chinese article.
+  Chinese Wikipedia links use the `/zh-tw/` path, so an article shows in Traditional characters.
+- **The picture:** Chinese lettering in the Mac's own PingFang TC (its own `@font-face` for the hand-lettering fonts'
+  CJK range, as for Japanese). Captions and subtitles break as Japanese ones do, and also keep a particle (的 了 嗎 們…)
+  with the word before it and a measure word with its numeral. Until it's voiced, a line's length is estimated at 4.5
+  characters a second (Mandarin says each character as a syllable).
+- **The voice:** brand names, models and acronyms are left for the voice to say in English, as Taiwanese speakers do;
+  only what it might misread is respelled (`i18n/zh/pronounce.yaml`: T-800 → T八百, GPT-5.6 → GPT五點六…).
 
 ## How it's built
 
@@ -261,6 +295,20 @@ The tools, run from the project's root:
 - [ ] Curt confirms the conventions above (or changes them); a Hindi-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks Hindi; Latin names and acronyms are respelled in Devanagari (`i18n/hi/pronounce.yaml`).
       Then drafts, then the final on the faster Mac.
+
+### Chinese (Traditional, Taiwan)
+
+- [x] The engine's hooks, in the translation's own files: PingFang TC for the hand-lettering fonts (`i18n/zh/studio.css`),
+      loaded before the first frame; labels wider than their English fitted; lengths estimated at 4.5 characters a second;
+      Chinese Wikipedia links in Traditional (`/zh-tw/`). Captions and subtitles: a particle or measure word never starts
+      a row, a row may end at a full-width comma, and a cue past its share waits for a comma a little further on (the
+      Japanese subtitles gain that too; English unchanged) (2026-10-01).
+- [x] The transcript (453 lines, every anchor), the cold open, the chapter titles, the lettering (406 strings), the codes'
+      captions (409; Chinese Wikipedia for 147 of 202), the 64 explainers (Wikipedia links moved to Chinese for 222,
+      marked （英文） for 85), the site's words, the YouTube words, the translation's page (`i18n/zh/translation.yaml`, at
+      `/zh/fanyi/`).
+- [ ] Curt confirms the conventions above (or changes them); a Chinese-reading reviewer, if one turns up.
+- [ ] Voice it: eleven_v3 speaks Mandarin. Then drafts, then the final on the faster Mac.
 
 ## Costs
 

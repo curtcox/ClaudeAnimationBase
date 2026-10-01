@@ -92,6 +92,7 @@
   // caption between words (Intl.Segmenter), never inside one: a mark that can't start a row (、。」) stays with the
   // word before it, one that can't end a row (「『（) with the word after.
   const SEG = I.cjk && new Intl.Segmenter(I.lang, { granularity: 'word' });
+  const ZH = /^zh\b/.test(I.lang || ''), ZH_PARTICLE = /^(的|了|嗎|呢|吧|啊|呀|嘛|啦|們|著|過|得|地)$/u;
   const PARTICLE = /^(を|は|が|に|で|と|も|へ|や|の|か|には|では|とは|から|まで|より|ので|けど|って)$/u, NO_START = /^[、。，．！？!?…‥・：；:;）」』】〕)\]’”ーぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ%％]/u, NO_END = /[「『（【〔(\[‘“]$/u;
   const cjkWords = s => {
     const out = []; let prev = '';
@@ -107,7 +108,9 @@
       // a figure keeps its counter (20|年 → 20年), and この・その・あの・どの the word they point at
       const counted = /[0-9０-９]$/.test(out[last] || '') && /^[\p{Script=Han}\p{Script=Katakana}]/u.test(g);
       const pointer = /^(この|その|あの|どの)$/.test(out[last] || '');
-      if (last >= 0 && (counted || pointer || /^\s+$/.test(g) || kana || latin || NO_START.test(g) || NO_END.test(out[last]))) out[last] += g; else out.push(g);
+      // Chinese: a particle (的 了 嗎 們…) stays with the word before it, and a measure word with its numeral (十四|條)
+      const zh = ZH && (ZH_PARTICLE.test(g) || /[一二兩三四五六七八九十百千萬幾]$/u.test(out[last] || '') && /^\p{Script=Han}$/u.test(g));
+      if (last >= 0 && (counted || pointer || zh || /^\s+$/.test(g) || kana || latin || NO_START.test(g) || NO_END.test(out[last]))) out[last] += g; else out.push(g);
       prev = g;
     }
     return out;

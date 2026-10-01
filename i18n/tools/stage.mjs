@@ -19,11 +19,12 @@ import { translations, englishAnchors, samePlace, readYaml, optYaml, dirOf, lang
 
 const lang = langOf(args), L = dirOf(lang), S = `${L}/stage`;
 // a language written without spaces (Japanese) has no words to count: a line's estimated length (tools/timeline.mjs,
-// words at PACE.wpm) comes from its characters instead, at CPS spoken a second, given as the words that take as long
-const CJK = /^(ja|zh|ko)\b/.test(lang), CPS = 6;
+// words at PACE.wpm) comes from its characters instead, at CPS spoken a second (Mandarin says fewer characters a second
+// than Japanese, each a whole syllable), given as the words that take as long
+const CJK = /^(ja|zh|ko)\b/.test(lang), CPS = /^zh\b/.test(lang) ? 4.5 : 6;
 // a language whose glyphs the hand-lettering fonts lack (its studio.css lends them some): a sample to load them by
 // before the first frame, and its labels fitted to the English widths they replace (i18n/src/i18n.js)
-const GLYPHS = { ja: 'あア漢、。「」', hi: 'अआकक्षिह्रींॉ।' };
+const GLYPHS = { ja: 'あア漢、。「」', hi: 'अआकक्षिह्रींॉ।', zh: '漢說臺、。「」' };
 const countWords = s => CJK ? Math.round((s.replace(/\[[^\]]*\]/g, '').match(/[\p{L}\p{N}]/gu) || []).length / CPS * PACE.wpm / 60) : words(s);
 const tr = translations(lang), strings = optYaml(`${L}/strings.yaml`, {});
 const respell = compileRespellings(optYaml(`${L}/pronounce.yaml`, []));

@@ -24,6 +24,8 @@ index_notes: >-
   <p class="note">इस फ़िल्म का हर दृश्य Claude ने कोड से बनाया है। कर्ट को आधार वाला कोड इसी तरह बनी एक पिछली फ़िल्म, <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (उसकी व्याख्या वाली साइट, अंग्रेज़ी में), से मिला।</p>
   <p class="note">इस साइट का नाम <em>axol-f</em> क्यों? एक्सोलोटल का अंग्रेज़ी नाम axolotl है, जो <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">Crazy Frog के "Axel F"</a> से बस एक अक्षर दूर है: मेंढक या एक्सोलोटल।</p>
 going_to: यहाँ जाएँ
+# the speaker name on the conversation page (Claude stays Claude)
+curt: कर्ट
 conversation_title: बातचीत
 conversation_crumb: बातचीत
 conversation_intro: >-

@@ -1,0 +1,64 @@
+# The cold open's page in Chinese, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+# The page is MAD's, so it's lettered across, as MAD is, not down as some Chinese comics are.
+officer:
+  say: "[shouting] 等等！那隻猩猩剛剛說了什麼？！"
+  who: 警察
+  lines: ['*等等！*', '*那隻*', '*猩猩*', '剛剛', '*說了*', '*什麼？！*']
+  lost:
+    - what: reference
+      free: '等等！那隻猿剛剛說了什麼？！'
+      zh: '電影和漫畫講的都是 *ape*（沒有尾巴的大型猿類）。中文日常說「猩猩」，系列電影的中文片名「猩球」也從這裡來，所以譯文全片都用「猩猩」。「猿」比較精確，但當台詞太文了。'
+      en: 'The film and the comic are about *apes* (the great apes, without tails). Everyday Chinese says 猩猩, which the films'' Chinese titles (猩球, "ape planet") come from, so the translation says 猩猩 throughout. 猿 (ape) is more exact, but too bookish for dialogue.'
+silly:
+  say: "[nervously] 呃……別、別開玩笑了！猩猩不會說話的！"
+  who: 飼養員
+  lines: ['呃……', '*別、別開*', '*玩笑了！*', '*猩猩*', '不會', '*說話的！*']
+positive:
+  say: "我確定聽到那隻猩猩說話了！"
+  who: 警察
+  lines: ['我*確定*', '聽到', '那隻猩猩', '*說話了！*']
+impossible:
+  say: "不可能！猩猩根本沒有說話的能力！"
+  who: 飼養員
+  lines: ['*不可能！*', '猩猩根本', '沒有', '*說話的能力！*']
+sound:
+  say: "那我為什麼聽到聲音從牠嘴裡冒出來？！"
+  who: 警察
+  lines: ['那我為什麼', '聽到*聲音*從牠', '*嘴裡*冒出來*？！*']
+handler:
+  say: "那是因為，牠是個腹語師啊！"
+  who: 飼養員
+  lines: ['那是因為，*牠*', '是個*腹語師*啊！']
+  lost:
+    - what: nuance
+      zh: '英文說 *he''s a ventriloquist*，用的是指人的 *he*。中文寫成指動物的「牠」，讓飼養員的推託更荒謬：一隻動物，卻是腹語師。'
+      en: 'English says *he''s a ventriloquist*, with the personal *he*. Chinese writes 牠, the pronoun for animals, which makes the handler''s dodge more absurd: an animal, and a ventriloquist.'
+suspect:
+  say: "我們懷疑你們藏匿了一隻聰明的猩猩，牠二十年前還是嬰兒時就逃走了！"
+  who: 金髮男子
+  lines: ['我們*懷疑*', '你們藏匿了', '一隻*聰明*的', '*猩猩*，', '牠20年前', '還是*嬰兒*', '時就', '逃走了！']
+fuss:
+  say: "才沒有！再說，一隻會說話的猩猩，有什麼好大驚小怪的？"
+  who: 鬍子男
+  lines: ['*才*', '*沒有！*', '再說，', '一隻*會*', '*說話*的', '猩猩，', '有什麼好', '*大驚小怪*的？']
+villain:
+  say: "因為一隻聰明、會說話的猩猩，可能會帶領其他猩猩擺脫奴役……而我們必須讓奴隸制度永遠延續下去！我們一直都需要奴隸，以後也永遠需要！"
+  who: 反派
+  lines: ['因為一隻*聰明*、', '*會說話*的猩猩，可能', '會帶領*其他*猩猩', '擺脫*奴役* . . .', '而我們必須讓奴隸', '制度*永遠*延續下去！', '我們一直都*需要*奴隸，', '以後也永遠*需要！*']
+  lost:
+    - what: rhythm
+      free: '……所以奴隸制度一定要保住！奴隸我們一直需要，以後也一直需要！'
+      zh: 'MAD的反派故意把不該說的話，說得像演講一樣浮誇。譯文用「必須讓……永遠延續下去」這種官腔，來留住那種做作的調子。'
+      en: 'MAD''s villain says the unsayable on purpose, pompously, like a speech. The translation keeps the theatrical tone with officialese, 必須讓……永遠延續下去 ("must be made to continue forever").'
+turtle:
+  say: "你有沒有覺得，自己好像演錯電影了？"
+  who: 高領毛衣男
+  lines: ['你有', '沒有覺得，', '自己', '*好像*', '*演錯*', '*電影*', '了？']
+  lost:
+    - what: idiom
+      free: '你有沒有覺得自己跑錯片場了？'
+      zh: '「跑錯片場」是中文現成的說法，意思正是「來錯地方」。譯文用比較字面的「演錯電影」，讓對話框、Claude的引用（T01.C.03）和章名一字不差。'
+      en: '跑錯片場 ("wandered onto the wrong film set") is a ready Chinese phrase for being in the wrong place. The translation uses the more literal 演錯電影 ("acting in the wrong film") so the balloon, Claude''s quotation (T01.C.03) and the chapter title match word for word.'

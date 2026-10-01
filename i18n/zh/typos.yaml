@@ -1,0 +1,6 @@
+# Curt's typos that survive translation: a misspelt name stays misspelt, and the film marks it in red pen as in English
+# (same form as script/typos.yaml). In Chinese the names stay in Latin letters, so the slip stays too. Slips of English
+# grammar or spelling don't carry over; each line that had one says so in its `lost` notes.
+- { line: T28.U.01, mark: "[Shoggath→Shoggoth]" }
+- { line: T57.U.01, mark: "Solid Gold [Magicarp→Magikarp]" }
+- { line: T75.U.01, mark: "[AGI→AI] 2027" }

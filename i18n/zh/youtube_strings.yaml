@@ -1,0 +1,26 @@
+# The Chinese upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the Chinese video is up, its id goes in
+# i18n/zh/site.yaml as film: youtube: (the Chinese site then embeds it).
+title: 青蛙還是六角恐龍
+cold_open: 開場
+explained: 解說
+head: |
+  一部動畫影片，幾乎逐字取材自寇特和AI程式Claude在一個星期六早上的長談，並翻譯成中文。從MAD雜誌對《猩球》電影的惡搞開始，一路談到青蛙、六角恐龍、思想實驗，以及2026年7月的AI代理事件。
+
+  翻譯由Claude完成，刻意不經人工審校。怎麼翻譯的，又失去了什麼：https://curtcox.github.io/axol-f/zh/fanyi/
+  英文原版：https://curtcox.github.io/axol-f/
+
+  對話全文（中文翻譯）：{conversation}
+  影片的所有連結（{links}），按時間排列，附淺白的解說：{site}
+  畫出這部影片的程式碼（你也可以自己做出來）：{repo}
+
+  章節
+  {chapters}
+foot: |-
+
+  由Claude用程式碼繪製（p5.js和p5.brush），取材自對話的逐字稿。聲音、音效和音樂：ElevenLabs。
+  漫畫頁、圖表和AI對齊羅盤是為了評論而重新繪製的。沒有使用任何商標，人物漫畫出於喜愛。合理使用：評論與戲仿。
+links_head: "\n部分連結，按時間排列（其餘的在網站上）\n"
+tags: AI, Claude, 動畫, AI安全, 評估, P(doom), 人工智慧, Hugging Face, 青蛙, 六角恐龍, 中文
+# the subtitles' speaker names (tools/subtitles.mjs); Claude stays in Latin letters
+subtitle_names: { curt: 寇特 }

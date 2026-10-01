@@ -24,6 +24,8 @@ index_notes: >-
   <p class="note">この映画は、Claudeがコードで描いています。カートは、同じやり方で作られた以前の映画<a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a>（その解説サイト、英語）を通して、土台になるコードに出会いました。</p>
   <p class="note">このサイトの名前が <em>axol-f</em> なのはなぜ？ ウーパールーパーの英語名 axolotl は、<a href="https://www.youtube.com/watch?v=k85mRPqvMbE">クレイジー・フロッグの「Axel F」</a>と一文字違いだからです：カエルか、ウーパールーパーか。</p>
 going_to: 移動先
+# the speaker name on the conversation page (Claude stays Claude)
+curt: カート
 conversation_title: 会話
 conversation_crumb: 会話
 conversation_intro: >-

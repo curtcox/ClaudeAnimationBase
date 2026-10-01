@@ -1,0 +1,16 @@
+/* Chinese lettering (i18n/PLAN.md): the film's hand-lettering fonts have no Chinese glyphs, so each gets the CJK range
+   from the Mac's own PingFang TC (Traditional forms, as Taiwan writes them): Medium for Patrick Hand (labels, boards,
+   the comic), Semibold for Permanent Marker (headlines, sound effects). Nothing is downloaded, and every Mac draws them
+   the same. As for Japanese, each is declared as the family's regular face, so bold Latin stays Patrick Hand's (bold is
+   synthesized). i18n/tools/stage.mjs links this into the stage's studio; i18n/src/i18n.js loads them before the first
+   frame. */
+@font-face {
+  font-family: "Patrick Hand";
+  src: local("PingFangTC-Medium"), local("PingFang TC Medium");
+  unicode-range: U+2E80-2FDF, U+3000-303F, U+3100-312F, U+31A0-31BF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF, U+2027;
+}
+@font-face {
+  font-family: "Permanent Marker";
+  src: local("PingFangTC-Semibold"), local("PingFang TC Semibold");
+  unicode-range: U+2E80-2FDF, U+3000-303F, U+3100-312F, U+31A0-31BF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF, U+2027;
+}

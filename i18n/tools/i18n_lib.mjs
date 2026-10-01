@@ -69,7 +69,8 @@ export async function langLinks(titles, lang) {
     const origins = t => [t, ...(back[t] || []).flatMap(origins)];
     for (const p of Object.values(j.query.pages)) {
       const ll = p.langlinks?.[0]?.['*'];
-      if (ll) for (const t of origins(p.title)) found[t] = `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(ll.replace(/ /g, '_')).replace(/%2F/g, '/').replace(/%3A/g, ':').replace(/%2C/g, ',').replace(/%28/g, '(').replace(/%29/g, ')')}`;
+      // Chinese Wikipedia is one wiki in two scripts: /zh-tw/ shows an article in Traditional characters, as Taiwan reads
+      if (ll) for (const t of origins(p.title)) found[t] = `https://${lang}.wikipedia.org/${lang === 'zh' ? 'zh-tw' : 'wiki'}/${encodeURIComponent(ll.replace(/ /g, '_')).replace(/%2F/g, '/').replace(/%3A/g, ':').replace(/%2C/g, ',').replace(/%28/g, '(').replace(/%29/g, ')')}`;
     }
   }
   return found;

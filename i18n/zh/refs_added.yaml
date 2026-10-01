@@ -1,0 +1,6 @@
+# Codes only the Chinese film has, in script/refs.yaml's form (i18n/tools/stage.mjs adds them to the stage's).
+#
+# The translation's own page (i18n/tools/lost.mjs → the Chinese site's fanyi/): how the film was translated, how else
+# it could have been, and what a freer translation would have said, in Chinese and English. Its code goes up on the
+# ventriloquist line, as in the other translations: in a dubbed film someone else really is doing the talking.
+- { id: fanyi, url: "https://curtcox.github.io/axol-f/zh/fanyi/", host: fanyi/, caption: "怎麼翻譯的，又失去了什麼", origin: added, at: T03.C.03.1, cue: "真正在說話的是別人", mode: shelf, style: note }
