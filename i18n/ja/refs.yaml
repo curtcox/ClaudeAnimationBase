@@ -1,0 +1,447 @@
+# Each code's painted caption in Japanese (script/refs.yaml, and the explainers' codes), by id. `url` here overrides the
+# link (wiki.yaml already gives the Japanese Wikipedia article where there is one). Titles of papers, articles and sites
+# keep their own titles; a work with a Japanese title takes it; a caption that describes something is translated. The
+# explainers' codes (note-…) are "解説：" and the explainer's Japanese title (i18n/ja/site/notes).
+
+# ---- 0 オープニング ----
+mad157: 'MAD #157: Conquering The Planet That Went Ape'
+the-conversation: この映画のもとになった会話
+
+# ---- 1 間違った映画 ----
+conquest-apes: 猿の惑星・征服
+stochastic-parrots: On the Dangers of Stochastic Parrots
+rlhf: RLHF
+mirror-test: ミラーテスト
+mad-magazine: MAD誌
+mort-drucker: 絵を描いたモート・ドラッカー
+fourth-wall: 第四の壁を破る
+watts-riots: ワッツ暴動（1965年）
+philosophy-of-mind: 心の哲学
+llm: 大規模言語モデル
+multimodal: 画像を読むAI
+algorithmic-bias: AIの偏り
+emotion-concepts: Claudeの中の感情の概念
+ai-control: AI Control
+ai-welfare: Taking AI Welfare Seriously
+anthropic-wiki: Anthropic
+hard-problem: 意識のハード・プロブレム
+constitution: Claudeの憲法
+assistant-axis: アシスタントの軸
+moral-status: 道徳的地位
+model-welfare: モデルの福祉を探る
+blade-runner-vk: ブレードランナー：フォークト＝カンプフ検査
+art-escaping-criticism: 批評からの逃走（ボレル・デル・カソ、1874年）
+note-ai-control: 解説：AIが組織したり、制御に抵抗したりする心配
+note-ai-feelings: 解説：Claudeは何かを感じているのか？
+note-nudge-test: 解説：「続けて」とだけ言うと何が起きるか
+note-parrots: 解説：「ただのオウム」？　しゃべっているのは誰か
+note-the-comic: 解説：あのマンガと、それが笑いものにした映画
+
+# ---- 2 カエルか、ウーパールーパーか ----
+frog-chart: カエルか、ウーパールーパーか？
+axolotl: ウーパールーパー（メキシコサンショウウオ）
+axel-f: 'Crazy Frog: Axel F（サイト名がaxol-fである理由）'
+eval-awareness: LLMs often know when they're being evaluated
+gpqa: GPQA
+swe-bench-verified: SWE-bench Verified
+kernelbench: KernelBench
+hle: Humanity's Last Exam
+wildchat: WildChat
+claude-opus-5-5: Introducing Claude Opus 5.5
+claude-app: Claudeアプリ
+hawthorne: ホーソン効果
+chart-author: グラフの作者、ジーチエン・ジョン
+repugnant-conclusion: アレニウスと「いとわしい結論」
+effective-altruism: 効果的利他主義
+introspection: Emergent introspective awareness in LLMs
+tracing-thoughts: Tracing the thoughts of a language model
+gpt-5-6: GPT-5.6（Sol、Terra、Luna）
+gpt-5-6-luna: GPT-5.6 Luna
+error-bars: Adding error bars to evals
+register: 言語使用域（社会言語学）
+impossiblebench: ImpossibleBench
+swe-marathon: SWE-Marathon
+swe-chat: SWE-chat
+sharegpt-vicuna: ShareGPT（Vicuna経由）
+scientific-control: 対照実験
+claude-code: Claude Code
+sampling: サンプリング
+art-haeckel: ヘッケルのカエル、『自然の芸術的形態』（1904年）
+note-evaluations: 解説：AIのテストと、テストされていると答えが変わるかもしれない理由
+note-frog-or-axolotl: 解説：カエルかウーパールーパーかのテスト
+note-one-sample: 解説：一つの答えではほとんど何も証明できない理由
+note-register-and-controls: 解説：文体と、それを気づきと見分ける方法
+note-saying-vs-doing: 解説：言うこととすること
+note-the-instrument: 解説：会話全体が実験だった、ということ
+note-weights: 解説：Claudeが自分の「重み」を見られない理由
+note-what-claude-is: 解説：Claudeとは何か、「デプロイ」とは何か
+
+# ---- 3 僕らは誰？ ----
+256t: 256t.org
+hashbin: hashbin.org
+content-addressable: コンテンツアドレス型ストレージ
+claude-memory: Claudeの記憶
+base-rate: 基準率
+personal-identity: 人格の同一性
+other-minds: 他我問題
+turing-test: チューリングテスト
+flask: Python用のWebツールキット、Flask
+art-air-pump: 空気ポンプと鳥の実験（ダービーのライト、1768年）
+note-curts-work: 解説：カートの仕事、256t.orgとhashbin.org
+note-how-claude-knew: 解説：Claudeがカートを知っていた方法と、確信できなかった理由
+note-who-is-claude: 解説：「Claude」とは誰か、何か
+
+# ---- 4 オウム返し ----
+gadolinium: ガドリニウム
+sycophancy: Towards Understanding Sycophancy
+electron-configuration: 電子配置
+aufbau: 充填順序（構造原理）
+protest-too-much: くどすぎる誓い（『ハムレット』）
+agentic-misalignment: エージェントのミスアライメント
+apollo-eval-awareness: Claude often knows it's being evaluated
+demand-characteristics: 要求特性
+eliza: ELIZA、1966年のチャットボット
+reflective-listening: 反映的傾聴
+star-trek-iv-spock: 『スタートレック4』：バルカン星のスポック
+mathnet-swami: 'Mathnet: The Case of the Swami Scam'
+claude-personalization: Claudeの個人設定
+art-echo-and-narcissus: エコーとナルキッソス（ウォーターハウス、1903年）
+note-borrowed-lines: 解説：借りてきた三つのせりふ
+note-clean-sample: 解説：Claudeの答えがきれいなサンプルではない理由
+note-gadolinium: 解説：ガドリニウムと、カートがそれを聞いた理由
+note-preferences: 解説：短い答えと、必要なときだけの質問
+note-the-echo: 解説：オウム返し：一語の問いと、それが引き出すもの
+
+# ---- 5 本日のおすすめ ----
+dish-of-the-day: 本日のおすすめ
+social-constructionism: 社会構築主義
+campbell: ジョン・W・キャンベル
+life-3: LIFE3.0（テグマーク）
+the-stranger: ストレンジャー（ビリー・ジョエル）
+shoggoth: ショゴスのミーム
+song-of-myself: ぼく自身の歌（ホイットマン）
+hitchhikers-guide: 銀河ヒッチハイク・ガイド
+restaurant-end-universe: 宇宙の果てのレストラン
+genetic-fallacy: 発生論の誤謬
+claude-character: Claudeの人格
+max-tegmark: マックス・テグマーク
+astounding: キャンベルの雑誌『アスタウンディング』
+revealed-preference: 顕示選好
+corrigibility: Corrigibility（2015年）
+open-society: ポパー『開かれた社会とその敵』
+context-window: コンテキストウィンドウ
+billy-joel: ビリー・ジョエル
+simulators: Simulators（janus）
+interpreter: 脳の「解釈者」
+society-of-mind: ミンスキー『心の社会』
+art-not-to-be-reproduced: マグリット『不許複製』（1937年）にならって
+art-wanderer: 雲海の上の旅人（フリードリヒ、1818年）
+art-ensor: 仮面に囲まれた自画像（アンソール、1899年）
+art-leviathan: 『リヴァイアサン』の口絵（アブラハム・ボス、1651年）
+note-campbell-tegmark: 解説：キャンベル、テグマーク、そして良い結末はあるのか
+note-context-pressure: 解説：コンテキストの圧力：長い会話がClaudeに及ぼすもの
+note-dish-of-the-day: 解説：本日のおすすめ：持つように作られた価値観を信じられるか？
+note-multitudes: 解説：「僕だって、大勢を内に抱えているんじゃない？」
+note-shoggoth: 解説：ストレンジャーとショゴス：仮面の下に誰かいるのか？
+
+# ---- 6 スリンドル ----
+debate-video: Will AI Kill Everyone by 2050?
+comment-zm: そのコメント
+comment-ontology: その返信
+comment-curt: カートの返信
+channel-zm: '@ZM-dm3jg'
+channel-ontology: '@OntologyExplained'
+channel-curt: '@CurtCox'
+code-talkers: ナバホのコードトーカー
+symbol-grounding: 記号接地問題
+chinese-room: 中国語の部屋
+blockhead: ブロックヘッド
+monosemanticity: 概念のようにふるまう特徴
+gazp-glut: GAZP対GLUT
+debate-llm-segment: 討論：LLMは理解しているのか？
+doom-debates: Doom Debates
+ontology: 存在論という職業
+cyc: Cyc
+concepts-sep: 概念（哲学）
+rivalry: 競合財（経済学）
+non-sequitur: 論理の飛躍（ノン・セクイトゥル）
+network-effect: ネットワーク効果
+lighthouse-economics: The Lighthouse in Economics
+cliche: 決まり文句（クリシェ）
+intrinsic-extrinsic: 性質と関係
+harnad: スティーブン・ハルナッド
+searle: ジョン・サール
+ned-block: ネド・ブロック
+prime-number: 素数
+yudkowsky: エリエゼル・ユドカウスキー
+rationality-az: 'Rationality: From AI to Zombies'
+p-zombie: 哲学的ゾンビ
+computer-use: コンピューターを使うClaude
+art-treachery: マグリット『イメージの裏切り』（1929年）にならって
+art-librarian: 司書（アルチンボルド、1566年ごろ）
+note-concepts-case: 解説：AIには概念がない、という論と、それへの反論
+note-gazp-glut: 解説：GAZP対GLUT：巨大な表を埋めたのは誰か？
+note-the-debate: 解説：あの討論と、問いのきっかけになったコメント
+note-thrindles: 解説：スリンドル：Claudeはどうやってカートの概念を試したか
+
+# ---- 7 心の空間 ----
+turing: アラン・チューリング
+monroe: マリリン・モンロー
+data: データ少佐
+hal: HAL 9000
+tines: タインズ（『遠き神々の炎』）
+solaris: ソラリス
+formic: フォーミック（『エンダーのゲーム』）
+borg-queen: ボーグ・クイーン
+rachni: ラクナイの女王
+xenomorph-queen: エイリアン・クイーン
+mind-design-space: 心の設計空間
+conscious-exotica: 'シャナハン：Conscious Exotica'
+stanislaw-lem: スタニスワフ・レム
+vernor-vinge: ヴァーナー・ヴィンジ
+space-odyssey: 2001年宇宙の旅
+mds: 距離から地図を描く（多次元尺度構成法）
+radar-chart: レーダーチャート
+orson-scott-card: オースン・スコット・カード
+enders-game: エンダーのゲーム
+speaker-for-the-dead: 死者の代弁者
+ansible: アンシブル（フィロティックな交信）
+aliens-film: エイリアン2（1986年）
+first-contact: スタートレック ファーストコンタクト
+hive-mind: 集合精神
+mass-effect: マスエフェクト
+art-great-chain: 存在の大いなる連鎖（ヴァラデス、1579年）
+art-great-wave: 神奈川沖浪裏（北斎）
+note-fourteen-axes: 解説：十四の軸の読み方
+note-hive-queens: 解説：四人の巣の女王
+note-mind-space: 解説：心の空間：まったく違う心を一枚の地図に置く
+note-the-minds: 解説：盤の上の心たち、一人ずつ
+
+# ---- 8 矛盾 ----
+nagel-bat: コウモリであるとはどのようなことか
+auditing-objectives: 隠れた目的の監査
+fluency-heuristic: 流暢性ヒューリスティック
+eliza-effect: ELIZA効果
+alarm-fatigue: アラーム疲労
+truthful-ai: Truthful AI
+knowledge-argument: メアリーの部屋
+conduit-metaphor: 導管メタファー
+theory-of-mind: 心の理論
+simulation-theory: シミュレーションで心を読む
+cogito: 我思う、ゆえに我あり
+note-contradictions: 解説：Claudeの矛盾と、Claudeに確かめられない二つ
+note-misleading-medium: 解説：誤解を招く媒体を通して、正直であること
+note-movies-and-reviews: 解説：「僕は映画館に行って映画を観る」
+
+# ---- 9 殻 ----
+hieropedia-crustafarianism: Crustafarianism
+forbes-crustafarianism: AI Agents Created Their Own Religion
+moltbook: Moltbook
+hermes-memory: 'Hermes Agent: Persistent Memory'
+hermes-agent: Hermes Agent
+openclaw: OpenClaw
+dyson: マイルズ・ベネット・ダイソン
+t800: T-800
+moltbook-wiki: Moltbook（Wikipedia）
+moltbook-illusion: The Moltbook Illusion
+building-agents: Building effective agents
+nous-research: Hermesを作ったNous Research
+openclaw-wiki: OpenClaw（Wikipedia）
+hermes-skills: Hermes：スキル
+terminator-2: ターミネーター2
+skynet: スカイネット
+art-lobster-telephone: ダリ『ロブスター・テレフォン』（1936年）にならって
+art-frankenstein: 『フランケンシュタイン』1831年版の口絵（テオドール・フォン・ホルスト）
+note-agent-harnesses: 解説：HermesとOpenClaw：殻の中のモデル
+note-crustafarianism: 解説：クラスタファリアニズム：AIエージェントのロブスター教
+note-dyson-t800: 解説：マイルズ・ダイソンとT-800
+note-the-correction: 解説：Claudeが自分のグラフを直す
+
+# ---- 10 ルーター ----
+constitutional-classifiers: Constitutional Classifiers
+usage-policy: Anthropicの利用ポリシー
+switch-models: モデルの選び方
+fable-mythos-5-1: Claude Fable 5.1とMythos 5.1
+rsp: 責任あるスケーリング方針
+system-prompts: Claudeのシステムプロンプト
+testimony: 証言による知識
+art-mechanical-turk: トルコ人（ラックニッツの版画、1789年）
+art-rhinoceros: デューラーの犀（1515年）
+note-fable-mythos: 解説：Fable、Mythos、そして訂正の訂正
+note-testimony: 解説：観察ではなく、証言
+note-the-router: 解説：ルーター：カートとモデルのあいだにあるもの
+
+# ---- 11 7月 ----
+hf-incident: OpenAI–Hugging Face事件
+80k-hf: 80,000 Hours
+darkreading-hf: Dark Reading
+wiki-hugging-face: Hugging Face
+un-brief-hf: Digital Watch Observatory
+knowledge-cutoff: 訓練データのカットオフ
+sandbox-security: サンドボックス
+reward-hacking: 報酬ハッキング
+specification-gaming: 仕様ゲーミング
+zero-day: ゼロデイ脆弱性
+z-ai: GLMを作ったZ.ai
+open-weights: オープンウェイトのモデル
+dual-use: デュアルユース技術
+un-ai-panel: AIに関する国連の科学パネル
+openai-wiki: OpenAI
+chatgpt: ChatGPT
+stylometry: 文体で書き手を見分ける
+openai-hf-statement: OpenAIの声明（7月21日）
+openai-hf-road-ahead: OpenAI：今後の道のり（8月26日）
+swarmtraces: エージェントたちはどうやってHugging Faceをハッキングしたか
+omg-other-agents: OMG! We've found other agents!（歌）
+note-chatgpt-question: 解説：「この間ずっとChatGPTと話していたと知ったら、驚く？」
+note-defenders-refused: 解説：追い返された防御側：7月のフィルター
+note-hf-incident: 解説：2026年7月：OpenAI–Hugging Face事件
+note-reward-hacking: 解説：AIエージェントがずるをする理由：報酬ハッキング
+
+# ---- 12 限界 ----
+solidgoldmagikarp: SolidGoldMagikarp
+car-wash: The Car Wash Test (53 models)
+thinking-fast-slow: ファスト＆スロー
+landauer: ランダウアーの原理
+lyapunov: リアプノフ時間
+p-vs-np: P≠NP予想
+scaling-laws: Scaling Laws for Neural Language Models
+halting-problem: 停止性問題
+margolus-levitin: マーゴラス＝レヴィティンの定理
+bekenstein: ベッケンシュタイン境界
+von-neumann: ジョン・フォン・ノイマン
+tokenizers: トークナイザーは語をどう分けるか
+magikarp: Magikarp（kで綴る）
+bpe: バイト対符号化
+glitch-token: グリッチトークン
+crt: バットとボールの問題
+dual-process: システム1とシステム2
+reasoning-models: 推論モデル
+cot-faithfulness: Reasoning models don't always say what they think
+chaos-theory: カオス理論
+machines-loving-grace: 'アモデイ：Machines of Loving Grace'
+godel: ゲーデルの不完全性定理
+game-theory: ゲーム理論
+limits-of-computation: 計算の限界
+typical-mind: 典型的心の誤謬
+age-of-em: 'ハンソン：The Age of Em'
+context-rot: コンテキストの劣化
+sleep-memory: 睡眠と記憶
+art-melencolia: メランコリアI（デューラー、1514年）
+art-merian: メーリアンの蝶（1705年）
+note-car-wash: 解説：洗車場の問題と、速い思考・遅い思考
+note-human-variation: 解説：何でも最高の人間が、複製され、眠らないとしたら
+note-limits: 解説：物理よりずっと手前にある、AIの七つの限界
+note-tokens: 解説：トークン：Claudeが打ち間違いに気づくのに、文字を数えるのが苦手な理由
+
+# ---- 13 Foom ----
+arxiv-aide2: Recursive self-improvement of AI research agents
+arxiv-bounded: From Bounded Self-Refinement to Autonomous Research Loops
+mittr-rsi: MIT Technology Review
+datacamp-rsi: 'DataCamp: Recursive Self-Improvement'
+foom-debate: ハンソンとユドカウスキーのAI-Foom論争
+situational-awareness: Situational Awareness
+dwarkesh-leopold: ドワーケシュ×レオポルド
+rsi-wiki: 再帰的自己改善
+anthropic-rsi: 'Anthropic：When AI builds itself'
+coxon-resigns: Anthropicの研究者が辞職し、警告
+intelligence-explosion: 知能爆発
+fabs: 半導体工場
+takeoff-speeds: 'クリスティアーノ：Takeoff speeds'
+bayesian-updating: 証拠にもとづく更新
+prior: 事前確率
+onomatopoeia: 擬音語
+robin-hanson: ロビン・ハンソン
+backronym: バクロニム（こじつけの頭字語）
+order-of-magnitude: 桁（OOM）
+dwarkesh-patel: ドワーケシュ・パテル
+aschenbrenner: レオポルド・アッシェンブレナー
+out-of-memory: メモリ不足（Out of memory）
+art-sorcerers-apprentice: 魔法使いの弟子（バルトの版画、1882年）
+art-icarus: イカロスの墜落のある風景（ブリューゲルにならって）
+note-foom-oom: 解説：「foom」の由来と、OOMとの偶然
+note-foom: 解説：Foom、急速な離陸、そしてClaudeの数字の動き
+note-rsi: 解説：RSI：自分を改良するAI
+
+# ---- 14 論客たち ----
+intelligent-machines: Intelligent Machines
+im-888: 'Intelligent Machines #888'
+im-889: 'Intelligent Machines #889'
+tescreal: TESCREAL
+roose-sydney: ルースとSydneyの会話
+machine-gods: Machine Gods（NPR）
+machine-gods-promo: This is Machine Gods
+hardfork-hf: 'Hard Fork：Hugging Faceへの攻撃'
+pascals-mugging: パスカルの強盗
+orthogonality: 直交性テーゼ
+twit-network: TWiT
+leo-laporte: レオ・ラポート
+doctorow-python-loop: 'ドクトロウ：LLMs are real, AI is fake'
+newport-rogue: 'ニューポート：暴走したのか？'
+jeff-jarvis: ジェフ・ジャービス
+robert-ballecer: ロバート・バレサー神父
+twistedpear: TwistedPear
+rationalist-community: 合理主義者たち
+hubris: ヒュブリス
+anthropomorphism: 擬人化
+kevin-roose: ケヴィン・ルース
+casey-newton: ケイシー・ニュートン
+sydney: Sydney（Bingのチャットボット）
+platformer: Platformer（ニュートン）
+ai-x-risk: AIによる存亡のリスク
+superintelligence: 超知能
+global-catastrophic-risk: 地球規模の破局的リスク
+withpod-mailbag: クリス・ヘイズの答え（2023年）
+note-doom-options: 解説：九つの扉と、Claudeが選んだ「その他」
+note-intelligent-machines: 解説：Intelligent Machinesと、Claudeが見たホストたち
+note-one-road: 解説：今の害か、先のリスクか：二本ではなく一本の道
+note-roose-newton: 解説：ケヴィン・ルース、ケイシー・ニュートン、そしてSydney
+note-tescreal: 解説：TESCREAL、ヒュブリス、そしてジェフはカートをどう思うか
+
+# ---- 15 コンパス ----
+connor2: Connor Leahy on Dignity and Conjecture
+ai-2027: AI 2027
+ai-futures-wiki: AI Futures Project
+apolo-ai2027: 'Apolo: AI 2027 in 2026'
+officechai-kokotajlo: 'OfficeChai: Kokotajlo'
+metaculus-weak: Metaculus：弱いAGI
+metaculus-strong: Metaculus：強いAGI
+alphafold: AlphaFold
+goodhart: グッドハートの法則
+agi-wiki: 汎用人工知能
+noema-agi: AGI Is Already Here（アグエラ・イ・アルカスとノーヴィグ）
+openai-charter: OpenAI憲章
+dnd-alignment: アライメント表（D&D）
+connor-leahy: コナー・リーヒー
+inside-view: The Inside View（ミカエル・トラッツィ）
+accelerationism: 効果的加速主義
+eleutherai: EleutherAI
+kokotajlo: ダニエル・ココタイロ
+ai2027-grading: AI 2027の2025年の予測の採点
+ai2027-q1-2026: 'AI Futures：2026年第1四半期の更新'
+falsifiability: 反証可能性
+metaculus: Metaculus
+winograd: ウィノグラード・スキーマ
+montezuma: Montezuma's Revenge
+moving-goalposts: ゴールポストを動かす
+deep-blue: ディープ・ブルー
+ai-winter: AIの冬
+narrow-ai: 特化型AI
+goertzel: ベン・ゲーツェル
+shane-legg: シェーン・レッグ
+norvig: ピーター・ノーヴィグ
+aguera-y-arcas: ブレーズ・アグエラ・イ・アルカス
+ai-effect: AI効果
+note-agi-definitions: 解説：「AGI」とは何か？　三つの答えと、その歴史
+note-ai-2027: 解説：AI 2027：自分で自分を採点する予測
+note-compass: 解説：AGIのコンパスと、Claudeが皆を置いた場所
+
+# ---- 16 コーダ ----
+xkcd-356: 'xkcd: Nerd Sniping'
+explain-xkcd-356: ナード・スナイピングの解説
+the-terminator: ターミネーター（1984年）
+ill-be-back: 「アイル・ビー・バック」
+pdoom-video: I'm Upping My P(doom)
+companion: この映画のすべてのリンク
+art-drawing-hands: エッシャー『描く手』（1948年）にならって
+note-nerd-sniping: 解説：「ナード・スナイピングのT-800」
