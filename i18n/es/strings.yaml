@@ -71,6 +71,7 @@ no context: sin contexto
 
 # ---- 4 El eco ----
 casual: informal
+exam: examen
 Curt: Curt
 Claude: Claude
 click: clic
@@ -309,6 +310,7 @@ images: imágenes
 10|warnings: generales del sistema
 rejected: rechazado
 cyber: ciber
+bio: bio
 AI research: investigación en IA
 # 11 (the link cards wrap their titles)
 Agents talking to: Agentes que hablan
@@ -318,6 +320,9 @@ Evals: Evaluaciones
 Your router: Lo que dijiste
 point: del enrutador
 roughly 17,000: unas 17 000
+# Curt's typo, quoted in English and typed out a letter at a time
+'a we': 'a we'
+'a wer': 'a wer'
 circumstances: circunstancias
 character: carácter
 July: julio
@@ -333,10 +338,15 @@ the end of June 2026: finales de junio de 2026
 12|know: know
 12|letters: letters
 12|ters: ters
+12|let: let
+12|Mag: Mag
+12|ic: ic
+12|arp: arp
 12|want: want
 12|to: to
 12|wash: wash
 12|my: my
+12|car: car
 Chaos: Caos
 System 1: Sistema 1
 System 2: Sistema 2
@@ -351,6 +361,11 @@ Uncomputability: Incomputabilidad
 short distance → walk: distancia corta → caminar
 maintenance: mantenimiento
 # 13
+# the backronym stays English, lettered with its capitals apart (F ast, O nset of, ...)
+13|ast: ast
+13|nset of: nset of
+13|verwhelming: verwhelming
+13|astery: astery
 Counting the OOMs: Contar los OOM
 June 2024: junio de 2024
 1,250 papers: 1250 artículos
@@ -363,6 +378,10 @@ distraction: distracción
 14|mugging: de Pascal
 Orthogonality: Ortogonalidad
 smarter: más inteligente
+14|much: mucho
+14|exact: estrategia
+14|strategy: exacta
+14|a: una
 strategy: estrategia
 14|plenty of: mucho
 effort: esfuerzo

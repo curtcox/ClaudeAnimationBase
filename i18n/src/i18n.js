@@ -21,7 +21,9 @@
     if (seen.has(s)) return seen.get(s);
     const lines = (window.CHAPTER?.lines || []).map(l => l.text);
     captions ||= new Set(Object.values(window.REFS || {}).map(r => r.caption));
-    const k = done.has(s) || !/\p{L}{2}/u.test(s) || lines.some(t => t.includes(s)) || (I.page || '').includes(s) || captions.has(s) || I.keep.includes(s);
+    // a whole word or phrase of a line, not part of a longer word ("much" isn't Spanish because of "mucho")
+    const whole = new RegExp(`(^|[^\\p{L}])${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^\\p{L}])`, 'u');
+    const k = done.has(s) || !/\p{L}{2}/u.test(s) || lines.some(t => whole.test(t)) || (I.page || '').includes(s) || captions.has(s) || I.keep.includes(s);
     seen.set(s, k); return k;
   };
   // a key "NN|text" is text's translation in chapter NN only (the same English word can need two translations)
