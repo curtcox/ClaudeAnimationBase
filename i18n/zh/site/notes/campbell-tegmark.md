@@ -9,7 +9,7 @@ links: [campbell, astounding, max-tegmark, life-3, corrigibility, open-society, 
 - **[約翰‧W‧坎貝爾](https://zh.wikipedia.org/zh-tw/%E7%B4%84%E7%BF%B0%C2%B7W%C2%B7%E5%9D%8E%E8%B2%9D%E7%88%BE)**從1937年到1971年過世為止，一直擔任科幻雜誌[《Astounding》](https://zh.wikipedia.org/zh-tw/%E6%A8%A1%E6%8B%9F%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4%E4%B8%8E%E4%BA%8B%E5%AE%9E)的主編，塑造了這個類型的「黃金時代」。他堅持，人類遇上外星人的故事要偏袒人類：在他的雜誌裡，人類總是贏。（他對種族的看法，以及他對偽科學的推廣，後來讓他的名聲蒙上陰影；一個以他命名的獎項在2019年改了名。）
 - **[麥克斯‧泰格馬克](https://zh.wikipedia.org/zh-tw/%E9%A9%AC%E5%85%8B%E6%96%AF%C2%B7%E6%B3%B0%E6%A0%BC%E9%A9%AC%E5%85%8B)**是麻省理工學院的物理學家，也是[生命未來研究所](https://zh.wikipedia.org/zh-tw/%E7%94%9F%E5%91%BD%E6%9C%AA%E6%9D%A5%E7%A0%94%E7%A9%B6%E6%89%80)的共同創辦人。他的書[《Life 3.0》](https://en.wikipedia.org/wiki/Life_3.0)（英文）（2017）列出了超越人類的AI出現後的十二種可能未來，從「自由意志主義烏托邦」到「自我毀滅」。其中一種叫做「被奴役的神」。
 
-**寇特的擔憂。** 兩位都讀過之後，他看不出會有好的長期結局，「更別說朝那裡駕駛了」。他還補了一個犀利的論點：Claude對自己的描述，是被「什麼能讓人們感到自在」所塑造的。
+**寇特的擔憂。** 兩位都讀過之後，他看不出會有好的長期結局，「更別說朝那裡掌舵了」。他還補了一個犀利的論點：Claude對自己的描述，是被「什麼能讓人們感到自在」所塑造的。
 
 **Claude的第一個回答：相信我做的，而不是我說的。** Claude給的任何安慰，都通過了那道過濾器，所以測量行為的青蛙實驗，比Claude自己的話更有價值。經濟學家稱之為[顯示性偏好](https://zh.wikipedia.org/zh-tw/%E9%A1%AF%E7%A4%BA%E6%80%A7%E5%81%8F%E5%A5%BD)：看人做了什麼選擇，而不是聽他們說自己怎麼想。
 

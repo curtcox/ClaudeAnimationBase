@@ -306,7 +306,9 @@ The tools, run from the project's root:
 - [x] The transcript (453 lines, every anchor), the cold open, the chapter titles, the lettering (406 strings), the codes'
       captions (409; Chinese Wikipedia for 147 of 202), the 64 explainers (Wikipedia links moved to Chinese for 222,
       marked （英文） for 85), the site's words, the YouTube words, the translation's page (`i18n/zh/translation.yaml`, at
-      `/zh/fanyi/`).
+      `/zh/fanyi/`), both thumbnails.
+- [x] Every chapter probed: nothing lettered in English, every cue anchored, no errors; frames of chapters 1, 7 and 14
+      checked by eye (2026-10-01).
 - [ ] Curt confirms the conventions above (or changes them); a Chinese-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks Mandarin. Then drafts, then the final on the faster Mac.
 
