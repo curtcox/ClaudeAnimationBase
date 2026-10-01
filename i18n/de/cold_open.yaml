@@ -1,0 +1,61 @@
+# The cold open's page in German, by balloon (script/cold_open.yaml; src/comic.js's MAD.balloons):
+#   say    what the voice says; a leading [tag] is an ElevenLabs v3 audio tag, in English, never said aloud
+#   who    the speaker, in captions
+#   lines  the balloon's lettering, line by line, *bold* as on the page (the size fits itself to the balloon)
+officer:
+  say: "[shouting] Moment mal! Was hat dieser Affe gesagt?!"
+  who: der Polizist
+  lines: ['*Moment mal!*', '*WAS*', '*HAT*', '*DIESER*', '*AFFE*', '*GESAGT?!?*']
+  lost:
+    - what: reference
+      free: 'Moment mal! Was hat dieser Menschenaffe gesagt?!'
+      de: 'Film und Comic handeln von *apes*, Menschenaffen ohne Schwanz. Der deutsche Filmtitel sagt einfach *Planet der Affen*, und „Affe“ ist das Alltagswort für jeden Primaten, also sagt die Übersetzung auf der ganzen Seite „Affe“, wie der Titel.'
+      en: 'The film and the comic are about *apes*. The German title just says *Planet der Affen*, and *Affe* is the everyday word for any primate, so the translation says *Affe* throughout the page, as the title does.'
+silly:
+  say: "[nervously] Äh, seien Sie nicht albern! Affen können nicht sprechen!"
+  who: der Tierpfleger
+  lines: ['Äh, seien Sie', 'nicht *albern!*', '*Affen*', 'können nicht', '*sprechen!*']
+  lost:
+    - what: address
+      de: 'Der Tierpfleger spricht mit einem Polizisten, also siezt er ihn: „Seien Sie nicht albern“. Das englische *don''t be silly* verrät keine Anrede und klingt lockerer.'
+      en: 'The handler is speaking to a police officer, so he uses the formal *Sie*: *Seien Sie nicht albern*. English *don''t be silly* shows no form of address and sounds lighter.'
+positive:
+  say: "Ich bin mir sicher, ich hörte diesen Affen sprechen!"
+  who: der Polizist
+  lines: ['Ich bin', 'mir *sicher*,', 'ich hörte', 'diesen Affen', 'sprechen!']
+impossible:
+  say: "Unmöglich! Affen besitzen nicht die Gabe der Sprache!"
+  who: der Tierpfleger
+  lines: ['*Unmöglich!*', 'Affen besitzen', 'nicht die', '*Gabe* der', 'Sprache!']
+  lost:
+    - what: idiom
+      de: '*The power of speech* wurde zur festen Wendung „die Gabe der Sprache“, eleganter als das Original und damit etwas weniger unbeholfen, als der Tierpfleger klingen will.'
+      en: '*The power of speech* became the set phrase *die Gabe der Sprache* (the gift of speech), more elegant than the original and so a little less clumsy than the handler means to sound.'
+sound:
+  say: "Und warum kamen dann Laute aus seinem Mund?!"
+  who: der Polizist
+  lines: ['Und warum kamen', 'dann *Laute* aus', 'seinem *Mund?!?*']
+handler:
+  say: "Weil DIESER Affe ein Bauchredner ist!"
+  who: der Tierpfleger
+  lines: ['Weil *DIESER* Affe', 'ein *Bauchredner* ist!']
+suspect:
+  say: "Wir vermuten, Sie verstecken einen intelligenten Affen, der als Baby entkam, vor zwanzig Jahren!"
+  who: der Blonde
+  lines: ['Wir vermuten,', 'Sie verstecken', 'einen', '*intelligenten*', '*Affen*, der', 'als *Baby*', 'entkam, vor', '20 Jahren!']
+fuss:
+  say: "Das ist nicht wahr! Außerdem, wozu die ganze Aufregung um einen sprechenden Affen?"
+  who: der Bärtige
+  lines: ['Das ist', '*nicht wahr!*', 'Außerdem,', 'wozu die', 'ganze', '*Aufregung*', 'um einen', '*sprechenden*', '*Affen?*']
+villain:
+  say: "Weil ein intelligenter, sprechender Affe die anderen Affen aus ihrer Sklaverei führen könnte … und wir müssen die Sklaverei aufrechterhalten! Wir haben immer Sklaven gebraucht, und wir werden sie immer brauchen!"
+  who: der Bösewicht
+  lines: ['Weil ein *intelligenter,*', '*sprechender Affe* die', '*anderen* Affen aus ihrer', '*Sklaverei* führen könnte . . .', 'und wir müssen die Sklaverei', '*aufrechterhalten!* Wir haben', 'immer Sklaven *gebraucht*,', 'und wir werden sie', 'immer *brauchen!*']
+turtle:
+  say: "Hast du manchmal das Gefühl, im falschen Film zu sein?"
+  who: der Mann im Rollkragenpullover
+  lines: ['Hast', 'du', 'manchmal', 'das', '*Gefühl*,', 'im', '*falschen*', '*Film*', 'zu sein?']
+  lost:
+    - what: idiom
+      de: 'Ein Gewinn: „Ich bin im falschen Film“ ist im Deutschen eine feste Redewendung für etwas, das man nicht fassen kann. Die Zeile, Claudes Zitat (T01.C.03) und der Kapiteltitel „Im falschen Film“ stimmen Wort für Wort überein.'
+      en: 'A gain: *Ich bin im falschen Film* (I''m in the wrong film) is a German idiom for something you can''t believe is happening. The balloon, Claude''s quotation (T01.C.03) and the chapter title *Im falschen Film* match word for word.'

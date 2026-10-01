@@ -1,0 +1,320 @@
+# The translation's own page (i18n/tools/lost.mjs → the German site's uebersetzung/), in German and English.
+# {lines} {total} {anchors} {notes} {longer} {voiced} {chapters_done} are counted when the page is made.
+# Written by Claude, like the translation: it is part of what's being shown.
+slug: uebersetzung
+text_slug: volltext
+html_lang: de
+
+title:
+  de: Wie dieser Film übersetzt wurde und was verloren ging
+  en: How this film was translated, and what was lost
+text_title:
+  de: Der ganze Film, in beiden Sprachen
+  en: The whole film, in both languages
+labels:
+  lang_de: Deutsch
+  film_de: Der ganze Film
+  film_en: The whole film
+  original: Original (Englisch)
+  ours: Diese Übersetzung
+  free: Eine freiere Übersetzung
+  kinds_de: Was verloren geht, nach Art
+  kinds_en: What gets lost, by kind
+  list_de: Zeile für Zeile
+  list_en: Line by line
+
+sections:
+  - de_title: Diese Seite
+    en_title: This page
+    de: |
+      *Frosch oder Axolotl* ist ein Animationsfilm nach einem echten Gespräch, Wort für Wort, zwischen Curt Cox und
+      Claude, einem KI-Programm von Anthropic. Das Gespräch war auf Englisch. Dies ist die deutsche Fassung.
+
+      Hier steht, wie übersetzt wurde, wie man es anders hätte übersetzen können und was dann anders wäre, Zeile für
+      Zeile. Alles steht in beiden Sprachen, damit jeder, der beide spricht, die Übersetzung selbst beurteilen kann. Hier
+      ist auch [der ganze Film, auf Englisch und Deutsch, nebeneinander](volltext/).
+    en: |
+      *Frog or Axolotl* is an animated film made from a real conversation, word for word, between Curt Cox and Claude,
+      an AI program made by Anthropic. The conversation was in English. This is the German version.
+
+      This page explains how it was translated, how else it could have been, and what would have been different, line
+      by line. Everything is in both languages so that anyone who speaks both can judge the translation for themselves.
+      There's also [the whole film, in English and German, side by side](volltext/).
+
+  - de_title: Wer übersetzt hat
+    en_title: Who translated it
+    de: |
+      Claude (das Modell Claude Opus 5.5) hat alles übersetzt: jede Zeile des Gesprächs, jedes ins Bild gezeichnete Wort,
+      die Titel, die Beschriftungen der Codes, die Website zum Film (ihre 64 Erklärungen und ihre Seiten) und diese
+      Seite, einschließlich der Anmerkungen dazu, was verloren ging.
+
+      Ein Grund für diese Fassung ist, unverfälscht zu zeigen, wie Claude übersetzt. Deshalb hat **kein menschlicher
+      Übersetzer sie korrigiert**, und jede spätere Korrektur wird auf dieser Seite mit Datum vermerkt (und bleibt auch
+      in der öffentlichen Geschichte des Codes).
+
+      Bisher: {lines} von {total} Zeilen übersetzt (Kapitel {chapters_done}). Menschliche Durchsicht: noch keine.
+    en: |
+      Claude (the Claude Opus 5.5 model) translated all of it: every line of the conversation, every word drawn in the
+      picture, the titles, the codes' captions, the site that goes with the film (its 64 explainers and its pages) and
+      this page, including the notes on what was lost.
+
+      One reason for making this version is to show, untouched, how Claude translates. So **no human translator
+      corrected it**, and any later correction will be noted on this page with its date (and stays in the code's public
+      history too).
+
+      So far: {lines} of {total} lines translated (chapters {chapters_done}). Human review: none yet.
+
+  - de_title: Wie übersetzt wurde
+    en_title: How it was translated
+    de: |
+      - **Treu, Zeile für Zeile.** Jeder Absatz und jeder Listenpunkt des Gesprächs ist eine Zeile des Films, und die
+        Übersetzung behält dieselben Zeilen, in derselben Reihenfolge, mit demselben Fett- und Kursivdruck, denselben
+        Listen und Links. Erst der Sinn, dann die Form; nie eine freie Bearbeitung.
+      - **Du.** Curt und Claude duzen sich: Das englische Gespräch ist locker, und Chats mit KI duzen auf Deutsch meist.
+        Im Comic siezt der Tierpfleger den Polizisten.
+      - **Claude hat kein Geschlecht.** Im Deutschen haben Adjektive in der ersten Person kein Geschlecht, also muss
+        Claude beim Sprechen nicht wählen; Berufsbezeichnungen aber schon („Ontologe“ oder „Ontologin“). Die
+        Übersetzung umgeht sie, wo sie Claude meinen. In der dritten Person sagt die Website „Claude“ oder, wie das
+        englische *it*, „es“ (das Programm, das Modell), nie „er“ oder „sie“.
+      - **Titel und Namen.** Ein Film oder Buch trägt den Titel, unter dem es in Deutschland bekannt ist
+        (*Eroberung vom Planet der Affen*, *Per Anhalter durch die Galaxis*, *Terminator 2 – Tag der Abrechnung*). Ein
+        Artikel, eine Studie oder eine Website behält den Originaltitel. Namen von Menschen ändern sich nie.
+      - **Fachwörter.** Wo das deutsche Technikdeutsch das englische Wort benutzt, bleibt es (Prompt, Token, Reward
+        Hacking, Benchmark); sonst steht das deutsche (KI, Gewichte, Kontextfenster). *Register* heißt durchweg
+        „Tonlage“.
+      - **Abkürzungen.** Sie bleiben, wie das Technikdeutsch sie benutzt (LLM, RLHF), und die Stimme spricht sie mit
+        deutschen Buchstaben.
+      - **Links.** Codes, die auf die englische Wikipedia zeigten, zeigen auf denselben Artikel auf Deutsch, wo es einen
+        gibt (das sagen die Sprachlinks der Wikipedia selbst; 136 von 202). Die anderen Quellen sind in ihrer eigenen
+        Sprache, fast immer Englisch.
+      - **Das Bild.** Alles, was im Bild geschrieben steht, ist deutsch: Beschriftungen, Karten, Titel und die
+        Sprechblasen des Comics am Anfang, neu beschriftet. Lange deutsche Wörter werden auf die Breite des englischen
+        Wortes eingepasst, halb durch kleinere Schrift, halb durch Stauchen.
+      - **Die Stimmen.** Es sprechen dieselben Stimmen wie im Englischen: Curts geklonte Stimme und River für Claude
+        (ElevenLabs, Modell eleven_v3). Sie sprechen Deutsch mit etwas Akzent. Claudes Mundbewegungen werden aus dem
+        deutschen Ton neu berechnet. Bisher hat kein Kapitel Stimmen; alles ist übersetzt und wartet auf die Aufnahme.
+      - **Die Länge.** Deutsch ist länger als Englisch. Die Animation folgt der Stimme, also wird der Film länger, statt
+        die Worte zu hetzen.
+      - **An die Animation gebunden.** Viele Szenen bewegen sich genau dann, wenn eine Wendung gesagt wird. Jede dieser
+        Wendungen ({anchors} bisher) brauchte ihr deutsches Gegenstück, was die Wortstellung manchmal näher am
+        Englischen hielt als nötig.
+      - **Curts Tippfehler.** Auf Englisch zeigt der Film Curts Tippfehler, rot durchgestrichen, mit der Korrektur
+        darüber. Wo ein Fehler die Übersetzung überlebt (ein falsch geschriebener Name), bleibt er; wo er am Englischen
+        hängt, geht er verloren, und das ist unten vermerkt.
+      - **Was englisch bleibt.** Titel von Artikeln, Studien, Sendungen und Songs ohne deutschen Titel; die Quellen, die
+        Claude zitiert; und die Vorführungen, wie ein Modell Text in *Tokens* zerlegt, die das Englisch zeigen, das das
+        Modell tatsächlich gelesen hat.
+      - **Zahlen.** Tausender mit Punkt (17.000), Dezimalstellen mit Komma (0,05), Prozent mit Abstand (40&nbsp;%), wie man
+        im Deutschen schreibt.
+      - **Die Website.** Die 64 Erklärungen der Website wurden nach denselben Regeln übersetzt. Ihre Zitate aus dem Film
+        benutzen die Worte dieser Übersetzung. Wo die Übersetzung etwas hinzufügt, das das Original nicht sagt, steht es
+        in eckigen Klammern und beginnt mit „Anmerkung der Übersetzung“. Links auf die englische Wikipedia zeigen auf den
+        deutschen Artikel, wo es einen gibt; sonst steht „(auf Englisch)“ dabei. Das Gespräch, aus dem der Film
+        entstand und in dem Curt und Claude ihn bauen, wurde nicht übersetzt: Es steht auf Englisch auf der
+        Original-Website.
+    en: |
+      - **Faithful, line by line.** Each paragraph and list item of the conversation is one line of the film, and the
+        translation keeps the same lines, in the same order, with the same bold, italics, lists and links. Meaning
+        first, then form; never a free adaptation.
+      - **Du.** Curt and Claude use the familiar *du* with each other: the English conversation is casual, and German
+        chats with AI usually say *du*. In the comic, the handler uses the formal *Sie* to the officer.
+      - **Claude has no gender.** German first-person adjectives have no gender, so Claude never has to choose when it
+        speaks; job titles do, though (*Ontologe* or *Ontologin*), and the translation avoids them where they'd mean
+        Claude. In the third person the site says "Claude" or, like English *it*, *es* (the program, the model), never
+        *er* (he) or *sie* (she).
+      - **Titles and names.** A film or book goes by the title it's known by in Germany (*Eroberung vom Planet der
+        Affen*, *Per Anhalter durch die Galaxis*, *Terminator 2 – Tag der Abrechnung*). An article, paper or website
+        keeps its original title. People's names never change.
+      - **Technical words.** Where German tech talk uses the English word, it stays (Prompt, Token, Reward Hacking,
+        Benchmark); otherwise it's the German one (KI for AI, Gewichte for weights, Kontextfenster for context window).
+        *Register* is *Tonlage* (tone of voice) throughout.
+      - **Acronyms.** They stay as German tech talk uses them (LLM, RLHF), and the voice says them in German letters.
+      - **Links.** Codes that pointed at English Wikipedia point at the same article in German where there is one
+        (Wikipedia's own links between languages say so; 136 of 202). Other sources are in their own language, almost
+        always English.
+      - **The picture.** Everything written in the picture is in German: labels, cards, titles, and the balloons of the
+        opening comic, relettered. Long German words are fitted to the width of the English word, half by a smaller
+        size and half by condensing.
+      - **The voices.** The same voices as in English speak: Curt's cloned voice, and River for Claude (ElevenLabs, the
+        eleven_v3 model). They speak German with something of an accent. Claude's mouth movements are worked out again
+        from the German audio. So far no chapter is voiced; it's all translated, waiting to be recorded.
+      - **Length.** German runs longer than English. The animation follows the voice, so the film grows rather than
+        rushing the words.
+      - **Tied to the animation.** Many scenes move exactly when a phrase is said. Each of those phrases ({anchors} so
+        far) needed its German counterpart, which sometimes kept the word order closer to the English than it needed
+        to be.
+      - **Curt's typos.** In English, the film shows Curt's typing mistakes, struck through in red with the fix above.
+        Where a slip survives translation (a misspelt name) it's kept; where it depends on English, it's lost, and
+        noted below.
+      - **What stays English.** Titles of articles, papers, shows and songs with no German title; the sources Claude
+        cites; and the demonstrations of how a model splits text into *tokens*, which show the English the model
+        actually read.
+      - **Numbers.** Thousands with a point (17.000), decimals with a comma (0,05), a space before the percent sign
+        (40&nbsp;%), as German writes them.
+      - **The site.** The site's 64 explainers were translated by the same rules. Their quotations from the film use
+        this translation's words. Where the translation adds something the original doesn't say, it's in square
+        brackets and starts "Anmerkung der Übersetzung" (translator's note). Links to English Wikipedia point at the
+        German article where there is one; where there isn't, they say "(auf Englisch)". The conversation that made the
+        film, in which Curt and Claude build it, wasn't translated: it's in English on the original site.
+
+  - de_title: Wie man es anders hätte übersetzen können
+    en_title: How else it could have been translated
+    de: |
+      Jede dieser Möglichkeiten gab es. Für die spanische Fassung wählte Curt die vollständige, treue Übersetzung mit
+      denselben Stimmen; diese Fassung folgt denselben Entscheidungen.
+
+      - **Nur Untertitel.** Die englischen Stimmen und das englische Bild, mit deutschem Text darunter. Am billigsten und
+        dem Originalton am treuesten, aber man muss viel und schnell lesen, und die Schrift im Bild bleibt englisch.
+        Viele deutsche Zuschauer verstehen Englisch; für sie wäre das vielleicht genug gewesen.
+      - **Synchron über dem englischen Bild.** Deutsche Stimmen, aber englische Beschriftungen, Karten und Comics.
+      - **Eine freie Bearbeitung.** Witze und Redewendungen so umgeschrieben, dass sie auf Deutsch funktionieren,
+        Anspielungen durch bekanntere ersetzt. Das klingt natürlicher; es ist aber nicht mehr, Wort für Wort, das
+        Gespräch, das stattgefunden hat.
+      - **Professionelle, lippensynchrone Synchronisation.** Die deutsche Synchronisation, eine der gründlichsten der
+        Welt, passt jede Zeile an die Länge und die Lippenbewegungen des Originals an und ändert dabei manchmal, was
+        gesagt wird. Hier ist es umgekehrt: Die Animation passt sich der Zeile an.
+      - **Muttersprachliche Stimmen.** Schauspieler oder synthetische Stimmen von Muttersprachlern: ein natürlicher
+        Akzent, aber nicht mehr Curts Stimme.
+      - **Siezen.** Ein förmlicheres Deutsch, in dem Curt und Claude sich siezen. Es klänge höflicher und älter, und
+        passte weniger zum Ton des Gesprächs.
+      - **Ein menschlicher Übersetzer oder eine menschliche Durchsicht.** Das Übliche bei einem Film. Dieser hatte
+        keines von beiden, absichtlich: Es geht darum, Claudes Übersetzung so zu zeigen, wie sie herauskam.
+    en: |
+      Each of these was possible. For the Spanish version, Curt chose the full, faithful translation, with the same
+      voices; this version follows the same choices.
+
+      - **Subtitles only.** The English voices and picture, with German text underneath. Cheapest and truest to the
+        original sound, but it means reading a lot, fast, and the writing in the picture stays English. Many German
+        viewers understand English; for them that might have been enough.
+      - **A dub over the English picture.** German voices, but English labels, cards and comic.
+      - **A free adaptation.** Jokes and idioms rewritten to work in German, references swapped for better-known ones.
+        It sounds more natural; it's no longer, word for word, the conversation that happened.
+      - **Professional lip-synced dubbing.** German dubbing, among the most thorough in the world, fits each line to
+        the original's length and lip movements, sometimes changing what's said. Here it's the other way round: the
+        animation fits the line.
+      - **Native voices.** Actors, or synthetic voices of native speakers: a natural accent, but no longer Curt's
+        voice.
+      - **Sie.** A more formal German, in which Curt and Claude say the formal *Sie* to each other. It would sound
+        politer and older, and fit the tone of the conversation less.
+      - **A human translator, or a human review.** The usual thing for a film. This one had neither, on purpose: the
+        point is to show Claude's translation as it came out.
+
+  - de_title: Was anders wäre
+    en_title: What would have been different
+    de: |
+      Eine freiere Übersetzung klänge fast überall natürlicher. Sie würde deutsche Redewendungen benutzen, statt
+      englische nachzubilden, würde Claude ohne Zögern „er“ nennen, Filme mit den Worten der deutschen Synchronfassung
+      zitieren und die Wortspiele so umschreiben, dass sie funktionieren. Dafür würde sie sich von dem entfernen, was
+      Curt und Claude wirklich gesagt haben, und der Film wäre keine genaue Aufzeichnung des Gesprächs mehr.
+
+      Unten stehen, Zeile für Zeile, die {notes} bisher vermerkten Unterschiede: das Original, diese Übersetzung, wie
+      eine freiere Übersetzung es sagen würde, und warum.
+    en: |
+      A freer translation would sound more natural almost everywhere. It would use German idioms instead of copying
+      English ones, call Claude *er* (he) without a second thought, quote films in the words of their German dubs, and
+      rewrite the wordplay so it works. In exchange it would drift from what Curt and Claude actually said, and the
+      film would stop being an exact record of the conversation.
+
+      Below, line by line, are the {notes} differences noted so far: the original, this translation, how a freer
+      translation would put it, and why.
+
+  - de_title: Urteile selbst
+    en_title: You be the judge
+    de: |
+      Wenn du beide Sprachen sprichst, ist deine Meinung genau das, wofür diese Seite da ist: ein Fehler, eine Wendung,
+      die schief klingt, eine falsche Anmerkung, etwas Verlorenes, das nicht vermerkt ist. Du kannst es sagen, indem du
+      ein *Issue* im [Repository des Films](https://github.com/curtcox/axol-f/issues) eröffnest. Jede Korrektur wird hier
+      vermerkt.
+    en: |
+      If you speak both languages, your view is exactly what this page is for: a mistake, a phrase that sounds off, a
+      note that's wrong, something lost that isn't noted. You can say so by opening an issue on
+      [the film's repository](https://github.com/curtcox/axol-f/issues). Every correction will be noted here.
+
+list_intro:
+  de: |
+    Jede Anmerkung zeigt die Originalzeile, diese Übersetzung und, in Gelb, wie eine freiere Übersetzung es sagen würde
+    (wo sich der Unterschied aufschreiben lässt). Der Code neben der Art bezeichnet die Zeile im [ganzen Text](volltext/).
+  en: |
+    Each note shows the original line, this translation and, in yellow, how a freer translation would put it (where
+    the difference can be written out). The code beside the kind identifies the line in [the full text](volltext/).
+
+text_intro:
+  de: |
+    Jede Zeile des Films: links das ursprüngliche Gespräch auf Englisch, rechts die Übersetzung, die man in der deutschen
+    Fassung hört und sieht. Ein Gedankenstrich (—) markiert eine noch nicht übersetzte Zeile.
+  en: |
+    Every line of the film: on the left, the original conversation in English; on the right, the translation heard
+    and seen in the German version. A dash (—) marks a line not translated yet.
+
+kinds:
+  gender:     { de: Grammatisches Geschlecht, en: Grammatical gender, what_de: 'Das Deutsche verlangt ein Geschlecht, wo das Englische keines verlangt.', what_en: 'German forces a gender where English doesn''t.' }
+  address:    { de: Du und Sie, en: Forms of address, what_de: 'Das englische *you* ist zugleich du, Sie und ihr.', what_en: 'English *you* is du, Sie and ihr at once.' }
+  idiom:      { de: Redewendungen, en: Idioms, what_de: 'Englische feste Wendungen ohne genaue Entsprechung.', what_en: 'English set phrases with no exact equivalent.' }
+  wordplay:   { de: Wortspiele, en: Wordplay, what_de: 'Witze, die an den englischen Wörtern hängen, und ein paar, die auf Deutsch sogar besser werden.', what_en: 'Jokes that depend on the English words, and a few that get better in German.' }
+  nuance:     { de: Bedeutungsnuancen, en: Shades of meaning, what_de: 'Wörter, deren Bedeutung sich ein wenig verschiebt.', what_en: 'Words whose meaning shifts a little.' }
+  ambiguity:  { de: Mehrdeutigkeit, en: Ambiguity, what_de: 'Zeilen mit zwei Lesarten auf Englisch und einer auf Deutsch.', what_en: 'Lines with two readings in English and one in German.' }
+  coinage:    { de: Wortschöpfungen und Lehnwörter, en: Coinages and loanwords, what_de: 'Erfundene oder fachliche Wörter, oft aus dem Englischen übernommen.', what_en: 'Invented or technical words, often taken over from English.' }
+  reference:  { de: Anspielungen und Titel, en: References and titles, what_de: 'Werke, die auf Deutsch anders heißen oder gar keinen Namen haben.', what_en: 'Works known by another name, or none, in German.' }
+  quote:      { de: Zitate, en: Quotations, what_de: 'Worte, die von anderswo zitiert sind.', what_en: 'Words quoted from somewhere else.' }
+  region:     { de: Ortsbezug, en: Local reference, what_de: 'Dinge, die auf Deutsch anders heißen, weil sie anderswo zu Hause sind.', what_en: 'Things named differently in German because they belong somewhere else.' }
+  rhythm:     { de: Rhythmus und Länge, en: Rhythm and length, what_de: 'Deutsch ist länger, und der Rhythmus ändert sich.', what_en: 'German runs longer, and the rhythm changes.' }
+  typo:       { de: Curts Tippfehler, en: Curt's typos, what_de: 'Tippfehler, die die Übersetzung nicht überleben.', what_en: 'Typing mistakes that don''t survive translation.' }
+  title:      { de: Der Titel, en: The title, what_de: 'Der Name des Films und seiner Kapitel.', what_en: 'The name of the film and its chapters.' }
+
+# film-wide notes, not tied to one line (ch: null is the whole film)
+notes:
+  - what: title
+    ch: null
+    where: Titel / title
+    original: 'Frog or Axolotl'
+    ours: 'Frosch oder Axolotl'
+    de: 'Ein Glücksfall: Der Axolotl heißt auf Deutsch genauso wie auf Englisch, und *frog* ist „Frosch“. Der Titel überlebt Wort für Wort. Nur das Wortspiel des Repositorys, *axol-f*, eine Anspielung auf „Axel F“, das Titelthema aus *Beverly Hills Cop*, das Crazy Frog berühmt machte, ist ein englischer Witz; ihn versteht man auf Deutsch aber genauso.'
+    en: 'A lucky one: the axolotl is called the same in German as in English, and *frog* is *Frosch*. The title survives word for word. Only the repository''s pun, *axol-f*, a nod to "Axel F", the *Beverly Hills Cop* theme Crazy Frog made famous, is an English joke, and German speakers get it just the same.'
+  - what: address
+    ch: null
+    where: die Anrede / address
+    original: 'you'
+    ours: 'du'
+    free: 'Sie'
+    de: 'Das Englische hat nur *you*. Die Übersetzung lässt Curt und Claude sich duzen, wie es in lockeren Gesprächen und in Chats mit KI auf Deutsch üblich ist. Ein Siezen wäre auch möglich gewesen und hätte das Gespräch förmlicher gemacht; dass Claude Curts Vorlieben aus dem Gedächtnis kennt, klingt mit „du“ vertrauter, als das Englische es sagt.'
+    en: 'English has only *you*. The translation has Curt and Claude say the familiar *du* to each other, as casual German conversation and German chats with AI usually do. The formal *Sie* was possible too and would have made the conversation more formal; with *du*, Claude knowing Curt''s preferences from memory sounds more familiar than the English says.'
+  - what: gender
+    ch: null
+    where: Claude in der dritten Person / Claude in the third person
+    original: 'it'
+    ours: 'Claude, es'
+    free: 'er'
+    de: 'Das Englische nennt Claude *it*. Im Deutschen läge „er“ nahe (der Name klingt männlich, und „der Chatbot“ ist grammatisch männlich), doch das gäbe Claude ein Geschlecht, das das Original nicht hat. Die Website sagt deshalb „Claude“ oder „es“ (das Programm, das Modell), was manchmal etwas holprig klingt.'
+    en: 'English calls Claude *it*. In German *er* (he) would come naturally (the name sounds masculine, and *der Chatbot* is grammatically masculine), but it would give Claude a gender the original doesn''t. So the site says "Claude" or *es* (it: *das Programm*, *das Modell*), which sometimes reads a little awkwardly.'
+  - what: title
+    ch: 0
+    where: Kapiteltitel / chapter title
+    original: 'Cold open'
+    ours: 'Kalter Einstieg'
+    free: 'Vorspann'
+    de: '*Cold open* ist ein Begriff des amerikanischen Fernsehens: die Szene, die vor dem Vorspann beginnt, ohne Einführung. Deutsche Fernsehleute sagen oft einfach „Cold Open“. „Kalter Einstieg“ ist die wörtliche Übersetzung; „Vorspann“ wäre geläufiger, meint aber die Titelsequenz selbst.'
+    en: '*Cold open* is an American television term: the scene that starts before the titles, with no introduction. German TV people often just say "Cold Open". *Kalter Einstieg* is the literal translation; *Vorspann* would be more familiar, but means the title sequence itself.'
+  - what: title
+    ch: 7
+    where: Kapiteltitel / chapter title
+    original: 'Mind-Space'
+    ours: 'Raum der Geister'
+    free: 'Geistraum'
+    de: '*Mind-Space* ist ein Kompositum im Stil der Science-Fiction. „Raum der Geister“ klingt etwas gespenstisch, weil „Geist“ auch Gespenst heißt; „Geistraum“ wäre kürzer, aber kaum verständlich.'
+    en: '*Mind-Space* is a compound in the style of science fiction. *Raum der Geister* (space of minds) sounds a little spooky, since *Geist* also means a ghost; *Geistraum* would be shorter but hardly understandable.'
+  - what: title
+    ch: 9
+    where: Kapiteltitel / chapter title
+    original: 'Shells'
+    ours: 'Schalen'
+    free: 'Panzer'
+    de: 'Der Titel spielt mit beiden Bedeutungen von *shell*: dem Panzer des Hummers im Krustafarianismus und der Software-Hülle um ein Modell (den Agenten-Gerüsten). „Schalen“ trägt den Hummer und, weniger geläufig, die Software; die Anmerkungen zu Kapitel 9 erklären es.'
+    en: 'The title plays on both senses of *shell*: the lobster''s carapace in Crustafarianism and the software shell wrapped around a model (the agent harnesses). *Schalen* carries the lobster and, less commonly, the software; chapter 9''s notes explain.'
+  - what: title
+    ch: 14
+    where: Kapiteltitel / chapter title
+    original: 'The Pundits'
+    ours: 'Die Meinungsmacher'
+    free: 'Die Experten'
+    de: '*Pundit* ist, wer in den Medien Meinungen verbreitet, mit einem Hauch Ironie. „Die Meinungsmacher“ hat die Ironie; „Die Experten“ wäre neutraler, „Die Kommentatoren“ ganz nüchtern.'
+    en: '*Pundit* is someone who airs opinions in the media, with a hint of irony. *Die Meinungsmacher* (the opinion-makers) has the irony; *Die Experten* would be more neutral, *Die Kommentatoren* quite sober.'

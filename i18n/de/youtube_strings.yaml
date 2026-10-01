@@ -1,0 +1,24 @@
+# The German upload's words (tools/youtube.mjs's YOUTUBE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/youtube_strings.yaml). {name} is filled in by the tool. Once the German video is up, its id goes in
+# i18n/de/site.yaml as film: youtube: (the German site then embeds it).
+title: Frosch oder Axolotl
+cold_open: Kalter Einstieg
+explained: Erklärt
+head: |
+  Ein Animationsfilm nach einem langen Gespräch an einem Samstagmorgen zwischen Curt und Claude, einem KI-Programm, fast Wort für Wort, ins Deutsche übersetzt: von einer Parodie der MAD auf Planet der Affen über Frösche, Axolotl und Spiegeltests bis zum Hugging-Face-Vorfall im Juli 2026 und P(foom).
+
+  Die Übersetzung stammt von Claude, absichtlich ohne menschliche Durchsicht. Wie übersetzt wurde und was verloren ging: https://curtcox.github.io/axol-f/de/uebersetzung/
+  Die englische Originalfassung: https://curtcox.github.io/axol-f/
+
+  Das ganze Gespräch, übersetzt: {conversation}
+  Jeder Link aus dem Film ({links}), nach Zeit geordnet, mit Erklärungen in einfacher Sprache: {site}
+  Der Code, der den Film zeichnet (du kannst ihn selbst erzeugen): {repo}
+
+  Kapitel
+  {chapters}
+foot: |-
+
+  Mit Code gezeichnet von Claude (p5.js und p5.brush), nach der Abschrift des Gesprächs. Stimmen, Geräusche und Musik: ElevenLabs.
+  Die Comicseite, das Diagramm und der Alignment-Kompass wurden für den Kommentar nachgezeichnet; keine Logos, und die Karikaturen sind liebevoll gemeint. Zitatrecht: Kommentar und Parodie.
+links_head: "\nEinige der Links, nach Zeit geordnet (der Rest ist auf der Website)\n"
+tags: KI, Claude, Animation, KI-Sicherheit, Evaluationen, P(doom), künstliche Intelligenz, Hugging Face, Frosch, Axolotl, auf Deutsch

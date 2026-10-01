@@ -1,0 +1,83 @@
+# The German site's own words (tools/build_site.mjs's SITE_WORDS, key by key; i18n/tools/stage.mjs copies this to the
+# stage's script/site_strings.yaml). {name} is filled in by the builder. Some values are HTML.
+lang: de
+film_title: Frosch oder Axolotl
+index_title: 'Frosch oder Axolotl: die Links'
+explained: Erklärt
+index_intro: >-
+  <p>Ein Animationsfilm nach einem langen Gespräch an einem Samstagmorgen zwischen Curt und Claude, einem KI-Programm.
+  Das Gespräch springt zwischen Science-Fiction, Philosophie und vielen aktuellen KI-Nachrichten hin und her und steckt
+  deshalb voller Anspielungen, die die meisten Leute nicht kennen.</p><p>Hier sind sie alle, der Reihe nach, Kapitel
+  für Kapitel, mit kurzen Erklärungen in einfacher Sprache, wo ein Link allein nicht reicht. <strong>Die gelben sind die
+  Erklärungen.</strong> Fang dort an, wenn dich im Film etwas ratlos gelassen hat.</p>
+  <p class="note">Das ist die deutsche Fassung. Film und Website wurden von Claude übersetzt, absichtlich ohne
+  menschliche Durchsicht: <a href="uebersetzung/">wie übersetzt wurde und was verloren ging</a>. Die englische
+  Original-Website ist <a href="../">curtcox.github.io/axol-f</a>.</p>
+watch_film: ▶ Den Film ansehen
+watch_film_after: ', mit jedem Link daneben, sobald er erscheint.'
+on_its_way: >-
+  Der Film ist unterwegs. Seine Links und Erklärungen sind schon alle hier. Ungeduldig? Der Film ist komplett aus Code
+  gemacht, du kannst ihn also selbst erzeugen: <a href="{repo}">hol dir den Code</a> und führe
+  <code>npm start</code> aus.
+two_conversations: Die zwei Gespräche
+conversation_shown: Das Gespräch, das der Film zeigt
+conversation_shown_after: ', Wort für Wort, übersetzt (<a href="conversation.txt">als reiner Text</a>).'
+# the making-of is in English only, on the English site
+making_of_href: ../making-of/
+conversation_made: Das Gespräch, aus dem der Film entstand
+conversation_made_after: ': Curt bittet Claude, ihn zu machen, und alles, was Claude dann tat (auf Englisch; <a href="{href}making-of.txt">als reiner Text</a>).'
+chapters: Kapitel
+index_notes: >-
+  <p class="note">Die Erklärungen hat Claude, die KI aus dem Film, für diese Website geschrieben und mit den verlinkten
+  Quellen abgeglichen. Viele dieser Quellen sind auf Englisch. Die Zeiten können sich noch etwas verschieben, bevor der
+  Film fertig ist.</p>
+  <p class="note">Der Film ist mit Code gezeichnet, von Claude. Curt fand den Code, auf dem er aufbaut, über einen
+  früheren Film, der genauso entstand: <a href="https://curtcox.github.io/PDoomVideo/">I'm Upping My P(doom)</a> (das ist
+  dessen Erklär-Website, auf Englisch).</p>
+  <p class="note">Warum heißt diese Website <em>axol-f</em>? Axolotl ist nur einen Buchstaben entfernt von
+  <a href="https://www.youtube.com/watch?v=k85mRPqvMbE">„Axel F“ von Crazy Frog</a>: ein Frosch oder ein Axolotl.</p>
+going_to: Weiter zu
+# the speaker name on the conversation page (Claude stays Claude)
+curt: Curt
+conversation_title: Das Gespräch
+conversation_crumb: das Gespräch
+conversation_intro: >-
+  <p>Das ganze Gespräch zwischen Curt und Claude, aus dem der Film gemacht ist, Wort für Wort, Kapitel für Kapitel, in
+  der Übersetzung des Films. Das englische Original ist <a href="{orig}">auf claude.ai</a>. Es gibt es auch
+  <a href="../conversation.txt">als reinen Text</a> und neben dem Englischen im
+  <a href="../uebersetzung/volltext/">ganzen Film in beiden Sprachen</a>. Und es gibt
+  <a href="{making_of}">das Gespräch, aus dem der Film entstand</a> (auf Englisch).</p>
+the_original: das Original
+watch_chapter: ▶ Dieses Kapitel ansehen, mit den Links daneben
+chapter: Kapitel
+no_links: In diesem Kapitel gibt es noch keine Links.
+in_the_film: Im Film bei etwa
+read_more: Weiterlesen
+play_from_here: Film ab hier abspielen
+film_local_final: der fertige Schnitt, auf diesem Computer erstellt
+film_local_draft: der neueste Entwurf, auf diesem Computer erstellt
+film_preview: ein Vorschauschnitt; der fertige Film kommt auf YouTube
+this_is: 'Das ist {what}.'
+on_its_way_film: >-
+  Der Film ist unterwegs. Alle seine Links sind schon hier, nach Zeit geordnet. Ungeduldig? Der Film ist komplett aus
+  Code gemacht, du kannst ihn also selbst erzeugen: <a href="{repo}">hol dir den Code</a> und führe
+  <code>npm start</code> aus.
+watch: Ansehen
+the_film: der Film
+watch_crumb: ansehen
+chapter_links: Links zu Kapitel {n}
+highlighted: Die hervorgehobenen Links sind gerade im Bild. Klick auf eine Zeit, um dorthin zu springen; Links öffnen sich in einem neuen Tab.
+follow_film: die Liste dem Film folgen lassen
+follow_video: die Liste dem Video folgen lassen
+badge_explained: erklärt
+badge_chat: im Chat
+badge_source: Quelle
+# the head of the transcript the site serves as plain text (conversation.txt), which i18n/tools/stage.mjs writes
+transcript_head: |-
+  # Abschrift des Gesprächs, ins Deutsche übersetzt
+
+  Original (auf Englisch): https://claude.ai/share/43eeeff8-bc21-4740-9553-b988beed4296
+  Übersetzung: Claude, ohne menschliche Durchsicht. Wie übersetzt wurde: https://curtcox.github.io/axol-f/de/uebersetzung/
+on_youtube: Auf YouTube ansehen
+on_youtube_after: ' (derselbe Film, mit den Kommentaren und Kapiteln von YouTube).'
+home_alt: '{title}: zur Startseite'

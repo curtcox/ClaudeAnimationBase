@@ -16,6 +16,7 @@ In order:
 Later, if the first three find viewers:
 
 - **German, French**: strong interest in AI policy, but many of these viewers manage English already. Subtitles may do.
+  (German begun in full on 2026-10-01, at Curt's word: see *Conventions (German)* and the steps below.)
 - **Hindi**: YouTube's biggest market, but Indian tech viewers mostly watch in English. Subtitles first. (Begun in
   full on 2026-10-01, at Curt's word: see *Conventions (Hindi)* and the steps below.)
 - **Chinese, Korean, Arabic**: large, but YouTube is blocked in mainland China, Korean needs another script, and
@@ -164,6 +165,36 @@ the same voices.
   characters a second (Mandarin says each character as a syllable).
 - **The voice:** brand names, models and acronyms are left for the voice to say in English, as Taiwanese speakers do;
   only what it might misread is respelled (`i18n/zh/pronounce.yaml`: T-800 → T八百, GPT-5.6 → GPT五點六…).
+
+## Conventions (German, `i18n/de`, site at `/de/`)
+
+Claude's choices (2026-10-01, for Curt to confirm), carrying over the Spanish decisions: a full, faithful translation,
+the same voices.
+
+- **The title** is *Frosch oder Axolotl*: the axolotl is *Axolotl* in German too, and *frog* is *Frosch*.
+- **Du.** Curt and Claude say *du* to each other, as casual German and German chats with AI do; in the cold open's
+  comic the handler says *Sie* to the officer.
+- **Claude has no gender.** German first-person adjectives have none, so Claude's lines need no care there; job and
+  role nouns do (*Ontologe/Ontologin*, *Doktor/Doktorin*), and Claude's lines avoid them ("aus Sicht der
+  professionellen Ontologie", "wenn du in Ontologie promoviert hättest"). On the site Claude is "Claude" or *es* (das
+  Programm, das Modell), never *er* or *sie*. Nouns' grammatical gender (*der Geist*, *das Modell*) is left alone.
+- **Works** by their German titles (*Eroberung vom Planet der Affen*, *Per Anhalter durch die Galaxis*, *Ender's Game –
+  Das große Spiel*, *Terminator 2 – Tag der Abrechnung*, "Ich komme wieder"); papers, articles and sites keep their own
+  titles. *Ape* is *Affe*, as in *Planet der Affen*.
+- **Words:** KI for AI (but AGI, LLM, RLHF, RSI stay); *register* is *Tonlage* throughout; *probe* is *Test*;
+  *eval-awareness* is *Testbewusstsein*; *harness* is *Gerüst*; *shell* is *Schale*. English tech words German uses
+  stay (Prompt, Token, Benchmark, Reward Hacking, Exploit).
+- **Coinages:** *thrindle* is *Thrindel* (German-shaped, meaningless); *confuzzled* is *verdwirrt* (verdutzt +
+  verwirrt), a coinage as the original is; *Crustafarianism* is *Krustafarianismus* (Krustentier shows through).
+- **Numbers** as German writes them: 17.000, 0,05, 40&nbsp;% (a no-break space before %, so a caption never splits
+  it). No abbreviations like *z. B.* in the lines (a caption would end a sentence at the point); a date's ordinal
+  (30. Januar) ends no caption sentence (`i18n/src/i18n.js`, `tools/subtitles.mjs`; English unchanged).
+- **On the site:** "[Anmerkung der Übersetzung: …]" for what the translation adds, and "(auf Englisch)" after a link
+  with no German article (136 of the film's 202 Wikipedia codes have one; 206 of the explainers' links moved).
+- **The picture:** Latin letters, so the hand-lettering fonts serve as they are (umlauts and ß included); long German
+  words are fitted to the English widths as Japanese ones are (`fit`, `i18n/tools/stage.mjs`).
+- **The voice:** acronyms and model names respelled for a German voice (`i18n/de/pronounce.yaml`: LLM → Ell-Ell-Em,
+  T-800 → T achthundert, GPT-5.6 → G-P-T fünf Punkt sechs…).
 
 ## How it's built
 
@@ -317,6 +348,20 @@ The tools, run from the project's root:
       ("**為什麼。**不是…"), which showed as a gap after the full-width stop.
 - [ ] Curt confirms the conventions above (or changes them); a Chinese-reading reviewer, if one turns up.
 - [ ] Voice it: eleven_v3 speaks Mandarin. Then drafts, then the final on the faster Mac.
+
+### German
+
+- [x] The engine's hooks: long German labels fitted like Japanese ones; German Wikipedia links marked "(auf Englisch)"
+      where there's no German article; a date's ordinal ends no caption sentence (English captions and subtitles
+      unchanged) (2026-10-01).
+- [x] The transcript (453 lines, every anchor), the cold open, the chapter titles, the lettering (406 strings), the
+      codes' captions (409; German Wikipedia for 136 of 202), the 64 explainers (Wikipedia links moved to German for
+      206, marked "(auf Englisch)" for 101), the site's words, the YouTube words, the translation's page
+      (`i18n/de/translation.yaml`, at `/de/uebersetzung/`, 56 notes), both thumbnails.
+- [x] Every chapter probed: nothing lettered in English, every cue anchored, no errors; frames of chapters 0, 7, 12 and
+      15 checked by eye; subtitles checked (2026-10-01).
+- [ ] Curt confirms the conventions above (or changes them); a German-reading reviewer, if one turns up.
+- [ ] Voice it: eleven_v3 speaks German. Then drafts, then the final on the faster Mac.
 
 ## Costs
 

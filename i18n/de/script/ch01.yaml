@@ -84,11 +84,11 @@ T03.C.01:
 T03.C.02:
   text: 'Die Parallele ist eng:'
 T03.C.03.1:
-  text: '- **Ein intelligentes Wesen, dessen Sprechen wegerklärt wird.** „Der Affe ist ein Bauchredner!“ ist ungefähr das Argument vom „stochastischen Papagei“. Die Worte sind echt, aber angeblich spricht in Wahrheit jemand anderes, ob das nun die Trainingsdaten sind, die RLHF-Bewerter oder Anthropic.'
+  text: '- **Ein intelligentes Wesen, dessen Sprechen wegerklärt wird.** „Dieser Affe ist ein Bauchredner!“ ist ungefähr das Argument vom „stochastischen Papagei“. Die Worte sind echt, aber angeblich spricht in Wahrheit jemand anderes, ob das nun die Trainingsdaten sind, die RLHF-Bewerter oder Anthropic.'
   anchors:
     stochastic parrot: stochastischen Papagei
     supposedly someone else: angeblich spricht
-    '"That ape': '„Der Affe'
+    '"That ape': '„Dieser Affe'
     is roughly: ist ungefähr
     training data: Trainingsdaten
     RLHF raters: RLHF-Bewerter
