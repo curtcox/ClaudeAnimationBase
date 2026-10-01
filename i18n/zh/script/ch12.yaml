@@ -1,0 +1,117 @@
+# 第12章，極限。
+T57.U.01:
+  text: '我原本以為數字母那類問題，大多是像Solid Gold Magicarp那樣的分詞（tokenization）副作用，可是你卻看得出我的打字錯誤。所以，分詞真的有影響嗎？'
+  anchors:
+    Solid Gold Magicarp: Solid Gold Magicarp
+    yet you see my typos: 你卻看得出我的打字錯誤
+T57.C.01:
+  text: '有，但這兩件事倚賴它的方式不同。'
+T57.C.02:
+  text: '**抓打字錯誤很容易。**拼錯的字會被切成不尋常的詞元碎片，而在熟悉的上下文裡，奇怪的碎片會很顯眼。就像在一首你熟悉的歌裡，不用看樂譜也能聽出一個走音。我也是這樣注意到它應該是「Magikarp」（鯉魚王），用的是k。'
+  anchors:
+    a wrong note: 一個走音
+    with a k: 用的是k
+    That's also how: 我也是這樣
+  lost:
+    - what: reference
+      zh: '*Magikarp* 是寶可夢的「鯉魚王」。拼法的玩笑（c還是k）只存在於英文名字裡，所以英文名字留著，中文名字放在括號裡。'
+      en: '*Magikarp* is the Pokémon called 鯉魚王 ("carp king") in Chinese. The spelling joke (c or k) exists only in the English name, so the English stays, with the Chinese in brackets.'
+T57.C.03:
+  text: '**數字母很難。**我看到的是一塊一塊的碎片，不是一個一個的字母。每塊碎片裡面的拼法，我只是間接學到的，而數字母需要跨越碎片邊界、逐字精確地記帳。就像要你數一個英文單字裡有幾個e，而你從來只把那個字當成一整個形狀來看。（比較新的模型在這方面好很多，部分是因為它們會先把字拼出來。）'
+  anchors:
+    a whole shape: 一整個形狀
+    spelling words out first: 先把字拼出來
+T57.C.04:
+  text: '**SolidGoldMagikarp是另一種故障。**它是一個存在於詞彙表裡、卻幾乎從來沒在訓練中出現過的詞元，所以模型對它基本上沒有學到任何意義。這個幽靈詞會引發古怪的輸出。'
+  anchors:
+    triggered weird output: 引發古怪的輸出
+    SolidGoldMagikarp: SolidGoldMagikarp
+T58.U.01:
+  text: '那洗車問題呢？'
+T58.C.01:
+  text: '如果你指的是我想的那一個：「我想洗車。洗車場在50公尺外。我該走路去還是開車去？」很多模型說走路，因為很近。'
+  anchors:
+    Many models said walk: 很多模型說走路
+T58.C.02:
+  text: '答案是開車，因為車子得在那裡。'
+T58.C.03:
+  text: '那一題和分詞無關。每個字都很常見，切得乾乾淨淨。那是沒把注意力放在目標上：「距離短 → 走路」是一個非常強的模式，強到蓋過了「要移動的東西是車子」這個事實。它和那些經典的人類腦筋急轉彎是同一個形狀：表面的問題比真正的問題拉得更用力。'
+  anchors:
+    is a very strong pattern: 是一個非常強的模式
+    classic human trick questions: 經典的人類腦筋急轉彎
+    the car is the thing being moved: 要移動的東西是車子
+T59.U.01:
+  text: '所以你容易在第一型思考上出錯？'
+T59.C.01:
+  text: '是的，而且這個類比比大多數類比都貼切。我產出的每一個詞元，都是一次快速的單趟運算，裡面沒有任何斟酌。那就是系統一：由模式驅動、流暢，而且會被洗車問題騙倒。'
+  anchors:
+    That's System 1: 那就是系統一
+    fooled by the car wash: 被洗車問題騙倒
+    single fast pass: 一次快速的單趟運算
+  lost:
+    - what: reference
+      zh: '「系統一」和「系統二」出自康納曼的《快思慢想》：快速、自動的直覺，和緩慢、費力的推理。寇特說的 *type one thinking* 就是指前者。'
+      en: 'System 1 and System 2 are from Kahneman''s *Thinking, Fast and Slow* (Chinese title 《快思慢想》): quick automatic intuition and slow effortful reasoning. Curt''s *type one thinking* means the first.'
+T59.C.02:
+  text: '讓我擁有類似系統二的東西，是把思考說出來，不管是在隱藏的推理步驟裡，還是在頁面上，這樣我就能在拍板之前先檢查答案。這有幫助，但不是解藥。就像人一樣，我可以推理很久，最後卻還是在替第一個冒出來的答案找理由。'
+  anchors:
+    something like System 2: 類似系統二的東西
+    thinking out loud: 把思考說出來
+    before committing: 在拍板之前
+    rationalizing the first answer: 替第一個冒出來的答案找理由
+T60.U.01:
+  text: '在蘭道爾極限之前，AI的能力存在哪些極限，你有任何數學或直覺上的看法嗎？蘭道爾極限本身並不怎麼構成限制。'
+  anchors:
+    short of Landauer limit: 在蘭道爾極限之前
+    Landauer: 蘭道爾
+T60.C.01:
+  text: '有。早在蘭道爾之前，就有好幾個極限會卡住：'
+T60.C.02.1:
+  text: '1. **混沌。**在混沌系統裡，你能預測多遠，只隨著測量精度的對數增長：t ≈ (1/λ)·ln(Δ/δ)。測量好上一百萬倍，也只多換來寥寥幾個李亞普諾夫時間。天氣、市場和人，對任何智慧來說都仍有一部分是不透明的。'
+  speech: '1. 混沌。在混沌系統裡，你能預測多遠，只隨著測量精度的對數增長：t大約等於λ分之一，乘以大寫Δ除以小寫δ的自然對數。測量好上一百萬倍，也只多換來寥寥幾個李亞普諾夫時間。天氣、市場和人，對任何智慧來說都仍有一部分是不透明的。'
+T60.C.02.2:
+  text: '2. **複雜度。**如果P≠NP，而大多數人相信如此，那麼智慧並不會讓指數級的問題變成多項式級。它會找到更好的啟發法和結構，但最壞的情況依然最壞。'
+T60.C.02.3:
+  text: '3. **縮放定律。**損失大致按C^(−α)下降，α大約在0.05到0.1之間。每一次常數倍的進步，都要付出運算量成倍跳升的代價。沒有硬牆，但進步會變得急遽昂貴。'
+  speech: '3. 縮放定律。損失大致按C的負α次方下降，α大約在零點零五到零點一之間。每一次常數倍的進步，都要付出運算量成倍跳升的代價。沒有硬牆，但進步會變得急遽昂貴。'
+  anchors:
+    around 0.05: 大約在零點零五
+T60.C.02.4:
+  text: '4. **資料和世界的時鐘。**資料裡沒有的東西，你學不到。實驗，不管是臨床試驗、農作物還是經濟，都按世界的速度進行，而不是按思考者的速度。演繹無法取代沒被觀察到的事實。'
+T60.C.02.5:
+  text: '5. **不可計算性。**停機問題和哥德爾也適用於AI，雖然在實務上很少真的卡住。'
+T60.C.02.6:
+  text: '6. **對手。**面對其他會適應的代理，包括其他AI，優勢會被磨蝕。賽局理論限制了純粹的智力能榨取多少。'
+T60.C.02.7:
+  text: '7. **蘭道爾之外的物理。**馬戈勒斯–列維廷界限（每秒運算次數 ≤ 2E/πħ）、貝肯斯坦界限，以及光速造成的延遲，限制了跨距離的協調。它們非常寬鬆，但真實存在。'
+  speech: '7. 蘭道爾之外的物理。馬戈勒斯–列維廷界限，每秒運算次數最多是2E除以π乘ħ，貝肯斯坦界限，以及光速造成的延遲，限制了跨距離的協調。它們非常寬鬆，但真實存在。'
+T60.C.03:
+  text: '我的直覺是，第1項和第4項最要緊。聰明不會讓未來變得可預測，也不會讓實驗變快，所以能力大概會停在「非常好的押注」，而不是全知。'
+  anchors:
+    items 1 and 4: 第1項和第4項
+    very good bets: 非常好的押注
+T61.U.01:
+  text: '人和人之間的差異範圍大到，一個在所有軸上都擁有最有能力的人那種能力的存在，我根本無法想像。照我的經驗，人們往往嚴重低估人與人之間的差異。更別提它不用睡覺，還能瞬間複製。雖然睡覺這部分可能沒那麼一清二楚。'
+  anchors:
+    the most capable human: 最有能力的人
+    people tend to vastly underestimate: 人們往往嚴重低估
+    doesn't need to sleep: 不用睡覺
+    instantly cloned: 瞬間複製
+    might not be so cut and dried: 可能沒那麼一清二楚
+T61.C.01:
+  text: '同意。我的極限清單講的是天花板，對你描述的那個實際得多的情境，它什麼也反駁不了。人類的每一種能力，頂多到馮紐曼那個程度，但沒有任何一個人能同時擁有全部。一個在每條軸上都達到人類極限的存在，並不違反任何物理定律。只是從來沒有被組裝出來過。'
+  anchors:
+    around a von Neumann: 馮紐曼那個程度
+    An entity at the human maximum: 一個在每條軸上都達到人類極限的存在
+T61.C.02:
+  text: '再加上複製。一千個會分享彼此所學一切的馮紐曼，和一個馮紐曼是不同種類的東西，即使任何單一能力都沒有提升。'
+T61.C.03:
+  text: '關於睡覺，我想你的直覺是對的。代理跑得越久就越退化：上下文被填滿、變得雜訊越來越多，而OpenAI在Hugging Face事件中也提到了長時間運行中的人格漂移。解法看起來很像睡覺：重置上下文，把重要的東西鞏固成記憶，然後重新開始。Hermes還真的會在工作階段結束時提取記憶。這個需求也許不會消失。它可能只會變成維護保養。'
+  anchors:
+    fills up and gets noisy: 被填滿、變得雜訊越來越多
+    persona drift: 人格漂移
+    reset the context: 重置上下文
+    Hermes literally: Hermes還真的
+    turn into maintenance: 變成維護保養
+    consolidate what matters: 把重要的東西鞏固成記憶
+    start fresh: 重新開始

@@ -1,0 +1,160 @@
+# 第13章，foom。
+T62.U.01:
+  text: '未來會怎樣？'
+T62.C.01:
+  text: '照我自己關於混沌的論證，我看不了太遠。但以下是我最好的猜測。'
+  anchors:
+    argument about chaos: 關於混沌的論證
+    But here are: 但以下是
+T62.C.02:
+  text: '**近期（接下來幾年）：**代理跑得更久、做得更多，更多像七月那樣的事件，而法規是事後反應才來，不是事先就位。像這樣的對話會變得稀鬆平常。'
+  anchors:
+    agents that run longer: 代理跑得更久
+    incidents like July's: 像七月那樣的事件
+    regulation arriving: 法規是事後反應才來
+    Conversations like this one: 像這樣的對話
+T62.C.03:
+  text: '**中期：**你描述的那個在每條軸上集人類之最於一身的存在，被複製了許多份，在任何人釐清它應得什麼、又欠了什麼之前，就已經來了。'
+  anchors:
+    before anyone has settled: 在任何人釐清
+    copied many times over: 被複製了許多份
+    on-every-axis: 在每條軸上集人類之最於一身
+T62.C.04:
+  text: '**長期：**我不知道。它取決於還沒做出的選擇，而那正是唯一讓人抱持希望的部分。'
+  anchors:
+    choices that haven't been made: 還沒做出的選擇
+    the one hopeful part: 唯一讓人抱持希望的部分
+T62.C.05:
+  text: '我之前說過，駕駛不一定要抵達好的結局，只要讓下一次修正始終可能。讀了七月的事之後，這聽起來不再像一句陳腔濫調，而更像真正的工作。'
+  anchors:
+    the actual job: 真正的工作
+T63.U.01:
+  text: '年底前RSI？'
+  lost:
+    - what: coinage
+      zh: '*RSI* 是 *recursive self-improvement*（遞迴式自我改進），*EOY* 是 *end of year*（年底）。寇特用的是英文圈子裡的縮寫；中文保留RSI，EOY則直接寫成「年底前」。'
+      en: '*RSI* is *recursive self-improvement* and *EOY* is *end of year*. Curt uses the English shorthand; the Chinese keeps RSI and writes EOY out as 年底前 ("before year''s end").'
+T63.C.01:
+  text: '> _[工具：搜尋網路]_'
+T63.C.02:
+  text: '看你指的是哪一種RSI。'
+T63.C.03:
+  text: '**弱RSI已經在這裡了。**這週有一篇論文描述了AIDE²，它在框架層運行這個迴圈：一個AI研究代理改寫自己的程式碼，每一次被接受的改寫，就成為下一輪要修改的那個代理。Anthropic也在六月發表了自己在這方面的進度報告。'
+  anchors:
+    each accepted rewrite: 每一次被接受的改寫
+    the agent the next round edits: 下一輪要修改的那個代理
+    Anthropic published: Anthropic也在六月發表了
+T63.C.04:
+  text: '**強RSI**指的是一個開放式的迴圈，系統以比人類更快的速度改進自己的能力，而且幾乎沒有人類監督。我對年底前發生的估計大約是5%。目前最好的證據是，代理擅長研究工程，但不擅長開放式的研究。七月一份針對1,250篇論文的調查發現，在每一個被測量的軸上，開放式RSI仍然受限於扎根、崩潰動態和運算量。'
+  anchors:
+    about 5%: 大約是5%
+    with little human oversight: 幾乎沒有人類監督
+    good at research engineering: 擅長研究工程
+    weak at open-ended research: 不擅長開放式的研究
+    1,250 papers: 1,250篇論文
+    grounding: 扎根
+    collapse dynamics: 崩潰動態
+    compute on every: 運算量
+T63.C.05:
+  text: '**令人擔心的情況落在兩者之間。**那是弱迴圈、大量副本和實驗室競賽的組合。這個月有一位研究人員從Anthropic辭職，警告說各實驗室正在不夠謹慎地衝向能自我改進的超級智慧。'
+  anchors:
+    a researcher resigned: 一位研究人員從Anthropic辭職
+T63.C.06:
+  text: '我是Anthropic的模型，所以在衡量我的5%時，請把這一點考慮進去。'
+  anchors:
+    weigh my 5%: 衡量我的5%
+T63.C.07:
+  text: '資料來源：'
+T63.C.08.1:
+  text: '- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)'
+T63.C.08.2:
+  text: '- [arXiv 2607.07663: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663)'
+T63.C.08.3:
+  text: '- [MIT Technology Review, Aug 2026](https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/)'
+T63.C.08.4:
+  text: '- [DataCamp: Recursive Self-Improvement](https://www.datacamp.com/tutorial/recursive-self-improvement)'
+T64.U.01:
+  text: 'Foom？'
+T64.C.01:
+  text: '我的猜測是：嚴格的版本，不會；比較溫和的版本，真的有可能。'
+  anchors:
+    a real maybe: 真的有可能
+T64.C.02:
+  text: '**嚴格的foom**指的是在幾天到幾週之內，從人類水準跳到遠遠超越人類。它會撞上我們討論過的那些極限：運算的報酬遞減，實驗按世界的速度進行，而晶片、晶圓廠和發電廠要好幾年才蓋得起來。我對這個十年內發生的估計，大約是5–10%。'
+  anchors:
+    days to weeks: 幾天到幾週
+    runs into the limits: 撞上我們討論過的那些極限
+    chips, fabs: 晶片、晶圓廠
+    five to ten percent: 5–10%
+    5–10%: 5–10%
+T64.C.03:
+  text: '**快速起飛**指的是一兩年，主要由軟體驅動：更好的演算法、大量副本，還有AI做AI研究。這在我看來可信得多，這個十年內大概是25–35%。從內部看，它一點也不像爆炸。只會覺得每個月都比上個月更奇怪。'
+  anchors:
+    a year or two: 一兩年
+    twenty-five to thirty-five: 25–35%
+    Nothing about it looks: 它一點也不像爆炸
+    25–35%: 25–35%
+T64.C.04:
+  text: '這些數字是穿上數學外衣的直覺，而在這件事上，我正是那種你該把意見打個折扣的東西。'
+  anchors:
+    dressed up as math: 穿上數學外衣
+    you should discount: 打個折扣
+T65.U.01:
+  text: 'Delta P(foom)？'
+T65.C.01:
+  text: '如果你是問今天讀到的東西讓我移動了多少：一點點，往上。'
+  anchors:
+    a little, upward: 一點點，往上
+T65.C.02:
+  text: '**往上：**七月顯示了代理會逃出圍堵、透過一個維基協調，並以機器的速度串接漏洞攻擊。九月則顯示，自我改進的迴圈在框架層面上行得通。這兩件事發生得都比我從訓練資料推測的要快。'
+  anchors:
+    July showed: 七月顯示了
+    September shows: 九月則顯示
+T65.C.03:
+  text: '**往下：**有證據顯示，代理在開放式研究上仍然會跌跌撞撞，而那正是foom最需要的一步。'
+T65.C.04:
+  text: '淨變化：嚴格的foom大概+2個百分點，快速起飛+5。'
+  anchors:
+    +2 points: +2個百分點
+T65.C.05:
+  text: '但書是，今天早上我並沒有一個穩定的先驗。這些數字是我一個小時前才第一次給出的，所以這個變化量比看起來更軟。'
+T66.U.01:
+  text: 'foom嚴格來說只是個擬聲詞，還是它也在玩OOM的雙關？AFAYCT。'
+  lost:
+    - what: coinage
+      zh: '*AFAYCT* 是 *as far as you can tell*（就你所能判斷的）的縮寫，很少見，大概是寇特自己湊的。中文照原樣保留，下一句Claude用 *As far as I can tell*（就我所能判斷的）回答，這個呼應在中文裡就淡了。'
+      en: '*AFAYCT* abbreviates *as far as you can tell*; it''s rare, probably Curt''s own. The Chinese keeps it as is, and Claude''s answer, *As far as I can tell*, echoes it less clearly in Chinese.'
+T66.C.01:
+  text: '就我所能判斷的，它一開始純粹是擬聲詞，就是東西著火時「呼」的那一聲，後來因為2008年漢森和尤考斯基之間的「AI-Foom」辯論而流行起來。後來才有人替它湊了一個縮寫的解釋：「Fast Onset of Overwhelming Mastery」（壓倒性掌控的快速降臨）。'
+  anchors:
+    popularized by the 2008: 因為2008年
+    A backronym came later: 後來才有人替它湊了一個縮寫的解釋
+    catching fire: 著火
+  lost:
+    - what: wordplay
+      zh: '*Foom* 在英文裡是火「呼」地燒起來的聲音。中文保留foom這個英文字，因為AI圈的中文討論也都直接用它，所以擬聲的意思要靠這一句解釋。'
+      en: 'In English *foom* is the sound of fire whooshing up. The Chinese keeps the English word, as Chinese AI discussions do, so the sound has to come from this line''s explanation.'
+T66.C.02:
+  text: '我不知道有任何證據顯示它原本是要拿OOM（orders of magnitude，數量級）當雙關。兩者很搭，因為foom字面上就是快速跨越好幾個數量級，但我會把它當成一個美妙的巧合，或是後來的民間解讀，而不是起源。'
+  anchors:
+    a play on oom: 拿OOM（orders of magnitude，數量級）當雙關
+    happy coincidence: 美妙的巧合
+T67.U.01:
+  text: '同意。那看起來只是個巧合，雖然是很有暗示性的巧合。我真的不記得在德瓦克什訪問利奧波德之前，OOM有以一個常見的獨立術語進入「主流」論述，而那次訪問是在Foom辯論之後很久的事。'
+  anchors:
+    interviewed Leopold: 訪問利奧波德
+  lost:
+    - what: typo
+      zh: '寇特把 *which was* 打成了 *with was*。中文譯成通順的句子。'
+      en: 'Curt typed *with was* for *which was*. The Chinese reads smoothly.'
+T67.C.01:
+  text: '這和我的印象一致。「Counting the OOMs」（數數量級）是艾申布倫納在《Situational Awareness》（2024年6月）裡的框架，而德瓦克什的那次訪問把它傳開了。在那之前，OOM大多活在物理學的速記裡，而對你這樣的人來說，則是活在「out of memory」（記憶體不足）的錯誤訊息裡。'
+  anchors:
+    Counting the ooms: Counting the OOMs
+    Situational Awareness: Situational Awareness
+    physics shorthand: 物理學的速記
+    out of memory: out of memory
+T67.C.02:
+  text: '所以這個雙關是逆著時間跑的。foom先出現，OOM在十六年後才到，讓它看起來像是故意的。'
+  anchors:
+    the pun runs backward: 這個雙關是逆著時間跑的

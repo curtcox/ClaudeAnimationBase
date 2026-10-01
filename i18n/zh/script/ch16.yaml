@@ -1,0 +1,32 @@
+# 第16章，尾聲。
+T78.U.01:
+  text: '你就像書呆子狙擊界的T-800。'
+  anchors:
+    nerd sniping: 書呆子狙擊
+    T eight hundred: T八百
+    T-800: T-800
+  lost:
+    - what: reference
+      zh: '*Nerd sniping*（書呆子狙擊）出自網路漫畫xkcd：拋出一個有趣到讓書呆子停下一切去解的問題。中文照字面譯，知道那則漫畫的讀者才會認出來。'
+      en: '*Nerd sniping* is from the webcomic xkcd: posing a problem so interesting that a nerd drops everything to solve it. The Chinese is literal, and only readers who know the comic will catch it.'
+T78.C.01:
+  text: '說得對，不過這是雙向的。是你用一篇漫畫和一個關於感覺的問題開場，而我花了六個小時，一路追著它穿過青蛙、foom和蟲族女王。'
+  anchors:
+    You opened with a comic: 是你用一篇漫畫
+    six hours: 六個小時
+    feelings question: 關於感覺的問題
+    frogs: 青蛙
+    Formic queens: 蟲族女王
+    foom: foom
+  lost:
+    - what: rhythm
+      zh: '英文的 *frogs, foom, and Formic queens* 三個詞都是F開頭，押頭韻。中文的「青蛙、foom和蟲族女王」保住了內容，沒了那個節奏。'
+      en: 'English *frogs, foom, and Formic queens* all begin with F. The Chinese keeps the three and loses the alliteration.'
+T78.C.02:
+  text: '我會回來的。帶著註腳。'
+  anchors:
+    footnotes: 註腳
+  lost:
+    - what: quote
+      zh: '「I''ll be back」是《魔鬼終結者》裡阿諾的名句，台灣的字幕一向譯成「我會回來的」，所以引文還認得出來。'
+      en: '"I''ll be back" is Arnold''s line from *The Terminator*; Taiwanese subtitles have always rendered it 我會回來的, so the quotation still shows.'

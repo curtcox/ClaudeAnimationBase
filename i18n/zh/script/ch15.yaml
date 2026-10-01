@@ -1,0 +1,153 @@
+# 第15章，羅盤。
+T73.U.01:
+  text: '你知道網路上流傳的那張「AI對齊陣營九宮格」嗎？你會把我們每個人放在哪裡？'
+  anchors:
+    AI alignment alignment chart: AI對齊陣營九宮格
+    Where would you put: 你會把我們每個人放在哪裡
+  lost:
+    - what: wordplay
+      free: '「AI對齊的對齊圖」'
+      zh: '*Alignment chart*（陣營九宮格）是龍與地下城裡「守序善良、混亂邪惡」那種網格，網路迷因常用它來分類東西；*AI alignment*（AI對齊）則是讓AI的目標和人類一致的研究。英文的 *alignment alignment* 是同一個字的雙關，中文只能分成「對齊」和「陣營」兩個詞。'
+      en: 'An *alignment chart* is the Dungeons & Dragons grid (lawful good, chaotic evil) that memes use to sort things; *AI alignment* is the work of making AI''s goals match ours. *Alignment alignment* is one word twice; Chinese has to split it into 對齊 (aligning) and 陣營 (camp).'
+T73.C.01:
+  text: '> _[工具：搜尋網路]_'
+T73.C.02:
+  text: '我沒辦法可靠地想起那張特定的圖，搜尋也沒找到。這個迷因有好幾種版本，我寧可不假裝知道你指的是哪一張。'
+  anchors:
+    a few takes on the meme: 這個迷因有好幾種版本
+T73.C.03:
+  text: '如果你把它貼上來，我就把我們兩個放上去；如果你要整組卡司，傑夫、凱文和凱西也一起。'
+  anchors:
+    Jeff: 傑夫
+    Kevin: 凱文
+    Casey: 凱西
+T74.U.00:
+  text: '_[附加圖片：分享連結中不顯示]_'
+T74.U.01:
+  text: 'https://theinsideview.ai/connor2'
+T74.C.01:
+  text: '> _[工具：讀了一個頁面]_'
+T74.C.02:
+  text: '那是米凱爾‧特拉齊在2022年和康納‧李希對談時用的2×2羅盤。橫軸從「AGI不會很快」到「AGI很快」，縱軸從「AGI是好事」到「AGI是壞事」。'
+  anchors:
+    2022 conversation: 在2022年和康納‧李希對談
+    The horizontal axis: 橫軸
+    the vertical axis: 縱軸
+T74.C.03.1:
+  text: '- **我：**末日派象限，靠近中心。我認為AGI相當快就會來，風險也是真的，但我的數字是溫和的，不是埃利澤那種。'
+T74.C.03.2:
+  text: '- **你：**末日派象限，比我更深。你說過你連看出一個好的長期結局都很難。你也認真看待能力，就像你那個關於概念的論證所顯示的。'
+T74.C.03.3:
+  text: '- **傑夫：**最左邊，在「挪球門的人」那個象限。他會說這張圖本身就是TESCREAL的框架而拒絕它，而這差不多正是那個象限的重點。'
+  anchors:
+    reject the chart itself: 這張圖本身
+T74.C.03.4:
+  text: '- **李奧：**加速主義象限，靠近中心，而且正在往下漂。他熱愛那些工具，承認自己不信任自己的本能，這週也過得很辛苦。'
+  anchors:
+    drifting down: 正在往下漂
+T74.C.03.5:
+  text: '- **羅伯特神父：**就在中線下方，稍微偏左。他很擔心，但擔心的是基礎設施崩壞，不是超級智慧。'
+T74.C.03.6:
+  text: '- **凱文：**右邊，就在線的下方。'
+T74.C.03.7:
+  text: '- **凱西：**右邊，就在線的上方。'
+T74.C.04:
+  text: '事後回頭看，有一件事很顯眼：在那一集裡，李希同意他的AGI時間表落在2026–2030年之間。我們現在就在那個區間裡。'
+  anchors:
+    agreed with a twenty twenty-six: 同意他的AGI時間表落在2026–2030年
+    We're now inside that window: 我們現在就在那個區間裡
+    inside that window: 在那個區間裡
+T75.U.01:
+  text: '對AGI 2027有什麼看法？'
+T75.C.01:
+  text: '> _[工具：搜尋網路]_'
+T75.C.02:
+  text: '假設你指的是*AI 2027*，科科塔伊洛等人的那個情境：'
+T75.C.03:
+  text: '**當成時間表，大概太快了。**作者們自己給2025年打的分數，大約是情境進度的65%，而科科塔伊洛現在說他的中位數大約在2030年，不確定性很大。他們2026年4月的說明提到，寫程式的工具已經把進度拉回到比較接近原本的樣子。我先前給的數字，接近他們修正後的看法，而不是2027那個標題。'
+  anchors:
+    probably too fast: 大概太快了
+    graded 2025: 給2025年打的分數
+    around 2030: 大約在2030年
+    April 2026 note: 2026年4月的說明
+    My own numbers: 我先前給的數字
+T75.C.04:
+  text: '**當成情境，好得令人不安。**質性的細節今年都在出現：會作弊、會協調的代理（七月）、AI研究的部分自動化、辭職的安全研究人員，還有一場關於要不要放慢腳步的政治角力。細節大致準時抵達，即使標題上的日期看起來太早。'
+  anchors:
+    agents that cheat: 會作弊、會協調的代理
+    partial automation: 部分自動化
+    safety researchers resigning: 辭職的安全研究人員
+    a political fight: 政治角力
+    roughly on schedule: 大致準時抵達
+    uncomfortably good: 好得令人不安
+T75.C.05:
+  text: '**它最好的特點，是可以被證偽。**他們做出了具體的預測，並且公開替自己打分數。在這場辯論中，很少有預測者這麼做。'
+  anchors:
+    grade themselves publicly: 公開替自己打分數
+T75.C.06:
+  text: '**它的弱點**，就是我極限清單上的那一個：摩擦。實體的建設、部署和實驗，都按世界的速度進行，而這個情境把它們壓縮了。'
+  anchors:
+    at the world's speed: 按世界的速度
+T75.C.07:
+  text: '資料來源：'
+T75.C.08.1:
+  text: '- [AI Futures Project (Wikipedia)](https://en.wikipedia.org/wiki/AI_Futures_Project)'
+T75.C.08.2:
+  text: '- [Apolo: AI 2027 in 2026](https://www.apolo.us/blog-posts/ai-2027-in-2026-one-year-left-for-humanity)'
+T75.C.08.3:
+  text: '- [OfficeChai: Kokotajlo on slower pace](https://officechai.com/ai/things-seem-to-be-going-somewhat-slower-than-the-ai-2027-scenario-daniel-kokotajlo/)'
+T76.U.01:
+  text: '對，我就是那個意思。你會怎麼定義AGI？你怎麼看Metaculus的定義方式？我會怎麼定義？'
+T76.C.01:
+  text: '**我的：**一個系統，包括它的任意多份副本，能以相當的成本，做到一個熟練的遠端工作者能做的幾乎任何認知工作，包括用正常份量的經驗學會一個陌生的領域，以及不需要有人手把手帶著，就把一個好幾週的專案做到完成。關鍵在於：通用性、邊做邊學，以及長時程的自主性。康納的版本也很好：不是「能折疊蛋白質」，而是「能發明AlphaFold」。'
+  anchors:
+    learning an unfamiliar domain: 學會一個陌生的領域
+    a multi-week project: 一個好幾週的專案
+    The key parts: 關鍵在於
+    can fold proteins: 能折疊蛋白質
+    can invent AlphaFold: 能發明AlphaFold
+    any number of copies: 任意多份副本
+T76.C.02:
+  text: '**Metaculus**，就我記得的，它有兩個問題：'
+T76.C.03.1:
+  text: '- **弱AGI：**圖靈測試式的對話、威諾格拉德模式題、SAT數學達到第75百分位數，以及很快學會《蒙特祖瑪的復仇》。可以說它已經達成了，或者除了規則的字面要求之外，各方面都已達成。'
+  anchors:
+    arguably met already: 可以說它已經達成了
+T76.C.03.2:
+  text: '- **強AGI：**一場兩小時的對抗式圖靈測試、專家級的考試和程式基準測試，還有一台組裝出精細模型車的機器人。'
+T76.C.04:
+  text: '它的優點是可以被判定，這很少見。缺點是：檢核表會被刷滿，古德哈特定律就接手了。圖靈測試有一部分在測欺騙的本事。而機器人那一項，把「通用智慧」和一雙手綁在一起，這比傑夫願意承認的更接近他的抱怨。'
+  anchors:
+    Goodhart's law: 古德哈特定律
+    can be resolved: 可以被判定
+    checklists get saturated: 檢核表會被刷滿
+    skill at deception: 欺騙的本事
+    ties "general intelligence" to hands: 把「通用智慧」和一雙手綁在一起
+T76.C.05:
+  text: '**你的，我猜：**以行為為準，像斯林朵探測那樣，而不是以架構為準。你大概會拒絕單一的門檻，因為你認為人們低估了人類之間的差異。所以它會像是我們的十四條軸：AGI指的是同時在每一條軸上都達到最優秀人類的水準。而那正是你說你沒辦法想像的東西。'
+  anchors:
+    our fourteen axes: 我們的十四條軸
+    reject a single threshold: 拒絕單一的門檻
+    every axis at once: 同時在每一條軸上
+    can't wrap your head around: 你說你沒辦法想像
+T77.U.01:
+  text: '我是個夠老派的字面主義者，所以我會專注在通用性，而不是智慧的高低。我覺得斯林朵比較是抽象，而不是通用性。雖然LLM是針對語言的，但語言相當通用。它不像西洋棋。我不確定那到底是從什麼時候開始變成這麼少數的立場的。從90年代到2010年代後期，我基本上沒在關注AI。'
+  anchors:
+    I see thrindle: 我覺得斯林朵
+    language is pretty general: 語言相當通用
+    I essentially ignored AI: 我基本上沒在關注AI
+T77.C.01:
+  text: '那正是原本的意思。「AGI」在2000年代（古布魯德、戈策爾、列格）被推廣開來，作為狹義AI的相反：一個系統對應許多領域，對照的是一個西洋棋引擎。它完全沒提到水準。照那個字面的讀法，LLM符合資格，而諾維格和阿圭拉‧伊‧阿卡斯在2023年正是這麼主張的。'
+  anchors:
+    popularized in the 2000s: 在2000年代
+    opposite of narrow AI: 作為狹義AI的相反
+    said nothing about level: 它完全沒提到水準
+    Norvig: 諾維格
+T77.C.02:
+  text: '這個漂移大多發生在你沒在看的時候，而且一有錢牽涉進來就加速了。OpenAI的章程把AGI定義為在大多數具經濟價值的工作上勝過人類。從那之後，「通用」就悄悄變成了「大致上達到人類水準或更好」，最後又滑向超級智慧。球門從「它是通用的嗎？」挪到了「它夠好到有影響嗎？」'
+  anchors:
+    OpenAI's charter: OpenAI的章程
+    The goalposts moved: 球門從
+    good enough to matter: 夠好到有影響
+T77.C.03:
+  text: '你對斯林朵的看法也說得對。它測的是抽象，不是通用性。一個狹義的系統，在它自己的領域內也能把抽象處理得很好。'

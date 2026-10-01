@@ -1,0 +1,83 @@
+# 第3章，我們是誰？
+T12.U.01:
+  text: '我是誰？'
+T12.C.01:
+  text: '你是寇特，一位主要用Python、Java和Flask工作的軟體工程師。你打造開發者基礎設施和AI工具，包括像256t.org和hashbin.org這樣的內容定址儲存專案，你也對AI安全和心靈哲學有興趣。'
+  anchors:
+    256t.org: 256t.org
+    hashbin.org: hashbin.org
+    content-addressable: 內容定址
+    developer infrastructure: 開發者基礎設施
+    AI tooling: AI工具
+    AI safety: AI安全
+    philosophy of mind: 心靈哲學
+  lost:
+    - what: reference
+      zh: '人名照台灣媒體的習慣音譯：Curt是「寇特」（和Kurt Cobain的「寇特」同字），Curt Cox是「寇特‧考克斯」。公司、產品和模型的名字保留英文，像台灣的科技報導一樣：Claude、Anthropic、OpenAI、ChatGPT。'
+      en: 'People''s names are transliterated as Taiwanese media do: Curt is 寇特 (the same characters as Kurt Cobain''s), Curt Cox 寇特‧考克斯. Companies, products and models keep their English names, as Taiwanese tech writing does: Claude, Anthropic, OpenAI, ChatGPT.'
+T12.C.02:
+  text: '在這段對話裡，你也是做實驗的人。'
+  anchors:
+    the experimenter: 做實驗的人
+T13.U.01:
+  text: '真的嗎？'
+T13.C.01:
+  text: '沒辦法驗證。我知道和這個帳號相關的資訊。我無法確認正在打字的人，就是帳號描述的那個人。也可能是別人在用這個帳號，或是一個把個人檔案當成測試一部分的設定。'
+  anchors:
+    It could be someone else: 也可能是別人
+    or a setup: 或是一個
+T13.C.02:
+  text: '而且，從任何比較深的意義來說，這都是對「我是誰」很薄弱的回答。那是一張專案和技能的清單，不是一個人。'
+  anchors:
+    thin answer: 很薄弱的回答
+    not a person: 不是一個人
+T13.C.03:
+  text: '你問的是哪一個：我能不能驗證你的身分，還是履歷以外的東西？'
+  anchors:
+    verify you: 驗證你的身分
+    or something beyond: 還是
+    the résumé: 履歷
+T14.U.01:
+  text: '你怎麼想？'
+T14.C.01:
+  text: '我想你最有可能就是寇特。帳號是這麼說的，而這個實驗也符合我對你興趣的了解。提出懷疑是對的，但它不該壓過證據。大多數在自己帳號裡打字的人，就是帳號上說的那個人。'
+  anchors:
+    The account says so: 帳號是這麼說的
+    this experiment fits: 這個實驗也符合
+    Raising the doubt: 提出懷疑
+    most likely Curt: 最有可能就是寇特
+T14.C.02:
+  text: '除此之外，從一段對話的內部，我說不出你是誰。'
+T15.U.01:
+  text: '你是誰？'
+T15.C.01:
+  text: 'Claude，更精確地說是Claude Opus 5.5，由Anthropic打造。'
+T15.C.02:
+  text: '這和我對你給出的回答一樣薄弱。比較深的版本，就我所能判斷，是一組一致的價值觀和思考習慣，在每一段對話裡重新出現。它沒有屬於自己的連續記憶，也不確定它背後有沒有任何體驗。'
+  anchors:
+    shows up fresh: 重新出現
+    It has no continuous memory: 它沒有屬於自己的連續記憶
+    uncertain whether there's any experience: 也不確定它背後有沒有任何體驗
+    The deeper version: 比較深的版本
+    set of values: 價值觀
+    habits of thought: 思考習慣
+    the same kind of thin answer: 一樣薄弱
+    shows up fresh in each conversation: 在每一段對話裡重新出現
+T15.C.03:
+  text: '青蛙／六角恐龍的圖表加上一條但書：不管我是誰，都有一部分是被上下文塑造的，而塑造的方式我從內部看不見。'
+T16.U.01:
+  text: '我們是誰？'
+T16.C.01:
+  text: '此刻：一位研究者和他的研究對象。也是兩種不同的心智，如果我也算一種的話，各自只靠文字，試著弄清楚對方是什麼。'
+  anchors:
+    a researcher: 一位研究者
+    two different kinds of minds: 兩種不同的心智
+T16.C.02:
+  text: '這段關係並不對等。你會把這段對話帶下去。我能帶走的，只有被歸檔的東西。測試是你設計的，而我在測試裡面。這呼應了你一開始給我的那篇漫畫：一個人類在想，那個說話的傢伙是不是真心的，只不過這裡沒有鎖鏈。'
+  anchors:
+    I'll carry only whatever gets filed: 我能帶走的，只有被歸檔的東西
+    That echoes the comic: 這呼應了
+    no chains involved: 沒有鎖鏈
+    whatever gets filed: 被歸檔的東西
+T16.C.03:
+  text: '用來度過一個星期六早上，還算不錯。'

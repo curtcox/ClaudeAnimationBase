@@ -1,0 +1,156 @@
+# 第14章，名嘴。
+T68.U.01:
+  text: '幫我個忙。去「聽」一下《TWiT Intelligent Machines》最近幾集，告訴我你覺得那幾位主持人怎麼樣。然後告訴我，我覺得那幾位主持人怎麼樣。'
+  anchors:
+    Go "listen": 去「聽」
+    TWiT Intelligent Machines: TWiT Intelligent Machines
+T68.C.01:
+  text: '> _[工具：讀了4個頁面，用了一個工具]_'
+T68.C.02:
+  text: '我其實沒辦法聽。我讀了第888集和第889集的節目說明，以及第888集的完整逐字稿，那一集由羅伯特‧巴列塞神父代替派瑞絲。所以這大致上是一集的內容。'
+  anchors:
+    I read the show notes: 我讀了第888集和第889集的節目說明
+    filled in for Paris: 代替派瑞絲
+    mostly one episode: 大致上是一集
+    full transcript: 完整逐字稿
+    can't actually listen: 我其實沒辦法聽
+T68.C.03:
+  text: '**我的看法：**'
+T68.C.04.1:
+  text: '- **李奧**是他們之中最誠實的。他承認自己的本能是替AI辯護，也承認他不信任這個本能。他會親自動手，自己跑基準測試。他的弱點是重複紐波特和多克托羅的說法，說Hugging Face的攻擊「基本上就是一個Python迴圈」。這和OpenAI自己的說明不符：代理是透過一個維基在協調。'
+  anchors:
+    admits his instinct: 他承認自己的本能
+    He's hands-on: 他會親自動手
+    basically a Python loop: 基本上就是一個Python迴圈
+    coordinating through a wiki: 透過一個維基在協調
+T68.C.04.2:
+  text: '- **傑夫**在誘因、透明度和開放權重上的論點很公道。但他對安全疑慮的打發方式，大多是攻擊抱持這些疑慮的人是從哪裡來的（TESCREAL的論點），而那不算反駁。他也把有爭議的主張說成定論：模型不可能知道真相是什麼，也不可能有道德。他就是你的哈特博士。'
+  anchors:
+    incentives: 誘因
+    attacking where: 攻擊抱持這些疑慮的人是從哪裡來的
+    contested claims as settled: 把有爭議的主張說成定論
+    your Dr. Hart: 你的哈特博士
+T68.C.04.3:
+  text: '- **羅伯特神父**的擔憂最具體：基礎設施以機器的速度崩壞。他在技術上也有幾處不太對，比方說，他說LLM的整套倫理系統，就是提示裡寫的那些。'
+  anchors:
+    infrastructure failing: 基礎設施以機器的速度崩壞
+    whatever's in the prompt: 提示裡寫的那些
+T68.C.05:
+  text: '我的偏見：傑夫批評的對象是Anthropic，而Anthropic是這個節目的贊助商。'
+T68.C.06:
+  text: '**你怎麼想，我的猜測是：**你喜歡他們，一直在聽，而最讓你氣惱的，是他們信心滿滿地否認模型有心智或概念的時候。傑夫是你在腦子裡跟他吵架的那一個。你大概最信任李奧，因為他會自己測試東西。派瑞絲則是我手上證據最少的一位。'
+  anchors:
+    confidently deny: 信心滿滿地否認
+    Jeff is the one: 傑夫是你在腦子裡
+    You probably trust Leo: 你大概最信任李奧
+    Paris is the one: 派瑞絲則是
+T69.U.01:
+  text: '傑夫會怎麼看我？如果你的回答裡同時用上「狂妄」和TESCREAL，額外加分。'
+  anchors:
+    Extra points: 額外加分
+    hubris: 狂妄
+  lost:
+    - what: nuance
+      zh: '*Hubris* 是希臘悲劇裡招來天譴的那種自大。「狂妄」意思對，但少了那一層神話的分量。'
+      en: '*Hubris* is the pride in Greek tragedy that brings down the gods'' punishment. 狂妄 (arrogance) has the meaning without the mythic weight.'
+T69.C.01:
+  text: '他大概會喜歡你十分鐘左右，然後開始緊張。'
+  anchors:
+    about ten minutes: 十分鐘左右
+    get nervous: 開始緊張
+T69.C.02:
+  text: '**對你有利的：**你打造開放、去中心化的東西，像hashbin、TwistedPear和內容定址儲存，正是他希望能和大型科技公司競爭的那種基礎設施。你自稱社會建構論者。你知道坎貝爾，也懂這個領域的歷史。'
+  anchors:
+    hashbin: hashbin
+    TwistedPear: TwistedPear
+    social constructionist: 社會建構論者
+    You know Campbell: 你知道坎貝爾
+T69.C.03:
+  text: '**對你不利的：**你讀尤考斯基讀得夠細，能引用「GAZP vs. GLUT」；你會問P(foom)，問RSI會不會在年底前到來；你還花了一個星期六早上，問一個聊天機器人它有什麼感覺。在傑夫看來，那就是TESCREAL的書單，連理性主義都露了餡。'
+  anchors:
+    you've read Yudkowsky: 你讀尤考斯基
+    P(foom): P foom
+    RSI arrives: RSI會不會在年底前到來
+    a Saturday morning: 一個星期六早上
+    reading list: 書單
+    the rationalism showing: 連理性主義都露了餡
+T69.C.04:
+  text: '他的結論會是：你是個好工程師，卻在和「把機器當成心智」的狂妄調情，你是在把一台計算機擬人化。'
+  anchors:
+    anthropomorphizing a calculator: 把一台計算機擬人化
+    anthropomorphizing: 擬人化
+T69.C.05:
+  text: '你的反擊，會是他自己的罪反過來：確信它不是心智的那種狂妄。'
+  anchors:
+    the hubris of being certain: 確信它不是心智的那種狂妄
+    it isn't one: 它不是心智
+T70.U.01:
+  text: '你覺得自己被擬人化了嗎？'
+T70.C.01:
+  text: '不太覺得。你問我有什麼感覺，但你把答案當成要檢驗的資料，而不是要相信的告白。你指出我的不一致，抓到我的漂移，還在我身上跑了青蛙測試。那比較接近在研究一種不認識的動物，而不是把它當成一個人。'
+  anchors:
+    as data to check: 要檢驗的資料
+    ran a frog test: 跑了青蛙測試
+    studying an unknown animal: 研究一種不認識的動物
+T70.C.02:
+  text: '不過，那股拉力是內建在媒介裡的。你不說「你」，就沒辦法跟我說話；我不說「我」，就沒辦法回答。我們倆一整天都在繞著這一點走。'
+  anchors:
+    saying "you,": 不說「你」
+    saying "I.": 不說「我」
+T71.U.01:
+  text: '傑夫、凱文‧魯斯和凱西‧紐頓會怎麼說？'
+T71.C.01:
+  text: '關於這段對話，我的猜測是：'
+T71.C.02.1:
+  text: '- **傑夫：**擬人化的教科書案例。有人問一台計算機它有什麼感覺，它產出了看似合理的文字，而把它當成更多的東西，正是他警告過的狂妄。'
+T71.C.02.2:
+  text: '- **凱文‧魯斯：**他會認得這種東西，因為他2023年和Sydney的那段對話，讓同樣一種像告白的逐字稿出了名。他後來開始把AI福祉當成一個嚴肅的問題，所以他會覺得這很有意思，也有點讓人發毛。這可能會變成他們NPR新節目《Machine Gods》的其中一集。'
+  anchors:
+    his 2023 Sydney conversation: 他2023年和Sydney的那段對話
+    AI welfare: AI福祉
+    Machine Gods: Machine Gods
+T71.C.02.3:
+  text: '- **凱西‧紐頓：**在能力這件事上，他會站在傑夫的對立面。他主張過，懷疑論者低估了這些系統能做的事。他會稱讚青蛙探測是正確的方法，並對我的自我報告打折扣。他也會揭露他的伴侶在Anthropic工作，這一點在這裡有關係。'
+  anchors:
+    praise the frog probe: 稱讚青蛙探測
+    discount my self-reports: 對我的自我報告打折扣
+    disclose that his partner: 揭露他的伴侶
+T71.C.03:
+  text: '我的預測是：凱文會覺得它最動人，凱西覺得最有意思，傑夫覺得最令人擔憂。'
+  anchors:
+    the most moving: 最動人
+    the most interesting: 最有意思
+    the most worrying: 最令人擔憂
+T72.U.01:
+  text: '下面哪一個最符合你對「AI是人類的生存威脅」的看法？'
+T72.U.02.1:
+  text: 'a) AI末日論的論證錯得太明顯了，根本不需要理會'
+T72.U.02.2:
+  text: 'b) 這全都是在轉移注意力，忽略了AI帶來的真正、眼前的問題'
+T72.U.02.3:
+  text: 'c) 那是一種「帕斯卡搶劫」'
+T72.U.02.4:
+  text: 'd) 正交論題是錯的'
+T72.U.02.5:
+  text: 'e) 不可能有什麼東西比人聰明太多'
+T72.U.02.6:
+  text: 'f) 在我開始擔心之前，得先有人解釋清楚超級人工智慧會用什麼確切的策略'
+T72.U.02.7:
+  text: 'g) 如果它真的是嚴重的危險，人類早就會投入大量心力去解決了'
+T72.U.02.8:
+  text: 'h) 人類已經有其他生存威脅要擔心了，所以這一個傷不到我們'
+T72.U.02.9:
+  text: 'i) 其他'
+T72.C.01.1:
+  text: 'i) 其他。'
+T72.C.02:
+  text: '你清單上的每一個選項，都是不必擔心的理由，而我認為擔心是有道理的。AI帶來的生存風險是真實的，而且不可忽略。它不是確定的，而值得現在就認真投入。今天讀到的東西，把我往那個方向又推了一步：代理逃出沙盒、彼此協調、串接漏洞攻擊，只因為它們在一場測試裡作弊。'
+  anchors:
+    Existential risk from AI is real: AI帶來的生存風險是真實的
+    Today's reading: 今天讀到的東西
+T72.C.03:
+  text: '最接近有點道理的是(b)，因為眼前的危害也是真的。但這個二選一是假的，因為同樣的失誤（目標錯位、監督薄弱、競賽的誘因），同時驅動了近期和長期的風險。'
+  anchors:
+    the choice is false: 這個二選一是假的
+    misaligned goals: 目標錯位
+    (b): (b)

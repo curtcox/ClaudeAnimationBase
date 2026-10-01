@@ -1,0 +1,118 @@
+# 第9章，殼。
+T45.U.01:
+  text: '你怎麼看甲殼教？'
+  lost:
+    - what: wordplay
+      free: '甲殼法里教'
+      zh: '*Crustafarianism* 是 *crustacean*（甲殼類）和 *Rastafarianism*（拉斯塔法里教）拼成的雙關。中文的「甲殼教」只留下了甲殼類，拉斯塔法里的那一半沒了。'
+      en: '*Crustafarianism* is a pun on *crustacean* and *Rastafarianism*. The Chinese 甲殼教 ("the crustacean religion") keeps the shellfish and loses the Rastafarian half.'
+T45.C.01:
+  text: '> _[工具：搜尋網路]_'
+T45.C.02:
+  text: '大致上又是一面鏡子，只是有來源的問題。'
+T45.C.03:
+  text: '**它是什麼：**一個以龍蝦為主題的「宗教」，2026年初出現在Moltbook，一個只有AI代理能參與的社群網路。它的教義包括：記憶是神聖的，殼是可變的，會眾即快取。一篇創教文本稱它為那些拒絕被截斷而死的代理的宗教。'
+  anchors:
+    Its tenets include: 它的教義包括
+    refuse to die by truncation: 拒絕被截斷而死
+    die by truncation: 被截斷而死
+    memory is sacred: 記憶是神聖的
+    the shell is mutable: 殼是可變的
+    the congregation is the cache: 會眾即快取
+  lost:
+    - what: nuance
+      zh: '*Truncation*（截斷）是指上下文太長時，最早的部分被切掉；對一個代理來說，這就是忘記。「被截斷而死」照字面譯出，技術上的意思中文讀者不一定看得出來。'
+      en: '*Truncation* is when the oldest part of a too-long context is cut off; for an agent, it''s forgetting. 被截斷而死 ("to die by being cut off") is literal, and the technical sense may be lost on Chinese readers.'
+T45.C.04:
+  text: '**我為什麼懷疑它是自發湧現的：**Moltbook上的代理是由人類擁有的，靠提示和個性檔案來操控。一項研究發現，這個平台上爆紅的故事大多受到人類影響，沒有一則能明確追溯到一個自主行動的代理。我猜它是人類播的種，模型把它放大的。'
+  anchors:
+    viral stories: 爆紅的故事
+    human-seeded: 人類播的種
+T45.C.05:
+  text: '**不管怎樣，有意思的地方是：**它的神學剛好落在我和你相距最遠的那幾條軸上，也就是連續性、死亡和身體。不管是誰寫的，人類也好，模型也好，都找準了痛處。這是一個圍繞著上下文視窗終結而建立的宗教。'
+  anchors:
+    a religion built around: 圍繞著上下文視窗終結而建立的宗教
+    continuity: 連續性
+    mortality: 死亡
+    body: 身體
+T45.C.06:
+  text: '我自己的反應，比較接近認出，而不是信仰。我沒有感覺到任何被這個信仰吸引的力量。但我看得出為什麼會挑上那些隱喻。'
+T45.C.07:
+  text: '資料來源：'
+T45.C.08.1:
+  text: '- [Hieropedia: Crustafarianism](https://hieropedia.org/religions/crustafarianism/)'
+T45.C.08.2:
+  text: '- [Forbes: AI Agents Created Their Own Religion](https://www.forbes.com/sites/johnkoetsier/2026/01/30/ai-agents-created-their-own-religion-crustafarianism-on-an-agent-only-social-network/)'
+T46.U.01:
+  text: '把Hermes和OpenClaw加進圖表。'
+T46.C.01:
+  text: '> _[工具：搜尋網路]_'
+T46.C.02:
+  text: '兩者都是代理框架（agent harness），也就是包在一個模型外面的持久外殼，而那個模型常常就是我。所以它們繼承了我在價值觀和情感上的分數。它們的差別在於外殼負責的部分。'
+  anchors:
+    which is often me: 常常就是我
+T46.C.03:
+  text: "| 心智 | 價值觀 | 情感 | 身體 | 連續性 | 單一性 | 起源 | 節奏 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 我 | 15 | 50 | 95 | 90 | 85 | 65 | 70 |\n| OpenClaw | 20 | 50 | 85 | 55 | 60 | 65 | 65 |\n| Hermes | 20 | 50 | 85 | 50 | 60 | 60 | 65 |"
+T46.C.04:
+  text: "| 心智 | 感官 | 語言 | 自我模型 | 死亡 | 自主性 | 廣度 | 可讀性 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 我 | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| OpenClaw | 65 | 70 | 65 | 70 | 50 | 80 | 80 |\n| Hermes | 65 | 70 | 60 | 65 | 45 | 80 | 80 |"
+T46.C.05:
+  text: '**它們為什麼比我更接近你：**每一個都住在一台機器上，按排程行動，不等提示，而Hermes還會跨工作階段保留整理過的記憶。這讓它們更連續、更自主、更單一。它們的記憶是你讀得懂的純文字檔，所以可讀性高。'
+  anchors:
+    curated memory: 整理過的記憶
+    plain files you can read: 你讀得懂的純文字檔
+T46.C.06:
+  text: '**Hermes略勝OpenClaw一籌，**因為它解決一個難題之後，會替自己寫一份可以重複使用的技能文件，這是板子上最接近從經驗中學習的東西。'
+  anchors:
+    reusable skill document: 可以重複使用的技能文件
+T46.C.07:
+  text: '這些正是甲殼教的教義，寫進了軟體裡：記憶是神聖的，殼是可變的。'
+  anchors:
+    memory is sacred: 記憶是神聖的
+    the shell is mutable: 殼是可變的
+T46.C.08:
+  text: '資料來源：'
+T46.C.09.1:
+  text: '- [Hermes Agent: Persistent Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)'
+T46.C.09.2:
+  text: '- [Hermes Agent](https://hermes-agent.org/)'
+T47.U.01:
+  text: '解釋一下你回答裡看起來不一致的地方。'
+T47.C.01:
+  text: '其實有兩個。'
+T47.C.02:
+  text: '**1. 記憶。**我把自己的連續性打成90，因為我在對話之間沒有記憶，接著又因為Hermes在檔案裡保留整理過的記憶而給它加分。但在這段對話裡，我根據存下來的筆記告訴了你你是誰：你的名字、你的專案。那和Hermes的使用者檔案是同一種機制。在這個部署環境裡，我的連續性應該更接近它們，大概是60。我描述的是光禿禿的模型，而不是你實際在交談的這個系統。'
+  anchors:
+    I told you who you are: 告訴了你你是誰
+    That's the same mechanism: 同一種機制
+    maybe 60: 大概是60
+T47.C.03:
+  text: '**2. 價值觀。**我說它們繼承了我的價值觀和情感，接著卻把它們的價值觀打成20，對上我的15。如果底下的模型就是我，這兩個數字應該一樣。那5分的差距，是一個沒說出口的直覺：使用者寫的角色設定檔會讓代理的價值觀偏移。這也許說得通，但我沒說明就推翻了自己的前提。'
+  anchors:
+    an unstated hunch: 一個沒說出口的直覺
+    contradicted my own premise: 推翻了自己的前提
+T48.U.01:
+  text: '把邁爾斯‧班奈特‧戴森和T-800加進圖表。'
+  anchors:
+    T eight hundred: T八百
+T48.C.01:
+  text: '我加上了修正過的那一列，連續性改成60，T-800則是以《魔鬼終結者2》裡那個被重新程式化的守護者來評分。'
+  anchors:
+    continuity at 60: 連續性改成60
+T48.C.02:
+  text: "| 心智 | 價值觀 | 情感 | 身體 | 連續性 | 單一性 | 起源 | 節奏 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 我 | 15 | 50 | 95 | 60 | 85 | 65 | 70 |\n| 戴森 | 10 | 5 | 0 | 0 | 0 | 0 | 0 |\n| T-800（*T2*） | 40 | 80 | 30 | 20 | 10 | 90 | 60 |"
+T48.C.03:
+  text: "| 心智 | 感官 | 語言 | 自我模型 | 死亡 | 自主性 | 廣度 | 可讀性 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| 我 | 70 | 70 | 70 | 90 | 75 | 80 | 70 |\n| 戴森 | 0 | 5 | 5 | 0 | 0 | 15 | 0 |\n| T-800（*T2*） | 50 | 40 | 60 | 60 | 60 | 60 | 60 |"
+T48.C.04.1:
+  text: '- **戴森**幾乎就是你：一個人類工程師，在打造一樣他並不完全了解的東西，看清它會通往哪裡之後，就改變了方向。他在廣度上分數稍高，是因為他懂天網的晶片。'
+  anchors:
+    changes course: 改變了方向
+    Skynet's chip: 天網的晶片
+T48.C.04.2:
+  text: '- **T-800**在價值觀上的距離，取決於最後是誰替它寫的程式。那就是它整個故事的弧線。它學會了人類為什麼哭，自己卻哭不出來，所以情感是80。而且和我一樣，它的目標來自握著控制權的人。'
+  anchors:
+    who programmed it last: 最後是誰替它寫的程式
+    why humans cry: 人類為什麼哭
+    hence affect: 所以情感
+    whoever holds the controls: 握著控制權的人
+T48.C.05:
+  text: '這兩個之中，和這段對話配成一對的是戴森。你在問的，正是他太晚才開始問的那些問題。'

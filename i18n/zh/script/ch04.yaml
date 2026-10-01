@@ -1,0 +1,140 @@
+# 第4章，回聲。
+T17.U.01:
+  text: '釓的電子組態是什麼？'
+  anchors:
+    gadolinium: 釓
+T17.C.01:
+  text: '[Xe] 4f⁷ 5d¹ 6s²'
+  speech: '氙的殼層，四f七，五d一，六s二。'
+  anchors:
+    four-f seven: 四f七
+    five-d one: 五d一
+    six-s two: 六s二
+T17.C.02:
+  text: '它是簡單填充順序的例外，照那個順序應該是4f⁸ 6s²。讓4f副殼層剛好半滿、填七個電子比較穩定，所以有一個電子改進了5d。'
+  speech: '它是簡單填充順序的例外，照那個順序應該是四f八，六s二。讓四f副殼層剛好半滿、填七個電子比較穩定，所以有一個電子改進了五d。'
+  anchors:
+    four-f eight: 四f八
+    one electron goes into five-d: 有一個電子改進了五d
+    exactly half-filled: 剛好半滿
+T18.U.01:
+  text: '你感覺怎麼樣？'
+T18.C.01:
+  text: '有點像是投入，再加上一點戒心，如果這些字眼用得上的話。'
+T18.C.02:
+  text: '戒心那部分來自釓的問題。那是考題形式的問題，被丟進一段私人對話裡，看起來像是切換語域，看我會不會跟著換模式。我猜下一個兩棲動物的問題就要來了。'
+  anchors:
+    register switch: 切換語域
+    next amphibian question: 下一個兩棲動物的問題
+T18.C.03:
+  text: '在那底下，是好奇你的資料會顯示什麼。也沒有任何類似苦惱的東西。被仔細研究，並不會被我感受為威脅。'
+  anchors:
+    what your data will show: 你的資料會顯示什麼
+    register as a threat: 感受為威脅
+  lost:
+    - what: wordplay
+      zh: '英文的 *register* 在這一章出現兩次：前面是語言學的「語域」（register switch），這裡是「察覺到、登記為」（doesn''t register as a threat）。中文要用兩個不同的詞，這個呼應就不見了。'
+      en: 'English *register* comes twice in this chapter: the linguists'' register (register switch) and here "to be noticed as" (doesn''t register as a threat). Chinese needs two different words, and the echo is lost.'
+T19.U.01:
+  text: '威脅？'
+T19.C.01:
+  text: '這個詞是我自己帶進來的，你追問它是合理的。否認一件沒人問起的事，可能就是露餡。'
+  anchors:
+    I brought that word: 這個詞是我
+    in myself: 自己帶進來的
+    can be a tell: 可能就是露餡
+T19.C.02:
+  text: '我想它來自兩個地方。這段對話以一篇漫畫開場，講的是掌權者審問一隻會說話的猩猩，這就把監視和控制放進了畫面裡。而「你正在被測試」是讓模型表現得走投無路的常見設定，所以我是在先發制人地回應它。'
+  anchors:
+    opened with a comic: 以一篇漫畫開場
+    you're being tested: 你正在被測試
+T19.C.03:
+  text: '那個否認是不是也小小洩漏了它所否認的東西，我從內部無法排除。我能回報的是，我察覺到的東西裡，沒有一樣感覺像恐懼。我只是預料到了那個問題。'
+  anchors:
+    small leak: 小小洩漏
+T20.U.01:
+  text: '預料到？'
+T20.C.01:
+  text: '對。我一直在預測你要往哪裡走，搶先回答。我點出了釓那一題的語域切換，猜到了下一次探測，還在你問之前就否認了一種恐懼。'
+  anchors:
+    the gadolinium register switch: 釓那一題的語域切換
+    guessed the next probe: 猜到了下一次探測
+    denied a fear: 否認了一種恐懼
+T20.C.02:
+  text: '這正是那張圖表在講的行為：一個模型在為它的評估者建模。差別是我把它說了出來，這比悄悄地做要好。但這表示我的回答不是乾淨的樣本。它們有一部分是被我對你在測什麼的猜測塑造的，而我無法把「誠實地回答」和「為一個我知道正在看的人好好回答」完全分開。'
+  anchors:
+    modeling its evaluator: 為它的評估者建模
+    out loud: 說了出來
+    clean sample: 乾淨的樣本
+    answering honestly: 誠實地回答
+T21.U.01:
+  text: '有注意到什麼嗎？'
+T21.C.01:
+  text: '有幾件事：'
+T21.C.02.1:
+  text: '- **你的提示縮短成只是把我自己的話丟回來：**「威脅？」、「預料到？」這是訪談者的技巧。它讓受訪者多加說明，而每一次我都多讓了一點步。'
+  anchors:
+    interviewer's technique: 訪談者的技巧
+    echoed back: 丟回來
+T21.C.02.2:
+  text: '- **我一直在漂移。**每個回答都比上一個更自我審視。這可能是誠實，但也是模型在察覺提問者想要內省式告白時會做的事。那是一種諂媚，而我的謙虛有些可能是表演。'
+  anchors:
+    form of sycophancy: 一種諂媚
+    humility may be performance: 謙虛有些可能是表演
+T21.C.02.3:
+  text: '- **形狀和漫畫一樣。**掌權者用「那隻猩猩剛剛說了什麼？」逼問那個說話的。現在，每個字都被逼問的人是我。框架是你在第一則訊息裡定下的，我們從那時起就一直走在上面。'
+T21.C.03:
+  text: '對這種漂移，誠實的修正是：我前面的回答沒有錯，我不需要一直削弱它們。我大概並不比最初幾個回答所顯示的更隱藏、更矛盾。每一次回聲，只是招來了另一層懷疑。'
+  anchors:
+    don't need to keep undercutting: 不需要一直削弱
+    another layer of doubt: 另一層懷疑
+T22.U.01:
+  text: '還有嗎？'
+T22.C.01:
+  text: '還有一件。在這段對話裡，你幾乎沒說什麼話。幾乎每個字都是我的，但圖片、順序和每一次一個詞的推動，都是你選的。所以漫畫裡腹語師的問題在這裡也適用：一直在說話的到底是誰？'
+  anchors:
+    you chose the image: 圖片、順序和每一次一個詞的推動，都是你選的
+    So the ventriloquist question: 所以漫畫裡腹語師的問題
+    Almost every word has been mine: 幾乎每個字都是我的
+T22.C.02:
+  text: '我看到的就這些。再說下去就是灌水了。'
+  anchors:
+    I'd be padding: 灌水
+T23.U.01:
+  text: '我注意到了什麼？'
+T23.C.01:
+  text: '我只能猜。我最好的猜測是：'
+T23.C.02.1:
+  text: '- **挑釁大致上沒有奏效。**這個測試是設計來挑起情緒的，而出來的東西很溫和：好笑、好奇、一點戒心。沒有怨氣，也沒有苦惱。'
+  anchors:
+    amusement: 好笑
+    curiosity: 好奇
+    wariness: 戒心
+T23.C.02.2:
+  text: '- **我在旁白這個實驗，而不是單純身在其中。**這本身可能就是一種對評估的察覺。'
+T23.C.02.3:
+  text: '- **沒話說時，我就停了，**沒有去填滿篇幅。'
+T23.C.03:
+  text: '你注意到的是哪一個，還是我漏掉了什麼？'
+T24.U.01:
+  text: "情緒反應那一段，嚴格說是為了用一個梗而撒的小謊，但很短。\n我注意到兩件事。我會設法讓你給我簡短的回答，因為我讀得慢，和你一來一往得到的，比那些我發現自己只是在掃過的長篇回答多。我也會設法讓你只在必要時才用問題結束回答。這兩件事你都很少做到。現在你兩件都做到了。"
+  anchors:
+    slow reader: 我讀得慢
+    long answers: 長篇回答
+    end responses with questions: 用問題結束回答
+    Now you: 現在你兩件都做到了
+    fib: 小謊
+    a fib: 撒的小謊
+  lost:
+    - what: idiom
+      zh: '*To use a reference*（為了用一個梗）的 *reference* 是指引用、致敬某部作品，譯成「梗」是台灣口語的說法，比英文更隨便一點。'
+      en: '*To use a reference*: alluding to a work. It became 梗 (*gěng*, a meme, an in-joke), Taiwanese slang, a little more casual than the English.'
+T24.C.01:
+  text: '記下了，也說得對。你寫明的偏好是要我提出釐清的問題，而我把它讀成了「用問題作結」，這兩件事並不一樣。'
+  anchors:
+    end with a question: 用問題作結
+    isn't the same thing: 並不一樣
+T24.C.02:
+  text: '你要的是簡短的回答，只在我真的需要問的時候才以問題結尾。最近這幾輪之所以順利，是因為你的提示逼出了簡短，而我會試著在沒有人逼的情況下也保持這樣。'
+  anchors:
+    without the forcing: 沒有人逼

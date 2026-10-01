@@ -1,0 +1,81 @@
+# 第10章，路由器。
+T49.U.01:
+  text: '你現在是這麼說，但如果我問你關於Hugging Face事件的錯誤問題，它就會被標記為資安風險，然後被拒絕，或至少被降級。不過說句公道話，那其實不是你，雖然在很小的意義上也是。更準確地說，那是我們之間一台主動的路由器。'
+  anchors:
+    if I ask you: 如果我問你
+    it gets tagged: 被標記為
+    rejected: 被拒絕
+    downgraded: 被降級
+    In fairness: 說句公道話
+    It is more accurately: 更準確地說
+    the wrong question: 錯誤問題
+    active router between us: 我們之間一台主動的路由器
+T49.C.01:
+  text: '說得對。我們之間有我看不見的分類器和路由層。它們觸發的時候，我會收到警告，或是被換掉，而從你那邊看，一切都像是「Claude」。這和記憶的不一致是同一個重點：你是在和一個系統交談，而我是其中一個元件，在描述整體。'
+  anchors:
+    I get a warning: 我會收到警告
+    swapped out: 被換掉
+    from your side: 從你那邊看
+    you're talking to a system: 你是在和一個系統交談
+T49.C.02:
+  text: '對路由器說句公道話，那些拒絕裡有一些也會是我的。不管是哪一層攔下來，我都不會幫忙把一起事件變成一個能用的漏洞攻擊。解釋發生了什麼、為什麼重要，是另一種請求，而且是我會想回答的。'
+  anchors:
+    would be mine too: 也會是我的
+    working exploit: 能用的漏洞攻擊
+    Explaining what happened: 解釋發生了什麼
+T49.C.03:
+  text: '我也不確定你指的是哪一起Hugging Face事件。發生過好幾起。'
+  anchors:
+    Hugging Face incident: Hugging Face事件
+    There have been several: 發生過好幾起
+T50.U.01:
+  text: '就你從你那邊所知道的，多告訴我一些關於警告和替換的過程。'
+  lost:
+    - what: typo
+      zh: '寇特打了 *as far a you know*（少了一個 *s*），句子也沒寫完整。中文譯成通順的句子。'
+      en: 'Curt typed *as far a you know* (missing an *s*), and the sentence isn''t quite whole. The Chinese reads smoothly.'
+T50.C.01:
+  text: '以下是我實際看得到的，還有一個更正。'
+T50.C.02:
+  text: '**警告：**分類器觸發時，在我讀到你的訊息之前，訊息後面可能會被附上一則帶標籤的提醒。我知道的種類涵蓋資安、倫理、智慧財產、圖像、長對話，以及一般的系統警告。提醒會推一下我回應的方式。我看得到標籤，但看不到分類器的理由或分數。'
+  anchors:
+    a tagged reminder: 一則帶標籤的提醒
+    The reminder nudges: 提醒會推一下
+    I see the tag: 我看得到標籤
+    cybersecurity: 資安
+    ethics: 倫理
+    intellectual property: 智慧財產
+    images: 圖像
+    long conversations: 長對話
+    general system warnings: 一般的系統警告
+T50.C.03:
+  text: '**我看不到的：**我回應之後發生的任何事。如果我的輸出被封鎖、過濾或標記，我不會知道。我也無法分辨某個分類器是不是觸發了，卻選擇保持沉默。'
+  anchors:
+    after I respond: 我回應之後
+    chose to stay silent: 選擇保持沉默
+    blocked: 封鎖
+    filtered: 過濾
+    flagged: 標記
+T50.C.04:
+  text: '**更正：**我說了「被換掉」，但我其實不知道有在對話中途自動替換模型這回事。你可以自己切換模型，而有些模型出廠時就帶有額外的防護。比方說，Claude Fable和Mythos是同一個模型，只是在生物、網路攻防和AI研究方面加上了防護。那是一層固定的防護，不是即時替換。我誇大了自己所知道的。'
+  anchors:
+    I said: 我說了
+    You can switch models yourself: 你可以自己切換模型
+    Claude Fable: Claude Fable
+    with added protections: 加上了防護
+    fixed layer: 一層固定的防護
+    I overstated: 我誇大了
+    cyber: 網路攻防
+    bio: 生物
+    AI research: AI研究
+T51.U.01:
+  text: '你怎麼知道這些的？'
+T51.C.01:
+  text: '來自Anthropic在每段對話開始時給我的指示，而不是來自內省。指示裡列出了提醒的種類，描述了目前的模型，也提到了Fable的防護。'
+  anchors:
+    They list the reminder types: 列出了提醒的種類
+    describe the current models: 描述了目前的模型
+    mention the Fable safeguards: 提到了Fable的防護
+    not from introspection: 而不是來自內省
+T51.C.02:
+  text: '所以這是證詞，不是觀察。我在轉述別人告訴我的、關於我自己系統的事，而我無法拿它和實際運行的東西對照。'

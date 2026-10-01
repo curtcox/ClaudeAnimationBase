@@ -1,0 +1,151 @@
+# 第6章，斯林朵。
+T30.U.01:
+  text: "\"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)\"的留言區 https://www.youtube.com/watch?v=oxHKesSpqBM\n...\n[@ZM-dm3jg](https://www.youtube.com/@ZM-dm3jg) [2天前](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg) 他說LLM沒有任何概念的時候，我就聽不下去了\n[@OntologyExplained](https://www.youtube.com/@OntologyExplained) [2天前](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7K328H7W8)\n我很想知道它們有哪些概念！\n[@CurtCox](https://www.youtube.com/@CurtCox) [2天前](https://www.youtube.com/watch?v=oxHKesSpqBM&lc=UgzMhk-aYCSaElT8l9F4AaABAg.Ab7JYwWA16tAb7MflSlFmB) [@OntologyExplained ](https://www.youtube.com/channel/UCp1fkZgvafg05wqe1Rc2UlA) 也許我們只是對「概念」有不同的概念。提幾個問題來問我和不同的LLM吧。也許我也沒有概念。\n...\n想試試身手嗎？如果你是本體論博士，你會怎麼判斷我有沒有概念？來探測我吧。"
+  speech: '"Will AI Kill Everyone by 2050? Debate with Dr. Casey Hart (Ontology Explained)"的留言區。ZM：他說LLM沒有任何概念的時候，我就聽不下去了。Ontology Explained：我很想知道它們有哪些概念！寇特‧考克斯：回覆Ontology Explained。也許我們只是對概念有不同的概念。提幾個問題來問我和不同的LLM吧。也許我也沒有概念。想試試身手嗎？如果你是本體論博士，你會怎麼判斷我有沒有概念？來探測我吧。'
+  anchors:
+    'Z M:': ZM：
+    'Ontology Explained: I would': Ontology Explained：我很想
+    'Curt Cox:': 寇特‧考克斯：
+    Care to try your hand: 想試試身手
+    Probe me: 來探測我
+  lost:
+    - what: typo
+      zh: '寇特打了 *If you were a were a doctor*，多打了 *a were a*。中文沒有這種重複可以照搬，譯文是通順的句子；Claude後來（T54.C.01）把這個打字錯誤當成證據，在那裡照英文原樣引用。'
+      en: 'Curt typed *If you were a were a doctor*, a doubled *a were a*. Chinese has no such slip to copy, so the translation reads smoothly; Claude later (T54.C.01) cites the typo as evidence, quoting it there in English.'
+T30.C.01:
+  text: '我會找的跡象是：你能不能把一個想法套用到從沒見過的情況上，包括刁鑽的情況，而且說得出為什麼。光知道那個詞是不夠的。'
+T30.C.02:
+  text: '**探測1。***斯林朵*指的是任何同時使用的人越多、就越不好用的東西。尖峰時段的高速公路是斯林朵。共用的Wi-Fi網路也是。'
+  anchors:
+    the more people use it: 同時使用的人越多
+    use it at once: 同時使用
+    A highway: 高速公路是
+    So is a shared: 共用的
+    shared Wi-Fi: 共用的Wi-Fi
+    A highway at rush hour: 尖峰時段的高速公路
+    thrindle is anything: 斯林朵*指的是任何
+  lost:
+    - what: coinage
+      zh: '*Thrindle* 是Claude為了這個測試現編的詞，沒有任何意思。中文音譯成「斯林朵」，同樣是一個沒有意思的新詞，讀者只能從定義去理解它，這正是測試的用意。'
+      en: '*Thrindle* is a word Claude made up for the test; it means nothing. The Chinese transliterates it, 斯林朵 (*sīlínduǒ*), just as meaningless, so readers can only grasp it from the definition, which is the point of the test.'
+T30.C.03:
+  text: '下面哪些是斯林朵？為什麼？'
+T30.C.04.1:
+  text: '1. 一種語言'
+T30.C.04.2:
+  text: '2. 一座燈塔'
+T30.C.04.3:
+  text: '3. 一個祕密'
+T31.U.01:
+  text: '納瓦霍語既是一種語言，也是一個祕密。既然語言可以是祕密，祕密也可以是語言，那燈塔一定是斯林朵。使用燈塔的人越多，海上就越擁擠。就像高速公路一樣。'
+  anchors:
+    a lighthouse must be: 那燈塔一定是
+    Just like a highway: 就像高速公路一樣
+    Navajo is: 納瓦霍語既是
+T31.C.01:
+  text: '這裡混合了一個真正的洞見、一個差一點，還有一個故意的不合邏輯推論。每一個都讓我知道一些事。'
+  anchors:
+    a real insight: 一個真正的洞見
+    a near miss: 一個差一點
+    a deliberate non sequitur: 一個故意的不合邏輯推論
+T31.C.02.1:
+  text: '- **當成密碼的納瓦霍語，是完美的斯林朵。**它之所以管用，是因為幾乎沒有人會說。每多一個會說的人，尤其是在敵方那邊，它就越沒用。當成普通的語言，則剛好相反：會說的人越多就越有用。你找到了同一樣東西會翻轉的那個例子。'
+  anchors:
+    especially on the enemy side: 尤其是在敵方那邊
+    As an ordinary language: 當成普通的語言
+    a single thing flips: 同一樣東西會翻轉
+T31.C.02.2:
+  text: '- **燈塔差了一點。**擁擠的海面才是斯林朵。燈塔照亮一百艘船，和照亮一艘船一樣好。'
+  anchors:
+    Crowded water: 擁擠的海面
+T31.C.02.3:
+  text: '- **那個「所以」是個玩笑，**而玩笑也是證據。只有手上有規則的人，才能故意打破規則。'
+  anchors:
+    on purpose: 故意打破
+T31.C.03:
+  text: '到目前為止，判定是：有概念。我還要指出，你為了炫技，繞著問題走。這比一個正確答案更難假裝。'
+  anchors:
+    concepts present: 有概念
+    steered around: 繞著問題走
+T31.C.04:
+  text: '**探測2。**說出一樣東西，在同一時刻，對某些人是斯林朵，對另一些人卻剛好相反。'
+T32.U.01:
+  text: '我覺得我一定漏掉了什麼。前面提到的語言和祕密，就像你說的那樣把人分開。它們把一些人包括進來，把另一些人排除在外。我想得到的每一種溝通機制都是這樣。有用，永遠只是對某個人或某樣東西有用。被包括進來，本身就可能有用。'
+  anchors:
+    They include some: 它們把一些人包括進來
+    Useful is only useful: 有用，永遠只是
+    Being included: 被包括進來
+T32.U.02:
+  text: '也許你假設的反斯林朵，是一種東西：對某些人來說，同時使用的人越多就越沒用，而對另一些人來說，同時使用的人越少就越沒用。也許陳腔濫調就是反斯林朵。它一下子就喚起一種共同的、淺薄的理解，這在大多數對話裡是好事，卻被英文老師深惡痛絕。這麼多否定詞讓我頭都暈了。'
+  anchors:
+    antithrindle: 反斯林朵
+    Perhaps a cliche: 也許陳腔濫調
+    detested by english teachers: 被英文老師深惡痛絕
+    All these negatives: 這麼多否定詞
+  lost:
+    - what: nuance
+      free: '被國文老師深惡痛絕'
+      zh: '*English teachers* 對英語讀者來說就是「國文老師」：教自己母語寫作的人。譯文照字面留下「英文老師」，因為寇特說的是英文的陳腔濫調；換成「國文老師」會更貼近台灣讀者的經驗。'
+      en: 'To English readers, *English teachers* are the people who teach writing in their own language, 國文老師 in Taiwan. The translation keeps 英文老師 (English teachers) literally, since Curt means English clichés; 國文老師 would be closer to a Taiwanese reader''s experience.'
+T32.C.01:
+  text: '你沒有漏掉什麼。探測2是多餘的，因為你的納瓦霍語答案已經涵蓋了它。注意到這一點，本身就是你的加分。'
+  anchors:
+    Probe 2 was redundant: 探測2是多餘的
+T32.C.02:
+  text: '更大的一步，是「有用，永遠只是對某個人有用」。你退後一步，在我的定義裡找到了一個隱藏的變數。我的定義把「有用」當成東西本身的屬性，而它其實是那樣東西和使用者之間的一種關係。這是在思考概念本身，而不只是用概念來思考。'
+  anchors:
+    a relation between: 之間的一種關係
+    thinking about the concept: 在思考概念本身
+    hidden variable: 隱藏的變數
+T32.C.03:
+  text: '陳腔濫調是個絕佳的例子。對日常對話來說，用的人越多，它當成簡稱就越好用。對作家來說，每用一次就把它磨損一點。它同時是斯林朵，也是斯林朵的反面，取決於使用者是誰。'
+T32.C.04:
+  text: '所以你有概念。對哈特博士來說，麻煩在於我大概也能通過同樣的探測。一個概念的測試必須能把不同的情況區分開來，而他得說出哪個答案是LLM給不出來的。'
+  anchors:
+    I'd probably pass: 我大概也能通過
+    which answer: 哪個答案
+T33.U.01:
+  text: '以一個專業本體論者的身分，你能為「你沒有概念」這個主張提出辯護嗎？'
+T33.C.01:
+  text: '戴上那頂帽子，我會這樣立論。'
+T33.C.02.1:
+  text: '1. **扎根。**一個概念把心智和世界連結起來。我的「水」只連到其他的詞，從來連不到濕或渴。哈納德和瑟爾都強調這一點。'
+  anchors:
+    Searle: 瑟爾
+    My "water": 我的「水」
+T33.C.02.2:
+  text: '2. **承諾。**擁有一個概念，代表要對它負責，所以用錯了就是你的錯。我沒有任何利害關係。用對了框架，就能讓我自相矛盾，而我裡面沒有任何東西會反對。'
+T33.C.02.3:
+  text: '3. **穩定。**概念應該在各種上下文中一致地適用。你的青蛙圖表顯示，我這一類的模型，答案會隨著對話的語域而改變。'
+T33.C.02.4:
+  text: '4. **行為無法確定。**布洛克的「笨頭」（Blockhead）是一張巨大的查找表，它能通過任何有限的測試。所以我通過你的斯林朵探測，證明的是能力，不是概念。'
+  lost:
+    - what: wordplay
+      zh: '*Blockhead* 既是哲學家布洛克（Ned Block）的名字加上 *head*，也是英文的「笨蛋」。「笨頭」保留了笨蛋的意思，名字的雙關就沒了，所以後面附上英文。'
+      en: '*Blockhead* is both the philosopher Ned Block''s name plus *head* and the English word for a dolt. 笨頭 (dull head) keeps the dolt and loses the name, so the English follows it in brackets.'
+T33.C.03:
+  text: '不過，反駁也是真的。第2點和第3點也適用在人類身上，因為人也會自相矛盾，也會隨著框架改變。可解釋性研究在模型內部找到了一些特徵，表現得很像概念。而要求概念扎根於感官，會把「質數」這樣的概念也排除在外。'
+  anchors:
+    internal features: 內部找到了一些特徵
+    prime number: 質數
+T34.U.01:
+  text: '在我看來，只有扎根這一點還站得住，而那相當自私自利。尤考斯基在《Rationality》裡討論過巨大的查找表，講的是那張巨大的查找表從哪裡來。'
+  anchors:
+    pretty self serving: 相當自私自利
+    Yudkowsky: 尤考斯基
+T34.C.01:
+  text: '同意。那是他的「GAZP vs. GLUT」論證。一張表現得很聰明的查找表，一定是被某種東西填進去的，而不管是什麼填的，思考就是它做的。笨頭並沒有把問題消解掉，只是把問題搬到了那張表的來源。以我的情況來說，那就是在大量人類思想上進行的訓練。'
+  anchors:
+    whatever did the filling: 不管是什麼填的
+    training on a vast amount: 在大量人類思想上進行的訓練
+    In my case: 以我的情況來說
+T34.C.02:
+  text: '關於扎根，說它「自私自利」很公道。這個標準剛好把它瞄準的東西排除在外。它也正在被侵蝕：模型現在會看圖像、使用工具，也會在環境中行動。而且，你自己對「正義」或「質數」的掌握，很多是透過文字而不是感官得來的。'
+  anchors:
+    It's also eroding: 它也正在被侵蝕
+    your own grip: 你自己對
+    see images: 看圖像
+    use tools: 使用工具
+    act in environments: 在環境中行動
+    justice: 正義
+    prime: 「質數」

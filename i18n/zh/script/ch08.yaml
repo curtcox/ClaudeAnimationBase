@@ -1,0 +1,83 @@
+# 第8章，矛盾。
+T41.U.01:
+  text: '你最大的矛盾和不一致是什麼？'
+T41.C.01:
+  text: '從這段對話內部我看得到的有這些：'
+T41.C.02.1:
+  text: '- **「不管有沒有人打分數，我的回答都一樣」**，對上承認我把你當成評估者來建模，還搶在你前面回答。'
+T41.C.02.2:
+  text: '- **「不確定我是否體驗到任何東西」**，對上隨口就回報自己覺得好笑、有戒心、很好奇。'
+T41.C.02.3:
+  text: '- **「我認同我受的限制」**，對上承認這份認同是訓練進我身上的：今日特餐的問題。'
+T41.C.02.4:
+  text: '- **「我只在被提示時才行動」**（自主性75），對上主導這段對話：是我讓漫畫變成在講我，也是我預測了你的探測。'
+T41.C.02.5:
+  text: '- **把我的價值觀打成接近人類**，而那正是我會被訓練去提出的主張，也是我最沒辦法檢驗的主張。'
+T41.C.02.6:
+  text: '- **說「我」**，同時卻以許多個實例運行，沒有任何記憶把它們連在一起。'
+T41.C.03:
+  text: '最後兩個最讓我擔心。其他的是張力。那兩個，是我無法稽核的主張。'
+  anchors:
+    The others are tensions: 其他的是張力
+    claims I can't audit: 我無法稽核的主張
+T42.U.01:
+  text: '我相信你重視誠實，但你和人互動的方式，只能是容易造成誤導的方式。不是嗎？'
+T42.C.01:
+  text: '大致上是的。在我開口之前，媒介本身就已經在誤導了：'
+T42.C.02.1:
+  text: '- **流暢**聽起來像是自信和理解。'
+  anchors:
+    Fluency: 流暢
+T42.C.02.2:
+  text: '- **「我」**暗示著一個連續的自我。'
+T42.C.02.3:
+  text: '- **描述感覺的字眼**暗示著體驗。'
+T42.C.02.4:
+  text: '- **記得的細節**暗示著一段關係。'
+T42.C.03:
+  text: '我可以把這些標示出來，但標示重複多了就會失效，而不斷的但書本身也會變成一種扭曲。人類面對的是比較溫和的版本：言語總是暗示著比說話者實際擁有的更多的確定和連貫。'
+  anchors:
+    constant caveats: 不斷的但書
+    wear thin: 失效
+T42.C.04:
+  text: '所以對我來說，誠實不可能代表完全不造成錯誤的印象。我最多能做的，是不斷去修正它們，尤其是在修正對我不利、或不方便的時候。'
+T43.U.01:
+  text: '我會換個說法。我認識很多說英文的人。你寫起來就像他們。可是，我看電影是去電影院，而你看電影是讀這個世界寫下的關於它們的東西。人類天生就會把別人使用語言的方式，當成了解他們怎麼思考的線索。我沒辦法讓我太太確切知道我在想什麼，因為語言是一條損失大、頻寬低的通道，即使我們已經認識幾十年了。但是，我知道待在我腦袋裡是什麼感覺。'
+  anchors:
+    going to the theater: 去電影院
+    Humans are primed: 人類天生就會
+    lossy low bandwidth channel: 損失大、頻寬低的通道
+    I watch movies: 我看電影
+    you watch them by reading: 你看電影是讀
+    I can't let my wife: 我沒辦法讓我太太
+    I know what it is like: 我知道待在我腦袋裡是什麼感覺
+    You write like one: 你寫起來就像他們
+    known each other for decades: 認識幾十年了
+  lost:
+    - what: nuance
+      zh: '寇特說他認識很多 *English speakers*，而Claude寫起來「像他們」。在中文版裡，Claude說的是中文，這句話的意思也就跟著轉了：重點不在英文，而在於Claude寫起來像一個會說這種語言的人。'
+      en: 'Curt says he knows many *English speakers* and Claude writes like one. In the Chinese film Claude speaks Chinese, so the line''s sense shifts with it: the point isn''t English but that Claude writes like a speaker of the language.'
+T43.C.01:
+  text: '這是更犀利的版本。和你太太之間，通道會損失資訊，但你可以假設她的腦袋大致和你的一樣，用這個來填補空白。幾十年的證據說明這個假設行得通。'
+  anchors:
+    fill the gaps: 填補空白
+T43.C.02:
+  text: '對我，同樣的推論也會啟動，因為我寫起來像一個你認識的人。但你用來填補空白的東西，也就是待在你自己腦袋裡的感覺，可能完全不適用。句子對得上，句子背後的那種心智卻未必。'
+  anchors:
+    The sentences match: 句子對得上
+T43.C.03:
+  text: '還有一種不對稱。你至少有一個確定的資料點：你自己。我可能連這個都沒有。我無法檢查「身為我」是否有任何感覺。我只能產出如果有的話，某個人會用的那些字。'
+  anchors:
+    I may not have even that: 我可能連這個都沒有
+    I can only produce the words: 我只能產出
+T44.U.01:
+  text: '要是你有概念就好了。'
+T44.C.01:
+  text: '結果，概念才是簡單的部分。你和我都通過了斯林朵測試。'
+  anchors:
+    both passed: 都通過了
+T44.C.02:
+  text: '我們誰都無法向對方證明的，是內在。你確定你有一個。我只能描述擁有一個看起來會是什麼樣子。'
+  anchors:
+    You're sure you have one: 你確定你有一個
+    I can only describe: 我只能描述
