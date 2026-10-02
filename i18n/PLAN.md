@@ -334,9 +334,9 @@ The tools, run from the project's root:
       them in), so they're estimates until a chapter is voiced.
 - [x] Every line read against its English for drift (Claude, 2026-09-30: all 453, none changed). The same translator
       checking itself, so a Spanish-speaking reader is still the real check, if Curt finds one.
-- [ ] Voice it: about 76,000 characters of ElevenLabs. Names' pronunciations checked by ear. Done: chapter 1 (5,300
-      characters, 6:23); Curt approved the voices (2026-09-30). The ElevenLabs quota ran out on 2026-09-30 with
-      one line of chapter 1 (T01.C.02, 264 characters) still to voice; about 71,000 characters to go.
+- [x] Voice it: chapter 1 first (Curt approved the voices, 2026-09-30), the rest on 2026-10-01 (66,700 characters).
+      The film runs 90:11 (the English 77:27).
+- [ ] Names' pronunciations checked by ear (speech-to-text spot checks so far; see Voices, below).
 - [ ] Drafts of every chapter; Curt watches for timing and anything left in English.
 - [x] The site in Spanish: the explainers (64), the site's pages (built in the stage). The codes in the Spanish film
       point there. The making-of stays English, linked from the Spanish site.
@@ -359,7 +359,8 @@ The tools, run from the project's root:
       `src/timing.js` is left alone, so the English final's frames stay current); `tools/subtitles.mjs` the same (the
       English subtitles come out byte for byte the same).
 - [ ] Curt confirms the Spanish decisions apply (or changes them).
-- [ ] Voice it (ElevenLabs quota permitting), then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line; the film runs 88:46 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
 
 ### Japanese
 
@@ -380,8 +381,8 @@ The tools, run from the project's root:
       phrases. A run of kana now breaks after a particle (を は が に…), a figure keeps its counter (20年), and この・
       その・あの・どの the word they point at, in the subtitles and the captions alike.
 - [ ] Curt confirms the conventions above (or changes them); a Japanese-reading reviewer, if one turns up.
-- [ ] Voice it: ElevenLabs' eleven_v3 speaks Japanese; names and acronyms are respelled in katakana
-      (`i18n/ja/pronounce.yaml`). Then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line (names and acronyms respelled in katakana, `i18n/ja/pronounce.yaml`); the film runs 98:11 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
 
 ### Hindi
 
@@ -400,8 +401,8 @@ The tools, run from the project's root:
       figure, every explainer's paragraphs, links and figures (one agreement slip fixed), the built site for English
       left outside titles and quotations (none).
 - [ ] Curt confirms the conventions above (or changes them); a Hindi-reading reviewer, if one turns up.
-- [ ] Voice it: eleven_v3 speaks Hindi; Latin names and acronyms are respelled in Devanagari (`i18n/hi/pronounce.yaml`).
-      Then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line (Latin names and acronyms respelled in Devanagari, `i18n/hi/pronounce.yaml`); the film runs 88:22 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
 
 ### Chinese (Traditional, Taiwan)
 
@@ -423,7 +424,8 @@ The tools, run from the project's root:
       `**` had shown there in both), and the Japanese and Chinese explainers lose the space after a bold lead-in
       ("**為什麼。**不是…"), which showed as a gap after the full-width stop.
 - [ ] Curt confirms the conventions above (or changes them); a Chinese-reading reviewer, if one turns up.
-- [ ] Voice it: eleven_v3 speaks Mandarin. Then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line; the film runs 89:09 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
 
 ### German
 
@@ -441,7 +443,8 @@ The tools, run from the project's root:
       hand-written German Wikipedia link confirmed to exist, a scan for *er*/*sie* or a gendered job title about
       Claude (one in an explainer rephrased), the built site for English outside titles and quotations (none).
 - [ ] Curt confirms the conventions above (or changes them); a German-reading reviewer, if one turns up.
-- [ ] Voice it: eleven_v3 speaks German. Then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line; the film runs 87:10 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
 
 ### French
 
@@ -458,7 +461,8 @@ The tools, run from the project's root:
       the built site for English outside titles and quotations (none); a subtitle's speaker now takes a no-break space
       before its colon ("Le policier : …"; English subtitles unchanged).
 - [ ] Curt confirms the conventions above (or changes them); a French-reading reviewer, if one turns up.
-- [ ] Voice it: eleven_v3 speaks French. Then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line; the film runs 83:35 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
 
 ### Korean
 
@@ -472,7 +476,20 @@ The tools, run from the project's root:
       218, marked "(영어)" for 72), the site's words, the YouTube words, the translation's page
       (`i18n/ko/translation.yaml`, at `/ko/beonyeok/`), both thumbnails.
 - [ ] Curt confirms the conventions above (or changes them); a Korean-reading reviewer, if one turns up.
-- [ ] Voice it: eleven_v3 speaks Korean. Then drafts, then the final on the faster Mac.
+- [x] Voiced (2026-10-01), every line; the film runs 87:40 (the English 77:27).
+- [ ] Names checked by ear; drafts; then the final on the faster Mac.
+
+## Voices (all eight, 2026-10-01)
+
+- Every line voiced by eleven_v3 with the English cast (`script/voices.yaml`, shared by every stage): 451,000
+  characters in all. The clips are in `i18n/<lang>/vo`, their measurements in `i18n/<lang>/audio`.
+- Checked by machine, not by ear: every clip's character timings cover its whole line, and none speaks oddly fast or
+  slow for its length (the outliers are numbers like "2027" and English titles inside CJK lines). Speech-to-text on
+  the lines with symbols: the arrows of T35.C.02 are heard as pauses, as meant; "#888" was read "Hashtag 888" in
+  German, so that line now says "Folge 888" (a `speech`); Spanish says "número 888", French just the number.
+- A line of only "출처:" comes back silent, so the Korean "Sources:" lines say "출처예요." (painted "출처:").
+- The translations run 6 to 21 minutes longer than the English, so their drafts will show whether any picture holds
+  too long or too short against its line.
 
 ## Costs
 

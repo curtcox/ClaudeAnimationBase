@@ -38,6 +38,7 @@ T45.C.06:
   text: "제 반응은 믿음보다는 알아봄에 가까워요. 그 신앙에 끌리는 느낌은 전혀 없어요. 다만 왜 그 비유들이 선택됐는지는 알겠어요."
 T45.C.07:
   text: "출처:"
+  speech: "출처예요."
 T45.C.08.1:
   text: "- [Hieropedia: Crustafarianism](https://hieropedia.org/religions/crustafarianism/)"
 T45.C.08.2:
@@ -70,6 +71,7 @@ T46.C.07:
     the shell is mutable: 껍데기는 바뀔 수 있다
 T46.C.08:
   text: "출처:"
+  speech: "출처예요."
 T46.C.09.1:
   text: "- [Hermes Agent: Persistent Memory](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory)"
 T46.C.09.2:

@@ -65,6 +65,7 @@ T63.C.06:
     weigh my 5%: 제 5%는
 T63.C.07:
   text: "출처:"
+  speech: "출처예요."
 T63.C.08.1:
   text: "- [arXiv 2609.26457: Recursive self-improvement of AI research agents](https://arxiv.org/abs/2609.26457)"
   speech: "arXiv 논문: Recursive self-improvement of AI research agents"
