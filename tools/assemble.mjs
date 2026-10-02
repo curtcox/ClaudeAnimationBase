@@ -36,7 +36,7 @@ for (const k of ['audio', 'shape']) if (new Set(info.map(x => x[k])).size > 1)
 // once YouTube re-encodes it. The limiter takes a little loudness back, so the gain is measured twice before the encode.
 const AIM = -14, CEIL = -1;
 const COMP = 'acompressor=threshold=-12dB:ratio=3:attack=5:release=150:knee=6:detection=rms';
-const LIMIT = 'aresample=176400,alimiter=limit=-1.5dB:attack=2:release=80:asc=1:level=0,aresample=44100';
+const LIMIT = (lim = -1.5) => `aresample=176400,alimiter=limit=${lim}dB:attack=2:release=80:asc=1:level=0,aresample=44100`;
 // integrated loudness (LUFS) and true peak (dBFS) of a file's sound (or the joined chapters', from the concat list),
 // after an optional filter chain
 const input = f => f.endsWith('.txt') ? ['-f', 'concat', '-safe', '0', '-i', f] : ['-i', f];
@@ -45,8 +45,8 @@ function loudness(f, chain) {
   const sum = out.slice(out.lastIndexOf('Summary:'));
   return { i: +sum.match(/I:\s+(-?[\d.]+) LUFS/)[1], tp: +sum.match(/Peak:\s+(-?[\d.]+) dBFS/)[1] };
 }
-function level(from, to) {
-  const chain = g => `${COMP},volume=${g.toFixed(2)}dB,${LIMIT}`;
+function level(from, to, lim) {
+  const chain = g => `${COMP},volume=${g.toFixed(2)}dB,${LIMIT(lim)}`;
   let g = AIM - loudness(from, COMP).i;
   g += AIM - loudness(from, chain(g)).i;
   execFileSync('ffmpeg', ['-y', '-v', 'error', ...input(from), '-map', '0:v', '-map', '0:a', '-c:v', 'copy', '-af', chain(g), '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', to], { stdio: 'inherit' });
@@ -59,16 +59,26 @@ const start = []; info.reduce((t, x, i) => (start[i] = t) + x.secs, 0);
 const total = start.at(-1) + info.at(-1).secs;
 const fresh = existsSync(OUT) && existsSync(`${DIR}/film.json`) && JSON.parse(readFileSync(`${DIR}/film.json`, 'utf8')).final === FINAL
   && videos.every(f => statSync(f).mtimeMs < statSync(OUT).mtimeMs);
+let joined = null;   // the new film's sound, measured
 if (fresh && !args.force) console.log(`${OUT} is current (every chapter is older than it)`);
 else {
   writeFileSync(`${DIR}/list.txt`, videos.map(f => `file '${resolve(f).replace(/'/g, "'\\''")}'`).join('\n') + '\n');
   // straight from the chapters, with no joined copy in between (a final film is several GB)
-  if (info[0].audio) level(`${DIR}/list.txt`, OUT + '.part.mp4');
-  else execFileSync('ffmpeg', ['-y', '-v', 'error', ...input(`${DIR}/list.txt`), '-c', 'copy', '-movflags', '+faststart', OUT + '.part.mp4']);
+  if (info[0].audio) {
+    level(`${DIR}/list.txt`, OUT + '.part.mp4');
+    // the AAC encode can lift a peak back over CEIL (the Japanese film's came out at −0.9): then once more, the limiter
+    // lowered by the overshoot and a margin
+    joined = loudness(OUT + '.part.mp4');
+    const tp = joined.tp;
+    if (tp > CEIL) {
+      console.log(`  true peak ${tp} dBFS, over ${CEIL}: leveled again, the limiter ${(CEIL - tp - .3).toFixed(1)} dB lower`);
+      level(`${DIR}/list.txt`, OUT + '.part.mp4', +(-1.5 + CEIL - tp - .3).toFixed(1)); joined = null;
+    }
+  } else execFileSync('ffmpeg', ['-y', '-v', 'error', ...input(`${DIR}/list.txt`), '-c', 'copy', '-movflags', '+faststart', OUT + '.part.mp4']);
   renameSync(OUT + '.part.mp4', OUT);
   console.log(`${OUT}: ${chapters.length} chapters, ${hms(total)}${info[0].audio ? '' : ' (no voice track)'}`);
 }
-const loud = info[0].audio ? loudness(OUT) : null;
+const loud = info[0].audio ? joined || loudness(OUT) : null;
 if (loud) console.log(`  its sound: ${loud.i} LUFS, true peak ${loud.tp} dBFS (the aim: ${AIM} LUFS, peaks at or under ${CEIL})`);
 if (loud && (Math.abs(loud.i - AIM) > .5 || loud.tp > CEIL)) { console.error(`the film's sound is off its aim; join it again (--force)`); process.exit(1); }
 writeFileSync(`${DIR}/film.json`, JSON.stringify({ final: FINAL, duration: +total.toFixed(3), loudness: loud, chapters: chapters.map((c, i) => ({ n: c.n, title: c.title, video: videos[i], start: +start[i].toFixed(3), secs: +info[i].secs.toFixed(3) })) }, null, 1) + '\n');

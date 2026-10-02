@@ -7,13 +7,18 @@
 // Still QR renders at whole-pixel modules, checks each image decodes to its exact payload, and reports where the code
 // sits in the image (its box, quiet zone included) and how far the frame reaches on each side. The film's own check
 // (tools/qr_check.mjs) then reads every code again, through the engine, at its on-screen size.
-import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync, cpSync } from 'node:fs';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync, cpSync, realpathSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { resolve, join } from 'node:path';
 import { loadRefs } from './script_lib.mjs';
 
 const STILL = resolve(process.env.STILL_QR || '../Still-QR-codes-to-me'), MODULE_PX = 8;
 if (!existsSync(join(STILL, 'src/cli.ts'))) { console.error(`Still QR isn't at ${STILL} (set STILL_QR)`); process.exit(1); }
+// in a translation's stage, whose assets/qr may still be a link to the English images: they stay English
+// (i18n/tools/qr_images.mjs gives the stage its own)
+const HOME = resolve(fileURLToPath(import.meta.url), '../..');
+if (resolve('.') !== HOME && realpathSync('assets/qr') === realpathSync(`${HOME}/assets/qr`)) { console.error('this would overwrite the English codes: node i18n/tools/qr_images.mjs --lang=…'); process.exit(1); }
 
 // styles painted here win; everything else that has a style goes to Still QR
 const src = readFileSync('src/qr_styles.js', 'utf8');
@@ -27,10 +32,17 @@ writeFileSync(join(tmp, 'manifest.json'), JSON.stringify(entries, null, 1));
 const index = {}, styles = {};
 for (const [variant, extra] of [['f', []], ['n', ['--frame', 'none']]]) {
   const out = join(tmp, variant);
-  execFileSync('node', ['--import', 'tsx', 'src/cli.ts', '--batch', join(tmp, 'manifest.json'), '--out-dir', out, '--module-px', String(MODULE_PX), '--transparent', ...extra],
+  // exit 2: some image failed Still QR's checks. That code gets no image, so the film paints it plain, which scans.
+  const run = spawnSync('node', ['--import', 'tsx', 'src/cli.ts', '--batch', join(tmp, 'manifest.json'), '--out-dir', out, '--module-px', String(MODULE_PX), '--transparent', ...extra],
     { cwd: STILL, stdio: ['ignore', 'inherit', 'inherit'] });
+  if (run.status !== 0 && run.status !== 2) throw new Error(`Still QR stopped (exit ${run.status})`);
+  const report = join(out, 'report.json'), rows = existsSync(report) ? (r => r.entries || r.results || [])(JSON.parse(readFileSync(report, 'utf8'))) : [];
+  const failed = rows.filter(r => r.passed === false || r.result === 'FAIL');
+  if (run.status === 2 && !failed.length) throw new Error('Still QR reports a failure, but its report names none');
+  if (rows.length) console.log(`${variant === 'f' ? 'framed' : 'bare'}: ${rows.length - failed.length}/${rows.length} pass Still QR's checks${failed.length ? `; painted plain instead: ${failed.map(r => r.id).join(', ')}` : ''}`);
   const dest = `assets/qr/${variant}`; rmSync(dest, { recursive: true, force: true }); mkdirSync(dest, { recursive: true });
   for (const e of entries) {
+    if (failed.some(r => r.id === e.id)) continue;
     const side = JSON.parse(readFileSync(join(out, e.id + '.json'), 'utf8')), b = side.codeBox, fr = side.frame || {};
     if (side.text !== e.text || side.ecc !== e.ecc) throw new Error(`${e.id}: Still QR encoded ${side.text} at ${side.ecc}`);
     cpSync(join(out, e.id + '.png'), `${dest}/${e.id}.png`);
@@ -40,12 +52,6 @@ for (const [variant, extra] of [['f', []], ['n', ['--frame', 'none']]]) {
       const ext = .5 + Math.max(fr.top || 0, fr.right || 0, fr.bottom || 0, fr.left || 0) / b.width;
       styles[e.style] = { extent: +Math.max(styles[e.style]?.extent ?? .5, ext).toFixed(3) };
     }
-  }
-  const report = join(out, 'report.json');
-  if (existsSync(report)) {
-    const rep = JSON.parse(readFileSync(report, 'utf8')), rows = rep.entries || rep.results || [];
-    const failed = rows.filter(r => r.passed === false || r.result === 'FAIL');
-    console.log(`${variant === 'f' ? 'framed' : 'bare'}: ${rows.length - failed.length}/${rows.length} pass Still QR's checks${failed.length ? ': failing ' + failed.map(r => r.id).join(', ') : ''}`);
   }
 }
 const head = execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: STILL }).toString().trim();

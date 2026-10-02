@@ -312,6 +312,10 @@ The tools, run from the project's root:
 - `node i18n/tools/wiki_notes.mjs`: point the explainers' Wikipedia links at the language's articles.
 - The site: inside the stage, `node tools/timeline.mjs && node tools/build_site.mjs`, then from the root
   `node i18n/tools/lost.mjs` (the builder clears `site/public`, so the translation's pages go in after it).
+- `node i18n/tools/qr_images.mjs --lang=ja|all`: the language's own Still QR images (`i18n/<lang>/qr/`, committed),
+  made by Still QR checked out beside this repo. The English images match only the English links, so without these a
+  translation's cards fall back to plain painted codes. A code that fails Still QR's checks stays plain (Korean's
+  framed Moltbook code). Then `node tools/qr_check.mjs` in the stage reads every code through the engine.
 - `node i18n/tools/films.mjs [--final] [--langs=ja,zh] [--chapters=N,…]`: every translation's film, unattended, one
   language after another: the stage, the voice mixed (it stops a language with any line not voiced, rather than spend
   the key), timelines, sounds, each chapter's draft (or final), the film joined with its subtitles and YouTube words

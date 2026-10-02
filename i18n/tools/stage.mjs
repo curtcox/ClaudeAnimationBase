@@ -6,6 +6,7 @@
 // The stage links to the English engine, scenes, tools and packages, so a fix there is a fix in every language. Its own:
 //   script/     the translated script.yaml, chapters, the cold open's balloons, codes and sound cues, made here
 //   assets/vo   the language's voice clips (i18n/<lang>/vo, committed like the English ones)
+//   assets/qr   the codes' Still QR images, and src/gen/qr_images.js their index (i18n/<lang>/qr, committed)
 //   audio/*.json  the voice's measurements (i18n/<lang>/audio, committed)
 //   src/gen     its timelines, codes and window.I18N (src/gen/i18n.js, for i18n/src/i18n.js)
 //   audio/ out/ site/public   what the tools make
@@ -43,8 +44,12 @@ function link(to, at) {   // at (in the stage) → to (from the project's root),
 }
 
 // ---- the engine, linked ----
-for (const f of ['node_modules', 'render.mjs', 'package.json', 'tools', 'docs', 'assets/ref', 'assets/qr', 'script/voices.yaml', 'script/beats.yaml'])
+for (const f of ['node_modules', 'render.mjs', 'package.json', 'tools', 'docs', 'assets/ref', 'script/voices.yaml', 'script/beats.yaml'])
   if (existsSync(f)) link(f, f);
+// the codes' Still QR images: the language's own once it has them (i18n/tools/qr_images.mjs makes them in
+// i18n/<lang>/qr, writing through these links), else the English ones, which only the English links match
+const OWN_QR = existsSync(`${L}/qr`);
+link(OWN_QR ? `${L}/qr` : 'assets/qr', 'assets/qr');
 mkdirSync(`${L}/vo`, { recursive: true }); link(`${L}/vo`, 'assets/vo');
 // the sounds: the English ones, linked one by one, and the language's own (a sting whose length follows the timing),
 // which tools/sfx.mjs makes in the stage and this moves to i18n/<lang>/sfx (committed)
@@ -67,7 +72,8 @@ for (const f of ['durations.json', 'sync.json', 'breaths.json', 'voice.json']) {
 for (const f of readdirSync('src')) if (f !== 'gen') link(`src/${f}`, `src/${f}`);
 link('i18n/src/i18n.js', 'src/i18n.js');
 mkdirSync(`${S}/src/gen`, { recursive: true });
-for (const f of ['qr_images.js']) if (!existsSync(`${S}/src/gen/${f}`)) put(`src/gen/${f}`, readFileSync(`src/gen/${f}`, 'utf8'));
+if (OWN_QR) link(`${L}/qr/qr_images.js`, 'src/gen/qr_images.js');
+else if (!existsSync(`${S}/src/gen/qr_images.js`)) put('src/gen/qr_images.js', readFileSync('src/gen/qr_images.js', 'utf8'));
 const studio = readFileSync('studio.html', 'utf8');
 const hook = '<script src="src/scene_kit.js"></script>';
 if (!studio.includes(hook)) throw new Error(`studio.html no longer loads ${hook}; update stage.mjs`);
