@@ -319,6 +319,11 @@ The tools, run from the project's root:
   (`--keep-frames` keeps them, about 10 GB a language); `--prune` deletes a final's pieces once the film is joined.
   A draft runs about 3.3 times the film's length here (chapter 16 in Korean, 55 s, took 3 minutes): about 5 hours a
   language, 40 for all eight.
+- `node i18n/tools/youtube_upload.mjs --lang=es [--dry]`: the language's final film to YouTube (private by default),
+  with its title, description, tags, thumbnail and subtitles; writes the video's id into `i18n/<lang>/site.yaml`.
+  Resumable. Sign in once per Mac with `--login --client=<OAuth desktop client JSON>` (Keychain, service
+  "youtube-upload"). Google keeps an unaudited API project's uploads private, so until it's audited: upload by hand in
+  YouTube Studio, then `--video=ID` sets the rest.
 - Inside `i18n/es/stage/`, the usual tools: `node tools/timeline.mjs`, `node render.mjs --chapter=N --sheet=...`, and
   later `node tools/voice.mjs`, `node tools/sfx.mjs`, `node render.mjs --chapter=N --draft`.
 
