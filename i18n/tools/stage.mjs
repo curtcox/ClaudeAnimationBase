@@ -53,6 +53,7 @@ mkdirSync(`${L}/sfx`, { recursive: true });
 if (existsSync(SFX) && lstatSync(SFX).isSymbolicLink()) unlinkSync(SFX);
 mkdirSync(SFX, { recursive: true });
 for (const f of readdirSync(SFX)) if (!lstatSync(`${SFX}/${f}`).isSymbolicLink()) renameSync(`${SFX}/${f}`, `${L}/sfx/${f}`);
+for (const f of readdirSync(SFX)) if (!existsSync(`${SFX}/${f}`)) unlinkSync(`${SFX}/${f}`);   // a link to a sound since removed
 for (const f of readdirSync('assets/sfx')) link(`assets/sfx/${f}`, `assets/sfx/${f}`);
 for (const f of readdirSync(`${L}/sfx`)) link(`${L}/sfx/${f}`, `assets/sfx/${f}`);
 // the voice's measurements (durations, lip sync, breaths), which the site's timings need: kept in i18n/<lang>/audio

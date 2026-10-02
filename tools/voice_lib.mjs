@@ -25,8 +25,11 @@ export function lufs(f) {
 //          shut on an m, b or p as spelled (not ph, a word-initial ps or pn, or a final mb's b), at the quietest
 //          moment near where ElevenLabs' timings put it.
 //   words  [charIndex, seconds, …]: when each word of the line's speech starts, from ElevenLabs' character timings
-//          (scene_kit.js's atWord); none if the timings don't spell out the speech exactly
+//          (scene_kit.js's atWord); none if the timings don't spell out the speech exactly. Japanese and Chinese have
+//          no spaces, so there each kanji, hanzi or kana starts a word: a cue on a phrase mid-sentence lands on it, not
+//          on the sentence's start (English has none of these, so its timings are as before)
 export const MOUTH_HZ = 24;
+const CJK = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 const LEAD = .04;
 export function syncOf(file, text, alignment) {
   const RATE = 16000, HOP = 80, WIN = 320;   // loudness every 5 ms, over 20 ms
@@ -44,7 +47,7 @@ export function syncOf(file, text, alignment) {
   }
   const { characters: C = [], character_start_times_seconds: S = [], character_end_times_seconds: E = [] } = alignment || {}, words = [];
   if (C.join('') === text) {
-    C.forEach((c, j) => { if (/\S/.test(c) && (j === 0 || /\s/.test(C[j - 1]))) words.push(j, +S[j].toFixed(2)); });
+    C.forEach((c, j) => { if (/\S/.test(c) && (j === 0 || /\s/.test(C[j - 1]) || CJK.test(c))) words.push(j, +S[j].toFixed(2)); });
     const low = C.map(c => c.toLowerCase()), letter = c => /[a-z]/.test(c || ' ');
     low.forEach((c, j) => {
       if (!'mbp'.includes(c) || low[j - 1] === c) return;

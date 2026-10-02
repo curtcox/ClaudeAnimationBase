@@ -312,6 +312,13 @@ The tools, run from the project's root:
 - `node i18n/tools/wiki_notes.mjs`: point the explainers' Wikipedia links at the language's articles.
 - The site: inside the stage, `node tools/timeline.mjs && node tools/build_site.mjs`, then from the root
   `node i18n/tools/lost.mjs` (the builder clears `site/public`, so the translation's pages go in after it).
+- `node i18n/tools/films.mjs [--final] [--langs=ja,zh] [--chapters=N,…]`: every translation's film, unattended, one
+  language after another: the stage, the voice mixed (it stops a language with any line not voiced, rather than spend
+  the key), timelines, sounds, each chapter's draft (or final), the film joined with its subtitles and YouTube words
+  (`i18n/<lang>/stage/out/film/`). Logs to `out/i18n/`. A draft's frames are deleted once its chapter's video is made
+  (`--keep-frames` keeps them, about 10 GB a language); `--prune` deletes a final's pieces once the film is joined.
+  A draft runs about 3.3 times the film's length here (chapter 16 in Korean, 55 s, took 3 minutes): about 5 hours a
+  language, 40 for all eight.
 - Inside `i18n/es/stage/`, the usual tools: `node tools/timeline.mjs`, `node render.mjs --chapter=N --sheet=...`, and
   later `node tools/voice.mjs`, `node tools/sfx.mjs`, `node render.mjs --chapter=N --draft`.
 
@@ -488,6 +495,10 @@ The tools, run from the project's root:
   the lines with symbols: the arrows of T35.C.02 are heard as pauses, as meant; "#888" was read "Hashtag 888" in
   German, so that line now says "Folge 888" (a `speech`); Spanish says "número 888", French just the number.
 - A line of only "출처:" comes back silent, so the Korean "Sources:" lines say "출처예요." (painted "출처:").
+- Japanese and Chinese have no spaces, so a whole sentence was one "word" to the voice's timings, and a sound or a
+  picture cued mid-sentence landed on the sentence's start (the cinema's hum in chapter 8 ended before it began). Each
+  kanji, hanzi and kana now starts a word (`tools/voice_lib.mjs`; English has none, so its timings are as before).
+- Each language has its own "piano-you" sting (its length follows the line), made 2026-10-01: `i18n/<lang>/sfx/`.
 - The translations run 6 to 21 minutes longer than the English, so their drafts will show whether any picture holds
   too long or too short against its line.
 
