@@ -13,7 +13,11 @@ const DIR = 'out/film', LIMIT = 5000;
 if (!existsSync(`${DIR}/film.json`)) { console.error(`no ${DIR}/film.json yet: join the film first (npm run film)`); process.exit(1); }
 const film = JSON.parse(readFileSync(`${DIR}/film.json`, 'utf8')), site = readYaml('script/site.yaml');
 // the upload's words; a translated film (i18n/PLAN.md) gives its own in script/youtube_strings.yaml, key by key
-const W = { ...YOUTUBE_WORDS(), ...(existsSync('script/youtube_strings.yaml') ? readYaml('script/youtube_strings.yaml') : {}) };
+const TR = existsSync('script/youtube_strings.yaml');
+const W = { ...YOUTUBE_WORDS(), ...(TR ? readYaml('script/youtube_strings.yaml') : {}) };
+// a translation's description is held 50 under: YouTube Studio counted the Japanese one at 5,002 where this counted
+// 4,998 or so (3 October; how it counts differently isn't known)
+const FIT = TR ? LIMIT - 50 : LIMIT;
 const fill = (s, v) => String(s).replace(/\{(\w+)\}/g, (m, k) => v[k] ?? m);
 const total = film.duration, FINAL = film.final;
 
@@ -48,7 +52,7 @@ const head = fill(W.head, { conversation: conv.qr_url || conv.url, links: refs.l
 const foot = W.foot, linksHead = W.links_head;
 const describe = picked => head + linksHead + picked.slice().sort((a, b) => timeOf(a) - timeOf(b)).map(lineOf).join('\n') + '\n' + foot;
 const picked = [];
-for (const r of ranked) if (describe([...picked, r]).length <= LIMIT) picked.push(r);
+for (const r of ranked) if (describe([...picked, r]).length <= FIT) picked.push(r);
 const description = describe(picked);
 
 const md = `# The YouTube upload
@@ -73,7 +77,7 @@ ${W.tags}
 Put the video's id (the part after \`v=\`) in \`script/site.yaml\` as \`film: youtube:\`, commit and push: the site then embeds it.
 `;
 writeFileSync(`${DIR}/youtube.md`, md);
-if (description.length > LIMIT) { console.error(`the description is ${description.length} characters; YouTube takes ${LIMIT}`); process.exit(1); }
+if (description.length > FIT) { console.error(`the description is ${description.length} characters; YouTube takes ${LIMIT}${FIT < LIMIT ? ` (a translation's is held to ${FIT})` : ''}`); process.exit(1); }
 console.log(`${DIR}/youtube.md: ${description.length} characters, ${picked.length} links`);
 
 // The English upload's words (see W at the top); a translation replaces any of them in script/youtube_strings.yaml.
