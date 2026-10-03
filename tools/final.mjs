@@ -213,8 +213,10 @@ if (audio === voice) console.log(`note: ${existsSync(full) ? `${full} is older t
 const newest = Math.max(statSync(MF).mtimeMs, audio ? statSync(audio).mtimeMs : 0);
 if (!args.force && !redo.length && existsSync(VIDEO) && statSync(VIDEO).mtimeMs > newest && Math.abs(probeFrames(VIDEO) - TOTAL) <= 2) { console.log(`${VIDEO} is current`); process.exit(0); }
 writeFileSync(`${DIR}/join.txt`, M.pieces.map(p => `file '${resolve(`${SEG}/${p.file}`)}'`).join('\n') + '\n');
+// the sound padded and the whole cut at the last frame: -shortest (as this was) stops a few frames before the sound
+// ends in ffmpeg 9 (3 or 4 of every translated chapter, 2 October), and the sound ends up to a frame before the pictures
 execFileSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', `${DIR}/join.txt`,
-  ...(audio ? ['-i', audio, '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '192k', '-shortest'] : []), '-c:v', 'copy', '-movflags', '+faststart', `${VIDEO}.part.mp4`]);
+  ...(audio ? ['-i', audio, '-map', '0:v', '-map', '1:a', '-c:a', 'aac', '-b:a', '192k', '-af', 'apad', '-t', String(TOTAL / FPS)] : []), '-c:v', 'copy', '-movflags', '+faststart', `${VIDEO}.part.mp4`]);
 const got = probeFrames(`${VIDEO}.part.mp4`);
 if (Math.abs(got - TOTAL) > 2) { console.error(`the joined chapter has ${got} frames, not ${TOTAL}`); process.exit(1); }
 renameSync(`${VIDEO}.part.mp4`, VIDEO);
